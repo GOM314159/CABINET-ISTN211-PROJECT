@@ -64,7 +64,7 @@
             this.FirstNameTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.25F);
             this.FirstNameTextBox.Location = new System.Drawing.Point(342, 111);
             this.FirstNameTextBox.Name = "FirstNameTextBox";
-            this.FirstNameTextBox.Size = new System.Drawing.Size(302, 32);
+            this.FirstNameTextBox.Size = new System.Drawing.Size(302, 38);
             this.FirstNameTextBox.TabIndex = 4;
             this.FirstNameTextBox.Tag = "";
             // 
@@ -100,7 +100,7 @@
             this.SurnameTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.25F);
             this.SurnameTextBox.Location = new System.Drawing.Point(342, 169);
             this.SurnameTextBox.Name = "SurnameTextBox";
-            this.SurnameTextBox.Size = new System.Drawing.Size(302, 32);
+            this.SurnameTextBox.Size = new System.Drawing.Size(302, 38);
             this.SurnameTextBox.TabIndex = 6;
             this.SurnameTextBox.Tag = "";
             this.SurnameTextBox.TextChanged += new System.EventHandler(this.SurnameTextBox_TextChanged);
@@ -124,7 +124,7 @@
             this.IDTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.25F);
             this.IDTextBox.Location = new System.Drawing.Point(342, 226);
             this.IDTextBox.Name = "IDTextBox";
-            this.IDTextBox.Size = new System.Drawing.Size(302, 32);
+            this.IDTextBox.Size = new System.Drawing.Size(302, 38);
             this.IDTextBox.TabIndex = 9;
             this.IDTextBox.Tag = "";
             // 
@@ -147,7 +147,7 @@
             this.CellTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.25F);
             this.CellTextBox.Location = new System.Drawing.Point(342, 286);
             this.CellTextBox.Name = "CellTextBox";
-            this.CellTextBox.Size = new System.Drawing.Size(302, 32);
+            this.CellTextBox.Size = new System.Drawing.Size(302, 38);
             this.CellTextBox.TabIndex = 11;
             this.CellTextBox.Tag = "";
             // 
@@ -170,7 +170,7 @@
             this.EmailTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.25F);
             this.EmailTextBox.Location = new System.Drawing.Point(342, 351);
             this.EmailTextBox.Name = "EmailTextBox";
-            this.EmailTextBox.Size = new System.Drawing.Size(302, 32);
+            this.EmailTextBox.Size = new System.Drawing.Size(302, 38);
             this.EmailTextBox.TabIndex = 13;
             this.EmailTextBox.Tag = "";
             // 
@@ -193,21 +193,20 @@
             this.AddressTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.25F);
             this.AddressTextBox.Location = new System.Drawing.Point(342, 410);
             this.AddressTextBox.Name = "AddressTextBox";
-            this.AddressTextBox.Size = new System.Drawing.Size(302, 32);
+            this.AddressTextBox.Size = new System.Drawing.Size(302, 38);
             this.AddressTextBox.TabIndex = 15;
             this.AddressTextBox.Tag = "";
             // 
             // regBtn
             // 
             this.regBtn.BackColor = System.Drawing.Color.Transparent;
-            this.regBtn.BackgroundImage = global::BloodBankSystem.Properties.Resources.buttonbackRed;
             this.regBtn.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.regBtn.FlatAppearance.BorderSize = 0;
             this.regBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.regBtn.Font = new System.Drawing.Font("Arial", 29.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.regBtn.ForeColor = System.Drawing.Color.Red;
             this.regBtn.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.regBtn.Location = new System.Drawing.Point(228, 470);
+            this.regBtn.Location = new System.Drawing.Point(224, 467);
             this.regBtn.Name = "regBtn";
             this.regBtn.Size = new System.Drawing.Size(219, 61);
             this.regBtn.TabIndex = 16;
@@ -218,7 +217,6 @@
             // BackBtn
             // 
             this.BackBtn.BackColor = System.Drawing.Color.Transparent;
-            this.BackBtn.BackgroundImage = global::BloodBankSystem.Properties.Resources.buttonbackBlue;
             this.BackBtn.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.BackBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.BackBtn.Font = new System.Drawing.Font("Arial", 18.25F);
@@ -232,9 +230,8 @@
             // 
             // RegForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 14F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackgroundImage = global::BloodBankSystem.Properties.Resources.RegBack;
             this.ClientSize = new System.Drawing.Size(684, 601);
             this.Controls.Add(this.BackBtn);
             this.Controls.Add(this.regBtn);

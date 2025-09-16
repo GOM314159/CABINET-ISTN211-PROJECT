@@ -51,7 +51,6 @@
             // RegBtn
             // 
             this.RegBtn.BackColor = System.Drawing.Color.Transparent;
-            this.RegBtn.BackgroundImage = global::BloodBankSystem.Properties.Resources.buttonbackBlue;
             this.RegBtn.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.RegBtn.FlatAppearance.BorderSize = 0;
             this.RegBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -69,7 +68,6 @@
             // Logbtn
             // 
             this.Logbtn.BackColor = System.Drawing.Color.Transparent;
-            this.Logbtn.BackgroundImage = global::BloodBankSystem.Properties.Resources.buttonbackRed;
             this.Logbtn.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.Logbtn.FlatAppearance.BorderSize = 0;
             this.Logbtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -87,7 +85,6 @@
             // ExitBtn
             // 
             this.ExitBtn.BackColor = System.Drawing.Color.Transparent;
-            this.ExitBtn.BackgroundImage = global::BloodBankSystem.Properties.Resources.buttonbackBlue;
             this.ExitBtn.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ExitBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.ExitBtn.Font = new System.Drawing.Font("Arial", 18.25F);
@@ -102,7 +99,6 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 14F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackgroundImage = global::BloodBankSystem.Properties.Resources.HomeBack;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(634, 441);
             this.Controls.Add(this.ExitBtn);

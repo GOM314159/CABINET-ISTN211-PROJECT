@@ -131,7 +131,6 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 14F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.BackgroundImage = global::BloodBankSystem.Properties.Resources.RegBack1;
             this.ClientSize = new System.Drawing.Size(534, 496);
             this.Controls.Add(this.BackBtn);
             this.Controls.Add(this.loginBtn);
