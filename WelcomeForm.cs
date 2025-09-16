@@ -8,7 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace BloodBank_Test_1
+namespace BloodBankSystem
 {
     public partial class WelcomeForm : Form
     {
@@ -40,6 +40,11 @@ namespace BloodBank_Test_1
             Form logform = new LoginForm();
             logform.Show();
             this.Hide();
+        }
+
+        private void WelcomeForm_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

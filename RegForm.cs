@@ -8,7 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace BloodBank_Test_1
+namespace BloodBankSystem
 {
     public partial class RegForm : Form
     {
@@ -37,6 +37,11 @@ namespace BloodBank_Test_1
             Form Welcomeform = new WelcomeForm();
             Welcomeform.Show();
             this.Hide();
+        }
+
+        private void RegForm_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

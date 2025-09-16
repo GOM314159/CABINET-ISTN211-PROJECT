@@ -9,7 +9,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace BloodBank_Test_1
+namespace BloodBankSystem
 {
     public partial class LoginForm : Form
     {
@@ -35,6 +35,11 @@ namespace BloodBank_Test_1
         {
             Form form = new HomePage();
             this.Hide();
+
+        }
+
+        private void LoginForm_Load(object sender, EventArgs e)
+        {
 
         }
     }

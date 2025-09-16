@@ -1,4 +1,4 @@
-﻿namespace BloodBank_Test_1
+﻿namespace BloodBankSystem
 {
     partial class LoginForm
     {
@@ -56,7 +56,7 @@
             this.IDTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.25F);
             this.IDTextBox.Location = new System.Drawing.Point(86, 177);
             this.IDTextBox.Name = "IDTextBox";
-            this.IDTextBox.Size = new System.Drawing.Size(337, 32);
+            this.IDTextBox.Size = new System.Drawing.Size(337, 38);
             this.IDTextBox.TabIndex = 11;
             this.IDTextBox.Tag = "";
             // 
@@ -79,7 +79,7 @@
             this.PasswordTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.25F);
             this.PasswordTextBox.Location = new System.Drawing.Point(86, 313);
             this.PasswordTextBox.Name = "PasswordTextBox";
-            this.PasswordTextBox.Size = new System.Drawing.Size(337, 32);
+            this.PasswordTextBox.Size = new System.Drawing.Size(337, 38);
             this.PasswordTextBox.TabIndex = 13;
             this.PasswordTextBox.Tag = "";
             // 
@@ -128,7 +128,7 @@
             // 
             // LoginForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 14F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(534, 496);
@@ -143,6 +143,7 @@
             this.Name = "LoginForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Login Form";
+            this.Load += new System.EventHandler(this.LoginForm_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

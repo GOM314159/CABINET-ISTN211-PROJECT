@@ -1,4 +1,4 @@
-﻿namespace BloodBank_Test_1
+﻿namespace BloodBankSystem
 {
     partial class RegForm
     {
@@ -251,6 +251,7 @@
             this.Font = new System.Drawing.Font("Arial", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Name = "RegForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.Load += new System.EventHandler(this.RegForm_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
