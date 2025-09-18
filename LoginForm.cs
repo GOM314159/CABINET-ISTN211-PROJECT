@@ -33,8 +33,12 @@ namespace BloodBankSystem
 
         private void loginBtn_Click(object sender, EventArgs e)
         {
-            Form form = new HomePage();
+            //Form form = new HomePage();
+            //this.Hide();
+
+            Form AdminForm = new AdminForm();
             this.Hide();
+            AdminForm.Show();
 
         }
 
