@@ -23,11 +23,13 @@ namespace BloodBankSystem
             this.appointmentTableAdapter.Fill(this.ist2jwDataSet.Appointment);
             // TODO: This line of code loads data into the 'ist2jwDataSet.TblBloodInventory' table. You can move, or remove it, as needed.
             this.tblBloodInventoryTableAdapter.Fill(this.ist2jwDataSet.TblBloodInventory);
-            // TODO: This line of code loads data into the 'ist2jwDataSet.TblBloodInventory' table. You can move, or remove it, as needed.
-
             // TODO: This line of code loads data into the 'ist2jwDataSet.tblUsers' table. You can move, or remove it, as needed.
             this.tblUsersTableAdapter.Fill(this.ist2jwDataSet.tblUsers);
 
+
+
         }
+
+       
     }
 }
