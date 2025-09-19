@@ -29,12 +29,12 @@
         private void InitializeComponent()
         {
             this.logTitleLbl = new System.Windows.Forms.Label();
-            this.IDTextBox = new System.Windows.Forms.TextBox();
             this.IDLabel = new System.Windows.Forms.Label();
             this.PasswordTextBox = new System.Windows.Forms.TextBox();
             this.PasswordLbl = new System.Windows.Forms.Label();
             this.loginBtn = new System.Windows.Forms.Button();
             this.BackBtn = new System.Windows.Forms.Button();
+            this.mIDTextBox = new System.Windows.Forms.MaskedTextBox();
             this.SuspendLayout();
             // 
             // logTitleLbl
@@ -49,16 +49,6 @@
             this.logTitleLbl.TabIndex = 2;
             this.logTitleLbl.Text = "Login Page";
             this.logTitleLbl.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // IDTextBox
-            // 
-            this.IDTextBox.BackColor = System.Drawing.Color.LightSteelBlue;
-            this.IDTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.25F);
-            this.IDTextBox.Location = new System.Drawing.Point(86, 177);
-            this.IDTextBox.Name = "IDTextBox";
-            this.IDTextBox.Size = new System.Drawing.Size(337, 38);
-            this.IDTextBox.TabIndex = 11;
-            this.IDTextBox.Tag = "";
             // 
             // IDLabel
             // 
@@ -76,10 +66,10 @@
             // PasswordTextBox
             // 
             this.PasswordTextBox.BackColor = System.Drawing.Color.LightSteelBlue;
-            this.PasswordTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.25F);
-            this.PasswordTextBox.Location = new System.Drawing.Point(86, 313);
+            this.PasswordTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F);
+            this.PasswordTextBox.Location = new System.Drawing.Point(109, 307);
             this.PasswordTextBox.Name = "PasswordTextBox";
-            this.PasswordTextBox.Size = new System.Drawing.Size(337, 38);
+            this.PasswordTextBox.Size = new System.Drawing.Size(301, 38);
             this.PasswordTextBox.TabIndex = 13;
             this.PasswordTextBox.Tag = "";
             // 
@@ -126,17 +116,30 @@
             this.BackBtn.UseVisualStyleBackColor = false;
             this.BackBtn.Click += new System.EventHandler(this.BackBtn_Click);
             // 
+            // mIDTextBox
+            // 
+            this.mIDTextBox.BackColor = System.Drawing.Color.LightSteelBlue;
+            this.mIDTextBox.Font = new System.Drawing.Font("Arial", 20.25F);
+            this.mIDTextBox.ForeColor = System.Drawing.SystemColors.WindowText;
+            this.mIDTextBox.Location = new System.Drawing.Point(109, 170);
+            this.mIDTextBox.Mask = "0 0 0 0 0 0 0 0 0 0 0 0 0";
+            this.mIDTextBox.Name = "mIDTextBox";
+            this.mIDTextBox.Size = new System.Drawing.Size(301, 39);
+            this.mIDTextBox.TabIndex = 19;
+            this.mIDTextBox.ValidatingType = typeof(int);
+            // 
             // LoginForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 14F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
+            this.BackgroundImage = global::BloodBankSystem.Properties.Resources.RegBack;
             this.ClientSize = new System.Drawing.Size(534, 496);
+            this.Controls.Add(this.mIDTextBox);
             this.Controls.Add(this.BackBtn);
             this.Controls.Add(this.loginBtn);
             this.Controls.Add(this.PasswordTextBox);
             this.Controls.Add(this.PasswordLbl);
-            this.Controls.Add(this.IDTextBox);
             this.Controls.Add(this.IDLabel);
             this.Controls.Add(this.logTitleLbl);
             this.Font = new System.Drawing.Font("Arial", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -151,11 +154,11 @@
 
         #endregion
         private System.Windows.Forms.Label logTitleLbl;
-        private System.Windows.Forms.TextBox IDTextBox;
         private System.Windows.Forms.Label IDLabel;
         private System.Windows.Forms.TextBox PasswordTextBox;
         private System.Windows.Forms.Label PasswordLbl;
         private System.Windows.Forms.Button loginBtn;
         private System.Windows.Forms.Button BackBtn;
+        private System.Windows.Forms.MaskedTextBox mIDTextBox;
     }
 }

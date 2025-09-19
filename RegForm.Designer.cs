@@ -29,20 +29,20 @@
         private void InitializeComponent()
         {
             this.regTitleLbl = new System.Windows.Forms.Label();
-            this.FirstNameTextBox = new System.Windows.Forms.TextBox();
             this.NameLbl = new System.Windows.Forms.Label();
             this.SurnameLbl = new System.Windows.Forms.Label();
-            this.SurnameTextBox = new System.Windows.Forms.TextBox();
             this.IDLabel = new System.Windows.Forms.Label();
-            this.IDTextBox = new System.Windows.Forms.TextBox();
             this.CellLbl = new System.Windows.Forms.Label();
-            this.CellTextBox = new System.Windows.Forms.TextBox();
             this.EmailLbl = new System.Windows.Forms.Label();
-            this.EmailTextBox = new System.Windows.Forms.TextBox();
             this.AddressLbl = new System.Windows.Forms.Label();
-            this.AddressTextBox = new System.Windows.Forms.TextBox();
             this.regBtn = new System.Windows.Forms.Button();
             this.BackBtn = new System.Windows.Forms.Button();
+            this.mIDTextBox = new System.Windows.Forms.MaskedTextBox();
+            this.addressTextBox = new System.Windows.Forms.TextBox();
+            this.fNameTextBox = new System.Windows.Forms.TextBox();
+            this.sNameTextBox = new System.Windows.Forms.TextBox();
+            this.mCellphoneTextBox = new System.Windows.Forms.MaskedTextBox();
+            this.emailTextBox = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
             // regTitleLbl
@@ -58,23 +58,13 @@
             this.regTitleLbl.Text = "Registration Page";
             this.regTitleLbl.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // FirstNameTextBox
-            // 
-            this.FirstNameTextBox.BackColor = System.Drawing.Color.LightSteelBlue;
-            this.FirstNameTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.25F);
-            this.FirstNameTextBox.Location = new System.Drawing.Point(342, 111);
-            this.FirstNameTextBox.Name = "FirstNameTextBox";
-            this.FirstNameTextBox.Size = new System.Drawing.Size(302, 38);
-            this.FirstNameTextBox.TabIndex = 4;
-            this.FirstNameTextBox.Tag = "";
-            // 
             // NameLbl
             // 
             this.NameLbl.BackColor = System.Drawing.Color.White;
             this.NameLbl.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.NameLbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 18.25F);
             this.NameLbl.ForeColor = System.Drawing.Color.RoyalBlue;
-            this.NameLbl.Location = new System.Drawing.Point(48, 112);
+            this.NameLbl.Location = new System.Drawing.Point(72, 99);
             this.NameLbl.Name = "NameLbl";
             this.NameLbl.Size = new System.Drawing.Size(229, 33);
             this.NameLbl.TabIndex = 5;
@@ -87,23 +77,12 @@
             this.SurnameLbl.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.SurnameLbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 18.25F);
             this.SurnameLbl.ForeColor = System.Drawing.Color.RoyalBlue;
-            this.SurnameLbl.Location = new System.Drawing.Point(48, 169);
+            this.SurnameLbl.Location = new System.Drawing.Point(405, 99);
             this.SurnameLbl.Name = "SurnameLbl";
             this.SurnameLbl.Size = new System.Drawing.Size(229, 33);
             this.SurnameLbl.TabIndex = 7;
             this.SurnameLbl.Text = "Surname";
             this.SurnameLbl.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // SurnameTextBox
-            // 
-            this.SurnameTextBox.BackColor = System.Drawing.Color.LightSteelBlue;
-            this.SurnameTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.25F);
-            this.SurnameTextBox.Location = new System.Drawing.Point(342, 169);
-            this.SurnameTextBox.Name = "SurnameTextBox";
-            this.SurnameTextBox.Size = new System.Drawing.Size(302, 38);
-            this.SurnameTextBox.TabIndex = 6;
-            this.SurnameTextBox.Tag = "";
-            this.SurnameTextBox.TextChanged += new System.EventHandler(this.SurnameTextBox_TextChanged);
             // 
             // IDLabel
             // 
@@ -118,16 +97,6 @@
             this.IDLabel.Text = "ID Number";
             this.IDLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // IDTextBox
-            // 
-            this.IDTextBox.BackColor = System.Drawing.Color.LightSteelBlue;
-            this.IDTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.25F);
-            this.IDTextBox.Location = new System.Drawing.Point(342, 226);
-            this.IDTextBox.Name = "IDTextBox";
-            this.IDTextBox.Size = new System.Drawing.Size(302, 38);
-            this.IDTextBox.TabIndex = 9;
-            this.IDTextBox.Tag = "";
-            // 
             // CellLbl
             // 
             this.CellLbl.BackColor = System.Drawing.Color.White;
@@ -140,16 +109,6 @@
             this.CellLbl.TabIndex = 10;
             this.CellLbl.Text = "Cellphone Number";
             this.CellLbl.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // CellTextBox
-            // 
-            this.CellTextBox.BackColor = System.Drawing.Color.LightSteelBlue;
-            this.CellTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.25F);
-            this.CellTextBox.Location = new System.Drawing.Point(342, 286);
-            this.CellTextBox.Name = "CellTextBox";
-            this.CellTextBox.Size = new System.Drawing.Size(302, 38);
-            this.CellTextBox.TabIndex = 11;
-            this.CellTextBox.Tag = "";
             // 
             // EmailLbl
             // 
@@ -164,38 +123,18 @@
             this.EmailLbl.Text = "Email";
             this.EmailLbl.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // EmailTextBox
-            // 
-            this.EmailTextBox.BackColor = System.Drawing.Color.LightSteelBlue;
-            this.EmailTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.25F);
-            this.EmailTextBox.Location = new System.Drawing.Point(342, 351);
-            this.EmailTextBox.Name = "EmailTextBox";
-            this.EmailTextBox.Size = new System.Drawing.Size(302, 38);
-            this.EmailTextBox.TabIndex = 13;
-            this.EmailTextBox.Tag = "";
-            // 
             // AddressLbl
             // 
             this.AddressLbl.BackColor = System.Drawing.Color.White;
             this.AddressLbl.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.AddressLbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 18.25F);
             this.AddressLbl.ForeColor = System.Drawing.Color.RoyalBlue;
-            this.AddressLbl.Location = new System.Drawing.Point(48, 411);
+            this.AddressLbl.Location = new System.Drawing.Point(48, 414);
             this.AddressLbl.Name = "AddressLbl";
             this.AddressLbl.Size = new System.Drawing.Size(229, 33);
             this.AddressLbl.TabIndex = 14;
             this.AddressLbl.Text = "Address";
             this.AddressLbl.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // AddressTextBox
-            // 
-            this.AddressTextBox.BackColor = System.Drawing.Color.LightSteelBlue;
-            this.AddressTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.25F);
-            this.AddressTextBox.Location = new System.Drawing.Point(342, 410);
-            this.AddressTextBox.Name = "AddressTextBox";
-            this.AddressTextBox.Size = new System.Drawing.Size(302, 38);
-            this.AddressTextBox.TabIndex = 15;
-            this.AddressTextBox.Tag = "";
             // 
             // regBtn
             // 
@@ -204,9 +143,9 @@
             this.regBtn.FlatAppearance.BorderSize = 0;
             this.regBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.regBtn.Font = new System.Drawing.Font("Arial", 29.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.regBtn.ForeColor = System.Drawing.Color.Red;
+            this.regBtn.ForeColor = System.Drawing.Color.MidnightBlue;
             this.regBtn.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.regBtn.Location = new System.Drawing.Point(224, 467);
+            this.regBtn.Location = new System.Drawing.Point(231, 476);
             this.regBtn.Name = "regBtn";
             this.regBtn.Size = new System.Drawing.Size(219, 61);
             this.regBtn.TabIndex = 16;
@@ -220,7 +159,7 @@
             this.BackBtn.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.BackBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.BackBtn.Font = new System.Drawing.Font("Arial", 18.25F);
-            this.BackBtn.Location = new System.Drawing.Point(12, 550);
+            this.BackBtn.Location = new System.Drawing.Point(12, 580);
             this.BackBtn.Name = "BackBtn";
             this.BackBtn.Size = new System.Drawing.Size(104, 39);
             this.BackBtn.TabIndex = 17;
@@ -228,25 +167,90 @@
             this.BackBtn.UseVisualStyleBackColor = false;
             this.BackBtn.Click += new System.EventHandler(this.BackBtn_Click);
             // 
+            // mIDTextBox
+            // 
+            this.mIDTextBox.BackColor = System.Drawing.Color.LightSteelBlue;
+            this.mIDTextBox.Font = new System.Drawing.Font("Arial", 16.25F);
+            this.mIDTextBox.ForeColor = System.Drawing.SystemColors.WindowText;
+            this.mIDTextBox.Location = new System.Drawing.Point(342, 229);
+            this.mIDTextBox.Mask = "0000000000000";
+            this.mIDTextBox.Name = "mIDTextBox";
+            this.mIDTextBox.Size = new System.Drawing.Size(292, 32);
+            this.mIDTextBox.TabIndex = 18;
+            this.mIDTextBox.ValidatingType = typeof(int);
+            // 
+            // addressTextBox
+            // 
+            this.addressTextBox.AccessibleDescription = "Road Name and Number";
+            this.addressTextBox.BackColor = System.Drawing.Color.LightSteelBlue;
+            this.addressTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.25F);
+            this.addressTextBox.Location = new System.Drawing.Point(342, 415);
+            this.addressTextBox.Name = "addressTextBox";
+            this.addressTextBox.Size = new System.Drawing.Size(292, 32);
+            this.addressTextBox.TabIndex = 15;
+            this.addressTextBox.Tag = "";
+            // 
+            // fNameTextBox
+            // 
+            this.fNameTextBox.BackColor = System.Drawing.Color.LightSteelBlue;
+            this.fNameTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.25F);
+            this.fNameTextBox.Location = new System.Drawing.Point(36, 156);
+            this.fNameTextBox.Name = "fNameTextBox";
+            this.fNameTextBox.Size = new System.Drawing.Size(292, 32);
+            this.fNameTextBox.TabIndex = 4;
+            this.fNameTextBox.Tag = "";
+            // 
+            // sNameTextBox
+            // 
+            this.sNameTextBox.BackColor = System.Drawing.Color.LightSteelBlue;
+            this.sNameTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.25F);
+            this.sNameTextBox.Location = new System.Drawing.Point(371, 156);
+            this.sNameTextBox.Name = "sNameTextBox";
+            this.sNameTextBox.Size = new System.Drawing.Size(292, 32);
+            this.sNameTextBox.TabIndex = 6;
+            this.sNameTextBox.Tag = "";
+            this.sNameTextBox.TextChanged += new System.EventHandler(this.SurnameTextBox_TextChanged);
+            // 
+            // mCellphoneTextBox
+            // 
+            this.mCellphoneTextBox.BackColor = System.Drawing.Color.LightSteelBlue;
+            this.mCellphoneTextBox.Font = new System.Drawing.Font("Arial", 16.25F);
+            this.mCellphoneTextBox.Location = new System.Drawing.Point(342, 288);
+            this.mCellphoneTextBox.Mask = "(999) 000-0000";
+            this.mCellphoneTextBox.Name = "mCellphoneTextBox";
+            this.mCellphoneTextBox.Size = new System.Drawing.Size(292, 32);
+            this.mCellphoneTextBox.TabIndex = 19;
+            // 
+            // emailTextBox
+            // 
+            this.emailTextBox.BackColor = System.Drawing.Color.LightSteelBlue;
+            this.emailTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.25F);
+            this.emailTextBox.Location = new System.Drawing.Point(342, 351);
+            this.emailTextBox.Name = "emailTextBox";
+            this.emailTextBox.Size = new System.Drawing.Size(292, 32);
+            this.emailTextBox.TabIndex = 20;
+            this.emailTextBox.Tag = "";
+            // 
             // RegForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 14F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(684, 601);
+            this.BackgroundImage = global::BloodBankSystem.Properties.Resources.RegBack;
+            this.ClientSize = new System.Drawing.Size(684, 631);
+            this.Controls.Add(this.emailTextBox);
+            this.Controls.Add(this.mCellphoneTextBox);
+            this.Controls.Add(this.mIDTextBox);
             this.Controls.Add(this.BackBtn);
             this.Controls.Add(this.regBtn);
-            this.Controls.Add(this.AddressTextBox);
+            this.Controls.Add(this.addressTextBox);
             this.Controls.Add(this.AddressLbl);
-            this.Controls.Add(this.EmailTextBox);
             this.Controls.Add(this.EmailLbl);
-            this.Controls.Add(this.CellTextBox);
             this.Controls.Add(this.CellLbl);
-            this.Controls.Add(this.IDTextBox);
             this.Controls.Add(this.IDLabel);
             this.Controls.Add(this.SurnameLbl);
-            this.Controls.Add(this.SurnameTextBox);
+            this.Controls.Add(this.sNameTextBox);
             this.Controls.Add(this.NameLbl);
-            this.Controls.Add(this.FirstNameTextBox);
+            this.Controls.Add(this.fNameTextBox);
             this.Controls.Add(this.regTitleLbl);
             this.Font = new System.Drawing.Font("Arial", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Name = "RegForm";
@@ -259,19 +263,19 @@
 
         #endregion
         private System.Windows.Forms.Label regTitleLbl;
-        private System.Windows.Forms.TextBox FirstNameTextBox;
         private System.Windows.Forms.Label NameLbl;
         private System.Windows.Forms.Label SurnameLbl;
-        private System.Windows.Forms.TextBox SurnameTextBox;
         private System.Windows.Forms.Label IDLabel;
-        private System.Windows.Forms.TextBox IDTextBox;
         private System.Windows.Forms.Label CellLbl;
-        private System.Windows.Forms.TextBox CellTextBox;
         private System.Windows.Forms.Label EmailLbl;
-        private System.Windows.Forms.TextBox EmailTextBox;
         private System.Windows.Forms.Label AddressLbl;
-        private System.Windows.Forms.TextBox AddressTextBox;
         private System.Windows.Forms.Button regBtn;
         private System.Windows.Forms.Button BackBtn;
+        private System.Windows.Forms.MaskedTextBox mIDTextBox;
+        private System.Windows.Forms.TextBox addressTextBox;
+        private System.Windows.Forms.TextBox fNameTextBox;
+        private System.Windows.Forms.TextBox sNameTextBox;
+        private System.Windows.Forms.MaskedTextBox mCellphoneTextBox;
+        private System.Windows.Forms.TextBox emailTextBox;
     }
 }
