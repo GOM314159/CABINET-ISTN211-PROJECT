@@ -33,7 +33,6 @@
             this.bbNameLbl = new System.Windows.Forms.Label();
             this.ProfileImg = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.ProfileImg)).BeginInit();
-            this.donoLbl.SuspendLayout();
             this.SuspendLayout();
             // 
             // welcomelbl
@@ -96,7 +95,6 @@
             this.Text = "Form1";
             this.Load += new System.EventHandler(this.Form1_Load);
             ((System.ComponentModel.ISupportInitialize)(this.ProfileImg)).EndInit();
-            this.donoLbl.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
