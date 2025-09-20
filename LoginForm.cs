@@ -26,14 +26,15 @@ namespace BloodBankSystem
 
         private void BackBtn_Click(object sender, EventArgs e)
         {
-            Form Welcomeform = new WelcomeForm();
-            Welcomeform.Show();
+            Form welcomeform = new WelcomeForm();
+            welcomeform.Show();
             this.Hide();
         }
 
         private void loginBtn_Click(object sender, EventArgs e)
         {
-            Form form = new HomePage();
+            Form homePage = new HomePage();
+            homePage.Show();
             this.Hide();
 
         }

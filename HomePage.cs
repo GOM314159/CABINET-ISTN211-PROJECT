@@ -26,5 +26,12 @@ namespace BloodBankSystem
         {
 
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            Form appointmentForm = new AppointmentForm();
+            appointmentForm.Show();
+            this.Hide();
+        }
     }
 }
