@@ -14,7 +14,7 @@ namespace BloodBankSystem
     {
         public HomePage()
         {
-            
+            InitializeComponent();
         }
 
         private void Form1_Load(object sender, EventArgs e)
@@ -24,7 +24,14 @@ namespace BloodBankSystem
 
         private void ProfileImg_Click(object sender, EventArgs e)
         {
-
+            if (prfPnl.Visible)
+            {
+                prfPnl.Visible = false;
+            }
+            else
+            {
+                prfPnl.Visible = true;
+            }
         }
 
         private void toolTip1_Popup(object sender, PopupEventArgs e)
