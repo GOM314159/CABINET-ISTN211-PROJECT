@@ -134,11 +134,14 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Properties\buttonbackBlue.png" />
+    <Content Include="Properties\buttonbackGreen.png" />
+    <Content Include="Properties\ButtonBackOrange.png" />
     <Content Include="Properties\buttonbackRed.png" />
     <Content Include="Properties\HomeBack.jpeg" />
     <Content Include="Properties\HomeBack.jpg" />
     <Content Include="Properties\ProfileBackImg.png" />
     <Content Include="Properties\RegBack.jpg" />
+    <Content Include="Properties\WelcomeBack.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

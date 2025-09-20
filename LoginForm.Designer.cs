@@ -41,7 +41,7 @@
             // 
             this.logTitleLbl.BackColor = System.Drawing.Color.Red;
             this.logTitleLbl.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.logTitleLbl.Font = new System.Drawing.Font("Arial", 29.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.logTitleLbl.Font = new System.Drawing.Font("Modern No. 20", 29.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.logTitleLbl.ForeColor = System.Drawing.Color.Transparent;
             this.logTitleLbl.Location = new System.Drawing.Point(0, 0);
             this.logTitleLbl.Name = "logTitleLbl";
@@ -89,6 +89,8 @@
             // loginBtn
             // 
             this.loginBtn.BackColor = System.Drawing.Color.Transparent;
+            this.loginBtn.BackgroundImage = global::BloodBankSystem.Properties.Resources.buttonbackBlue;
+            this.loginBtn.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.loginBtn.FlatAppearance.BorderSize = 0;
             this.loginBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.loginBtn.Font = new System.Drawing.Font("Arial", 29.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -105,7 +107,11 @@
             // BackBtn
             // 
             this.BackBtn.BackColor = System.Drawing.Color.Transparent;
+            this.BackBtn.BackgroundImage = global::BloodBankSystem.Properties.Resources.buttonbackGreen;
             this.BackBtn.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.BackBtn.FlatAppearance.BorderSize = 0;
+            this.BackBtn.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Black;
+            this.BackBtn.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
             this.BackBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.BackBtn.Font = new System.Drawing.Font("Arial", 18.25F);
             this.BackBtn.Location = new System.Drawing.Point(12, 445);
