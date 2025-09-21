@@ -32,12 +32,12 @@
             this.bbNameLbl = new System.Windows.Forms.Label();
             this.ProfileImg = new System.Windows.Forms.PictureBox();
             this.prfPnl = new System.Windows.Forms.Panel();
-            this.prfNameLbl = new System.Windows.Forms.Label();
-            this.prfDonLbl = new System.Windows.Forms.Label();
-            this.prfNextDonLbl = new System.Windows.Forms.Label();
-            this.prfnextDateLbl = new System.Windows.Forms.Label();
-            this.ttlDonLbl = new System.Windows.Forms.Label();
             this.monthCalendar1 = new System.Windows.Forms.MonthCalendar();
+            this.ttlDonLbl = new System.Windows.Forms.Label();
+            this.prfnextDateLbl = new System.Windows.Forms.Label();
+            this.prfNextDonLbl = new System.Windows.Forms.Label();
+            this.prfDonLbl = new System.Windows.Forms.Label();
+            this.prfNameLbl = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.ProfileImg)).BeginInit();
             this.prfPnl.SuspendLayout();
             this.SuspendLayout();
@@ -47,7 +47,6 @@
             this.welcomelbl.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.welcomelbl.BackColor = System.Drawing.Color.White;
-            this.welcomelbl.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.welcomelbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 36.25F, System.Drawing.FontStyle.Bold);
             this.welcomelbl.ForeColor = System.Drawing.Color.SteelBlue;
             this.welcomelbl.Location = new System.Drawing.Point(197, 0);
@@ -103,30 +102,34 @@
             this.prfPnl.TabIndex = 5;
             this.prfPnl.Visible = false;
             // 
-            // prfNameLbl
+            // monthCalendar1
             // 
-            this.prfNameLbl.BackColor = System.Drawing.Color.MistyRose;
-            this.prfNameLbl.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.prfNameLbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.prfNameLbl.ForeColor = System.Drawing.Color.SteelBlue;
-            this.prfNameLbl.Location = new System.Drawing.Point(0, 0);
-            this.prfNameLbl.Name = "prfNameLbl";
-            this.prfNameLbl.Size = new System.Drawing.Size(347, 41);
-            this.prfNameLbl.TabIndex = 0;
-            this.prfNameLbl.Text = "Name";
-            this.prfNameLbl.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.monthCalendar1.Location = new System.Drawing.Point(56, 369);
+            this.monthCalendar1.Name = "monthCalendar1";
+            this.monthCalendar1.ShowWeekNumbers = true;
+            this.monthCalendar1.TabIndex = 6;
             // 
-            // prfDonLbl
+            // ttlDonLbl
             // 
-            this.prfDonLbl.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.prfDonLbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 18.25F);
-            this.prfDonLbl.ForeColor = System.Drawing.Color.Maroon;
-            this.prfDonLbl.Location = new System.Drawing.Point(-1, 80);
-            this.prfDonLbl.Name = "prfDonLbl";
-            this.prfDonLbl.Size = new System.Drawing.Size(349, 32);
-            this.prfDonLbl.TabIndex = 1;
-            this.prfDonLbl.Text = "Total Donations";
-            this.prfDonLbl.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.ttlDonLbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 18.25F);
+            this.ttlDonLbl.ForeColor = System.Drawing.Color.Maroon;
+            this.ttlDonLbl.Location = new System.Drawing.Point(-2, 133);
+            this.ttlDonLbl.Name = "ttlDonLbl";
+            this.ttlDonLbl.Size = new System.Drawing.Size(348, 32);
+            this.ttlDonLbl.TabIndex = 4;
+            this.ttlDonLbl.Text = "0";
+            this.ttlDonLbl.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            // 
+            // prfnextDateLbl
+            // 
+            this.prfnextDateLbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 18.25F);
+            this.prfnextDateLbl.ForeColor = System.Drawing.Color.Maroon;
+            this.prfnextDateLbl.Location = new System.Drawing.Point(-1, 259);
+            this.prfnextDateLbl.Name = "prfnextDateLbl";
+            this.prfnextDateLbl.Size = new System.Drawing.Size(348, 32);
+            this.prfnextDateLbl.TabIndex = 3;
+            this.prfnextDateLbl.Text = "Date";
+            this.prfnextDateLbl.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             // 
             // prfNextDonLbl
             // 
@@ -140,34 +143,30 @@
             this.prfNextDonLbl.Text = "Next Donation";
             this.prfNextDonLbl.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             // 
-            // prfnextDateLbl
+            // prfDonLbl
             // 
-            this.prfnextDateLbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 18.25F);
-            this.prfnextDateLbl.ForeColor = System.Drawing.Color.Maroon;
-            this.prfnextDateLbl.Location = new System.Drawing.Point(-1, 259);
-            this.prfnextDateLbl.Name = "prfnextDateLbl";
-            this.prfnextDateLbl.Size = new System.Drawing.Size(348, 32);
-            this.prfnextDateLbl.TabIndex = 3;
-            this.prfnextDateLbl.Text = "Date";
-            this.prfnextDateLbl.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.prfDonLbl.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.prfDonLbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 18.25F);
+            this.prfDonLbl.ForeColor = System.Drawing.Color.Maroon;
+            this.prfDonLbl.Location = new System.Drawing.Point(-1, 80);
+            this.prfDonLbl.Name = "prfDonLbl";
+            this.prfDonLbl.Size = new System.Drawing.Size(349, 32);
+            this.prfDonLbl.TabIndex = 1;
+            this.prfDonLbl.Text = "Total Donations";
+            this.prfDonLbl.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             // 
-            // ttlDonLbl
+            // prfNameLbl
             // 
-            this.ttlDonLbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 18.25F);
-            this.ttlDonLbl.ForeColor = System.Drawing.Color.Maroon;
-            this.ttlDonLbl.Location = new System.Drawing.Point(-2, 133);
-            this.ttlDonLbl.Name = "ttlDonLbl";
-            this.ttlDonLbl.Size = new System.Drawing.Size(348, 32);
-            this.ttlDonLbl.TabIndex = 4;
-            this.ttlDonLbl.Text = "0";
-            this.ttlDonLbl.TextAlign = System.Drawing.ContentAlignment.TopCenter;
-            // 
-            // monthCalendar1
-            // 
-            this.monthCalendar1.Location = new System.Drawing.Point(56, 369);
-            this.monthCalendar1.Name = "monthCalendar1";
-            this.monthCalendar1.ShowWeekNumbers = true;
-            this.monthCalendar1.TabIndex = 6;
+            this.prfNameLbl.BackColor = System.Drawing.Color.MistyRose;
+            this.prfNameLbl.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.prfNameLbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.prfNameLbl.ForeColor = System.Drawing.Color.SteelBlue;
+            this.prfNameLbl.Location = new System.Drawing.Point(0, 0);
+            this.prfNameLbl.Name = "prfNameLbl";
+            this.prfNameLbl.Size = new System.Drawing.Size(347, 41);
+            this.prfNameLbl.TabIndex = 0;
+            this.prfNameLbl.Text = "Name";
+            this.prfNameLbl.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             // 
             // HomePage
             // 

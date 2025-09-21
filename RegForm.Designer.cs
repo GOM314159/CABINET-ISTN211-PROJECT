@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.regTitleLbl = new System.Windows.Forms.Label();
             this.NameLbl = new System.Windows.Forms.Label();
             this.SurnameLbl = new System.Windows.Forms.Label();
@@ -43,6 +44,12 @@
             this.sNameTextBox = new System.Windows.Forms.TextBox();
             this.mCellphoneTextBox = new System.Windows.Forms.MaskedTextBox();
             this.emailTextBox = new System.Windows.Forms.TextBox();
+            this.ist2jwDataSet = new BloodBankSystem.ist2jwDataSet();
+            this.tblUsersBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.tblUsersTableAdapter = new BloodBankSystem.ist2jwDataSetTableAdapters.tblUsersTableAdapter();
+            this.tableAdapterManager = new BloodBankSystem.ist2jwDataSetTableAdapters.TableAdapterManager();
+            ((System.ComponentModel.ISupportInitialize)(this.ist2jwDataSet)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.tblUsersBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // regTitleLbl
@@ -201,7 +208,7 @@
             // 
             this.fNameTextBox.BackColor = System.Drawing.Color.LightSteelBlue;
             this.fNameTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.25F);
-            this.fNameTextBox.Location = new System.Drawing.Point(36, 156);
+            this.fNameTextBox.Location = new System.Drawing.Point(39, 156);
             this.fNameTextBox.Name = "fNameTextBox";
             this.fNameTextBox.Size = new System.Drawing.Size(292, 32);
             this.fNameTextBox.TabIndex = 4;
@@ -238,12 +245,35 @@
             this.emailTextBox.TabIndex = 20;
             this.emailTextBox.Tag = "";
             // 
+            // ist2jwDataSet
+            // 
+            this.ist2jwDataSet.DataSetName = "ist2jwDataSet";
+            this.ist2jwDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // tblUsersBindingSource
+            // 
+            this.tblUsersBindingSource.DataMember = "tblUsers";
+            this.tblUsersBindingSource.DataSource = this.ist2jwDataSet;
+            // 
+            // tblUsersTableAdapter
+            // 
+            this.tblUsersTableAdapter.ClearBeforeFill = true;
+            // 
+            // tableAdapterManager
+            // 
+            this.tableAdapterManager.AppointmentTableAdapter = null;
+            this.tableAdapterManager.BackupDataSetBeforeUpdate = false;
+            this.tableAdapterManager.ScheduleTableAdapter = null;
+            this.tableAdapterManager.TblBloodInventoryTableAdapter = null;
+            this.tableAdapterManager.tblUsersTableAdapter = this.tblUsersTableAdapter;
+            this.tableAdapterManager.UpdateOrder = BloodBankSystem.ist2jwDataSetTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete;
+            // 
             // RegForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 14F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = global::BloodBankSystem.Properties.Resources.RegBack;
-            this.ClientSize = new System.Drawing.Size(684, 631);
+            this.ClientSize = new System.Drawing.Size(707, 637);
             this.Controls.Add(this.emailTextBox);
             this.Controls.Add(this.mCellphoneTextBox);
             this.Controls.Add(this.mIDTextBox);
@@ -263,6 +293,8 @@
             this.Name = "RegForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Load += new System.EventHandler(this.RegForm_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.ist2jwDataSet)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.tblUsersBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -284,5 +316,9 @@
         private System.Windows.Forms.TextBox sNameTextBox;
         private System.Windows.Forms.MaskedTextBox mCellphoneTextBox;
         private System.Windows.Forms.TextBox emailTextBox;
+        private ist2jwDataSet ist2jwDataSet;
+        private System.Windows.Forms.BindingSource tblUsersBindingSource;
+        private ist2jwDataSetTableAdapters.tblUsersTableAdapter tblUsersTableAdapter;
+        private ist2jwDataSetTableAdapters.TableAdapterManager tableAdapterManager;
     }
 }
