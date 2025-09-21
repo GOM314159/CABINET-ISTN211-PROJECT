@@ -26,8 +26,8 @@ namespace BloodBankSystem
 
         private void BackBtn_Click(object sender, EventArgs e)
         {
-            Form Welcomeform = new WelcomeForm();
-            Welcomeform.Show();
+            Form welcomeform = new WelcomeForm();
+            welcomeform.Show();
             this.Hide();
         }
 
