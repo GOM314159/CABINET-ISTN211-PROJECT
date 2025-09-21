@@ -418,8 +418,6 @@ namespace BloodBankSystem {
             
             private global::System.Data.DataColumn columnTime;
             
-            private global::System.Data.DataColumn columnSatus;
-            
             private global::System.Data.DataColumn columnCapacity;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -481,14 +479,6 @@ namespace BloodBankSystem {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public global::System.Data.DataColumn SatusColumn {
-                get {
-                    return this.columnSatus;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             public global::System.Data.DataColumn CapacityColumn {
                 get {
                     return this.columnCapacity;
@@ -532,13 +522,12 @@ namespace BloodBankSystem {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public AppointmentRow AddAppointmentRow(string AppID, System.DateTime AppDate, System.TimeSpan Time, string Satus, int Capacity) {
+            public AppointmentRow AddAppointmentRow(string AppID, System.DateTime AppDate, System.TimeSpan Time, int Capacity) {
                 AppointmentRow rowAppointmentRow = ((AppointmentRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
                         AppID,
                         AppDate,
                         Time,
-                        Satus,
                         Capacity};
                 rowAppointmentRow.ItemArray = columnValuesArray;
                 this.Rows.Add(rowAppointmentRow);
@@ -572,7 +561,6 @@ namespace BloodBankSystem {
                 this.columnAppID = base.Columns["AppID"];
                 this.columnAppDate = base.Columns["AppDate"];
                 this.columnTime = base.Columns["Time"];
-                this.columnSatus = base.Columns["Satus"];
                 this.columnCapacity = base.Columns["Capacity"];
             }
             
@@ -585,8 +573,6 @@ namespace BloodBankSystem {
                 base.Columns.Add(this.columnAppDate);
                 this.columnTime = new global::System.Data.DataColumn("Time", typeof(global::System.TimeSpan), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnTime);
-                this.columnSatus = new global::System.Data.DataColumn("Satus", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnSatus);
                 this.columnCapacity = new global::System.Data.DataColumn("Capacity", typeof(int), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnCapacity);
                 this.Constraints.Add(new global::System.Data.UniqueConstraint("Constraint1", new global::System.Data.DataColumn[] {
@@ -596,8 +582,6 @@ namespace BloodBankSystem {
                 this.columnAppID.MaxLength = 10;
                 this.columnAppDate.AllowDBNull = false;
                 this.columnTime.AllowDBNull = false;
-                this.columnSatus.AllowDBNull = false;
-                this.columnSatus.MaxLength = 50;
                 this.columnCapacity.AllowDBNull = false;
             }
             
@@ -1039,8 +1023,6 @@ namespace BloodBankSystem {
             
             private global::System.Data.DataColumn columnExpiryDate;
             
-            private global::System.Data.DataColumn columnStatus;
-            
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             public TblBloodInventoryDataTable() {
@@ -1116,14 +1098,6 @@ namespace BloodBankSystem {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public global::System.Data.DataColumn StatusColumn {
-                get {
-                    return this.columnStatus;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             [global::System.ComponentModel.Browsable(false)]
             public int Count {
                 get {
@@ -1159,15 +1133,14 @@ namespace BloodBankSystem {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public TblBloodInventoryRow AddTblBloodInventoryRow(string UnitID, tblUsersRow parenttblUsersRowByFK_TblBloodInventory_tblUsers, AppointmentRow parentAppointmentRowByFK_TblBloodInventory_Appointment, string BloodType, System.DateTime ExpiryDate, bool Status) {
+            public TblBloodInventoryRow AddTblBloodInventoryRow(string UnitID, tblUsersRow parenttblUsersRowByFK_TblBloodInventory_tblUsers, AppointmentRow parentAppointmentRowByFK_TblBloodInventory_Appointment, string BloodType, System.DateTime ExpiryDate) {
                 TblBloodInventoryRow rowTblBloodInventoryRow = ((TblBloodInventoryRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
                         UnitID,
                         null,
                         null,
                         BloodType,
-                        ExpiryDate,
-                        Status};
+                        ExpiryDate};
                 if ((parenttblUsersRowByFK_TblBloodInventory_tblUsers != null)) {
                     columnValuesArray[1] = parenttblUsersRowByFK_TblBloodInventory_tblUsers[0];
                 }
@@ -1208,7 +1181,6 @@ namespace BloodBankSystem {
                 this.columnAppID = base.Columns["AppID"];
                 this.columnBloodType = base.Columns["BloodType"];
                 this.columnExpiryDate = base.Columns["ExpiryDate"];
-                this.columnStatus = base.Columns["Status"];
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -1224,8 +1196,6 @@ namespace BloodBankSystem {
                 base.Columns.Add(this.columnBloodType);
                 this.columnExpiryDate = new global::System.Data.DataColumn("ExpiryDate", typeof(global::System.DateTime), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnExpiryDate);
-                this.columnStatus = new global::System.Data.DataColumn("Status", typeof(bool), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnStatus);
                 this.Constraints.Add(new global::System.Data.UniqueConstraint("Constraint1", new global::System.Data.DataColumn[] {
                                 this.columnUnitID}, true));
                 this.columnUnitID.AllowDBNull = false;
@@ -1238,7 +1208,6 @@ namespace BloodBankSystem {
                 this.columnBloodType.AllowDBNull = false;
                 this.columnBloodType.MaxLength = 3;
                 this.columnExpiryDate.AllowDBNull = false;
-                this.columnStatus.AllowDBNull = false;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -1800,17 +1769,6 @@ namespace BloodBankSystem {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public string Satus {
-                get {
-                    return ((string)(this[this.tableAppointment.SatusColumn]));
-                }
-                set {
-                    this[this.tableAppointment.SatusColumn] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             public int Capacity {
                 get {
                     return ((int)(this[this.tableAppointment.CapacityColumn]));
@@ -1979,17 +1937,6 @@ namespace BloodBankSystem {
                 }
                 set {
                     this[this.tableTblBloodInventory.ExpiryDateColumn] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public bool Status {
-                get {
-                    return ((bool)(this[this.tableTblBloodInventory.StatusColumn]));
-                }
-                set {
-                    this[this.tableTblBloodInventory.StatusColumn] = value;
                 }
             }
             
@@ -2416,45 +2363,40 @@ namespace BloodBankSystem.ist2jwDataSetTableAdapters {
             tableMapping.ColumnMappings.Add("AppID", "AppID");
             tableMapping.ColumnMappings.Add("AppDate", "AppDate");
             tableMapping.ColumnMappings.Add("Time", "Time");
-            tableMapping.ColumnMappings.Add("Satus", "Satus");
             tableMapping.ColumnMappings.Add("Capacity", "Capacity");
             this._adapter.TableMappings.Add(tableMapping);
             this._adapter.DeleteCommand = new global::System.Data.SqlClient.SqlCommand();
             this._adapter.DeleteCommand.Connection = this.Connection;
             this._adapter.DeleteCommand.CommandText = "DELETE FROM [dbo].[Appointment] WHERE (([AppID] = @Original_AppID) AND ([AppDate]" +
-                " = @Original_AppDate) AND ([Time] = @Original_Time) AND ([Satus] = @Original_Sat" +
-                "us) AND ([Capacity] = @Original_Capacity))";
+                " = @Original_AppDate) AND ([Time] = @Original_Time) AND ([Capacity] = @Original_" +
+                "Capacity))";
             this._adapter.DeleteCommand.CommandType = global::System.Data.CommandType.Text;
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_AppID", global::System.Data.SqlDbType.NChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "AppID", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_AppDate", global::System.Data.SqlDbType.Date, 0, global::System.Data.ParameterDirection.Input, 0, 0, "AppDate", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Time", global::System.Data.SqlDbType.Time, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Time", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Satus", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Satus", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Capacity", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Capacity", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.InsertCommand = new global::System.Data.SqlClient.SqlCommand();
             this._adapter.InsertCommand.Connection = this.Connection;
-            this._adapter.InsertCommand.CommandText = "INSERT INTO [dbo].[Appointment] ([AppID], [AppDate], [Time], [Satus], [Capacity])" +
-                " VALUES (@AppID, @AppDate, @Time, @Satus, @Capacity);\r\nSELECT AppID, AppDate, Ti" +
-                "me, Satus, Capacity FROM Appointment WHERE (AppID = @AppID)";
+            this._adapter.InsertCommand.CommandText = "INSERT INTO [dbo].[Appointment] ([AppID], [AppDate], [Time], [Capacity]) VALUES (" +
+                "@AppID, @AppDate, @Time, @Capacity);\r\nSELECT AppID, AppDate, Time, Capacity FROM" +
+                " Appointment WHERE (AppID = @AppID)";
             this._adapter.InsertCommand.CommandType = global::System.Data.CommandType.Text;
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@AppID", global::System.Data.SqlDbType.NChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "AppID", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@AppDate", global::System.Data.SqlDbType.Date, 0, global::System.Data.ParameterDirection.Input, 0, 0, "AppDate", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Time", global::System.Data.SqlDbType.Time, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Time", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Satus", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Satus", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Capacity", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Capacity", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand = new global::System.Data.SqlClient.SqlCommand();
             this._adapter.UpdateCommand.Connection = this.Connection;
-            this._adapter.UpdateCommand.CommandText = @"UPDATE [dbo].[Appointment] SET [AppID] = @AppID, [AppDate] = @AppDate, [Time] = @Time, [Satus] = @Satus, [Capacity] = @Capacity WHERE (([AppID] = @Original_AppID) AND ([AppDate] = @Original_AppDate) AND ([Time] = @Original_Time) AND ([Satus] = @Original_Satus) AND ([Capacity] = @Original_Capacity));
-SELECT AppID, AppDate, Time, Satus, Capacity FROM Appointment WHERE (AppID = @AppID)";
+            this._adapter.UpdateCommand.CommandText = @"UPDATE [dbo].[Appointment] SET [AppID] = @AppID, [AppDate] = @AppDate, [Time] = @Time, [Capacity] = @Capacity WHERE (([AppID] = @Original_AppID) AND ([AppDate] = @Original_AppDate) AND ([Time] = @Original_Time) AND ([Capacity] = @Original_Capacity));
+SELECT AppID, AppDate, Time, Capacity FROM Appointment WHERE (AppID = @AppID)";
             this._adapter.UpdateCommand.CommandType = global::System.Data.CommandType.Text;
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@AppID", global::System.Data.SqlDbType.NChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "AppID", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@AppDate", global::System.Data.SqlDbType.Date, 0, global::System.Data.ParameterDirection.Input, 0, 0, "AppDate", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Time", global::System.Data.SqlDbType.Time, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Time", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Satus", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Satus", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Capacity", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Capacity", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_AppID", global::System.Data.SqlDbType.NChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "AppID", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_AppDate", global::System.Data.SqlDbType.Date, 0, global::System.Data.ParameterDirection.Input, 0, 0, "AppDate", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Time", global::System.Data.SqlDbType.Time, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Time", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Satus", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Satus", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Capacity", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Capacity", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
         }
         
@@ -2471,7 +2413,7 @@ SELECT AppID, AppDate, Time, Satus, Capacity FROM Appointment WHERE (AppID = @Ap
             this._commandCollection = new global::System.Data.SqlClient.SqlCommand[1];
             this._commandCollection[0] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[0].Connection = this.Connection;
-            this._commandCollection[0].CommandText = "SELECT AppID, AppDate, Time, Satus, Capacity FROM dbo.Appointment";
+            this._commandCollection[0].CommandText = "SELECT AppID, AppDate, Time, Capacity FROM dbo.Appointment";
             this._commandCollection[0].CommandType = global::System.Data.CommandType.Text;
         }
         
@@ -2532,7 +2474,7 @@ SELECT AppID, AppDate, Time, Satus, Capacity FROM Appointment WHERE (AppID = @Ap
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Delete, true)]
-        public virtual int Delete(string Original_AppID, System.DateTime Original_AppDate, System.TimeSpan Original_Time, string Original_Satus, int Original_Capacity) {
+        public virtual int Delete(string Original_AppID, System.DateTime Original_AppDate, System.TimeSpan Original_Time, int Original_Capacity) {
             if ((Original_AppID == null)) {
                 throw new global::System.ArgumentNullException("Original_AppID");
             }
@@ -2541,13 +2483,7 @@ SELECT AppID, AppDate, Time, Satus, Capacity FROM Appointment WHERE (AppID = @Ap
             }
             this.Adapter.DeleteCommand.Parameters[1].Value = ((System.DateTime)(Original_AppDate));
             this.Adapter.DeleteCommand.Parameters[2].Value = ((System.TimeSpan)(Original_Time));
-            if ((Original_Satus == null)) {
-                throw new global::System.ArgumentNullException("Original_Satus");
-            }
-            else {
-                this.Adapter.DeleteCommand.Parameters[3].Value = ((string)(Original_Satus));
-            }
-            this.Adapter.DeleteCommand.Parameters[4].Value = ((int)(Original_Capacity));
+            this.Adapter.DeleteCommand.Parameters[3].Value = ((int)(Original_Capacity));
             global::System.Data.ConnectionState previousConnectionState = this.Adapter.DeleteCommand.Connection.State;
             if (((this.Adapter.DeleteCommand.Connection.State & global::System.Data.ConnectionState.Open) 
                         != global::System.Data.ConnectionState.Open)) {
@@ -2568,7 +2504,7 @@ SELECT AppID, AppDate, Time, Satus, Capacity FROM Appointment WHERE (AppID = @Ap
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Insert, true)]
-        public virtual int Insert(string AppID, System.DateTime AppDate, System.TimeSpan Time, string Satus, int Capacity) {
+        public virtual int Insert(string AppID, System.DateTime AppDate, System.TimeSpan Time, int Capacity) {
             if ((AppID == null)) {
                 throw new global::System.ArgumentNullException("AppID");
             }
@@ -2577,13 +2513,7 @@ SELECT AppID, AppDate, Time, Satus, Capacity FROM Appointment WHERE (AppID = @Ap
             }
             this.Adapter.InsertCommand.Parameters[1].Value = ((System.DateTime)(AppDate));
             this.Adapter.InsertCommand.Parameters[2].Value = ((System.TimeSpan)(Time));
-            if ((Satus == null)) {
-                throw new global::System.ArgumentNullException("Satus");
-            }
-            else {
-                this.Adapter.InsertCommand.Parameters[3].Value = ((string)(Satus));
-            }
-            this.Adapter.InsertCommand.Parameters[4].Value = ((int)(Capacity));
+            this.Adapter.InsertCommand.Parameters[3].Value = ((int)(Capacity));
             global::System.Data.ConnectionState previousConnectionState = this.Adapter.InsertCommand.Connection.State;
             if (((this.Adapter.InsertCommand.Connection.State & global::System.Data.ConnectionState.Open) 
                         != global::System.Data.ConnectionState.Open)) {
@@ -2604,7 +2534,7 @@ SELECT AppID, AppDate, Time, Satus, Capacity FROM Appointment WHERE (AppID = @Ap
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Update, true)]
-        public virtual int Update(string AppID, System.DateTime AppDate, System.TimeSpan Time, string Satus, int Capacity, string Original_AppID, System.DateTime Original_AppDate, System.TimeSpan Original_Time, string Original_Satus, int Original_Capacity) {
+        public virtual int Update(string AppID, System.DateTime AppDate, System.TimeSpan Time, int Capacity, string Original_AppID, System.DateTime Original_AppDate, System.TimeSpan Original_Time, int Original_Capacity) {
             if ((AppID == null)) {
                 throw new global::System.ArgumentNullException("AppID");
             }
@@ -2613,28 +2543,16 @@ SELECT AppID, AppDate, Time, Satus, Capacity FROM Appointment WHERE (AppID = @Ap
             }
             this.Adapter.UpdateCommand.Parameters[1].Value = ((System.DateTime)(AppDate));
             this.Adapter.UpdateCommand.Parameters[2].Value = ((System.TimeSpan)(Time));
-            if ((Satus == null)) {
-                throw new global::System.ArgumentNullException("Satus");
-            }
-            else {
-                this.Adapter.UpdateCommand.Parameters[3].Value = ((string)(Satus));
-            }
-            this.Adapter.UpdateCommand.Parameters[4].Value = ((int)(Capacity));
+            this.Adapter.UpdateCommand.Parameters[3].Value = ((int)(Capacity));
             if ((Original_AppID == null)) {
                 throw new global::System.ArgumentNullException("Original_AppID");
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[5].Value = ((string)(Original_AppID));
+                this.Adapter.UpdateCommand.Parameters[4].Value = ((string)(Original_AppID));
             }
-            this.Adapter.UpdateCommand.Parameters[6].Value = ((System.DateTime)(Original_AppDate));
-            this.Adapter.UpdateCommand.Parameters[7].Value = ((System.TimeSpan)(Original_Time));
-            if ((Original_Satus == null)) {
-                throw new global::System.ArgumentNullException("Original_Satus");
-            }
-            else {
-                this.Adapter.UpdateCommand.Parameters[8].Value = ((string)(Original_Satus));
-            }
-            this.Adapter.UpdateCommand.Parameters[9].Value = ((int)(Original_Capacity));
+            this.Adapter.UpdateCommand.Parameters[5].Value = ((System.DateTime)(Original_AppDate));
+            this.Adapter.UpdateCommand.Parameters[6].Value = ((System.TimeSpan)(Original_Time));
+            this.Adapter.UpdateCommand.Parameters[7].Value = ((int)(Original_Capacity));
             global::System.Data.ConnectionState previousConnectionState = this.Adapter.UpdateCommand.Connection.State;
             if (((this.Adapter.UpdateCommand.Connection.State & global::System.Data.ConnectionState.Open) 
                         != global::System.Data.ConnectionState.Open)) {
@@ -2655,8 +2573,8 @@ SELECT AppID, AppDate, Time, Satus, Capacity FROM Appointment WHERE (AppID = @Ap
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Update, true)]
-        public virtual int Update(System.DateTime AppDate, System.TimeSpan Time, string Satus, int Capacity, string Original_AppID, System.DateTime Original_AppDate, System.TimeSpan Original_Time, string Original_Satus, int Original_Capacity) {
-            return this.Update(Original_AppID, AppDate, Time, Satus, Capacity, Original_AppID, Original_AppDate, Original_Time, Original_Satus, Original_Capacity);
+        public virtual int Update(System.DateTime AppDate, System.TimeSpan Time, int Capacity, string Original_AppID, System.DateTime Original_AppDate, System.TimeSpan Original_Time, int Original_Capacity) {
+            return this.Update(Original_AppID, AppDate, Time, Capacity, Original_AppID, Original_AppDate, Original_Time, Original_Capacity);
         }
     }
     
@@ -3155,46 +3073,33 @@ SELECT ScheduleID, UserID, AppointmentID FROM Schedule WHERE (ScheduleID = @Sche
             tableMapping.ColumnMappings.Add("AppID", "AppID");
             tableMapping.ColumnMappings.Add("BloodType", "BloodType");
             tableMapping.ColumnMappings.Add("ExpiryDate", "ExpiryDate");
-            tableMapping.ColumnMappings.Add("Status", "Status");
             this._adapter.TableMappings.Add(tableMapping);
             this._adapter.DeleteCommand = new global::System.Data.SqlClient.SqlCommand();
             this._adapter.DeleteCommand.Connection = this.Connection;
-            this._adapter.DeleteCommand.CommandText = @"DELETE FROM [dbo].[TblBloodInventory] WHERE (([UnitID] = @Original_UnitID) AND ([UserID] = @Original_UserID) AND ([AppID] = @Original_AppID) AND ([BloodType] = @Original_BloodType) AND ([ExpiryDate] = @Original_ExpiryDate) AND ([Status] = @Original_Status))";
+            this._adapter.DeleteCommand.CommandText = "DELETE FROM [dbo].[TblBloodInventory] WHERE (([UnitID] = @Original_UnitID) AND ([" +
+                "UserID] = @Original_UserID) AND ([AppID] = @Original_AppID) AND ([BloodType] = @" +
+                "Original_BloodType) AND ([ExpiryDate] = @Original_ExpiryDate))";
             this._adapter.DeleteCommand.CommandType = global::System.Data.CommandType.Text;
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_UnitID", global::System.Data.SqlDbType.NChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "UnitID", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_UserID", global::System.Data.SqlDbType.NChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "UserID", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_AppID", global::System.Data.SqlDbType.NChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "AppID", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_BloodType", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "BloodType", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_ExpiryDate", global::System.Data.SqlDbType.Date, 0, global::System.Data.ParameterDirection.Input, 0, 0, "ExpiryDate", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Status", global::System.Data.SqlDbType.Bit, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Status", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.InsertCommand = new global::System.Data.SqlClient.SqlCommand();
-            this._adapter.InsertCommand.Connection = this.Connection;
-            this._adapter.InsertCommand.CommandText = @"INSERT INTO [dbo].[TblBloodInventory] ([UnitID], [UserID], [AppID], [BloodType], [ExpiryDate], [Status]) VALUES (@UnitID, @UserID, @AppID, @BloodType, @ExpiryDate, @Status);
-SELECT UnitID, UserID, AppID, BloodType, ExpiryDate, Status FROM TblBloodInventory WHERE (UnitID = @UnitID)";
-            this._adapter.InsertCommand.CommandType = global::System.Data.CommandType.Text;
-            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@UnitID", global::System.Data.SqlDbType.NChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "UnitID", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@UserID", global::System.Data.SqlDbType.NChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "UserID", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@AppID", global::System.Data.SqlDbType.NChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "AppID", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@BloodType", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "BloodType", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@ExpiryDate", global::System.Data.SqlDbType.Date, 0, global::System.Data.ParameterDirection.Input, 0, 0, "ExpiryDate", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Status", global::System.Data.SqlDbType.Bit, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Status", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand = new global::System.Data.SqlClient.SqlCommand();
             this._adapter.UpdateCommand.Connection = this.Connection;
-            this._adapter.UpdateCommand.CommandText = @"UPDATE [dbo].[TblBloodInventory] SET [UnitID] = @UnitID, [UserID] = @UserID, [AppID] = @AppID, [BloodType] = @BloodType, [ExpiryDate] = @ExpiryDate, [Status] = @Status WHERE (([UnitID] = @Original_UnitID) AND ([UserID] = @Original_UserID) AND ([AppID] = @Original_AppID) AND ([BloodType] = @Original_BloodType) AND ([ExpiryDate] = @Original_ExpiryDate) AND ([Status] = @Original_Status));
-SELECT UnitID, UserID, AppID, BloodType, ExpiryDate, Status FROM TblBloodInventory WHERE (UnitID = @UnitID)";
+            this._adapter.UpdateCommand.CommandText = @"UPDATE [dbo].[TblBloodInventory] SET [UnitID] = @UnitID, [UserID] = @UserID, [AppID] = @AppID, [BloodType] = @BloodType, [ExpiryDate] = @ExpiryDate WHERE (([UnitID] = @Original_UnitID) AND ([UserID] = @Original_UserID) AND ([AppID] = @Original_AppID) AND ([BloodType] = @Original_BloodType) AND ([ExpiryDate] = @Original_ExpiryDate));
+SELECT UnitID, UserID, AppID, BloodType, ExpiryDate FROM TblBloodInventory WHERE (UnitID = @UnitID)";
             this._adapter.UpdateCommand.CommandType = global::System.Data.CommandType.Text;
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@UnitID", global::System.Data.SqlDbType.NChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "UnitID", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@UserID", global::System.Data.SqlDbType.NChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "UserID", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@AppID", global::System.Data.SqlDbType.NChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "AppID", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@BloodType", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "BloodType", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@ExpiryDate", global::System.Data.SqlDbType.Date, 0, global::System.Data.ParameterDirection.Input, 0, 0, "ExpiryDate", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Status", global::System.Data.SqlDbType.Bit, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Status", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_UnitID", global::System.Data.SqlDbType.NChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "UnitID", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_UserID", global::System.Data.SqlDbType.NChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "UserID", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_AppID", global::System.Data.SqlDbType.NChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "AppID", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_BloodType", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "BloodType", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_ExpiryDate", global::System.Data.SqlDbType.Date, 0, global::System.Data.ParameterDirection.Input, 0, 0, "ExpiryDate", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Status", global::System.Data.SqlDbType.Bit, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Status", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -3210,8 +3115,7 @@ SELECT UnitID, UserID, AppID, BloodType, ExpiryDate, Status FROM TblBloodInvento
             this._commandCollection = new global::System.Data.SqlClient.SqlCommand[1];
             this._commandCollection[0] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[0].Connection = this.Connection;
-            this._commandCollection[0].CommandText = "SELECT UnitID, UserID, AppID, BloodType, ExpiryDate, Status FROM dbo.TblBloodInve" +
-                "ntory";
+            this._commandCollection[0].CommandText = "SELECT UnitID, UserID, AppID, BloodType, ExpiryDate FROM dbo.TblBloodInventory";
             this._commandCollection[0].CommandType = global::System.Data.CommandType.Text;
         }
         
@@ -3272,7 +3176,7 @@ SELECT UnitID, UserID, AppID, BloodType, ExpiryDate, Status FROM TblBloodInvento
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Delete, true)]
-        public virtual int Delete(string Original_UnitID, string Original_UserID, string Original_AppID, string Original_BloodType, System.DateTime Original_ExpiryDate, bool Original_Status) {
+        public virtual int Delete(string Original_UnitID, string Original_UserID, string Original_AppID, string Original_BloodType, System.DateTime Original_ExpiryDate) {
             if ((Original_UnitID == null)) {
                 throw new global::System.ArgumentNullException("Original_UnitID");
             }
@@ -3298,7 +3202,6 @@ SELECT UnitID, UserID, AppID, BloodType, ExpiryDate, Status FROM TblBloodInvento
                 this.Adapter.DeleteCommand.Parameters[3].Value = ((string)(Original_BloodType));
             }
             this.Adapter.DeleteCommand.Parameters[4].Value = ((System.DateTime)(Original_ExpiryDate));
-            this.Adapter.DeleteCommand.Parameters[5].Value = ((bool)(Original_Status));
             global::System.Data.ConnectionState previousConnectionState = this.Adapter.DeleteCommand.Connection.State;
             if (((this.Adapter.DeleteCommand.Connection.State & global::System.Data.ConnectionState.Open) 
                         != global::System.Data.ConnectionState.Open)) {
@@ -3318,55 +3221,8 @@ SELECT UnitID, UserID, AppID, BloodType, ExpiryDate, Status FROM TblBloodInvento
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Insert, true)]
-        public virtual int Insert(string UnitID, string UserID, string AppID, string BloodType, System.DateTime ExpiryDate, bool Status) {
-            if ((UnitID == null)) {
-                throw new global::System.ArgumentNullException("UnitID");
-            }
-            else {
-                this.Adapter.InsertCommand.Parameters[0].Value = ((string)(UnitID));
-            }
-            if ((UserID == null)) {
-                throw new global::System.ArgumentNullException("UserID");
-            }
-            else {
-                this.Adapter.InsertCommand.Parameters[1].Value = ((string)(UserID));
-            }
-            if ((AppID == null)) {
-                throw new global::System.ArgumentNullException("AppID");
-            }
-            else {
-                this.Adapter.InsertCommand.Parameters[2].Value = ((string)(AppID));
-            }
-            if ((BloodType == null)) {
-                throw new global::System.ArgumentNullException("BloodType");
-            }
-            else {
-                this.Adapter.InsertCommand.Parameters[3].Value = ((string)(BloodType));
-            }
-            this.Adapter.InsertCommand.Parameters[4].Value = ((System.DateTime)(ExpiryDate));
-            this.Adapter.InsertCommand.Parameters[5].Value = ((bool)(Status));
-            global::System.Data.ConnectionState previousConnectionState = this.Adapter.InsertCommand.Connection.State;
-            if (((this.Adapter.InsertCommand.Connection.State & global::System.Data.ConnectionState.Open) 
-                        != global::System.Data.ConnectionState.Open)) {
-                this.Adapter.InsertCommand.Connection.Open();
-            }
-            try {
-                int returnValue = this.Adapter.InsertCommand.ExecuteNonQuery();
-                return returnValue;
-            }
-            finally {
-                if ((previousConnectionState == global::System.Data.ConnectionState.Closed)) {
-                    this.Adapter.InsertCommand.Connection.Close();
-                }
-            }
-        }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Update, true)]
-        public virtual int Update(string UnitID, string UserID, string AppID, string BloodType, System.DateTime ExpiryDate, bool Status, string Original_UnitID, string Original_UserID, string Original_AppID, string Original_BloodType, System.DateTime Original_ExpiryDate, bool Original_Status) {
+        public virtual int Update(string UnitID, string UserID, string AppID, string BloodType, System.DateTime ExpiryDate, string Original_UnitID, string Original_UserID, string Original_AppID, string Original_BloodType, System.DateTime Original_ExpiryDate) {
             if ((UnitID == null)) {
                 throw new global::System.ArgumentNullException("UnitID");
             }
@@ -3392,33 +3248,31 @@ SELECT UnitID, UserID, AppID, BloodType, ExpiryDate, Status FROM TblBloodInvento
                 this.Adapter.UpdateCommand.Parameters[3].Value = ((string)(BloodType));
             }
             this.Adapter.UpdateCommand.Parameters[4].Value = ((System.DateTime)(ExpiryDate));
-            this.Adapter.UpdateCommand.Parameters[5].Value = ((bool)(Status));
             if ((Original_UnitID == null)) {
                 throw new global::System.ArgumentNullException("Original_UnitID");
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[6].Value = ((string)(Original_UnitID));
+                this.Adapter.UpdateCommand.Parameters[5].Value = ((string)(Original_UnitID));
             }
             if ((Original_UserID == null)) {
                 throw new global::System.ArgumentNullException("Original_UserID");
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[7].Value = ((string)(Original_UserID));
+                this.Adapter.UpdateCommand.Parameters[6].Value = ((string)(Original_UserID));
             }
             if ((Original_AppID == null)) {
                 throw new global::System.ArgumentNullException("Original_AppID");
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[8].Value = ((string)(Original_AppID));
+                this.Adapter.UpdateCommand.Parameters[7].Value = ((string)(Original_AppID));
             }
             if ((Original_BloodType == null)) {
                 throw new global::System.ArgumentNullException("Original_BloodType");
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[9].Value = ((string)(Original_BloodType));
+                this.Adapter.UpdateCommand.Parameters[8].Value = ((string)(Original_BloodType));
             }
-            this.Adapter.UpdateCommand.Parameters[10].Value = ((System.DateTime)(Original_ExpiryDate));
-            this.Adapter.UpdateCommand.Parameters[11].Value = ((bool)(Original_Status));
+            this.Adapter.UpdateCommand.Parameters[9].Value = ((System.DateTime)(Original_ExpiryDate));
             global::System.Data.ConnectionState previousConnectionState = this.Adapter.UpdateCommand.Connection.State;
             if (((this.Adapter.UpdateCommand.Connection.State & global::System.Data.ConnectionState.Open) 
                         != global::System.Data.ConnectionState.Open)) {
@@ -3439,8 +3293,8 @@ SELECT UnitID, UserID, AppID, BloodType, ExpiryDate, Status FROM TblBloodInvento
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Update, true)]
-        public virtual int Update(string UserID, string AppID, string BloodType, System.DateTime ExpiryDate, bool Status, string Original_UnitID, string Original_UserID, string Original_AppID, string Original_BloodType, System.DateTime Original_ExpiryDate, bool Original_Status) {
-            return this.Update(Original_UnitID, UserID, AppID, BloodType, ExpiryDate, Status, Original_UnitID, Original_UserID, Original_AppID, Original_BloodType, Original_ExpiryDate, Original_Status);
+        public virtual int Update(string UserID, string AppID, string BloodType, System.DateTime ExpiryDate, string Original_UnitID, string Original_UserID, string Original_AppID, string Original_BloodType, System.DateTime Original_ExpiryDate) {
+            return this.Update(Original_UnitID, UserID, AppID, BloodType, ExpiryDate, Original_UnitID, Original_UserID, Original_AppID, Original_BloodType, Original_ExpiryDate);
         }
     }
     
