@@ -67,7 +67,7 @@
             this.bbNameLbl.ForeColor = System.Drawing.Color.Red;
             this.bbNameLbl.Location = new System.Drawing.Point(197, 58);
             this.bbNameLbl.Name = "bbNameLbl";
-            this.bbNameLbl.Size = new System.Drawing.Size(837, 63);
+            this.bbNameLbl.Size = new System.Drawing.Size(711, 63);
             this.bbNameLbl.TabIndex = 3;
             this.bbNameLbl.Text = "To Blood    Bankers";
             this.bbNameLbl.TextAlign = System.Drawing.ContentAlignment.TopCenter;
