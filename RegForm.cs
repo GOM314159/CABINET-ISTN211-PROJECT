@@ -29,7 +29,9 @@ namespace BloodBankSystem
 
         private void regBtn_Click(object sender, EventArgs e)
         {
-
+            Form homePage = new HomePage();
+            homePage.Show();
+            this.Hide();
         }
 
         private void BackBtn_Click(object sender, EventArgs e)
