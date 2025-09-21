@@ -28,17 +28,10 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
             this.titleLbl = new System.Windows.Forms.Label();
             this.RegBtn = new System.Windows.Forms.Button();
             this.Logbtn = new System.Windows.Forms.Button();
             this.ExitBtn = new System.Windows.Forms.Button();
-            this.ist2jwDataSet = new BloodBankSystem.ist2jwDataSet();
-            this.tblUsersBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.tblUsersTableAdapter = new BloodBankSystem.ist2jwDataSetTableAdapters.tblUsersTableAdapter();
-            this.tableAdapterManager = new BloodBankSystem.ist2jwDataSetTableAdapters.TableAdapterManager();
-            ((System.ComponentModel.ISupportInitialize)(this.ist2jwDataSet)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.tblUsersBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // titleLbl
@@ -113,29 +106,7 @@
             this.ExitBtn.TabIndex = 20;
             this.ExitBtn.Text = "Exit";
             this.ExitBtn.UseVisualStyleBackColor = false;
-            // 
-            // ist2jwDataSet
-            // 
-            this.ist2jwDataSet.DataSetName = "ist2jwDataSet";
-            this.ist2jwDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // tblUsersBindingSource
-            // 
-            this.tblUsersBindingSource.DataMember = "tblUsers";
-            this.tblUsersBindingSource.DataSource = this.ist2jwDataSet;
-            // 
-            // tblUsersTableAdapter
-            // 
-            this.tblUsersTableAdapter.ClearBeforeFill = true;
-            // 
-            // tableAdapterManager
-            // 
-            this.tableAdapterManager.AppointmentTableAdapter = null;
-            this.tableAdapterManager.BackupDataSetBeforeUpdate = false;
-            this.tableAdapterManager.ScheduleTableAdapter = null;
-            this.tableAdapterManager.TblBloodInventoryTableAdapter = null;
-            this.tableAdapterManager.tblUsersTableAdapter = this.tblUsersTableAdapter;
-            this.tableAdapterManager.UpdateOrder = BloodBankSystem.ist2jwDataSetTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete;
+            this.ExitBtn.Click += new System.EventHandler(this.ExitBtn_Click);
             // 
             // WelcomeForm
             // 
@@ -154,8 +125,6 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Welcome Form";
             this.Load += new System.EventHandler(this.WelcomeForm_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.ist2jwDataSet)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.tblUsersBindingSource)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -165,10 +134,6 @@
         private System.Windows.Forms.Button RegBtn;
         private System.Windows.Forms.Button Logbtn;
         private System.Windows.Forms.Button ExitBtn;
-        private ist2jwDataSet ist2jwDataSet;
-        private System.Windows.Forms.BindingSource tblUsersBindingSource;
-        private ist2jwDataSetTableAdapters.tblUsersTableAdapter tblUsersTableAdapter;
-        private ist2jwDataSetTableAdapters.TableAdapterManager tableAdapterManager;
     }
 }
 

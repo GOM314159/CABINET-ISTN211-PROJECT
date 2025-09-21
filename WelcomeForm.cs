@@ -44,22 +44,22 @@ namespace BloodBankSystem
 
         private void WelcomeForm_Load(object sender, EventArgs e)
         {
-            // TODO: This line of code loads data into the 'ist2jwDataSet.tblUsers' table. You can move, or remove it, as needed.
-            this.tblUsersTableAdapter.Fill(this.ist2jwDataSet.tblUsers);
 
         }
 
         private void tblUsersBindingNavigatorSaveItem_Click(object sender, EventArgs e)
         {
-            this.Validate();
-            this.tblUsersBindingSource.EndEdit();
-            this.tableAdapterManager.UpdateAll(this.ist2jwDataSet);
 
         }
 
         private void titleLbl_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void ExitBtn_Click(object sender, EventArgs e)
+        {
+            Close();
         }
     }
 }
