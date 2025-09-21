@@ -23,8 +23,8 @@ namespace BloodBankSystem
             SqlConnection con = new SqlConnection("Data Source=143.128.146.30\\istn2;Initial Catalog=ist2jw;Persist Security Info=True;User ID=ist2jw;Password=***********;Encrypt=True;Trust Server Certificate=True");
             con.Open();
 
-            SqlCommand cmd = new SqlCommand("SELECT Schedule.UserID , " +
-                "Schedule.ScheduleID , Schedule.AppID , Appointment.AppDate , Appointment.Time " +
+            SqlCommand cmd = new SqlCommand("SELECT Schedule.ScheduleID ," +
+                " Schedule.AppID , Appointment.AppDate , Appointment.Time , Schedule.Attend " +
                 " FROM Schedule, Appointment" +
                 " WHERE Appointment.AppID = Schedule.ScheduleID ", con);
 
@@ -71,6 +71,67 @@ namespace BloodBankSystem
             }
 
             */
+        }
+
+        private void panel1_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void panel3_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void panel2_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void label3_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button6_Click(object sender, EventArgs e)
+        {
+             SqlConnection con = new SqlConnection("Data Source=143.128.146.30\\istn2;Initial Catalog=ist2jw;Persist Security Info=True;User ID=ist2jw;Password=***********;Encrypt=True;Trust Server Certificate=True");
+            con.Open();
+
+            SqlCommand cmd = new SqlCommand("SELECT Schedule.ScheduleID ," +
+                " Schedule.AppID , Appointment.AppDate , Appointment.Time , Schedule.Attend " +
+                " FROM Schedule, Appointment" +
+                " WHERE Appointment.AppID = Schedule.ScheduleID ", con);
+
+            SqlDataAdapter da = new SqlDataAdapter(cmd);
+            DataTable dt = new DataTable();
+            da.Fill(dt);
+            dataGridView1.DataSource = dt;
+        }
+
+        private void label6_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

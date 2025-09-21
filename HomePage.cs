@@ -43,5 +43,12 @@ namespace BloodBankSystem
         {
 
         }
+
+        private void prfNextDonLbl_Click(object sender, EventArgs e)
+        {
+            Form appointment = new AppointmentForm();
+            appointment.Show();
+            this.Hide();
+        }
     }
 }

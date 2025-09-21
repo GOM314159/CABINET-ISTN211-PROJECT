@@ -64,7 +64,7 @@
             this.NameLbl.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.NameLbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 18.25F);
             this.NameLbl.ForeColor = System.Drawing.Color.RoyalBlue;
-            this.NameLbl.Location = new System.Drawing.Point(72, 99);
+            this.NameLbl.Location = new System.Drawing.Point(58, 99);
             this.NameLbl.Name = "NameLbl";
             this.NameLbl.Size = new System.Drawing.Size(229, 33);
             this.NameLbl.TabIndex = 5;
@@ -179,10 +179,10 @@
             this.mIDTextBox.BackColor = System.Drawing.Color.LightSteelBlue;
             this.mIDTextBox.Font = new System.Drawing.Font("Arial", 16.25F);
             this.mIDTextBox.ForeColor = System.Drawing.SystemColors.WindowText;
-            this.mIDTextBox.Location = new System.Drawing.Point(342, 229);
+            this.mIDTextBox.Location = new System.Drawing.Point(342, 227);
             this.mIDTextBox.Mask = "0000000000000";
             this.mIDTextBox.Name = "mIDTextBox";
-            this.mIDTextBox.Size = new System.Drawing.Size(292, 32);
+            this.mIDTextBox.Size = new System.Drawing.Size(292, 39);
             this.mIDTextBox.TabIndex = 18;
             this.mIDTextBox.ValidatingType = typeof(int);
             // 
@@ -193,7 +193,7 @@
             this.addressTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.25F);
             this.addressTextBox.Location = new System.Drawing.Point(342, 415);
             this.addressTextBox.Name = "addressTextBox";
-            this.addressTextBox.Size = new System.Drawing.Size(292, 32);
+            this.addressTextBox.Size = new System.Drawing.Size(292, 38);
             this.addressTextBox.TabIndex = 15;
             this.addressTextBox.Tag = "";
             // 
@@ -203,7 +203,7 @@
             this.fNameTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.25F);
             this.fNameTextBox.Location = new System.Drawing.Point(36, 156);
             this.fNameTextBox.Name = "fNameTextBox";
-            this.fNameTextBox.Size = new System.Drawing.Size(292, 32);
+            this.fNameTextBox.Size = new System.Drawing.Size(292, 38);
             this.fNameTextBox.TabIndex = 4;
             this.fNameTextBox.Tag = "";
             // 
@@ -213,7 +213,7 @@
             this.sNameTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.25F);
             this.sNameTextBox.Location = new System.Drawing.Point(370, 156);
             this.sNameTextBox.Name = "sNameTextBox";
-            this.sNameTextBox.Size = new System.Drawing.Size(292, 32);
+            this.sNameTextBox.Size = new System.Drawing.Size(292, 38);
             this.sNameTextBox.TabIndex = 6;
             this.sNameTextBox.Tag = "";
             this.sNameTextBox.TextChanged += new System.EventHandler(this.SurnameTextBox_TextChanged);
@@ -225,7 +225,7 @@
             this.mCellphoneTextBox.Location = new System.Drawing.Point(342, 288);
             this.mCellphoneTextBox.Mask = "(999) 000-0000";
             this.mCellphoneTextBox.Name = "mCellphoneTextBox";
-            this.mCellphoneTextBox.Size = new System.Drawing.Size(292, 32);
+            this.mCellphoneTextBox.Size = new System.Drawing.Size(292, 39);
             this.mCellphoneTextBox.TabIndex = 19;
             // 
             // emailTextBox
@@ -234,13 +234,13 @@
             this.emailTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.25F);
             this.emailTextBox.Location = new System.Drawing.Point(342, 351);
             this.emailTextBox.Name = "emailTextBox";
-            this.emailTextBox.Size = new System.Drawing.Size(292, 32);
+            this.emailTextBox.Size = new System.Drawing.Size(292, 38);
             this.emailTextBox.TabIndex = 20;
             this.emailTextBox.Tag = "";
             // 
             // RegForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 14F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = global::BloodBankSystem.Properties.Resources.RegBack;
             this.ClientSize = new System.Drawing.Size(684, 631);
