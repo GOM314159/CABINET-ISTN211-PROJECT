@@ -49,7 +49,7 @@
             // 
             this.regTitleLbl.BackColor = System.Drawing.Color.Red;
             this.regTitleLbl.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.regTitleLbl.Font = new System.Drawing.Font("Arial", 29.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.regTitleLbl.Font = new System.Drawing.Font("Modern No. 20", 29.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.regTitleLbl.ForeColor = System.Drawing.Color.Transparent;
             this.regTitleLbl.Location = new System.Drawing.Point(0, 0);
             this.regTitleLbl.Name = "regTitleLbl";
@@ -139,8 +139,11 @@
             // regBtn
             // 
             this.regBtn.BackColor = System.Drawing.Color.Transparent;
+            this.regBtn.BackgroundImage = global::BloodBankSystem.Properties.Resources.buttonbackBlue;
             this.regBtn.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.regBtn.FlatAppearance.BorderSize = 0;
+            this.regBtn.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.regBtn.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Black;
             this.regBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.regBtn.Font = new System.Drawing.Font("Arial", 29.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.regBtn.ForeColor = System.Drawing.Color.MidnightBlue;
@@ -156,7 +159,11 @@
             // BackBtn
             // 
             this.BackBtn.BackColor = System.Drawing.Color.Transparent;
+            this.BackBtn.BackgroundImage = global::BloodBankSystem.Properties.Resources.buttonbackGreen;
             this.BackBtn.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.BackBtn.FlatAppearance.BorderSize = 0;
+            this.BackBtn.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.BackBtn.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Black;
             this.BackBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.BackBtn.Font = new System.Drawing.Font("Arial", 18.25F);
             this.BackBtn.Location = new System.Drawing.Point(12, 580);

@@ -73,6 +73,26 @@ namespace BloodBankSystem.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap buttonbackGreen {
+            get {
+                object obj = ResourceManager.GetObject("buttonbackGreen", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap buttonbackOrange {
+            get {
+                object obj = ResourceManager.GetObject("buttonbackOrange", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap buttonbackRed {
             get {
                 object obj = ResourceManager.GetObject("buttonbackRed", resourceCulture);
@@ -106,6 +126,16 @@ namespace BloodBankSystem.Properties {
         internal static System.Drawing.Bitmap RegBack {
             get {
                 object obj = ResourceManager.GetObject("RegBack", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap WelcomeBack {
+            get {
+                object obj = ResourceManager.GetObject("WelcomeBack", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
