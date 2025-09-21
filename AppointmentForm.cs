@@ -2,7 +2,6 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
-using System.Data.SqlClient;
 using System.Drawing;
 using System.Linq;
 using System.Text;
@@ -20,22 +19,13 @@ namespace BloodBankSystem
 
         private void AppointmentForm_Load(object sender, EventArgs e)
         {
-            SqlConnection con = new SqlConnection("Data Source=143.128.146.30\\istn2;Initial Catalog=ist2jw;Persist Security Info=True;User ID=ist2jw;Password=***********;Encrypt=True;Trust Server Certificate=True");
-            con.Open();
+            
 
-            SqlCommand cmd = new SqlCommand("SELECT Schedule.UserID , " +
-                "Schedule.ScheduleID , Schedule.AppID , Appointment.AppDate , Appointment.Time " +
-                " FROM Schedule, Appointment" +
-                " WHERE Appointment.AppID = Schedule.ScheduleID ", con);
-
-            SqlDataAdapter da = new SqlDataAdapter(cmd);
-            DataTable dt = new DataTable();
-            da.Fill(dt);
-            dataGridView1.DataSource = dt;
         }
 
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
+
         }
 
         private void monthCalendar1_DateChanged(object sender, DateRangeEventArgs e)
