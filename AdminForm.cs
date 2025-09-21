@@ -30,6 +30,64 @@ namespace BloodBankSystem
 
         }
 
-       
+        private void btnUserNext_Click(object sender, EventArgs e)
+        {
+            tblUsersBindingSource.MoveNext();
+        }
+
+        private void btnUserPrev_Click(object sender, EventArgs e)
+        {
+            tblUsersBindingSource.MovePrevious();
+        }
+
+        private void btnUserFirst_Click(object sender, EventArgs e)
+        {
+            tblUsersBindingSource.MoveFirst();
+        }
+
+        private void btnUserLast_Click(object sender, EventArgs e)
+        {
+            tblUsersBindingSource.MoveLast();
+        }
+
+        private void btnBllodNext_Click(object sender, EventArgs e)
+        {
+            tblBloodInventoryBindingSource.MoveNext();
+        }
+
+        private void btnBloodPrev_Click(object sender, EventArgs e)
+        {
+            tblBloodInventoryBindingSource.MovePrevious();
+        }
+
+        private void btnBloodLast_Click(object sender, EventArgs e)
+        {
+            tblBloodInventoryBindingSource.MoveLast();
+        }
+
+        private void btnBloodFirst_Click(object sender, EventArgs e)
+        {
+            tblBloodInventoryBindingSource.MoveFirst();
+        }
+
+        private void btnAppNext_Click(object sender, EventArgs e)
+        {
+            appointmentBindingSource.MoveNext();
+        }
+
+        private void btnAppPrev_Click(object sender, EventArgs e)
+        {
+            appointmentBindingSource.MovePrevious();
+        }
+
+        private void btnAppFirst_Click(object sender, EventArgs e)
+        {
+            appointmentBindingSource.MoveFirst();
+        }
+
+        private void btnAppLast_Click(object sender, EventArgs e)
+        {
+            appointmentBindingSource.MoveLast();
+        }
     }
 }
