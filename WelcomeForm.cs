@@ -32,6 +32,7 @@ namespace BloodBankSystem
             Form regform = new RegForm();
             regform.Show();
             this.Hide();
+            this.Hide();
         }
 
         private void Logbtn_Click(object sender, EventArgs e)

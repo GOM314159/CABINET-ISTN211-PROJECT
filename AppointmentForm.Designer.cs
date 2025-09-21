@@ -36,8 +36,8 @@
             this.appointmentTableAdapter = new BloodBankSystem.ist2jwDataSetTableAdapters.AppointmentTableAdapter();
             this.scheduleBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.scheduleTableAdapter = new BloodBankSystem.ist2jwDataSetTableAdapters.ScheduleTableAdapter();
-            this.calDate = new System.Windows.Forms.MonthCalendar();
-            this.cmbTime = new System.Windows.Forms.ComboBox();
+            this.monthCalendar1 = new System.Windows.Forms.MonthCalendar();
+            this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.btnBookAppointment = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
@@ -90,24 +90,24 @@
             // 
             this.scheduleTableAdapter.ClearBeforeFill = true;
             // 
-            // calDate
+            // monthCalendar1
             // 
-            this.calDate.Location = new System.Drawing.Point(566, 56);
-            this.calDate.Name = "calDate";
-            this.calDate.TabIndex = 1;
-            this.calDate.DateChanged += new System.Windows.Forms.DateRangeEventHandler(this.monthCalendar1_DateChanged);
+            this.monthCalendar1.Location = new System.Drawing.Point(566, 56);
+            this.monthCalendar1.Name = "monthCalendar1";
+            this.monthCalendar1.TabIndex = 1;
+            this.monthCalendar1.DateChanged += new System.Windows.Forms.DateRangeEventHandler(this.monthCalendar1_DateChanged);
             // 
-            // cmbTime
+            // comboBox1
             // 
-            this.cmbTime.BackColor = System.Drawing.SystemColors.MenuBar;
-            this.cmbTime.FormattingEnabled = true;
-            this.cmbTime.Items.AddRange(new object[] {
+            this.comboBox1.BackColor = System.Drawing.SystemColors.MenuBar;
+            this.comboBox1.FormattingEnabled = true;
+            this.comboBox1.Items.AddRange(new object[] {
             "10h00",
             "12h00"});
-            this.cmbTime.Location = new System.Drawing.Point(629, 302);
-            this.cmbTime.Name = "cmbTime";
-            this.cmbTime.Size = new System.Drawing.Size(121, 24);
-            this.cmbTime.TabIndex = 2;
+            this.comboBox1.Location = new System.Drawing.Point(629, 302);
+            this.comboBox1.Name = "comboBox1";
+            this.comboBox1.Size = new System.Drawing.Size(121, 24);
+            this.comboBox1.TabIndex = 2;
             // 
             // btnBookAppointment
             // 
@@ -117,7 +117,6 @@
             this.btnBookAppointment.TabIndex = 3;
             this.btnBookAppointment.Text = "Book Appointment";
             this.btnBookAppointment.UseVisualStyleBackColor = true;
-            this.btnBookAppointment.Click += new System.EventHandler(this.btnBookAppointment_Click);
             // 
             // label1
             // 
@@ -157,8 +156,8 @@
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.btnBookAppointment);
-            this.Controls.Add(this.cmbTime);
-            this.Controls.Add(this.calDate);
+            this.Controls.Add(this.comboBox1);
+            this.Controls.Add(this.monthCalendar1);
             this.Controls.Add(this.dataGridView1);
             this.Name = "AppointmentForm";
             this.Text = "AppointmentForm";
@@ -182,8 +181,8 @@
         private ist2jwDataSetTableAdapters.AppointmentTableAdapter appointmentTableAdapter;
         private System.Windows.Forms.BindingSource scheduleBindingSource;
         private ist2jwDataSetTableAdapters.ScheduleTableAdapter scheduleTableAdapter;
-        private System.Windows.Forms.MonthCalendar calDate;
-        private System.Windows.Forms.ComboBox cmbTime;
+        private System.Windows.Forms.MonthCalendar monthCalendar1;
+        private System.Windows.Forms.ComboBox comboBox1;
         private System.Windows.Forms.Button btnBookAppointment;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;

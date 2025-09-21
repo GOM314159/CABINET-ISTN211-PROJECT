@@ -147,7 +147,7 @@
             this.regBtn.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
             this.regBtn.Location = new System.Drawing.Point(231, 476);
             this.regBtn.Name = "regBtn";
-            this.regBtn.Size = new System.Drawing.Size(223, 72);
+            this.regBtn.Size = new System.Drawing.Size(219, 61);
             this.regBtn.TabIndex = 16;
             this.regBtn.Text = "Register";
             this.regBtn.UseVisualStyleBackColor = false;

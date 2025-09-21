@@ -19,7 +19,10 @@ namespace BloodBankSystem
 
         private void AppointmentForm_Load(object sender, EventArgs e)
         {
-            
+            // TODO: This line of code loads data into the 'ist2jwDataSet.Schedule' table. You can move, or remove it, as needed.
+            this.scheduleTableAdapter.Fill(this.ist2jwDataSet.Schedule);
+            // TODO: This line of code loads data into the 'ist2jwDataSet.Appointment' table. You can move, or remove it, as needed.
+            this.appointmentTableAdapter.Fill(this.ist2jwDataSet.Appointment);
 
         }
 
@@ -43,24 +46,6 @@ namespace BloodBankSystem
             Form homePage = new HomePage();
             homePage.Show();
             this.Hide();
-        }
-
-        private void btnBookAppointment_Click(object sender, EventArgs e)
-        {
-            DateTime date = calDate.SelectionStart;
-            string time = cmbTime.Text;
-
-            // get schedule and appointment table from database
-
-            /**AppointmentValidation check = new AppointmentValidation(date , time , scheduleTb , appointmentTb , userID);
-            
-            if (check.DateValidation == true) {
-                add appointment to database
-            } else  {
-            MessageBox.Show("Date is not available");
-            }
-
-            */
         }
     }
 }
