@@ -30,21 +30,22 @@
         {
             this.components = new System.ComponentModel.Container();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.ist2jwDataSet = new BloodBankSystem.ist2jwDataSet();
             this.ist2jwDataSetBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.ist2jwDataSet = new BloodBankSystem.ist2jwDataSet();
             this.appointmentBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.appointmentTableAdapter = new BloodBankSystem.ist2jwDataSetTableAdapters.AppointmentTableAdapter();
             this.scheduleBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.scheduleTableAdapter = new BloodBankSystem.ist2jwDataSetTableAdapters.ScheduleTableAdapter();
-            this.monthCalendar1 = new System.Windows.Forms.MonthCalendar();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.calDate = new System.Windows.Forms.MonthCalendar();
+            this.cmbTime = new System.Windows.Forms.ComboBox();
             this.btnBookAppointment = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.btnBack = new System.Windows.Forms.Button();
+            this.button1 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.ist2jwDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ist2jwDataSetBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ist2jwDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.appointmentBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.scheduleBindingSource)).BeginInit();
             this.SuspendLayout();
@@ -62,15 +63,15 @@
             this.dataGridView1.TabIndex = 0;
             this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             // 
-            // ist2jwDataSet
-            // 
-            this.ist2jwDataSet.DataSetName = "ist2jwDataSet";
-            this.ist2jwDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
             // ist2jwDataSetBindingSource
             // 
             this.ist2jwDataSetBindingSource.DataSource = this.ist2jwDataSet;
             this.ist2jwDataSetBindingSource.Position = 0;
+            // 
+            // ist2jwDataSet
+            // 
+            this.ist2jwDataSet.DataSetName = "ist2jwDataSet";
+            this.ist2jwDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // appointmentBindingSource
             // 
@@ -90,33 +91,34 @@
             // 
             this.scheduleTableAdapter.ClearBeforeFill = true;
             // 
-            // monthCalendar1
+            // calDate
             // 
-            this.monthCalendar1.Location = new System.Drawing.Point(566, 56);
-            this.monthCalendar1.Name = "monthCalendar1";
-            this.monthCalendar1.TabIndex = 1;
-            this.monthCalendar1.DateChanged += new System.Windows.Forms.DateRangeEventHandler(this.monthCalendar1_DateChanged);
+            this.calDate.Location = new System.Drawing.Point(566, 56);
+            this.calDate.Name = "calDate";
+            this.calDate.TabIndex = 1;
+            this.calDate.DateChanged += new System.Windows.Forms.DateRangeEventHandler(this.monthCalendar1_DateChanged);
             // 
-            // comboBox1
+            // cmbTime
             // 
-            this.comboBox1.BackColor = System.Drawing.SystemColors.MenuBar;
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Items.AddRange(new object[] {
+            this.cmbTime.BackColor = System.Drawing.SystemColors.MenuBar;
+            this.cmbTime.FormattingEnabled = true;
+            this.cmbTime.Items.AddRange(new object[] {
             "10h00",
             "12h00"});
-            this.comboBox1.Location = new System.Drawing.Point(629, 302);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(121, 24);
-            this.comboBox1.TabIndex = 2;
+            this.cmbTime.Location = new System.Drawing.Point(629, 302);
+            this.cmbTime.Name = "cmbTime";
+            this.cmbTime.Size = new System.Drawing.Size(121, 24);
+            this.cmbTime.TabIndex = 2;
             // 
             // btnBookAppointment
             // 
-            this.btnBookAppointment.Location = new System.Drawing.Point(598, 405);
+            this.btnBookAppointment.Location = new System.Drawing.Point(629, 348);
             this.btnBookAppointment.Name = "btnBookAppointment";
             this.btnBookAppointment.Size = new System.Drawing.Size(178, 59);
             this.btnBookAppointment.TabIndex = 3;
             this.btnBookAppointment.Text = "Book Appointment";
             this.btnBookAppointment.UseVisualStyleBackColor = true;
+            this.btnBookAppointment.Click += new System.EventHandler(this.btnBookAppointment_Click);
             // 
             // label1
             // 
@@ -139,32 +141,42 @@
             // 
             // btnBack
             // 
-            this.btnBack.Location = new System.Drawing.Point(819, 475);
+            this.btnBack.Location = new System.Drawing.Point(658, 518);
             this.btnBack.Name = "btnBack";
             this.btnBack.Size = new System.Drawing.Size(75, 23);
             this.btnBack.TabIndex = 6;
-            this.btnBack.Text = "Back";
+            this.btnBack.Text = "Home";
             this.btnBack.UseVisualStyleBackColor = true;
             this.btnBack.Click += new System.EventHandler(this.btnBack_Click);
+            // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(202, 518);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(75, 23);
+            this.button1.TabIndex = 7;
+            this.button1.Text = "button1";
+            this.button1.UseVisualStyleBackColor = true;
             // 
             // AppointmentForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(919, 510);
+            this.ClientSize = new System.Drawing.Size(925, 573);
+            this.Controls.Add(this.button1);
             this.Controls.Add(this.btnBack);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.btnBookAppointment);
-            this.Controls.Add(this.comboBox1);
-            this.Controls.Add(this.monthCalendar1);
+            this.Controls.Add(this.cmbTime);
+            this.Controls.Add(this.calDate);
             this.Controls.Add(this.dataGridView1);
             this.Name = "AppointmentForm";
             this.Text = "AppointmentForm";
             this.Load += new System.EventHandler(this.AppointmentForm_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.ist2jwDataSet)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.ist2jwDataSetBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ist2jwDataSet)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.appointmentBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.scheduleBindingSource)).EndInit();
             this.ResumeLayout(false);
@@ -181,11 +193,12 @@
         private ist2jwDataSetTableAdapters.AppointmentTableAdapter appointmentTableAdapter;
         private System.Windows.Forms.BindingSource scheduleBindingSource;
         private ist2jwDataSetTableAdapters.ScheduleTableAdapter scheduleTableAdapter;
-        private System.Windows.Forms.MonthCalendar monthCalendar1;
-        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.MonthCalendar calDate;
+        private System.Windows.Forms.ComboBox cmbTime;
         private System.Windows.Forms.Button btnBookAppointment;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Button btnBack;
+        private System.Windows.Forms.Button button1;
     }
 }
