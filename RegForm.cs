@@ -30,120 +30,86 @@ namespace BloodBankSystem
 
         private void regBtn_Click(object sender, EventArgs e)
         {
-            Form homePage = new HomePage();
-            homePage.Show();
-            this.Hide();
-
-            String firstName = null;
-            String surName = null;
-            String iDNumber = null;
-            String phoneNumber = null;
-            String emailAddress = null;
-            String address = null;
+            String firstName = fNameTextBox.Text;
+            String lastName = lastNameTextBox.Text;
+            String iDNumber = mIDTextBox.Text;
+            String phoneNumber = mCellphoneTextBox.Text;
 
             Boolean firstNameCheck = false;
             Boolean surNameCheck = false;
             Boolean IDNumberCheck = false;
             Boolean phoneNumberCheck = false;
-            Boolean emailAddressCheck = false;
-            Boolean addressCheck = false;
 
-            // Checks if firstname field is not null
-            if (fNameTextBox.Text != null)
+
+            // First Name check
+            if (!string.IsNullOrWhiteSpace(firstName))
             {
                 firstNameCheck = true;
-                firstName = fNameTextBox.Text;
                 fNameTextBox.BackColor = Color.LightGreen;
-            } 
-            else if (fNameTextBox.Text == null) // highlights firstname field red if null
+            }
+            else
             {
                 fNameTextBox.BackColor = Color.IndianRed;
                 firstNameCheck = false;
             }
 
-            // checks if surname field is not null
-            if (sNameTextBox.Text != null)
+            // Last name check
+            if (!string.IsNullOrWhiteSpace(lastName))
             {
                 surNameCheck = true;
-                surName = sNameTextBox.Text;
-                sNameTextBox.BackColor = Color.LightGreen;
+                lastNameTextBox.BackColor = Color.LightGreen;
             }
-            else if (fNameTextBox.Text == null) // highlights surname field red if null
+            else
             {
-                sNameTextBox.BackColor = Color.IndianRed;
+                lastNameTextBox.BackColor = Color.IndianRed;
                 surNameCheck = false;
             }
 
-            // checks if IDnumber field is not null
-            if (mIDTextBox.Text != null)
+            // ID Number check
+            if (!string.IsNullOrWhiteSpace(iDNumber) && iDNumber.Length == 13)
             {
-                IDNumberCheck = true;
-                iDNumber = mIDTextBox.Text;
-                mIDTextBox.BackColor = Color.LightGreen;
+                if (validIDCheck(iDNumber))
+                {
+                    IDNumberCheck = true;
+                    mIDTextBox.BackColor = Color.LightGreen;
+                }
             }
-            else if (mIDTextBox.Text == null) // highlights idNumber field red if null
+            else
             {
                 mIDTextBox.BackColor = Color.IndianRed;
                 IDNumberCheck = false;
             }
 
-            // checks if phoneNumber field is not null
-            if (mCellphoneTextBox.Text != null)
+            // Phone Number check
+            if (!string.IsNullOrWhiteSpace(mCellphoneTextBox.Text) && phoneNumber.Length == 10)
             {
                 phoneNumberCheck = true;
-                phoneNumber = mCellphoneTextBox.Text;
                 mCellphoneTextBox.BackColor = Color.LightGreen;
             }
-            else if (mCellphoneTextBox.Text == null) // highlights phoneNumber field red if null
+            else
             {
                 mCellphoneTextBox.BackColor = Color.IndianRed;
                 phoneNumberCheck = false;
             }
 
-            // checks if email field is not null
-            if (emailTextBox.Text != null)
-            {
-                emailAddressCheck = true;
-                emailAddress = emailTextBox.Text;
-                emailTextBox.BackColor = Color.LightGreen;
-            }
-            else if (mCellphoneTextBox.Text == null) // highlights email field red if null
-            {
-                emailTextBox.BackColor = Color.IndianRed;
-                emailAddressCheck = false;
-            }
-
-            // checks if address field is not null
-            if (addressTextBox.Text != null)
-            {
-                addressCheck = true;
-                address = emailTextBox.Text;
-                addressTextBox.BackColor = Color.LightGreen;
-            }
-            else if (addressTextBox.Text == null) // highlights address field red if null
-            {
-                emailTextBox.BackColor = Color.IndianRed;
-                addressCheck = false;
-            }
-
 
             // if all fields are filled in correctly, the following code will execute
-            if (firstNameCheck && surNameCheck && IDNumberCheck && phoneNumberCheck && emailAddressCheck && addressCheck)
+            if (firstNameCheck && surNameCheck && IDNumberCheck && phoneNumberCheck)
             {
-              /*  try
-                {
+                /*  try
+                  {
 
-                    SqlCommand cm = new SqlCommand("insert into tblUsers values(" + firstName + ")");
+                      SqlCommand cm = new SqlCommand("insert into tblUsers values(" + firstName + ")");
 
-                    cm.Parameters.AddWithValue("@<field_names>", your_data);
+                      cm.Parameters.AddWithValue("@<field_names>", your_data);
 
-                    cm.ExecuteNonQuery();
-                    con.Close();
-                    MessageBox.Show("Order Successfull");
+                      cm.ExecuteNonQuery();
+                      con.Close();
+                      MessageBox.Show("Order Successfull");
 
-                }
-                catch (Exception ex) { }
-              */
+                  }
+                  catch (Exception ex) { }
+                */
             }
         }
 
@@ -176,5 +142,61 @@ namespace BloodBankSystem
             this.tableAdapterManager.UpdateAll(this.ist2jwDataSet);
 
         }
+
+        private Boolean validIDCheck(String idNumber)
+        {
+            Boolean validID = false;
+            int NumA = 0;
+            String idTrimmed = null;
+            int NumB = 0;
+            int NumC = 0;
+            int total = 0;
+            String totalStringtrim;
+
+            for (int i = 0; i < idNumber.Length - 1; i += 2)
+            {
+                NumA += Convert.ToInt32(Char.GetNumericValue(idNumber[i]));
+            }
+
+            for (int i = 1; i < idNumber.Length; i += 2)
+            {
+                idTrimmed += Char.GetNumericValue(idNumber[i]).ToString();
+
+            }
+            NumB = Convert.ToInt32(idTrimmed) * 2;
+
+            String numBString = NumB.ToString();
+            MessageBox.Show("B= " + numBString);
+
+            for (int i = 0; i < numBString.Length; i++)
+            {
+                NumC += Convert.ToInt32(Char.GetNumericValue(numBString[i]));
+            }
+            MessageBox.Show("C = " + NumC.ToString());
+            total = NumA + NumC;
+
+            MessageBox.Show("D = " + total.ToString());
+
+            if (total < 10)
+            {
+                totalStringtrim = total.ToString();
+            }
+            else
+            {
+
+                totalStringtrim = (total.ToString()).Substring(1, 1);
+            }
+
+            int checkDigit = 10 - Convert.ToInt32(totalStringtrim);
+            MessageBox.Show(checkDigit.ToString());
+
+            if (checkDigit == Convert.ToInt32(idNumber.Substring(12, 1)))
+            {
+                validID = true;
+            }
+
+            return validID;
+        }
+
     }
 }
