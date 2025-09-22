@@ -51,6 +51,7 @@ namespace BloodBankSystem
         {
             DateTime date = calDate.SelectionStart;
             string time = cmbTime.Text;
+            string venue = venueCmbx.Text;
             DataTable scheduleTb = new ist2jwDataSet.ScheduleDataTable();
             DataTable appointmentTb = new ist2jwDataSet.AppointmentDataTable();
             string currentUserID = UserSession.UserId;
@@ -58,7 +59,16 @@ namespace BloodBankSystem
             
             if (check.DateValidation() == true) {
                 // insert into appointment table
-
+                /**
+                 * try {
+                 * var adapter = new ist2jwDataSetTableAdapters.AppointmentTableAdapter();
+                 * var dataTable = adapter.InsertAppointment(...);
+                 * 
+                 * MessageBox.Show("Appointment booked successfully");
+                 * 
+                 * } catch (SqlException ex) {
+                 * }
+                 */
             }
             else  {
             MessageBox.Show("Date is not available");
