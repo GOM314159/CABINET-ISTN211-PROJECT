@@ -424,19 +424,19 @@ WHERE  (Schedule.UserID = @UserID)</CommandText>
             </xs:sequence>
           </xs:complexType>
         </xs:element>
-        <xs:element name="UserAppointments" msprop:Generator_RowEvHandlerName="UserAppointmentsRowChangeEventHandler" msprop:Generator_RowDeletedName="UserAppointmentsRowDeleted" msprop:Generator_RowDeletingName="UserAppointmentsRowDeleting" msprop:Generator_RowEvArgName="UserAppointmentsRowChangeEvent" msprop:Generator_TablePropName="UserAppointments" msprop:Generator_RowChangedName="UserAppointmentsRowChanged" msprop:Generator_RowChangingName="UserAppointmentsRowChanging" msprop:Generator_TableClassName="UserAppointmentsDataTable" msprop:Generator_RowClassName="UserAppointmentsRow" msprop:Generator_TableVarName="tableUserAppointments" msprop:Generator_UserTableName="UserAppointments">
+        <xs:element name="UserAppointments" msprop:Generator_RowEvHandlerName="UserAppointmentsRowChangeEventHandler" msprop:Generator_RowDeletedName="UserAppointmentsRowDeleted" msprop:Generator_RowDeletingName="UserAppointmentsRowDeleting" msprop:Generator_RowEvArgName="UserAppointmentsRowChangeEvent" msprop:Generator_TablePropName="UserAppointments" msprop:Generator_RowChangedName="UserAppointmentsRowChanged" msprop:Generator_UserTableName="UserAppointments" msprop:Generator_RowChangingName="UserAppointmentsRowChanging" msprop:Generator_RowClassName="UserAppointmentsRow" msprop:Generator_TableClassName="UserAppointmentsDataTable" msprop:Generator_TableVarName="tableUserAppointments">
           <xs:complexType>
             <xs:sequence>
-              <xs:element name="ScheduleID" msprop:Generator_ColumnPropNameInRow="ScheduleID" msprop:Generator_ColumnPropNameInTable="ScheduleIDColumn" msprop:Generator_ColumnVarNameInTable="columnScheduleID" msprop:Generator_UserColumnName="ScheduleID">
+              <xs:element name="ScheduleID" msprop:Generator_ColumnPropNameInTable="ScheduleIDColumn" msprop:Generator_ColumnPropNameInRow="ScheduleID" msprop:Generator_UserColumnName="ScheduleID" msprop:Generator_ColumnVarNameInTable="columnScheduleID">
                 <xs:simpleType>
                   <xs:restriction base="xs:string">
                     <xs:maxLength value="10" />
                   </xs:restriction>
                 </xs:simpleType>
               </xs:element>
-              <xs:element name="Appointment_x0020_Date" msprop:Generator_ColumnPropNameInRow="Appointment_Date" msprop:Generator_ColumnPropNameInTable="Appointment_DateColumn" msprop:Generator_ColumnVarNameInTable="columnAppointment_Date" msprop:Generator_UserColumnName="Appointment Date" type="xs:dateTime" />
-              <xs:element name="Time" msprop:Generator_ColumnPropNameInRow="Time" msprop:Generator_ColumnPropNameInTable="TimeColumn" msprop:Generator_ColumnVarNameInTable="columnTime" msprop:Generator_UserColumnName="Time" type="xs:duration" />
-              <xs:element name="Attended" msprop:Generator_ColumnPropNameInRow="Attended" msprop:Generator_ColumnPropNameInTable="AttendedColumn" msprop:Generator_ColumnVarNameInTable="columnAttended" msprop:Generator_UserColumnName="Attended" type="xs:boolean" />
+              <xs:element name="Appointment_x0020_Date" msprop:Generator_ColumnPropNameInTable="Appointment_DateColumn" msprop:Generator_ColumnPropNameInRow="Appointment_Date" msprop:Generator_UserColumnName="Appointment Date" msprop:Generator_ColumnVarNameInTable="columnAppointment_Date" type="xs:dateTime" />
+              <xs:element name="Time" msprop:Generator_ColumnPropNameInTable="TimeColumn" msprop:Generator_ColumnPropNameInRow="Time" msprop:Generator_UserColumnName="Time" msprop:Generator_ColumnVarNameInTable="columnTime" type="xs:duration" />
+              <xs:element name="Attended" msprop:Generator_ColumnPropNameInTable="AttendedColumn" msprop:Generator_ColumnPropNameInRow="Attended" msprop:Generator_UserColumnName="Attended" msprop:Generator_ColumnVarNameInTable="columnAttended" type="xs:boolean" />
             </xs:sequence>
           </xs:complexType>
         </xs:element>

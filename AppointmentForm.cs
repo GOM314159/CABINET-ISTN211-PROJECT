@@ -22,7 +22,7 @@ namespace BloodBankSystem
         private void AppointmentForm_Load(object sender, EventArgs e)
         {
             var adapter = new ist2jwDataSetTableAdapters.UserAppointmentsTableAdapter();
-            var dataTable = adapter.GetData("Par02");
+            var dataTable = adapter.GetData(UserSession.UserId);
             dataGridView1.DataSource = dataTable;
         }
 
@@ -53,16 +53,17 @@ namespace BloodBankSystem
             string time = cmbTime.Text;
             DataTable scheduleTb = new ist2jwDataSet.ScheduleDataTable();
             DataTable appointmentTb = new ist2jwDataSet.AppointmentDataTable();
-        
-            /**AppointmentValidation check = new AppointmentValidation(date , time , scheduleTb , appointmentTb , userID);
+            string currentUserID = UserSession.UserId;
+            AppointmentValidation check = new AppointmentValidation(date , time , scheduleTb , appointmentTb , currentUserID);
             
             if (check.DateValidation() == true) {
                 // insert into appointment table
+
             }
             else  {
             MessageBox.Show("Date is not available");
             }
-            */
+            
 
             
         }
@@ -111,7 +112,7 @@ namespace BloodBankSystem
         {
 
             var adapter = new ist2jwDataSetTableAdapters.UserAppointmentsTableAdapter();
-            var dataTable = adapter.GetData();
+            var dataTable = adapter.GetData(UserSession.UserId);
             dataGridView1.DataSource = dataTable;
         }
 
