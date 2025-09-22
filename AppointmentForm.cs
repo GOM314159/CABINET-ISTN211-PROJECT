@@ -1,4 +1,5 @@
-﻿using System;
+﻿using BloodBankSystem.ist2jwDataSetTableAdapters;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -20,18 +21,9 @@ namespace BloodBankSystem
 
         private void AppointmentForm_Load(object sender, EventArgs e)
         {
-            SqlConnection con = new SqlConnection("Data Source=143.128.146.30\\istn2;Initial Catalog=ist2jw;Persist Security Info=True;User ID=ist2jw;Password=***********;Encrypt=True;Trust Server Certificate=True");
-            con.Open();
-
-            SqlCommand cmd = new SqlCommand("SELECT Schedule.ScheduleID ," +
-                " Schedule.AppID , Appointment.AppDate , Appointment.Time , Schedule.Attend " +
-                " FROM Schedule, Appointment" +
-                " WHERE Appointment.AppID = Schedule.ScheduleID ", con);
-
-            SqlDataAdapter da = new SqlDataAdapter(cmd);
-            DataTable dt = new DataTable();
-            da.Fill(dt);
-            dataGridView1.DataSource = dt;
+            var adapter = new ist2jwDataSetTableAdapters.UserAppointmentsTableAdapter();
+            var dataTable = adapter.GetData("Par02");
+            dataGridView1.DataSource = dataTable;
         }
 
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
@@ -59,18 +51,20 @@ namespace BloodBankSystem
         {
             DateTime date = calDate.SelectionStart;
             string time = cmbTime.Text;
-
-            // get schedule and appointment table from database
-
+            DataTable scheduleTb = new ist2jwDataSet.ScheduleDataTable();
+            DataTable appointmentTb = new ist2jwDataSet.AppointmentDataTable();
+        
             /**AppointmentValidation check = new AppointmentValidation(date , time , scheduleTb , appointmentTb , userID);
             
-            if (check.DateValidation == true) {
-                add appointment to database
-            } else  {
+            if (check.DateValidation() == true) {
+                // insert into appointment table
+            }
+            else  {
             MessageBox.Show("Date is not available");
             }
-
             */
+
+            
         }
 
         private void panel1_Paint(object sender, PaintEventArgs e)
@@ -115,18 +109,10 @@ namespace BloodBankSystem
 
         private void button6_Click(object sender, EventArgs e)
         {
-             SqlConnection con = new SqlConnection("Data Source=143.128.146.30\\istn2;Initial Catalog=ist2jw;Persist Security Info=True;User ID=ist2jw;Password=***********;Encrypt=True;Trust Server Certificate=True");
-            con.Open();
 
-            SqlCommand cmd = new SqlCommand("SELECT Schedule.ScheduleID ," +
-                " Schedule.AppID , Appointment.AppDate , Appointment.Time , Schedule.Attend " +
-                " FROM Schedule, Appointment" +
-                " WHERE Appointment.AppID = Schedule.ScheduleID ", con);
-
-            SqlDataAdapter da = new SqlDataAdapter(cmd);
-            DataTable dt = new DataTable();
-            da.Fill(dt);
-            dataGridView1.DataSource = dt;
+            var adapter = new ist2jwDataSetTableAdapters.UserAppointmentsTableAdapter();
+            var dataTable = adapter.GetData();
+            dataGridView1.DataSource = dataTable;
         }
 
         private void label6_Click(object sender, EventArgs e)
