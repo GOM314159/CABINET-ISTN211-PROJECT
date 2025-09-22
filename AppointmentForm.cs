@@ -49,12 +49,28 @@ namespace BloodBankSystem
 
         private void btnBookAppointment_Click(object sender, EventArgs e)
         {
+            
             DateTime date = calDate.SelectionStart;
             string time = cmbTime.Text;
             string venue = venueCmbx.Text;
             DataTable scheduleTb = new ist2jwDataSet.ScheduleDataTable();
             DataTable appointmentTb = new ist2jwDataSet.AppointmentDataTable();
             string currentUserID = UserSession.UserId;
+
+
+            // validation 
+            if (string.IsNullOrEmpty(cmbTime.Text))
+            {
+                MessageBox.Show("Please select a time");
+                return;
+            }
+
+            if (string.IsNullOrEmpty(venueCmbx.Text))
+            {
+                MessageBox.Show("Please select a venue");
+                return;
+            }
+
             AppointmentValidation check = new AppointmentValidation(date , time , scheduleTb , appointmentTb , currentUserID);
             
             if (check.DateValidation() == true) {
@@ -67,6 +83,7 @@ namespace BloodBankSystem
                  * MessageBox.Show("Appointment booked successfully");
                  * 
                  * } catch (SqlException ex) {
+                 *  MessageBox.Show("Error booking appointment: " + ex.Message);
                  * }
                  */
             }

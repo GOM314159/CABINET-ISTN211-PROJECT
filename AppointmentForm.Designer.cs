@@ -179,14 +179,14 @@
             this.cmbTime.Items.AddRange(new object[] {
             "10h00",
             "12h00"});
-            this.cmbTime.Location = new System.Drawing.Point(479, 241);
+            this.cmbTime.Location = new System.Drawing.Point(466, 249);
             this.cmbTime.Name = "cmbTime";
             this.cmbTime.Size = new System.Drawing.Size(153, 24);
             this.cmbTime.TabIndex = 2;
             // 
             // btnBookAppointment
             // 
-            this.btnBookAppointment.Location = new System.Drawing.Point(384, 312);
+            this.btnBookAppointment.Location = new System.Drawing.Point(721, 399);
             this.btnBookAppointment.Name = "btnBookAppointment";
             this.btnBookAppointment.Size = new System.Drawing.Size(149, 59);
             this.btnBookAppointment.TabIndex = 3;
@@ -209,7 +209,7 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(432, 189);
+            this.label2.Location = new System.Drawing.Point(461, 197);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(231, 29);
             this.label2.TabIndex = 5;
@@ -504,9 +504,9 @@
             // venueCmbx
             // 
             this.venueCmbx.FormattingEnabled = true;
-            this.venueCmbx.Location = new System.Drawing.Point(482, 122);
+            this.venueCmbx.Location = new System.Drawing.Point(466, 122);
             this.venueCmbx.Name = "venueCmbx";
-            this.venueCmbx.Size = new System.Drawing.Size(121, 24);
+            this.venueCmbx.Size = new System.Drawing.Size(150, 24);
             this.venueCmbx.TabIndex = 7;
             // 
             // label4
