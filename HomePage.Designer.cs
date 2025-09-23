@@ -47,7 +47,6 @@
             this.welcomelbl.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.welcomelbl.BackColor = System.Drawing.Color.White;
-            this.welcomelbl.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.welcomelbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 36.25F, System.Drawing.FontStyle.Bold);
             this.welcomelbl.ForeColor = System.Drawing.Color.SteelBlue;
             this.welcomelbl.Location = new System.Drawing.Point(263, 0);
@@ -107,8 +106,7 @@
             // 
             // monthCalendar1
             // 
-            this.monthCalendar1.Location = new System.Drawing.Point(98, 418);
-            this.monthCalendar1.Margin = new System.Windows.Forms.Padding(12, 11, 12, 11);
+            this.monthCalendar1.Location = new System.Drawing.Point(56, 369);
             this.monthCalendar1.Name = "monthCalendar1";
             this.monthCalendar1.ShowWeekNumbers = true;
             this.monthCalendar1.TabIndex = 6;
@@ -117,10 +115,9 @@
             // 
             this.ttlDonLbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 18.25F);
             this.ttlDonLbl.ForeColor = System.Drawing.Color.Maroon;
-            this.ttlDonLbl.Location = new System.Drawing.Point(-3, 164);
-            this.ttlDonLbl.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.ttlDonLbl.Location = new System.Drawing.Point(-2, 133);
             this.ttlDonLbl.Name = "ttlDonLbl";
-            this.ttlDonLbl.Size = new System.Drawing.Size(464, 39);
+            this.ttlDonLbl.Size = new System.Drawing.Size(348, 32);
             this.ttlDonLbl.TabIndex = 4;
             this.ttlDonLbl.Text = "0";
             this.ttlDonLbl.TextAlign = System.Drawing.ContentAlignment.TopCenter;
@@ -129,10 +126,9 @@
             // 
             this.prfnextDateLbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 18.25F);
             this.prfnextDateLbl.ForeColor = System.Drawing.Color.Maroon;
-            this.prfnextDateLbl.Location = new System.Drawing.Point(-1, 319);
-            this.prfnextDateLbl.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.prfnextDateLbl.Location = new System.Drawing.Point(-1, 259);
             this.prfnextDateLbl.Name = "prfnextDateLbl";
-            this.prfnextDateLbl.Size = new System.Drawing.Size(464, 39);
+            this.prfnextDateLbl.Size = new System.Drawing.Size(348, 32);
             this.prfnextDateLbl.TabIndex = 3;
             this.prfnextDateLbl.Text = "Date";
             this.prfnextDateLbl.TextAlign = System.Drawing.ContentAlignment.TopCenter;
@@ -149,17 +145,15 @@
             this.prfNextDonLbl.TabIndex = 2;
             this.prfNextDonLbl.Text = "Next Donation";
             this.prfNextDonLbl.TextAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.prfNextDonLbl.Click += new System.EventHandler(this.prfNextDonLbl_Click);
             // 
             // prfDonLbl
             // 
             this.prfDonLbl.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.prfDonLbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 18.25F);
             this.prfDonLbl.ForeColor = System.Drawing.Color.Maroon;
-            this.prfDonLbl.Location = new System.Drawing.Point(-1, 98);
-            this.prfDonLbl.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.prfDonLbl.Location = new System.Drawing.Point(-1, 80);
             this.prfDonLbl.Name = "prfDonLbl";
-            this.prfDonLbl.Size = new System.Drawing.Size(465, 39);
+            this.prfDonLbl.Size = new System.Drawing.Size(349, 32);
             this.prfDonLbl.TabIndex = 1;
             this.prfDonLbl.Text = "Total Donations";
             this.prfDonLbl.TextAlign = System.Drawing.ContentAlignment.TopCenter;
@@ -171,9 +165,8 @@
             this.prfNameLbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.prfNameLbl.ForeColor = System.Drawing.Color.SteelBlue;
             this.prfNameLbl.Location = new System.Drawing.Point(0, 0);
-            this.prfNameLbl.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.prfNameLbl.Name = "prfNameLbl";
-            this.prfNameLbl.Size = new System.Drawing.Size(463, 50);
+            this.prfNameLbl.Size = new System.Drawing.Size(347, 41);
             this.prfNameLbl.TabIndex = 0;
             this.prfNameLbl.Text = "Name";
             this.prfNameLbl.TextAlign = System.Drawing.ContentAlignment.TopCenter;

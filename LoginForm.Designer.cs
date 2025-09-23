@@ -67,7 +67,7 @@
             // 
             this.PasswordTextBox.BackColor = System.Drawing.Color.LightSteelBlue;
             this.PasswordTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F);
-            this.PasswordTextBox.Location = new System.Drawing.Point(109, 307);
+            this.PasswordTextBox.Location = new System.Drawing.Point(109, 308);
             this.PasswordTextBox.Name = "PasswordTextBox";
             this.PasswordTextBox.Size = new System.Drawing.Size(301, 38);
             this.PasswordTextBox.TabIndex = 13;
@@ -127,7 +127,7 @@
             this.mIDTextBox.BackColor = System.Drawing.Color.LightSteelBlue;
             this.mIDTextBox.Font = new System.Drawing.Font("Arial", 20.25F);
             this.mIDTextBox.ForeColor = System.Drawing.SystemColors.WindowText;
-            this.mIDTextBox.Location = new System.Drawing.Point(109, 170);
+            this.mIDTextBox.Location = new System.Drawing.Point(109, 169);
             this.mIDTextBox.Mask = "0 0 0 0 0 0 0 0 0 0 0 0 0";
             this.mIDTextBox.Name = "mIDTextBox";
             this.mIDTextBox.Size = new System.Drawing.Size(301, 39);
