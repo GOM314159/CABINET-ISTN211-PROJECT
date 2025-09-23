@@ -7,13 +7,13 @@
 <DiagramLayout xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" ex:showrelationlabel="False" ViewPortX="-14" ViewPortY="42" xmlns:ex="urn:schemas-microsoft-com:xml-msdatasource-layout-extended" xmlns="urn:schemas-microsoft-com:xml-msdatasource-layout">
   <Shapes>
     <Shape ID="DesignTable:Appointment" ZOrder="9" X="30" Y="87" Height="227" Width="248" AdapterExpanded="true" DataTableExpanded="true" OldAdapterHeight="0" OldDataTableHeight="0" SplitterPosition="145" />
-    <Shape ID="DesignTable:Schedule" ZOrder="3" X="423" Y="63" Height="227" Width="218" AdapterExpanded="true" DataTableExpanded="true" OldAdapterHeight="0" OldDataTableHeight="0" SplitterPosition="122" />
-    <Shape ID="DesignTable:TblBloodInventory" ZOrder="8" X="453" Y="430" Height="296" Width="253" AdapterExpanded="true" DataTableExpanded="true" OldAdapterHeight="0" OldDataTableHeight="0" SplitterPosition="191" />
-    <Shape ID="DesignTable:tblUsers" ZOrder="7" X="739" Y="65" Height="352" Width="295" AdapterExpanded="true" DataTableExpanded="true" OldAdapterHeight="0" OldDataTableHeight="0" SplitterPosition="272" />
-    <Shape ID="DesignTable:UserAppointments" ZOrder="2" X="46" Y="434" Height="227" Width="300" AdapterExpanded="true" DataTableExpanded="true" OldAdapterHeight="0" OldDataTableHeight="28" SplitterPosition="168" />
+    <Shape ID="DesignTable:Schedule" ZOrder="4" X="423" Y="63" Height="227" Width="218" AdapterExpanded="true" DataTableExpanded="true" OldAdapterHeight="0" OldDataTableHeight="0" SplitterPosition="122" />
+    <Shape ID="DesignTable:TblBloodInventory" ZOrder="1" X="390" Y="406" Height="296" Width="253" AdapterExpanded="true" DataTableExpanded="true" OldAdapterHeight="0" OldDataTableHeight="0" SplitterPosition="191" />
+    <Shape ID="DesignTable:tblUsers" ZOrder="8" X="739" Y="65" Height="352" Width="295" AdapterExpanded="true" DataTableExpanded="true" OldAdapterHeight="0" OldDataTableHeight="0" SplitterPosition="272" />
+    <Shape ID="DesignTable:UserAppointments" ZOrder="2" X="43" Y="410" Height="296" Width="248" AdapterExpanded="true" DataTableExpanded="true" OldAdapterHeight="0" OldDataTableHeight="28" SplitterPosition="168" />
   </Shapes>
   <Connectors>
-    <Connector ID="DesignRelation:FK_Schedule_Appointment" ZOrder="6" LineWidth="11">
+    <Connector ID="DesignRelation:FK_Schedule_Appointment" ZOrder="7" LineWidth="11">
       <RoutePoints>
         <Point>
           <X>278</X>
@@ -25,7 +25,7 @@
         </Point>
       </RoutePoints>
     </Connector>
-    <Connector ID="DesignRelation:FK_Schedule_tblUsers" ZOrder="5" LineWidth="11">
+    <Connector ID="DesignRelation:FK_Schedule_tblUsers" ZOrder="6" LineWidth="11">
       <RoutePoints>
         <Point>
           <X>739</X>
@@ -37,7 +37,7 @@
         </Point>
       </RoutePoints>
     </Connector>
-    <Connector ID="DesignRelation:FK_TblBloodInventory_Appointment" ZOrder="1" LineWidth="11">
+    <Connector ID="DesignRelation:FK_TblBloodInventory_Appointment" ZOrder="3" LineWidth="11">
       <RoutePoints>
         <Point>
           <X>235</X>
@@ -48,32 +48,32 @@
           <Y>366</Y>
         </Point>
         <Point>
-          <X>400</X>
+          <X>345</X>
           <Y>366</Y>
         </Point>
         <Point>
-          <X>400</X>
-          <Y>430</Y>
+          <X>345</X>
+          <Y>406</Y>
         </Point>
         <Point>
-          <X>453</X>
-          <Y>430</Y>
+          <X>390</X>
+          <Y>406</Y>
         </Point>
       </RoutePoints>
     </Connector>
-    <Connector ID="DesignRelation:FK_TblBloodInventory_tblUsers" ZOrder="4" LineWidth="11">
+    <Connector ID="DesignRelation:FK_TblBloodInventory_tblUsers" ZOrder="5" LineWidth="11">
       <RoutePoints>
         <Point>
-          <X>756</X>
+          <X>759</X>
           <Y>417</Y>
         </Point>
         <Point>
-          <X>756</X>
-          <Y>447</Y>
+          <X>759</X>
+          <Y>466</Y>
         </Point>
         <Point>
-          <X>706</X>
-          <Y>447</Y>
+          <X>643</X>
+          <Y>466</Y>
         </Point>
       </RoutePoints>
     </Connector>

@@ -50,16 +50,16 @@ namespace BloodBankSystem
         private void btnBookAppointment_Click(object sender, EventArgs e)
         {
             
-            DateTime date = calDate.SelectionStart;
-            string time = cmbTime.Text;
+            DateTime date = calendarDate.SelectionStart;
+            string time = timeCmbx.Text;
             string venue = venueCmbx.Text;
-            DataTable scheduleTb = new ist2jwDataSet.ScheduleDataTable();
+            DataTable userAppointmentTb = new ist2jwDataSet.UserAppointmentsDataTable();
             DataTable appointmentTb = new ist2jwDataSet.AppointmentDataTable();
             string currentUserID = UserSession.UserId;
 
 
             // validation 
-            if (string.IsNullOrEmpty(cmbTime.Text))
+            if (string.IsNullOrEmpty(timeCmbx.Text))
             {
                 MessageBox.Show("Please select a time");
                 return;
@@ -71,9 +71,15 @@ namespace BloodBankSystem
                 return;
             }
 
-            AppointmentValidation check = new AppointmentValidation(date , time , scheduleTb , appointmentTb , currentUserID);
+            if (date.DayOfWeek == DayOfWeek.Sunday)
+            {
+                MessageBox.Show("Appointments cannot be booked on Sundays. Please select another date.");
+                return;
+            }
+
+            AppointmentValidation check = new AppointmentValidation(date , time , userAppointmentTb , appointmentTb , currentUserID , venue);
             
-            if (check.DateValidation() == true) {
+            if (check.DateValidationCheck() == true) {
                 // insert into appointment table
                 /**
                  * try {
@@ -145,6 +151,49 @@ namespace BloodBankSystem
 
         private void label6_Click(object sender, EventArgs e)
         {
+
+        }
+
+        private void button5_Click(object sender, EventArgs e)
+        {
+            DataView dataView = new DataView(ist2jwDataSet.UserAppointments);
+            dataView.Sort = "Date DESC";
+
+            dataGridView1.DataSource = dataView;
+        }
+
+        private void sortAttendedBtn_Click(object sender, EventArgs e)
+        {
+            DataView dataView = new DataView(ist2jwDataSet.UserAppointments);
+            dataView.Sort = "Date DESC , Attended DESC";
+
+            dataGridView1.DataSource = dataView;
+        }
+
+        private void sortVenueBtn_Click(object sender, EventArgs e)
+        {
+            DataView dataView = new DataView(ist2jwDataSet.UserAppointments);
+            dataView.Sort = "Venue DESC";
+
+            dataGridView1.DataSource = dataView;
+        }
+
+        private void button7_Click(object sender, EventArgs e)
+        {
+            decimal year = Decimal.Parse(yearFilterCmbx.Text);
+            decimal month = Decimal.Parse(monthFilterCmbx.Text);
+            string venue = venueFilterCmbx.Text;
+
+            if (string.IsNullOrEmpty(yearFilterCmbx.Text) && string.IsNullOrEmpty(monthFilterCmbx.Text) && string.IsNullOrEmpty(venue))
+            {
+                MessageBox.Show("Please select at least one field to be filtered");
+          
+            } else
+            {
+                var adapter = new ist2jwDataSetTableAdapters.UserAppointmentsTableAdapter();
+                var dataTable = adapter.FilterDataBy(year, month, venue , attendedFilterRdBtn.Checked);
+                dataGridView1.DataSource = dataTable; 
+            }
 
         }
     }
