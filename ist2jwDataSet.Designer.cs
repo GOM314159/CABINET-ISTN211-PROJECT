@@ -32,13 +32,13 @@ namespace BloodBankSystem {
         
         private tblUsersDataTable tabletblUsers;
         
-        private global::System.Data.DataRelation relationFK_Schedule_Appointment;
-        
         private global::System.Data.DataRelation relationFK_Schedule_tblUsers;
         
         private global::System.Data.DataRelation relationFK_TblBloodInventory_Appointment;
         
         private global::System.Data.DataRelation relationFK_TblBloodInventory_tblUsers;
+        
+        private global::System.Data.DataRelation relationFK_Schedule_Appointment;
         
         private global::System.Data.SchemaSerializationMode _schemaSerializationMode = global::System.Data.SchemaSerializationMode.IncludeSchema;
         
@@ -274,10 +274,10 @@ namespace BloodBankSystem {
                     this.tabletblUsers.InitVars();
                 }
             }
-            this.relationFK_Schedule_Appointment = this.Relations["FK_Schedule_Appointment"];
             this.relationFK_Schedule_tblUsers = this.Relations["FK_Schedule_tblUsers"];
             this.relationFK_TblBloodInventory_Appointment = this.Relations["FK_TblBloodInventory_Appointment"];
             this.relationFK_TblBloodInventory_tblUsers = this.Relations["FK_TblBloodInventory_tblUsers"];
+            this.relationFK_Schedule_Appointment = this.Relations["FK_Schedule_Appointment"];
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -296,10 +296,6 @@ namespace BloodBankSystem {
             base.Tables.Add(this.tableTblBloodInventory);
             this.tabletblUsers = new tblUsersDataTable();
             base.Tables.Add(this.tabletblUsers);
-            this.relationFK_Schedule_Appointment = new global::System.Data.DataRelation("FK_Schedule_Appointment", new global::System.Data.DataColumn[] {
-                        this.tableAppointment.AppIDColumn}, new global::System.Data.DataColumn[] {
-                        this.tableSchedule.AppointmentIDColumn}, false);
-            this.Relations.Add(this.relationFK_Schedule_Appointment);
             this.relationFK_Schedule_tblUsers = new global::System.Data.DataRelation("FK_Schedule_tblUsers", new global::System.Data.DataColumn[] {
                         this.tabletblUsers.UserIDColumn}, new global::System.Data.DataColumn[] {
                         this.tableSchedule.UserIDColumn}, false);
@@ -312,6 +308,10 @@ namespace BloodBankSystem {
                         this.tabletblUsers.UserIDColumn}, new global::System.Data.DataColumn[] {
                         this.tableTblBloodInventory.UserIDColumn}, false);
             this.Relations.Add(this.relationFK_TblBloodInventory_tblUsers);
+            this.relationFK_Schedule_Appointment = new global::System.Data.DataRelation("FK_Schedule_Appointment", new global::System.Data.DataColumn[] {
+                        this.tableAppointment.AppIDColumn}, new global::System.Data.DataColumn[] {
+                        this.tableSchedule.AppIDColumn}, false);
+            this.Relations.Add(this.relationFK_Schedule_Appointment);
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -720,7 +720,9 @@ namespace BloodBankSystem {
             
             private global::System.Data.DataColumn columnUserID;
             
-            private global::System.Data.DataColumn columnAppointmentID;
+            private global::System.Data.DataColumn columnAppID;
+            
+            private global::System.Data.DataColumn columnAttended;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
@@ -773,9 +775,17 @@ namespace BloodBankSystem {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public global::System.Data.DataColumn AppointmentIDColumn {
+            public global::System.Data.DataColumn AppIDColumn {
                 get {
-                    return this.columnAppointmentID;
+                    return this.columnAppID;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public global::System.Data.DataColumn AttendedColumn {
+                get {
+                    return this.columnAttended;
                 }
             }
             
@@ -816,12 +826,13 @@ namespace BloodBankSystem {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public ScheduleRow AddScheduleRow(string ScheduleID, tblUsersRow parenttblUsersRowByFK_Schedule_tblUsers, AppointmentRow parentAppointmentRowByFK_Schedule_Appointment) {
+            public ScheduleRow AddScheduleRow(string ScheduleID, tblUsersRow parenttblUsersRowByFK_Schedule_tblUsers, AppointmentRow parentAppointmentRowByFK_Schedule_Appointment, bool Attended) {
                 ScheduleRow rowScheduleRow = ((ScheduleRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
                         ScheduleID,
                         null,
-                        null};
+                        null,
+                        Attended};
                 if ((parenttblUsersRowByFK_Schedule_tblUsers != null)) {
                     columnValuesArray[1] = parenttblUsersRowByFK_Schedule_tblUsers[0];
                 }
@@ -859,7 +870,8 @@ namespace BloodBankSystem {
             internal void InitVars() {
                 this.columnScheduleID = base.Columns["ScheduleID"];
                 this.columnUserID = base.Columns["UserID"];
-                this.columnAppointmentID = base.Columns["AppointmentID"];
+                this.columnAppID = base.Columns["AppID"];
+                this.columnAttended = base.Columns["Attended"];
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -869,8 +881,10 @@ namespace BloodBankSystem {
                 base.Columns.Add(this.columnScheduleID);
                 this.columnUserID = new global::System.Data.DataColumn("UserID", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnUserID);
-                this.columnAppointmentID = new global::System.Data.DataColumn("AppointmentID", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnAppointmentID);
+                this.columnAppID = new global::System.Data.DataColumn("AppID", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnAppID);
+                this.columnAttended = new global::System.Data.DataColumn("Attended", typeof(bool), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnAttended);
                 this.Constraints.Add(new global::System.Data.UniqueConstraint("Constraint1", new global::System.Data.DataColumn[] {
                                 this.columnScheduleID}, true));
                 this.columnScheduleID.AllowDBNull = false;
@@ -878,8 +892,9 @@ namespace BloodBankSystem {
                 this.columnScheduleID.MaxLength = 10;
                 this.columnUserID.AllowDBNull = false;
                 this.columnUserID.MaxLength = 10;
-                this.columnAppointmentID.AllowDBNull = false;
-                this.columnAppointmentID.MaxLength = 10;
+                this.columnAppID.AllowDBNull = false;
+                this.columnAppID.MaxLength = 10;
+                this.columnAttended.AllowDBNull = false;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -1780,23 +1795,23 @@ namespace BloodBankSystem {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public ScheduleRow[] GetScheduleRows() {
-                if ((this.Table.ChildRelations["FK_Schedule_Appointment"] == null)) {
-                    return new ScheduleRow[0];
-                }
-                else {
-                    return ((ScheduleRow[])(base.GetChildRows(this.Table.ChildRelations["FK_Schedule_Appointment"])));
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             public TblBloodInventoryRow[] GetTblBloodInventoryRows() {
                 if ((this.Table.ChildRelations["FK_TblBloodInventory_Appointment"] == null)) {
                     return new TblBloodInventoryRow[0];
                 }
                 else {
                     return ((TblBloodInventoryRow[])(base.GetChildRows(this.Table.ChildRelations["FK_TblBloodInventory_Appointment"])));
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public ScheduleRow[] GetScheduleRows() {
+                if ((this.Table.ChildRelations["FK_Schedule_Appointment"] == null)) {
+                    return new ScheduleRow[0];
+                }
+                else {
+                    return ((ScheduleRow[])(base.GetChildRows(this.Table.ChildRelations["FK_Schedule_Appointment"])));
                 }
             }
         }
@@ -1839,23 +1854,23 @@ namespace BloodBankSystem {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public string AppointmentID {
+            public string AppID {
                 get {
-                    return ((string)(this[this.tableSchedule.AppointmentIDColumn]));
+                    return ((string)(this[this.tableSchedule.AppIDColumn]));
                 }
                 set {
-                    this[this.tableSchedule.AppointmentIDColumn] = value;
+                    this[this.tableSchedule.AppIDColumn] = value;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public AppointmentRow AppointmentRow {
+            public bool Attended {
                 get {
-                    return ((AppointmentRow)(this.GetParentRow(this.Table.ParentRelations["FK_Schedule_Appointment"])));
+                    return ((bool)(this[this.tableSchedule.AttendedColumn]));
                 }
                 set {
-                    this.SetParentRow(value, this.Table.ParentRelations["FK_Schedule_Appointment"]);
+                    this[this.tableSchedule.AttendedColumn] = value;
                 }
             }
             
@@ -1867,6 +1882,17 @@ namespace BloodBankSystem {
                 }
                 set {
                     this.SetParentRow(value, this.Table.ParentRelations["FK_Schedule_tblUsers"]);
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public AppointmentRow AppointmentRow {
+                get {
+                    return ((AppointmentRow)(this.GetParentRow(this.Table.ParentRelations["FK_Schedule_Appointment"])));
+                }
+                set {
+                    this.SetParentRow(value, this.Table.ParentRelations["FK_Schedule_Appointment"]);
                 }
             }
         }
@@ -2701,36 +2727,42 @@ SELECT AppID, AppDate, Time, Capacity FROM Appointment WHERE (AppID = @AppID)";
             tableMapping.DataSetTable = "Schedule";
             tableMapping.ColumnMappings.Add("ScheduleID", "ScheduleID");
             tableMapping.ColumnMappings.Add("UserID", "UserID");
-            tableMapping.ColumnMappings.Add("AppointmentID", "AppointmentID");
+            tableMapping.ColumnMappings.Add("AppID", "AppID");
+            tableMapping.ColumnMappings.Add("Attended", "Attended");
             this._adapter.TableMappings.Add(tableMapping);
             this._adapter.DeleteCommand = new global::System.Data.SqlClient.SqlCommand();
             this._adapter.DeleteCommand.Connection = this.Connection;
             this._adapter.DeleteCommand.CommandText = "DELETE FROM [dbo].[Schedule] WHERE (([ScheduleID] = @Original_ScheduleID) AND ([U" +
-                "serID] = @Original_UserID) AND ([AppointmentID] = @Original_AppointmentID))";
+                "serID] = @Original_UserID) AND ([AppID] = @Original_AppID) AND ([Attended] = @Or" +
+                "iginal_Attended))";
             this._adapter.DeleteCommand.CommandType = global::System.Data.CommandType.Text;
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_ScheduleID", global::System.Data.SqlDbType.NChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "ScheduleID", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_UserID", global::System.Data.SqlDbType.NChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "UserID", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_AppointmentID", global::System.Data.SqlDbType.NChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "AppointmentID", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_AppID", global::System.Data.SqlDbType.NChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "AppID", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Attended", global::System.Data.SqlDbType.Bit, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Attended", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.InsertCommand = new global::System.Data.SqlClient.SqlCommand();
             this._adapter.InsertCommand.Connection = this.Connection;
-            this._adapter.InsertCommand.CommandText = "INSERT INTO [dbo].[Schedule] ([ScheduleID], [UserID], [AppointmentID]) VALUES (@S" +
-                "cheduleID, @UserID, @AppointmentID);\r\nSELECT ScheduleID, UserID, AppointmentID F" +
-                "ROM Schedule WHERE (ScheduleID = @ScheduleID)";
+            this._adapter.InsertCommand.CommandText = "INSERT INTO [dbo].[Schedule] ([ScheduleID], [UserID], [AppID], [Attended]) VALUES" +
+                " (@ScheduleID, @UserID, @AppID, @Attended);\r\nSELECT ScheduleID, UserID, AppID, A" +
+                "ttended FROM Schedule WHERE (ScheduleID = @ScheduleID)";
             this._adapter.InsertCommand.CommandType = global::System.Data.CommandType.Text;
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@ScheduleID", global::System.Data.SqlDbType.NChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "ScheduleID", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@UserID", global::System.Data.SqlDbType.NChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "UserID", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@AppointmentID", global::System.Data.SqlDbType.NChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "AppointmentID", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@AppID", global::System.Data.SqlDbType.NChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "AppID", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Attended", global::System.Data.SqlDbType.Bit, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Attended", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand = new global::System.Data.SqlClient.SqlCommand();
             this._adapter.UpdateCommand.Connection = this.Connection;
-            this._adapter.UpdateCommand.CommandText = @"UPDATE [dbo].[Schedule] SET [ScheduleID] = @ScheduleID, [UserID] = @UserID, [AppointmentID] = @AppointmentID WHERE (([ScheduleID] = @Original_ScheduleID) AND ([UserID] = @Original_UserID) AND ([AppointmentID] = @Original_AppointmentID));
-SELECT ScheduleID, UserID, AppointmentID FROM Schedule WHERE (ScheduleID = @ScheduleID)";
+            this._adapter.UpdateCommand.CommandText = @"UPDATE [dbo].[Schedule] SET [ScheduleID] = @ScheduleID, [UserID] = @UserID, [AppID] = @AppID, [Attended] = @Attended WHERE (([ScheduleID] = @Original_ScheduleID) AND ([UserID] = @Original_UserID) AND ([AppID] = @Original_AppID) AND ([Attended] = @Original_Attended));
+SELECT ScheduleID, UserID, AppID, Attended FROM Schedule WHERE (ScheduleID = @ScheduleID)";
             this._adapter.UpdateCommand.CommandType = global::System.Data.CommandType.Text;
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@ScheduleID", global::System.Data.SqlDbType.NChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "ScheduleID", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@UserID", global::System.Data.SqlDbType.NChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "UserID", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@AppointmentID", global::System.Data.SqlDbType.NChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "AppointmentID", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@AppID", global::System.Data.SqlDbType.NChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "AppID", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Attended", global::System.Data.SqlDbType.Bit, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Attended", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_ScheduleID", global::System.Data.SqlDbType.NChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "ScheduleID", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_UserID", global::System.Data.SqlDbType.NChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "UserID", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_AppointmentID", global::System.Data.SqlDbType.NChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "AppointmentID", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_AppID", global::System.Data.SqlDbType.NChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "AppID", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Attended", global::System.Data.SqlDbType.Bit, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Attended", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -2746,7 +2778,7 @@ SELECT ScheduleID, UserID, AppointmentID FROM Schedule WHERE (ScheduleID = @Sche
             this._commandCollection = new global::System.Data.SqlClient.SqlCommand[1];
             this._commandCollection[0] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[0].Connection = this.Connection;
-            this._commandCollection[0].CommandText = "SELECT ScheduleID, UserID, AppointmentID FROM dbo.Schedule";
+            this._commandCollection[0].CommandText = "SELECT ScheduleID, UserID, AppID, Attended FROM dbo.Schedule";
             this._commandCollection[0].CommandType = global::System.Data.CommandType.Text;
         }
         
@@ -2807,7 +2839,7 @@ SELECT ScheduleID, UserID, AppointmentID FROM Schedule WHERE (ScheduleID = @Sche
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Delete, true)]
-        public virtual int Delete(string Original_ScheduleID, string Original_UserID, string Original_AppointmentID) {
+        public virtual int Delete(string Original_ScheduleID, string Original_UserID, string Original_AppID, bool Original_Attended) {
             if ((Original_ScheduleID == null)) {
                 throw new global::System.ArgumentNullException("Original_ScheduleID");
             }
@@ -2820,12 +2852,13 @@ SELECT ScheduleID, UserID, AppointmentID FROM Schedule WHERE (ScheduleID = @Sche
             else {
                 this.Adapter.DeleteCommand.Parameters[1].Value = ((string)(Original_UserID));
             }
-            if ((Original_AppointmentID == null)) {
-                throw new global::System.ArgumentNullException("Original_AppointmentID");
+            if ((Original_AppID == null)) {
+                throw new global::System.ArgumentNullException("Original_AppID");
             }
             else {
-                this.Adapter.DeleteCommand.Parameters[2].Value = ((string)(Original_AppointmentID));
+                this.Adapter.DeleteCommand.Parameters[2].Value = ((string)(Original_AppID));
             }
+            this.Adapter.DeleteCommand.Parameters[3].Value = ((bool)(Original_Attended));
             global::System.Data.ConnectionState previousConnectionState = this.Adapter.DeleteCommand.Connection.State;
             if (((this.Adapter.DeleteCommand.Connection.State & global::System.Data.ConnectionState.Open) 
                         != global::System.Data.ConnectionState.Open)) {
@@ -2846,7 +2879,7 @@ SELECT ScheduleID, UserID, AppointmentID FROM Schedule WHERE (ScheduleID = @Sche
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Insert, true)]
-        public virtual int Insert(string ScheduleID, string UserID, string AppointmentID) {
+        public virtual int Insert(string ScheduleID, string UserID, string AppID, bool Attended) {
             if ((ScheduleID == null)) {
                 throw new global::System.ArgumentNullException("ScheduleID");
             }
@@ -2859,12 +2892,13 @@ SELECT ScheduleID, UserID, AppointmentID FROM Schedule WHERE (ScheduleID = @Sche
             else {
                 this.Adapter.InsertCommand.Parameters[1].Value = ((string)(UserID));
             }
-            if ((AppointmentID == null)) {
-                throw new global::System.ArgumentNullException("AppointmentID");
+            if ((AppID == null)) {
+                throw new global::System.ArgumentNullException("AppID");
             }
             else {
-                this.Adapter.InsertCommand.Parameters[2].Value = ((string)(AppointmentID));
+                this.Adapter.InsertCommand.Parameters[2].Value = ((string)(AppID));
             }
+            this.Adapter.InsertCommand.Parameters[3].Value = ((bool)(Attended));
             global::System.Data.ConnectionState previousConnectionState = this.Adapter.InsertCommand.Connection.State;
             if (((this.Adapter.InsertCommand.Connection.State & global::System.Data.ConnectionState.Open) 
                         != global::System.Data.ConnectionState.Open)) {
@@ -2885,7 +2919,7 @@ SELECT ScheduleID, UserID, AppointmentID FROM Schedule WHERE (ScheduleID = @Sche
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Update, true)]
-        public virtual int Update(string ScheduleID, string UserID, string AppointmentID, string Original_ScheduleID, string Original_UserID, string Original_AppointmentID) {
+        public virtual int Update(string ScheduleID, string UserID, string AppID, bool Attended, string Original_ScheduleID, string Original_UserID, string Original_AppID, bool Original_Attended) {
             if ((ScheduleID == null)) {
                 throw new global::System.ArgumentNullException("ScheduleID");
             }
@@ -2898,30 +2932,32 @@ SELECT ScheduleID, UserID, AppointmentID FROM Schedule WHERE (ScheduleID = @Sche
             else {
                 this.Adapter.UpdateCommand.Parameters[1].Value = ((string)(UserID));
             }
-            if ((AppointmentID == null)) {
-                throw new global::System.ArgumentNullException("AppointmentID");
+            if ((AppID == null)) {
+                throw new global::System.ArgumentNullException("AppID");
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[2].Value = ((string)(AppointmentID));
+                this.Adapter.UpdateCommand.Parameters[2].Value = ((string)(AppID));
             }
+            this.Adapter.UpdateCommand.Parameters[3].Value = ((bool)(Attended));
             if ((Original_ScheduleID == null)) {
                 throw new global::System.ArgumentNullException("Original_ScheduleID");
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[3].Value = ((string)(Original_ScheduleID));
+                this.Adapter.UpdateCommand.Parameters[4].Value = ((string)(Original_ScheduleID));
             }
             if ((Original_UserID == null)) {
                 throw new global::System.ArgumentNullException("Original_UserID");
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[4].Value = ((string)(Original_UserID));
+                this.Adapter.UpdateCommand.Parameters[5].Value = ((string)(Original_UserID));
             }
-            if ((Original_AppointmentID == null)) {
-                throw new global::System.ArgumentNullException("Original_AppointmentID");
+            if ((Original_AppID == null)) {
+                throw new global::System.ArgumentNullException("Original_AppID");
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[5].Value = ((string)(Original_AppointmentID));
+                this.Adapter.UpdateCommand.Parameters[6].Value = ((string)(Original_AppID));
             }
+            this.Adapter.UpdateCommand.Parameters[7].Value = ((bool)(Original_Attended));
             global::System.Data.ConnectionState previousConnectionState = this.Adapter.UpdateCommand.Connection.State;
             if (((this.Adapter.UpdateCommand.Connection.State & global::System.Data.ConnectionState.Open) 
                         != global::System.Data.ConnectionState.Open)) {
@@ -2942,8 +2978,8 @@ SELECT ScheduleID, UserID, AppointmentID FROM Schedule WHERE (ScheduleID = @Sche
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Update, true)]
-        public virtual int Update(string UserID, string AppointmentID, string Original_ScheduleID, string Original_UserID, string Original_AppointmentID) {
-            return this.Update(Original_ScheduleID, UserID, AppointmentID, Original_ScheduleID, Original_UserID, Original_AppointmentID);
+        public virtual int Update(string UserID, string AppID, bool Attended, string Original_ScheduleID, string Original_UserID, string Original_AppID, bool Original_Attended) {
+            return this.Update(Original_ScheduleID, UserID, AppID, Attended, Original_ScheduleID, Original_UserID, Original_AppID, Original_Attended);
         }
     }
     

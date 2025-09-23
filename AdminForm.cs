@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Data.SqlClient;
 using System.Drawing;
 using System.Linq;
 using System.Text;
@@ -19,6 +20,8 @@ namespace BloodBankSystem
 
         private void AdminForm_Load(object sender, EventArgs e)
         {
+            // TODO: This line of code loads data into the 'ist2jwDataSet.Schedule' table. You can move, or remove it, as needed.
+            this.scheduleTableAdapter.Fill(this.ist2jwDataSet.Schedule);
             // TODO: This line of code loads data into the 'ist2jwDataSet.Appointment' table. You can move, or remove it, as needed.
             this.appointmentTableAdapter.Fill(this.ist2jwDataSet.Appointment);
             // TODO: This line of code loads data into the 'ist2jwDataSet.TblBloodInventory' table. You can move, or remove it, as needed.
@@ -88,6 +91,16 @@ namespace BloodBankSystem
         private void btnAppLast_Click(object sender, EventArgs e)
         {
             appointmentBindingSource.MoveLast();
+        }
+
+        private void tabPage2_Click(object sender, EventArgs e)
+        {
+             
+        }
+
+        private void button12_Click(object sender, EventArgs e)
+        {
+            tblUsersBindingSource.Sort = "Name ASC";
         }
     }
 }
