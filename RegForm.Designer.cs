@@ -44,6 +44,10 @@
             this.tblUsersBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.tblUsersTableAdapter = new BloodBankSystem.ist2jwDataSetTableAdapters.tblUsersTableAdapter();
             this.tableAdapterManager = new BloodBankSystem.ist2jwDataSetTableAdapters.TableAdapterManager();
+            this.bloodtypeLbl = new System.Windows.Forms.Label();
+            this.bloodtypeCmbox = new System.Windows.Forms.ComboBox();
+            this.pswrdLbl = new System.Windows.Forms.Label();
+            this.passwordTextBox = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.ist2jwDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.tblUsersBindingSource)).BeginInit();
             this.SuspendLayout();
@@ -54,7 +58,7 @@
             this.regTitleLbl.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.regTitleLbl.Font = new System.Drawing.Font("Modern No. 20", 29.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.regTitleLbl.ForeColor = System.Drawing.Color.RoyalBlue;
-            this.regTitleLbl.Location = new System.Drawing.Point(0, -1);
+            this.regTitleLbl.Location = new System.Drawing.Point(0, 0);
             this.regTitleLbl.Name = "regTitleLbl";
             this.regTitleLbl.Size = new System.Drawing.Size(707, 50);
             this.regTitleLbl.TabIndex = 3;
@@ -106,7 +110,7 @@
             this.CellLbl.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.CellLbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 18.25F);
             this.CellLbl.ForeColor = System.Drawing.Color.RoyalBlue;
-            this.CellLbl.Location = new System.Drawing.Point(46, 339);
+            this.CellLbl.Location = new System.Drawing.Point(46, 328);
             this.CellLbl.Name = "CellLbl";
             this.CellLbl.Size = new System.Drawing.Size(229, 33);
             this.CellLbl.TabIndex = 10;
@@ -125,7 +129,7 @@
             this.regBtn.Font = new System.Drawing.Font("Arial", 29.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.regBtn.ForeColor = System.Drawing.Color.MidnightBlue;
             this.regBtn.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.regBtn.Location = new System.Drawing.Point(220, 422);
+            this.regBtn.Location = new System.Drawing.Point(230, 544);
             this.regBtn.Name = "regBtn";
             this.regBtn.Size = new System.Drawing.Size(219, 61);
             this.regBtn.TabIndex = 16;
@@ -143,7 +147,7 @@
             this.BackBtn.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Black;
             this.BackBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.BackBtn.Font = new System.Drawing.Font("Arial", 18.25F);
-            this.BackBtn.Location = new System.Drawing.Point(12, 508);
+            this.BackBtn.Location = new System.Drawing.Point(12, 566);
             this.BackBtn.Name = "BackBtn";
             this.BackBtn.Size = new System.Drawing.Size(104, 39);
             this.BackBtn.TabIndex = 17;
@@ -188,7 +192,7 @@
             // 
             this.mCellphoneTextBox.BackColor = System.Drawing.Color.LightSteelBlue;
             this.mCellphoneTextBox.Font = new System.Drawing.Font("Arial", 16.25F);
-            this.mCellphoneTextBox.Location = new System.Drawing.Point(349, 339);
+            this.mCellphoneTextBox.Location = new System.Drawing.Point(349, 328);
             this.mCellphoneTextBox.Mask = "0000000000";
             this.mCellphoneTextBox.Name = "mCellphoneTextBox";
             this.mCellphoneTextBox.Size = new System.Drawing.Size(292, 32);
@@ -218,12 +222,68 @@
             this.tableAdapterManager.tblUsersTableAdapter = this.tblUsersTableAdapter;
             this.tableAdapterManager.UpdateOrder = BloodBankSystem.ist2jwDataSetTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete;
             // 
+            // bloodtypeLbl
+            // 
+            this.bloodtypeLbl.BackColor = System.Drawing.Color.White;
+            this.bloodtypeLbl.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.bloodtypeLbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 18.25F);
+            this.bloodtypeLbl.ForeColor = System.Drawing.Color.RoyalBlue;
+            this.bloodtypeLbl.Location = new System.Drawing.Point(46, 398);
+            this.bloodtypeLbl.Name = "bloodtypeLbl";
+            this.bloodtypeLbl.Size = new System.Drawing.Size(229, 33);
+            this.bloodtypeLbl.TabIndex = 20;
+            this.bloodtypeLbl.Text = "Blood Type";
+            this.bloodtypeLbl.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // bloodtypeCmbox
+            // 
+            this.bloodtypeCmbox.BackColor = System.Drawing.Color.LightSteelBlue;
+            this.bloodtypeCmbox.Font = new System.Drawing.Font("Arial", 16.25F);
+            this.bloodtypeCmbox.FormattingEnabled = true;
+            this.bloodtypeCmbox.Items.AddRange(new object[] {
+            "A",
+            "B",
+            "AB",
+            "O"});
+            this.bloodtypeCmbox.Location = new System.Drawing.Point(349, 398);
+            this.bloodtypeCmbox.Name = "bloodtypeCmbox";
+            this.bloodtypeCmbox.Size = new System.Drawing.Size(292, 33);
+            this.bloodtypeCmbox.TabIndex = 21;
+            // 
+            // pswrdLbl
+            // 
+            this.pswrdLbl.BackColor = System.Drawing.Color.White;
+            this.pswrdLbl.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.pswrdLbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 18.25F);
+            this.pswrdLbl.ForeColor = System.Drawing.Color.RoyalBlue;
+            this.pswrdLbl.Location = new System.Drawing.Point(46, 476);
+            this.pswrdLbl.Name = "pswrdLbl";
+            this.pswrdLbl.Size = new System.Drawing.Size(229, 33);
+            this.pswrdLbl.TabIndex = 22;
+            this.pswrdLbl.Text = "Password";
+            this.pswrdLbl.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // passwordTextBox
+            // 
+            this.passwordTextBox.BackColor = System.Drawing.Color.LightSteelBlue;
+            this.passwordTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.25F);
+            this.passwordTextBox.Location = new System.Drawing.Point(349, 476);
+            this.passwordTextBox.Name = "passwordTextBox";
+            this.passwordTextBox.PasswordChar = '*';
+            this.passwordTextBox.Size = new System.Drawing.Size(292, 32);
+            this.passwordTextBox.TabIndex = 23;
+            this.passwordTextBox.Tag = "";
+            // 
             // RegForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 14F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = global::BloodBankSystem.Properties.Resources.RegBack;
-            this.ClientSize = new System.Drawing.Size(707, 571);
+            this.ClientSize = new System.Drawing.Size(707, 630);
+            this.Controls.Add(this.passwordTextBox);
+            this.Controls.Add(this.pswrdLbl);
+            this.Controls.Add(this.bloodtypeCmbox);
+            this.Controls.Add(this.bloodtypeLbl);
             this.Controls.Add(this.mCellphoneTextBox);
             this.Controls.Add(this.mIDTextBox);
             this.Controls.Add(this.BackBtn);
@@ -263,5 +323,9 @@
         private System.Windows.Forms.BindingSource tblUsersBindingSource;
         private ist2jwDataSetTableAdapters.tblUsersTableAdapter tblUsersTableAdapter;
         private ist2jwDataSetTableAdapters.TableAdapterManager tableAdapterManager;
+        private System.Windows.Forms.Label bloodtypeLbl;
+        private System.Windows.Forms.ComboBox bloodtypeCmbox;
+        private System.Windows.Forms.Label pswrdLbl;
+        private System.Windows.Forms.TextBox passwordTextBox;
     }
 }

@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Data.SqlClient;
+using System.Diagnostics;
 using System.Drawing;
 using System.Linq;
 using System.Text;
@@ -30,17 +31,32 @@ namespace BloodBankSystem
 
         private void regBtn_Click(object sender, EventArgs e)
         {
+
+            Random rnd = new Random();
+            String userID = rnd.Next(0, 1000000).ToString(); // Generates a 6-digit userID as a string
+            String userType = "User";
             String firstName = fNameTextBox.Text;
             String lastName = lastNameTextBox.Text;
             String iDNumber = mIDTextBox.Text;
             String phoneNumber = mCellphoneTextBox.Text;
+            String password = passwordTextBox.Text;
+            String bloodType = bloodtypeCmbox.Text;
+            Boolean isActiveAcc = true;
 
+            Boolean userIDCheck = false;
             Boolean firstNameCheck = false;
             Boolean surNameCheck = false;
             Boolean IDNumberCheck = false;
             Boolean phoneNumberCheck = false;
+            Boolean passwordCheck = false;
 
-
+            //userID check  
+            if (validUserID(userID))
+            {
+                MessageBox.Show("Your User ID is: " + userID);
+                userIDCheck = true;
+            }
+           
             // First Name check
             if (!string.IsNullOrWhiteSpace(firstName))
             {
@@ -92,25 +108,41 @@ namespace BloodBankSystem
                 phoneNumberCheck = false;
             }
 
+            //Blood Type check
+            if (!string.IsNullOrWhiteSpace(bloodType))
+            {
+                bloodtypeCmbox.BackColor = Color.LightGreen;
+            }
+            else
+            {
+                bloodtypeCmbox.BackColor = Color.IndianRed;
+            }
+
+            // password check
+            if (!string.IsNullOrWhiteSpace(password) && validPasswordCheck(password))
+            {
+                passwordCheck = true;
+                passwordTextBox.BackColor = Color.LightGreen;
+            }
+            else
+            {
+                passwordTextBox.BackColor = Color.IndianRed;
+                passwordCheck = false;
+            }
 
             // if all fields are filled in correctly, the following code will execute
-            if (firstNameCheck && surNameCheck && IDNumberCheck && phoneNumberCheck)
+            if (userIDCheck && firstNameCheck && surNameCheck && IDNumberCheck && phoneNumberCheck && passwordCheck)
             {
-                /*  try
-                  {
+                try {  var adapter = new ist2jwDataSetTableAdapters.tblUsersTableAdapter();
+                var dataTable = adapter.UserRegistration(userID,firstName, lastName, iDNumber, phoneNumber, password,userType,bloodType,isActiveAcc);
+                MessageBox.Show("Registration Successful Welcome to 'Blood Bank System' ");
 
-                      SqlCommand cm = new SqlCommand("insert into tblUsers values(" + firstName + ")");
-
-                      cm.Parameters.AddWithValue("@<field_names>", your_data);
-
-                      cm.ExecuteNonQuery();
-                      con.Close();
-                      MessageBox.Show("Order Successfull");
-
-                  }
-                  catch (Exception ex) { }
-                */
-            }
+                }
+                catch (SqlException ex)
+                {
+                    MessageBox.Show("An error occurred while creating account " + ex.Message);
+                }
+             }
         }
 
         private void BackBtn_Click(object sender, EventArgs e)
@@ -166,16 +198,16 @@ namespace BloodBankSystem
             NumB = Convert.ToInt32(idTrimmed) * 2;
 
             String numBString = NumB.ToString();
-            MessageBox.Show("B= " + numBString);
+
 
             for (int i = 0; i < numBString.Length; i++)
             {
                 NumC += Convert.ToInt32(Char.GetNumericValue(numBString[i]));
             }
-            MessageBox.Show("C = " + NumC.ToString());
+
             total = NumA + NumC;
 
-            MessageBox.Show("D = " + total.ToString());
+ 
 
             if (total < 10)
             {
@@ -188,7 +220,7 @@ namespace BloodBankSystem
             }
 
             int checkDigit = 10 - Convert.ToInt32(totalStringtrim);
-            MessageBox.Show(checkDigit.ToString());
+
 
             if (checkDigit == Convert.ToInt32(idNumber.Substring(12, 1)))
             {
@@ -196,6 +228,63 @@ namespace BloodBankSystem
             }
 
             return validID;
+        }
+
+        private Boolean validPasswordCheck(String password)
+        {
+            Boolean hasUpper = false;
+            Boolean hasDigit = false;
+            Boolean hasSpecial = false;
+            Boolean validPassword = false;
+
+            if (password.Length >= 8)
+            {
+               foreach (char c in password)
+                {
+                    if (Char.IsUpper(c))
+                    {
+                      hasUpper = true;
+                    }   
+                    
+                    if (Char.IsDigit(c))
+                    {
+                      hasDigit = true;
+                    }
+                    if (!Char.IsLetterOrDigit(c) && !Char.IsWhiteSpace(c))
+                    {
+                      hasSpecial = true;
+                    }
+
+                }
+               if (hasUpper && hasDigit && hasSpecial)
+                {
+                    validPassword = true;
+                }
+
+            }
+            return validPassword;
+        }
+
+        private Boolean validUserID(String userID)
+        {
+            Boolean userIDCheck = false;
+
+            var adapter1 = new ist2jwDataSetTableAdapters.tblUsersTableAdapter();
+            var dataTable1 = adapter1.FindUserID(userID);
+
+            if (dataTable1.Count() == 0)
+            {
+                userIDCheck = true;
+            }
+            else
+            {
+                Random rnd = new Random();
+                userID = rnd.Next(0, 1000000).ToString();
+                validUserID(userID);
+            }
+
+
+            return userIDCheck;
         }
 
     }
