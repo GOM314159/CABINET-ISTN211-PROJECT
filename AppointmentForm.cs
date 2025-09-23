@@ -92,13 +92,15 @@ namespace BloodBankSystem
                  *  MessageBox.Show("Error booking appointment: " + ex.Message);
                  * }
                  */
+
+                // do one for schedule as well 
+                /**
+                 * 
+                 */
             }
             else  {
             MessageBox.Show("Date is not available");
             }
-            
-
-            
         }
 
         private void panel1_Paint(object sender, PaintEventArgs e)
@@ -141,7 +143,7 @@ namespace BloodBankSystem
 
         }
 
-        private void button6_Click(object sender, EventArgs e)
+        private void resetBtn_Click(object sender, EventArgs e)
         {
             /*
             var adapter = new ist2jwDataSetTableAdapters.UserAppointmentsTableAdapter();
