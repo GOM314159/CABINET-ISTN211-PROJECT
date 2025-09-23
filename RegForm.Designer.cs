@@ -229,7 +229,8 @@
             "A",
             "B",
             "AB",
-            "O"});
+            "O",
+            "Not Sure"});
             this.bloodtypeCmbox.Location = new System.Drawing.Point(349, 398);
             this.bloodtypeCmbox.Name = "bloodtypeCmbox";
             this.bloodtypeCmbox.Size = new System.Drawing.Size(292, 33);

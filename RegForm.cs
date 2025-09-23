@@ -111,6 +111,10 @@ namespace BloodBankSystem
             if (!string.IsNullOrWhiteSpace(bloodType))
             {
                 bloodtypeCmbox.BackColor = Color.LightGreen;
+                if (bloodType.Equals("Not Sure"))
+                {
+                    bloodType = null;
+                }
             }
             else
             {
