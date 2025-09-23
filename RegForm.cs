@@ -113,7 +113,7 @@ namespace BloodBankSystem
                 bloodtypeCmbox.BackColor = Color.LightGreen;
                 if (bloodType.Equals("Not Sure"))
                 {
-                    bloodType = null;
+                    bloodType = "***";
                 }
             }
             else
