@@ -137,8 +137,12 @@ namespace BloodBankSystem
             if (userIDCheck && firstNameCheck && surNameCheck && IDNumberCheck && phoneNumberCheck && passwordCheck)
             {
                 try {  var adapter = new ist2jwDataSetTableAdapters.tblUsersTableAdapter();
-                var dataTable = adapter.UserRegistration(userID,firstName, lastName, iDNumber, phoneNumber, password,userType,bloodType,isActiveAcc);
+                var dataTable = adapter.UserRegistration(userID, password, firstName, lastName, iDNumber, phoneNumber, userType, bloodType, isActiveAcc);
                 MessageBox.Show("Registration Successful Welcome to 'Blood Bank System' ");
+
+                   Form homePage = new HomePage();
+                   homePage.Show();
+                   this.Hide();
 
                 }
                 catch (SqlException ex)

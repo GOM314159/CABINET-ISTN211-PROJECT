@@ -109,10 +109,11 @@ namespace BloodBankSystem
 
         private void button6_Click(object sender, EventArgs e)
         {
-
+            /*
             var adapter = new ist2jwDataSetTableAdapters.UserAppointmentsTableAdapter();
             var dataTable = adapter.GetData();
             dataGridView1.DataSource = dataTable;
+            */
         }
 
         private void label6_Click(object sender, EventArgs e)
