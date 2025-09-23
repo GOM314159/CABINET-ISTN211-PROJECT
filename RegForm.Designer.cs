@@ -40,14 +40,18 @@
             this.fNameTextBox = new System.Windows.Forms.TextBox();
             this.lastNameTextBox = new System.Windows.Forms.TextBox();
             this.mCellphoneTextBox = new System.Windows.Forms.MaskedTextBox();
-            this.ist2jwDataSet = new BloodBankSystem.ist2jwDataSet();
-            this.tblUsersBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.tblUsersTableAdapter = new BloodBankSystem.ist2jwDataSetTableAdapters.tblUsersTableAdapter();
-            this.tableAdapterManager = new BloodBankSystem.ist2jwDataSetTableAdapters.TableAdapterManager();
             this.bloodtypeLbl = new System.Windows.Forms.Label();
             this.bloodtypeCmbox = new System.Windows.Forms.ComboBox();
             this.pswrdLbl = new System.Windows.Forms.Label();
             this.passwordTextBox = new System.Windows.Forms.TextBox();
+            this.passShowImg = new System.Windows.Forms.PictureBox();
+            this.ist2jwDataSet = new BloodBankSystem.ist2jwDataSet();
+            this.tblUsersBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.tblUsersTableAdapter = new BloodBankSystem.ist2jwDataSetTableAdapters.tblUsersTableAdapter();
+            this.tableAdapterManager = new BloodBankSystem.ist2jwDataSetTableAdapters.TableAdapterManager();
+            this.helpBtn = new System.Windows.Forms.Button();
+            this.userRegTip = new System.Windows.Forms.ToolTip(this.components);
+            ((System.ComponentModel.ISupportInitialize)(this.passShowImg)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ist2jwDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.tblUsersBindingSource)).BeginInit();
             this.SuspendLayout();
@@ -129,7 +133,7 @@
             this.regBtn.Font = new System.Drawing.Font("Arial", 29.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.regBtn.ForeColor = System.Drawing.Color.MidnightBlue;
             this.regBtn.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.regBtn.Location = new System.Drawing.Point(230, 544);
+            this.regBtn.Location = new System.Drawing.Point(250, 557);
             this.regBtn.Name = "regBtn";
             this.regBtn.Size = new System.Drawing.Size(219, 61);
             this.regBtn.TabIndex = 16;
@@ -147,7 +151,7 @@
             this.BackBtn.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Black;
             this.BackBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.BackBtn.Font = new System.Drawing.Font("Arial", 18.25F);
-            this.BackBtn.Location = new System.Drawing.Point(12, 566);
+            this.BackBtn.Location = new System.Drawing.Point(12, 579);
             this.BackBtn.Name = "BackBtn";
             this.BackBtn.Size = new System.Drawing.Size(104, 39);
             this.BackBtn.TabIndex = 17;
@@ -165,6 +169,7 @@
             this.mIDTextBox.Name = "mIDTextBox";
             this.mIDTextBox.Size = new System.Drawing.Size(292, 32);
             this.mIDTextBox.TabIndex = 18;
+            this.userRegTip.SetToolTip(this.mIDTextBox, "Enter your ID number (Must be a SA ID)");
             this.mIDTextBox.ValidatingType = typeof(int);
             // 
             // fNameTextBox
@@ -176,6 +181,7 @@
             this.fNameTextBox.Size = new System.Drawing.Size(292, 32);
             this.fNameTextBox.TabIndex = 4;
             this.fNameTextBox.Tag = "";
+            this.userRegTip.SetToolTip(this.fNameTextBox, "Enter your First Name");
             // 
             // lastNameTextBox
             // 
@@ -186,6 +192,7 @@
             this.lastNameTextBox.Size = new System.Drawing.Size(292, 32);
             this.lastNameTextBox.TabIndex = 6;
             this.lastNameTextBox.Tag = "";
+            this.userRegTip.SetToolTip(this.lastNameTextBox, "Enter your Last Name / Surname");
             this.lastNameTextBox.TextChanged += new System.EventHandler(this.SurnameTextBox_TextChanged);
             // 
             // mCellphoneTextBox
@@ -197,30 +204,8 @@
             this.mCellphoneTextBox.Name = "mCellphoneTextBox";
             this.mCellphoneTextBox.Size = new System.Drawing.Size(292, 32);
             this.mCellphoneTextBox.TabIndex = 19;
+            this.userRegTip.SetToolTip(this.mCellphoneTextBox, "Enter your cellphone number");
             this.mCellphoneTextBox.ValidatingType = typeof(int);
-            // 
-            // ist2jwDataSet
-            // 
-            this.ist2jwDataSet.DataSetName = "ist2jwDataSet";
-            this.ist2jwDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // tblUsersBindingSource
-            // 
-            this.tblUsersBindingSource.DataMember = "tblUsers";
-            this.tblUsersBindingSource.DataSource = this.ist2jwDataSet;
-            // 
-            // tblUsersTableAdapter
-            // 
-            this.tblUsersTableAdapter.ClearBeforeFill = true;
-            // 
-            // tableAdapterManager
-            // 
-            this.tableAdapterManager.AppointmentTableAdapter = null;
-            this.tableAdapterManager.BackupDataSetBeforeUpdate = false;
-            this.tableAdapterManager.ScheduleTableAdapter = null;
-            this.tableAdapterManager.TblBloodInventoryTableAdapter = null;
-            this.tableAdapterManager.tblUsersTableAdapter = this.tblUsersTableAdapter;
-            this.tableAdapterManager.UpdateOrder = BloodBankSystem.ist2jwDataSetTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete;
             // 
             // bloodtypeLbl
             // 
@@ -249,6 +234,7 @@
             this.bloodtypeCmbox.Name = "bloodtypeCmbox";
             this.bloodtypeCmbox.Size = new System.Drawing.Size(292, 33);
             this.bloodtypeCmbox.TabIndex = 21;
+            this.userRegTip.SetToolTip(this.bloodtypeCmbox, "Choose your blood type (if unknown choose not sure option )");
             // 
             // pswrdLbl
             // 
@@ -273,6 +259,67 @@
             this.passwordTextBox.Size = new System.Drawing.Size(292, 32);
             this.passwordTextBox.TabIndex = 23;
             this.passwordTextBox.Tag = "";
+            this.userRegTip.SetToolTip(this.passwordTextBox, "Click Help button for more info on making a password");
+            // 
+            // passShowImg
+            // 
+            this.passShowImg.BackColor = System.Drawing.Color.Transparent;
+            this.passShowImg.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.passShowImg.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.passShowImg.Image = global::BloodBankSystem.Properties.Resources.HomeBack;
+            this.passShowImg.Location = new System.Drawing.Point(658, 476);
+            this.passShowImg.Name = "passShowImg";
+            this.passShowImg.Size = new System.Drawing.Size(37, 33);
+            this.passShowImg.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.passShowImg.TabIndex = 24;
+            this.passShowImg.TabStop = false;
+            this.passShowImg.Click += new System.EventHandler(this.passShowImg_Click);
+            // 
+            // ist2jwDataSet
+            // 
+            this.ist2jwDataSet.DataSetName = "ist2jwDataSet";
+            this.ist2jwDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // tblUsersBindingSource
+            // 
+            this.tblUsersBindingSource.DataMember = "tblUsers";
+            this.tblUsersBindingSource.DataSource = this.ist2jwDataSet;
+            // 
+            // tblUsersTableAdapter
+            // 
+            this.tblUsersTableAdapter.ClearBeforeFill = true;
+            // 
+            // tableAdapterManager
+            // 
+            this.tableAdapterManager.AppointmentTableAdapter = null;
+            this.tableAdapterManager.BackupDataSetBeforeUpdate = false;
+            this.tableAdapterManager.ScheduleTableAdapter = null;
+            this.tableAdapterManager.TblBloodInventoryTableAdapter = null;
+            this.tableAdapterManager.tblUsersTableAdapter = this.tblUsersTableAdapter;
+            this.tableAdapterManager.UpdateOrder = BloodBankSystem.ist2jwDataSetTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete;
+            // 
+            // helpBtn
+            // 
+            this.helpBtn.BackColor = System.Drawing.Color.Transparent;
+            this.helpBtn.BackgroundImage = global::BloodBankSystem.Properties.Resources.buttonbackOrange;
+            this.helpBtn.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.helpBtn.FlatAppearance.BorderSize = 0;
+            this.helpBtn.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.helpBtn.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Black;
+            this.helpBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.helpBtn.Font = new System.Drawing.Font("Arial", 18.25F);
+            this.helpBtn.Location = new System.Drawing.Point(591, 579);
+            this.helpBtn.Name = "helpBtn";
+            this.helpBtn.Size = new System.Drawing.Size(104, 39);
+            this.helpBtn.TabIndex = 25;
+            this.helpBtn.Text = "Help";
+            this.helpBtn.UseVisualStyleBackColor = false;
+            this.helpBtn.Click += new System.EventHandler(this.helpBtn_Click);
+            // 
+            // userRegTip
+            // 
+            this.userRegTip.ToolTipIcon = System.Windows.Forms.ToolTipIcon.Info;
+            this.userRegTip.ToolTipTitle = "Helpful tip";
             // 
             // RegForm
             // 
@@ -280,6 +327,8 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = global::BloodBankSystem.Properties.Resources.RegBack;
             this.ClientSize = new System.Drawing.Size(707, 630);
+            this.Controls.Add(this.helpBtn);
+            this.Controls.Add(this.passShowImg);
             this.Controls.Add(this.passwordTextBox);
             this.Controls.Add(this.pswrdLbl);
             this.Controls.Add(this.bloodtypeCmbox);
@@ -300,6 +349,7 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Registration Form";
             this.Load += new System.EventHandler(this.RegForm_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.passShowImg)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.ist2jwDataSet)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.tblUsersBindingSource)).EndInit();
             this.ResumeLayout(false);
@@ -327,5 +377,8 @@
         private System.Windows.Forms.ComboBox bloodtypeCmbox;
         private System.Windows.Forms.Label pswrdLbl;
         private System.Windows.Forms.TextBox passwordTextBox;
+        private System.Windows.Forms.PictureBox passShowImg;
+        private System.Windows.Forms.Button helpBtn;
+        private System.Windows.Forms.ToolTip userRegTip;
     }
 }

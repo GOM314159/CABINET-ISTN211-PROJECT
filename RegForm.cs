@@ -53,8 +53,7 @@ namespace BloodBankSystem
             //userID check  
             if (validUserID(userID))
             {
-                MessageBox.Show("Your User ID is: " + userID);
-                userIDCheck = true;
+              userIDCheck = true;
             }
            
             // First Name check
@@ -156,7 +155,6 @@ namespace BloodBankSystem
         {
             // TODO: This line of code loads data into the 'ist2jwDataSet.tblUsers' table. You can move, or remove it, as needed.
             this.tblUsersTableAdapter.Fill(this.ist2jwDataSet.tblUsers);
-
 
         }
 
@@ -287,5 +285,21 @@ namespace BloodBankSystem
             return userIDCheck;
         }
 
+        private void passShowImg_Click(object sender, EventArgs e)
+        {
+            if (passwordTextBox.PasswordChar == '*') { 
+                passwordTextBox.PasswordChar = '\0';
+            passShowImg.BorderStyle = BorderStyle.Fixed3D;
+            }
+            else {
+                passwordTextBox.PasswordChar = '*';
+            passShowImg.BorderStyle = BorderStyle.FixedSingle;
+            }
+        }
+
+        private void helpBtn_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("First Name: Enter your first name.\n\nLast Name: Enter your last name.\n\nID Number: Enter your 13 digit South African ID number.\n\nCellphone Number: Enter your 10 digit cellphone number.\n\nBlood Type: Select your blood type from the dropdown menu.\n\nPassword: Create a password with at least 8 characters, including an uppercase letter, a number, and a special character.\n\nShow Password: Click the nlood drop icon to toggle password visibility.\n\nRegister: Click to submit your information and create an account.\n\nBack: Click to return to the welcome screen.", "Registration Help", MessageBoxButtons.OK, MessageBoxIcon.Information);
+        }
     }
 }
