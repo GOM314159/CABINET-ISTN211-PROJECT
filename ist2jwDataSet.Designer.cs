@@ -34,13 +34,13 @@ namespace BloodBankSystem {
         
         private ScheduleDataTable tableSchedule;
         
-        private global::System.Data.DataRelation relationFK_TblBloodInventory_tblUsers;
-        
-        private global::System.Data.DataRelation relationFK_TblBloodInventory_Appointment;
-        
         private global::System.Data.DataRelation relationFK_Schedule_Appointment;
         
         private global::System.Data.DataRelation relationFK_Schedule_tblUsers;
+        
+        private global::System.Data.DataRelation relationFK_TblBloodInventory_Appointment;
+        
+        private global::System.Data.DataRelation relationFK_TblBloodInventory_tblUsers;
         
         private global::System.Data.SchemaSerializationMode _schemaSerializationMode = global::System.Data.SchemaSerializationMode.IncludeSchema;
         
@@ -298,10 +298,10 @@ namespace BloodBankSystem {
                     this.tableSchedule.InitVars();
                 }
             }
-            this.relationFK_TblBloodInventory_tblUsers = this.Relations["FK_TblBloodInventory_tblUsers"];
-            this.relationFK_TblBloodInventory_Appointment = this.Relations["FK_TblBloodInventory_Appointment"];
             this.relationFK_Schedule_Appointment = this.Relations["FK_Schedule_Appointment"];
             this.relationFK_Schedule_tblUsers = this.Relations["FK_Schedule_tblUsers"];
+            this.relationFK_TblBloodInventory_Appointment = this.Relations["FK_TblBloodInventory_Appointment"];
+            this.relationFK_TblBloodInventory_tblUsers = this.Relations["FK_TblBloodInventory_tblUsers"];
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -322,14 +322,6 @@ namespace BloodBankSystem {
             base.Tables.Add(this.tableAppointment);
             this.tableSchedule = new ScheduleDataTable();
             base.Tables.Add(this.tableSchedule);
-            this.relationFK_TblBloodInventory_tblUsers = new global::System.Data.DataRelation("FK_TblBloodInventory_tblUsers", new global::System.Data.DataColumn[] {
-                        this.tabletblUsers.UserIDColumn}, new global::System.Data.DataColumn[] {
-                        this.tableTblBloodInventory.UserIDColumn}, false);
-            this.Relations.Add(this.relationFK_TblBloodInventory_tblUsers);
-            this.relationFK_TblBloodInventory_Appointment = new global::System.Data.DataRelation("FK_TblBloodInventory_Appointment", new global::System.Data.DataColumn[] {
-                        this.tableAppointment.AppIDColumn}, new global::System.Data.DataColumn[] {
-                        this.tableTblBloodInventory.AppIDColumn}, false);
-            this.Relations.Add(this.relationFK_TblBloodInventory_Appointment);
             this.relationFK_Schedule_Appointment = new global::System.Data.DataRelation("FK_Schedule_Appointment", new global::System.Data.DataColumn[] {
                         this.tableAppointment.AppIDColumn}, new global::System.Data.DataColumn[] {
                         this.tableSchedule.AppIDColumn}, false);
@@ -338,6 +330,14 @@ namespace BloodBankSystem {
                         this.tabletblUsers.UserIDColumn}, new global::System.Data.DataColumn[] {
                         this.tableSchedule.UserIDColumn}, false);
             this.Relations.Add(this.relationFK_Schedule_tblUsers);
+            this.relationFK_TblBloodInventory_Appointment = new global::System.Data.DataRelation("FK_TblBloodInventory_Appointment", new global::System.Data.DataColumn[] {
+                        this.tableAppointment.AppIDColumn}, new global::System.Data.DataColumn[] {
+                        this.tableTblBloodInventory.AppIDColumn}, false);
+            this.Relations.Add(this.relationFK_TblBloodInventory_Appointment);
+            this.relationFK_TblBloodInventory_tblUsers = new global::System.Data.DataRelation("FK_TblBloodInventory_tblUsers", new global::System.Data.DataColumn[] {
+                        this.tabletblUsers.UserIDColumn}, new global::System.Data.DataColumn[] {
+                        this.tableTblBloodInventory.UserIDColumn}, false);
+            this.Relations.Add(this.relationFK_TblBloodInventory_tblUsers);
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -2160,23 +2160,23 @@ namespace BloodBankSystem {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public tblUsersRow tblUsersRow {
-                get {
-                    return ((tblUsersRow)(this.GetParentRow(this.Table.ParentRelations["FK_TblBloodInventory_tblUsers"])));
-                }
-                set {
-                    this.SetParentRow(value, this.Table.ParentRelations["FK_TblBloodInventory_tblUsers"]);
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             public AppointmentRow AppointmentRow {
                 get {
                     return ((AppointmentRow)(this.GetParentRow(this.Table.ParentRelations["FK_TblBloodInventory_Appointment"])));
                 }
                 set {
                     this.SetParentRow(value, this.Table.ParentRelations["FK_TblBloodInventory_Appointment"]);
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public tblUsersRow tblUsersRow {
+                get {
+                    return ((tblUsersRow)(this.GetParentRow(this.Table.ParentRelations["FK_TblBloodInventory_tblUsers"])));
+                }
+                set {
+                    this.SetParentRow(value, this.Table.ParentRelations["FK_TblBloodInventory_tblUsers"]);
                 }
             }
         }
@@ -2296,23 +2296,23 @@ namespace BloodBankSystem {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public TblBloodInventoryRow[] GetTblBloodInventoryRows() {
-                if ((this.Table.ChildRelations["FK_TblBloodInventory_tblUsers"] == null)) {
-                    return new TblBloodInventoryRow[0];
-                }
-                else {
-                    return ((TblBloodInventoryRow[])(base.GetChildRows(this.Table.ChildRelations["FK_TblBloodInventory_tblUsers"])));
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             public ScheduleRow[] GetScheduleRows() {
                 if ((this.Table.ChildRelations["FK_Schedule_tblUsers"] == null)) {
                     return new ScheduleRow[0];
                 }
                 else {
                     return ((ScheduleRow[])(base.GetChildRows(this.Table.ChildRelations["FK_Schedule_tblUsers"])));
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public TblBloodInventoryRow[] GetTblBloodInventoryRows() {
+                if ((this.Table.ChildRelations["FK_TblBloodInventory_tblUsers"] == null)) {
+                    return new TblBloodInventoryRow[0];
+                }
+                else {
+                    return ((TblBloodInventoryRow[])(base.GetChildRows(this.Table.ChildRelations["FK_TblBloodInventory_tblUsers"])));
                 }
             }
         }
@@ -2464,23 +2464,23 @@ namespace BloodBankSystem {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public TblBloodInventoryRow[] GetTblBloodInventoryRows() {
-                if ((this.Table.ChildRelations["FK_TblBloodInventory_Appointment"] == null)) {
-                    return new TblBloodInventoryRow[0];
-                }
-                else {
-                    return ((TblBloodInventoryRow[])(base.GetChildRows(this.Table.ChildRelations["FK_TblBloodInventory_Appointment"])));
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             public ScheduleRow[] GetScheduleRows() {
                 if ((this.Table.ChildRelations["FK_Schedule_Appointment"] == null)) {
                     return new ScheduleRow[0];
                 }
                 else {
                     return ((ScheduleRow[])(base.GetChildRows(this.Table.ChildRelations["FK_Schedule_Appointment"])));
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public TblBloodInventoryRow[] GetTblBloodInventoryRows() {
+                if ((this.Table.ChildRelations["FK_TblBloodInventory_Appointment"] == null)) {
+                    return new TblBloodInventoryRow[0];
+                }
+                else {
+                    return ((TblBloodInventoryRow[])(base.GetChildRows(this.Table.ChildRelations["FK_TblBloodInventory_Appointment"])));
                 }
             }
         }
