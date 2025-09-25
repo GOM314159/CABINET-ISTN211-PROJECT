@@ -51,6 +51,7 @@ namespace BloodBankSystem
         {
             
             DateTime date = calendarDate.SelectionStart;
+            string dateString = date.ToString("d");
             string time = timeCmbx.Text;
             string venue = venueCmbx.Text;
             DataTable userAppointmentTb = new ist2jwDataSet.UserAppointmentsDataTable();
