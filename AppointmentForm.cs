@@ -49,10 +49,12 @@ namespace BloodBankSystem
 
         private void btnBookAppointment_Click(object sender, EventArgs e)
         {
-            
+            Random rnd = new Random();
+            string appID = rnd.Next(0, 1000000).ToString();
+            string schID = rnd.Next(0, 1000000).ToString();
             DateTime date = calendarDate.SelectionStart;
             string dateString = date.ToString("d");
-            string time = timeCmbx.Text;
+            DateTime time = DateTime.Parse(timeCmbx.Text); 
             string venue = venueCmbx.Text;
             DataTable userAppointmentTb = new ist2jwDataSet.UserAppointmentsDataTable();
             DataTable appointmentTb = new ist2jwDataSet.AppointmentDataTable();
@@ -82,22 +84,32 @@ namespace BloodBankSystem
             
             if (check.DateValidationCheck() == true) {
                 // insert into appointment table
-                /**
-                 * try {
-                 * var adapter = new ist2jwDataSetTableAdapters.AppointmentTableAdapter();
-                 * var dataTable = adapter.InsertAppointment(...);
-                 * 
-                 * MessageBox.Show("Appointment booked successfully");
-                 * 
-                 * } catch (SqlException ex) {
-                 *  MessageBox.Show("Error booking appointment: " + ex.Message);
-                 * }
-                 */
+                
+                try {
+                    var adapter = new ist2jwDataSetTableAdapters.AppointmentTableAdapter();
+                    if (check.isNewDate == true) {
+                        var dataTable1 = adapter.InsertAppointment(appID, dateString , time.TimeOfDay , 1, venue);
+                    } else {
+                        var dataTable1 = adapter.UpdateCapacity( 2, appID);
+                    }
+                   
+                  MessageBox.Show("Appointment booked successfully");
+                 
+                 } catch (SqlException ex) {
+                  MessageBox.Show("Error booking appointment: " + ex.Message);
+                 }
+                
 
                 // do one for schedule as well 
-                /**
-                 * 
-                 */
+                try
+                {
+                    var adapter = new ist2jwDataSetTableAdapters.ScheduleTableAdapter();
+                    var dataTable1 = adapter.InsertSchedule(schID,currentUserID , dateString, true);
+                }
+                catch (SqlException ex)
+                {
+                    MessageBox.Show("Error booking appointment: " + ex.Message);
+                }
             }
             else  {
             MessageBox.Show("Date is not available");
