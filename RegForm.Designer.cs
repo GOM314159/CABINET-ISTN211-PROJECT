@@ -189,7 +189,7 @@
             this.lastNameTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.25F);
             this.lastNameTextBox.Location = new System.Drawing.Point(349, 176);
             this.lastNameTextBox.Name = "lastNameTextBox";
-            this.lastNameTextBox.Size = new System.Drawing.Size(292, 32);
+            this.lastNameTextBox.Size = new System.Drawing.Size(292, 38);
             this.lastNameTextBox.TabIndex = 6;
             this.lastNameTextBox.Tag = "";
             this.userRegTip.SetToolTip(this.lastNameTextBox, "Enter your Last Name / Surname");
@@ -233,7 +233,7 @@
             "Not Sure"});
             this.bloodtypeCmbox.Location = new System.Drawing.Point(349, 398);
             this.bloodtypeCmbox.Name = "bloodtypeCmbox";
-            this.bloodtypeCmbox.Size = new System.Drawing.Size(292, 33);
+            this.bloodtypeCmbox.Size = new System.Drawing.Size(292, 40);
             this.bloodtypeCmbox.TabIndex = 21;
             this.userRegTip.SetToolTip(this.bloodtypeCmbox, "Choose your blood type (if unknown choose not sure option )");
             // 
@@ -257,7 +257,7 @@
             this.passwordTextBox.Location = new System.Drawing.Point(349, 476);
             this.passwordTextBox.Name = "passwordTextBox";
             this.passwordTextBox.PasswordChar = '*';
-            this.passwordTextBox.Size = new System.Drawing.Size(292, 32);
+            this.passwordTextBox.Size = new System.Drawing.Size(292, 38);
             this.passwordTextBox.TabIndex = 23;
             this.passwordTextBox.Tag = "";
             this.userRegTip.SetToolTip(this.passwordTextBox, "Click Help button for more info on making a password");
@@ -326,6 +326,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.BackgroundImage = global::BloodBankSystem.Properties.Resources.RegBack;
             this.ClientSize = new System.Drawing.Size(707, 630);
             this.Controls.Add(this.helpBtn);

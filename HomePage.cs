@@ -55,5 +55,10 @@ namespace BloodBankSystem
             appointment.Show();
             this.Hide();
         }
+
+        private void welcomelbl_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

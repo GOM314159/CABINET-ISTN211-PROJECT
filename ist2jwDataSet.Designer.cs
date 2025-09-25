@@ -3932,7 +3932,7 @@ SELECT UserID, Password, Name, Surname, IDNumber, PhoneNumber, UserType, BloodTy
             this._commandCollection[1].CommandText = @"SELECT Schedule.ScheduleID, Appointment.AppDate AS [Appointment Date], Appointment.Time, Schedule.Attended
 FROM     Appointment INNER JOIN
                   Schedule ON Appointment.AppID = Schedule.AppID
-WHERE  (YEAR(Appointment.AppDate) = @Year) AND (MONTH(Appointment.AppDate) = @Month) AND (Appointment.Venue = @Venue) AND (Schedule.Attended = @Attended)";
+WHERE  (YEAR(Appointment.AppDate) = @Year) OR (MONTH(Appointment.AppDate) = @Month) OR(Appointment.Venue = @Venue) OR (Schedule.Attended = @Attended)";
             this._commandCollection[1].CommandType = global::System.Data.CommandType.Text;
             this._commandCollection[1].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Year", global::System.Data.SqlDbType.Decimal, 0, global::System.Data.ParameterDirection.Input, 0, 0, "", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._commandCollection[1].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Month", global::System.Data.SqlDbType.Decimal, 0, global::System.Data.ParameterDirection.Input, 0, 0, "", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
@@ -3944,7 +3944,7 @@ WHERE  (YEAR(Appointment.AppDate) = @Year) AND (MONTH(Appointment.AppDate) = @Mo
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, true)]
-        public virtual int Fill(ist2jwDataSet.UserAppointmentsDataTable dataTable, string UserID) {
+        public virtual int FillUserAppointments(ist2jwDataSet.UserAppointmentsDataTable dataTable, string UserID) {
             this.Adapter.SelectCommand = this.CommandCollection[0];
             if ((UserID == null)) {
                 throw new global::System.ArgumentNullException("UserID");
@@ -3963,7 +3963,7 @@ WHERE  (YEAR(Appointment.AppDate) = @Year) AND (MONTH(Appointment.AppDate) = @Mo
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, true)]
-        public virtual ist2jwDataSet.UserAppointmentsDataTable GetData(string UserID) {
+        public virtual ist2jwDataSet.UserAppointmentsDataTable GetUserAppointments(string UserID) {
             this.Adapter.SelectCommand = this.CommandCollection[0];
             if ((UserID == null)) {
                 throw new global::System.ArgumentNullException("UserID");
@@ -3985,7 +3985,7 @@ WHERE  (YEAR(Appointment.AppDate) = @Year) AND (MONTH(Appointment.AppDate) = @Mo
             this.Adapter.SelectCommand.Parameters[0].Value = ((decimal)(Year));
             this.Adapter.SelectCommand.Parameters[1].Value = ((decimal)(Month));
             if ((Venue == null)) {
-                this.Adapter.SelectCommand.Parameters[2].Value = global::System.DBNull.Value;
+                throw new global::System.ArgumentNullException("Venue");
             }
             else {
                 this.Adapter.SelectCommand.Parameters[2].Value = ((string)(Venue));
@@ -4007,7 +4007,7 @@ WHERE  (YEAR(Appointment.AppDate) = @Year) AND (MONTH(Appointment.AppDate) = @Mo
             this.Adapter.SelectCommand.Parameters[0].Value = ((decimal)(Year));
             this.Adapter.SelectCommand.Parameters[1].Value = ((decimal)(Month));
             if ((Venue == null)) {
-                this.Adapter.SelectCommand.Parameters[2].Value = global::System.DBNull.Value;
+                throw new global::System.ArgumentNullException("Venue");
             }
             else {
                 this.Adapter.SelectCommand.Parameters[2].Value = ((string)(Venue));
@@ -4198,28 +4198,38 @@ SELECT AppID, AppDate, Time, Capacity, Venue FROM Appointment WHERE (AppID = @Ap
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         private void InitCommandCollection() {
-            this._commandCollection = new global::System.Data.SqlClient.SqlCommand[3];
+            this._commandCollection = new global::System.Data.SqlClient.SqlCommand[4];
             this._commandCollection[0] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[0].Connection = this.Connection;
             this._commandCollection[0].CommandText = "SELECT AppID, AppDate, Time, Capacity, Venue FROM dbo.Appointment";
             this._commandCollection[0].CommandType = global::System.Data.CommandType.Text;
             this._commandCollection[1] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[1].Connection = this.Connection;
-            this._commandCollection[1].CommandText = "INSERT INTO [dbo].[Appointment] ([AppID], [AppDate], [Time], [Capacity], [Venue])" +
-                " VALUES (@AppID, @AppDate, @Time, @Capacity, @Venue);";
+            this._commandCollection[1].CommandText = "SELECT AppID, AppDate, Time, Capacity, Venue\r\nFROM     Appointment\r\nWHERE  (YEAR(" +
+                "AppDate) = @Year) OR\r\n                  (MONTH(AppDate) = @Month) OR\r\n          " +
+                "        (Capacity = @Capacity) OR\r\n                  (Venue = @Venue)";
             this._commandCollection[1].CommandType = global::System.Data.CommandType.Text;
-            this._commandCollection[1].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@AppID", global::System.Data.SqlDbType.NChar, 10, global::System.Data.ParameterDirection.Input, 0, 0, "AppID", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._commandCollection[1].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@AppDate", global::System.Data.SqlDbType.Date, 3, global::System.Data.ParameterDirection.Input, 0, 0, "AppDate", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._commandCollection[1].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Time", global::System.Data.SqlDbType.Time, 5, global::System.Data.ParameterDirection.Input, 0, 0, "Time", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._commandCollection[1].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Year", global::System.Data.SqlDbType.Decimal, 0, global::System.Data.ParameterDirection.Input, 0, 0, "", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._commandCollection[1].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Month", global::System.Data.SqlDbType.Decimal, 0, global::System.Data.ParameterDirection.Input, 0, 0, "", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._commandCollection[1].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Capacity", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.Input, 0, 0, "Capacity", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._commandCollection[1].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Venue", global::System.Data.SqlDbType.VarChar, 50, global::System.Data.ParameterDirection.Input, 0, 0, "Venue", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._commandCollection[2] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[2].Connection = this.Connection;
-            this._commandCollection[2].CommandText = "UPDATE [dbo].[Appointment] \r\nSET [Capacity] = @Capacity, \r\nWHERE [AppID] = @AppID" +
-                "";
+            this._commandCollection[2].CommandText = "INSERT INTO [dbo].[Appointment] ([AppID], [AppDate], [Time], [Capacity], [Venue])" +
+                " VALUES (@AppID, @AppDate, @Time, @Capacity, @Venue);";
             this._commandCollection[2].CommandType = global::System.Data.CommandType.Text;
+            this._commandCollection[2].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@AppID", global::System.Data.SqlDbType.NChar, 10, global::System.Data.ParameterDirection.Input, 0, 0, "AppID", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._commandCollection[2].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@AppDate", global::System.Data.SqlDbType.Date, 3, global::System.Data.ParameterDirection.Input, 0, 0, "AppDate", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._commandCollection[2].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Time", global::System.Data.SqlDbType.Time, 5, global::System.Data.ParameterDirection.Input, 0, 0, "Time", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._commandCollection[2].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Capacity", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.Input, 0, 0, "Capacity", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._commandCollection[2].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@AppID", global::System.Data.SqlDbType.NChar, 10, global::System.Data.ParameterDirection.Input, 0, 0, "AppID", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._commandCollection[2].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Venue", global::System.Data.SqlDbType.VarChar, 50, global::System.Data.ParameterDirection.Input, 0, 0, "Venue", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._commandCollection[3] = new global::System.Data.SqlClient.SqlCommand();
+            this._commandCollection[3].Connection = this.Connection;
+            this._commandCollection[3].CommandText = "UPDATE [dbo].[Appointment] \r\nSET [Capacity] = @Capacity, \r\nWHERE [AppID] = @AppID" +
+                "";
+            this._commandCollection[3].CommandType = global::System.Data.CommandType.Text;
+            this._commandCollection[3].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Capacity", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.Input, 0, 0, "Capacity", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._commandCollection[3].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@AppID", global::System.Data.SqlDbType.NChar, 10, global::System.Data.ParameterDirection.Input, 0, 0, "AppID", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -4241,6 +4251,26 @@ SELECT AppID, AppDate, Time, Capacity, Venue FROM Appointment WHERE (AppID = @Ap
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, true)]
         public virtual ist2jwDataSet.AppointmentDataTable GetData() {
             this.Adapter.SelectCommand = this.CommandCollection[0];
+            ist2jwDataSet.AppointmentDataTable dataTable = new ist2jwDataSet.AppointmentDataTable();
+            this.Adapter.Fill(dataTable);
+            return dataTable;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, false)]
+        public virtual ist2jwDataSet.AppointmentDataTable FilterDataBy(decimal Year, decimal Month, int Capacity, string Venue) {
+            this.Adapter.SelectCommand = this.CommandCollection[1];
+            this.Adapter.SelectCommand.Parameters[0].Value = ((decimal)(Year));
+            this.Adapter.SelectCommand.Parameters[1].Value = ((decimal)(Month));
+            this.Adapter.SelectCommand.Parameters[2].Value = ((int)(Capacity));
+            if ((Venue == null)) {
+                throw new global::System.ArgumentNullException("Venue");
+            }
+            else {
+                this.Adapter.SelectCommand.Parameters[3].Value = ((string)(Venue));
+            }
             ist2jwDataSet.AppointmentDataTable dataTable = new ist2jwDataSet.AppointmentDataTable();
             this.Adapter.Fill(dataTable);
             return dataTable;
@@ -4415,7 +4445,7 @@ SELECT AppID, AppDate, Time, Capacity, Venue FROM Appointment WHERE (AppID = @Ap
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Insert, false)]
         public virtual int InsertAppointment(string AppID, string AppDate, string Time, int Capacity, string Venue) {
-            global::System.Data.SqlClient.SqlCommand command = this.CommandCollection[1];
+            global::System.Data.SqlClient.SqlCommand command = this.CommandCollection[2];
             if ((AppID == null)) {
                 throw new global::System.ArgumentNullException("AppID");
             }
@@ -4463,7 +4493,7 @@ SELECT AppID, AppDate, Time, Capacity, Venue FROM Appointment WHERE (AppID = @Ap
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Update, false)]
         public virtual int UpdateCapacity(int Capacity, string AppID) {
-            global::System.Data.SqlClient.SqlCommand command = this.CommandCollection[2];
+            global::System.Data.SqlClient.SqlCommand command = this.CommandCollection[3];
             command.Parameters[0].Value = ((int)(Capacity));
             if ((AppID == null)) {
                 throw new global::System.ArgumentNullException("AppID");
