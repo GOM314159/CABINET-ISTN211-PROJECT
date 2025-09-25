@@ -30,52 +30,61 @@
         {
             this.components = new System.ComponentModel.Container();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.appIDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.appDateDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.timeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.capacityDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.appointmentBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.ist2jwDataSetBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.ist2jwDataSet = new BloodBankSystem.ist2jwDataSet();
             this.scheduleBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.calDate = new System.Windows.Forms.MonthCalendar();
-            this.cmbTime = new System.Windows.Forms.ComboBox();
+            this.calendarDate = new System.Windows.Forms.MonthCalendar();
+            this.timeCmbx = new System.Windows.Forms.ComboBox();
             this.btnBookAppointment = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.btnBack = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
+            this.btnHome = new System.Windows.Forms.Button();
+            this.btnFirst = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.label4 = new System.Windows.Forms.Label();
+            this.venueCmbx = new System.Windows.Forms.ComboBox();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.button4 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
+            this.btnLast = new System.Windows.Forms.Button();
+            this.btnNext = new System.Windows.Forms.Button();
+            this.btnPrev = new System.Windows.Forms.Button();
             this.panel3 = new System.Windows.Forms.Panel();
-            this.button8 = new System.Windows.Forms.Button();
+            this.sortVenueBtn = new System.Windows.Forms.Button();
+            this.sortAttendedBtn = new System.Windows.Forms.Button();
             this.label6 = new System.Windows.Forms.Label();
-            this.button5 = new System.Windows.Forms.Button();
-            this.button6 = new System.Windows.Forms.Button();
+            this.sortDateBtn = new System.Windows.Forms.Button();
+            this.resetBtn = new System.Windows.Forms.Button();
             this.label3 = new System.Windows.Forms.Label();
             this.panel4 = new System.Windows.Forms.Panel();
-            this.button7 = new System.Windows.Forms.Button();
-            this.radioButton1 = new System.Windows.Forms.RadioButton();
+            this.label5 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
+            this.venueFilterCmbx = new System.Windows.Forms.ComboBox();
+            this.button7 = new System.Windows.Forms.Button();
+            this.attendedFilterRdBtn = new System.Windows.Forms.RadioButton();
             this.label8 = new System.Windows.Forms.Label();
-            this.comboBox2 = new System.Windows.Forms.ComboBox();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.monthFilterCmbx = new System.Windows.Forms.ComboBox();
+            this.yearFilterCmbx = new System.Windows.Forms.ComboBox();
             this.label7 = new System.Windows.Forms.Label();
             this.panel5 = new System.Windows.Forms.Panel();
-            this.ist2jwDataSetBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.ist2jwDataSet = new BloodBankSystem.ist2jwDataSet();
-            this.appointmentTableAdapter = new BloodBankSystem.ist2jwDataSetTableAdapters.AppointmentTableAdapter();
-            this.scheduleTableAdapter = new BloodBankSystem.ist2jwDataSetTableAdapters.ScheduleTableAdapter();
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
             this.tabPage2 = new System.Windows.Forms.TabPage();
+            this.appointmentTableAdapter = new BloodBankSystem.ist2jwDataSetTableAdapters.AppointmentTableAdapter();
+            this.scheduleTableAdapter = new BloodBankSystem.ist2jwDataSetTableAdapters.ScheduleTableAdapter();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.appointmentBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ist2jwDataSetBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ist2jwDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.scheduleBindingSource)).BeginInit();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.panel3.SuspendLayout();
             this.panel4.SuspendLayout();
             this.panel5.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.ist2jwDataSetBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.ist2jwDataSet)).BeginInit();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.tabPage2.SuspendLayout();
@@ -85,47 +94,99 @@
             // 
             this.dataGridView1.AutoGenerateColumns = false;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.DataSource = this.ist2jwDataSetBindingSource;
+            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.appIDDataGridViewTextBoxColumn,
+            this.appDateDataGridViewTextBoxColumn,
+            this.timeDataGridViewTextBoxColumn,
+            this.capacityDataGridViewTextBoxColumn});
+            this.dataGridView1.DataSource = this.appointmentBindingSource;
             this.dataGridView1.Location = new System.Drawing.Point(10, 19);
             this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.ReadOnly = true;
             this.dataGridView1.RowHeadersWidth = 51;
             this.dataGridView1.RowTemplate.Height = 24;
             this.dataGridView1.Size = new System.Drawing.Size(572, 406);
             this.dataGridView1.TabIndex = 0;
             this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             // 
+            // appIDDataGridViewTextBoxColumn
+            // 
+            this.appIDDataGridViewTextBoxColumn.DataPropertyName = "AppID";
+            this.appIDDataGridViewTextBoxColumn.HeaderText = "AppID";
+            this.appIDDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.appIDDataGridViewTextBoxColumn.Name = "appIDDataGridViewTextBoxColumn";
+            this.appIDDataGridViewTextBoxColumn.ReadOnly = true;
+            this.appIDDataGridViewTextBoxColumn.Width = 125;
+            // 
+            // appDateDataGridViewTextBoxColumn
+            // 
+            this.appDateDataGridViewTextBoxColumn.DataPropertyName = "AppDate";
+            this.appDateDataGridViewTextBoxColumn.HeaderText = "AppDate";
+            this.appDateDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.appDateDataGridViewTextBoxColumn.Name = "appDateDataGridViewTextBoxColumn";
+            this.appDateDataGridViewTextBoxColumn.ReadOnly = true;
+            this.appDateDataGridViewTextBoxColumn.Width = 125;
+            // 
+            // timeDataGridViewTextBoxColumn
+            // 
+            this.timeDataGridViewTextBoxColumn.DataPropertyName = "Time";
+            this.timeDataGridViewTextBoxColumn.HeaderText = "Time";
+            this.timeDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.timeDataGridViewTextBoxColumn.Name = "timeDataGridViewTextBoxColumn";
+            this.timeDataGridViewTextBoxColumn.ReadOnly = true;
+            this.timeDataGridViewTextBoxColumn.Width = 125;
+            // 
+            // capacityDataGridViewTextBoxColumn
+            // 
+            this.capacityDataGridViewTextBoxColumn.DataPropertyName = "Capacity";
+            this.capacityDataGridViewTextBoxColumn.HeaderText = "Capacity";
+            this.capacityDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.capacityDataGridViewTextBoxColumn.Name = "capacityDataGridViewTextBoxColumn";
+            this.capacityDataGridViewTextBoxColumn.ReadOnly = true;
+            this.capacityDataGridViewTextBoxColumn.Width = 125;
+            // 
             // appointmentBindingSource
             // 
             this.appointmentBindingSource.DataMember = "Appointment";
             this.appointmentBindingSource.DataSource = this.ist2jwDataSetBindingSource;
+            // 
+            // ist2jwDataSetBindingSource
+            // 
+            this.ist2jwDataSetBindingSource.DataSource = this.ist2jwDataSet;
+            this.ist2jwDataSetBindingSource.Position = 0;
+            // 
+            // ist2jwDataSet
+            // 
+            this.ist2jwDataSet.DataSetName = "ist2jwDataSet";
+            this.ist2jwDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // scheduleBindingSource
             // 
             this.scheduleBindingSource.DataMember = "Schedule";
             this.scheduleBindingSource.DataSource = this.ist2jwDataSetBindingSource;
             // 
-            // calDate
+            // calendarDate
             // 
-            this.calDate.Location = new System.Drawing.Point(59, 66);
-            this.calDate.Name = "calDate";
-            this.calDate.TabIndex = 1;
-            this.calDate.DateChanged += new System.Windows.Forms.DateRangeEventHandler(this.monthCalendar1_DateChanged);
+            this.calendarDate.Location = new System.Drawing.Point(59, 66);
+            this.calendarDate.Name = "calendarDate";
+            this.calendarDate.TabIndex = 1;
+            this.calendarDate.DateChanged += new System.Windows.Forms.DateRangeEventHandler(this.monthCalendar1_DateChanged);
             // 
-            // cmbTime
+            // timeCmbx
             // 
-            this.cmbTime.BackColor = System.Drawing.SystemColors.MenuBar;
-            this.cmbTime.FormattingEnabled = true;
-            this.cmbTime.Items.AddRange(new object[] {
+            this.timeCmbx.BackColor = System.Drawing.SystemColors.MenuBar;
+            this.timeCmbx.FormattingEnabled = true;
+            this.timeCmbx.Items.AddRange(new object[] {
             "10h00",
             "12h00"});
-            this.cmbTime.Location = new System.Drawing.Point(546, 114);
-            this.cmbTime.Name = "cmbTime";
-            this.cmbTime.Size = new System.Drawing.Size(153, 24);
-            this.cmbTime.TabIndex = 2;
+            this.timeCmbx.Location = new System.Drawing.Point(466, 249);
+            this.timeCmbx.Name = "timeCmbx";
+            this.timeCmbx.Size = new System.Drawing.Size(153, 24);
+            this.timeCmbx.TabIndex = 2;
             // 
             // btnBookAppointment
             // 
-            this.btnBookAppointment.Location = new System.Drawing.Point(384, 312);
+            this.btnBookAppointment.Location = new System.Drawing.Point(466, 344);
             this.btnBookAppointment.Name = "btnBookAppointment";
             this.btnBookAppointment.Size = new System.Drawing.Size(149, 59);
             this.btnBookAppointment.TabIndex = 3;
@@ -148,39 +209,41 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(506, 66);
+            this.label2.Location = new System.Drawing.Point(461, 197);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(231, 29);
             this.label2.TabIndex = 5;
             this.label2.Text = "Choose a time slot:";
             // 
-            // btnBack
+            // btnHome
             // 
-            this.btnBack.Location = new System.Drawing.Point(12, 12);
-            this.btnBack.Name = "btnBack";
-            this.btnBack.Size = new System.Drawing.Size(91, 36);
-            this.btnBack.TabIndex = 6;
-            this.btnBack.Text = "Home";
-            this.btnBack.UseVisualStyleBackColor = true;
-            this.btnBack.Click += new System.EventHandler(this.btnBack_Click);
+            this.btnHome.Location = new System.Drawing.Point(16, 21);
+            this.btnHome.Name = "btnHome";
+            this.btnHome.Size = new System.Drawing.Size(91, 36);
+            this.btnHome.TabIndex = 6;
+            this.btnHome.Text = "Home";
+            this.btnHome.UseVisualStyleBackColor = true;
+            this.btnHome.Click += new System.EventHandler(this.btnBack_Click);
             // 
-            // button1
+            // btnFirst
             // 
-            this.button1.Location = new System.Drawing.Point(12, 450);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(140, 23);
-            this.button1.TabIndex = 7;
-            this.button1.Text = "First";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.btnFirst.Location = new System.Drawing.Point(12, 450);
+            this.btnFirst.Name = "btnFirst";
+            this.btnFirst.Size = new System.Drawing.Size(140, 23);
+            this.btnFirst.TabIndex = 7;
+            this.btnFirst.Text = "First";
+            this.btnFirst.UseVisualStyleBackColor = true;
+            this.btnFirst.Click += new System.EventHandler(this.button1_Click);
             // 
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.IndianRed;
+            this.panel1.Controls.Add(this.label4);
+            this.panel1.Controls.Add(this.venueCmbx);
             this.panel1.Controls.Add(this.label1);
-            this.panel1.Controls.Add(this.calDate);
+            this.panel1.Controls.Add(this.calendarDate);
             this.panel1.Controls.Add(this.label2);
-            this.panel1.Controls.Add(this.cmbTime);
+            this.panel1.Controls.Add(this.timeCmbx);
             this.panel1.Controls.Add(this.btnBookAppointment);
             this.panel1.Location = new System.Drawing.Point(45, 23);
             this.panel1.Name = "panel1";
@@ -188,70 +251,100 @@
             this.panel1.TabIndex = 8;
             this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
             // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.Location = new System.Drawing.Point(461, 66);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(180, 29);
+            this.label4.TabIndex = 8;
+            this.label4.Text = "Choose Venue";
+            // 
+            // venueCmbx
+            // 
+            this.venueCmbx.FormattingEnabled = true;
+            this.venueCmbx.Location = new System.Drawing.Point(466, 122);
+            this.venueCmbx.Name = "venueCmbx";
+            this.venueCmbx.Size = new System.Drawing.Size(150, 24);
+            this.venueCmbx.TabIndex = 7;
+            // 
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.Color.IndianRed;
-            this.panel2.Controls.Add(this.button4);
-            this.panel2.Controls.Add(this.button3);
-            this.panel2.Controls.Add(this.button2);
+            this.panel2.Controls.Add(this.btnLast);
+            this.panel2.Controls.Add(this.btnNext);
+            this.panel2.Controls.Add(this.btnPrev);
             this.panel2.Controls.Add(this.dataGridView1);
-            this.panel2.Controls.Add(this.button1);
+            this.panel2.Controls.Add(this.btnFirst);
             this.panel2.Location = new System.Drawing.Point(6, 6);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(597, 490);
             this.panel2.TabIndex = 9;
             this.panel2.Paint += new System.Windows.Forms.PaintEventHandler(this.panel2_Paint);
             // 
-            // button4
+            // btnLast
             // 
-            this.button4.Location = new System.Drawing.Point(456, 450);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(130, 23);
-            this.button4.TabIndex = 10;
-            this.button4.Text = "Last";
-            this.button4.UseVisualStyleBackColor = true;
-            this.button4.Click += new System.EventHandler(this.button4_Click);
+            this.btnLast.Location = new System.Drawing.Point(456, 450);
+            this.btnLast.Name = "btnLast";
+            this.btnLast.Size = new System.Drawing.Size(130, 23);
+            this.btnLast.TabIndex = 10;
+            this.btnLast.Text = "Last";
+            this.btnLast.UseVisualStyleBackColor = true;
+            this.btnLast.Click += new System.EventHandler(this.button4_Click);
             // 
-            // button3
+            // btnNext
             // 
-            this.button3.Location = new System.Drawing.Point(309, 450);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(141, 23);
-            this.button3.TabIndex = 9;
-            this.button3.Text = "Next";
-            this.button3.UseVisualStyleBackColor = true;
-            this.button3.Click += new System.EventHandler(this.button3_Click);
+            this.btnNext.Location = new System.Drawing.Point(309, 450);
+            this.btnNext.Name = "btnNext";
+            this.btnNext.Size = new System.Drawing.Size(141, 23);
+            this.btnNext.TabIndex = 9;
+            this.btnNext.Text = "Next";
+            this.btnNext.UseVisualStyleBackColor = true;
+            this.btnNext.Click += new System.EventHandler(this.button3_Click);
             // 
-            // button2
+            // btnPrev
             // 
-            this.button2.Location = new System.Drawing.Point(162, 450);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(134, 23);
-            this.button2.TabIndex = 8;
-            this.button2.Text = "Prev";
-            this.button2.UseVisualStyleBackColor = true;
-            this.button2.Click += new System.EventHandler(this.button2_Click);
+            this.btnPrev.Location = new System.Drawing.Point(162, 450);
+            this.btnPrev.Name = "btnPrev";
+            this.btnPrev.Size = new System.Drawing.Size(134, 23);
+            this.btnPrev.TabIndex = 8;
+            this.btnPrev.Text = "Prev";
+            this.btnPrev.UseVisualStyleBackColor = true;
+            this.btnPrev.Click += new System.EventHandler(this.button2_Click);
             // 
             // panel3
             // 
             this.panel3.BackColor = System.Drawing.Color.IndianRed;
-            this.panel3.Controls.Add(this.button8);
+            this.panel3.Controls.Add(this.sortVenueBtn);
+            this.panel3.Controls.Add(this.sortAttendedBtn);
             this.panel3.Controls.Add(this.label6);
-            this.panel3.Controls.Add(this.button5);
+            this.panel3.Controls.Add(this.sortDateBtn);
             this.panel3.Location = new System.Drawing.Point(631, 6);
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(293, 193);
             this.panel3.TabIndex = 10;
             this.panel3.Paint += new System.Windows.Forms.PaintEventHandler(this.panel3_Paint);
             // 
-            // button8
+            // sortVenueBtn
             // 
-            this.button8.Location = new System.Drawing.Point(91, 100);
-            this.button8.Name = "button8";
-            this.button8.Size = new System.Drawing.Size(112, 32);
-            this.button8.TabIndex = 2;
-            this.button8.Text = "Last Attened";
-            this.button8.UseVisualStyleBackColor = true;
+            this.sortVenueBtn.Location = new System.Drawing.Point(91, 138);
+            this.sortVenueBtn.Name = "sortVenueBtn";
+            this.sortVenueBtn.Size = new System.Drawing.Size(112, 32);
+            this.sortVenueBtn.TabIndex = 3;
+            this.sortVenueBtn.Text = "Venue";
+            this.sortVenueBtn.UseVisualStyleBackColor = true;
+            this.sortVenueBtn.Click += new System.EventHandler(this.sortVenueBtn_Click);
+            // 
+            // sortAttendedBtn
+            // 
+            this.sortAttendedBtn.Location = new System.Drawing.Point(91, 100);
+            this.sortAttendedBtn.Name = "sortAttendedBtn";
+            this.sortAttendedBtn.Size = new System.Drawing.Size(112, 32);
+            this.sortAttendedBtn.TabIndex = 2;
+            this.sortAttendedBtn.Text = "Last Attened";
+            this.sortAttendedBtn.UseVisualStyleBackColor = true;
+            this.sortAttendedBtn.Click += new System.EventHandler(this.sortAttendedBtn_Click);
             // 
             // label6
             // 
@@ -264,24 +357,25 @@
             this.label6.Text = "Sort By :";
             this.label6.Click += new System.EventHandler(this.label6_Click);
             // 
-            // button5
+            // sortDateBtn
             // 
-            this.button5.Location = new System.Drawing.Point(91, 52);
-            this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(112, 32);
-            this.button5.TabIndex = 0;
-            this.button5.Text = "Latest Date";
-            this.button5.UseVisualStyleBackColor = true;
+            this.sortDateBtn.Location = new System.Drawing.Point(91, 62);
+            this.sortDateBtn.Name = "sortDateBtn";
+            this.sortDateBtn.Size = new System.Drawing.Size(112, 32);
+            this.sortDateBtn.TabIndex = 0;
+            this.sortDateBtn.Text = "Latest Date";
+            this.sortDateBtn.UseVisualStyleBackColor = true;
+            this.sortDateBtn.Click += new System.EventHandler(this.button5_Click);
             // 
-            // button6
+            // resetBtn
             // 
-            this.button6.Location = new System.Drawing.Point(150, 231);
-            this.button6.Name = "button6";
-            this.button6.Size = new System.Drawing.Size(94, 30);
-            this.button6.TabIndex = 1;
-            this.button6.Text = "Reset";
-            this.button6.UseVisualStyleBackColor = true;
-            this.button6.Click += new System.EventHandler(this.button6_Click);
+            this.resetBtn.Location = new System.Drawing.Point(150, 231);
+            this.resetBtn.Name = "resetBtn";
+            this.resetBtn.Size = new System.Drawing.Size(94, 30);
+            this.resetBtn.TabIndex = 1;
+            this.resetBtn.Text = "Reset";
+            this.resetBtn.UseVisualStyleBackColor = true;
+            this.resetBtn.Click += new System.EventHandler(this.resetBtn_Click);
             // 
             // label3
             // 
@@ -298,18 +392,60 @@
             // panel4
             // 
             this.panel4.BackColor = System.Drawing.Color.IndianRed;
-            this.panel4.Controls.Add(this.button7);
-            this.panel4.Controls.Add(this.button6);
-            this.panel4.Controls.Add(this.radioButton1);
+            this.panel4.Controls.Add(this.label5);
             this.panel4.Controls.Add(this.label9);
+            this.panel4.Controls.Add(this.venueFilterCmbx);
+            this.panel4.Controls.Add(this.button7);
+            this.panel4.Controls.Add(this.resetBtn);
+            this.panel4.Controls.Add(this.attendedFilterRdBtn);
             this.panel4.Controls.Add(this.label8);
-            this.panel4.Controls.Add(this.comboBox2);
-            this.panel4.Controls.Add(this.comboBox1);
+            this.panel4.Controls.Add(this.monthFilterCmbx);
+            this.panel4.Controls.Add(this.yearFilterCmbx);
             this.panel4.Controls.Add(this.label7);
             this.panel4.Location = new System.Drawing.Point(632, 218);
             this.panel4.Name = "panel4";
             this.panel4.Size = new System.Drawing.Size(292, 278);
             this.panel4.TabIndex = 13;
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(36, 158);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(46, 16);
+            this.label5.TabIndex = 17;
+            this.label5.Text = "Venue";
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Location = new System.Drawing.Point(36, 108);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(43, 16);
+            this.label9.TabIndex = 16;
+            this.label9.Text = "Month";
+            // 
+            // venueFilterCmbx
+            // 
+            this.venueFilterCmbx.FormattingEnabled = true;
+            this.venueFilterCmbx.Items.AddRange(new object[] {
+            "All",
+            "January",
+            "February",
+            "March",
+            "April",
+            "May",
+            "June",
+            "July",
+            "August",
+            "September",
+            "October",
+            "November",
+            "December"});
+            this.venueFilterCmbx.Location = new System.Drawing.Point(108, 150);
+            this.venueFilterCmbx.Name = "venueFilterCmbx";
+            this.venueFilterCmbx.Size = new System.Drawing.Size(121, 24);
+            this.venueFilterCmbx.TabIndex = 15;
             // 
             // button7
             // 
@@ -319,26 +455,18 @@
             this.button7.TabIndex = 14;
             this.button7.Text = "Apply";
             this.button7.UseVisualStyleBackColor = true;
+            this.button7.Click += new System.EventHandler(this.button7_Click);
             // 
-            // radioButton1
+            // attendedFilterRdBtn
             // 
-            this.radioButton1.AutoSize = true;
-            this.radioButton1.Location = new System.Drawing.Point(150, 170);
-            this.radioButton1.Name = "radioButton1";
-            this.radioButton1.Size = new System.Drawing.Size(82, 20);
-            this.radioButton1.TabIndex = 5;
-            this.radioButton1.TabStop = true;
-            this.radioButton1.Text = "Attended";
-            this.radioButton1.UseVisualStyleBackColor = true;
-            // 
-            // label9
-            // 
-            this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(36, 122);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(43, 16);
-            this.label9.TabIndex = 4;
-            this.label9.Text = "Month";
+            this.attendedFilterRdBtn.AutoSize = true;
+            this.attendedFilterRdBtn.Location = new System.Drawing.Point(147, 193);
+            this.attendedFilterRdBtn.Name = "attendedFilterRdBtn";
+            this.attendedFilterRdBtn.Size = new System.Drawing.Size(82, 20);
+            this.attendedFilterRdBtn.TabIndex = 5;
+            this.attendedFilterRdBtn.TabStop = true;
+            this.attendedFilterRdBtn.Text = "Attended";
+            this.attendedFilterRdBtn.UseVisualStyleBackColor = true;
             // 
             // label8
             // 
@@ -349,21 +477,37 @@
             this.label8.TabIndex = 3;
             this.label8.Text = "Year";
             // 
-            // comboBox2
+            // monthFilterCmbx
             // 
-            this.comboBox2.FormattingEnabled = true;
-            this.comboBox2.Location = new System.Drawing.Point(108, 119);
-            this.comboBox2.Name = "comboBox2";
-            this.comboBox2.Size = new System.Drawing.Size(121, 24);
-            this.comboBox2.TabIndex = 2;
+            this.monthFilterCmbx.FormattingEnabled = true;
+            this.monthFilterCmbx.Items.AddRange(new object[] {
+            "January",
+            "February",
+            "March",
+            "April",
+            "May",
+            "June",
+            "July",
+            "August",
+            "September",
+            "October",
+            "November",
+            "December"});
+            this.monthFilterCmbx.Location = new System.Drawing.Point(108, 105);
+            this.monthFilterCmbx.Name = "monthFilterCmbx";
+            this.monthFilterCmbx.Size = new System.Drawing.Size(121, 24);
+            this.monthFilterCmbx.TabIndex = 2;
             // 
-            // comboBox1
+            // yearFilterCmbx
             // 
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(108, 57);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(121, 24);
-            this.comboBox1.TabIndex = 1;
+            this.yearFilterCmbx.FormattingEnabled = true;
+            this.yearFilterCmbx.Items.AddRange(new object[] {
+            "2025",
+            "2026"});
+            this.yearFilterCmbx.Location = new System.Drawing.Point(108, 57);
+            this.yearFilterCmbx.Name = "yearFilterCmbx";
+            this.yearFilterCmbx.Size = new System.Drawing.Size(121, 24);
+            this.yearFilterCmbx.TabIndex = 1;
             // 
             // label7
             // 
@@ -383,24 +527,6 @@
             this.panel5.Name = "panel5";
             this.panel5.Size = new System.Drawing.Size(426, 55);
             this.panel5.TabIndex = 14;
-            // 
-            // ist2jwDataSetBindingSource
-            // 
-            this.ist2jwDataSetBindingSource.DataSource = this.ist2jwDataSet;
-            this.ist2jwDataSetBindingSource.Position = 0;
-            // 
-            // ist2jwDataSet
-            // 
-            this.ist2jwDataSet.DataSetName = "ist2jwDataSet";
-            this.ist2jwDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // appointmentTableAdapter
-            // 
-            this.appointmentTableAdapter.ClearBeforeFill = true;
-            // 
-            // scheduleTableAdapter
-            // 
-            this.scheduleTableAdapter.ClearBeforeFill = true;
             // 
             // tabControl1
             // 
@@ -437,6 +563,14 @@
             this.tabPage2.Text = "Appointment History";
             this.tabPage2.UseVisualStyleBackColor = true;
             // 
+            // appointmentTableAdapter
+            // 
+            this.appointmentTableAdapter.ClearBeforeFill = true;
+            // 
+            // scheduleTableAdapter
+            // 
+            this.scheduleTableAdapter.ClearBeforeFill = true;
+            // 
             // AppointmentForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -445,12 +579,14 @@
             this.ClientSize = new System.Drawing.Size(970, 608);
             this.Controls.Add(this.tabControl1);
             this.Controls.Add(this.panel5);
-            this.Controls.Add(this.btnBack);
+            this.Controls.Add(this.btnHome);
             this.Name = "AppointmentForm";
             this.Text = "My Appointments";
             this.Load += new System.EventHandler(this.AppointmentForm_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.appointmentBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ist2jwDataSetBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ist2jwDataSet)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.scheduleBindingSource)).EndInit();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
@@ -461,8 +597,6 @@
             this.panel4.PerformLayout();
             this.panel5.ResumeLayout(false);
             this.panel5.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.ist2jwDataSetBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.ist2jwDataSet)).EndInit();
             this.tabControl1.ResumeLayout(false);
             this.tabPage1.ResumeLayout(false);
             this.tabPage2.ResumeLayout(false);
@@ -479,35 +613,44 @@
         private ist2jwDataSetTableAdapters.AppointmentTableAdapter appointmentTableAdapter;
         private System.Windows.Forms.BindingSource scheduleBindingSource;
         private ist2jwDataSetTableAdapters.ScheduleTableAdapter scheduleTableAdapter;
-        private System.Windows.Forms.MonthCalendar calDate;
-        private System.Windows.Forms.ComboBox cmbTime;
+        private System.Windows.Forms.MonthCalendar calendarDate;
+        private System.Windows.Forms.ComboBox timeCmbx;
         private System.Windows.Forms.Button btnBookAppointment;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Button btnBack;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button btnHome;
+        private System.Windows.Forms.Button btnFirst;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Panel panel2;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button button4;
-        private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.Button btnPrev;
+        private System.Windows.Forms.Button btnLast;
+        private System.Windows.Forms.Button btnNext;
         private System.Windows.Forms.Panel panel3;
-        private System.Windows.Forms.Button button5;
+        private System.Windows.Forms.Button sortDateBtn;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Button button6;
+        private System.Windows.Forms.Button resetBtn;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Panel panel4;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Button button7;
         private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.ComboBox comboBox2;
-        private System.Windows.Forms.ComboBox comboBox1;
-        private System.Windows.Forms.RadioButton radioButton1;
-        private System.Windows.Forms.Label label9;
-        private System.Windows.Forms.Button button8;
+        private System.Windows.Forms.ComboBox monthFilterCmbx;
+        private System.Windows.Forms.ComboBox yearFilterCmbx;
+        private System.Windows.Forms.RadioButton attendedFilterRdBtn;
+        private System.Windows.Forms.Button sortAttendedBtn;
         private System.Windows.Forms.Panel panel5;
         private System.Windows.Forms.TabControl tabControl1;
         private System.Windows.Forms.TabPage tabPage1;
         private System.Windows.Forms.TabPage tabPage2;
+        private System.Windows.Forms.DataGridViewTextBoxColumn appIDDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn appDateDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn timeDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn capacityDataGridViewTextBoxColumn;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.ComboBox venueCmbx;
+        private System.Windows.Forms.Button sortVenueBtn;
+        private System.Windows.Forms.ComboBox venueFilterCmbx;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Label label9;
     }
 }

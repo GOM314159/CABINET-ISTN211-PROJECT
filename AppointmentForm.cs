@@ -22,7 +22,7 @@ namespace BloodBankSystem
         private void AppointmentForm_Load(object sender, EventArgs e)
         {
             var adapter = new ist2jwDataSetTableAdapters.UserAppointmentsTableAdapter();
-            var dataTable = adapter.GetData("Par02");
+            var dataTable = adapter.GetData(UserSession.UserId);
             dataGridView1.DataSource = dataTable;
         }
 
@@ -49,22 +49,58 @@ namespace BloodBankSystem
 
         private void btnBookAppointment_Click(object sender, EventArgs e)
         {
-            DateTime date = calDate.SelectionStart;
-            string time = cmbTime.Text;
-            DataTable scheduleTb = new ist2jwDataSet.ScheduleDataTable();
-            DataTable appointmentTb = new ist2jwDataSet.AppointmentDataTable();
-        
-            /**AppointmentValidation check = new AppointmentValidation(date , time , scheduleTb , appointmentTb , userID);
             
-            if (check.DateValidation() == true) {
+            DateTime date = calendarDate.SelectionStart;
+            string time = timeCmbx.Text;
+            string venue = venueCmbx.Text;
+            DataTable userAppointmentTb = new ist2jwDataSet.UserAppointmentsDataTable();
+            DataTable appointmentTb = new ist2jwDataSet.AppointmentDataTable();
+            string currentUserID = UserSession.UserId;
+
+
+            // validation 
+            if (string.IsNullOrEmpty(timeCmbx.Text))
+            {
+                MessageBox.Show("Please select a time");
+                return;
+            }
+
+            if (string.IsNullOrEmpty(venueCmbx.Text))
+            {
+                MessageBox.Show("Please select a venue");
+                return;
+            }
+
+            if (date.DayOfWeek == DayOfWeek.Sunday)
+            {
+                MessageBox.Show("Appointments cannot be booked on Sundays. Please select another date.");
+                return;
+            }
+
+            AppointmentValidation check = new AppointmentValidation(date , time , userAppointmentTb , appointmentTb , currentUserID , venue);
+            
+            if (check.DateValidationCheck() == true) {
                 // insert into appointment table
+                /**
+                 * try {
+                 * var adapter = new ist2jwDataSetTableAdapters.AppointmentTableAdapter();
+                 * var dataTable = adapter.InsertAppointment(...);
+                 * 
+                 * MessageBox.Show("Appointment booked successfully");
+                 * 
+                 * } catch (SqlException ex) {
+                 *  MessageBox.Show("Error booking appointment: " + ex.Message);
+                 * }
+                 */
+
+                // do one for schedule as well 
+                /**
+                 * 
+                 */
             }
             else  {
             MessageBox.Show("Date is not available");
             }
-            */
-
-            
         }
 
         private void panel1_Paint(object sender, PaintEventArgs e)
@@ -107,17 +143,60 @@ namespace BloodBankSystem
 
         }
 
-        private void button6_Click(object sender, EventArgs e)
+        private void resetBtn_Click(object sender, EventArgs e)
         {
             /*
             var adapter = new ist2jwDataSetTableAdapters.UserAppointmentsTableAdapter();
-            var dataTable = adapter.GetData();
+            var dataTable = adapter.GetData(UserSession.UserId);
             dataGridView1.DataSource = dataTable;
             */
         }
 
         private void label6_Click(object sender, EventArgs e)
         {
+
+        }
+
+        private void button5_Click(object sender, EventArgs e)
+        {
+            DataView dataView = new DataView(ist2jwDataSet.UserAppointments);
+            dataView.Sort = "Date DESC";
+
+            dataGridView1.DataSource = dataView;
+        }
+
+        private void sortAttendedBtn_Click(object sender, EventArgs e)
+        {
+            DataView dataView = new DataView(ist2jwDataSet.UserAppointments);
+            dataView.Sort = "Date DESC , Attended DESC";
+
+            dataGridView1.DataSource = dataView;
+        }
+
+        private void sortVenueBtn_Click(object sender, EventArgs e)
+        {
+            DataView dataView = new DataView(ist2jwDataSet.UserAppointments);
+            dataView.Sort = "Venue DESC";
+
+            dataGridView1.DataSource = dataView;
+        }
+
+        private void button7_Click(object sender, EventArgs e)
+        {
+            decimal year = Decimal.Parse(yearFilterCmbx.Text);
+            decimal month = Decimal.Parse(monthFilterCmbx.Text);
+            string venue = venueFilterCmbx.Text;
+
+            if (string.IsNullOrEmpty(yearFilterCmbx.Text) && string.IsNullOrEmpty(monthFilterCmbx.Text) && string.IsNullOrEmpty(venue))
+            {
+                MessageBox.Show("Please select at least one field to be filtered");
+          
+            } else
+            {
+                var adapter = new ist2jwDataSetTableAdapters.UserAppointmentsTableAdapter();
+                var dataTable = adapter.FilterDataBy(year, month, venue , attendedFilterRdBtn.Checked);
+                dataGridView1.DataSource = dataTable; 
+            }
 
         }
     }

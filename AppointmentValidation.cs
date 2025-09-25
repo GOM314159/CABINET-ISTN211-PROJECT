@@ -13,42 +13,47 @@ namespace BloodBankSystem
         private DateTime date;
         private string time;
         private string userId;
-        private DataTable scheduleTb;
+        private DataTable userAppointmentTb;
         private DataTable appointmentTb;
         private bool validDate = false;
         public bool isNewDate = false;
+        private string venue;
 
-        public AppointmentValidation(DateTime date, string time, DataTable scheduleTb, DataTable appointmentTb, string userId)
+        public AppointmentValidation(DateTime date, string time, DataTable userAppointmentTb, DataTable appointmentTb, string userId , string venue)
         {
             this.date = date;
             this.time = time;
-            this.scheduleTb = scheduleTb;
+            this.userAppointmentTb = userAppointmentTb;
             this.appointmentTb = appointmentTb;
             this.userId = userId;
+            this.venue = venue;
         }
 
         public bool IsDateAvailable()
         {
             DataTable sortedAppointmentTb = SortedTableDateDesc(appointmentTb);
+     
             bool isAvailable = false;
             int count = 0;
 
-            //checks if date is in the past or falls on a Sunday
-            if ((date < DateTime.Now) || (date.DayOfWeek == DayOfWeek.Sunday))
+            //checks if date is in the past
+            if ((date < DateTime.Now) )
             {
                 return false;
             }
 
-            //checks if date exits in the database and if the capacity is == 1,
+            //checks if date exits in the database and if the same venue was chosen
             //if capacity == 2 then date is not available 
-            foreach (DataRow row in sortedAppointmentTb.Rows)
+            foreach (DataRow record in sortedAppointmentTb.Rows)
             {
-                if ((DateTime)row["Date"] == this.date)
+                if ((DateTime)record["Date"] == this.date)
                 {
-                    if ((int)row["Capacity"] == 1)
-                    {
-                        isAvailable = true;
-                        break;
+                    if ( ((string)record["Venue"]).Equals(venue) ) {
+                        if ((int)record["Capacity"] == 1)
+                        {
+                            isAvailable = true;
+                            break;
+                        }
                     }
                 }
                 count++;
@@ -65,24 +70,24 @@ namespace BloodBankSystem
 
         }
 
-        public bool DateValidation()
+        public bool DateValidationCheck()
         {
             bool isValid = false;
 
             DataTable sortedAppointmentTb = SortedTableDateDesc(appointmentTb);
+            DataTable sortedUserAppointmentTb = SortedTableDateDesc(userAppointmentTb);
             DateTime lastDate = date;
 
             // check if date is available 
             if (IsDateAvailable())
             {
-                // we have to check whether the last attended appointment was 2 months before
-                // the one they're booking currently 
+                // we have to check whether the last attended appointment was 2 months before the one they're booking currently 
 
                 bool hasAttended = false;
-                foreach (DataRow row in scheduleTb.Rows)
+                foreach (DataRow row in sortedUserAppointmentTb.Rows)
                 {
                     // checks if this user has attended any of their previous appointments
-                    if (((bool)row["Attend"] == true) && ((string)row["UserID"] == userId))
+                    if ((bool)row["Attended"] == true)
                     {
                         hasAttended = true;
                         lastDate = (DateTime)row["Date"];
