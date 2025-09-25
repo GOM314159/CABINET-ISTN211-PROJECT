@@ -93,6 +93,8 @@
             this.scheduleTableAdapter = new BloodBankSystem.ist2jwDataSetTableAdapters.ScheduleTableAdapter();
             this.userAppointmentsTableAdapter = new BloodBankSystem.ist2jwDataSetTableAdapters.UserAppointmentsTableAdapter();
             this.tblBloodInventoryTableAdapter = new BloodBankSystem.ist2jwDataSetTableAdapters.TblBloodInventoryTableAdapter();
+            this.button6 = new System.Windows.Forms.Button();
+            this.button8 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.userAppointmentsDataGrid)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.appointmentBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.scheduleBindingSource)).BeginInit();
@@ -140,9 +142,9 @@
             // btnBookAppointment
             // 
             this.btnBookAppointment.BackColor = System.Drawing.Color.White;
-            this.btnBookAppointment.Location = new System.Drawing.Point(6, 12);
+            this.btnBookAppointment.Location = new System.Drawing.Point(24, 17);
             this.btnBookAppointment.Name = "btnBookAppointment";
-            this.btnBookAppointment.Size = new System.Drawing.Size(300, 76);
+            this.btnBookAppointment.Size = new System.Drawing.Size(255, 76);
             this.btnBookAppointment.TabIndex = 3;
             this.btnBookAppointment.Text = "Book Appointment";
             this.btnBookAppointment.UseVisualStyleBackColor = false;
@@ -296,7 +298,7 @@
             // 
             // sortVenueBtn
             // 
-            this.sortVenueBtn.Location = new System.Drawing.Point(132, 120);
+            this.sortVenueBtn.Location = new System.Drawing.Point(132, 129);
             this.sortVenueBtn.Name = "sortVenueBtn";
             this.sortVenueBtn.Size = new System.Drawing.Size(112, 32);
             this.sortVenueBtn.TabIndex = 3;
@@ -306,28 +308,28 @@
             // 
             // sortAttendedBtn
             // 
-            this.sortAttendedBtn.Location = new System.Drawing.Point(132, 82);
+            this.sortAttendedBtn.Location = new System.Drawing.Point(132, 91);
             this.sortAttendedBtn.Name = "sortAttendedBtn";
             this.sortAttendedBtn.Size = new System.Drawing.Size(112, 32);
             this.sortAttendedBtn.TabIndex = 2;
-            this.sortAttendedBtn.Text = "Last Attened";
+            this.sortAttendedBtn.Text = "Last Attended";
             this.sortAttendedBtn.UseVisualStyleBackColor = true;
             this.sortAttendedBtn.Click += new System.EventHandler(this.sortAttendedBtn_Click);
             // 
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label6.Location = new System.Drawing.Point(19, 19);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(74, 18);
+            this.label6.Size = new System.Drawing.Size(96, 25);
             this.label6.TabIndex = 1;
             this.label6.Text = "Sort By :";
             this.label6.Click += new System.EventHandler(this.label6_Click);
             // 
             // sortDateBtn
             // 
-            this.sortDateBtn.Location = new System.Drawing.Point(132, 44);
+            this.sortDateBtn.Location = new System.Drawing.Point(132, 49);
             this.sortDateBtn.Name = "sortDateBtn";
             this.sortDateBtn.Size = new System.Drawing.Size(112, 32);
             this.sortDateBtn.TabIndex = 0;
@@ -339,7 +341,7 @@
             // 
             this.resetBtn.Location = new System.Drawing.Point(164, 310);
             this.resetBtn.Name = "resetBtn";
-            this.resetBtn.Size = new System.Drawing.Size(125, 47);
+            this.resetBtn.Size = new System.Drawing.Size(122, 47);
             this.resetBtn.TabIndex = 1;
             this.resetBtn.Text = "Reset";
             this.resetBtn.UseVisualStyleBackColor = true;
@@ -373,27 +375,27 @@
             this.panel4.Controls.Add(this.label7);
             this.panel4.Location = new System.Drawing.Point(622, 212);
             this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(292, 369);
+            this.panel4.Size = new System.Drawing.Size(299, 369);
             this.panel4.TabIndex = 13;
             this.panel4.Paint += new System.Windows.Forms.PaintEventHandler(this.panel4_Paint);
             // 
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.Location = new System.Drawing.Point(31, 174);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(49, 18);
+            this.label5.Size = new System.Drawing.Size(67, 24);
             this.label5.TabIndex = 17;
             this.label5.Text = "Venue";
             // 
             // label9
             // 
             this.label9.AutoSize = true;
-            this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label9.Location = new System.Drawing.Point(31, 124);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(50, 18);
+            this.label9.Size = new System.Drawing.Size(63, 24);
             this.label9.TabIndex = 16;
             this.label9.Text = "Month";
             // 
@@ -432,7 +434,7 @@
             // attendedFilterRdBtn
             // 
             this.attendedFilterRdBtn.AutoSize = true;
-            this.attendedFilterRdBtn.Location = new System.Drawing.Point(132, 246);
+            this.attendedFilterRdBtn.Location = new System.Drawing.Point(132, 236);
             this.attendedFilterRdBtn.Name = "attendedFilterRdBtn";
             this.attendedFilterRdBtn.Size = new System.Drawing.Size(82, 20);
             this.attendedFilterRdBtn.TabIndex = 5;
@@ -443,10 +445,10 @@
             // label8
             // 
             this.label8.AutoSize = true;
-            this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label8.Location = new System.Drawing.Point(31, 78);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(38, 18);
+            this.label8.Size = new System.Drawing.Size(49, 24);
             this.label8.TabIndex = 3;
             this.label8.Text = "Year";
             // 
@@ -454,18 +456,18 @@
             // 
             this.monthFilterCmbx.FormattingEnabled = true;
             this.monthFilterCmbx.Items.AddRange(new object[] {
-            "January",
-            "February",
-            "March",
-            "April",
-            "May",
-            "June",
-            "July",
-            "August",
-            "September",
-            "October",
-            "November",
-            "December"});
+            "01 January",
+            "02 Feburary",
+            "03 March",
+            "04 April",
+            "05 May",
+            "06 June",
+            "07 July",
+            "08 August ",
+            "09 September",
+            "10 October ",
+            "11 November",
+            "12 December"});
             this.monthFilterCmbx.Location = new System.Drawing.Point(132, 128);
             this.monthFilterCmbx.Name = "monthFilterCmbx";
             this.monthFilterCmbx.Size = new System.Drawing.Size(121, 24);
@@ -485,10 +487,10 @@
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label7.Location = new System.Drawing.Point(19, 16);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(75, 18);
+            this.label7.Size = new System.Drawing.Size(98, 25);
             this.label7.TabIndex = 0;
             this.label7.Text = "Filter By:";
             // 
@@ -531,7 +533,7 @@
             this.panel8.Controls.Add(this.filterResetAppointments);
             this.panel8.Controls.Add(this.filterAppointmentsBtn);
             this.panel8.Controls.Add(this.label2);
-            this.panel8.Location = new System.Drawing.Point(612, 188);
+            this.panel8.Location = new System.Drawing.Point(612, 169);
             this.panel8.Name = "panel8";
             this.panel8.Size = new System.Drawing.Size(310, 287);
             this.panel8.TabIndex = 11;
@@ -539,10 +541,10 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.Location = new System.Drawing.Point(19, 20);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(54, 25);
+            this.label2.Size = new System.Drawing.Size(60, 25);
             this.label2.TabIndex = 0;
             this.label2.Text = "Filter";
             this.label2.Click += new System.EventHandler(this.label2_Click);
@@ -550,31 +552,34 @@
             // panel7
             // 
             this.panel7.BackColor = System.Drawing.Color.IndianRed;
+            this.panel7.Controls.Add(this.button8);
+            this.panel7.Controls.Add(this.button6);
             this.panel7.Controls.Add(this.sortAppointmentDateBtn);
             this.panel7.Controls.Add(this.sortAppointmentsVenueBtn);
             this.panel7.Controls.Add(this.label1);
             this.panel7.Location = new System.Drawing.Point(612, 6);
             this.panel7.Name = "panel7";
-            this.panel7.Size = new System.Drawing.Size(310, 173);
+            this.panel7.Size = new System.Drawing.Size(310, 152);
             this.panel7.TabIndex = 10;
+            this.panel7.Paint += new System.Windows.Forms.PaintEventHandler(this.panel7_Paint);
             // 
             // sortAppointmentDateBtn
             // 
-            this.sortAppointmentDateBtn.Location = new System.Drawing.Point(63, 75);
+            this.sortAppointmentDateBtn.Location = new System.Drawing.Point(22, 103);
             this.sortAppointmentDateBtn.Name = "sortAppointmentDateBtn";
-            this.sortAppointmentDateBtn.Size = new System.Drawing.Size(93, 34);
+            this.sortAppointmentDateBtn.Size = new System.Drawing.Size(132, 34);
             this.sortAppointmentDateBtn.TabIndex = 1;
-            this.sortAppointmentDateBtn.Text = "Date ";
+            this.sortAppointmentDateBtn.Text = "Date (Descending)";
             this.sortAppointmentDateBtn.UseVisualStyleBackColor = true;
             this.sortAppointmentDateBtn.Click += new System.EventHandler(this.sortAppointmentDateBtn_Click);
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.Location = new System.Drawing.Point(17, 14);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(48, 25);
+            this.label1.Size = new System.Drawing.Size(52, 25);
             this.label1.TabIndex = 0;
             this.label1.Text = "Sort";
             // 
@@ -582,9 +587,9 @@
             // 
             this.panel6.BackColor = System.Drawing.Color.IndianRed;
             this.panel6.Controls.Add(this.btnBookAppointment);
-            this.panel6.Location = new System.Drawing.Point(612, 481);
+            this.panel6.Location = new System.Drawing.Point(612, 474);
             this.panel6.Name = "panel6";
-            this.panel6.Size = new System.Drawing.Size(310, 100);
+            this.panel6.Size = new System.Drawing.Size(310, 107);
             this.panel6.TabIndex = 9;
             this.panel6.Paint += new System.Windows.Forms.PaintEventHandler(this.panel6_Paint);
             // 
@@ -647,51 +652,51 @@
             // 
             // sortAppointmentsVenueBtn
             // 
-            this.sortAppointmentsVenueBtn.Location = new System.Drawing.Point(171, 75);
+            this.sortAppointmentsVenueBtn.Location = new System.Drawing.Point(158, 103);
             this.sortAppointmentsVenueBtn.Name = "sortAppointmentsVenueBtn";
-            this.sortAppointmentsVenueBtn.Size = new System.Drawing.Size(93, 34);
+            this.sortAppointmentsVenueBtn.Size = new System.Drawing.Size(147, 34);
             this.sortAppointmentsVenueBtn.TabIndex = 2;
-            this.sortAppointmentsVenueBtn.Text = "Venue";
+            this.sortAppointmentsVenueBtn.Text = "Venue (Descending)";
             this.sortAppointmentsVenueBtn.UseVisualStyleBackColor = true;
             this.sortAppointmentsVenueBtn.Click += new System.EventHandler(this.sortAppointmentsVenueBtn_Click);
             // 
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.Location = new System.Drawing.Point(77, 57);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(38, 18);
+            this.label4.Size = new System.Drawing.Size(49, 24);
             this.label4.TabIndex = 3;
             this.label4.Text = "Year";
             // 
             // label10
             // 
             this.label10.AutoSize = true;
-            this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label10.Location = new System.Drawing.Point(74, 99);
             this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(50, 18);
+            this.label10.Size = new System.Drawing.Size(63, 24);
             this.label10.TabIndex = 4;
             this.label10.Text = "Month";
             // 
             // label11
             // 
             this.label11.AutoSize = true;
-            this.label11.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label11.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label11.Location = new System.Drawing.Point(67, 143);
             this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(49, 18);
+            this.label11.Size = new System.Drawing.Size(67, 24);
             this.label11.TabIndex = 5;
             this.label11.Text = "Venue";
             // 
             // label12
             // 
             this.label12.AutoSize = true;
-            this.label12.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label12.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label12.Location = new System.Drawing.Point(60, 180);
             this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(65, 18);
+            this.label12.Size = new System.Drawing.Size(81, 24);
             this.label12.TabIndex = 6;
             this.label12.Text = "Capacity";
             // 
@@ -734,7 +739,7 @@
             "Springfield",
             "Durban Noth",
             "Phoenix"});
-            this.filterAppointmentsVenueCmbx.Location = new System.Drawing.Point(158, 135);
+            this.filterAppointmentsVenueCmbx.Location = new System.Drawing.Point(158, 142);
             this.filterAppointmentsVenueCmbx.Name = "filterAppointmentsVenueCmbx";
             this.filterAppointmentsVenueCmbx.Size = new System.Drawing.Size(121, 24);
             this.filterAppointmentsVenueCmbx.TabIndex = 9;
@@ -745,7 +750,7 @@
             this.filterAppointmentsCapacityCmbx.Items.AddRange(new object[] {
             "1",
             "2"});
-            this.filterAppointmentsCapacityCmbx.Location = new System.Drawing.Point(158, 177);
+            this.filterAppointmentsCapacityCmbx.Location = new System.Drawing.Point(158, 179);
             this.filterAppointmentsCapacityCmbx.Name = "filterAppointmentsCapacityCmbx";
             this.filterAppointmentsCapacityCmbx.Size = new System.Drawing.Size(121, 24);
             this.filterAppointmentsCapacityCmbx.TabIndex = 10;
@@ -775,6 +780,26 @@
             // tblBloodInventoryTableAdapter
             // 
             this.tblBloodInventoryTableAdapter.ClearBeforeFill = true;
+            // 
+            // button6
+            // 
+            this.button6.Location = new System.Drawing.Point(22, 63);
+            this.button6.Name = "button6";
+            this.button6.Size = new System.Drawing.Size(130, 34);
+            this.button6.TabIndex = 3;
+            this.button6.Text = "Date (Ascending)";
+            this.button6.UseVisualStyleBackColor = true;
+            this.button6.Click += new System.EventHandler(this.button6_Click);
+            // 
+            // button8
+            // 
+            this.button8.Location = new System.Drawing.Point(158, 63);
+            this.button8.Name = "button8";
+            this.button8.Size = new System.Drawing.Size(147, 34);
+            this.button8.TabIndex = 4;
+            this.button8.Text = "Venue (Ascending)";
+            this.button8.UseVisualStyleBackColor = true;
+            this.button8.Click += new System.EventHandler(this.button8_Click);
             // 
             // AppointmentForm
             // 
@@ -884,5 +909,7 @@
         private System.Windows.Forms.ComboBox filterAppointmentsCapacityCmbx;
         private System.Windows.Forms.ComboBox filterAppointmentsVenueCmbx;
         private System.Windows.Forms.ComboBox filterAppointmentsMonthCmbx;
+        private System.Windows.Forms.Button button6;
+        private System.Windows.Forms.Button button8;
     }
 }

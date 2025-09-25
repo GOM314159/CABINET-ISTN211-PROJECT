@@ -68,15 +68,8 @@ namespace BloodBankSystem
             
 
             DataTable userAppointmentTb = new ist2jwDataSet.UserAppointmentsDataTable();
-            DataTable appointmentTb = new ist2jwDataSet.AppointmentDataTable();
 
             string currentUserID = HomePage.userID;
-
-            if ( date.DayOfWeek == DayOfWeek.Sunday)
-            {
-                MessageBox.Show("Appointments cannot be booked on Sundays. Please select another date.");
-                return;
-            }
 
             AppointmentValidation check = new AppointmentValidation(date  , userAppointmentTb , capacity);
             
@@ -268,6 +261,27 @@ namespace BloodBankSystem
         {
             DataView dataView = new DataView(ist2jwDataSet.Appointment);
             dataView.Sort = "Venue DESC";
+
+            appointmentsDataGrid.DataSource = dataView;
+        }
+
+        private void panel7_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void button6_Click(object sender, EventArgs e)
+        {
+            DataView dataView = new DataView(ist2jwDataSet.Appointment);
+            dataView.Sort = "Date ASC";
+
+            appointmentsDataGrid.DataSource = dataView;
+        }
+
+        private void button8_Click(object sender, EventArgs e)
+        {
+            DataView dataView = new DataView(ist2jwDataSet.Appointment);
+            dataView.Sort = "Venue ASC";
 
             appointmentsDataGrid.DataSource = dataView;
         }

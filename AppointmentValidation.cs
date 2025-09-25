@@ -18,7 +18,6 @@ namespace BloodBankSystem
         {
             this.date = date;
             this.userAppointmentTb = userAppointmentTb;
-       
             this.capacity = capacity;
         }
 
@@ -26,7 +25,7 @@ namespace BloodBankSystem
         {
             bool isAvailable = false;
 
-            //checks if date is in the past
+            //checks if user selected an appointment date that is in the past
             if ((date < DateTime.Now) )
             {
                 return false;
