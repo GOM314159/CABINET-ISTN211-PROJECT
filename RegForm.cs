@@ -34,7 +34,7 @@ namespace BloodBankSystem
 
             Random rnd = new Random();
             String userID = rnd.Next(0, 1000000).ToString(); // Generates a 6-digit userID as a string
-            String userType = "User";
+            String userType = "D";
             String firstName = fNameTextBox.Text;
             String lastName = lastNameTextBox.Text;
             String iDNumber = mIDTextBox.Text;
@@ -138,10 +138,10 @@ namespace BloodBankSystem
             {
                 try {  var adapter = new ist2jwDataSetTableAdapters.tblUsersTableAdapter();
                 var dataTable = adapter.UserRegistration(userID, password, firstName, lastName, iDNumber, phoneNumber, userType, bloodType, isActiveAcc);
-                MessageBox.Show("Registration Successful Welcome to 'Blood Bank System' ");
+                MessageBox.Show("Registration Successful Welcome to 'Blood Bank System' "+firstName+"\nPlease Log in to access the system");
 
-                   Form homePage = new HomePage();
-                   homePage.Show();
+                   Form LoginForm = new LoginForm();
+                   LoginForm.Show();
                    this.Hide();
 
                 }
@@ -278,7 +278,7 @@ namespace BloodBankSystem
             var adapter1 = new ist2jwDataSetTableAdapters.tblUsersTableAdapter();
             var dataTable1 = adapter1.FindUserID(userID);
 
-            if (dataTable1.Count() == 0)
+            if (dataTable1.Rows.Count == 0)
             {
                 userIDCheck = true;
             }
