@@ -34,6 +34,7 @@ namespace BloodBankSystem
 
         private void loginBtn_Click(object sender, EventArgs e)
         {
+
             String password = PasswordTextBox.Text;
             String IDnumber = mIDTextBox.Text.ToString();
           
@@ -45,33 +46,29 @@ namespace BloodBankSystem
                 if (dataTable.Rows.Count > 0)
                 {
                     string dbPassword = dataTable.Rows[0]["Password"].ToString();
-                    Boolean isActive = Convert.ToBoolean(dataTable.Rows[0]["IsActiveAccount"]);
+                  
 
-                    if (!isActive)
-                    {
-                        MessageBox.Show("Your account is deactivated. Please contact the administrator.");
-                    }
-                    else if (password.Equals(dbPassword) && isActive)
+                    if (password.Equals(dbPassword))
                     {  
                         String isAdmin = dataTable.Rows[0]["UserType"].ToString();
                         this.Hide();
 
                         if (isAdmin.Equals("A"))
-                        {   // admin login
+                        {
                             MessageBox.Show("Admin Login Successful! \nWelcome " + dataTable.Rows[0]["Name"]); 
                             Form adminForm = new AdminForm();
                             adminForm.Show();
                         }
                         else
-                        {   // regular user login
-                            MessageBox.Show("Login Successful! \nWelcome " + dataTable.Rows[0]["Name"], "Successful Login", MessageBoxButtons.OK);
-                            Form homeForm = new HomePage(dataTable.Rows[0]["Name"].ToString());
-                            homeForm.Show();
+                        {
+                             Form homeForm = new HomePage(dataTable.Rows[0]["Name"].ToString());
+                             homeForm.Show();
+                             MessageBox.Show("Login Successful! \nWelcome "+ dataTable.Rows[0]["Name"],"Successful Login",MessageBoxButtons.OK);
                         }
                        
 
                     }
-                    else if (!password.Equals(dbPassword) && isActive)
+                    else
                     {   //password field is empty
                         if (String.IsNullOrEmpty(password))
                         {
@@ -113,20 +110,6 @@ namespace BloodBankSystem
             this.tblUsersBindingSource.EndEdit();
             this.tableAdapterManager.UpdateAll(this.ist2jwDataSet);
 
-        }
-
-        private void passShowImg_Click(object sender, EventArgs e)
-        {       // Toggle password visibility
-            if (PasswordTextBox.PasswordChar == '*')
-            {
-                PasswordTextBox.PasswordChar = '\0';
-                passShowImg.BorderStyle = BorderStyle.Fixed3D;
-            }
-            else
-            {
-                PasswordTextBox.PasswordChar = '*';
-                passShowImg.BorderStyle = BorderStyle.FixedSingle;
-            }
         }
     }
 }
