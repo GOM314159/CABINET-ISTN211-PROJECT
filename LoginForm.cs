@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Data.SqlClient;
 using System.Diagnostics;
 using System.Drawing;
 using System.Linq;
@@ -33,18 +34,81 @@ namespace BloodBankSystem
 
         private void loginBtn_Click(object sender, EventArgs e)
         {
-            Form homeForm = new HomePage();
-            homeForm.Show();
-           
-            Form AdminForm = new AdminForm();
-            AdminForm.Show(); 
 
-            this.Hide();
+            String password = PasswordTextBox.Text;
+            String IDnumber = mIDTextBox.Text.ToString();
+          
+              try
+              {
+                var adapter = new ist2jwDataSetTableAdapters.tblUsersTableAdapter();
+                var dataTable = adapter.GetUserInfo(IDnumber); //error here
+
+                if (dataTable.Rows.Count > 0)
+                {
+                    string dbPassword = dataTable.Rows[0]["Password"].ToString();
+                  
+
+                    if (password.Equals(dbPassword))
+                    {  
+                        String isAdmin = dataTable.Rows[0]["UserType"].ToString();
+                        this.Hide();
+
+                        if (isAdmin.Equals("A"))
+                        {
+                            MessageBox.Show("Admin Login Successful! \nWelcome " + dataTable.Rows[0]["Name"]); 
+                            Form adminForm = new AdminForm();
+                            adminForm.Show();
+                        }
+                        else
+                        {
+                             Form homeForm = new HomePage(dataTable.Rows[0]["Name"].ToString());
+                             homeForm.Show();
+                             MessageBox.Show("Login Successful! \nWelcome "+ dataTable.Rows[0]["Name"],"Successful Login",MessageBoxButtons.OK);
+                        }
+                       
+
+                    }
+                    else
+                    {   //password field is empty
+                        if (String.IsNullOrEmpty(password))
+                        {
+                            MessageBox.Show("Please Enter your password.");
+                        }
+                        else
+                        {
+                            MessageBox.Show("Incorrect Password. Please try again.");
+                        }
+                           
+                    }
+
+                }
+                else
+                {
+                    MessageBox.Show("Donor not found. Please check your ID Number.");
+                }
+
+              }
+              catch (SqlException ex)
+              {
+                MessageBox.Show(ex.Message);
+              }
+
+          ;
 
         }
 
         private void LoginForm_Load(object sender, EventArgs e)
         {
+            // TODO: This line of code loads data into the 'ist2jwDataSet.tblUsers' table. You can move, or remove it, as needed.
+            this.tblUsersTableAdapter.Fill(this.ist2jwDataSet.tblUsers);
+
+        }
+
+        private void tblUsersBindingNavigatorSaveItem_Click(object sender, EventArgs e)
+        {
+            this.Validate();
+            this.tblUsersBindingSource.EndEdit();
+            this.tableAdapterManager.UpdateAll(this.ist2jwDataSet);
 
         }
     }

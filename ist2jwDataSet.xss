@@ -9,11 +9,11 @@
     <Shape ID="DesignTable:Appointment" ZOrder="9" X="70" Y="70" Height="153" Width="222" AdapterExpanded="true" DataTableExpanded="true" OldAdapterHeight="0" OldDataTableHeight="0" SplitterPosition="102" />
     <Shape ID="DesignTable:Schedule" ZOrder="8" X="362" Y="70" Height="165" Width="197" AdapterExpanded="true" DataTableExpanded="true" OldAdapterHeight="0" OldDataTableHeight="0" SplitterPosition="99" />
     <Shape ID="DesignTable:TblBloodInventory" ZOrder="7" X="362" Y="388" Height="172" Width="253" AdapterExpanded="true" DataTableExpanded="true" OldAdapterHeight="0" OldDataTableHeight="0" SplitterPosition="121" />
-    <Shape ID="DesignTable:tblUsers" ZOrder="6" X="629" Y="70" Height="248" Width="192" AdapterExpanded="true" DataTableExpanded="true" OldAdapterHeight="0" OldDataTableHeight="0" SplitterPosition="197" />
-    <Shape ID="DesignTable:UserAppointments" ZOrder="1" X="28" Y="283" Height="181" Width="300" AdapterExpanded="true" DataTableExpanded="true" OldAdapterHeight="0" OldDataTableHeight="0" SplitterPosition="122" />
+    <Shape ID="DesignTable:tblUsers" ZOrder="1" X="629" Y="70" Height="305" Width="300" AdapterExpanded="true" DataTableExpanded="true" OldAdapterHeight="24" OldDataTableHeight="0" SplitterPosition="197" />
+    <Shape ID="DesignTable:UserAppointments" ZOrder="2" X="28" Y="283" Height="181" Width="300" AdapterExpanded="true" DataTableExpanded="true" OldAdapterHeight="0" OldDataTableHeight="0" SplitterPosition="122" />
   </Shapes>
   <Connectors>
-    <Connector ID="DesignRelation:FK_Schedule_Appointment" ZOrder="5" LineWidth="11">
+    <Connector ID="DesignRelation:FK_Schedule_Appointment" ZOrder="6" LineWidth="11">
       <RoutePoints>
         <Point>
           <X>292</X>
@@ -25,7 +25,7 @@
         </Point>
       </RoutePoints>
     </Connector>
-    <Connector ID="DesignRelation:FK_Schedule_tblUsers" ZOrder="4" LineWidth="11">
+    <Connector ID="DesignRelation:FK_Schedule_tblUsers" ZOrder="5" LineWidth="11">
       <RoutePoints>
         <Point>
           <X>629</X>
@@ -37,7 +37,7 @@
         </Point>
       </RoutePoints>
     </Connector>
-    <Connector ID="DesignRelation:FK_TblBloodInventory_Appointment" ZOrder="3" LineWidth="11">
+    <Connector ID="DesignRelation:FK_TblBloodInventory_Appointment" ZOrder="4" LineWidth="11">
       <RoutePoints>
         <Point>
           <X>275</X>
@@ -53,19 +53,19 @@
         </Point>
       </RoutePoints>
     </Connector>
-    <Connector ID="DesignRelation:FK_TblBloodInventory_tblUsers" ZOrder="2" LineWidth="11">
+    <Connector ID="DesignRelation:FK_TblBloodInventory_tblUsers" ZOrder="3" LineWidth="11">
       <RoutePoints>
         <Point>
           <X>646</X>
-          <Y>356</Y>
+          <Y>375</Y>
         </Point>
         <Point>
           <X>646</X>
-          <Y>413</Y>
+          <Y>440</Y>
         </Point>
         <Point>
           <X>615</X>
-          <Y>413</Y>
+          <Y>440</Y>
         </Point>
       </RoutePoints>
     </Connector>
