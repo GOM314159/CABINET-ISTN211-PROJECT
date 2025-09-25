@@ -65,7 +65,7 @@ namespace BloodBankSystem
                         else
                         {   // regular user login
                             MessageBox.Show("Login Successful! \nWelcome " + dataTable.Rows[0]["Name"], "Successful Login", MessageBoxButtons.OK);
-                            Form homeForm = new HomePage(dataTable.Rows[0]["Name"].ToString());
+                            Form homeForm = new HomePage(dataTable.Rows[0]["UserID"].ToString(),dataTable.Rows[0]["Name"].ToString());
                             homeForm.Show();
                         }
                        
