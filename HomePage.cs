@@ -13,11 +13,13 @@ namespace BloodBankSystem
     public partial class HomePage : Form
     {
         private static String userName;
-        public HomePage(String name)
+        public static String userID;
+        public HomePage(String dbuserID,String name)
         {
             InitializeComponent();
+            userID = dbuserID;
             userName = name;
-            prfNameLbl.Text = userName + "'s Profile"; 
+            prfNameLbl.Text = userID + "'s Profile"; 
             welcomelbl.Text = "Welcome "+ userName;
             prfPnl.Visible = false;
         }

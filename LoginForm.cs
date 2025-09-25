@@ -60,10 +60,10 @@ namespace BloodBankSystem
                             adminForm.Show();
                         }
                         else
-                        {
-                             Form homeForm = new HomePage(dataTable.Rows[0]["Name"].ToString());
-                             homeForm.Show();
-                             MessageBox.Show("Login Successful! \nWelcome "+ dataTable.Rows[0]["Name"],"Successful Login",MessageBoxButtons.OK);
+                        {   // regular user login
+                            MessageBox.Show("Login Successful! \nWelcome " + dataTable.Rows[0]["Name"], "Successful Login", MessageBoxButtons.OK);
+                            Form homeForm = new HomePage(dataTable.Rows[0]["UserID"].ToString(),dataTable.Rows[0]["Name"].ToString());
+                            homeForm.Show();
                         }
                        
 
