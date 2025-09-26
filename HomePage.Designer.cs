@@ -32,6 +32,7 @@
             this.bbNameLbl = new System.Windows.Forms.Label();
             this.ProfileImg = new System.Windows.Forms.PictureBox();
             this.prfPnl = new System.Windows.Forms.Panel();
+            this.logOutBtn = new System.Windows.Forms.Button();
             this.monthCalendar1 = new System.Windows.Forms.MonthCalendar();
             this.ttlDonLbl = new System.Windows.Forms.Label();
             this.prfnextDateLbl = new System.Windows.Forms.Label();
@@ -91,6 +92,7 @@
             // 
             this.prfPnl.BackColor = System.Drawing.Color.MistyRose;
             this.prfPnl.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.prfPnl.Controls.Add(this.logOutBtn);
             this.prfPnl.Controls.Add(this.monthCalendar1);
             this.prfPnl.Controls.Add(this.ttlDonLbl);
             this.prfPnl.Controls.Add(this.prfnextDateLbl);
@@ -103,9 +105,27 @@
             this.prfPnl.TabIndex = 5;
             this.prfPnl.Visible = false;
             // 
+            // logOutBtn
+            // 
+            this.logOutBtn.BackColor = System.Drawing.Color.Transparent;
+            this.logOutBtn.BackgroundImage = global::BloodBankSystem.Properties.Resources.buttonbackOrange;
+            this.logOutBtn.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.logOutBtn.FlatAppearance.BorderSize = 0;
+            this.logOutBtn.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Black;
+            this.logOutBtn.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+            this.logOutBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.logOutBtn.Font = new System.Drawing.Font("Arial", 18.25F);
+            this.logOutBtn.Location = new System.Drawing.Point(111, 521);
+            this.logOutBtn.Name = "logOutBtn";
+            this.logOutBtn.Size = new System.Drawing.Size(137, 39);
+            this.logOutBtn.TabIndex = 19;
+            this.logOutBtn.Text = "Log Out";
+            this.logOutBtn.UseVisualStyleBackColor = false;
+            this.logOutBtn.Click += new System.EventHandler(this.logOutBtn_Click);
+            // 
             // monthCalendar1
             // 
-            this.monthCalendar1.Location = new System.Drawing.Point(55, 394);
+            this.monthCalendar1.Location = new System.Drawing.Point(51, 340);
             this.monthCalendar1.Margin = new System.Windows.Forms.Padding(7);
             this.monthCalendar1.Name = "monthCalendar1";
             this.monthCalendar1.ShowWeekNumbers = true;
@@ -228,5 +248,6 @@
         private System.Windows.Forms.MonthCalendar monthCalendar1;
         private System.Windows.Forms.Label ttlDonLbl;
         private System.Windows.Forms.Button donateBtn;
+        private System.Windows.Forms.Button logOutBtn;
     }
 }

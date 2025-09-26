@@ -50,10 +50,23 @@ namespace BloodBankSystem
         }
 
         private void donateBtn_Click(object sender, EventArgs e)
-        {
+        {   // Navigate to Donation Form
             Form appointment = new AppointmentForm();
             appointment.Show();
             this.Hide();
+        }
+
+        private void logOutBtn_Click(object sender, EventArgs e)
+        {   // Confirm log out action
+            DialogResult logAns = MessageBox.Show("Are you sure you want to log out?", "Log Out", MessageBoxButtons.OKCancel);
+            if (logAns == DialogResult.OK)
+            {
+                this.Hide();
+                prfPnl.Visible = false;
+                Form welcomeForm = new WelcomeForm();
+                welcomeForm.Show();
+
+            }       
         }
     }
 }
