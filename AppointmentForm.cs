@@ -10,7 +10,6 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using static BloodBankSystem.ist2jwDataSet;
-using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 
 namespace BloodBankSystem
 {
@@ -231,19 +230,17 @@ namespace BloodBankSystem
 
         private void filterAppointmentsBtn_Click(object sender, EventArgs e)
         {
-            
-            if (string.IsNullOrEmpty(filterAppointmentsMonthCmbx.Text) && string.IsNullOrEmpty(filterAppointmentsVenueCmbx.Text))
+            int year = Int32.Parse(filterAppointmentsYearCmbx.Text);
+            int month = Int32.Parse(filterAppointmentsMonthCmbx.Text.Substring(0, 2));
+            string venue = filterAppointmentsVenueCmbx.Text;
+            int capacity = Int32.Parse(filterAppointmentsCapacityCmbx.Text);
+            if (string.IsNullOrEmpty(yearFilterCmbx.Text) && string.IsNullOrEmpty(monthFilterCmbx.Text) && string.IsNullOrEmpty(venue))
             {
                 MessageBox.Show("Please select at least one field to be filtered");
 
             }
             else
             {
-                
-                int month = Int32.Parse(filterAppointmentsMonthCmbx.Text.Substring(0, 2));
-                string venue = filterAppointmentsVenueCmbx.Text;
-                int capacity = Int32.Parse(filterAppointmentsCapacityCmbx.Text);
-
                 var adapter = new ist2jwDataSetTableAdapters.AppointmentTableAdapter();
                 var dataTable = adapter.FilterDataBy(year, month, capacity,venue);
                 userAppointmentsDataGrid.DataSource = dataTable;

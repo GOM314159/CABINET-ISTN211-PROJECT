@@ -3618,8 +3618,9 @@ SELECT UserID, Password, Name, Surname, IDNumber, PhoneNumber, UserType, BloodTy
             this._commandCollection[1].CommandText = @"SELECT Schedule.ScheduleID, Appointment.AppDate AS [Appointment Date], Appointment.Time, Schedule.Attended
 FROM     Appointment INNER JOIN
                   Schedule ON Appointment.AppID = Schedule.AppID
-WHERE  (MONTH(Appointment.AppDate) = @Month) OR(Appointment.Venue = @Venue) OR (Schedule.Attended = @Attended)";
+WHERE  (YEAR(Appointment.AppDate) = @Year) OR (MONTH(Appointment.AppDate) = @Month) OR(Appointment.Venue = @Venue) OR (Schedule.Attended = @Attended)";
             this._commandCollection[1].CommandType = global::System.Data.CommandType.Text;
+            this._commandCollection[1].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Year", global::System.Data.SqlDbType.Decimal, 0, global::System.Data.ParameterDirection.Input, 0, 0, "", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._commandCollection[1].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Month", global::System.Data.SqlDbType.Decimal, 0, global::System.Data.ParameterDirection.Input, 0, 0, "", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._commandCollection[1].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Venue", global::System.Data.SqlDbType.VarChar, 50, global::System.Data.ParameterDirection.Input, 0, 0, "Venue", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._commandCollection[1].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Attended", global::System.Data.SqlDbType.Bit, 1, global::System.Data.ParameterDirection.Input, 0, 0, "Attended", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
@@ -3665,16 +3666,17 @@ WHERE  (MONTH(Appointment.AppDate) = @Month) OR(Appointment.Venue = @Venue) OR (
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, false)]
-        public virtual int FillBy(ist2jwDataSet.UserAppointmentsDataTable dataTable, decimal Month, string Venue, bool Attended) {
+        public virtual int FillBy(ist2jwDataSet.UserAppointmentsDataTable dataTable, decimal Year, decimal Month, string Venue, bool Attended) {
             this.Adapter.SelectCommand = this.CommandCollection[1];
-            this.Adapter.SelectCommand.Parameters[0].Value = ((decimal)(Month));
+            this.Adapter.SelectCommand.Parameters[0].Value = ((decimal)(Year));
+            this.Adapter.SelectCommand.Parameters[1].Value = ((decimal)(Month));
             if ((Venue == null)) {
                 throw new global::System.ArgumentNullException("Venue");
             }
             else {
-                this.Adapter.SelectCommand.Parameters[1].Value = ((string)(Venue));
+                this.Adapter.SelectCommand.Parameters[2].Value = ((string)(Venue));
             }
-            this.Adapter.SelectCommand.Parameters[2].Value = ((bool)(Attended));
+            this.Adapter.SelectCommand.Parameters[3].Value = ((bool)(Attended));
             if ((this.ClearBeforeFill == true)) {
                 dataTable.Clear();
             }
@@ -3686,16 +3688,17 @@ WHERE  (MONTH(Appointment.AppDate) = @Month) OR(Appointment.Venue = @Venue) OR (
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, false)]
-        public virtual ist2jwDataSet.UserAppointmentsDataTable FilterDataBy(decimal Month, string Venue, bool Attended) {
+        public virtual ist2jwDataSet.UserAppointmentsDataTable FilterDataBy(decimal Year, decimal Month, string Venue, bool Attended) {
             this.Adapter.SelectCommand = this.CommandCollection[1];
-            this.Adapter.SelectCommand.Parameters[0].Value = ((decimal)(Month));
+            this.Adapter.SelectCommand.Parameters[0].Value = ((decimal)(Year));
+            this.Adapter.SelectCommand.Parameters[1].Value = ((decimal)(Month));
             if ((Venue == null)) {
                 throw new global::System.ArgumentNullException("Venue");
             }
             else {
-                this.Adapter.SelectCommand.Parameters[1].Value = ((string)(Venue));
+                this.Adapter.SelectCommand.Parameters[2].Value = ((string)(Venue));
             }
-            this.Adapter.SelectCommand.Parameters[2].Value = ((bool)(Attended));
+            this.Adapter.SelectCommand.Parameters[3].Value = ((bool)(Attended));
             ist2jwDataSet.UserAppointmentsDataTable dataTable = new ist2jwDataSet.UserAppointmentsDataTable();
             this.Adapter.Fill(dataTable);
             return dataTable;
