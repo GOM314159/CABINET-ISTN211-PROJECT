@@ -151,7 +151,7 @@ namespace BloodBankSystem
         private void button5_Click(object sender, EventArgs e)
         {
             DataView dataView = new DataView(ist2jwDataSet.UserAppointments);
-            dataView.Sort = "Date DESC";
+            dataView.Sort = "AppDate DESC";
 
             userAppointmentsDataGrid.DataSource = dataView;
         }
@@ -174,18 +174,18 @@ namespace BloodBankSystem
 
         private void button7_Click(object sender, EventArgs e)
         {
-            decimal year = Decimal.Parse(yearFilterCmbx.Text);
-            decimal month = Decimal.Parse(monthFilterCmbx.Text.Substring(0,2));
-            string venue = venueFilterCmbx.Text;
+       
+            int month = Int32.Parse(filterAppointmentsMonthCmbx.Text.Substring(0,2));
+            string venue = filterAppointmentsVenueCmbx.Text;
 
-            if (string.IsNullOrEmpty(yearFilterCmbx.Text) && string.IsNullOrEmpty(monthFilterCmbx.Text) && string.IsNullOrEmpty(venue))
+            if (string.IsNullOrEmpty(filterAppointmentsMonthCmbx.Text) && string.IsNullOrEmpty(filterAppointmentsVenueCmbx.Text))
             {
                 MessageBox.Show("Please select at least one field to be filtered");
           
             } else
             {
                 var adapter = new ist2jwDataSetTableAdapters.UserAppointmentsTableAdapter();
-                var dataTable = adapter.FilterDataBy(year, month, venue , attendedFilterRdBtn.Checked);
+                var dataTable = adapter.FilterDataBy( month, venue , attendedFilterRdBtn.Checked);
                 userAppointmentsDataGrid.DataSource = dataTable; 
             }
 
@@ -206,7 +206,7 @@ namespace BloodBankSystem
         private void sortAppointmentDateBtn_Click(object sender, EventArgs e)
         {
             DataView dataView = new DataView(ist2jwDataSet.Appointment);
-            dataView.Sort = "Date DESC";
+            dataView.Sort = "AppDate DESC";
 
             appointmentsDataGrid.DataSource = dataView;
         }
@@ -230,11 +230,11 @@ namespace BloodBankSystem
 
         private void filterAppointmentsBtn_Click(object sender, EventArgs e)
         {
-            decimal year = Decimal.Parse(yearFilterCmbx.Text);
-            decimal month = Decimal.Parse(monthFilterCmbx.Text.Substring(0, 2));
+  
+            int month = Int32.Parse(filterAppointmentsMonthCmbx.Text.Substring(0, 2));
             string venue = filterAppointmentsVenueCmbx.Text;
             int capacity = Int32.Parse(filterAppointmentsCapacityCmbx.Text);
-            if (string.IsNullOrEmpty(yearFilterCmbx.Text) && string.IsNullOrEmpty(monthFilterCmbx.Text) && string.IsNullOrEmpty(venue))
+            if (string.IsNullOrEmpty(monthFilterCmbx.Text) && string.IsNullOrEmpty(venue))
             {
                 MessageBox.Show("Please select at least one field to be filtered");
 
@@ -273,7 +273,7 @@ namespace BloodBankSystem
         private void button6_Click(object sender, EventArgs e)
         {
             DataView dataView = new DataView(ist2jwDataSet.Appointment);
-            dataView.Sort = "Date ASC";
+            dataView.Sort = "AppDate ASC";
 
             appointmentsDataGrid.DataSource = dataView;
         }
