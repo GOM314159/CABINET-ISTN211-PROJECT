@@ -3891,10 +3891,11 @@ SELECT AppID, AppDate, Time, Capacity, Venue FROM Appointment WHERE (AppID = @Ap
             this._commandCollection[0].CommandType = global::System.Data.CommandType.Text;
             this._commandCollection[1] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[1].Connection = this.Connection;
-            this._commandCollection[1].CommandText = "SELECT AppID, AppDate, Time, Capacity, Venue\r\nFROM     Appointment\r\nWHERE  ((MONT" +
-                "H(AppDate) = @Month) OR\r\n                  (Capacity = @Capacity) OR\r\n          " +
-                "        (Venue = @Venue))";
+            this._commandCollection[1].CommandText = "SELECT AppID, AppDate, Time, Capacity, Venue\r\nFROM     Appointment\r\nWHERE  (YEAR(" +
+                "AppDate) = @Year) OR\r\n                  (MONTH(AppDate) = @Month) OR\r\n          " +
+                "        (Capacity = @Capacity) OR\r\n                  (Venue = @Venue)";
             this._commandCollection[1].CommandType = global::System.Data.CommandType.Text;
+            this._commandCollection[1].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Year", global::System.Data.SqlDbType.Decimal, 0, global::System.Data.ParameterDirection.Input, 0, 0, "", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._commandCollection[1].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Month", global::System.Data.SqlDbType.Decimal, 0, global::System.Data.ParameterDirection.Input, 0, 0, "", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._commandCollection[1].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Capacity", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.Input, 0, 0, "Capacity", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._commandCollection[1].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Venue", global::System.Data.SqlDbType.VarChar, 50, global::System.Data.ParameterDirection.Input, 0, 0, "Venue", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
@@ -3945,15 +3946,16 @@ SELECT AppID, AppDate, Time, Capacity, Venue FROM Appointment WHERE (AppID = @Ap
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, false)]
-        public virtual ist2jwDataSet.AppointmentDataTable FilterDataBy(decimal Month, int Capacity, string Venue) {
+        public virtual ist2jwDataSet.AppointmentDataTable FilterDataBy(decimal Year, decimal Month, int Capacity, string Venue) {
             this.Adapter.SelectCommand = this.CommandCollection[1];
-            this.Adapter.SelectCommand.Parameters[0].Value = ((decimal)(Month));
-            this.Adapter.SelectCommand.Parameters[1].Value = ((int)(Capacity));
+            this.Adapter.SelectCommand.Parameters[0].Value = ((decimal)(Year));
+            this.Adapter.SelectCommand.Parameters[1].Value = ((decimal)(Month));
+            this.Adapter.SelectCommand.Parameters[2].Value = ((int)(Capacity));
             if ((Venue == null)) {
                 throw new global::System.ArgumentNullException("Venue");
             }
             else {
-                this.Adapter.SelectCommand.Parameters[2].Value = ((string)(Venue));
+                this.Adapter.SelectCommand.Parameters[3].Value = ((string)(Venue));
             }
             ist2jwDataSet.AppointmentDataTable dataTable = new ist2jwDataSet.AppointmentDataTable();
             this.Adapter.Fill(dataTable);
