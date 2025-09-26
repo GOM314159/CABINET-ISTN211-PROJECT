@@ -19,7 +19,7 @@ namespace BloodBankSystem
             InitializeComponent();
             userID = dbuserID;
             userName = name;
-            prfNameLbl.Text = userID + "'s Profile"; 
+            prfNameLbl.Text = userName + "'s Profile"; 
             welcomelbl.Text = "Welcome "+ userName;
             prfPnl.Visible = false;
         }
