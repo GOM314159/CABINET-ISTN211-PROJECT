@@ -42,8 +42,6 @@ namespace BloodBankSystem {
         
         private global::System.Data.DataRelation relationFK_TblBloodInventory_tblUsers;
         
-        private global::System.Data.DataRelation relationFK_Schedule_Appointment;
-        
         private global::System.Data.SchemaSerializationMode _schemaSerializationMode = global::System.Data.SchemaSerializationMode.IncludeSchema;
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -282,11 +280,28 @@ namespace BloodBankSystem {
                     this.tabletblUsers.InitVars();
                 }
             }
+            this.tableUserAppointments = ((UserAppointmentsDataTable)(base.Tables["UserAppointments"]));
+            if ((initTable == true)) {
+                if ((this.tableUserAppointments != null)) {
+                    this.tableUserAppointments.InitVars();
+                }
+            }
+            this.tableAppointment = ((AppointmentDataTable)(base.Tables["Appointment"]));
+            if ((initTable == true)) {
+                if ((this.tableAppointment != null)) {
+                    this.tableAppointment.InitVars();
+                }
+            }
+            this.tableSchedule = ((ScheduleDataTable)(base.Tables["Schedule"]));
+            if ((initTable == true)) {
+                if ((this.tableSchedule != null)) {
+                    this.tableSchedule.InitVars();
+                }
+            }
             this.relationFK_Schedule_Appointment = this.Relations["FK_Schedule_Appointment"];
             this.relationFK_Schedule_tblUsers = this.Relations["FK_Schedule_tblUsers"];
             this.relationFK_TblBloodInventory_Appointment = this.Relations["FK_TblBloodInventory_Appointment"];
             this.relationFK_TblBloodInventory_tblUsers = this.Relations["FK_TblBloodInventory_tblUsers"];
-            this.relationFK_Schedule_Appointment = this.Relations["FK_Schedule_Appointment"];
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -301,9 +316,15 @@ namespace BloodBankSystem {
             base.Tables.Add(this.tableTblBloodInventory);
             this.tabletblUsers = new tblUsersDataTable();
             base.Tables.Add(this.tabletblUsers);
+            this.tableUserAppointments = new UserAppointmentsDataTable();
+            base.Tables.Add(this.tableUserAppointments);
+            this.tableAppointment = new AppointmentDataTable();
+            base.Tables.Add(this.tableAppointment);
+            this.tableSchedule = new ScheduleDataTable();
+            base.Tables.Add(this.tableSchedule);
             this.relationFK_Schedule_Appointment = new global::System.Data.DataRelation("FK_Schedule_Appointment", new global::System.Data.DataColumn[] {
                         this.tableAppointment.AppIDColumn}, new global::System.Data.DataColumn[] {
-                        this.tableSchedule.AppointmentIDColumn}, false);
+                        this.tableSchedule.AppIDColumn}, false);
             this.Relations.Add(this.relationFK_Schedule_Appointment);
             this.relationFK_Schedule_tblUsers = new global::System.Data.DataRelation("FK_Schedule_tblUsers", new global::System.Data.DataColumn[] {
                         this.tabletblUsers.UserIDColumn}, new global::System.Data.DataColumn[] {
@@ -317,10 +338,6 @@ namespace BloodBankSystem {
                         this.tabletblUsers.UserIDColumn}, new global::System.Data.DataColumn[] {
                         this.tableTblBloodInventory.UserIDColumn}, false);
             this.Relations.Add(this.relationFK_TblBloodInventory_tblUsers);
-            this.relationFK_Schedule_Appointment = new global::System.Data.DataRelation("FK_Schedule_Appointment", new global::System.Data.DataColumn[] {
-                        this.tableAppointment.AppIDColumn}, new global::System.Data.DataColumn[] {
-                        this.tableSchedule.AppIDColumn}, false);
-            this.Relations.Add(this.relationFK_Schedule_Appointment);
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -760,7 +777,21 @@ namespace BloodBankSystem {
             
             private global::System.Data.DataColumn columnUserID;
             
-            private global::System.Data.DataColumn columnAppointmentID;
+            private global::System.Data.DataColumn columnPassword;
+            
+            private global::System.Data.DataColumn columnName;
+            
+            private global::System.Data.DataColumn columnSurname;
+            
+            private global::System.Data.DataColumn columnIDNumber;
+            
+            private global::System.Data.DataColumn columnPhoneNumber;
+            
+            private global::System.Data.DataColumn columnUserType;
+            
+            private global::System.Data.DataColumn columnBloodType;
+            
+            private global::System.Data.DataColumn columnisActiveAccount;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
@@ -813,9 +844,57 @@ namespace BloodBankSystem {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public global::System.Data.DataColumn AppointmentIDColumn {
+            public global::System.Data.DataColumn NameColumn {
                 get {
-                    return this.columnAppointmentID;
+                    return this.columnName;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public global::System.Data.DataColumn SurnameColumn {
+                get {
+                    return this.columnSurname;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public global::System.Data.DataColumn IDNumberColumn {
+                get {
+                    return this.columnIDNumber;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public global::System.Data.DataColumn PhoneNumberColumn {
+                get {
+                    return this.columnPhoneNumber;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public global::System.Data.DataColumn UserTypeColumn {
+                get {
+                    return this.columnUserType;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public global::System.Data.DataColumn BloodTypeColumn {
+                get {
+                    return this.columnBloodType;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public global::System.Data.DataColumn isActiveAccountColumn {
+                get {
+                    return this.columnisActiveAccount;
                 }
             }
             
@@ -856,21 +935,21 @@ namespace BloodBankSystem {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public ScheduleRow AddScheduleRow(string ScheduleID, tblUsersRow parenttblUsersRowByFK_Schedule_tblUsers, AppointmentRow parentAppointmentRowByFK_Schedule_Appointment) {
-                ScheduleRow rowScheduleRow = ((ScheduleRow)(this.NewRow()));
+            public tblUsersRow AddtblUsersRow(string UserID, string Password, string Name, string Surname, string IDNumber, string PhoneNumber, string UserType, string BloodType, bool isActiveAccount) {
+                tblUsersRow rowtblUsersRow = ((tblUsersRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
-                        ScheduleID,
-                        null,
-                        null};
-                if ((parenttblUsersRowByFK_Schedule_tblUsers != null)) {
-                    columnValuesArray[1] = parenttblUsersRowByFK_Schedule_tblUsers[0];
-                }
-                if ((parentAppointmentRowByFK_Schedule_Appointment != null)) {
-                    columnValuesArray[2] = parentAppointmentRowByFK_Schedule_Appointment[0];
-                }
-                rowScheduleRow.ItemArray = columnValuesArray;
-                this.Rows.Add(rowScheduleRow);
-                return rowScheduleRow;
+                        UserID,
+                        Password,
+                        Name,
+                        Surname,
+                        IDNumber,
+                        PhoneNumber,
+                        UserType,
+                        BloodType,
+                        isActiveAccount};
+                rowtblUsersRow.ItemArray = columnValuesArray;
+                this.Rows.Add(rowtblUsersRow);
+                return rowtblUsersRow;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -898,7 +977,14 @@ namespace BloodBankSystem {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             internal void InitVars() {
                 this.columnUserID = base.Columns["UserID"];
-                this.columnAppointmentID = base.Columns["AppointmentID"];
+                this.columnPassword = base.Columns["Password"];
+                this.columnName = base.Columns["Name"];
+                this.columnSurname = base.Columns["Surname"];
+                this.columnIDNumber = base.Columns["IDNumber"];
+                this.columnPhoneNumber = base.Columns["PhoneNumber"];
+                this.columnUserType = base.Columns["UserType"];
+                this.columnBloodType = base.Columns["BloodType"];
+                this.columnisActiveAccount = base.Columns["isActiveAccount"];
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -906,15 +992,42 @@ namespace BloodBankSystem {
             private void InitClass() {
                 this.columnUserID = new global::System.Data.DataColumn("UserID", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnUserID);
-                this.columnAppointmentID = new global::System.Data.DataColumn("AppointmentID", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnAppointmentID);
+                this.columnPassword = new global::System.Data.DataColumn("Password", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnPassword);
+                this.columnName = new global::System.Data.DataColumn("Name", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnName);
+                this.columnSurname = new global::System.Data.DataColumn("Surname", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnSurname);
+                this.columnIDNumber = new global::System.Data.DataColumn("IDNumber", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnIDNumber);
+                this.columnPhoneNumber = new global::System.Data.DataColumn("PhoneNumber", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnPhoneNumber);
+                this.columnUserType = new global::System.Data.DataColumn("UserType", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnUserType);
+                this.columnBloodType = new global::System.Data.DataColumn("BloodType", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnBloodType);
+                this.columnisActiveAccount = new global::System.Data.DataColumn("isActiveAccount", typeof(bool), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnisActiveAccount);
                 this.Constraints.Add(new global::System.Data.UniqueConstraint("Constraint1", new global::System.Data.DataColumn[] {
                                 this.columnUserID}, true));
                 this.columnUserID.AllowDBNull = false;
                 this.columnUserID.Unique = true;
                 this.columnUserID.MaxLength = 10;
-                this.columnAppointmentID.AllowDBNull = false;
-                this.columnAppointmentID.MaxLength = 10;
+                this.columnPassword.AllowDBNull = false;
+                this.columnPassword.MaxLength = 50;
+                this.columnName.AllowDBNull = false;
+                this.columnName.MaxLength = 50;
+                this.columnSurname.AllowDBNull = false;
+                this.columnSurname.MaxLength = 50;
+                this.columnIDNumber.AllowDBNull = false;
+                this.columnIDNumber.MaxLength = 13;
+                this.columnPhoneNumber.AllowDBNull = false;
+                this.columnPhoneNumber.MaxLength = 10;
+                this.columnUserType.AllowDBNull = false;
+                this.columnUserType.MaxLength = 1;
+                this.columnBloodType.AllowDBNull = false;
+                this.columnBloodType.MaxLength = 10;
+                this.columnisActiveAccount.AllowDBNull = false;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -1755,23 +1868,44 @@ namespace BloodBankSystem {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public ScheduleRow[] GetScheduleRows() {
-                if ((this.Table.ChildRelations["FK_Schedule_Appointment"] == null)) {
-                    return new ScheduleRow[0];
+            public ScheduleRow this[int index] {
+                get {
+                    return ((ScheduleRow)(this.Rows[index]));
                 }
-                else {
-                    return ((ScheduleRow[])(base.GetChildRows(this.Table.ChildRelations["FK_Schedule_Appointment"])));
-                }
+            }
+            
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public event ScheduleRowChangeEventHandler ScheduleRowChanging;
+            
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public event ScheduleRowChangeEventHandler ScheduleRowChanged;
+            
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public event ScheduleRowChangeEventHandler ScheduleRowDeleting;
+            
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public event ScheduleRowChangeEventHandler ScheduleRowDeleted;
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public void AddScheduleRow(ScheduleRow row) {
+                this.Rows.Add(row);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public TblBloodInventoryRow[] GetTblBloodInventoryRows() {
-                if ((this.Table.ChildRelations["FK_TblBloodInventory_Appointment"] == null)) {
-                    return new TblBloodInventoryRow[0];
+            public ScheduleRow AddScheduleRow(string ScheduleID, tblUsersRow parenttblUsersRowByFK_Schedule_tblUsers, AppointmentRow parentAppointmentRowByFK_Schedule_Appointment, bool Attended) {
+                ScheduleRow rowScheduleRow = ((ScheduleRow)(this.NewRow()));
+                object[] columnValuesArray = new object[] {
+                        ScheduleID,
+                        null,
+                        null,
+                        Attended};
+                if ((parenttblUsersRowByFK_Schedule_tblUsers != null)) {
+                    columnValuesArray[1] = parenttblUsersRowByFK_Schedule_tblUsers[0];
                 }
-                else {
-                    return ((TblBloodInventoryRow[])(base.GetChildRows(this.Table.ChildRelations["FK_TblBloodInventory_Appointment"])));
+                if ((parentAppointmentRowByFK_Schedule_Appointment != null)) {
+                    columnValuesArray[2] = parentAppointmentRowByFK_Schedule_Appointment[0];
                 }
                 rowScheduleRow.ItemArray = columnValuesArray;
                 this.Rows.Add(rowScheduleRow);
@@ -1860,24 +1994,35 @@ namespace BloodBankSystem {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public string AppointmentID {
-                get {
-                    return ((string)(this[this.tableSchedule.AppointmentIDColumn]));
-                }
-                set {
-                    this[this.tableSchedule.AppointmentIDColumn] = value;
+            protected override void OnRowChanging(global::System.Data.DataRowChangeEventArgs e) {
+                base.OnRowChanging(e);
+                if ((this.ScheduleRowChanging != null)) {
+                    this.ScheduleRowChanging(this, new ScheduleRowChangeEvent(((ScheduleRow)(e.Row)), e.Action));
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public AppointmentRow AppointmentRow {
-                get {
-                    return ((AppointmentRow)(this.GetParentRow(this.Table.ParentRelations["FK_Schedule_Appointment"])));
+            protected override void OnRowDeleted(global::System.Data.DataRowChangeEventArgs e) {
+                base.OnRowDeleted(e);
+                if ((this.ScheduleRowDeleted != null)) {
+                    this.ScheduleRowDeleted(this, new ScheduleRowChangeEvent(((ScheduleRow)(e.Row)), e.Action));
                 }
-                set {
-                    this.SetParentRow(value, this.Table.ParentRelations["FK_Schedule_Appointment"]);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            protected override void OnRowDeleting(global::System.Data.DataRowChangeEventArgs e) {
+                base.OnRowDeleting(e);
+                if ((this.ScheduleRowDeleting != null)) {
+                    this.ScheduleRowDeleting(this, new ScheduleRowChangeEvent(((ScheduleRow)(e.Row)), e.Action));
                 }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public void RemoveScheduleRow(ScheduleRow row) {
+                this.Rows.Remove(row);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -1939,6 +2084,8 @@ namespace BloodBankSystem {
                         }
                     }
                 }
+                xs.Add(dsSchema);
+                return type;
             }
         }
         
@@ -3066,33 +3213,65 @@ SELECT UnitID, UserID, AppID, BloodType, ExpiryDate FROM TblBloodInventory WHERE
             tableMapping.SourceTable = "Table";
             tableMapping.DataSetTable = "tblUsers";
             tableMapping.ColumnMappings.Add("UserID", "UserID");
-            tableMapping.ColumnMappings.Add("AppointmentID", "AppointmentID");
+            tableMapping.ColumnMappings.Add("Password", "Password");
+            tableMapping.ColumnMappings.Add("Name", "Name");
+            tableMapping.ColumnMappings.Add("Surname", "Surname");
+            tableMapping.ColumnMappings.Add("IDNumber", "IDNumber");
+            tableMapping.ColumnMappings.Add("PhoneNumber", "PhoneNumber");
+            tableMapping.ColumnMappings.Add("UserType", "UserType");
+            tableMapping.ColumnMappings.Add("BloodType", "BloodType");
+            tableMapping.ColumnMappings.Add("isActiveAccount", "isActiveAccount");
             this._adapter.TableMappings.Add(tableMapping);
             this._adapter.DeleteCommand = new global::System.Data.SqlClient.SqlCommand();
             this._adapter.DeleteCommand.Connection = this.Connection;
-            this._adapter.DeleteCommand.CommandText = "DELETE FROM [dbo].[Schedule] WHERE (([ScheduleID] = @Original_ScheduleID) AND ([U" +
-                "serID] = @Original_UserID) AND ([AppointmentID] = @Original_AppointmentID))";
+            this._adapter.DeleteCommand.CommandText = @"DELETE FROM [dbo].[tblUsers] WHERE (([UserID] = @Original_UserID) AND ([Password] = @Original_Password) AND ([Name] = @Original_Name) AND ([Surname] = @Original_Surname) AND ([IDNumber] = @Original_IDNumber) AND ([PhoneNumber] = @Original_PhoneNumber) AND ([UserType] = @Original_UserType) AND ([BloodType] = @Original_BloodType) AND ([isActiveAccount] = @Original_isActiveAccount))";
             this._adapter.DeleteCommand.CommandType = global::System.Data.CommandType.Text;
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_UserID", global::System.Data.SqlDbType.NChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "UserID", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_AppointmentID", global::System.Data.SqlDbType.NChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "AppointmentID", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Password", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Password", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Name", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Name", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Surname", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Surname", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_IDNumber", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "IDNumber", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_PhoneNumber", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "PhoneNumber", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_UserType", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "UserType", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_BloodType", global::System.Data.SqlDbType.NChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "BloodType", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_isActiveAccount", global::System.Data.SqlDbType.Bit, 0, global::System.Data.ParameterDirection.Input, 0, 0, "isActiveAccount", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.InsertCommand = new global::System.Data.SqlClient.SqlCommand();
             this._adapter.InsertCommand.Connection = this.Connection;
-            this._adapter.InsertCommand.CommandText = "INSERT INTO [dbo].[Schedule] ([ScheduleID], [UserID], [AppointmentID]) VALUES (@S" +
-                "cheduleID, @UserID, @AppointmentID);\r\nSELECT ScheduleID, UserID, AppointmentID F" +
-                "ROM Schedule WHERE (ScheduleID = @ScheduleID)";
+            this._adapter.InsertCommand.CommandText = @"INSERT INTO [dbo].[tblUsers] ([UserID], [Password], [Name], [Surname], [IDNumber], [PhoneNumber], [UserType], [BloodType], [isActiveAccount]) VALUES (@UserID, @Password, @Name, @Surname, @IDNumber, @PhoneNumber, @UserType, @BloodType, @isActiveAccount);
+SELECT UserID, Password, Name, Surname, IDNumber, PhoneNumber, UserType, BloodType, isActiveAccount FROM tblUsers WHERE (UserID = @UserID)";
             this._adapter.InsertCommand.CommandType = global::System.Data.CommandType.Text;
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@UserID", global::System.Data.SqlDbType.NChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "UserID", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@AppointmentID", global::System.Data.SqlDbType.NChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "AppointmentID", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Password", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Password", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Name", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Name", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Surname", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Surname", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IDNumber", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "IDNumber", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@PhoneNumber", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "PhoneNumber", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@UserType", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "UserType", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@BloodType", global::System.Data.SqlDbType.NChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "BloodType", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@isActiveAccount", global::System.Data.SqlDbType.Bit, 0, global::System.Data.ParameterDirection.Input, 0, 0, "isActiveAccount", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand = new global::System.Data.SqlClient.SqlCommand();
             this._adapter.UpdateCommand.Connection = this.Connection;
-            this._adapter.UpdateCommand.CommandText = @"UPDATE [dbo].[Schedule] SET [ScheduleID] = @ScheduleID, [UserID] = @UserID, [AppointmentID] = @AppointmentID WHERE (([ScheduleID] = @Original_ScheduleID) AND ([UserID] = @Original_UserID) AND ([AppointmentID] = @Original_AppointmentID));
-SELECT ScheduleID, UserID, AppointmentID FROM Schedule WHERE (ScheduleID = @ScheduleID)";
+            this._adapter.UpdateCommand.CommandText = @"UPDATE [dbo].[tblUsers] SET [UserID] = @UserID, [Password] = @Password, [Name] = @Name, [Surname] = @Surname, [IDNumber] = @IDNumber, [PhoneNumber] = @PhoneNumber, [UserType] = @UserType, [BloodType] = @BloodType, [isActiveAccount] = @isActiveAccount WHERE (([UserID] = @Original_UserID) AND ([Password] = @Original_Password) AND ([Name] = @Original_Name) AND ([Surname] = @Original_Surname) AND ([IDNumber] = @Original_IDNumber) AND ([PhoneNumber] = @Original_PhoneNumber) AND ([UserType] = @Original_UserType) AND ([BloodType] = @Original_BloodType) AND ([isActiveAccount] = @Original_isActiveAccount));
+SELECT UserID, Password, Name, Surname, IDNumber, PhoneNumber, UserType, BloodType, isActiveAccount FROM tblUsers WHERE (UserID = @UserID)";
             this._adapter.UpdateCommand.CommandType = global::System.Data.CommandType.Text;
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@UserID", global::System.Data.SqlDbType.NChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "UserID", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@AppointmentID", global::System.Data.SqlDbType.NChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "AppointmentID", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_ScheduleID", global::System.Data.SqlDbType.NChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "ScheduleID", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Password", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Password", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Name", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Name", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Surname", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Surname", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IDNumber", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "IDNumber", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@PhoneNumber", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "PhoneNumber", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@UserType", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "UserType", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@BloodType", global::System.Data.SqlDbType.NChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "BloodType", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@isActiveAccount", global::System.Data.SqlDbType.Bit, 0, global::System.Data.ParameterDirection.Input, 0, 0, "isActiveAccount", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_UserID", global::System.Data.SqlDbType.NChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "UserID", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_AppointmentID", global::System.Data.SqlDbType.NChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "AppointmentID", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Password", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Password", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Name", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Name", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Surname", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Surname", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_IDNumber", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "IDNumber", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_PhoneNumber", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "PhoneNumber", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_UserType", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "UserType", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_BloodType", global::System.Data.SqlDbType.NChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "BloodType", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_isActiveAccount", global::System.Data.SqlDbType.Bit, 0, global::System.Data.ParameterDirection.Input, 0, 0, "isActiveAccount", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -3108,7 +3287,8 @@ SELECT ScheduleID, UserID, AppointmentID FROM Schedule WHERE (ScheduleID = @Sche
             this._commandCollection = new global::System.Data.SqlClient.SqlCommand[4];
             this._commandCollection[0] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[0].Connection = this.Connection;
-            this._commandCollection[0].CommandText = "SELECT ScheduleID, UserID, AppointmentID FROM dbo.Schedule";
+            this._commandCollection[0].CommandText = "SELECT UserID, Password, Name, Surname, IDNumber, PhoneNumber, UserType, BloodTyp" +
+                "e, isActiveAccount FROM dbo.tblUsers";
             this._commandCollection[0].CommandType = global::System.Data.CommandType.Text;
             this._commandCollection[1] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[1].Connection = this.Connection;
@@ -3229,9 +3409,9 @@ SELECT UserID, Password, Name, Surname, IDNumber, PhoneNumber, UserType, BloodTy
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Delete, true)]
-        public virtual int Delete(string Original_ScheduleID, string Original_UserID, string Original_AppointmentID) {
-            if ((Original_ScheduleID == null)) {
-                throw new global::System.ArgumentNullException("Original_ScheduleID");
+        public virtual int Delete(string Original_UserID, string Original_Password, string Original_Name, string Original_Surname, string Original_IDNumber, string Original_PhoneNumber, string Original_UserType, string Original_BloodType, bool Original_isActiveAccount) {
+            if ((Original_UserID == null)) {
+                throw new global::System.ArgumentNullException("Original_UserID");
             }
             else {
                 this.Adapter.DeleteCommand.Parameters[0].Value = ((string)(Original_UserID));
@@ -3242,12 +3422,43 @@ SELECT UserID, Password, Name, Surname, IDNumber, PhoneNumber, UserType, BloodTy
             else {
                 this.Adapter.DeleteCommand.Parameters[1].Value = ((string)(Original_Password));
             }
-            if ((Original_AppointmentID == null)) {
-                throw new global::System.ArgumentNullException("Original_AppointmentID");
+            if ((Original_Name == null)) {
+                throw new global::System.ArgumentNullException("Original_Name");
             }
             else {
-                this.Adapter.DeleteCommand.Parameters[2].Value = ((string)(Original_AppointmentID));
+                this.Adapter.DeleteCommand.Parameters[2].Value = ((string)(Original_Name));
             }
+            if ((Original_Surname == null)) {
+                throw new global::System.ArgumentNullException("Original_Surname");
+            }
+            else {
+                this.Adapter.DeleteCommand.Parameters[3].Value = ((string)(Original_Surname));
+            }
+            if ((Original_IDNumber == null)) {
+                throw new global::System.ArgumentNullException("Original_IDNumber");
+            }
+            else {
+                this.Adapter.DeleteCommand.Parameters[4].Value = ((string)(Original_IDNumber));
+            }
+            if ((Original_PhoneNumber == null)) {
+                throw new global::System.ArgumentNullException("Original_PhoneNumber");
+            }
+            else {
+                this.Adapter.DeleteCommand.Parameters[5].Value = ((string)(Original_PhoneNumber));
+            }
+            if ((Original_UserType == null)) {
+                throw new global::System.ArgumentNullException("Original_UserType");
+            }
+            else {
+                this.Adapter.DeleteCommand.Parameters[6].Value = ((string)(Original_UserType));
+            }
+            if ((Original_BloodType == null)) {
+                throw new global::System.ArgumentNullException("Original_BloodType");
+            }
+            else {
+                this.Adapter.DeleteCommand.Parameters[7].Value = ((string)(Original_BloodType));
+            }
+            this.Adapter.DeleteCommand.Parameters[8].Value = ((bool)(Original_isActiveAccount));
             global::System.Data.ConnectionState previousConnectionState = this.Adapter.DeleteCommand.Connection.State;
             if (((this.Adapter.DeleteCommand.Connection.State & global::System.Data.ConnectionState.Open) 
                         != global::System.Data.ConnectionState.Open)) {
@@ -3268,9 +3479,9 @@ SELECT UserID, Password, Name, Surname, IDNumber, PhoneNumber, UserType, BloodTy
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Insert, true)]
-        public virtual int Insert(string ScheduleID, string UserID, string AppointmentID) {
-            if ((ScheduleID == null)) {
-                throw new global::System.ArgumentNullException("ScheduleID");
+        public virtual int Insert(string UserID, string Password, string Name, string Surname, string IDNumber, string PhoneNumber, string UserType, string BloodType, bool isActiveAccount) {
+            if ((UserID == null)) {
+                throw new global::System.ArgumentNullException("UserID");
             }
             else {
                 this.Adapter.InsertCommand.Parameters[0].Value = ((string)(UserID));
@@ -3281,12 +3492,43 @@ SELECT UserID, Password, Name, Surname, IDNumber, PhoneNumber, UserType, BloodTy
             else {
                 this.Adapter.InsertCommand.Parameters[1].Value = ((string)(Password));
             }
-            if ((AppointmentID == null)) {
-                throw new global::System.ArgumentNullException("AppointmentID");
+            if ((Name == null)) {
+                throw new global::System.ArgumentNullException("Name");
             }
             else {
-                this.Adapter.InsertCommand.Parameters[2].Value = ((string)(AppointmentID));
+                this.Adapter.InsertCommand.Parameters[2].Value = ((string)(Name));
             }
+            if ((Surname == null)) {
+                throw new global::System.ArgumentNullException("Surname");
+            }
+            else {
+                this.Adapter.InsertCommand.Parameters[3].Value = ((string)(Surname));
+            }
+            if ((IDNumber == null)) {
+                throw new global::System.ArgumentNullException("IDNumber");
+            }
+            else {
+                this.Adapter.InsertCommand.Parameters[4].Value = ((string)(IDNumber));
+            }
+            if ((PhoneNumber == null)) {
+                throw new global::System.ArgumentNullException("PhoneNumber");
+            }
+            else {
+                this.Adapter.InsertCommand.Parameters[5].Value = ((string)(PhoneNumber));
+            }
+            if ((UserType == null)) {
+                throw new global::System.ArgumentNullException("UserType");
+            }
+            else {
+                this.Adapter.InsertCommand.Parameters[6].Value = ((string)(UserType));
+            }
+            if ((BloodType == null)) {
+                throw new global::System.ArgumentNullException("BloodType");
+            }
+            else {
+                this.Adapter.InsertCommand.Parameters[7].Value = ((string)(BloodType));
+            }
+            this.Adapter.InsertCommand.Parameters[8].Value = ((bool)(isActiveAccount));
             global::System.Data.ConnectionState previousConnectionState = this.Adapter.InsertCommand.Connection.State;
             if (((this.Adapter.InsertCommand.Connection.State & global::System.Data.ConnectionState.Open) 
                         != global::System.Data.ConnectionState.Open)) {
@@ -3307,9 +3549,27 @@ SELECT UserID, Password, Name, Surname, IDNumber, PhoneNumber, UserType, BloodTy
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Update, true)]
-        public virtual int Update(string ScheduleID, string UserID, string AppointmentID, string Original_ScheduleID, string Original_UserID, string Original_AppointmentID) {
-            if ((ScheduleID == null)) {
-                throw new global::System.ArgumentNullException("ScheduleID");
+        public virtual int Update(
+                    string UserID, 
+                    string Password, 
+                    string Name, 
+                    string Surname, 
+                    string IDNumber, 
+                    string PhoneNumber, 
+                    string UserType, 
+                    string BloodType, 
+                    bool isActiveAccount, 
+                    string Original_UserID, 
+                    string Original_Password, 
+                    string Original_Name, 
+                    string Original_Surname, 
+                    string Original_IDNumber, 
+                    string Original_PhoneNumber, 
+                    string Original_UserType, 
+                    string Original_BloodType, 
+                    bool Original_isActiveAccount) {
+            if ((UserID == null)) {
+                throw new global::System.ArgumentNullException("UserID");
             }
             else {
                 this.Adapter.UpdateCommand.Parameters[0].Value = ((string)(UserID));
@@ -3320,17 +3580,17 @@ SELECT UserID, Password, Name, Surname, IDNumber, PhoneNumber, UserType, BloodTy
             else {
                 this.Adapter.UpdateCommand.Parameters[1].Value = ((string)(Password));
             }
-            if ((AppointmentID == null)) {
-                throw new global::System.ArgumentNullException("AppointmentID");
+            if ((Name == null)) {
+                throw new global::System.ArgumentNullException("Name");
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[2].Value = ((string)(AppointmentID));
+                this.Adapter.UpdateCommand.Parameters[2].Value = ((string)(Name));
             }
-            if ((Original_ScheduleID == null)) {
-                throw new global::System.ArgumentNullException("Original_ScheduleID");
+            if ((Surname == null)) {
+                throw new global::System.ArgumentNullException("Surname");
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[3].Value = ((string)(Original_ScheduleID));
+                this.Adapter.UpdateCommand.Parameters[3].Value = ((string)(Surname));
             }
             if ((IDNumber == null)) {
                 throw new global::System.ArgumentNullException("IDNumber");
@@ -3361,14 +3621,51 @@ SELECT UserID, Password, Name, Surname, IDNumber, PhoneNumber, UserType, BloodTy
                 throw new global::System.ArgumentNullException("Original_UserID");
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[4].Value = ((string)(Original_UserID));
+                this.Adapter.UpdateCommand.Parameters[9].Value = ((string)(Original_UserID));
             }
-            if ((Original_AppointmentID == null)) {
-                throw new global::System.ArgumentNullException("Original_AppointmentID");
+            if ((Original_Password == null)) {
+                throw new global::System.ArgumentNullException("Original_Password");
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[5].Value = ((string)(Original_AppointmentID));
+                this.Adapter.UpdateCommand.Parameters[10].Value = ((string)(Original_Password));
             }
+            if ((Original_Name == null)) {
+                throw new global::System.ArgumentNullException("Original_Name");
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[11].Value = ((string)(Original_Name));
+            }
+            if ((Original_Surname == null)) {
+                throw new global::System.ArgumentNullException("Original_Surname");
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[12].Value = ((string)(Original_Surname));
+            }
+            if ((Original_IDNumber == null)) {
+                throw new global::System.ArgumentNullException("Original_IDNumber");
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[13].Value = ((string)(Original_IDNumber));
+            }
+            if ((Original_PhoneNumber == null)) {
+                throw new global::System.ArgumentNullException("Original_PhoneNumber");
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[14].Value = ((string)(Original_PhoneNumber));
+            }
+            if ((Original_UserType == null)) {
+                throw new global::System.ArgumentNullException("Original_UserType");
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[15].Value = ((string)(Original_UserType));
+            }
+            if ((Original_BloodType == null)) {
+                throw new global::System.ArgumentNullException("Original_BloodType");
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[16].Value = ((string)(Original_BloodType));
+            }
+            this.Adapter.UpdateCommand.Parameters[17].Value = ((bool)(Original_isActiveAccount));
             global::System.Data.ConnectionState previousConnectionState = this.Adapter.UpdateCommand.Connection.State;
             if (((this.Adapter.UpdateCommand.Connection.State & global::System.Data.ConnectionState.Open) 
                         != global::System.Data.ConnectionState.Open)) {
@@ -3389,8 +3686,25 @@ SELECT UserID, Password, Name, Surname, IDNumber, PhoneNumber, UserType, BloodTy
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Update, true)]
-        public virtual int Update(string UserID, string AppointmentID, string Original_ScheduleID, string Original_UserID, string Original_AppointmentID) {
-            return this.Update(Original_ScheduleID, UserID, AppointmentID, Original_ScheduleID, Original_UserID, Original_AppointmentID);
+        public virtual int Update(
+                    string Password, 
+                    string Name, 
+                    string Surname, 
+                    string IDNumber, 
+                    string PhoneNumber, 
+                    string UserType, 
+                    string BloodType, 
+                    bool isActiveAccount, 
+                    string Original_UserID, 
+                    string Original_Password, 
+                    string Original_Name, 
+                    string Original_Surname, 
+                    string Original_IDNumber, 
+                    string Original_PhoneNumber, 
+                    string Original_UserType, 
+                    string Original_BloodType, 
+                    bool Original_isActiveAccount) {
+            return this.Update(Original_UserID, Password, Name, Surname, IDNumber, PhoneNumber, UserType, BloodType, isActiveAccount, Original_UserID, Original_Password, Original_Name, Original_Surname, Original_IDNumber, Original_PhoneNumber, Original_UserType, Original_BloodType, Original_isActiveAccount);
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -3891,11 +4205,10 @@ SELECT AppID, AppDate, Time, Capacity, Venue FROM Appointment WHERE (AppID = @Ap
             this._commandCollection[0].CommandType = global::System.Data.CommandType.Text;
             this._commandCollection[1] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[1].Connection = this.Connection;
-            this._commandCollection[1].CommandText = "SELECT AppID, AppDate, Time, Capacity, Venue\r\nFROM     Appointment\r\nWHERE  (YEAR(" +
-                "AppDate) = @Year) OR\r\n                  (MONTH(AppDate) = @Month) OR\r\n          " +
-                "        (Capacity = @Capacity) OR\r\n                  (Venue = @Venue)";
+            this._commandCollection[1].CommandText = "SELECT AppID, AppDate, Time, Capacity, Venue\r\nFROM     Appointment\r\nWHERE     (MO" +
+                "NTH(AppDate) = @Month) OR\r\n                  (Capacity = @Capacity) OR\r\n        " +
+                "          (Venue = @Venue)";
             this._commandCollection[1].CommandType = global::System.Data.CommandType.Text;
-            this._commandCollection[1].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Year", global::System.Data.SqlDbType.Decimal, 0, global::System.Data.ParameterDirection.Input, 0, 0, "", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._commandCollection[1].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Month", global::System.Data.SqlDbType.Decimal, 0, global::System.Data.ParameterDirection.Input, 0, 0, "", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._commandCollection[1].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Capacity", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.Input, 0, 0, "Capacity", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._commandCollection[1].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Venue", global::System.Data.SqlDbType.VarChar, 50, global::System.Data.ParameterDirection.Input, 0, 0, "Venue", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
@@ -3946,16 +4259,15 @@ SELECT AppID, AppDate, Time, Capacity, Venue FROM Appointment WHERE (AppID = @Ap
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, false)]
-        public virtual ist2jwDataSet.AppointmentDataTable FilterDataBy(decimal Year, decimal Month, int Capacity, string Venue) {
+        public virtual ist2jwDataSet.AppointmentDataTable FilterDataBy(decimal Month, int Capacity, string Venue) {
             this.Adapter.SelectCommand = this.CommandCollection[1];
-            this.Adapter.SelectCommand.Parameters[0].Value = ((decimal)(Year));
-            this.Adapter.SelectCommand.Parameters[1].Value = ((decimal)(Month));
-            this.Adapter.SelectCommand.Parameters[2].Value = ((int)(Capacity));
+            this.Adapter.SelectCommand.Parameters[0].Value = ((decimal)(Month));
+            this.Adapter.SelectCommand.Parameters[1].Value = ((int)(Capacity));
             if ((Venue == null)) {
                 throw new global::System.ArgumentNullException("Venue");
             }
             else {
-                this.Adapter.SelectCommand.Parameters[3].Value = ((string)(Venue));
+                this.Adapter.SelectCommand.Parameters[2].Value = ((string)(Venue));
             }
             ist2jwDataSet.AppointmentDataTable dataTable = new ist2jwDataSet.AppointmentDataTable();
             this.Adapter.Fill(dataTable);
