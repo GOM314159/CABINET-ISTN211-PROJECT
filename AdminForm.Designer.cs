@@ -35,11 +35,9 @@
             this.ist2jwDataSet = new BloodBankSystem.ist2jwDataSet();
             this.tblBloodInventoryBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.appointmentBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.scheduleBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.tblUsersTableAdapter = new BloodBankSystem.ist2jwDataSetTableAdapters.tblUsersTableAdapter();
             this.tblBloodInventoryTableAdapter = new BloodBankSystem.ist2jwDataSetTableAdapters.TblBloodInventoryTableAdapter();
             this.appointmentTableAdapter = new BloodBankSystem.ist2jwDataSetTableAdapters.AppointmentTableAdapter();
-            this.scheduleTableAdapter = new BloodBankSystem.ist2jwDataSetTableAdapters.ScheduleTableAdapter();
             this.tabPage3 = new System.Windows.Forms.TabPage();
             this.panel7 = new System.Windows.Forms.Panel();
             this.button19 = new System.Windows.Forms.Button();
@@ -91,8 +89,8 @@
             this.label12 = new System.Windows.Forms.Label();
             this.label11 = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
+            this.btnBloodDelete = new System.Windows.Forms.Button();
+            this.btnBloodApply = new System.Windows.Forms.Button();
             this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
             this.comboBox3 = new System.Windows.Forms.ComboBox();
             this.textBox9 = new System.Windows.Forms.TextBox();
@@ -154,12 +152,20 @@
             this.txtPassword = new System.Windows.Forms.TextBox();
             this.txtUserID = new System.Windows.Forms.TextBox();
             this.tabControl1 = new System.Windows.Forms.TabControl();
+            this.tabPage4 = new System.Windows.Forms.TabPage();
+            this.scheduleBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.scheduleTableAdapter = new BloodBankSystem.ist2jwDataSetTableAdapters.ScheduleTableAdapter();
+            this.tableAdapterManager = new BloodBankSystem.ist2jwDataSetTableAdapters.TableAdapterManager();
+            this.scheduleDataGridView = new System.Windows.Forms.DataGridView();
+            this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewCheckBoxColumn1 = new System.Windows.Forms.DataGridViewCheckBoxColumn();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.tblUsersBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ist2jwDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.tblBloodInventoryBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.appointmentBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.scheduleBindingSource)).BeginInit();
             this.tabPage3.SuspendLayout();
             this.panel7.SuspendLayout();
             this.panel13.SuspendLayout();
@@ -180,6 +186,9 @@
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.pnlUserEdit.SuspendLayout();
             this.tabControl1.SuspendLayout();
+            this.tabPage4.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.scheduleBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.scheduleDataGridView)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
@@ -222,11 +231,6 @@
             this.appointmentBindingSource.DataMember = "Appointment";
             this.appointmentBindingSource.DataSource = this.ist2jwDataSet;
             // 
-            // scheduleBindingSource
-            // 
-            this.scheduleBindingSource.DataMember = "Schedule";
-            this.scheduleBindingSource.DataSource = this.ist2jwDataSet;
-            // 
             // tblUsersTableAdapter
             // 
             this.tblUsersTableAdapter.ClearBeforeFill = true;
@@ -238,10 +242,6 @@
             // appointmentTableAdapter
             // 
             this.appointmentTableAdapter.ClearBeforeFill = true;
-            // 
-            // scheduleTableAdapter
-            // 
-            this.scheduleTableAdapter.ClearBeforeFill = true;
             // 
             // tabPage3
             // 
@@ -418,9 +418,9 @@
             this.panel4.Controls.Add(this.dateTimePicker3);
             this.panel4.Controls.Add(this.dateTimePicker2);
             this.panel4.Controls.Add(this.textBox10);
-            this.panel4.Location = new System.Drawing.Point(3, 199);
+            this.panel4.Location = new System.Drawing.Point(139, 199);
             this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(784, 192);
+            this.panel4.Size = new System.Drawing.Size(544, 185);
             this.panel4.TabIndex = 1;
             // 
             // button20
@@ -492,6 +492,7 @@
             this.button5.TabIndex = 4;
             this.button5.Text = "Apply changes";
             this.button5.UseVisualStyleBackColor = true;
+            this.button5.Click += new System.EventHandler(this.button5_Click);
             // 
             // numericUpDown1
             // 
@@ -716,17 +717,17 @@
             this.panel3.Controls.Add(this.label12);
             this.panel3.Controls.Add(this.label11);
             this.panel3.Controls.Add(this.label10);
-            this.panel3.Controls.Add(this.button2);
-            this.panel3.Controls.Add(this.button1);
+            this.panel3.Controls.Add(this.btnBloodDelete);
+            this.panel3.Controls.Add(this.btnBloodApply);
             this.panel3.Controls.Add(this.dateTimePicker1);
             this.panel3.Controls.Add(this.comboBox3);
             this.panel3.Controls.Add(this.textBox9);
             this.panel3.Controls.Add(this.textBox8);
             this.panel3.Controls.Add(this.textBox7);
             this.panel3.ForeColor = System.Drawing.SystemColors.ActiveCaption;
-            this.panel3.Location = new System.Drawing.Point(8, 189);
+            this.panel3.Location = new System.Drawing.Point(191, 190);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(499, 195);
+            this.panel3.Size = new System.Drawing.Size(499, 194);
             this.panel3.TabIndex = 1;
             // 
             // label14
@@ -784,27 +785,28 @@
             this.label10.TabIndex = 8;
             this.label10.Text = "UnitID:";
             // 
-            // button2
+            // btnBloodDelete
             // 
-            this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button2.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.button2.Location = new System.Drawing.Point(263, 101);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(125, 39);
-            this.button2.TabIndex = 7;
-            this.button2.Text = "Delete record";
-            this.button2.UseVisualStyleBackColor = true;
+            this.btnBloodDelete.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnBloodDelete.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.btnBloodDelete.Location = new System.Drawing.Point(263, 91);
+            this.btnBloodDelete.Name = "btnBloodDelete";
+            this.btnBloodDelete.Size = new System.Drawing.Size(125, 39);
+            this.btnBloodDelete.TabIndex = 7;
+            this.btnBloodDelete.Text = "Delete record";
+            this.btnBloodDelete.UseVisualStyleBackColor = true;
+            this.btnBloodDelete.Click += new System.EventHandler(this.button2_Click);
             // 
-            // button1
+            // btnBloodApply
             // 
-            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.button1.Location = new System.Drawing.Point(263, 158);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(125, 34);
-            this.button1.TabIndex = 6;
-            this.button1.Text = "Apply changes";
-            this.button1.UseVisualStyleBackColor = true;
+            this.btnBloodApply.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnBloodApply.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.btnBloodApply.Location = new System.Drawing.Point(263, 146);
+            this.btnBloodApply.Name = "btnBloodApply";
+            this.btnBloodApply.Size = new System.Drawing.Size(125, 34);
+            this.btnBloodApply.TabIndex = 6;
+            this.btnBloodApply.Text = "Apply changes";
+            this.btnBloodApply.UseVisualStyleBackColor = true;
             // 
             // dateTimePicker1
             // 
@@ -930,6 +932,7 @@
             this.btnRemoveFilter.TabIndex = 1;
             this.btnRemoveFilter.Text = "Remove";
             this.btnRemoveFilter.UseVisualStyleBackColor = true;
+            this.btnRemoveFilter.Click += new System.EventHandler(this.btnRemoveFilter_Click);
             // 
             // pnlUserNav
             // 
@@ -1027,6 +1030,7 @@
             this.btnUserFilter.TabIndex = 7;
             this.btnUserFilter.Text = "Fliter by user type";
             this.btnUserFilter.UseVisualStyleBackColor = true;
+            this.btnUserFilter.Click += new System.EventHandler(this.btnUserFilter_Click);
             // 
             // cmbBloodFilter
             // 
@@ -1060,6 +1064,7 @@
             this.btnSurnameAlphabetical.TabIndex = 4;
             this.btnSurnameAlphabetical.Text = "Sort alphabetically(Surname)";
             this.btnSurnameAlphabetical.UseVisualStyleBackColor = true;
+            this.btnSurnameAlphabetical.Click += new System.EventHandler(this.btnSurnameAlphabetical_Click);
             // 
             // btnNameAlphabetical
             // 
@@ -1088,6 +1093,7 @@
             this.btnFilterActive.TabIndex = 1;
             this.btnFilterActive.Text = "Filter by active";
             this.btnFilterActive.UseVisualStyleBackColor = true;
+            this.btnFilterActive.Click += new System.EventHandler(this.btnFilterActive_Click);
             // 
             // label19
             // 
@@ -1196,9 +1202,9 @@
             this.pnlUserEdit.Controls.Add(this.txtPassword);
             this.pnlUserEdit.Controls.Add(this.txtUserID);
             this.pnlUserEdit.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.pnlUserEdit.Location = new System.Drawing.Point(6, 218);
+            this.pnlUserEdit.Location = new System.Drawing.Point(100, 215);
             this.pnlUserEdit.Name = "pnlUserEdit";
-            this.pnlUserEdit.Size = new System.Drawing.Size(778, 163);
+            this.pnlUserEdit.Size = new System.Drawing.Size(635, 163);
             this.pnlUserEdit.TabIndex = 2;
             // 
             // btnInsertUser
@@ -1308,6 +1314,7 @@
             this.btnUpdateUser.TabIndex = 10;
             this.btnUpdateUser.Text = "Apply changes";
             this.btnUpdateUser.UseVisualStyleBackColor = true;
+            this.btnUpdateUser.Click += new System.EventHandler(this.btnUpdateUser_Click);
             // 
             // chkActive
             // 
@@ -1324,6 +1331,9 @@
             // 
             this.cmbUser.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.tblUsersBindingSource, "UserType", true));
             this.cmbUser.FormattingEnabled = true;
+            this.cmbUser.Items.AddRange(new object[] {
+            "A",
+            "D"});
             this.cmbUser.Location = new System.Drawing.Point(320, 61);
             this.cmbUser.Name = "cmbUser";
             this.cmbUser.Size = new System.Drawing.Size(121, 24);
@@ -1334,6 +1344,11 @@
             this.cmbBlood.DataBindings.Add(new System.Windows.Forms.Binding("SelectedValue", this.tblUsersBindingSource, "UserType", true));
             this.cmbBlood.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.tblUsersBindingSource, "BloodType", true));
             this.cmbBlood.FormattingEnabled = true;
+            this.cmbBlood.Items.AddRange(new object[] {
+            "A",
+            "B",
+            "AB",
+            "O"});
             this.cmbBlood.Location = new System.Drawing.Point(320, 86);
             this.cmbBlood.Name = "cmbBlood";
             this.cmbBlood.Size = new System.Drawing.Size(121, 24);
@@ -1395,17 +1410,86 @@
             this.tabControl1.Controls.Add(this.tabPage1);
             this.tabControl1.Controls.Add(this.tabPage2);
             this.tabControl1.Controls.Add(this.tabPage3);
+            this.tabControl1.Controls.Add(this.tabPage4);
             this.tabControl1.Location = new System.Drawing.Point(0, 41);
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
             this.tabControl1.Size = new System.Drawing.Size(801, 413);
-            this.tabControl1.TabIndex = 1;
+            this.tabControl1.TabIndex = 2;
+            // 
+            // tabPage4
+            // 
+            this.tabPage4.Controls.Add(this.scheduleDataGridView);
+            this.tabPage4.Location = new System.Drawing.Point(4, 22);
+            this.tabPage4.Name = "tabPage4";
+            this.tabPage4.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage4.Size = new System.Drawing.Size(793, 387);
+            this.tabPage4.TabIndex = 3;
+            this.tabPage4.Text = "   Schedule   ";
+            this.tabPage4.UseVisualStyleBackColor = true;
+            // 
+            // scheduleBindingSource
+            // 
+            this.scheduleBindingSource.DataMember = "Schedule";
+            this.scheduleBindingSource.DataSource = this.ist2jwDataSet;
+            // 
+            // scheduleTableAdapter
+            // 
+            this.scheduleTableAdapter.ClearBeforeFill = true;
+            // 
+            // tableAdapterManager
+            // 
+            this.tableAdapterManager.AppointmentTableAdapter = this.appointmentTableAdapter;
+            this.tableAdapterManager.BackupDataSetBeforeUpdate = false;
+            this.tableAdapterManager.ScheduleTableAdapter = this.scheduleTableAdapter;
+            this.tableAdapterManager.TblBloodInventoryTableAdapter = this.tblBloodInventoryTableAdapter;
+            this.tableAdapterManager.tblUsersTableAdapter = this.tblUsersTableAdapter;
+            this.tableAdapterManager.UpdateOrder = BloodBankSystem.ist2jwDataSetTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete;
+            // 
+            // scheduleDataGridView
+            // 
+            this.scheduleDataGridView.AutoGenerateColumns = false;
+            this.scheduleDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.scheduleDataGridView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.dataGridViewTextBoxColumn1,
+            this.dataGridViewTextBoxColumn2,
+            this.dataGridViewTextBoxColumn3,
+            this.dataGridViewCheckBoxColumn1});
+            this.scheduleDataGridView.DataSource = this.scheduleBindingSource;
+            this.scheduleDataGridView.Location = new System.Drawing.Point(8, 6);
+            this.scheduleDataGridView.Name = "scheduleDataGridView";
+            this.scheduleDataGridView.Size = new System.Drawing.Size(441, 180);
+            this.scheduleDataGridView.TabIndex = 0;
+            // 
+            // dataGridViewTextBoxColumn1
+            // 
+            this.dataGridViewTextBoxColumn1.DataPropertyName = "ScheduleID";
+            this.dataGridViewTextBoxColumn1.HeaderText = "ScheduleID";
+            this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
+            // 
+            // dataGridViewTextBoxColumn2
+            // 
+            this.dataGridViewTextBoxColumn2.DataPropertyName = "UserID";
+            this.dataGridViewTextBoxColumn2.HeaderText = "UserID";
+            this.dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
+            // 
+            // dataGridViewTextBoxColumn3
+            // 
+            this.dataGridViewTextBoxColumn3.DataPropertyName = "AppID";
+            this.dataGridViewTextBoxColumn3.HeaderText = "AppID";
+            this.dataGridViewTextBoxColumn3.Name = "dataGridViewTextBoxColumn3";
+            // 
+            // dataGridViewCheckBoxColumn1
+            // 
+            this.dataGridViewCheckBoxColumn1.DataPropertyName = "Attended";
+            this.dataGridViewCheckBoxColumn1.HeaderText = "Attended";
+            this.dataGridViewCheckBoxColumn1.Name = "dataGridViewCheckBoxColumn1";
             // 
             // AdminForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(801, 454);
             this.Controls.Add(this.tabControl1);
             this.Controls.Add(this.panel1);
             this.Name = "AdminForm";
@@ -1417,7 +1501,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.ist2jwDataSet)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.tblBloodInventoryBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.appointmentBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.scheduleBindingSource)).EndInit();
             this.tabPage3.ResumeLayout(false);
             this.panel7.ResumeLayout(false);
             this.panel7.PerformLayout();
@@ -1444,6 +1527,9 @@
             this.pnlUserEdit.ResumeLayout(false);
             this.pnlUserEdit.PerformLayout();
             this.tabControl1.ResumeLayout(false);
+            this.tabPage4.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.scheduleBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.scheduleDataGridView)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -1459,8 +1545,6 @@
         private ist2jwDataSetTableAdapters.TblBloodInventoryTableAdapter tblBloodInventoryTableAdapter;
         private System.Windows.Forms.BindingSource appointmentBindingSource;
         private ist2jwDataSetTableAdapters.AppointmentTableAdapter appointmentTableAdapter;
-        private System.Windows.Forms.BindingSource scheduleBindingSource;
-        private ist2jwDataSetTableAdapters.ScheduleTableAdapter scheduleTableAdapter;
         private System.Windows.Forms.TabPage tabPage3;
         private System.Windows.Forms.Panel panel7;
         private System.Windows.Forms.Button button19;
@@ -1511,8 +1595,8 @@
         private System.Windows.Forms.Label label12;
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.Label label10;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button btnBloodDelete;
+        private System.Windows.Forms.Button btnBloodApply;
         private System.Windows.Forms.DateTimePicker dateTimePicker1;
         private System.Windows.Forms.ComboBox comboBox3;
         private System.Windows.Forms.TextBox textBox9;
@@ -1575,5 +1659,14 @@
         private System.Windows.Forms.TextBox txtUserID;
         private System.Windows.Forms.TabControl tabControl1;
         private System.Windows.Forms.Button button20;
+        private System.Windows.Forms.TabPage tabPage4;
+        private System.Windows.Forms.BindingSource scheduleBindingSource;
+        private ist2jwDataSetTableAdapters.ScheduleTableAdapter scheduleTableAdapter;
+        private ist2jwDataSetTableAdapters.TableAdapterManager tableAdapterManager;
+        private System.Windows.Forms.DataGridView scheduleDataGridView;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn2;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn3;
+        private System.Windows.Forms.DataGridViewCheckBoxColumn dataGridViewCheckBoxColumn1;
     }
 }
