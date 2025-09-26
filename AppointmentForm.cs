@@ -186,7 +186,7 @@ namespace BloodBankSystem
             } else
             {
                 var adapter = new ist2jwDataSetTableAdapters.UserAppointmentsTableAdapter();
-                var dataTable = adapter.FilterDataBy(year, month, venue , attendedFilterRdBtn.Checked);
+                var dataTable = adapter.FilterDataBy(month, venue , attendedFilterRdBtn.Checked);
                 userAppointmentsDataGrid.DataSource = dataTable; 
             }
 
@@ -245,7 +245,7 @@ namespace BloodBankSystem
                 int capacity = Int32.Parse(filterAppointmentsCapacityCmbx.Text);
 
                 var adapter = new ist2jwDataSetTableAdapters.AppointmentTableAdapter();
-                var dataTable = adapter.FilterDataBy(year, month, capacity,venue);
+                var dataTable = adapter.FilterDataBy(month, capacity,venue);
                 userAppointmentsDataGrid.DataSource = dataTable;
             }
         }
