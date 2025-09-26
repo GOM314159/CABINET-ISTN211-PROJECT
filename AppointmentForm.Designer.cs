@@ -31,6 +31,8 @@
             this.components = new System.ComponentModel.Container();
             this.userAppointmentsDataGrid = new System.Windows.Forms.DataGridView();
             this.appointmentBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.ist2jwDataSetBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.ist2jwDataSet = new BloodBankSystem.ist2jwDataSet();
             this.scheduleBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.btnBookAppointment = new System.Windows.Forms.Button();
             this.btnHome = new System.Windows.Forms.Button();
@@ -66,9 +68,22 @@
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
             this.panel8 = new System.Windows.Forms.Panel();
+            this.filterAppointmentsCapacityCmbx = new System.Windows.Forms.ComboBox();
+            this.filterAppointmentsVenueCmbx = new System.Windows.Forms.ComboBox();
+            this.filterAppointmentsMonthCmbx = new System.Windows.Forms.ComboBox();
+            this.filterAppointmentsYearCmbx = new System.Windows.Forms.ComboBox();
+            this.label12 = new System.Windows.Forms.Label();
+            this.label11 = new System.Windows.Forms.Label();
+            this.label10 = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
+            this.filterResetAppointments = new System.Windows.Forms.Button();
+            this.filterAppointmentsBtn = new System.Windows.Forms.Button();
             this.label2 = new System.Windows.Forms.Label();
             this.panel7 = new System.Windows.Forms.Panel();
+            this.button8 = new System.Windows.Forms.Button();
+            this.button6 = new System.Windows.Forms.Button();
             this.sortAppointmentDateBtn = new System.Windows.Forms.Button();
+            this.sortAppointmentsVenueBtn = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.panel6 = new System.Windows.Forms.Panel();
             this.tabPage2 = new System.Windows.Forms.TabPage();
@@ -76,27 +91,14 @@
             this.userAppointmentsBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
             this.tblBloodInventoryBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.button5 = new System.Windows.Forms.Button();
-            this.filterAppointmentsBtn = new System.Windows.Forms.Button();
-            this.filterResetAppointments = new System.Windows.Forms.Button();
-            this.sortAppointmentsVenueBtn = new System.Windows.Forms.Button();
-            this.label4 = new System.Windows.Forms.Label();
-            this.label10 = new System.Windows.Forms.Label();
-            this.label11 = new System.Windows.Forms.Label();
-            this.label12 = new System.Windows.Forms.Label();
-            this.filterAppointmentsYearCmbx = new System.Windows.Forms.ComboBox();
-            this.filterAppointmentsMonthCmbx = new System.Windows.Forms.ComboBox();
-            this.filterAppointmentsVenueCmbx = new System.Windows.Forms.ComboBox();
-            this.filterAppointmentsCapacityCmbx = new System.Windows.Forms.ComboBox();
-            this.ist2jwDataSetBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.ist2jwDataSet = new BloodBankSystem.ist2jwDataSet();
             this.appointmentTableAdapter = new BloodBankSystem.ist2jwDataSetTableAdapters.AppointmentTableAdapter();
             this.scheduleTableAdapter = new BloodBankSystem.ist2jwDataSetTableAdapters.ScheduleTableAdapter();
             this.userAppointmentsTableAdapter = new BloodBankSystem.ist2jwDataSetTableAdapters.UserAppointmentsTableAdapter();
             this.tblBloodInventoryTableAdapter = new BloodBankSystem.ist2jwDataSetTableAdapters.TblBloodInventoryTableAdapter();
-            this.button6 = new System.Windows.Forms.Button();
-            this.button8 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.userAppointmentsDataGrid)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.appointmentBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ist2jwDataSetBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ist2jwDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.scheduleBindingSource)).BeginInit();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.appointmentsDataGrid)).BeginInit();
@@ -113,8 +115,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.userAppointmentsBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.userAppointmentsBindingSource1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.tblBloodInventoryBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.ist2jwDataSetBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.ist2jwDataSet)).BeginInit();
             this.SuspendLayout();
             // 
             // userAppointmentsDataGrid
@@ -133,6 +133,16 @@
             // 
             this.appointmentBindingSource.DataMember = "Appointment";
             this.appointmentBindingSource.DataSource = this.ist2jwDataSetBindingSource;
+            // 
+            // ist2jwDataSetBindingSource
+            // 
+            this.ist2jwDataSetBindingSource.DataSource = this.ist2jwDataSet;
+            this.ist2jwDataSetBindingSource.Position = 0;
+            // 
+            // ist2jwDataSet
+            // 
+            this.ist2jwDataSet.DataSetName = "ist2jwDataSet";
+            this.ist2jwDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // scheduleBindingSource
             // 
@@ -517,7 +527,7 @@
             this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
             this.tabPage1.Size = new System.Drawing.Size(944, 587);
             this.tabPage1.TabIndex = 0;
-            this.tabPage1.Text = "New Appointment";
+            this.tabPage1.Text = "Schedule an Appointment";
             // 
             // panel8
             // 
@@ -537,6 +547,121 @@
             this.panel8.Name = "panel8";
             this.panel8.Size = new System.Drawing.Size(310, 287);
             this.panel8.TabIndex = 11;
+            // 
+            // filterAppointmentsCapacityCmbx
+            // 
+            this.filterAppointmentsCapacityCmbx.FormattingEnabled = true;
+            this.filterAppointmentsCapacityCmbx.Items.AddRange(new object[] {
+            "1",
+            "2"});
+            this.filterAppointmentsCapacityCmbx.Location = new System.Drawing.Point(158, 179);
+            this.filterAppointmentsCapacityCmbx.Name = "filterAppointmentsCapacityCmbx";
+            this.filterAppointmentsCapacityCmbx.Size = new System.Drawing.Size(121, 24);
+            this.filterAppointmentsCapacityCmbx.TabIndex = 10;
+            // 
+            // filterAppointmentsVenueCmbx
+            // 
+            this.filterAppointmentsVenueCmbx.FormattingEnabled = true;
+            this.filterAppointmentsVenueCmbx.Items.AddRange(new object[] {
+            "Westville",
+            "Springfield",
+            "Durban Noth",
+            "Phoenix"});
+            this.filterAppointmentsVenueCmbx.Location = new System.Drawing.Point(158, 142);
+            this.filterAppointmentsVenueCmbx.Name = "filterAppointmentsVenueCmbx";
+            this.filterAppointmentsVenueCmbx.Size = new System.Drawing.Size(121, 24);
+            this.filterAppointmentsVenueCmbx.TabIndex = 9;
+            // 
+            // filterAppointmentsMonthCmbx
+            // 
+            this.filterAppointmentsMonthCmbx.FormattingEnabled = true;
+            this.filterAppointmentsMonthCmbx.Items.AddRange(new object[] {
+            "01 January",
+            "02 Feburary",
+            "03 March",
+            "04 April",
+            "05 May",
+            "06 June",
+            "07 July",
+            "08 August ",
+            "09 September",
+            "10 October ",
+            "11 November",
+            "12 December"});
+            this.filterAppointmentsMonthCmbx.Location = new System.Drawing.Point(158, 99);
+            this.filterAppointmentsMonthCmbx.Name = "filterAppointmentsMonthCmbx";
+            this.filterAppointmentsMonthCmbx.Size = new System.Drawing.Size(121, 24);
+            this.filterAppointmentsMonthCmbx.TabIndex = 8;
+            // 
+            // filterAppointmentsYearCmbx
+            // 
+            this.filterAppointmentsYearCmbx.FormattingEnabled = true;
+            this.filterAppointmentsYearCmbx.Items.AddRange(new object[] {
+            "2025"});
+            this.filterAppointmentsYearCmbx.Location = new System.Drawing.Point(158, 57);
+            this.filterAppointmentsYearCmbx.Name = "filterAppointmentsYearCmbx";
+            this.filterAppointmentsYearCmbx.Size = new System.Drawing.Size(121, 24);
+            this.filterAppointmentsYearCmbx.TabIndex = 7;
+            // 
+            // label12
+            // 
+            this.label12.AutoSize = true;
+            this.label12.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label12.Location = new System.Drawing.Point(60, 180);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(81, 24);
+            this.label12.TabIndex = 6;
+            this.label12.Text = "Capacity";
+            // 
+            // label11
+            // 
+            this.label11.AutoSize = true;
+            this.label11.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label11.Location = new System.Drawing.Point(67, 143);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(67, 24);
+            this.label11.TabIndex = 5;
+            this.label11.Text = "Venue";
+            // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label10.Location = new System.Drawing.Point(74, 99);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(63, 24);
+            this.label10.TabIndex = 4;
+            this.label10.Text = "Month";
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.Location = new System.Drawing.Point(77, 57);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(49, 24);
+            this.label4.TabIndex = 3;
+            this.label4.Text = "Year";
+            // 
+            // filterResetAppointments
+            // 
+            this.filterResetAppointments.Location = new System.Drawing.Point(173, 244);
+            this.filterResetAppointments.Name = "filterResetAppointments";
+            this.filterResetAppointments.Size = new System.Drawing.Size(91, 31);
+            this.filterResetAppointments.TabIndex = 2;
+            this.filterResetAppointments.Text = "Reset";
+            this.filterResetAppointments.UseVisualStyleBackColor = true;
+            this.filterResetAppointments.Click += new System.EventHandler(this.filterResetAppointments_Click);
+            // 
+            // filterAppointmentsBtn
+            // 
+            this.filterAppointmentsBtn.Location = new System.Drawing.Point(63, 244);
+            this.filterAppointmentsBtn.Name = "filterAppointmentsBtn";
+            this.filterAppointmentsBtn.Size = new System.Drawing.Size(91, 31);
+            this.filterAppointmentsBtn.TabIndex = 1;
+            this.filterAppointmentsBtn.Text = "Apply ";
+            this.filterAppointmentsBtn.UseVisualStyleBackColor = true;
+            this.filterAppointmentsBtn.Click += new System.EventHandler(this.filterAppointmentsBtn_Click);
             // 
             // label2
             // 
@@ -563,6 +688,26 @@
             this.panel7.TabIndex = 10;
             this.panel7.Paint += new System.Windows.Forms.PaintEventHandler(this.panel7_Paint);
             // 
+            // button8
+            // 
+            this.button8.Location = new System.Drawing.Point(158, 63);
+            this.button8.Name = "button8";
+            this.button8.Size = new System.Drawing.Size(147, 34);
+            this.button8.TabIndex = 4;
+            this.button8.Text = "Venue (Ascending)";
+            this.button8.UseVisualStyleBackColor = true;
+            this.button8.Click += new System.EventHandler(this.button8_Click);
+            // 
+            // button6
+            // 
+            this.button6.Location = new System.Drawing.Point(22, 63);
+            this.button6.Name = "button6";
+            this.button6.Size = new System.Drawing.Size(130, 34);
+            this.button6.TabIndex = 3;
+            this.button6.Text = "Date (Ascending)";
+            this.button6.UseVisualStyleBackColor = true;
+            this.button6.Click += new System.EventHandler(this.button6_Click);
+            // 
             // sortAppointmentDateBtn
             // 
             this.sortAppointmentDateBtn.Location = new System.Drawing.Point(22, 103);
@@ -572,6 +717,16 @@
             this.sortAppointmentDateBtn.Text = "Date (Descending)";
             this.sortAppointmentDateBtn.UseVisualStyleBackColor = true;
             this.sortAppointmentDateBtn.Click += new System.EventHandler(this.sortAppointmentDateBtn_Click);
+            // 
+            // sortAppointmentsVenueBtn
+            // 
+            this.sortAppointmentsVenueBtn.Location = new System.Drawing.Point(158, 103);
+            this.sortAppointmentsVenueBtn.Name = "sortAppointmentsVenueBtn";
+            this.sortAppointmentsVenueBtn.Size = new System.Drawing.Size(147, 34);
+            this.sortAppointmentsVenueBtn.TabIndex = 2;
+            this.sortAppointmentsVenueBtn.Text = "Venue (Descending)";
+            this.sortAppointmentsVenueBtn.UseVisualStyleBackColor = true;
+            this.sortAppointmentsVenueBtn.Click += new System.EventHandler(this.sortAppointmentsVenueBtn_Click);
             // 
             // label1
             // 
@@ -630,141 +785,6 @@
             this.button5.Text = "Refresh";
             this.button5.UseVisualStyleBackColor = true;
             // 
-            // filterAppointmentsBtn
-            // 
-            this.filterAppointmentsBtn.Location = new System.Drawing.Point(63, 244);
-            this.filterAppointmentsBtn.Name = "filterAppointmentsBtn";
-            this.filterAppointmentsBtn.Size = new System.Drawing.Size(91, 31);
-            this.filterAppointmentsBtn.TabIndex = 1;
-            this.filterAppointmentsBtn.Text = "Apply ";
-            this.filterAppointmentsBtn.UseVisualStyleBackColor = true;
-            this.filterAppointmentsBtn.Click += new System.EventHandler(this.filterAppointmentsBtn_Click);
-            // 
-            // filterResetAppointments
-            // 
-            this.filterResetAppointments.Location = new System.Drawing.Point(173, 244);
-            this.filterResetAppointments.Name = "filterResetAppointments";
-            this.filterResetAppointments.Size = new System.Drawing.Size(91, 31);
-            this.filterResetAppointments.TabIndex = 2;
-            this.filterResetAppointments.Text = "Reset";
-            this.filterResetAppointments.UseVisualStyleBackColor = true;
-            this.filterResetAppointments.Click += new System.EventHandler(this.filterResetAppointments_Click);
-            // 
-            // sortAppointmentsVenueBtn
-            // 
-            this.sortAppointmentsVenueBtn.Location = new System.Drawing.Point(158, 103);
-            this.sortAppointmentsVenueBtn.Name = "sortAppointmentsVenueBtn";
-            this.sortAppointmentsVenueBtn.Size = new System.Drawing.Size(147, 34);
-            this.sortAppointmentsVenueBtn.TabIndex = 2;
-            this.sortAppointmentsVenueBtn.Text = "Venue (Descending)";
-            this.sortAppointmentsVenueBtn.UseVisualStyleBackColor = true;
-            this.sortAppointmentsVenueBtn.Click += new System.EventHandler(this.sortAppointmentsVenueBtn_Click);
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(77, 57);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(49, 24);
-            this.label4.TabIndex = 3;
-            this.label4.Text = "Year";
-            // 
-            // label10
-            // 
-            this.label10.AutoSize = true;
-            this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label10.Location = new System.Drawing.Point(74, 99);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(63, 24);
-            this.label10.TabIndex = 4;
-            this.label10.Text = "Month";
-            // 
-            // label11
-            // 
-            this.label11.AutoSize = true;
-            this.label11.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label11.Location = new System.Drawing.Point(67, 143);
-            this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(67, 24);
-            this.label11.TabIndex = 5;
-            this.label11.Text = "Venue";
-            // 
-            // label12
-            // 
-            this.label12.AutoSize = true;
-            this.label12.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label12.Location = new System.Drawing.Point(60, 180);
-            this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(81, 24);
-            this.label12.TabIndex = 6;
-            this.label12.Text = "Capacity";
-            // 
-            // filterAppointmentsYearCmbx
-            // 
-            this.filterAppointmentsYearCmbx.FormattingEnabled = true;
-            this.filterAppointmentsYearCmbx.Items.AddRange(new object[] {
-            "2025"});
-            this.filterAppointmentsYearCmbx.Location = new System.Drawing.Point(158, 57);
-            this.filterAppointmentsYearCmbx.Name = "filterAppointmentsYearCmbx";
-            this.filterAppointmentsYearCmbx.Size = new System.Drawing.Size(121, 24);
-            this.filterAppointmentsYearCmbx.TabIndex = 7;
-            // 
-            // filterAppointmentsMonthCmbx
-            // 
-            this.filterAppointmentsMonthCmbx.FormattingEnabled = true;
-            this.filterAppointmentsMonthCmbx.Items.AddRange(new object[] {
-            "01 January",
-            "02 Feburary",
-            "03 March",
-            "04 April",
-            "05 May",
-            "06 June",
-            "07 July",
-            "08 August ",
-            "09 September",
-            "10 October ",
-            "11 November",
-            "12 December"});
-            this.filterAppointmentsMonthCmbx.Location = new System.Drawing.Point(158, 99);
-            this.filterAppointmentsMonthCmbx.Name = "filterAppointmentsMonthCmbx";
-            this.filterAppointmentsMonthCmbx.Size = new System.Drawing.Size(121, 24);
-            this.filterAppointmentsMonthCmbx.TabIndex = 8;
-            // 
-            // filterAppointmentsVenueCmbx
-            // 
-            this.filterAppointmentsVenueCmbx.FormattingEnabled = true;
-            this.filterAppointmentsVenueCmbx.Items.AddRange(new object[] {
-            "Westville",
-            "Springfield",
-            "Durban Noth",
-            "Phoenix"});
-            this.filterAppointmentsVenueCmbx.Location = new System.Drawing.Point(158, 142);
-            this.filterAppointmentsVenueCmbx.Name = "filterAppointmentsVenueCmbx";
-            this.filterAppointmentsVenueCmbx.Size = new System.Drawing.Size(121, 24);
-            this.filterAppointmentsVenueCmbx.TabIndex = 9;
-            // 
-            // filterAppointmentsCapacityCmbx
-            // 
-            this.filterAppointmentsCapacityCmbx.FormattingEnabled = true;
-            this.filterAppointmentsCapacityCmbx.Items.AddRange(new object[] {
-            "1",
-            "2"});
-            this.filterAppointmentsCapacityCmbx.Location = new System.Drawing.Point(158, 179);
-            this.filterAppointmentsCapacityCmbx.Name = "filterAppointmentsCapacityCmbx";
-            this.filterAppointmentsCapacityCmbx.Size = new System.Drawing.Size(121, 24);
-            this.filterAppointmentsCapacityCmbx.TabIndex = 10;
-            // 
-            // ist2jwDataSetBindingSource
-            // 
-            this.ist2jwDataSetBindingSource.DataSource = this.ist2jwDataSet;
-            this.ist2jwDataSetBindingSource.Position = 0;
-            // 
-            // ist2jwDataSet
-            // 
-            this.ist2jwDataSet.DataSetName = "ist2jwDataSet";
-            this.ist2jwDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
             // appointmentTableAdapter
             // 
             this.appointmentTableAdapter.ClearBeforeFill = true;
@@ -781,26 +801,6 @@
             // 
             this.tblBloodInventoryTableAdapter.ClearBeforeFill = true;
             // 
-            // button6
-            // 
-            this.button6.Location = new System.Drawing.Point(22, 63);
-            this.button6.Name = "button6";
-            this.button6.Size = new System.Drawing.Size(130, 34);
-            this.button6.TabIndex = 3;
-            this.button6.Text = "Date (Ascending)";
-            this.button6.UseVisualStyleBackColor = true;
-            this.button6.Click += new System.EventHandler(this.button6_Click);
-            // 
-            // button8
-            // 
-            this.button8.Location = new System.Drawing.Point(158, 63);
-            this.button8.Name = "button8";
-            this.button8.Size = new System.Drawing.Size(147, 34);
-            this.button8.TabIndex = 4;
-            this.button8.Text = "Venue (Ascending)";
-            this.button8.UseVisualStyleBackColor = true;
-            this.button8.Click += new System.EventHandler(this.button8_Click);
-            // 
             // AppointmentForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -816,6 +816,8 @@
             this.Load += new System.EventHandler(this.AppointmentForm_Load);
             ((System.ComponentModel.ISupportInitialize)(this.userAppointmentsDataGrid)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.appointmentBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ist2jwDataSetBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ist2jwDataSet)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.scheduleBindingSource)).EndInit();
             this.panel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.appointmentsDataGrid)).EndInit();
@@ -836,8 +838,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.userAppointmentsBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.userAppointmentsBindingSource1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.tblBloodInventoryBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.ist2jwDataSetBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.ist2jwDataSet)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 

@@ -151,7 +151,7 @@ namespace BloodBankSystem
         private void button5_Click(object sender, EventArgs e)
         {
             DataView dataView = new DataView(ist2jwDataSet.UserAppointments);
-            dataView.Sort = "Date DESC";
+            dataView.Sort = "Appointment Date DESC";
 
             userAppointmentsDataGrid.DataSource = dataView;
         }
@@ -159,7 +159,7 @@ namespace BloodBankSystem
         private void sortAttendedBtn_Click(object sender, EventArgs e)
         {
             DataView dataView = new DataView(ist2jwDataSet.UserAppointments);
-            dataView.Sort = "Date DESC , Attended DESC";
+            dataView.Sort = "Appointment Date DESC , Attended DESC";
 
             userAppointmentsDataGrid.DataSource = dataView;
         }
@@ -174,8 +174,8 @@ namespace BloodBankSystem
 
         private void button7_Click(object sender, EventArgs e)
         {
-            decimal year = Decimal.Parse(yearFilterCmbx.Text);
-            decimal month = Decimal.Parse(monthFilterCmbx.Text.Substring(0,2));
+            int year = Int32.Parse(yearFilterCmbx.Text);
+            int month = Int32.Parse(monthFilterCmbx.Text.Substring(0,2));
             string venue = venueFilterCmbx.Text;
 
             if (string.IsNullOrEmpty(yearFilterCmbx.Text) && string.IsNullOrEmpty(monthFilterCmbx.Text) && string.IsNullOrEmpty(venue))
@@ -206,7 +206,7 @@ namespace BloodBankSystem
         private void sortAppointmentDateBtn_Click(object sender, EventArgs e)
         {
             DataView dataView = new DataView(ist2jwDataSet.Appointment);
-            dataView.Sort = "Date DESC";
+            dataView.Sort = "AppDate DESC";
 
             appointmentsDataGrid.DataSource = dataView;
         }
@@ -230,8 +230,8 @@ namespace BloodBankSystem
 
         private void filterAppointmentsBtn_Click(object sender, EventArgs e)
         {
-            decimal year = Decimal.Parse(yearFilterCmbx.Text);
-            decimal month = Decimal.Parse(monthFilterCmbx.Text.Substring(0, 2));
+            int year = Int32.Parse(filterAppointmentsYearCmbx.Text);
+            int month = Int32.Parse(filterAppointmentsMonthCmbx.Text.Substring(0, 2));
             string venue = filterAppointmentsVenueCmbx.Text;
             int capacity = Int32.Parse(filterAppointmentsCapacityCmbx.Text);
             if (string.IsNullOrEmpty(yearFilterCmbx.Text) && string.IsNullOrEmpty(monthFilterCmbx.Text) && string.IsNullOrEmpty(venue))
@@ -273,7 +273,7 @@ namespace BloodBankSystem
         private void button6_Click(object sender, EventArgs e)
         {
             DataView dataView = new DataView(ist2jwDataSet.Appointment);
-            dataView.Sort = "Date ASC";
+            dataView.Sort = "AppDate ASC";
 
             appointmentsDataGrid.DataSource = dataView;
         }

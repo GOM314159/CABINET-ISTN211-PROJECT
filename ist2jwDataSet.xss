@@ -8,7 +8,7 @@
   <Shapes>
     <Shape ID="DesignTable:TblBloodInventory" ZOrder="6" X="838" Y="426" Height="203" Width="253" AdapterExpanded="true" DataTableExpanded="true" OldAdapterHeight="0" OldDataTableHeight="0" SplitterPosition="123" />
     <Shape ID="DesignTable:tblUsers" ZOrder="1" X="788" Y="62" Height="248" Width="192" AdapterExpanded="true" DataTableExpanded="true" OldAdapterHeight="0" OldDataTableHeight="0" SplitterPosition="197" />
-    <Shape ID="DesignTable:UserAppointments" ZOrder="3" X="17" Y="495" Height="250" Width="463" AdapterExpanded="true" DataTableExpanded="true" OldAdapterHeight="0" OldDataTableHeight="0" SplitterPosition="122" />
+    <Shape ID="DesignTable:UserAppointments" ZOrder="3" X="32" Y="466" Height="250" Width="463" AdapterExpanded="true" DataTableExpanded="true" OldAdapterHeight="0" OldDataTableHeight="0" SplitterPosition="122" />
     <Shape ID="DesignTable:Appointment" ZOrder="4" X="10" Y="130" Height="305" Width="405" AdapterExpanded="true" DataTableExpanded="true" OldAdapterHeight="0" OldDataTableHeight="0" SplitterPosition="177" />
     <Shape ID="DesignTable:Schedule" ZOrder="2" X="471" Y="22" Height="252" Width="197" AdapterExpanded="true" DataTableExpanded="true" OldAdapterHeight="0" OldDataTableHeight="0" SplitterPosition="145" />
   </Shapes>
