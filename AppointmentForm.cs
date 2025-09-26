@@ -242,7 +242,7 @@ namespace BloodBankSystem
             else
             {
                 var adapter = new ist2jwDataSetTableAdapters.AppointmentTableAdapter();
-                var dataTable = adapter.FilterDataBy(year, month, capacity,venue);
+                var dataTable = adapter.FilterDataBy(month, capacity,venue);
                 userAppointmentsDataGrid.DataSource = dataTable;
             }
         }
