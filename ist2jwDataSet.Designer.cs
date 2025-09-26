@@ -4202,9 +4202,9 @@ SELECT AppID, AppDate, Time, Capacity, Venue FROM Appointment WHERE (AppID = @Ap
             this._commandCollection[0].CommandType = global::System.Data.CommandType.Text;
             this._commandCollection[1] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[1].Connection = this.Connection;
-            this._commandCollection[1].CommandText = "SELECT AppID, AppDate, Time, Capacity, Venue\r\nFROM     Appointment\r\nWHERE     (MO" +
-                "NTH(AppDate) = @Month) OR\r\n                  (Capacity = @Capacity) OR\r\n        " +
-                "          (Venue = @Venue)";
+            this._commandCollection[1].CommandText = "SELECT AppID, AppDate, Time, Capacity, Venue\r\nFROM     Appointment\r\nWHERE  ((MONT" +
+                "H(AppDate) = @Month) OR\r\n                  (Capacity = @Capacity) OR\r\n          " +
+                "        (Venue = @Venue))";
             this._commandCollection[1].CommandType = global::System.Data.CommandType.Text;
             this._commandCollection[1].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Month", global::System.Data.SqlDbType.Decimal, 0, global::System.Data.ParameterDirection.Input, 0, 0, "", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._commandCollection[1].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Capacity", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.Input, 0, 0, "Capacity", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));

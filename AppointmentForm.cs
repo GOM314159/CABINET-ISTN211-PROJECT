@@ -186,7 +186,7 @@ namespace BloodBankSystem
             } else
             {
                 var adapter = new ist2jwDataSetTableAdapters.UserAppointmentsTableAdapter();
-                var dataTable = adapter.FilterDataBy( month, venue , attendedFilterRdBtn.Checked);
+                var dataTable = adapter.FilterDataBy(month, venue , attendedFilterRdBtn.Checked);
                 userAppointmentsDataGrid.DataSource = dataTable; 
             }
 
