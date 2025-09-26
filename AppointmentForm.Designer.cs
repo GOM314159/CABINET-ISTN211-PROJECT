@@ -31,8 +31,6 @@
             this.components = new System.ComponentModel.Container();
             this.userAppointmentsDataGrid = new System.Windows.Forms.DataGridView();
             this.appointmentBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.ist2jwDataSetBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.ist2jwDataSet = new BloodBankSystem.ist2jwDataSet();
             this.scheduleBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.btnBookAppointment = new System.Windows.Forms.Button();
             this.btnHome = new System.Windows.Forms.Button();
@@ -71,11 +69,9 @@
             this.filterAppointmentsCapacityCmbx = new System.Windows.Forms.ComboBox();
             this.filterAppointmentsVenueCmbx = new System.Windows.Forms.ComboBox();
             this.filterAppointmentsMonthCmbx = new System.Windows.Forms.ComboBox();
-            this.filterAppointmentsYearCmbx = new System.Windows.Forms.ComboBox();
             this.label12 = new System.Windows.Forms.Label();
             this.label11 = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
             this.filterResetAppointments = new System.Windows.Forms.Button();
             this.filterAppointmentsBtn = new System.Windows.Forms.Button();
             this.label2 = new System.Windows.Forms.Label();
@@ -91,14 +87,14 @@
             this.userAppointmentsBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
             this.tblBloodInventoryBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.button5 = new System.Windows.Forms.Button();
+            this.ist2jwDataSetBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.ist2jwDataSet = new BloodBankSystem.ist2jwDataSet();
             this.appointmentTableAdapter = new BloodBankSystem.ist2jwDataSetTableAdapters.AppointmentTableAdapter();
             this.scheduleTableAdapter = new BloodBankSystem.ist2jwDataSetTableAdapters.ScheduleTableAdapter();
             this.userAppointmentsTableAdapter = new BloodBankSystem.ist2jwDataSetTableAdapters.UserAppointmentsTableAdapter();
             this.tblBloodInventoryTableAdapter = new BloodBankSystem.ist2jwDataSetTableAdapters.TblBloodInventoryTableAdapter();
             ((System.ComponentModel.ISupportInitialize)(this.userAppointmentsDataGrid)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.appointmentBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.ist2jwDataSetBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.ist2jwDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.scheduleBindingSource)).BeginInit();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.appointmentsDataGrid)).BeginInit();
@@ -115,6 +111,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.userAppointmentsBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.userAppointmentsBindingSource1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.tblBloodInventoryBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ist2jwDataSetBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ist2jwDataSet)).BeginInit();
             this.SuspendLayout();
             // 
             // userAppointmentsDataGrid
@@ -133,16 +131,6 @@
             // 
             this.appointmentBindingSource.DataMember = "Appointment";
             this.appointmentBindingSource.DataSource = this.ist2jwDataSetBindingSource;
-            // 
-            // ist2jwDataSetBindingSource
-            // 
-            this.ist2jwDataSetBindingSource.DataSource = this.ist2jwDataSet;
-            this.ist2jwDataSetBindingSource.Position = 0;
-            // 
-            // ist2jwDataSet
-            // 
-            this.ist2jwDataSet.DataSetName = "ist2jwDataSet";
-            this.ist2jwDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // scheduleBindingSource
             // 
@@ -535,11 +523,9 @@
             this.panel8.Controls.Add(this.filterAppointmentsCapacityCmbx);
             this.panel8.Controls.Add(this.filterAppointmentsVenueCmbx);
             this.panel8.Controls.Add(this.filterAppointmentsMonthCmbx);
-            this.panel8.Controls.Add(this.filterAppointmentsYearCmbx);
             this.panel8.Controls.Add(this.label12);
             this.panel8.Controls.Add(this.label11);
             this.panel8.Controls.Add(this.label10);
-            this.panel8.Controls.Add(this.label4);
             this.panel8.Controls.Add(this.filterResetAppointments);
             this.panel8.Controls.Add(this.filterAppointmentsBtn);
             this.panel8.Controls.Add(this.label2);
@@ -593,16 +579,6 @@
             this.filterAppointmentsMonthCmbx.Size = new System.Drawing.Size(121, 24);
             this.filterAppointmentsMonthCmbx.TabIndex = 8;
             // 
-            // filterAppointmentsYearCmbx
-            // 
-            this.filterAppointmentsYearCmbx.FormattingEnabled = true;
-            this.filterAppointmentsYearCmbx.Items.AddRange(new object[] {
-            "2025"});
-            this.filterAppointmentsYearCmbx.Location = new System.Drawing.Point(158, 57);
-            this.filterAppointmentsYearCmbx.Name = "filterAppointmentsYearCmbx";
-            this.filterAppointmentsYearCmbx.Size = new System.Drawing.Size(121, 24);
-            this.filterAppointmentsYearCmbx.TabIndex = 7;
-            // 
             // label12
             // 
             this.label12.AutoSize = true;
@@ -632,16 +608,6 @@
             this.label10.Size = new System.Drawing.Size(63, 24);
             this.label10.TabIndex = 4;
             this.label10.Text = "Month";
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(77, 57);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(49, 24);
-            this.label4.TabIndex = 3;
-            this.label4.Text = "Year";
             // 
             // filterResetAppointments
             // 
@@ -785,6 +751,16 @@
             this.button5.Text = "Refresh";
             this.button5.UseVisualStyleBackColor = true;
             // 
+            // ist2jwDataSetBindingSource
+            // 
+            this.ist2jwDataSetBindingSource.DataSource = this.ist2jwDataSet;
+            this.ist2jwDataSetBindingSource.Position = 0;
+            // 
+            // ist2jwDataSet
+            // 
+            this.ist2jwDataSet.DataSetName = "ist2jwDataSet";
+            this.ist2jwDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
             // appointmentTableAdapter
             // 
             this.appointmentTableAdapter.ClearBeforeFill = true;
@@ -816,8 +792,6 @@
             this.Load += new System.EventHandler(this.AppointmentForm_Load);
             ((System.ComponentModel.ISupportInitialize)(this.userAppointmentsDataGrid)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.appointmentBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.ist2jwDataSetBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.ist2jwDataSet)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.scheduleBindingSource)).EndInit();
             this.panel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.appointmentsDataGrid)).EndInit();
@@ -838,6 +812,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.userAppointmentsBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.userAppointmentsBindingSource1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.tblBloodInventoryBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ist2jwDataSetBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ist2jwDataSet)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -903,8 +879,6 @@
         private System.Windows.Forms.Button sortAppointmentsVenueBtn;
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.Label label10;
-        private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.ComboBox filterAppointmentsYearCmbx;
         private System.Windows.Forms.Label label12;
         private System.Windows.Forms.ComboBox filterAppointmentsCapacityCmbx;
         private System.Windows.Forms.ComboBox filterAppointmentsVenueCmbx;
