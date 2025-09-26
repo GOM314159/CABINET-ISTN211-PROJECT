@@ -102,5 +102,15 @@ namespace BloodBankSystem
         {
             tblUsersBindingSource.Sort = "Name ASC";
         }
+
+        private void btnDeleteUser_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnBloodFilter_Click(object sender, EventArgs e)
+        {
+            tblUsersBindingSource.Filter = "BloodType = '" + cmbBloodFilter.Text + "'";
+        }
     }
 }
