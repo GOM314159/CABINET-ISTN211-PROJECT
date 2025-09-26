@@ -52,11 +52,21 @@
     <Compile Include="AdminForm.Designer.cs">
       <DependentUpon>AdminForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="AppointmentForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AppointmentForm.Designer.cs">
+      <DependentUpon>AppointmentForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AppointmentValidation.cs" />
     <Compile Include="HomePage.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="HomePage.Designer.cs">
       <DependentUpon>HomePage.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ist2jwDataSet.cs">
+      <DependentUpon>ist2jwDataSet.xsd</DependentUpon>
     </Compile>
     <Compile Include="ist2jwDataSet.Designer.cs">
       <AutoGen>True</AutoGen>
@@ -77,6 +87,7 @@
     <Compile Include="RegForm.Designer.cs">
       <DependentUpon>RegForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="UserSession.cs" />
     <Compile Include="WelcomeForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -85,6 +96,9 @@
     </Compile>
     <EmbeddedResource Include="AdminForm.resx">
       <DependentUpon>AdminForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AppointmentForm.resx">
+      <DependentUpon>AppointmentForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="HomePage.resx">
       <DependentUpon>HomePage.cs</DependentUpon>
@@ -134,11 +148,14 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Properties\buttonbackBlue.png" />
+    <Content Include="Properties\buttonbackGreen.png" />
+    <Content Include="Properties\ButtonBackOrange.png" />
     <Content Include="Properties\buttonbackRed.png" />
     <Content Include="Properties\HomeBack.jpeg" />
     <Content Include="Properties\HomeBack.jpg" />
     <Content Include="Properties\ProfileBackImg.png" />
     <Content Include="Properties\RegBack.jpg" />
+    <Content Include="Properties\WelcomeBack.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

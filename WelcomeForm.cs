@@ -46,5 +46,20 @@ namespace BloodBankSystem
         {
 
         }
+
+        private void tblUsersBindingNavigatorSaveItem_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void titleLbl_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void ExitBtn_Click(object sender, EventArgs e)
+        {
+            Close();
+        }
     }
 }

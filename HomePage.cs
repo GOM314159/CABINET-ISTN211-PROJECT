@@ -12,10 +12,25 @@ namespace BloodBankSystem
 {
     public partial class HomePage : Form
     {
+        private static String userName;
+        public static String userID;
+        public HomePage(String dbuserID,String name)
+        {
+            InitializeComponent();
+            userID = dbuserID;
+            userName = name;
+            prfNameLbl.Text = userName + "'s Profile"; 
+            welcomelbl.Text = "Welcome "+ userName;
+            prfPnl.Visible = false;
+        }
         public HomePage()
         {
             InitializeComponent();
+            prfNameLbl.Text = userName + "'s Profile";
+            welcomelbl.Text = "Welcome " + userName;
+            prfPnl.Visible = false;
         }
+
 
         private void Form1_Load(object sender, EventArgs e)
         {
@@ -23,7 +38,7 @@ namespace BloodBankSystem
         }
 
         private void ProfileImg_Click(object sender, EventArgs e)
-        {
+        {   // Toggle profile panel visibility
             if (prfPnl.Visible)
             {
                 prfPnl.Visible = false;
@@ -34,12 +49,14 @@ namespace BloodBankSystem
             }
         }
 
-        private void toolTip1_Popup(object sender, PopupEventArgs e)
+        private void donateBtn_Click(object sender, EventArgs e)
         {
-
+            Form appointment = new AppointmentForm();
+            appointment.Show();
+            this.Hide();
         }
 
-        private void monthCalendar1_DateChanged(object sender, DateRangeEventArgs e)
+        private void welcomelbl_Click(object sender, EventArgs e)
         {
 
         }
