@@ -3932,7 +3932,7 @@ SELECT UserID, Password, Name, Surname, IDNumber, PhoneNumber, UserType, BloodTy
             this._commandCollection[1].CommandText = @"SELECT Schedule.ScheduleID, Appointment.AppDate AS [Appointment Date], Appointment.Time, Schedule.Attended
 FROM     Appointment INNER JOIN
                   Schedule ON Appointment.AppID = Schedule.AppID
-WHERE (MONTH(Appointment.AppDate) = @Month) OR(Appointment.Venue = @Venue) OR (Schedule.Attended = @Attended)";
+WHERE  (MONTH(Appointment.AppDate) = @Month) OR(Appointment.Venue = @Venue) OR (Schedule.Attended = @Attended)";
             this._commandCollection[1].CommandType = global::System.Data.CommandType.Text;
             this._commandCollection[1].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Month", global::System.Data.SqlDbType.Decimal, 0, global::System.Data.ParameterDirection.Input, 0, 0, "", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._commandCollection[1].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Venue", global::System.Data.SqlDbType.VarChar, 50, global::System.Data.ParameterDirection.Input, 0, 0, "Venue", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));

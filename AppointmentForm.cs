@@ -10,6 +10,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using static BloodBankSystem.ist2jwDataSet;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 
 namespace BloodBankSystem
 {
@@ -151,7 +152,7 @@ namespace BloodBankSystem
         private void button5_Click(object sender, EventArgs e)
         {
             DataView dataView = new DataView(ist2jwDataSet.UserAppointments);
-            dataView.Sort = "AppDate DESC";
+            dataView.Sort = "Appointment Date DESC";
 
             userAppointmentsDataGrid.DataSource = dataView;
         }
@@ -159,7 +160,7 @@ namespace BloodBankSystem
         private void sortAttendedBtn_Click(object sender, EventArgs e)
         {
             DataView dataView = new DataView(ist2jwDataSet.UserAppointments);
-            dataView.Sort = "Date DESC , Attended DESC";
+            dataView.Sort = "Appointment Date DESC , Attended DESC";
 
             userAppointmentsDataGrid.DataSource = dataView;
         }
@@ -174,11 +175,11 @@ namespace BloodBankSystem
 
         private void button7_Click(object sender, EventArgs e)
         {
-       
-            int month = Int32.Parse(filterAppointmentsMonthCmbx.Text.Substring(0,2));
-            string venue = filterAppointmentsVenueCmbx.Text;
+            int year = Int32.Parse(yearFilterCmbx.Text);
+            int month = Int32.Parse(monthFilterCmbx.Text.Substring(0,2));
+            string venue = venueFilterCmbx.Text;
 
-            if (string.IsNullOrEmpty(filterAppointmentsMonthCmbx.Text) && string.IsNullOrEmpty(filterAppointmentsVenueCmbx.Text))
+            if (string.IsNullOrEmpty(yearFilterCmbx.Text) && string.IsNullOrEmpty(monthFilterCmbx.Text) && string.IsNullOrEmpty(venue))
             {
                 MessageBox.Show("Please select at least one field to be filtered");
           
@@ -230,17 +231,19 @@ namespace BloodBankSystem
 
         private void filterAppointmentsBtn_Click(object sender, EventArgs e)
         {
-  
-            int month = Int32.Parse(filterAppointmentsMonthCmbx.Text.Substring(0, 2));
-            string venue = filterAppointmentsVenueCmbx.Text;
-            int capacity = Int32.Parse(filterAppointmentsCapacityCmbx.Text);
-            if (string.IsNullOrEmpty(monthFilterCmbx.Text) && string.IsNullOrEmpty(venue))
+            
+            if (string.IsNullOrEmpty(filterAppointmentsMonthCmbx.Text) && string.IsNullOrEmpty(filterAppointmentsVenueCmbx.Text))
             {
                 MessageBox.Show("Please select at least one field to be filtered");
 
             }
             else
             {
+                
+                int month = Int32.Parse(filterAppointmentsMonthCmbx.Text.Substring(0, 2));
+                string venue = filterAppointmentsVenueCmbx.Text;
+                int capacity = Int32.Parse(filterAppointmentsCapacityCmbx.Text);
+
                 var adapter = new ist2jwDataSetTableAdapters.AppointmentTableAdapter();
                 var dataTable = adapter.FilterDataBy(month, capacity,venue);
                 userAppointmentsDataGrid.DataSource = dataTable;

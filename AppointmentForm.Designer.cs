@@ -89,6 +89,8 @@
             this.userAppointmentsBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
             this.tblBloodInventoryBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.button5 = new System.Windows.Forms.Button();
+            this.ist2jwDataSetBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.ist2jwDataSet = new BloodBankSystem.ist2jwDataSet();
             this.appointmentTableAdapter = new BloodBankSystem.ist2jwDataSetTableAdapters.AppointmentTableAdapter();
             this.scheduleTableAdapter = new BloodBankSystem.ist2jwDataSetTableAdapters.ScheduleTableAdapter();
             this.userAppointmentsTableAdapter = new BloodBankSystem.ist2jwDataSetTableAdapters.UserAppointmentsTableAdapter();
@@ -525,7 +527,7 @@
             this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
             this.tabPage1.Size = new System.Drawing.Size(944, 587);
             this.tabPage1.TabIndex = 0;
-            this.tabPage1.Text = "New Appointment";
+            this.tabPage1.Text = "Schedule an Appointment";
             // 
             // panel8
             // 
@@ -563,7 +565,7 @@
             "Springfield",
             "Durban Noth",
             "Phoenix"});
-            this.filterAppointmentsVenueCmbx.Location = new System.Drawing.Point(158, 131);
+            this.filterAppointmentsVenueCmbx.Location = new System.Drawing.Point(158, 142);
             this.filterAppointmentsVenueCmbx.Name = "filterAppointmentsVenueCmbx";
             this.filterAppointmentsVenueCmbx.Size = new System.Drawing.Size(121, 24);
             this.filterAppointmentsVenueCmbx.TabIndex = 9;
@@ -584,7 +586,7 @@
             "10 October ",
             "11 November",
             "12 December"});
-            this.filterAppointmentsMonthCmbx.Location = new System.Drawing.Point(158, 82);
+            this.filterAppointmentsMonthCmbx.Location = new System.Drawing.Point(158, 99);
             this.filterAppointmentsMonthCmbx.Name = "filterAppointmentsMonthCmbx";
             this.filterAppointmentsMonthCmbx.Size = new System.Drawing.Size(121, 24);
             this.filterAppointmentsMonthCmbx.TabIndex = 8;
@@ -603,7 +605,7 @@
             // 
             this.label11.AutoSize = true;
             this.label11.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label11.Location = new System.Drawing.Point(67, 131);
+            this.label11.Location = new System.Drawing.Point(67, 143);
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(67, 24);
             this.label11.TabIndex = 5;
@@ -613,7 +615,7 @@
             // 
             this.label10.AutoSize = true;
             this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label10.Location = new System.Drawing.Point(67, 82);
+            this.label10.Location = new System.Drawing.Point(74, 99);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(63, 24);
             this.label10.TabIndex = 4;
@@ -760,6 +762,16 @@
             this.button5.TabIndex = 16;
             this.button5.Text = "Refresh";
             this.button5.UseVisualStyleBackColor = true;
+            // 
+            // ist2jwDataSetBindingSource
+            // 
+            this.ist2jwDataSetBindingSource.DataSource = this.ist2jwDataSet;
+            this.ist2jwDataSetBindingSource.Position = 0;
+            // 
+            // ist2jwDataSet
+            // 
+            this.ist2jwDataSet.DataSetName = "ist2jwDataSet";
+            this.ist2jwDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // appointmentTableAdapter
             // 
