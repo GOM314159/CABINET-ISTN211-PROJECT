@@ -112,5 +112,10 @@ namespace BloodBankSystem
         {
             tblUsersBindingSource.Filter = "BloodType = '" + cmbBloodFilter.Text + "'";
         }
+
+        private void panel5_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
     }
 }
