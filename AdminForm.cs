@@ -187,7 +187,22 @@ namespace BloodBankSystem
 
         private void btnUserFilter_Click(object sender, EventArgs e)
         {
-            //Do Query
+            String UserType = "";
+            if (cmbUserFilter.Text == "Admin")
+            {
+
+                UserType = "A";
+
+            }
+            else
+            {
+
+                UserType = "D";
+
+            }
+
+            tblUsersBindingSource.Filter = "UserType = '" + UserType + "'";
+
         }
 
         private void btnRemoveFilter_Click(object sender, EventArgs e)
@@ -222,6 +237,12 @@ namespace BloodBankSystem
 
 
 
+        }
+
+        private void btnBloodApply_Click(object sender, EventArgs e)
+        {
+            tblBloodInventoryBindingSource.EndEdit();
+            //tblBloodInventoryTableAdapter.Update();
         }
     }
 }

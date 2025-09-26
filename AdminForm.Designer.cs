@@ -111,7 +111,7 @@
             this.btnUserPrev = new System.Windows.Forms.Button();
             this.btnUserNext = new System.Windows.Forms.Button();
             this.panel5 = new System.Windows.Forms.Panel();
-            this.cmdUserFilter = new System.Windows.Forms.ComboBox();
+            this.cmbUserFilter = new System.Windows.Forms.ComboBox();
             this.btnUserFilter = new System.Windows.Forms.Button();
             this.cmbBloodFilter = new System.Windows.Forms.ComboBox();
             this.btnBloodFilter = new System.Windows.Forms.Button();
@@ -161,6 +161,7 @@
             this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewCheckBoxColumn1 = new System.Windows.Forms.DataGridViewCheckBoxColumn();
+            this.panel2 = new System.Windows.Forms.Panel();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.tblUsersBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ist2jwDataSet)).BeginInit();
@@ -807,6 +808,7 @@
             this.btnBloodApply.TabIndex = 6;
             this.btnBloodApply.Text = "Apply changes";
             this.btnBloodApply.UseVisualStyleBackColor = true;
+            this.btnBloodApply.Click += new System.EventHandler(this.btnBloodApply_Click);
             // 
             // dateTimePicker1
             // 
@@ -994,7 +996,7 @@
             // 
             this.panel5.AutoScroll = true;
             this.panel5.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.panel5.Controls.Add(this.cmdUserFilter);
+            this.panel5.Controls.Add(this.cmbUserFilter);
             this.panel5.Controls.Add(this.btnUserFilter);
             this.panel5.Controls.Add(this.cmbBloodFilter);
             this.panel5.Controls.Add(this.btnBloodFilter);
@@ -1009,18 +1011,18 @@
             this.panel5.TabIndex = 4;
             this.panel5.Paint += new System.Windows.Forms.PaintEventHandler(this.panel5_Paint);
             // 
-            // cmdUserFilter
+            // cmbUserFilter
             // 
-            this.cmdUserFilter.FormattingEnabled = true;
-            this.cmdUserFilter.Items.AddRange(new object[] {
+            this.cmbUserFilter.FormattingEnabled = true;
+            this.cmbUserFilter.Items.AddRange(new object[] {
             "Admin",
             "Nurse",
             "Donor"});
-            this.cmdUserFilter.Location = new System.Drawing.Point(126, 168);
-            this.cmdUserFilter.Name = "cmdUserFilter";
-            this.cmdUserFilter.Size = new System.Drawing.Size(73, 21);
-            this.cmdUserFilter.TabIndex = 8;
-            this.cmdUserFilter.Text = "Admin";
+            this.cmbUserFilter.Location = new System.Drawing.Point(126, 168);
+            this.cmbUserFilter.Name = "cmbUserFilter";
+            this.cmbUserFilter.Size = new System.Drawing.Size(73, 21);
+            this.cmbUserFilter.TabIndex = 8;
+            this.cmbUserFilter.Text = "Admin";
             // 
             // btnUserFilter
             // 
@@ -1419,6 +1421,7 @@
             // 
             // tabPage4
             // 
+            this.tabPage4.Controls.Add(this.panel2);
             this.tabPage4.Controls.Add(this.scheduleDataGridView);
             this.tabPage4.Location = new System.Drawing.Point(4, 22);
             this.tabPage4.Name = "tabPage4";
@@ -1484,6 +1487,14 @@
             this.dataGridViewCheckBoxColumn1.DataPropertyName = "Attended";
             this.dataGridViewCheckBoxColumn1.HeaderText = "Attended";
             this.dataGridViewCheckBoxColumn1.Name = "dataGridViewCheckBoxColumn1";
+            // 
+            // panel2
+            // 
+            this.panel2.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.panel2.Location = new System.Drawing.Point(8, 192);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(777, 187);
+            this.panel2.TabIndex = 1;
             // 
             // AdminForm
             // 
@@ -1617,7 +1628,7 @@
         private System.Windows.Forms.Button btnUserPrev;
         private System.Windows.Forms.Button btnUserNext;
         private System.Windows.Forms.Panel panel5;
-        private System.Windows.Forms.ComboBox cmdUserFilter;
+        private System.Windows.Forms.ComboBox cmbUserFilter;
         private System.Windows.Forms.Button btnUserFilter;
         private System.Windows.Forms.ComboBox cmbBloodFilter;
         private System.Windows.Forms.Button btnBloodFilter;
@@ -1668,5 +1679,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn2;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn3;
         private System.Windows.Forms.DataGridViewCheckBoxColumn dataGridViewCheckBoxColumn1;
+        private System.Windows.Forms.Panel panel2;
     }
 }
