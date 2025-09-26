@@ -42,9 +42,6 @@
             this.panel7 = new System.Windows.Forms.Panel();
             this.button19 = new System.Windows.Forms.Button();
             this.button17 = new System.Windows.Forms.Button();
-            this.button8 = new System.Windows.Forms.Button();
-            this.button15 = new System.Windows.Forms.Button();
-            this.dateTimePicker5 = new System.Windows.Forms.DateTimePicker();
             this.label21 = new System.Windows.Forms.Label();
             this.panel13 = new System.Windows.Forms.Panel();
             this.button16 = new System.Windows.Forms.Button();
@@ -153,15 +150,20 @@
             this.txtUserID = new System.Windows.Forms.TextBox();
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage4 = new System.Windows.Forms.TabPage();
-            this.scheduleBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.scheduleTableAdapter = new BloodBankSystem.ist2jwDataSetTableAdapters.ScheduleTableAdapter();
-            this.tableAdapterManager = new BloodBankSystem.ist2jwDataSetTableAdapters.TableAdapterManager();
+            this.panel2 = new System.Windows.Forms.Panel();
             this.scheduleDataGridView = new System.Windows.Forms.DataGridView();
             this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewCheckBoxColumn1 = new System.Windows.Forms.DataGridViewCheckBoxColumn();
-            this.panel2 = new System.Windows.Forms.Panel();
+            this.scheduleBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.scheduleTableAdapter = new BloodBankSystem.ist2jwDataSetTableAdapters.ScheduleTableAdapter();
+            this.tableAdapterManager = new BloodBankSystem.ist2jwDataSetTableAdapters.TableAdapterManager();
+            this.panel8 = new System.Windows.Forms.Panel();
+            this.label22 = new System.Windows.Forms.Label();
+            this.lblSchedules = new System.Windows.Forms.Label();
+            this.lblAttended = new System.Windows.Forms.Label();
+            this.lblMissed = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.tblUsersBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ist2jwDataSet)).BeginInit();
@@ -188,8 +190,10 @@
             this.pnlUserEdit.SuspendLayout();
             this.tabControl1.SuspendLayout();
             this.tabPage4.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.scheduleBindingSource)).BeginInit();
+            this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.scheduleDataGridView)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.scheduleBindingSource)).BeginInit();
+            this.panel8.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel1
@@ -265,9 +269,6 @@
             this.panel7.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.panel7.Controls.Add(this.button19);
             this.panel7.Controls.Add(this.button17);
-            this.panel7.Controls.Add(this.button8);
-            this.panel7.Controls.Add(this.button15);
-            this.panel7.Controls.Add(this.dateTimePicker5);
             this.panel7.Controls.Add(this.label21);
             this.panel7.Location = new System.Drawing.Point(542, 9);
             this.panel7.Name = "panel7";
@@ -276,7 +277,7 @@
             // 
             // button19
             // 
-            this.button19.Location = new System.Drawing.Point(6, 147);
+            this.button19.Location = new System.Drawing.Point(6, 80);
             this.button19.Name = "button19";
             this.button19.Size = new System.Drawing.Size(171, 27);
             this.button19.TabIndex = 5;
@@ -285,41 +286,12 @@
             // 
             // button17
             // 
-            this.button17.Location = new System.Drawing.Point(6, 121);
+            this.button17.Location = new System.Drawing.Point(6, 47);
             this.button17.Name = "button17";
-            this.button17.Size = new System.Drawing.Size(171, 23);
+            this.button17.Size = new System.Drawing.Size(171, 27);
             this.button17.TabIndex = 4;
             this.button17.Text = "Sort by capacity(asc)";
             this.button17.UseVisualStyleBackColor = true;
-            // 
-            // button8
-            // 
-            this.button8.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button8.Location = new System.Drawing.Point(6, 83);
-            this.button8.Name = "button8";
-            this.button8.Size = new System.Drawing.Size(171, 32);
-            this.button8.TabIndex = 3;
-            this.button8.Text = "Filter by time(Later than)";
-            this.button8.UseVisualStyleBackColor = true;
-            // 
-            // button15
-            // 
-            this.button15.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button15.Location = new System.Drawing.Point(6, 54);
-            this.button15.Name = "button15";
-            this.button15.Size = new System.Drawing.Size(171, 32);
-            this.button15.TabIndex = 2;
-            this.button15.Text = "Filter by time(Later than)";
-            this.button15.UseVisualStyleBackColor = true;
-            // 
-            // dateTimePicker5
-            // 
-            this.dateTimePicker5.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.25F);
-            this.dateTimePicker5.Format = System.Windows.Forms.DateTimePickerFormat.Time;
-            this.dateTimePicker5.Location = new System.Drawing.Point(6, 35);
-            this.dateTimePicker5.Name = "dateTimePicker5";
-            this.dateTimePicker5.Size = new System.Drawing.Size(99, 23);
-            this.dateTimePicker5.TabIndex = 1;
             // 
             // label21
             // 
@@ -1431,23 +1403,14 @@
             this.tabPage4.Text = "   Schedule   ";
             this.tabPage4.UseVisualStyleBackColor = true;
             // 
-            // scheduleBindingSource
+            // panel2
             // 
-            this.scheduleBindingSource.DataMember = "Schedule";
-            this.scheduleBindingSource.DataSource = this.ist2jwDataSet;
-            // 
-            // scheduleTableAdapter
-            // 
-            this.scheduleTableAdapter.ClearBeforeFill = true;
-            // 
-            // tableAdapterManager
-            // 
-            this.tableAdapterManager.AppointmentTableAdapter = this.appointmentTableAdapter;
-            this.tableAdapterManager.BackupDataSetBeforeUpdate = false;
-            this.tableAdapterManager.ScheduleTableAdapter = this.scheduleTableAdapter;
-            this.tableAdapterManager.TblBloodInventoryTableAdapter = this.tblBloodInventoryTableAdapter;
-            this.tableAdapterManager.tblUsersTableAdapter = this.tblUsersTableAdapter;
-            this.tableAdapterManager.UpdateOrder = BloodBankSystem.ist2jwDataSetTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete;
+            this.panel2.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.panel2.Controls.Add(this.panel8);
+            this.panel2.Location = new System.Drawing.Point(8, 192);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(777, 187);
+            this.panel2.TabIndex = 1;
             // 
             // scheduleDataGridView
             // 
@@ -1488,13 +1451,76 @@
             this.dataGridViewCheckBoxColumn1.HeaderText = "Attended";
             this.dataGridViewCheckBoxColumn1.Name = "dataGridViewCheckBoxColumn1";
             // 
-            // panel2
+            // scheduleBindingSource
             // 
-            this.panel2.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.panel2.Location = new System.Drawing.Point(8, 192);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(777, 187);
-            this.panel2.TabIndex = 1;
+            this.scheduleBindingSource.DataMember = "Schedule";
+            this.scheduleBindingSource.DataSource = this.ist2jwDataSet;
+            // 
+            // scheduleTableAdapter
+            // 
+            this.scheduleTableAdapter.ClearBeforeFill = true;
+            // 
+            // tableAdapterManager
+            // 
+            this.tableAdapterManager.AppointmentTableAdapter = this.appointmentTableAdapter;
+            this.tableAdapterManager.BackupDataSetBeforeUpdate = false;
+            this.tableAdapterManager.ScheduleTableAdapter = this.scheduleTableAdapter;
+            this.tableAdapterManager.TblBloodInventoryTableAdapter = this.tblBloodInventoryTableAdapter;
+            this.tableAdapterManager.tblUsersTableAdapter = this.tblUsersTableAdapter;
+            this.tableAdapterManager.UpdateOrder = BloodBankSystem.ist2jwDataSetTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete;
+            // 
+            // panel8
+            // 
+            this.panel8.BackColor = System.Drawing.SystemColors.MenuHighlight;
+            this.panel8.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.panel8.Controls.Add(this.lblMissed);
+            this.panel8.Controls.Add(this.lblAttended);
+            this.panel8.Controls.Add(this.lblSchedules);
+            this.panel8.Controls.Add(this.label22);
+            this.panel8.Location = new System.Drawing.Point(3, 3);
+            this.panel8.Name = "panel8";
+            this.panel8.Size = new System.Drawing.Size(338, 181);
+            this.panel8.TabIndex = 1;
+            // 
+            // label22
+            // 
+            this.label22.AutoSize = true;
+            this.label22.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label22.Location = new System.Drawing.Point(12, 12);
+            this.label22.Name = "label22";
+            this.label22.Size = new System.Drawing.Size(114, 16);
+            this.label22.TabIndex = 0;
+            this.label22.Text = "Short Statistics:";
+            // 
+            // lblSchedules
+            // 
+            this.lblSchedules.AutoSize = true;
+            this.lblSchedules.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.25F);
+            this.lblSchedules.Location = new System.Drawing.Point(12, 45);
+            this.lblSchedules.Name = "lblSchedules";
+            this.lblSchedules.Size = new System.Drawing.Size(253, 16);
+            this.lblSchedules.TabIndex = 1;
+            this.lblSchedules.Text = "Total number of scheduled appointments:";
+            // 
+            // lblAttended
+            // 
+            this.lblAttended.AutoSize = true;
+            this.lblAttended.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.25F);
+            this.lblAttended.Location = new System.Drawing.Point(12, 77);
+            this.lblAttended.Name = "lblAttended";
+            this.lblAttended.Size = new System.Drawing.Size(193, 16);
+            this.lblAttended.TabIndex = 2;
+            this.lblAttended.Text = "Number of schedules attended:";
+            // 
+            // lblMissed
+            // 
+            this.lblMissed.AutoSize = true;
+            this.lblMissed.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.25F);
+            this.lblMissed.Location = new System.Drawing.Point(12, 111);
+            this.lblMissed.Name = "lblMissed";
+            this.lblMissed.Size = new System.Drawing.Size(196, 16);
+            this.lblMissed.TabIndex = 3;
+            this.lblMissed.Text = "Number of schedules attended: ";
             // 
             // AdminForm
             // 
@@ -1539,8 +1565,11 @@
             this.pnlUserEdit.PerformLayout();
             this.tabControl1.ResumeLayout(false);
             this.tabPage4.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.scheduleBindingSource)).EndInit();
+            this.panel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.scheduleDataGridView)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.scheduleBindingSource)).EndInit();
+            this.panel8.ResumeLayout(false);
+            this.panel8.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -1560,9 +1589,6 @@
         private System.Windows.Forms.Panel panel7;
         private System.Windows.Forms.Button button19;
         private System.Windows.Forms.Button button17;
-        private System.Windows.Forms.Button button8;
-        private System.Windows.Forms.Button button15;
-        private System.Windows.Forms.DateTimePicker dateTimePicker5;
         private System.Windows.Forms.Label label21;
         private System.Windows.Forms.Panel panel13;
         private System.Windows.Forms.Button button16;
@@ -1680,5 +1706,10 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn3;
         private System.Windows.Forms.DataGridViewCheckBoxColumn dataGridViewCheckBoxColumn1;
         private System.Windows.Forms.Panel panel2;
+        private System.Windows.Forms.Panel panel8;
+        private System.Windows.Forms.Label lblMissed;
+        private System.Windows.Forms.Label lblAttended;
+        private System.Windows.Forms.Label lblSchedules;
+        private System.Windows.Forms.Label label22;
     }
 }
