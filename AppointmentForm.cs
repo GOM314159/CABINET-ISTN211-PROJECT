@@ -287,23 +287,57 @@ namespace BloodBankSystem
 
         private void filterAppointmentsBtn_Click(object sender, EventArgs e)
         {
-            if (filterAppMonthCmbx.Text.Equals("") || filterAppCapacityCmbx.Text.Equals(""))
+            if(filterSelect.Text.Equals(""))
             {
-                MessageBox.Show("Please select a month and capacity");
+                MessageBox.Show("Please select a filter option");
+                return;
             }
-            else
+            if (filterSelect.Text.Equals("Year") && filterAppYearCmbx.Text.Equals(""))
             {
-                int year = int.Parse(filterAppYearCmbx.Text);
+                MessageBox.Show("Please select a year to filter");
+                return;
+            } else if (filterSelect.Text.Equals("Year"))
+            {
+                int year=  int.Parse(filterAppYearCmbx.Text);
+                this.appointmentTableAdapter.FillDataByYear(ist2jwDataSet.Appointment, year);
+               
+            }
+
+            if (filterSelect.Text.Equals("Month") && filterAppYearCmbx.Text.Equals(""))
+            {
+                MessageBox.Show("Please select a month to filter ");
+                return;
+            }
+            else if(filterSelect.Text.Equals("Month"))
+            {
                 int month = int.Parse(filterAppMonthCmbx.Text.Substring(0, 2));
-                string venue = filterAppVenueCmbx.Text;
-                int capacity = int.Parse(filterAppCapacityCmbx.Text);
-
-                appointmentBindingSource.Filter = "YEAR(AppDate) = " + year + " OR MONTH(AppDate) = " + month + " OR Venue = " + venue + " OR Capacity = " + capacity;
-
-                appointmentDataGridView.Refresh();
+                this.appointmentTableAdapter.FillDataByMonth(ist2jwDataSet.Appointment, month);
+              
             }
-           // this.appointmentTableAdapter.Fill(this.ist2jwDataSet.Appointment);
-        
+            if (filterSelect.Text.Equals("Venue") && filterAppVenueCmbx.Text.Equals(""))
+            {
+                MessageBox.Show("Please select a venue to filter ");
+                    return;
+            }
+            else if ((filterSelect.Text.Equals("Venue")))
+            {
+                string venue = filterAppVenueCmbx.Text;
+                this.appointmentTableAdapter.FillDataByVenue(ist2jwDataSet.Appointment, venue);
+            
+            }
+            if (filterSelect.Text.Equals("Capacity") && filterAppCapacityCmbx.Text.Equals(""))
+            {
+                MessageBox.Show("Please select a capacity to filter ");
+                return;
+            }
+            else if(filterSelect.Text.Equals("Capacity"))
+            {
+                int capacity = int.Parse(filterAppCapacityCmbx.Text);
+                this.appointmentTableAdapter.FillDataByCapacity(ist2jwDataSet.Appointment, capacity);
+            }
+            // Refresh the DataGridView
+            appointmentDataGridView.Refresh();
+
         }
 
         private void button2_Click_1(object sender, EventArgs e)
@@ -438,6 +472,46 @@ namespace BloodBankSystem
         {
             appointmentBindingSource.Sort = "Venue ASC";
             appointmentDataGridView.Refresh();
+        }
+
+        private void filterAppYearCmbx_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label1_Click_1(object sender, EventArgs e)
+        {
+
+        }
+
+        private void filterAppCapacityCmbx_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void filterAppVenueCmbx_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void filterAppMonthCmbx_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label12_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label11_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label10_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

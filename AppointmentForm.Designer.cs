@@ -38,6 +38,12 @@
             System.Windows.Forms.Label userIDLabel;
             System.Windows.Forms.Label appIDLabel2;
             System.Windows.Forms.Label attendedLabel1;
+            System.Windows.Forms.Label scheduleIDLabel;
+            System.Windows.Forms.Label appIDLabel;
+            System.Windows.Forms.Label appDateLabel;
+            System.Windows.Forms.Label timeLabel;
+            System.Windows.Forms.Label venueLabel;
+            System.Windows.Forms.Label attendedLabel;
             this.btnBookAppointment = new System.Windows.Forms.Button();
             this.btnHome = new System.Windows.Forms.Button();
             this.btnFirst = new System.Windows.Forms.Button();
@@ -45,8 +51,6 @@
             this.groupBox4 = new System.Windows.Forms.GroupBox();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
             this.timeTextBox1 = new System.Windows.Forms.TextBox();
-            this.appointmentBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.ist2jwDataSet = new BloodBankSystem.ist2jwDataSet();
             this.capacityTextBox = new System.Windows.Forms.TextBox();
             this.appDateDateTimePicker1 = new System.Windows.Forms.DateTimePicker();
             this.venueTextBox1 = new System.Windows.Forms.TextBox();
@@ -56,12 +60,6 @@
             this.button3 = new System.Windows.Forms.Button();
             this.button4 = new System.Windows.Forms.Button();
             this.appointmentDataGridView = new System.Windows.Forms.DataGridView();
-            this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.scheduleBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.appIDTextBox1 = new System.Windows.Forms.TextBox();
             this.panel2 = new System.Windows.Forms.Panel();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
@@ -69,25 +67,15 @@
             this.btnNext = new System.Windows.Forms.Button();
             this.btnLast = new System.Windows.Forms.Button();
             this.tblUserScheduleDataGridView = new System.Windows.Forms.DataGridView();
-            this.dataGridViewTextBoxColumn6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn7 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn8 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn9 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn10 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewCheckBoxColumn1 = new System.Windows.Forms.DataGridViewCheckBoxColumn();
-            this.tblUserScheduleBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.panel3 = new System.Windows.Forms.Panel();
             this.sortVenueBtn = new System.Windows.Forms.Button();
             this.sortAttendedBtn = new System.Windows.Forms.Button();
-            this.label6 = new System.Windows.Forms.Label();
             this.sortDateBtn = new System.Windows.Forms.Button();
-            this.resetBtn = new System.Windows.Forms.Button();
             this.label3 = new System.Windows.Forms.Label();
             this.panel4 = new System.Windows.Forms.Panel();
             this.label5 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
             this.venueFilterCmbx = new System.Windows.Forms.ComboBox();
-            this.button7 = new System.Windows.Forms.Button();
             this.attendedFilterRdBtn = new System.Windows.Forms.RadioButton();
             this.label8 = new System.Windows.Forms.Label();
             this.monthFilterCmbx = new System.Windows.Forms.ComboBox();
@@ -104,10 +92,6 @@
             this.panel6 = new System.Windows.Forms.Panel();
             this.attendedScheduleCheckBox = new System.Windows.Forms.CheckBox();
             this.tabPage2 = new System.Windows.Forms.TabPage();
-            this.tableAdapterManager = new BloodBankSystem.ist2jwDataSetTableAdapters.TableAdapterManager();
-            this.appointmentTableAdapter = new BloodBankSystem.ist2jwDataSetTableAdapters.AppointmentTableAdapter();
-            this.tblUserScheduleTableAdapter = new BloodBankSystem.ist2jwDataSetTableAdapters.tblUserScheduleTableAdapter();
-            this.scheduleTableAdapter = new BloodBankSystem.ist2jwDataSetTableAdapters.ScheduleTableAdapter();
             this.button5 = new System.Windows.Forms.Button();
             this.button6 = new System.Windows.Forms.Button();
             this.label4 = new System.Windows.Forms.Label();
@@ -125,6 +109,36 @@
             this.sortAppointmentsVenueBtn = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.filterAppYearCmbx = new System.Windows.Forms.ComboBox();
+            this.scheduleIDTextBox1 = new System.Windows.Forms.TextBox();
+            this.appIDTextBox = new System.Windows.Forms.TextBox();
+            this.appDateDateTimePicker = new System.Windows.Forms.DateTimePicker();
+            this.timeTextBox = new System.Windows.Forms.TextBox();
+            this.venueTextBox = new System.Windows.Forms.TextBox();
+            this.attendedCheckBox = new System.Windows.Forms.CheckBox();
+            this.groupBox7 = new System.Windows.Forms.GroupBox();
+            this.groupBox8 = new System.Windows.Forms.GroupBox();
+            this.button7 = new System.Windows.Forms.Button();
+            this.scheduleBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.ist2jwDataSet = new BloodBankSystem.ist2jwDataSet();
+            this.appointmentBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn7 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn8 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn9 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn10 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewCheckBoxColumn1 = new System.Windows.Forms.DataGridViewCheckBoxColumn();
+            this.tblUserScheduleBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.tableAdapterManager = new BloodBankSystem.ist2jwDataSetTableAdapters.TableAdapterManager();
+            this.appointmentTableAdapter = new BloodBankSystem.ist2jwDataSetTableAdapters.AppointmentTableAdapter();
+            this.tblUserScheduleTableAdapter = new BloodBankSystem.ist2jwDataSetTableAdapters.tblUserScheduleTableAdapter();
+            this.scheduleTableAdapter = new BloodBankSystem.ist2jwDataSetTableAdapters.ScheduleTableAdapter();
+            this.label2 = new System.Windows.Forms.Label();
+            this.filterSelect = new System.Windows.Forms.ComboBox();
             appIDLabel1 = new System.Windows.Forms.Label();
             appDateLabel1 = new System.Windows.Forms.Label();
             timeLabel1 = new System.Windows.Forms.Label();
@@ -134,18 +148,20 @@
             userIDLabel = new System.Windows.Forms.Label();
             appIDLabel2 = new System.Windows.Forms.Label();
             attendedLabel1 = new System.Windows.Forms.Label();
+            scheduleIDLabel = new System.Windows.Forms.Label();
+            appIDLabel = new System.Windows.Forms.Label();
+            appDateLabel = new System.Windows.Forms.Label();
+            timeLabel = new System.Windows.Forms.Label();
+            venueLabel = new System.Windows.Forms.Label();
+            attendedLabel = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.groupBox4.SuspendLayout();
             this.groupBox3.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.appointmentBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.ist2jwDataSet)).BeginInit();
             this.groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.appointmentDataGridView)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.scheduleBindingSource)).BeginInit();
             this.panel2.SuspendLayout();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.tblUserScheduleDataGridView)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.tblUserScheduleBindingSource)).BeginInit();
             this.panel3.SuspendLayout();
             this.panel4.SuspendLayout();
             this.tabControl1.SuspendLayout();
@@ -156,6 +172,12 @@
             this.tabPage2.SuspendLayout();
             this.groupBox5.SuspendLayout();
             this.groupBox6.SuspendLayout();
+            this.groupBox7.SuspendLayout();
+            this.groupBox8.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.scheduleBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ist2jwDataSet)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.appointmentBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.tblUserScheduleBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // appIDLabel1
@@ -330,16 +352,7 @@
             this.timeTextBox1.ReadOnly = true;
             this.timeTextBox1.Size = new System.Drawing.Size(268, 22);
             this.timeTextBox1.TabIndex = 19;
-            // 
-            // appointmentBindingSource
-            // 
-            this.appointmentBindingSource.DataMember = "Appointment";
-            this.appointmentBindingSource.DataSource = this.ist2jwDataSet;
-            // 
-            // ist2jwDataSet
-            // 
-            this.ist2jwDataSet.DataSetName = "ist2jwDataSet";
-            this.ist2jwDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            this.timeTextBox1.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
             // capacityTextBox
             // 
@@ -349,6 +362,7 @@
             this.capacityTextBox.ReadOnly = true;
             this.capacityTextBox.Size = new System.Drawing.Size(200, 22);
             this.capacityTextBox.TabIndex = 21;
+            this.capacityTextBox.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
             // appDateDateTimePicker1
             // 
@@ -367,6 +381,7 @@
             this.venueTextBox1.ReadOnly = true;
             this.venueTextBox1.Size = new System.Drawing.Size(200, 22);
             this.venueTextBox1.TabIndex = 23;
+            this.venueTextBox1.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
             // groupBox2
             // 
@@ -435,52 +450,6 @@
             this.appointmentDataGridView.Size = new System.Drawing.Size(920, 164);
             this.appointmentDataGridView.TabIndex = 14;
             // 
-            // dataGridViewTextBoxColumn1
-            // 
-            this.dataGridViewTextBoxColumn1.DataPropertyName = "AppID";
-            this.dataGridViewTextBoxColumn1.HeaderText = "Appointment ID";
-            this.dataGridViewTextBoxColumn1.MinimumWidth = 6;
-            this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
-            this.dataGridViewTextBoxColumn1.Visible = false;
-            this.dataGridViewTextBoxColumn1.Width = 125;
-            // 
-            // dataGridViewTextBoxColumn2
-            // 
-            this.dataGridViewTextBoxColumn2.DataPropertyName = "AppDate";
-            this.dataGridViewTextBoxColumn2.HeaderText = "Appointment Date";
-            this.dataGridViewTextBoxColumn2.MinimumWidth = 6;
-            this.dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
-            this.dataGridViewTextBoxColumn2.Width = 125;
-            // 
-            // dataGridViewTextBoxColumn3
-            // 
-            this.dataGridViewTextBoxColumn3.DataPropertyName = "Time";
-            this.dataGridViewTextBoxColumn3.HeaderText = "Time";
-            this.dataGridViewTextBoxColumn3.MinimumWidth = 6;
-            this.dataGridViewTextBoxColumn3.Name = "dataGridViewTextBoxColumn3";
-            this.dataGridViewTextBoxColumn3.Width = 125;
-            // 
-            // dataGridViewTextBoxColumn4
-            // 
-            this.dataGridViewTextBoxColumn4.DataPropertyName = "Capacity";
-            this.dataGridViewTextBoxColumn4.HeaderText = "Capacity";
-            this.dataGridViewTextBoxColumn4.MinimumWidth = 6;
-            this.dataGridViewTextBoxColumn4.Name = "dataGridViewTextBoxColumn4";
-            this.dataGridViewTextBoxColumn4.Width = 125;
-            // 
-            // dataGridViewTextBoxColumn5
-            // 
-            this.dataGridViewTextBoxColumn5.DataPropertyName = "Venue";
-            this.dataGridViewTextBoxColumn5.HeaderText = "Venue";
-            this.dataGridViewTextBoxColumn5.MinimumWidth = 6;
-            this.dataGridViewTextBoxColumn5.Name = "dataGridViewTextBoxColumn5";
-            this.dataGridViewTextBoxColumn5.Width = 125;
-            // 
-            // scheduleBindingSource
-            // 
-            this.scheduleBindingSource.DataMember = "Schedule";
-            this.scheduleBindingSource.DataSource = this.ist2jwDataSet;
-            // 
             // appIDTextBox1
             // 
             this.appIDTextBox1.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.appointmentBindingSource, "AppID", true));
@@ -494,11 +463,16 @@
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.Color.IndianRed;
-            this.panel2.Controls.Add(this.groupBox1);
             this.panel2.Controls.Add(this.tblUserScheduleDataGridView);
+            this.panel2.Controls.Add(this.groupBox7);
+            this.panel2.Controls.Add(scheduleIDLabel);
+            this.panel2.Controls.Add(this.scheduleIDTextBox1);
+            this.panel2.Controls.Add(appIDLabel);
+            this.panel2.Controls.Add(this.appIDTextBox);
+            this.panel2.Controls.Add(this.groupBox1);
             this.panel2.Location = new System.Drawing.Point(6, 10);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(920, 392);
+            this.panel2.Size = new System.Drawing.Size(931, 441);
             this.panel2.TabIndex = 9;
             this.panel2.Paint += new System.Windows.Forms.PaintEventHandler(this.panel2_Paint);
             // 
@@ -562,97 +536,34 @@
             this.tblUserScheduleDataGridView.ReadOnly = true;
             this.tblUserScheduleDataGridView.RowHeadersWidth = 51;
             this.tblUserScheduleDataGridView.RowTemplate.Height = 24;
-            this.tblUserScheduleDataGridView.Size = new System.Drawing.Size(908, 231);
+            this.tblUserScheduleDataGridView.Size = new System.Drawing.Size(911, 231);
             this.tblUserScheduleDataGridView.TabIndex = 10;
             this.tblUserScheduleDataGridView.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.tblUserScheduleDataGridView_CellContentClick);
-            // 
-            // dataGridViewTextBoxColumn6
-            // 
-            this.dataGridViewTextBoxColumn6.DataPropertyName = "ScheduleID";
-            this.dataGridViewTextBoxColumn6.HeaderText = "ScheduleID";
-            this.dataGridViewTextBoxColumn6.MinimumWidth = 6;
-            this.dataGridViewTextBoxColumn6.Name = "dataGridViewTextBoxColumn6";
-            this.dataGridViewTextBoxColumn6.ReadOnly = true;
-            this.dataGridViewTextBoxColumn6.Width = 125;
-            // 
-            // dataGridViewTextBoxColumn7
-            // 
-            this.dataGridViewTextBoxColumn7.DataPropertyName = "AppID";
-            this.dataGridViewTextBoxColumn7.HeaderText = "Appointment ID";
-            this.dataGridViewTextBoxColumn7.MinimumWidth = 6;
-            this.dataGridViewTextBoxColumn7.Name = "dataGridViewTextBoxColumn7";
-            this.dataGridViewTextBoxColumn7.ReadOnly = true;
-            this.dataGridViewTextBoxColumn7.Width = 125;
-            // 
-            // dataGridViewTextBoxColumn8
-            // 
-            this.dataGridViewTextBoxColumn8.DataPropertyName = "AppDate";
-            this.dataGridViewTextBoxColumn8.HeaderText = "Appointment Date";
-            this.dataGridViewTextBoxColumn8.MinimumWidth = 6;
-            this.dataGridViewTextBoxColumn8.Name = "dataGridViewTextBoxColumn8";
-            this.dataGridViewTextBoxColumn8.ReadOnly = true;
-            this.dataGridViewTextBoxColumn8.Width = 125;
-            // 
-            // dataGridViewTextBoxColumn9
-            // 
-            this.dataGridViewTextBoxColumn9.DataPropertyName = "Time";
-            this.dataGridViewTextBoxColumn9.HeaderText = "Time";
-            this.dataGridViewTextBoxColumn9.MinimumWidth = 6;
-            this.dataGridViewTextBoxColumn9.Name = "dataGridViewTextBoxColumn9";
-            this.dataGridViewTextBoxColumn9.ReadOnly = true;
-            this.dataGridViewTextBoxColumn9.Width = 125;
-            // 
-            // dataGridViewTextBoxColumn10
-            // 
-            this.dataGridViewTextBoxColumn10.DataPropertyName = "Venue";
-            this.dataGridViewTextBoxColumn10.HeaderText = "Venue";
-            this.dataGridViewTextBoxColumn10.MinimumWidth = 6;
-            this.dataGridViewTextBoxColumn10.Name = "dataGridViewTextBoxColumn10";
-            this.dataGridViewTextBoxColumn10.ReadOnly = true;
-            this.dataGridViewTextBoxColumn10.Width = 125;
-            // 
-            // dataGridViewCheckBoxColumn1
-            // 
-            this.dataGridViewCheckBoxColumn1.DataPropertyName = "Attended";
-            this.dataGridViewCheckBoxColumn1.HeaderText = "Attended";
-            this.dataGridViewCheckBoxColumn1.MinimumWidth = 6;
-            this.dataGridViewCheckBoxColumn1.Name = "dataGridViewCheckBoxColumn1";
-            this.dataGridViewCheckBoxColumn1.ReadOnly = true;
-            this.dataGridViewCheckBoxColumn1.Width = 125;
-            // 
-            // tblUserScheduleBindingSource
-            // 
-            this.tblUserScheduleBindingSource.DataMember = "tblUserSchedule";
-            this.tblUserScheduleBindingSource.DataSource = this.ist2jwDataSet;
-            this.tblUserScheduleBindingSource.CurrentChanged += new System.EventHandler(this.tblUserScheduleBindingSource_CurrentChanged);
             // 
             // panel3
             // 
             this.panel3.BackColor = System.Drawing.Color.IndianRed;
-            this.panel3.Controls.Add(this.sortVenueBtn);
-            this.panel3.Controls.Add(this.sortAttendedBtn);
-            this.panel3.Controls.Add(this.label6);
-            this.panel3.Controls.Add(this.sortDateBtn);
-            this.panel3.Location = new System.Drawing.Point(9, 408);
+            this.panel3.Controls.Add(this.groupBox8);
+            this.panel3.Location = new System.Drawing.Point(9, 457);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(402, 173);
+            this.panel3.Size = new System.Drawing.Size(480, 131);
             this.panel3.TabIndex = 10;
             this.panel3.Tag = "";
             this.panel3.Paint += new System.Windows.Forms.PaintEventHandler(this.panel3_Paint);
             // 
             // sortVenueBtn
             // 
-            this.sortVenueBtn.Location = new System.Drawing.Point(189, 79);
+            this.sortVenueBtn.Location = new System.Drawing.Point(34, 61);
             this.sortVenueBtn.Name = "sortVenueBtn";
             this.sortVenueBtn.Size = new System.Drawing.Size(112, 32);
             this.sortVenueBtn.TabIndex = 3;
-            this.sortVenueBtn.Text = "Venue";
+            this.sortVenueBtn.Text = "Venue ASC";
             this.sortVenueBtn.UseVisualStyleBackColor = true;
             this.sortVenueBtn.Click += new System.EventHandler(this.sortVenueBtn_Click);
             // 
             // sortAttendedBtn
             // 
-            this.sortAttendedBtn.Location = new System.Drawing.Point(269, 24);
+            this.sortAttendedBtn.Location = new System.Drawing.Point(34, 21);
             this.sortAttendedBtn.Name = "sortAttendedBtn";
             this.sortAttendedBtn.Size = new System.Drawing.Size(112, 32);
             this.sortAttendedBtn.TabIndex = 2;
@@ -660,36 +571,15 @@
             this.sortAttendedBtn.UseVisualStyleBackColor = true;
             this.sortAttendedBtn.Click += new System.EventHandler(this.sortAttendedBtn_Click);
             // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(19, 19);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(96, 25);
-            this.label6.TabIndex = 1;
-            this.label6.Text = "Sort By :";
-            this.label6.Click += new System.EventHandler(this.label6_Click);
-            // 
             // sortDateBtn
             // 
-            this.sortDateBtn.Location = new System.Drawing.Point(132, 25);
+            this.sortDateBtn.Location = new System.Drawing.Point(152, 21);
             this.sortDateBtn.Name = "sortDateBtn";
             this.sortDateBtn.Size = new System.Drawing.Size(112, 32);
             this.sortDateBtn.TabIndex = 0;
             this.sortDateBtn.Text = "Latest Date";
             this.sortDateBtn.UseVisualStyleBackColor = true;
             this.sortDateBtn.Click += new System.EventHandler(this.button5_Click);
-            // 
-            // resetBtn
-            // 
-            this.resetBtn.Location = new System.Drawing.Point(249, 116);
-            this.resetBtn.Name = "resetBtn";
-            this.resetBtn.Size = new System.Drawing.Size(122, 47);
-            this.resetBtn.TabIndex = 1;
-            this.resetBtn.Text = "Reset";
-            this.resetBtn.UseVisualStyleBackColor = true;
-            this.resetBtn.Click += new System.EventHandler(this.resetBtn_Click);
             // 
             // label3
             // 
@@ -710,26 +600,24 @@
             this.panel4.Controls.Add(this.label5);
             this.panel4.Controls.Add(this.label9);
             this.panel4.Controls.Add(this.venueFilterCmbx);
-            this.panel4.Controls.Add(this.button7);
-            this.panel4.Controls.Add(this.resetBtn);
             this.panel4.Controls.Add(this.attendedFilterRdBtn);
             this.panel4.Controls.Add(this.label8);
             this.panel4.Controls.Add(this.monthFilterCmbx);
             this.panel4.Controls.Add(this.yearFilterCmbx);
             this.panel4.Controls.Add(this.label7);
-            this.panel4.Location = new System.Drawing.Point(496, 408);
+            this.panel4.Location = new System.Drawing.Point(507, 457);
             this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(430, 173);
+            this.panel4.Size = new System.Drawing.Size(430, 131);
             this.panel4.TabIndex = 13;
             this.panel4.Paint += new System.Windows.Forms.PaintEventHandler(this.panel4_Paint);
             // 
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.Location = new System.Drawing.Point(231, 38);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(67, 24);
+            this.label5.Size = new System.Drawing.Size(46, 16);
             this.label5.TabIndex = 17;
             this.label5.Text = "Venue";
             this.label5.Click += new System.EventHandler(this.label5_Click);
@@ -737,10 +625,10 @@
             // label9
             // 
             this.label9.AutoSize = true;
-            this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label9.Location = new System.Drawing.Point(18, 82);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(63, 24);
+            this.label9.Size = new System.Drawing.Size(43, 16);
             this.label9.TabIndex = 16;
             this.label9.Text = "Month";
             // 
@@ -766,16 +654,6 @@
             this.venueFilterCmbx.Size = new System.Drawing.Size(121, 24);
             this.venueFilterCmbx.TabIndex = 15;
             // 
-            // button7
-            // 
-            this.button7.Location = new System.Drawing.Point(104, 116);
-            this.button7.Name = "button7";
-            this.button7.Size = new System.Drawing.Size(139, 47);
-            this.button7.TabIndex = 14;
-            this.button7.Text = "Apply";
-            this.button7.UseVisualStyleBackColor = true;
-            this.button7.Click += new System.EventHandler(this.button7_Click);
-            // 
             // attendedFilterRdBtn
             // 
             this.attendedFilterRdBtn.AutoSize = true;
@@ -790,10 +668,10 @@
             // label8
             // 
             this.label8.AutoSize = true;
-            this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label8.Location = new System.Drawing.Point(18, 36);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(49, 24);
+            this.label8.Size = new System.Drawing.Size(36, 16);
             this.label8.TabIndex = 3;
             this.label8.Text = "Year";
             // 
@@ -896,11 +774,11 @@
             // 
             // filterAppointmentsBtn
             // 
-            this.filterAppointmentsBtn.Location = new System.Drawing.Point(146, 165);
+            this.filterAppointmentsBtn.Location = new System.Drawing.Point(215, 172);
             this.filterAppointmentsBtn.Name = "filterAppointmentsBtn";
             this.filterAppointmentsBtn.Size = new System.Drawing.Size(91, 31);
             this.filterAppointmentsBtn.TabIndex = 1;
-            this.filterAppointmentsBtn.Text = "Apply ";
+            this.filterAppointmentsBtn.Text = "Apply Filter";
             this.filterAppointmentsBtn.UseVisualStyleBackColor = true;
             this.filterAppointmentsBtn.Click += new System.EventHandler(this.filterAppointmentsBtn_Click);
             // 
@@ -966,31 +844,9 @@
             this.tabPage2.Location = new System.Drawing.Point(4, 25);
             this.tabPage2.Name = "tabPage2";
             this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage2.Size = new System.Drawing.Size(954, 575);
+            this.tabPage2.Size = new System.Drawing.Size(954, 621);
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "Appointment History";
-            // 
-            // tableAdapterManager
-            // 
-            this.tableAdapterManager.AppointmentTableAdapter = null;
-            this.tableAdapterManager.BackupDataSetBeforeUpdate = false;
-            this.tableAdapterManager.Connection = null;
-            this.tableAdapterManager.ScheduleTableAdapter = null;
-            this.tableAdapterManager.TblBloodInventoryTableAdapter = null;
-            this.tableAdapterManager.tblUsersTableAdapter = null;
-            this.tableAdapterManager.UpdateOrder = BloodBankSystem.ist2jwDataSetTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete;
-            // 
-            // appointmentTableAdapter
-            // 
-            this.appointmentTableAdapter.ClearBeforeFill = true;
-            // 
-            // tblUserScheduleTableAdapter
-            // 
-            this.tblUserScheduleTableAdapter.ClearBeforeFill = true;
-            // 
-            // scheduleTableAdapter
-            // 
-            this.scheduleTableAdapter.ClearBeforeFill = true;
             // 
             // button5
             // 
@@ -1030,6 +886,8 @@
             // 
             // groupBox5
             // 
+            this.groupBox5.Controls.Add(this.filterSelect);
+            this.groupBox5.Controls.Add(this.label2);
             this.groupBox5.Controls.Add(this.filterAppYearCmbx);
             this.groupBox5.Controls.Add(this.label1);
             this.groupBox5.Controls.Add(this.filterAppCapacityCmbx);
@@ -1041,7 +899,7 @@
             this.groupBox5.Controls.Add(this.filterAppointmentsBtn);
             this.groupBox5.Location = new System.Drawing.Point(25, 9);
             this.groupBox5.Name = "groupBox5";
-            this.groupBox5.Size = new System.Drawing.Size(305, 215);
+            this.groupBox5.Size = new System.Drawing.Size(323, 209);
             this.groupBox5.TabIndex = 11;
             this.groupBox5.TabStop = false;
             this.groupBox5.Text = "Filter";
@@ -1052,10 +910,11 @@
             this.filterAppCapacityCmbx.Items.AddRange(new object[] {
             "1",
             "2"});
-            this.filterAppCapacityCmbx.Location = new System.Drawing.Point(146, 124);
+            this.filterAppCapacityCmbx.Location = new System.Drawing.Point(88, 114);
             this.filterAppCapacityCmbx.Name = "filterAppCapacityCmbx";
             this.filterAppCapacityCmbx.Size = new System.Drawing.Size(121, 24);
             this.filterAppCapacityCmbx.TabIndex = 16;
+            this.filterAppCapacityCmbx.SelectedIndexChanged += new System.EventHandler(this.filterAppCapacityCmbx_SelectedIndexChanged);
             // 
             // filterAppVenueCmbx
             // 
@@ -1065,10 +924,11 @@
             "Springfield",
             "Durban Noth",
             "Phoenix"});
-            this.filterAppVenueCmbx.Location = new System.Drawing.Point(146, 93);
+            this.filterAppVenueCmbx.Location = new System.Drawing.Point(88, 83);
             this.filterAppVenueCmbx.Name = "filterAppVenueCmbx";
             this.filterAppVenueCmbx.Size = new System.Drawing.Size(121, 24);
             this.filterAppVenueCmbx.TabIndex = 15;
+            this.filterAppVenueCmbx.SelectedIndexChanged += new System.EventHandler(this.filterAppVenueCmbx_SelectedIndexChanged);
             // 
             // filterAppMonthCmbx
             // 
@@ -1086,49 +946,53 @@
             "10 October ",
             "11 November",
             "12 December "});
-            this.filterAppMonthCmbx.Location = new System.Drawing.Point(146, 58);
+            this.filterAppMonthCmbx.Location = new System.Drawing.Point(88, 50);
             this.filterAppMonthCmbx.Name = "filterAppMonthCmbx";
             this.filterAppMonthCmbx.Size = new System.Drawing.Size(121, 24);
             this.filterAppMonthCmbx.TabIndex = 14;
+            this.filterAppMonthCmbx.SelectedIndexChanged += new System.EventHandler(this.filterAppMonthCmbx_SelectedIndexChanged);
             // 
             // label12
             // 
             this.label12.AutoSize = true;
             this.label12.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label12.Location = new System.Drawing.Point(48, 128);
+            this.label12.Location = new System.Drawing.Point(21, 118);
             this.label12.Name = "label12";
             this.label12.Size = new System.Drawing.Size(60, 16);
             this.label12.TabIndex = 13;
             this.label12.Text = "Capacity";
+            this.label12.Click += new System.EventHandler(this.label12_Click);
             // 
             // label11
             // 
             this.label11.AutoSize = true;
             this.label11.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label11.Location = new System.Drawing.Point(48, 95);
+            this.label11.Location = new System.Drawing.Point(21, 85);
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(46, 16);
             this.label11.TabIndex = 12;
             this.label11.Text = "Venue";
+            this.label11.Click += new System.EventHandler(this.label11_Click);
             // 
             // label10
             // 
             this.label10.AutoSize = true;
             this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label10.Location = new System.Drawing.Point(48, 63);
+            this.label10.Location = new System.Drawing.Point(21, 53);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(43, 16);
             this.label10.TabIndex = 11;
             this.label10.Text = "Month";
+            this.label10.Click += new System.EventHandler(this.label10_Click);
             // 
             // groupBox6
             // 
             this.groupBox6.Controls.Add(this.button8);
             this.groupBox6.Controls.Add(this.sortAppointmentDateBtn);
             this.groupBox6.Controls.Add(this.sortAppointmentsVenueBtn);
-            this.groupBox6.Location = new System.Drawing.Point(19, 18);
+            this.groupBox6.Location = new System.Drawing.Point(19, 9);
             this.groupBox6.Name = "groupBox6";
-            this.groupBox6.Size = new System.Drawing.Size(291, 200);
+            this.groupBox6.Size = new System.Drawing.Size(291, 209);
             this.groupBox6.TabIndex = 5;
             this.groupBox6.TabStop = false;
             this.groupBox6.Text = "Sort";
@@ -1166,11 +1030,12 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(48, 32);
+            this.label1.Location = new System.Drawing.Point(21, 22);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(36, 16);
             this.label1.TabIndex = 17;
             this.label1.Text = "Year";
+            this.label1.Click += new System.EventHandler(this.label1_Click_1);
             // 
             // filterAppYearCmbx
             // 
@@ -1179,10 +1044,320 @@
             "2025",
             "2026",
             "2027"});
-            this.filterAppYearCmbx.Location = new System.Drawing.Point(146, 28);
+            this.filterAppYearCmbx.Location = new System.Drawing.Point(88, 18);
             this.filterAppYearCmbx.Name = "filterAppYearCmbx";
             this.filterAppYearCmbx.Size = new System.Drawing.Size(121, 24);
             this.filterAppYearCmbx.TabIndex = 18;
+            this.filterAppYearCmbx.SelectedIndexChanged += new System.EventHandler(this.filterAppYearCmbx_SelectedIndexChanged);
+            // 
+            // scheduleIDLabel
+            // 
+            scheduleIDLabel.AutoSize = true;
+            scheduleIDLabel.Location = new System.Drawing.Point(622, 33);
+            scheduleIDLabel.Name = "scheduleIDLabel";
+            scheduleIDLabel.Size = new System.Drawing.Size(83, 16);
+            scheduleIDLabel.TabIndex = 22;
+            scheduleIDLabel.Text = "Schedule ID:";
+            // 
+            // scheduleIDTextBox1
+            // 
+            this.scheduleIDTextBox1.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.tblUserScheduleBindingSource, "ScheduleID", true));
+            this.scheduleIDTextBox1.Enabled = false;
+            this.scheduleIDTextBox1.Location = new System.Drawing.Point(711, 30);
+            this.scheduleIDTextBox1.Name = "scheduleIDTextBox1";
+            this.scheduleIDTextBox1.Size = new System.Drawing.Size(200, 22);
+            this.scheduleIDTextBox1.TabIndex = 23;
+            this.scheduleIDTextBox1.Visible = false;
+            // 
+            // appIDLabel
+            // 
+            appIDLabel.AutoSize = true;
+            appIDLabel.Location = new System.Drawing.Point(622, 61);
+            appIDLabel.Name = "appIDLabel";
+            appIDLabel.Size = new System.Drawing.Size(51, 16);
+            appIDLabel.TabIndex = 24;
+            appIDLabel.Text = "App ID:";
+            // 
+            // appIDTextBox
+            // 
+            this.appIDTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.tblUserScheduleBindingSource, "AppID", true));
+            this.appIDTextBox.Enabled = false;
+            this.appIDTextBox.Location = new System.Drawing.Point(711, 58);
+            this.appIDTextBox.Name = "appIDTextBox";
+            this.appIDTextBox.Size = new System.Drawing.Size(200, 22);
+            this.appIDTextBox.TabIndex = 25;
+            this.appIDTextBox.Visible = false;
+            // 
+            // appDateLabel
+            // 
+            appDateLabel.AutoSize = true;
+            appDateLabel.Location = new System.Drawing.Point(121, 21);
+            appDateLabel.Name = "appDateLabel";
+            appDateLabel.Size = new System.Drawing.Size(67, 16);
+            appDateLabel.TabIndex = 26;
+            appDateLabel.Text = "App Date:";
+            // 
+            // appDateDateTimePicker
+            // 
+            this.appDateDateTimePicker.DataBindings.Add(new System.Windows.Forms.Binding("Value", this.tblUserScheduleBindingSource, "AppDate", true));
+            this.appDateDateTimePicker.Location = new System.Drawing.Point(210, 17);
+            this.appDateDateTimePicker.Name = "appDateDateTimePicker";
+            this.appDateDateTimePicker.Size = new System.Drawing.Size(200, 22);
+            this.appDateDateTimePicker.TabIndex = 27;
+            // 
+            // timeLabel
+            // 
+            timeLabel.AutoSize = true;
+            timeLabel.Location = new System.Drawing.Point(121, 48);
+            timeLabel.Name = "timeLabel";
+            timeLabel.Size = new System.Drawing.Size(41, 16);
+            timeLabel.TabIndex = 28;
+            timeLabel.Text = "Time:";
+            // 
+            // timeTextBox
+            // 
+            this.timeTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.tblUserScheduleBindingSource, "Time", true));
+            this.timeTextBox.Location = new System.Drawing.Point(210, 45);
+            this.timeTextBox.Name = "timeTextBox";
+            this.timeTextBox.Size = new System.Drawing.Size(200, 22);
+            this.timeTextBox.TabIndex = 29;
+            // 
+            // venueLabel
+            // 
+            venueLabel.AutoSize = true;
+            venueLabel.Location = new System.Drawing.Point(550, 18);
+            venueLabel.Name = "venueLabel";
+            venueLabel.Size = new System.Drawing.Size(49, 16);
+            venueLabel.TabIndex = 30;
+            venueLabel.Text = "Venue:";
+            // 
+            // venueTextBox
+            // 
+            this.venueTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.tblUserScheduleBindingSource, "Venue", true));
+            this.venueTextBox.Location = new System.Drawing.Point(639, 15);
+            this.venueTextBox.Name = "venueTextBox";
+            this.venueTextBox.Size = new System.Drawing.Size(200, 22);
+            this.venueTextBox.TabIndex = 31;
+            // 
+            // attendedLabel
+            // 
+            attendedLabel.AutoSize = true;
+            attendedLabel.Location = new System.Drawing.Point(550, 48);
+            attendedLabel.Name = "attendedLabel";
+            attendedLabel.Size = new System.Drawing.Size(64, 16);
+            attendedLabel.TabIndex = 32;
+            attendedLabel.Text = "Attended:";
+            // 
+            // attendedCheckBox
+            // 
+            this.attendedCheckBox.DataBindings.Add(new System.Windows.Forms.Binding("CheckState", this.tblUserScheduleBindingSource, "Attended", true));
+            this.attendedCheckBox.Location = new System.Drawing.Point(639, 43);
+            this.attendedCheckBox.Name = "attendedCheckBox";
+            this.attendedCheckBox.Size = new System.Drawing.Size(200, 24);
+            this.attendedCheckBox.TabIndex = 33;
+            this.attendedCheckBox.Text = "checkBox1";
+            this.attendedCheckBox.UseVisualStyleBackColor = true;
+            // 
+            // groupBox7
+            // 
+            this.groupBox7.Controls.Add(venueLabel);
+            this.groupBox7.Controls.Add(this.attendedCheckBox);
+            this.groupBox7.Controls.Add(attendedLabel);
+            this.groupBox7.Controls.Add(this.venueTextBox);
+            this.groupBox7.Controls.Add(appDateLabel);
+            this.groupBox7.Controls.Add(this.timeTextBox);
+            this.groupBox7.Controls.Add(this.appDateDateTimePicker);
+            this.groupBox7.Controls.Add(timeLabel);
+            this.groupBox7.Location = new System.Drawing.Point(27, 240);
+            this.groupBox7.Name = "groupBox7";
+            this.groupBox7.Size = new System.Drawing.Size(869, 78);
+            this.groupBox7.TabIndex = 34;
+            this.groupBox7.TabStop = false;
+            this.groupBox7.Text = "Schedule Details";
+            // 
+            // groupBox8
+            // 
+            this.groupBox8.Controls.Add(this.button7);
+            this.groupBox8.Controls.Add(this.sortAttendedBtn);
+            this.groupBox8.Controls.Add(this.sortVenueBtn);
+            this.groupBox8.Controls.Add(this.sortDateBtn);
+            this.groupBox8.Location = new System.Drawing.Point(13, 8);
+            this.groupBox8.Name = "groupBox8";
+            this.groupBox8.Size = new System.Drawing.Size(456, 109);
+            this.groupBox8.TabIndex = 4;
+            this.groupBox8.TabStop = false;
+            this.groupBox8.Text = "Sort";
+            // 
+            // button7
+            // 
+            this.button7.Location = new System.Drawing.Point(153, 60);
+            this.button7.Name = "button7";
+            this.button7.Size = new System.Drawing.Size(111, 33);
+            this.button7.TabIndex = 4;
+            this.button7.Text = "Venue DESC";
+            this.button7.UseVisualStyleBackColor = true;
+            // 
+            // scheduleBindingSource
+            // 
+            this.scheduleBindingSource.DataMember = "Schedule";
+            this.scheduleBindingSource.DataSource = this.ist2jwDataSet;
+            // 
+            // ist2jwDataSet
+            // 
+            this.ist2jwDataSet.DataSetName = "ist2jwDataSet";
+            this.ist2jwDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // appointmentBindingSource
+            // 
+            this.appointmentBindingSource.DataMember = "Appointment";
+            this.appointmentBindingSource.DataSource = this.ist2jwDataSet;
+            // 
+            // dataGridViewTextBoxColumn1
+            // 
+            this.dataGridViewTextBoxColumn1.DataPropertyName = "AppID";
+            this.dataGridViewTextBoxColumn1.HeaderText = "Appointment ID";
+            this.dataGridViewTextBoxColumn1.MinimumWidth = 6;
+            this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
+            this.dataGridViewTextBoxColumn1.Visible = false;
+            this.dataGridViewTextBoxColumn1.Width = 125;
+            // 
+            // dataGridViewTextBoxColumn2
+            // 
+            this.dataGridViewTextBoxColumn2.DataPropertyName = "AppDate";
+            this.dataGridViewTextBoxColumn2.HeaderText = "Appointment Date";
+            this.dataGridViewTextBoxColumn2.MinimumWidth = 6;
+            this.dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
+            this.dataGridViewTextBoxColumn2.Width = 125;
+            // 
+            // dataGridViewTextBoxColumn3
+            // 
+            this.dataGridViewTextBoxColumn3.DataPropertyName = "Time";
+            this.dataGridViewTextBoxColumn3.HeaderText = "Time";
+            this.dataGridViewTextBoxColumn3.MinimumWidth = 6;
+            this.dataGridViewTextBoxColumn3.Name = "dataGridViewTextBoxColumn3";
+            this.dataGridViewTextBoxColumn3.Width = 125;
+            // 
+            // dataGridViewTextBoxColumn4
+            // 
+            this.dataGridViewTextBoxColumn4.DataPropertyName = "Capacity";
+            this.dataGridViewTextBoxColumn4.HeaderText = "Capacity";
+            this.dataGridViewTextBoxColumn4.MinimumWidth = 6;
+            this.dataGridViewTextBoxColumn4.Name = "dataGridViewTextBoxColumn4";
+            this.dataGridViewTextBoxColumn4.Width = 125;
+            // 
+            // dataGridViewTextBoxColumn5
+            // 
+            this.dataGridViewTextBoxColumn5.DataPropertyName = "Venue";
+            this.dataGridViewTextBoxColumn5.HeaderText = "Venue";
+            this.dataGridViewTextBoxColumn5.MinimumWidth = 6;
+            this.dataGridViewTextBoxColumn5.Name = "dataGridViewTextBoxColumn5";
+            this.dataGridViewTextBoxColumn5.Width = 125;
+            // 
+            // dataGridViewTextBoxColumn6
+            // 
+            this.dataGridViewTextBoxColumn6.DataPropertyName = "ScheduleID";
+            this.dataGridViewTextBoxColumn6.HeaderText = "ScheduleID";
+            this.dataGridViewTextBoxColumn6.MinimumWidth = 6;
+            this.dataGridViewTextBoxColumn6.Name = "dataGridViewTextBoxColumn6";
+            this.dataGridViewTextBoxColumn6.ReadOnly = true;
+            this.dataGridViewTextBoxColumn6.Visible = false;
+            this.dataGridViewTextBoxColumn6.Width = 125;
+            // 
+            // dataGridViewTextBoxColumn7
+            // 
+            this.dataGridViewTextBoxColumn7.DataPropertyName = "AppID";
+            this.dataGridViewTextBoxColumn7.HeaderText = "Appointment ID";
+            this.dataGridViewTextBoxColumn7.MinimumWidth = 6;
+            this.dataGridViewTextBoxColumn7.Name = "dataGridViewTextBoxColumn7";
+            this.dataGridViewTextBoxColumn7.ReadOnly = true;
+            this.dataGridViewTextBoxColumn7.Visible = false;
+            this.dataGridViewTextBoxColumn7.Width = 125;
+            // 
+            // dataGridViewTextBoxColumn8
+            // 
+            this.dataGridViewTextBoxColumn8.DataPropertyName = "AppDate";
+            this.dataGridViewTextBoxColumn8.HeaderText = "Appointment Date";
+            this.dataGridViewTextBoxColumn8.MinimumWidth = 6;
+            this.dataGridViewTextBoxColumn8.Name = "dataGridViewTextBoxColumn8";
+            this.dataGridViewTextBoxColumn8.ReadOnly = true;
+            this.dataGridViewTextBoxColumn8.Width = 125;
+            // 
+            // dataGridViewTextBoxColumn9
+            // 
+            this.dataGridViewTextBoxColumn9.DataPropertyName = "Time";
+            this.dataGridViewTextBoxColumn9.HeaderText = "Time";
+            this.dataGridViewTextBoxColumn9.MinimumWidth = 6;
+            this.dataGridViewTextBoxColumn9.Name = "dataGridViewTextBoxColumn9";
+            this.dataGridViewTextBoxColumn9.ReadOnly = true;
+            this.dataGridViewTextBoxColumn9.Width = 125;
+            // 
+            // dataGridViewTextBoxColumn10
+            // 
+            this.dataGridViewTextBoxColumn10.DataPropertyName = "Venue";
+            this.dataGridViewTextBoxColumn10.HeaderText = "Venue";
+            this.dataGridViewTextBoxColumn10.MinimumWidth = 6;
+            this.dataGridViewTextBoxColumn10.Name = "dataGridViewTextBoxColumn10";
+            this.dataGridViewTextBoxColumn10.ReadOnly = true;
+            this.dataGridViewTextBoxColumn10.Width = 125;
+            // 
+            // dataGridViewCheckBoxColumn1
+            // 
+            this.dataGridViewCheckBoxColumn1.DataPropertyName = "Attended";
+            this.dataGridViewCheckBoxColumn1.HeaderText = "Attended";
+            this.dataGridViewCheckBoxColumn1.MinimumWidth = 6;
+            this.dataGridViewCheckBoxColumn1.Name = "dataGridViewCheckBoxColumn1";
+            this.dataGridViewCheckBoxColumn1.ReadOnly = true;
+            this.dataGridViewCheckBoxColumn1.Width = 125;
+            // 
+            // tblUserScheduleBindingSource
+            // 
+            this.tblUserScheduleBindingSource.DataMember = "tblUserSchedule";
+            this.tblUserScheduleBindingSource.DataSource = this.ist2jwDataSet;
+            this.tblUserScheduleBindingSource.CurrentChanged += new System.EventHandler(this.tblUserScheduleBindingSource_CurrentChanged);
+            // 
+            // tableAdapterManager
+            // 
+            this.tableAdapterManager.AppointmentTableAdapter = null;
+            this.tableAdapterManager.BackupDataSetBeforeUpdate = false;
+            this.tableAdapterManager.Connection = null;
+            this.tableAdapterManager.ScheduleTableAdapter = null;
+            this.tableAdapterManager.TblBloodInventoryTableAdapter = null;
+            this.tableAdapterManager.tblUsersTableAdapter = null;
+            this.tableAdapterManager.UpdateOrder = BloodBankSystem.ist2jwDataSetTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete;
+            // 
+            // appointmentTableAdapter
+            // 
+            this.appointmentTableAdapter.ClearBeforeFill = true;
+            // 
+            // tblUserScheduleTableAdapter
+            // 
+            this.tblUserScheduleTableAdapter.ClearBeforeFill = true;
+            // 
+            // scheduleTableAdapter
+            // 
+            this.scheduleTableAdapter.ClearBeforeFill = true;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(22, 154);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(61, 16);
+            this.label2.TabIndex = 19;
+            this.label2.Text = "Filter By: ";
+            // 
+            // filterSelect
+            // 
+            this.filterSelect.FormattingEnabled = true;
+            this.filterSelect.Items.AddRange(new object[] {
+            "Year",
+            "Month",
+            "Venue",
+            "Capacity"});
+            this.filterSelect.Location = new System.Drawing.Point(88, 149);
+            this.filterSelect.Name = "filterSelect";
+            this.filterSelect.Size = new System.Drawing.Size(121, 24);
+            this.filterSelect.TabIndex = 20;
             // 
             // AppointmentForm
             // 
@@ -1202,17 +1377,13 @@
             this.groupBox4.PerformLayout();
             this.groupBox3.ResumeLayout(false);
             this.groupBox3.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.appointmentBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.ist2jwDataSet)).EndInit();
             this.groupBox2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.appointmentDataGridView)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.scheduleBindingSource)).EndInit();
             this.panel2.ResumeLayout(false);
+            this.panel2.PerformLayout();
             this.groupBox1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.tblUserScheduleDataGridView)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.tblUserScheduleBindingSource)).EndInit();
             this.panel3.ResumeLayout(false);
-            this.panel3.PerformLayout();
             this.panel4.ResumeLayout(false);
             this.panel4.PerformLayout();
             this.tabControl1.ResumeLayout(false);
@@ -1225,6 +1396,13 @@
             this.groupBox5.ResumeLayout(false);
             this.groupBox5.PerformLayout();
             this.groupBox6.ResumeLayout(false);
+            this.groupBox7.ResumeLayout(false);
+            this.groupBox7.PerformLayout();
+            this.groupBox8.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.scheduleBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ist2jwDataSet)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.appointmentBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.tblUserScheduleBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -1243,11 +1421,8 @@
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.Button sortDateBtn;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Button resetBtn;
-        private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Panel panel4;
         private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.Button button7;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.ComboBox monthFilterCmbx;
         private System.Windows.Forms.ComboBox yearFilterCmbx;
@@ -1276,12 +1451,6 @@
         private System.Windows.Forms.TextBox timeTextBox1;
         private System.Windows.Forms.TextBox capacityTextBox;
         private System.Windows.Forms.TextBox venueTextBox1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn6;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn7;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn8;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn9;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn10;
-        private System.Windows.Forms.DataGridViewCheckBoxColumn dataGridViewCheckBoxColumn1;
         private System.Windows.Forms.GroupBox groupBox1;
         private ist2jwDataSetTableAdapters.ScheduleTableAdapter scheduleTableAdapter;
         private System.Windows.Forms.BindingSource scheduleBindingSource;
@@ -1318,5 +1487,22 @@
         private System.Windows.Forms.Button sortAppointmentsVenueBtn;
         private System.Windows.Forms.ComboBox filterAppYearCmbx;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn6;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn7;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn8;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn9;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn10;
+        private System.Windows.Forms.DataGridViewCheckBoxColumn dataGridViewCheckBoxColumn1;
+        private System.Windows.Forms.GroupBox groupBox7;
+        private System.Windows.Forms.CheckBox attendedCheckBox;
+        private System.Windows.Forms.TextBox venueTextBox;
+        private System.Windows.Forms.TextBox timeTextBox;
+        private System.Windows.Forms.DateTimePicker appDateDateTimePicker;
+        private System.Windows.Forms.TextBox scheduleIDTextBox1;
+        private System.Windows.Forms.TextBox appIDTextBox;
+        private System.Windows.Forms.GroupBox groupBox8;
+        private System.Windows.Forms.Button button7;
+        private System.Windows.Forms.ComboBox filterSelect;
+        private System.Windows.Forms.Label label2;
     }
 }
