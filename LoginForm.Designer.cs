@@ -142,7 +142,7 @@
             this.mIDTextBox.Mask = "0000000000000";
             this.mIDTextBox.Name = "mIDTextBox";
             this.mIDTextBox.Size = new System.Drawing.Size(339, 39);
-            this.mIDTextBox.TabIndex = 19;
+            this.mIDTextBox.TabIndex = 11;
             this.mIDTextBox.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.mIDTextBox.ValidatingType = typeof(int);
             // 
