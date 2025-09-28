@@ -373,9 +373,7 @@ namespace BloodBankSystem
 
         private void appointmentBindingNavigatorSaveItem_Click(object sender, EventArgs e)
         {
-            this.Validate();
-            this.appointmentBindingSource.EndEdit();
-            this.tableAdapterManager.UpdateAll(this.ist2jwDataSet);
+         
 
         }
 
@@ -604,6 +602,17 @@ namespace BloodBankSystem
         }
 
         private void appIDTextBox1_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void fillUserScheduleToolStripButton_Click_1(object sender, EventArgs e)
+        {
+            
+
+        }
+
+        private void tabPage2_Click(object sender, EventArgs e)
         {
 
         }
