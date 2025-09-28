@@ -18,13 +18,6 @@ namespace BloodBankSystem
         {
             InitializeComponent();
         }
-
-        private void label1_Click(object sender, EventArgs e)
-        {
-
-
-        }
-
         private void BackBtn_Click(object sender, EventArgs e)
         {
             Form welcomeform = new WelcomeForm();
@@ -33,22 +26,27 @@ namespace BloodBankSystem
         }
 
         private void loginBtn_Click(object sender, EventArgs e)
-        {
-
+        {   // Handle user login
             String password = PasswordTextBox.Text;
             String IDnumber = mIDTextBox.Text.ToString();
           
               try
-              {
+            {// Connect to the database and retrieve user information
                 var adapter = new ist2jwDataSetTableAdapters.tblUsersTableAdapter();
                 var dataTable = adapter.GetUserInfo(IDnumber); //error here
 
+                // Check if user exists
                 if (dataTable.Rows.Count > 0)
                 {
                     string dbPassword = dataTable.Rows[0]["Password"].ToString();
-                  
+                    Boolean isActive = Convert.ToBoolean(dataTable.Rows[0]["IsActiveAccount"]);
 
-                    if (password.Equals(dbPassword))
+                    // Validate account status and credentials
+                    if (!isActive)
+                    {
+                        MessageBox.Show("Your account is deactivated. Please contact the administrator.");
+                    }
+                    else if (password.Equals(dbPassword) && isActive)
                     {  
                         String isAdmin = dataTable.Rows[0]["UserType"].ToString();
                         this.Hide();
@@ -83,14 +81,14 @@ namespace BloodBankSystem
 
                 }
                 else
-                {
+                {   
                     MessageBox.Show("Donor not found. Please check your ID Number.");
                 }
 
               }
-              catch (SqlException ex)
-              {
-                MessageBox.Show(ex.Message);
+              catch (SqlException ex) // Handle SQL exceptions
+            {
+                MessageBox.Show("Server side error, Please retry login \n" + ex.Message);
               }
 
           ;
