@@ -40,10 +40,8 @@
             this.tblUsersBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.tblUsersTableAdapter = new BloodBankSystem.ist2jwDataSetTableAdapters.tblUsersTableAdapter();
             this.tableAdapterManager = new BloodBankSystem.ist2jwDataSetTableAdapters.TableAdapterManager();
-            this.passShowImg = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.ist2jwDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.tblUsersBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.passShowImg)).BeginInit();
             this.SuspendLayout();
             // 
             // logTitleLbl
@@ -78,7 +76,6 @@
             this.PasswordTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F);
             this.PasswordTextBox.Location = new System.Drawing.Point(103, 320);
             this.PasswordTextBox.Name = "PasswordTextBox";
-            this.PasswordTextBox.PasswordChar = '*';
             this.PasswordTextBox.Size = new System.Drawing.Size(339, 38);
             this.PasswordTextBox.TabIndex = 13;
             this.PasswordTextBox.Tag = "";
@@ -169,20 +166,6 @@
             this.tableAdapterManager.tblUsersTableAdapter = this.tblUsersTableAdapter;
             this.tableAdapterManager.UpdateOrder = BloodBankSystem.ist2jwDataSetTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete;
             // 
-            // passShowImg
-            // 
-            this.passShowImg.BackColor = System.Drawing.Color.Transparent;
-            this.passShowImg.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.passShowImg.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.passShowImg.Image = global::BloodBankSystem.Properties.Resources.HomeBack;
-            this.passShowImg.Location = new System.Drawing.Point(458, 320);
-            this.passShowImg.Name = "passShowImg";
-            this.passShowImg.Size = new System.Drawing.Size(37, 33);
-            this.passShowImg.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.passShowImg.TabIndex = 25;
-            this.passShowImg.TabStop = false;
-            this.passShowImg.Click += new System.EventHandler(this.passShowImg_Click);
-            // 
             // LoginForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 14F);
@@ -190,7 +173,6 @@
             this.BackColor = System.Drawing.Color.White;
             this.BackgroundImage = global::BloodBankSystem.Properties.Resources.RegBack;
             this.ClientSize = new System.Drawing.Size(554, 509);
-            this.Controls.Add(this.passShowImg);
             this.Controls.Add(this.mIDTextBox);
             this.Controls.Add(this.BackBtn);
             this.Controls.Add(this.loginBtn);
@@ -205,7 +187,6 @@
             this.Load += new System.EventHandler(this.LoginForm_Load);
             ((System.ComponentModel.ISupportInitialize)(this.ist2jwDataSet)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.tblUsersBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.passShowImg)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -223,6 +204,5 @@
         private System.Windows.Forms.BindingSource tblUsersBindingSource;
         private ist2jwDataSetTableAdapters.tblUsersTableAdapter tblUsersTableAdapter;
         private ist2jwDataSetTableAdapters.TableAdapterManager tableAdapterManager;
-        private System.Windows.Forms.PictureBox passShowImg;
     }
 }

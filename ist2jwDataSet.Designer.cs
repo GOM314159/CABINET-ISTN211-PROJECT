@@ -4037,8 +4037,8 @@ SELECT UserID, Password, Name, Surname, IDNumber, PhoneNumber, UserType, BloodTy
             this._adapter.InsertCommand = new global::System.Data.SqlClient.SqlCommand();
             this._adapter.InsertCommand.Connection = this.Connection;
             this._adapter.InsertCommand.CommandText = "INSERT INTO [dbo].[Appointment] ([AppID], [AppDate], [Time], [Capacity], [Venue])" +
-                " VALUES (@AppID, @AppDate, @Time, @Capacity, @Venue);\r\nSELECT AppID, AppDate, Ti" +
-                "me, Capacity, Venue FROM Appointment WHERE (AppID = @AppID)";
+                " VALUES (@AppID, @AppDate, @Time, @Capacity, @Venue);\nSELECT AppID, AppDate, Tim" +
+                "e, Capacity, Venue FROM Appointment WHERE (AppID = @AppID)";
             this._adapter.InsertCommand.CommandType = global::System.Data.CommandType.Text;
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@AppID", global::System.Data.SqlDbType.NChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "AppID", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@AppDate", global::System.Data.SqlDbType.Date, 0, global::System.Data.ParameterDirection.Input, 0, 0, "AppDate", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
@@ -4080,31 +4080,31 @@ SELECT AppID, AppDate, Time, Capacity, Venue FROM Appointment WHERE (AppID = @Ap
             this._commandCollection[0].CommandType = global::System.Data.CommandType.Text;
             this._commandCollection[1] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[1].Connection = this.Connection;
-            this._commandCollection[1].CommandText = "SELECT AppID, AppDate, Time, Capacity, Venue FROM dbo.Appointment\r\nWHERE (Appoint" +
-                "ment.Capacity = @Capacity\r\n)";
+            this._commandCollection[1].CommandText = "SELECT AppID, AppDate, Time, Capacity, Venue FROM dbo.Appointment\nWHERE (Appointm" +
+                "ent.Capacity = @Capacity\n)";
             this._commandCollection[1].CommandType = global::System.Data.CommandType.Text;
             this._commandCollection[1].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Capacity", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.Input, 0, 0, "Capacity", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._commandCollection[2] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[2].Connection = this.Connection;
-            this._commandCollection[2].CommandText = "SELECT AppID, AppDate, Time, Capacity, Venue FROM dbo.Appointment\r\nWHERE (MONTH(A" +
-                "ppDate) = @Month)";
+            this._commandCollection[2].CommandText = "SELECT AppID, AppDate, Time, Capacity, Venue FROM dbo.Appointment\nWHERE (MONTH(Ap" +
+                "pDate) = @Month)";
             this._commandCollection[2].CommandType = global::System.Data.CommandType.Text;
             this._commandCollection[2].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Month", global::System.Data.SqlDbType.Decimal, 0, global::System.Data.ParameterDirection.Input, 0, 0, "", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._commandCollection[3] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[3].Connection = this.Connection;
-            this._commandCollection[3].CommandText = "SELECT AppID, AppDate, Time, Capacity, Venue FROM dbo.Appointment\r\nWHERE (Appoint" +
-                "ment.Venue = @Venue)";
+            this._commandCollection[3].CommandText = "SELECT AppID, AppDate, Time, Capacity, Venue FROM dbo.Appointment\nWHERE (Appointm" +
+                "ent.Venue = @Venue)";
             this._commandCollection[3].CommandType = global::System.Data.CommandType.Text;
             this._commandCollection[3].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Venue", global::System.Data.SqlDbType.VarChar, 50, global::System.Data.ParameterDirection.Input, 0, 0, "Venue", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._commandCollection[4] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[4].Connection = this.Connection;
-            this._commandCollection[4].CommandText = "SELECT AppID, AppDate, Time, Capacity, Venue\r\nFROM     Appointment\r\nWHERE   (YEAR" +
-                "(AppDate) = @Year) ";
+            this._commandCollection[4].CommandText = "SELECT AppID, AppDate, Time, Capacity, Venue\nFROM     Appointment\nWHERE   (YEAR(A" +
+                "ppDate) = @Year) ";
             this._commandCollection[4].CommandType = global::System.Data.CommandType.Text;
             this._commandCollection[4].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Year", global::System.Data.SqlDbType.Decimal, 0, global::System.Data.ParameterDirection.Input, 0, 0, "", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._commandCollection[5] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[5].Connection = this.Connection;
-            this._commandCollection[5].CommandText = "UPDATE Appointment\r\nSET          Capacity = @Capacity\r\nWHERE  (AppID = @AppID)";
+            this._commandCollection[5].CommandText = "UPDATE Appointment\nSET          Capacity = @Capacity\nWHERE  (AppID = @AppID)";
             this._commandCollection[5].CommandType = global::System.Data.CommandType.Text;
             this._commandCollection[5].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Capacity", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.Input, 0, 0, "Capacity", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._commandCollection[5].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@AppID", global::System.Data.SqlDbType.NChar, 10, global::System.Data.ParameterDirection.Input, 0, 0, "AppID", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
@@ -4582,8 +4582,8 @@ SELECT AppID, AppDate, Time, Capacity, Venue FROM Appointment WHERE (AppID = @Ap
             this._adapter.InsertCommand = new global::System.Data.SqlClient.SqlCommand();
             this._adapter.InsertCommand.Connection = this.Connection;
             this._adapter.InsertCommand.CommandText = "INSERT INTO [dbo].[Schedule] ([ScheduleID], [UserID], [AppID], [Attended]) VALUES" +
-                " (@ScheduleID, @UserID, @AppID, @Attended);\r\nSELECT ScheduleID, UserID, AppID, A" +
-                "ttended FROM Schedule WHERE (ScheduleID = @ScheduleID)";
+                " (@ScheduleID, @UserID, @AppID, @Attended);\nSELECT ScheduleID, UserID, AppID, At" +
+                "tended FROM Schedule WHERE (ScheduleID = @ScheduleID)";
             this._adapter.InsertCommand.CommandType = global::System.Data.CommandType.Text;
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@ScheduleID", global::System.Data.SqlDbType.NChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "ScheduleID", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@UserID", global::System.Data.SqlDbType.NChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "UserID", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));

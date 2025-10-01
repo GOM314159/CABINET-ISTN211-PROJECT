@@ -142,16 +142,4 @@
   <data name="buttonbackGreen" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>buttonbackGreen.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="FirstTimeDonorBadge" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>FIRST TIME BLOOD DONOR BADGE.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="LegendaryDonorBadge" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>LEGENDARY BLOOD DONOR BADGE.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="LifeSaverBadge" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>LIFE SAVER BADGE.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="RegularDonorBadge" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>REGULAR BLOOD DONOR BADGE.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
 </root>

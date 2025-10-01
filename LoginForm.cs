@@ -65,6 +65,7 @@ namespace BloodBankSystem
                             Form homeForm = new HomePage(dataTable.Rows[0]["UserID"].ToString(),dataTable.Rows[0]["Name"].ToString());
                             homeForm.Show();
                         }
+                       
 
                     }
                     else
@@ -75,8 +76,7 @@ namespace BloodBankSystem
                         }
                         else
                         {
-                            MessageBox.Show("Incorrect Password entered. Please try again.");
-                            PasswordTextBox.Clear();
+                            MessageBox.Show("Incorrect Password. Please try again.");
                         }
                            
                     }
@@ -110,20 +110,6 @@ namespace BloodBankSystem
             this.tblUsersBindingSource.EndEdit();
             this.tableAdapterManager.UpdateAll(this.ist2jwDataSet);
 
-        }
-
-        private void passShowImg_Click(object sender, EventArgs e)
-        {
-            if (PasswordTextBox.PasswordChar == '*')
-            {
-                PasswordTextBox.PasswordChar = '\0';
-                passShowImg.BorderStyle = BorderStyle.Fixed3D;
-            }
-            else
-            {
-                PasswordTextBox.PasswordChar = '*';
-                passShowImg.BorderStyle = BorderStyle.FixedSingle;
-            }
         }
     }
 }
