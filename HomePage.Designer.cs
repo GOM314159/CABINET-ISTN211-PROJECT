@@ -37,8 +37,6 @@
             this.pLivesSavedLbl = new System.Windows.Forms.Label();
             this.logOutBtn = new System.Windows.Forms.Button();
             this.ttlDonLbl = new System.Windows.Forms.Label();
-            this.prfnextDateLbl = new System.Windows.Forms.Label();
-            this.prfLastDonLbl = new System.Windows.Forms.Label();
             this.donorStatusLbl = new System.Windows.Forms.Label();
             this.prfDonLbl = new System.Windows.Forms.Label();
             this.prfNameLbl = new System.Windows.Forms.Label();
@@ -75,13 +73,13 @@
             // 
             this.welcomelbl.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.welcomelbl.BackColor = System.Drawing.Color.White;
+            this.welcomelbl.BackColor = System.Drawing.Color.Transparent;
             this.welcomelbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 36.25F, System.Drawing.FontStyle.Bold);
             this.welcomelbl.ForeColor = System.Drawing.Color.SteelBlue;
             this.welcomelbl.Location = new System.Drawing.Point(126, 0);
             this.welcomelbl.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.welcomelbl.Name = "welcomelbl";
-            this.welcomelbl.Size = new System.Drawing.Size(549, 58);
+            this.welcomelbl.Size = new System.Drawing.Size(863, 58);
             this.welcomelbl.TabIndex = 2;
             this.welcomelbl.Text = "Welcome ";
             this.welcomelbl.TextAlign = System.Drawing.ContentAlignment.TopCenter;
@@ -92,10 +90,10 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.bbNameLbl.BackColor = System.Drawing.Color.Transparent;
             this.bbNameLbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 38.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.bbNameLbl.ForeColor = System.Drawing.Color.Red;
+            this.bbNameLbl.ForeColor = System.Drawing.Color.White;
             this.bbNameLbl.Location = new System.Drawing.Point(82, 62);
             this.bbNameLbl.Name = "bbNameLbl";
-            this.bbNameLbl.Size = new System.Drawing.Size(619, 63);
+            this.bbNameLbl.Size = new System.Drawing.Size(933, 63);
             this.bbNameLbl.TabIndex = 3;
             this.bbNameLbl.Text = "To Blood    Bankers";
             this.bbNameLbl.TextAlign = System.Drawing.ContentAlignment.TopCenter;
@@ -105,11 +103,11 @@
             this.ProfileImg.BackColor = System.Drawing.Color.Transparent;
             this.ProfileImg.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ProfileImg.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.ProfileImg.Image = global::BloodBankSystem.Properties.Resources.ProfileBackImg;
-            this.ProfileImg.Location = new System.Drawing.Point(714, 0);
+            this.ProfileImg.Image = global::BloodBankSystem.Properties.Resources.ProfileImage;
+            this.ProfileImg.Location = new System.Drawing.Point(997, 0);
             this.ProfileImg.Margin = new System.Windows.Forms.Padding(4);
             this.ProfileImg.Name = "ProfileImg";
-            this.ProfileImg.Size = new System.Drawing.Size(70, 60);
+            this.ProfileImg.Size = new System.Drawing.Size(101, 99);
             this.ProfileImg.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.ProfileImg.TabIndex = 4;
             this.ProfileImg.TabStop = false;
@@ -123,14 +121,12 @@
             this.prfPnl.Controls.Add(this.pLivesSavedLbl);
             this.prfPnl.Controls.Add(this.logOutBtn);
             this.prfPnl.Controls.Add(this.ttlDonLbl);
-            this.prfPnl.Controls.Add(this.prfnextDateLbl);
-            this.prfPnl.Controls.Add(this.prfLastDonLbl);
             this.prfPnl.Controls.Add(this.donorStatusLbl);
             this.prfPnl.Controls.Add(this.prfDonLbl);
             this.prfPnl.Controls.Add(this.prfNameLbl);
-            this.prfPnl.Location = new System.Drawing.Point(837, 61);
+            this.prfPnl.Location = new System.Drawing.Point(837, 94);
             this.prfPnl.Name = "prfPnl";
-            this.prfPnl.Size = new System.Drawing.Size(261, 518);
+            this.prfPnl.Size = new System.Drawing.Size(261, 435);
             this.prfPnl.TabIndex = 5;
             this.prfPnl.Visible = false;
             // 
@@ -151,7 +147,7 @@
             this.pLivesSavedLbl.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.pLivesSavedLbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 18.25F);
             this.pLivesSavedLbl.ForeColor = System.Drawing.Color.Maroon;
-            this.pLivesSavedLbl.Location = new System.Drawing.Point(-2, 249);
+            this.pLivesSavedLbl.Location = new System.Drawing.Point(0, 248);
             this.pLivesSavedLbl.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.pLivesSavedLbl.Name = "pLivesSavedLbl";
             this.pLivesSavedLbl.Size = new System.Drawing.Size(261, 32);
@@ -170,7 +166,7 @@
             this.logOutBtn.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
             this.logOutBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.logOutBtn.Font = new System.Drawing.Font("Arial", 18.25F);
-            this.logOutBtn.Location = new System.Drawing.Point(65, 466);
+            this.logOutBtn.Location = new System.Drawing.Point(60, 370);
             this.logOutBtn.Name = "logOutBtn";
             this.logOutBtn.Size = new System.Drawing.Size(137, 39);
             this.logOutBtn.TabIndex = 19;
@@ -182,37 +178,13 @@
             // 
             this.ttlDonLbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 18.25F);
             this.ttlDonLbl.ForeColor = System.Drawing.Color.Maroon;
-            this.ttlDonLbl.Location = new System.Drawing.Point(-1, 185);
+            this.ttlDonLbl.Location = new System.Drawing.Point(-1, 180);
             this.ttlDonLbl.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.ttlDonLbl.Name = "ttlDonLbl";
             this.ttlDonLbl.Size = new System.Drawing.Size(260, 26);
             this.ttlDonLbl.TabIndex = 4;
             this.ttlDonLbl.Text = "0";
             this.ttlDonLbl.TextAlign = System.Drawing.ContentAlignment.TopCenter;
-            // 
-            // prfnextDateLbl
-            // 
-            this.prfnextDateLbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 18.25F);
-            this.prfnextDateLbl.ForeColor = System.Drawing.Color.Maroon;
-            this.prfnextDateLbl.Location = new System.Drawing.Point(0, 406);
-            this.prfnextDateLbl.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.prfnextDateLbl.Name = "prfnextDateLbl";
-            this.prfnextDateLbl.Size = new System.Drawing.Size(260, 26);
-            this.prfnextDateLbl.TabIndex = 3;
-            this.prfnextDateLbl.Text = "Date TBD";
-            this.prfnextDateLbl.TextAlign = System.Drawing.ContentAlignment.TopCenter;
-            // 
-            // prfLastDonLbl
-            // 
-            this.prfLastDonLbl.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.prfLastDonLbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 18.25F);
-            this.prfLastDonLbl.ForeColor = System.Drawing.Color.Maroon;
-            this.prfLastDonLbl.Location = new System.Drawing.Point(0, 361);
-            this.prfLastDonLbl.Name = "prfLastDonLbl";
-            this.prfLastDonLbl.Size = new System.Drawing.Size(260, 32);
-            this.prfLastDonLbl.TabIndex = 2;
-            this.prfLastDonLbl.Text = "Last Donation";
-            this.prfLastDonLbl.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             // 
             // donorStatusLbl
             // 
@@ -308,7 +280,8 @@
             this.donateBtn.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
             this.donateBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.donateBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 28.25F);
-            this.donateBtn.Location = new System.Drawing.Point(254, 257);
+            this.donateBtn.ForeColor = System.Drawing.Color.White;
+            this.donateBtn.Location = new System.Drawing.Point(401, 244);
             this.donateBtn.Name = "donateBtn";
             this.donateBtn.Size = new System.Drawing.Size(277, 174);
             this.donateBtn.TabIndex = 6;
@@ -408,11 +381,12 @@
             // 
             // badgeGroup
             // 
+            this.badgeGroup.BackColor = System.Drawing.Color.White;
             this.badgeGroup.Controls.Add(this.badge4Img);
             this.badgeGroup.Controls.Add(this.badge3Img);
             this.badgeGroup.Controls.Add(this.badge1Img);
             this.badgeGroup.Controls.Add(this.badge2Img);
-            this.badgeGroup.Location = new System.Drawing.Point(1, 0);
+            this.badgeGroup.Location = new System.Drawing.Point(0, 0);
             this.badgeGroup.Name = "badgeGroup";
             this.badgeGroup.Size = new System.Drawing.Size(281, 268);
             this.badgeGroup.TabIndex = 26;
@@ -425,9 +399,9 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.BackgroundImage = global::BloodBankSystem.Properties.Resources.HomeBack;
-            this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.ClientSize = new System.Drawing.Size(784, 580);
+            this.BackgroundImage = global::BloodBankSystem.Properties.Resources.MainBackground;
+            this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.ClientSize = new System.Drawing.Size(1098, 580);
             this.Controls.Add(this.badgeGroup);
             this.Controls.Add(this.urgentNeedsPnl);
             this.Controls.Add(this.donateBtn);
@@ -435,6 +409,7 @@
             this.Controls.Add(this.ProfileImg);
             this.Controls.Add(this.bbNameLbl);
             this.Controls.Add(this.welcomelbl);
+            this.DoubleBuffered = true;
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "HomePage";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
@@ -462,8 +437,6 @@
         private System.Windows.Forms.Panel prfPnl;
         private System.Windows.Forms.Label prfDonLbl;
         private System.Windows.Forms.Label prfNameLbl;
-        private System.Windows.Forms.Label prfnextDateLbl;
-        private System.Windows.Forms.Label prfLastDonLbl;
         private System.Windows.Forms.Label ttlDonLbl;
         private System.Windows.Forms.Button donateBtn;
         private System.Windows.Forms.Button logOutBtn;

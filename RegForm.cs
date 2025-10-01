@@ -19,16 +19,6 @@ namespace BloodBankSystem
             InitializeComponent();
         }
 
-        private void BackLbl_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void SurnameTextBox_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
         private void regBtn_Click(object sender, EventArgs e)
         {
 
@@ -340,6 +330,36 @@ namespace BloodBankSystem
         private void helpBtn_Click(object sender, EventArgs e)
         {
             MessageBox.Show("First Name: Enter your first name.\n\nLast Name: Enter your last name.\n\nID Number: Enter your 13 digit South African ID number.\n\nCellphone Number: Enter your 10 digit cellphone number.\n\nBlood Type: Select your blood type from the dropdown menu.\n\nPassword: Create a password with at least 8 characters, including an uppercase letter, a number, and a special character.\n\nShow Password: Click the nlood drop icon to toggle password visibility.\n\nRegister: Click to submit your information and create an account.\n\nBack: Click to return to the welcome screen.", "Registration Help", MessageBoxButtons.OK, MessageBoxIcon.Information);
+        }
+
+        private void regBtn_MouseDown(object sender, MouseEventArgs e)
+        {
+            regBtn.FlatStyle = FlatStyle.Popup;
+        }
+
+        private void regBtn_MouseUp(object sender, MouseEventArgs e)
+        {
+            regBtn.FlatStyle = FlatStyle.Flat;
+        }
+
+        private void BackBtn_MouseDown(object sender, MouseEventArgs e)
+        {
+            BackBtn.FlatStyle = FlatStyle.Popup;
+        }
+
+        private void BackBtn_MouseUp(object sender, MouseEventArgs e)
+        {
+            BackBtn.FlatStyle = FlatStyle.Flat; 
+        }
+
+        private void helpBtn_MouseDown(object sender, MouseEventArgs e)
+        {
+            helpBtn.FlatStyle = FlatStyle.Popup;
+        }
+
+        private void helpBtn_MouseUp_1(object sender, MouseEventArgs e)
+        {
+            helpBtn.FlatStyle = FlatStyle.Flat;
         }
     }
 }

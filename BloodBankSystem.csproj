@@ -156,10 +156,14 @@
     <Content Include="Properties\HomeBack.jpg" />
     <Content Include="Properties\LEGENDARY BLOOD DONOR BADGE.png" />
     <Content Include="Properties\LIFE SAVER BADGE.png" />
+    <Content Include="Properties\Logbackground.gif" />
+    <Content Include="Properties\MainBackground.png" />
     <Content Include="Properties\ProfileBackImg.png" />
+    <Content Include="Properties\ProfileImage.png" />
     <Content Include="Properties\RegBack.jpg" />
+    <Content Include="Properties\Regbackground.gif" />
     <Content Include="Properties\REGULAR BLOOD DONOR BADGE.png" />
-    <Content Include="Properties\WelcomeBack.png" />
+    <Content Include="Properties\WelcomeBackground.gif" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

@@ -143,9 +143,39 @@ namespace BloodBankSystem.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap Logbackground {
+            get {
+                object obj = ResourceManager.GetObject("Logbackground", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap MainBackground {
+            get {
+                object obj = ResourceManager.GetObject("MainBackground", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap ProfileBackImg {
             get {
                 object obj = ResourceManager.GetObject("ProfileBackImg", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap ProfileImage {
+            get {
+                object obj = ResourceManager.GetObject("ProfileImage", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -163,6 +193,16 @@ namespace BloodBankSystem.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap Regbackground {
+            get {
+                object obj = ResourceManager.GetObject("Regbackground", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap RegularDonorBadge {
             get {
                 object obj = ResourceManager.GetObject("RegularDonorBadge", resourceCulture);
@@ -173,9 +213,9 @@ namespace BloodBankSystem.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap WelcomeBack {
+        internal static System.Drawing.Bitmap WelcomeBackground {
             get {
-                object obj = ResourceManager.GetObject("WelcomeBack", resourceCulture);
+                object obj = ResourceManager.GetObject("WelcomeBackground", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
