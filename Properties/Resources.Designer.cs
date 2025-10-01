@@ -183,6 +183,16 @@ namespace BloodBankSystem.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap PulsePointIcon {
+            get {
+                object obj = ResourceManager.GetObject("PulsePointIcon", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap RegBack {
             get {
                 object obj = ResourceManager.GetObject("RegBack", resourceCulture);

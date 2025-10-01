@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(RegForm));
             this.NameLbl = new System.Windows.Forms.Label();
             this.SurnameLbl = new System.Windows.Forms.Label();
             this.IDLabel = new System.Windows.Forms.Label();
@@ -351,6 +352,7 @@
             this.Controls.Add(this.fNameTextBox);
             this.Controls.Add(this.pictureBox1);
             this.Font = new System.Drawing.Font("Arial", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "RegForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Registration Form";

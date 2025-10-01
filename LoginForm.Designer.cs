@@ -177,8 +177,8 @@
             // 
             // pictureBox1
             // 
-            this.pictureBox1.Image = global::BloodBankSystem.Properties.Resources.Logbackground;
-            this.pictureBox1.Location = new System.Drawing.Point(0, 0);
+            this.pictureBox1.BackgroundImage = global::BloodBankSystem.Properties.Resources.Logbackground;
+            this.pictureBox1.Location = new System.Drawing.Point(-1, -1);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(555, 511);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;

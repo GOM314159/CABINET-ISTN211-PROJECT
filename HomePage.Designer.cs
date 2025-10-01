@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(HomePage));
             this.welcomelbl = new System.Windows.Forms.Label();
             this.bbNameLbl = new System.Windows.Forms.Label();
             this.ProfileImg = new System.Windows.Forms.PictureBox();
@@ -410,6 +411,7 @@
             this.Controls.Add(this.bbNameLbl);
             this.Controls.Add(this.welcomelbl);
             this.DoubleBuffered = true;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "HomePage";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
