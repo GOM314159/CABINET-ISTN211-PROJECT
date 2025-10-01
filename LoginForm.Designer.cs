@@ -29,7 +29,6 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            this.logTitleLbl = new System.Windows.Forms.Label();
             this.IDLabel = new System.Windows.Forms.Label();
             this.PasswordTextBox = new System.Windows.Forms.TextBox();
             this.PasswordLbl = new System.Windows.Forms.Label();
@@ -41,23 +40,12 @@
             this.tblUsersTableAdapter = new BloodBankSystem.ist2jwDataSetTableAdapters.tblUsersTableAdapter();
             this.tableAdapterManager = new BloodBankSystem.ist2jwDataSetTableAdapters.TableAdapterManager();
             this.passShowImg = new System.Windows.Forms.PictureBox();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.ist2jwDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.tblUsersBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.passShowImg)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
-            // 
-            // logTitleLbl
-            // 
-            this.logTitleLbl.BackColor = System.Drawing.Color.Red;
-            this.logTitleLbl.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.logTitleLbl.Font = new System.Drawing.Font("Modern No. 20", 29.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.logTitleLbl.ForeColor = System.Drawing.Color.Transparent;
-            this.logTitleLbl.Location = new System.Drawing.Point(0, 0);
-            this.logTitleLbl.Name = "logTitleLbl";
-            this.logTitleLbl.Size = new System.Drawing.Size(554, 50);
-            this.logTitleLbl.TabIndex = 2;
-            this.logTitleLbl.Text = "Login Page";
-            this.logTitleLbl.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // IDLabel
             // 
@@ -107,13 +95,15 @@
             this.loginBtn.Font = new System.Drawing.Font("Arial", 29.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.loginBtn.ForeColor = System.Drawing.Color.Red;
             this.loginBtn.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.loginBtn.Location = new System.Drawing.Point(172, 364);
+            this.loginBtn.Location = new System.Drawing.Point(171, 377);
             this.loginBtn.Name = "loginBtn";
             this.loginBtn.Size = new System.Drawing.Size(219, 72);
             this.loginBtn.TabIndex = 17;
             this.loginBtn.Text = "Log in";
             this.loginBtn.UseVisualStyleBackColor = false;
             this.loginBtn.Click += new System.EventHandler(this.loginBtn_Click);
+            this.loginBtn.MouseDown += new System.Windows.Forms.MouseEventHandler(this.loginBtn_MouseDown);
+            this.loginBtn.MouseUp += new System.Windows.Forms.MouseEventHandler(this.loginBtn_MouseUp);
             // 
             // BackBtn
             // 
@@ -132,13 +122,15 @@
             this.BackBtn.Text = "Back";
             this.BackBtn.UseVisualStyleBackColor = false;
             this.BackBtn.Click += new System.EventHandler(this.BackBtn_Click);
+            this.BackBtn.MouseDown += new System.Windows.Forms.MouseEventHandler(this.BackBtn_MouseDown);
+            this.BackBtn.MouseUp += new System.Windows.Forms.MouseEventHandler(this.BackBtn_MouseUp);
             // 
             // mIDTextBox
             // 
             this.mIDTextBox.BackColor = System.Drawing.Color.LightSteelBlue;
             this.mIDTextBox.Font = new System.Drawing.Font("Arial", 20.25F);
             this.mIDTextBox.ForeColor = System.Drawing.SystemColors.WindowText;
-            this.mIDTextBox.Location = new System.Drawing.Point(103, 174);
+            this.mIDTextBox.Location = new System.Drawing.Point(103, 193);
             this.mIDTextBox.Mask = "0000000000000";
             this.mIDTextBox.Name = "mIDTextBox";
             this.mIDTextBox.Size = new System.Drawing.Size(339, 39);
@@ -183,12 +175,23 @@
             this.passShowImg.TabStop = false;
             this.passShowImg.Click += new System.EventHandler(this.passShowImg_Click);
             // 
+            // pictureBox1
+            // 
+            this.pictureBox1.BackgroundImage = global::BloodBankSystem.Properties.Resources.Logbackground;
+            this.pictureBox1.Location = new System.Drawing.Point(-1, -1);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(555, 511);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 26;
+            this.pictureBox1.TabStop = false;
+            // 
             // LoginForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 14F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.BackgroundImage = global::BloodBankSystem.Properties.Resources.RegBack;
+            this.BackgroundImage = global::BloodBankSystem.Properties.Resources.Logbackground;
+            this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(554, 509);
             this.Controls.Add(this.passShowImg);
             this.Controls.Add(this.mIDTextBox);
@@ -197,7 +200,8 @@
             this.Controls.Add(this.PasswordTextBox);
             this.Controls.Add(this.PasswordLbl);
             this.Controls.Add(this.IDLabel);
-            this.Controls.Add(this.logTitleLbl);
+            this.Controls.Add(this.pictureBox1);
+            this.DoubleBuffered = true;
             this.Font = new System.Drawing.Font("Arial", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Name = "LoginForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
@@ -206,13 +210,13 @@
             ((System.ComponentModel.ISupportInitialize)(this.ist2jwDataSet)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.tblUsersBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.passShowImg)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
         }
 
         #endregion
-        private System.Windows.Forms.Label logTitleLbl;
         private System.Windows.Forms.Label IDLabel;
         private System.Windows.Forms.TextBox PasswordTextBox;
         private System.Windows.Forms.Label PasswordLbl;
@@ -224,5 +228,6 @@
         private ist2jwDataSetTableAdapters.tblUsersTableAdapter tblUsersTableAdapter;
         private ist2jwDataSetTableAdapters.TableAdapterManager tableAdapterManager;
         private System.Windows.Forms.PictureBox passShowImg;
+        private System.Windows.Forms.PictureBox pictureBox1;
     }
 }

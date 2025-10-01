@@ -61,5 +61,35 @@ namespace BloodBankSystem
         {
             Close();
         }
+
+        private void RegBtn_MouseDown(object sender, MouseEventArgs e)
+        {
+            RegBtn.FlatStyle = FlatStyle.Popup;
+        }
+
+        private void RegBtn_MouseUp(object sender, MouseEventArgs e)
+        {
+            RegBtn.FlatStyle = FlatStyle.Flat;
+        }
+
+        private void Logbtn_MouseDown(object sender, MouseEventArgs e)
+        {
+            Logbtn.FlatStyle = FlatStyle.Popup;
+        }
+
+        private void Logbtn_MouseUp(object sender, MouseEventArgs e)
+        {
+            Logbtn.FlatStyle = FlatStyle.Flat;
+        }
+
+        private void ExitBtn_MouseDown(object sender, MouseEventArgs e)
+        {
+            ExitBtn.FlatStyle = FlatStyle.Popup;
+        }
+
+        private void ExitBtn_MouseUp(object sender, MouseEventArgs e)
+        {
+            ExitBtn.FlatStyle = FlatStyle.Flat; 
+        }
     }
 }

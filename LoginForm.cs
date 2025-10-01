@@ -125,5 +125,25 @@ namespace BloodBankSystem
                 passShowImg.BorderStyle = BorderStyle.FixedSingle;
             }
         }
+
+        private void loginBtn_MouseDown(object sender, MouseEventArgs   e)
+        {
+            loginBtn.FlatStyle = FlatStyle.Popup;
+        }
+
+        private void loginBtn_MouseUp(object sender, MouseEventArgs e)
+        {
+            loginBtn.FlatStyle = FlatStyle.Flat;
+        }
+
+        private void BackBtn_MouseDown(object sender, MouseEventArgs e)
+        {
+            BackBtn.FlatStyle = FlatStyle.Popup;    
+        }
+
+        private void BackBtn_MouseUp(object sender, MouseEventArgs e)
+        {
+            BackBtn.FlatStyle = FlatStyle.Flat; 
+        }
     }
 }

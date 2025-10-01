@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            this.regTitleLbl = new System.Windows.Forms.Label();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(RegForm));
             this.NameLbl = new System.Windows.Forms.Label();
             this.SurnameLbl = new System.Windows.Forms.Label();
             this.IDLabel = new System.Windows.Forms.Label();
@@ -51,23 +51,12 @@
             this.tableAdapterManager = new BloodBankSystem.ist2jwDataSetTableAdapters.TableAdapterManager();
             this.helpBtn = new System.Windows.Forms.Button();
             this.userRegTip = new System.Windows.Forms.ToolTip(this.components);
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.passShowImg)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ist2jwDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.tblUsersBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
-            // 
-            // regTitleLbl
-            // 
-            this.regTitleLbl.BackColor = System.Drawing.Color.MistyRose;
-            this.regTitleLbl.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.regTitleLbl.Font = new System.Drawing.Font("Modern No. 20", 29.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.regTitleLbl.ForeColor = System.Drawing.Color.RoyalBlue;
-            this.regTitleLbl.Location = new System.Drawing.Point(0, 0);
-            this.regTitleLbl.Name = "regTitleLbl";
-            this.regTitleLbl.Size = new System.Drawing.Size(707, 50);
-            this.regTitleLbl.TabIndex = 3;
-            this.regTitleLbl.Text = "Registration Page";
-            this.regTitleLbl.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // NameLbl
             // 
@@ -140,6 +129,8 @@
             this.regBtn.Text = "Register";
             this.regBtn.UseVisualStyleBackColor = false;
             this.regBtn.Click += new System.EventHandler(this.regBtn_Click);
+            this.regBtn.MouseDown += new System.Windows.Forms.MouseEventHandler(this.regBtn_MouseDown);
+            this.regBtn.MouseUp += new System.Windows.Forms.MouseEventHandler(this.regBtn_MouseUp);
             // 
             // BackBtn
             // 
@@ -158,6 +149,8 @@
             this.BackBtn.Text = "Back";
             this.BackBtn.UseVisualStyleBackColor = false;
             this.BackBtn.Click += new System.EventHandler(this.BackBtn_Click);
+            this.BackBtn.MouseDown += new System.Windows.Forms.MouseEventHandler(this.BackBtn_MouseDown);
+            this.BackBtn.MouseUp += new System.Windows.Forms.MouseEventHandler(this.BackBtn_MouseUp);
             // 
             // mIDTextBox
             // 
@@ -167,7 +160,7 @@
             this.mIDTextBox.Location = new System.Drawing.Point(349, 255);
             this.mIDTextBox.Mask = "0000000000000";
             this.mIDTextBox.Name = "mIDTextBox";
-            this.mIDTextBox.Size = new System.Drawing.Size(292, 39);
+            this.mIDTextBox.Size = new System.Drawing.Size(292, 32);
             this.mIDTextBox.TabIndex = 18;
             this.userRegTip.SetToolTip(this.mIDTextBox, "Enter your ID number (Must be a SA ID)");
             this.mIDTextBox.ValidatingType = typeof(int);
@@ -178,7 +171,7 @@
             this.fNameTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.25F);
             this.fNameTextBox.Location = new System.Drawing.Point(349, 94);
             this.fNameTextBox.Name = "fNameTextBox";
-            this.fNameTextBox.Size = new System.Drawing.Size(292, 38);
+            this.fNameTextBox.Size = new System.Drawing.Size(292, 32);
             this.fNameTextBox.TabIndex = 4;
             this.fNameTextBox.Tag = "";
             this.userRegTip.SetToolTip(this.fNameTextBox, "Enter your First Name");
@@ -189,11 +182,10 @@
             this.lastNameTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.25F);
             this.lastNameTextBox.Location = new System.Drawing.Point(349, 176);
             this.lastNameTextBox.Name = "lastNameTextBox";
-            this.lastNameTextBox.Size = new System.Drawing.Size(292, 38);
+            this.lastNameTextBox.Size = new System.Drawing.Size(292, 32);
             this.lastNameTextBox.TabIndex = 6;
             this.lastNameTextBox.Tag = "";
             this.userRegTip.SetToolTip(this.lastNameTextBox, "Enter your Last Name / Surname");
-            this.lastNameTextBox.TextChanged += new System.EventHandler(this.SurnameTextBox_TextChanged);
             // 
             // mCellphoneTextBox
             // 
@@ -202,7 +194,7 @@
             this.mCellphoneTextBox.Location = new System.Drawing.Point(349, 328);
             this.mCellphoneTextBox.Mask = "0000000000";
             this.mCellphoneTextBox.Name = "mCellphoneTextBox";
-            this.mCellphoneTextBox.Size = new System.Drawing.Size(292, 39);
+            this.mCellphoneTextBox.Size = new System.Drawing.Size(292, 32);
             this.mCellphoneTextBox.TabIndex = 19;
             this.userRegTip.SetToolTip(this.mCellphoneTextBox, "Enter your cellphone number");
             this.mCellphoneTextBox.ValidatingType = typeof(int);
@@ -233,7 +225,7 @@
             "Not Sure"});
             this.bloodtypeCmbox.Location = new System.Drawing.Point(349, 398);
             this.bloodtypeCmbox.Name = "bloodtypeCmbox";
-            this.bloodtypeCmbox.Size = new System.Drawing.Size(292, 40);
+            this.bloodtypeCmbox.Size = new System.Drawing.Size(292, 33);
             this.bloodtypeCmbox.TabIndex = 21;
             this.userRegTip.SetToolTip(this.bloodtypeCmbox, "Choose your blood type (if unknown choose not sure option )");
             // 
@@ -257,7 +249,7 @@
             this.passwordTextBox.Location = new System.Drawing.Point(349, 476);
             this.passwordTextBox.Name = "passwordTextBox";
             this.passwordTextBox.PasswordChar = '*';
-            this.passwordTextBox.Size = new System.Drawing.Size(292, 38);
+            this.passwordTextBox.Size = new System.Drawing.Size(292, 32);
             this.passwordTextBox.TabIndex = 23;
             this.passwordTextBox.Tag = "";
             this.userRegTip.SetToolTip(this.passwordTextBox, "Click Help button for more info on making a password");
@@ -316,18 +308,31 @@
             this.helpBtn.Text = "Help";
             this.helpBtn.UseVisualStyleBackColor = false;
             this.helpBtn.Click += new System.EventHandler(this.helpBtn_Click);
+            this.helpBtn.MouseDown += new System.Windows.Forms.MouseEventHandler(this.helpBtn_MouseDown);
+            this.helpBtn.MouseUp += new System.Windows.Forms.MouseEventHandler(this.helpBtn_MouseUp_1);
             // 
             // userRegTip
             // 
             this.userRegTip.ToolTipIcon = System.Windows.Forms.ToolTipIcon.Info;
             this.userRegTip.ToolTipTitle = "Helpful tip";
             // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = global::BloodBankSystem.Properties.Resources.Regbackground;
+            this.pictureBox1.Location = new System.Drawing.Point(0, -2);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(707, 632);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 26;
+            this.pictureBox1.TabStop = false;
+            // 
             // RegForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 14F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.BackgroundImage = global::BloodBankSystem.Properties.Resources.RegBack;
+            this.BackgroundImage = global::BloodBankSystem.Properties.Resources.HomeBack;
+            this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(707, 630);
             this.Controls.Add(this.helpBtn);
             this.Controls.Add(this.passShowImg);
@@ -345,8 +350,9 @@
             this.Controls.Add(this.lastNameTextBox);
             this.Controls.Add(this.NameLbl);
             this.Controls.Add(this.fNameTextBox);
-            this.Controls.Add(this.regTitleLbl);
+            this.Controls.Add(this.pictureBox1);
             this.Font = new System.Drawing.Font("Arial", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "RegForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Registration Form";
@@ -354,13 +360,13 @@
             ((System.ComponentModel.ISupportInitialize)(this.passShowImg)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.ist2jwDataSet)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.tblUsersBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
         }
 
         #endregion
-        private System.Windows.Forms.Label regTitleLbl;
         private System.Windows.Forms.Label NameLbl;
         private System.Windows.Forms.Label SurnameLbl;
         private System.Windows.Forms.Label IDLabel;
@@ -382,5 +388,6 @@
         private System.Windows.Forms.PictureBox passShowImg;
         private System.Windows.Forms.Button helpBtn;
         private System.Windows.Forms.ToolTip userRegTip;
+        private System.Windows.Forms.PictureBox pictureBox1;
     }
 }
