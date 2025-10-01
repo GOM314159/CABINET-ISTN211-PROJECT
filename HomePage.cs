@@ -20,7 +20,7 @@ namespace BloodBankSystem
             InitializeComponent();
             userID = dbuserID;
             userName = name;
-            prfNameLbl.Text = userName + "'s Profile";
+            prfNameLbl.Text = userName + "'s\nProfile";
             welcomelbl.Text = "Welcome " + userName;
             prfPnl.Visible = false;
             bloodSymbolTimer.Start();
@@ -47,10 +47,18 @@ namespace BloodBankSystem
             if (prfPnl.Visible)
             {
                 prfPnl.Visible = false;
+                badgeGroup.Visible = false;
+                ProfileImg.Location = new Point(714, 0);
+                this.Size = new Size(800, 619);
+                donateBtn.Location = new Point(254, 257);
             }
             else
             {
                 prfPnl.Visible = true;
+                badgeGroup.Visible = true;
+                ProfileImg.Location = new Point(1028, 0);
+                this.Size = new Size(1114, 619);
+                donateBtn.Location = new Point(407, 257);
             }
         }
 
@@ -162,13 +170,27 @@ namespace BloodBankSystem
             int totalDonated = 0;
 
             // Filter the binding source to include only records for the current user
-            tblBloodInventoryBindingSource.Filter = "UserID = '" + userID + "'";
+           try
+            {  
+                tblBloodInventoryBindingSource.Filter = "UserID = '" + userID + "'";
 
-            foreach (DataRow row in tblBloodInventoryBindingSource)
-            {   // Sum up the UnitsDonated for the filtered user records
-                totalDonated += Convert.ToInt32(row["UnitsDonated"]);
+                if (tblBloodInventoryBindingSource.Count == 0)
+                {
+                    return 0; // No records found for the user
+                }
+                else
+                {
+                    foreach (DataRow row in tblBloodInventoryBindingSource)
+                    {   // Sum up the UnitsDonated for the filtered user records
+                        totalDonated += Convert.ToInt32(row["UnitsDonated"]);
+                    }
+                }
             }
-
+            catch (Exception)
+            {
+                return 0;
+            }
+           
             return totalDonated;
         }
 
@@ -176,28 +198,49 @@ namespace BloodBankSystem
         {
             switch (getTotalBloodDonatedforUser())
             {
-                case 0:
+                case 1:
                     donorStatusLbl.Text = "New Donor";
-                    numLiveSavedLbl.Text = "0 Lives Saved";
+                    numLiveSavedLbl.Text = (1 * 3).ToString() + " Lives Saved"; ;
+                    badge1Img.Visible = true;
+                    badge2Img.Visible = false;
+                    badge3Img.Visible = false;
+                    badge4Img.Visible = false;
                     break;
 
-                case int c when (c > 0 && c <= 10):
+                case int c when (c > 1 && c <= 5):
                     donorStatusLbl.Text = "Regular Donor";
                     numLiveSavedLbl.Text = (c * 3).ToString() + " Lives Saved";
+                    badge1Img.Visible = true;
+                    badge2Img.Visible = true;
+                    badge3Img.Visible = false;
+                    badge4Img.Visible = false;
                     break;
 
                 case int c when (c > 10):
                     donorStatusLbl.Text = "Super Donor";
                     numLiveSavedLbl.Text = (c * 3).ToString() + " Lives Saved";
+                    badge1Img.Visible = true;
+                    badge2Img.Visible = true;
+                    badge3Img.Visible = true;
+                    badge4Img.Visible = false;
+
                     break;
                 case int c when (c > 20):
                     donorStatusLbl.Text = "Legendary Donor";
                     numLiveSavedLbl.Text = (c * 3).ToString() + " Lives Saved";
+                    badge1Img.Visible = true;
+                    badge2Img.Visible = true;
+                    badge3Img.Visible = true;
+                    badge4Img.Visible = true;
                     break;
 
                 default:
                     donorStatusLbl.Text = "New Donor";
                     numLiveSavedLbl.Text = "0 Lives Saved";
+                    badge1Img.Visible = false;
+                    badge2Img.Visible = false;
+                    badge3Img.Visible = false;
+                    badge4Img.Visible = false;
                     break;
             }
 
@@ -221,6 +264,11 @@ namespace BloodBankSystem
                     break;
 
             }
+        }
+
+        private void pLivesSavedLbl_Click(object sender, EventArgs e)
+        {
+
         }
     }
 

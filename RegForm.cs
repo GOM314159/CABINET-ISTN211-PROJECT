@@ -49,6 +49,7 @@ namespace BloodBankSystem
             Boolean IDNumberCheck = false;
             Boolean phoneNumberCheck = false;
             Boolean passwordCheck = false;
+            Boolean bloodtypeCheck = false;
 
             //userID check  
             if (validUserID(userID))
@@ -115,10 +116,12 @@ namespace BloodBankSystem
                 {
                     bloodType = "***";
                 }
+                bloodtypeCheck = true;
             }
             else
             {
                 bloodtypeCmbox.BackColor = Color.IndianRed;
+                bloodtypeCheck = false;
             }
 
             // password check
@@ -134,7 +137,7 @@ namespace BloodBankSystem
             }
 
             // if all fields are filled in correctly, the following code will execute
-            if (userIDCheck && firstNameCheck && surNameCheck && IDNumberCheck && phoneNumberCheck && passwordCheck)
+            if (userIDCheck && firstNameCheck && surNameCheck && IDNumberCheck && phoneNumberCheck && bloodtypeCheck && passwordCheck)
             {
                 try {  var adapter = new ist2jwDataSetTableAdapters.tblUsersTableAdapter();
                 var dataTable = adapter.UserRegistration(userID, password, firstName, lastName, iDNumber, phoneNumber, userType, bloodType, isActiveAcc);
@@ -150,6 +153,35 @@ namespace BloodBankSystem
                     MessageBox.Show("An error occurred while creating account " + ex.Message);
                 }
              }
+            else if (userIDCheck && !firstNameCheck && surNameCheck && IDNumberCheck && phoneNumberCheck && bloodtypeCheck && passwordCheck)
+            {
+                MessageBox.Show("Please enter your Name","Registration Helper",MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+            else if (userIDCheck && firstNameCheck && !surNameCheck && IDNumberCheck && phoneNumberCheck && bloodtypeCheck && passwordCheck)
+            {
+                MessageBox.Show("Please enter your Last Name", "Registration Helper", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+            else if (userIDCheck && firstNameCheck && surNameCheck && !IDNumberCheck && phoneNumberCheck && bloodtypeCheck && passwordCheck)
+            {
+                MessageBox.Show("Please enter your ID Number", "Registration Helper", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+            else if (userIDCheck && firstNameCheck && surNameCheck && IDNumberCheck && !phoneNumberCheck && bloodtypeCheck && passwordCheck)
+            {
+                MessageBox.Show("Please enter your Phone Number", "Registration Helper", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+            else if (userIDCheck && firstNameCheck && surNameCheck && IDNumberCheck && phoneNumberCheck && !bloodtypeCheck && passwordCheck)
+            {
+                MessageBox.Show("Please Choose your Blood Type", "Registration Helper", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+            else if (userIDCheck && firstNameCheck && surNameCheck && IDNumberCheck && phoneNumberCheck && bloodtypeCheck && !passwordCheck)
+            {
+                MessageBox.Show("Please enter your Password", "Registration Helper", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+            else
+            {
+                MessageBox.Show("Please Enter All Details to Register", "Registration Helper", MessageBoxButtons.OK,MessageBoxIcon.Information);
+            }
+
         }
 
         private void BackBtn_Click(object sender, EventArgs e)
