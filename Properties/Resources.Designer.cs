@@ -103,9 +103,39 @@ namespace BloodBankSystem.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap FirstTimeDonorBadge {
+            get {
+                object obj = ResourceManager.GetObject("FirstTimeDonorBadge", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap HomeBack {
             get {
                 object obj = ResourceManager.GetObject("HomeBack", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap LegendaryDonorBadge {
+            get {
+                object obj = ResourceManager.GetObject("LegendaryDonorBadge", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap LifeSaverBadge {
+            get {
+                object obj = ResourceManager.GetObject("LifeSaverBadge", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -126,6 +156,16 @@ namespace BloodBankSystem.Properties {
         internal static System.Drawing.Bitmap RegBack {
             get {
                 object obj = ResourceManager.GetObject("RegBack", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap RegularDonorBadge {
+            get {
+                object obj = ResourceManager.GetObject("RegularDonorBadge", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
