@@ -1,17 +1,7 @@
-﻿using BloodBankSystem.ist2jwDataSetTableAdapters;
-using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
+﻿using System;
 using System.Data.SqlClient;
 using System.Drawing;
-using System.IO;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
-using static BloodBankSystem.ist2jwDataSet;
-using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 
 namespace BloodBankSystem
 {
@@ -59,13 +49,9 @@ namespace BloodBankSystem
             bool hasAttended = false;
 
             //if capacity == 1 then date is  available 
-            if (capacity == 1)
+            if (capacity < 10)
             {
                 isAvailable = true;
-            }
-            else if (capacity == 2)
-            {
-                isAvailable = false;
             }
 
             if (isAvailable)
@@ -116,7 +102,7 @@ namespace BloodBankSystem
         {
             Random rnd = new Random();
             string newSchID = "S" + rnd.Next(0, 99999).ToString();
-             Boolean schIDCheck = false;
+            Boolean schIDCheck = false;
             if (ValidSchID(newSchID))
             {
                 schIDCheck = true;
@@ -125,7 +111,7 @@ namespace BloodBankSystem
             DateTime date = appDateTimePicker1.Value;
             int capacity = int.Parse(capacityTextBox.Text);
             string currentUserID = HomePage.userID;
-           
+
             if ((date < DateTime.Now))
             {
                 MessageBox.Show("The date you're trying to book is before the present date. Please try again");
@@ -138,7 +124,7 @@ namespace BloodBankSystem
                 {
                     // insert new appointment into schedule table
                     scheduleBindingSource.MoveLast();
-                   
+
                     scheduleTableAdapter.InsertSchedule(newSchID.ToString(), currentUserID, appID, true);
 
                     // update appointment table capacity
@@ -305,7 +291,7 @@ namespace BloodBankSystem
             else if (filterSelect.Text.Equals("Month"))
             {
                 int month = int.Parse(filterAppMonthCmbx.Text.Substring(0, 2));
-               
+
                 appointmentTableAdapter.FillDataByMonth(ist2jwDataSet.Appointment, month);
 
             }

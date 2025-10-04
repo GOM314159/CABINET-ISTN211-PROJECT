@@ -7,9 +7,12 @@
     }
 }
 
-namespace BloodBankSystem.ist2jwDataSetTableAdapters {
-    
-    
+namespace BloodBankSystem.ist2jwDataSetTableAdapters
+{
+    partial class AppointmentTableAdapter
+    {
+    }
+
     public partial class UserAppointmentsTableAdapter {
     }
 }

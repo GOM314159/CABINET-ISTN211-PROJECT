@@ -193,7 +193,7 @@
             // timeLabel1
             // 
             timeLabel1.AutoSize = true;
-            timeLabel1.Location = new System.Drawing.Point(148, 30);
+            timeLabel1.Location = new System.Drawing.Point(132, 46);
             timeLabel1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             timeLabel1.Name = "timeLabel1";
             timeLabel1.Size = new System.Drawing.Size(41, 16);
@@ -282,7 +282,7 @@
             // capacityLabel
             // 
             capacityLabel.AutoSize = true;
-            capacityLabel.Location = new System.Drawing.Point(120, 74);
+            capacityLabel.Location = new System.Drawing.Point(104, 90);
             capacityLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             capacityLabel.Name = "capacityLabel";
             capacityLabel.Size = new System.Drawing.Size(63, 16);
@@ -292,7 +292,7 @@
             // venueLabel1
             // 
             venueLabel1.AutoSize = true;
-            venueLabel1.Location = new System.Drawing.Point(137, 117);
+            venueLabel1.Location = new System.Drawing.Point(121, 133);
             venueLabel1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             venueLabel1.Name = "venueLabel1";
             venueLabel1.Size = new System.Drawing.Size(49, 16);
@@ -462,7 +462,7 @@
             // 
             this.monthCalendar2.DataBindings.Add(new System.Windows.Forms.Binding("SelectionRange", this.appointmentBindingSource, "AppDate", true));
             this.monthCalendar2.Enabled = false;
-            this.monthCalendar2.Location = new System.Drawing.Point(135, 165);
+            this.monthCalendar2.Location = new System.Drawing.Point(119, 181);
             this.monthCalendar2.Margin = new System.Windows.Forms.Padding(12, 11, 12, 11);
             this.monthCalendar2.Name = "monthCalendar2";
             this.monthCalendar2.TabIndex = 28;
@@ -481,7 +481,7 @@
             // 
             this.btnBookAppointment.BackColor = System.Drawing.Color.White;
             this.btnBookAppointment.ForeColor = System.Drawing.Color.Black;
-            this.btnBookAppointment.Location = new System.Drawing.Point(135, 385);
+            this.btnBookAppointment.Location = new System.Drawing.Point(119, 401);
             this.btnBookAppointment.Margin = new System.Windows.Forms.Padding(4);
             this.btnBookAppointment.Name = "btnBookAppointment";
             this.btnBookAppointment.Size = new System.Drawing.Size(262, 48);
@@ -494,7 +494,7 @@
             // capacityTextBox
             // 
             this.capacityTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.appointmentBindingSource, "Capacity", true));
-            this.capacityTextBox.Location = new System.Drawing.Point(221, 70);
+            this.capacityTextBox.Location = new System.Drawing.Point(205, 86);
             this.capacityTextBox.Margin = new System.Windows.Forms.Padding(4);
             this.capacityTextBox.Name = "capacityTextBox";
             this.capacityTextBox.ReadOnly = true;
@@ -505,7 +505,7 @@
             // venueTextBox1
             // 
             this.venueTextBox1.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.appointmentBindingSource, "Venue", true));
-            this.venueTextBox1.Location = new System.Drawing.Point(221, 113);
+            this.venueTextBox1.Location = new System.Drawing.Point(205, 129);
             this.venueTextBox1.Margin = new System.Windows.Forms.Padding(4);
             this.venueTextBox1.Name = "venueTextBox1";
             this.venueTextBox1.ReadOnly = true;
@@ -516,7 +516,7 @@
             // timeTextBox1
             // 
             this.timeTextBox1.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.appointmentBindingSource, "Time", true));
-            this.timeTextBox1.Location = new System.Drawing.Point(221, 26);
+            this.timeTextBox1.Location = new System.Drawing.Point(205, 42);
             this.timeTextBox1.Margin = new System.Windows.Forms.Padding(4);
             this.timeTextBox1.Name = "timeTextBox1";
             this.timeTextBox1.ReadOnly = true;
