@@ -172,25 +172,8 @@ namespace BloodBankSystem
 
         }
 
-        private void button2_Click(object sender, EventArgs e)
-        {
+     
 
-        }
-
-        private void button4_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void button3_Click(object sender, EventArgs e)
-        {
-            // next
-        }
-
-        private void button1_Click(object sender, EventArgs e)
-        {
-
-        }
 
         private void panel3_Paint(object sender, PaintEventArgs e)
         {
@@ -383,10 +366,6 @@ namespace BloodBankSystem
 
         }
 
-
-
-
-
         private void button1_Click_1(object sender, EventArgs e)
         {
 
@@ -409,15 +388,13 @@ namespace BloodBankSystem
 
         private void button5_Click_1(object sender, EventArgs e)
         {
-
-  
             appointmentBindingSource.Filter = string.Empty;
             appointmentBindingSource.Sort = string.Empty;
            
-        
-
             tblUserScheduleBindingSource.Sort = string.Empty;
             tblUserScheduleBindingSource.Filter = string.Empty;
+            panelNoApp.Visible = false;
+            searchDateTime.Value = DateTime.Now;
 
             this.appointmentTableAdapter.Fill(this.ist2jwDataSet.Appointment);
             this.tblUserScheduleTableAdapter.FillUserSchedule(this.ist2jwDataSet.tblUserSchedule, HomePage.userID);
@@ -432,6 +409,18 @@ namespace BloodBankSystem
         {
             DateTime searchDate = searchDateTime.Value;
             appointmentBindingSource.Filter = "AppDate = '" + searchDate.ToString("yyyy-MM-dd") + "'";
+
+            if (appointmentDataGridView.Rows.Count == 0)
+            {
+                panelNoApp.Visible = true;
+                label13.Text = "No appointments have been scheduled for: " + searchDate.ToString("yyyy-MM-dd");
+
+            }
+            else
+            {
+                panelNoApp.Visible = false;
+            }
+
         }
 
         private void sortAppointmentDateBtn_Click_1(object sender, EventArgs e)
@@ -576,26 +565,6 @@ namespace BloodBankSystem
             tblUserScheduleDataGridView.Refresh();
         }
 
-        private void button2_Click_3(object sender, EventArgs e)
-        {
-            appointmentBindingSource.MoveNext();
-        }
-
-        private void button4_Click_2(object sender, EventArgs e)
-        {
-            appointmentBindingSource.MoveFirst();
-        }
-
-        private void button1_Click_2(object sender, EventArgs e)
-        {
-            appointmentBindingSource.MoveLast();
-        }
-
-        private void button3_Click_2(object sender, EventArgs e)
-        {
-            appointmentBindingSource.MovePrevious();
-        }
-
         private void tabPage1_Click(object sender, EventArgs e)
         {
 
@@ -615,6 +584,46 @@ namespace BloodBankSystem
         private void tabPage2_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void btnNext2_Click(object sender, EventArgs e)
+        {
+            appointmentBindingSource.MoveNext();
+        }
+
+        private void btnLast2_Click(object sender, EventArgs e)
+        {
+            appointmentBindingSource.MoveLast();
+        }
+
+        private void btnPrev2_Click(object sender, EventArgs e)
+        {
+            appointmentBindingSource.MovePrevious();
+        }
+
+        private void btnFirst2_Click(object sender, EventArgs e)
+        {
+            appointmentBindingSource.MoveFirst();
+        }
+
+        private void btnNext1_Click(object sender, EventArgs e)
+        {
+            appointmentBindingSource.MoveNext();
+        }
+
+        private void btnLast1_Click(object sender, EventArgs e)
+        {
+            appointmentBindingSource.MoveLast();
+        }
+
+        private void btnPrev1_Click(object sender, EventArgs e)
+        {
+            appointmentBindingSource.MovePrevious();
+        }
+
+        private void btnFirst1_Click(object sender, EventArgs e)
+        {
+            appointmentBindingSource.MoveFirst();
         }
     }
 }
