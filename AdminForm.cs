@@ -968,9 +968,14 @@ namespace BloodBankSystem
 
         private void btnCountSchedules_Click(object sender, EventArgs e)
         {
-            
-       //     this.scheduleTableAdapter.CountSchedules(this.ist2jwDataSet.Schedule);
 
+            scheduleTableAdapter.totalUserSchedules();
+
+        }
+
+        private void btnAppInsert_Click(object sender, EventArgs e)
+        {
+           
         }
     }
 }
