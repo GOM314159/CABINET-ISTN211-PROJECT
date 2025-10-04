@@ -114,11 +114,18 @@ namespace BloodBankSystem
 
         private void btnBookAppointment_Click(object sender, EventArgs e)
         {
+            Random rnd = new Random();
+            string newSchID = "S" + rnd.Next(0, 99999).ToString();
+             Boolean schIDCheck = false;
+            if (ValidSchID(newSchID))
+            {
+                schIDCheck = true;
+            }
             string appID = appIDTextBox1.Text;
             DateTime date = appDateTimePicker1.Value;
             int capacity = int.Parse(capacityTextBox.Text);
             string currentUserID = HomePage.userID;
-
+           
             if ((date < DateTime.Now))
             {
                 MessageBox.Show("The date you're trying to book is before the present date. Please try again");
@@ -131,17 +138,11 @@ namespace BloodBankSystem
                 {
                     // insert new appointment into schedule table
                     scheduleBindingSource.MoveLast();
-                    Random rnd = new Random();
-                    string newSchID = "S" + rnd.Next(0, 99999).ToString();
-
+                   
                     scheduleTableAdapter.InsertSchedule(newSchID.ToString(), currentUserID, appID, true);
 
                     // update appointment table capacity
                     appointmentTableAdapter.UpdateCapacity(capacity + 1, appID);
-
-                    //  capacityTextBox.Text = (capacity + 1).ToString();
-                    //  appointmentBindingSource.EndEdit();
-                    //  appointmentTableAdapter.Update(ist2jwDataSet);
 
                     MessageBox.Show("Congrats. Your new appointment has been scheduled ");
                     // refresh tables 
@@ -160,11 +161,29 @@ namespace BloodBankSystem
             {
                 MessageBox.Show("Please choose another appointment to book. This date is full");
             }
-
-
-
         }
 
+        private bool ValidSchID(string schID)
+        {
+            Boolean schIDCheck = false;
+
+            var adapter1 = new ist2jwDataSetTableAdapters.ScheduleTableAdapter();
+            var dataTable1 = adapter1.FindScheduleID(schID);
+
+            if (dataTable1.Rows.Count == 0)
+            {
+                schIDCheck = true;
+            }
+            else
+            {
+                Random rnd = new Random();
+                schID = rnd.Next(0, 1000000).ToString();
+                ValidSchID(schID);
+            }
+
+
+            return schIDCheck;
+        }
         private void panel1_Paint(object sender, PaintEventArgs e)
         {
 
@@ -664,6 +683,11 @@ namespace BloodBankSystem
         private void button6_MouseHover(object sender, EventArgs e)
         {
 
+        }
+
+        private void btnClose_Click(object sender, EventArgs e)
+        {
+            Environment.Exit(0);
         }
     }
 }

@@ -59,7 +59,7 @@ namespace BloodBankSystem
 
         private void ExitBtn_Click(object sender, EventArgs e)
         {
-            Close();
+            Environment.Exit(0);
         }
 
         private void RegBtn_MouseDown(object sender, MouseEventArgs e)

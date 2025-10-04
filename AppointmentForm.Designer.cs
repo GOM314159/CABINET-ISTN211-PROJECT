@@ -66,6 +66,11 @@
             this.btnPrev1 = new System.Windows.Forms.Button();
             this.btnFirst1 = new System.Windows.Forms.Button();
             this.appointmentDataGridView = new System.Windows.Forms.DataGridView();
+            this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.appIDTextBox1 = new System.Windows.Forms.TextBox();
             this.panel2 = new System.Windows.Forms.Panel();
             this.groupBox10 = new System.Windows.Forms.GroupBox();
@@ -73,6 +78,12 @@
             this.searchScheduleDate = new System.Windows.Forms.DateTimePicker();
             this.label7 = new System.Windows.Forms.Label();
             this.tblUserScheduleDataGridView = new System.Windows.Forms.DataGridView();
+            this.dataGridViewTextBoxColumn6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn7 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn8 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn9 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn10 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewCheckBoxColumn1 = new System.Windows.Forms.DataGridViewCheckBoxColumn();
             this.tblUserScheduleBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.groupBox7 = new System.Windows.Forms.GroupBox();
             this.monthCalendar1 = new System.Windows.Forms.MonthCalendar();
@@ -136,18 +147,8 @@
             this.tableAdapterManager = new BloodBankSystem.ist2jwDataSetTableAdapters.TableAdapterManager();
             this.appDateTimePicker1 = new System.Windows.Forms.DateTimePicker();
             this.btnHelp = new System.Windows.Forms.Button();
-            this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn7 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn8 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn9 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn10 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewCheckBoxColumn1 = new System.Windows.Forms.DataGridViewCheckBoxColumn();
             this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
+            this.btnClose = new System.Windows.Forms.Button();
             timeLabel1 = new System.Windows.Forms.Label();
             scheduleIDLabel1 = new System.Windows.Forms.Label();
             userIDLabel = new System.Windows.Forms.Label();
@@ -260,7 +261,7 @@
             // timeLabel
             // 
             timeLabel.AutoSize = true;
-            timeLabel.Location = new System.Drawing.Point(90, 43);
+            timeLabel.Location = new System.Drawing.Point(94, 79);
             timeLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             timeLabel.Name = "timeLabel";
             timeLabel.Size = new System.Drawing.Size(41, 16);
@@ -301,7 +302,7 @@
             // venueLabel
             // 
             venueLabel.AutoSize = true;
-            venueLabel.Location = new System.Drawing.Point(80, 79);
+            venueLabel.Location = new System.Drawing.Point(84, 115);
             venueLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             venueLabel.Name = "venueLabel";
             venueLabel.Size = new System.Drawing.Size(49, 16);
@@ -311,7 +312,7 @@
             // attendedLabel
             // 
             attendedLabel.AutoSize = true;
-            attendedLabel.Location = new System.Drawing.Point(65, 119);
+            attendedLabel.Location = new System.Drawing.Point(69, 44);
             attendedLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             attendedLabel.Name = "attendedLabel";
             attendedLabel.Size = new System.Drawing.Size(64, 16);
@@ -321,7 +322,7 @@
             // appDateLabel
             // 
             appDateLabel.AutoSize = true;
-            appDateLabel.Location = new System.Drawing.Point(452, 64);
+            appDateLabel.Location = new System.Drawing.Point(595, 75);
             appDateLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             appDateLabel.Name = "appDateLabel";
             appDateLabel.Size = new System.Drawing.Size(67, 16);
@@ -331,10 +332,10 @@
             // 
             // btnHome
             // 
-            this.btnHome.Location = new System.Drawing.Point(16, 21);
+            this.btnHome.Location = new System.Drawing.Point(28, 21);
             this.btnHome.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnHome.Name = "btnHome";
-            this.btnHome.Size = new System.Drawing.Size(124, 49);
+            this.btnHome.Size = new System.Drawing.Size(123, 49);
             this.btnHome.TabIndex = 6;
             this.btnHome.Text = "Home";
             this.btnHome.UseVisualStyleBackColor = true;
@@ -610,6 +611,53 @@
             this.appointmentDataGridView.Size = new System.Drawing.Size(520, 470);
             this.appointmentDataGridView.TabIndex = 14;
             // 
+            // dataGridViewTextBoxColumn1
+            // 
+            this.dataGridViewTextBoxColumn1.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.ColumnHeader;
+            this.dataGridViewTextBoxColumn1.DataPropertyName = "AppID";
+            this.dataGridViewTextBoxColumn1.HeaderText = "Appointment ID";
+            this.dataGridViewTextBoxColumn1.MinimumWidth = 6;
+            this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
+            this.dataGridViewTextBoxColumn1.ReadOnly = true;
+            this.dataGridViewTextBoxColumn1.Visible = false;
+            this.dataGridViewTextBoxColumn1.Width = 125;
+            // 
+            // dataGridViewTextBoxColumn2
+            // 
+            this.dataGridViewTextBoxColumn2.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.dataGridViewTextBoxColumn2.DataPropertyName = "AppDate";
+            this.dataGridViewTextBoxColumn2.HeaderText = "Appointment Date";
+            this.dataGridViewTextBoxColumn2.MinimumWidth = 6;
+            this.dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
+            this.dataGridViewTextBoxColumn2.ReadOnly = true;
+            // 
+            // dataGridViewTextBoxColumn3
+            // 
+            this.dataGridViewTextBoxColumn3.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.dataGridViewTextBoxColumn3.DataPropertyName = "Time";
+            this.dataGridViewTextBoxColumn3.HeaderText = "Time";
+            this.dataGridViewTextBoxColumn3.MinimumWidth = 6;
+            this.dataGridViewTextBoxColumn3.Name = "dataGridViewTextBoxColumn3";
+            this.dataGridViewTextBoxColumn3.ReadOnly = true;
+            // 
+            // dataGridViewTextBoxColumn4
+            // 
+            this.dataGridViewTextBoxColumn4.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.dataGridViewTextBoxColumn4.DataPropertyName = "Capacity";
+            this.dataGridViewTextBoxColumn4.HeaderText = "Capacity";
+            this.dataGridViewTextBoxColumn4.MinimumWidth = 6;
+            this.dataGridViewTextBoxColumn4.Name = "dataGridViewTextBoxColumn4";
+            this.dataGridViewTextBoxColumn4.ReadOnly = true;
+            // 
+            // dataGridViewTextBoxColumn5
+            // 
+            this.dataGridViewTextBoxColumn5.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.dataGridViewTextBoxColumn5.DataPropertyName = "Venue";
+            this.dataGridViewTextBoxColumn5.HeaderText = "Venue";
+            this.dataGridViewTextBoxColumn5.MinimumWidth = 6;
+            this.dataGridViewTextBoxColumn5.Name = "dataGridViewTextBoxColumn5";
+            this.dataGridViewTextBoxColumn5.ReadOnly = true;
+            // 
             // appIDTextBox1
             // 
             this.appIDTextBox1.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.appointmentBindingSource, "AppID", true));
@@ -709,6 +757,62 @@
             this.tblUserScheduleDataGridView.TabIndex = 10;
             this.tblUserScheduleDataGridView.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.tblUserScheduleDataGridView_CellContentClick);
             // 
+            // dataGridViewTextBoxColumn6
+            // 
+            this.dataGridViewTextBoxColumn6.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.dataGridViewTextBoxColumn6.DataPropertyName = "ScheduleID";
+            this.dataGridViewTextBoxColumn6.HeaderText = "ScheduleID";
+            this.dataGridViewTextBoxColumn6.MinimumWidth = 6;
+            this.dataGridViewTextBoxColumn6.Name = "dataGridViewTextBoxColumn6";
+            this.dataGridViewTextBoxColumn6.ReadOnly = true;
+            this.dataGridViewTextBoxColumn6.Visible = false;
+            // 
+            // dataGridViewTextBoxColumn7
+            // 
+            this.dataGridViewTextBoxColumn7.DataPropertyName = "AppID";
+            this.dataGridViewTextBoxColumn7.HeaderText = "Appointment ID";
+            this.dataGridViewTextBoxColumn7.MinimumWidth = 6;
+            this.dataGridViewTextBoxColumn7.Name = "dataGridViewTextBoxColumn7";
+            this.dataGridViewTextBoxColumn7.ReadOnly = true;
+            this.dataGridViewTextBoxColumn7.Visible = false;
+            this.dataGridViewTextBoxColumn7.Width = 125;
+            // 
+            // dataGridViewTextBoxColumn8
+            // 
+            this.dataGridViewTextBoxColumn8.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.dataGridViewTextBoxColumn8.DataPropertyName = "AppDate";
+            this.dataGridViewTextBoxColumn8.HeaderText = "Appointment Date";
+            this.dataGridViewTextBoxColumn8.MinimumWidth = 6;
+            this.dataGridViewTextBoxColumn8.Name = "dataGridViewTextBoxColumn8";
+            this.dataGridViewTextBoxColumn8.ReadOnly = true;
+            // 
+            // dataGridViewTextBoxColumn9
+            // 
+            this.dataGridViewTextBoxColumn9.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.dataGridViewTextBoxColumn9.DataPropertyName = "Time";
+            this.dataGridViewTextBoxColumn9.HeaderText = "Time";
+            this.dataGridViewTextBoxColumn9.MinimumWidth = 6;
+            this.dataGridViewTextBoxColumn9.Name = "dataGridViewTextBoxColumn9";
+            this.dataGridViewTextBoxColumn9.ReadOnly = true;
+            // 
+            // dataGridViewTextBoxColumn10
+            // 
+            this.dataGridViewTextBoxColumn10.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.dataGridViewTextBoxColumn10.DataPropertyName = "Venue";
+            this.dataGridViewTextBoxColumn10.HeaderText = "Venue";
+            this.dataGridViewTextBoxColumn10.MinimumWidth = 6;
+            this.dataGridViewTextBoxColumn10.Name = "dataGridViewTextBoxColumn10";
+            this.dataGridViewTextBoxColumn10.ReadOnly = true;
+            // 
+            // dataGridViewCheckBoxColumn1
+            // 
+            this.dataGridViewCheckBoxColumn1.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.dataGridViewCheckBoxColumn1.DataPropertyName = "Attended";
+            this.dataGridViewCheckBoxColumn1.HeaderText = "Attended";
+            this.dataGridViewCheckBoxColumn1.MinimumWidth = 6;
+            this.dataGridViewCheckBoxColumn1.Name = "dataGridViewCheckBoxColumn1";
+            this.dataGridViewCheckBoxColumn1.ReadOnly = true;
+            // 
             // tblUserScheduleBindingSource
             // 
             this.tblUserScheduleBindingSource.DataMember = "tblUserSchedule";
@@ -749,7 +853,7 @@
             // 
             this.attendedCheckBox.DataBindings.Add(new System.Windows.Forms.Binding("CheckState", this.tblUserScheduleBindingSource, "Attended", true));
             this.attendedCheckBox.Enabled = false;
-            this.attendedCheckBox.Location = new System.Drawing.Point(167, 109);
+            this.attendedCheckBox.Location = new System.Drawing.Point(171, 34);
             this.attendedCheckBox.Margin = new System.Windows.Forms.Padding(4);
             this.attendedCheckBox.Name = "attendedCheckBox";
             this.attendedCheckBox.Size = new System.Drawing.Size(35, 30);
@@ -760,7 +864,7 @@
             // 
             this.venueTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.tblUserScheduleBindingSource, "Venue", true));
             this.venueTextBox.Enabled = false;
-            this.venueTextBox.Location = new System.Drawing.Point(167, 76);
+            this.venueTextBox.Location = new System.Drawing.Point(171, 112);
             this.venueTextBox.Margin = new System.Windows.Forms.Padding(4);
             this.venueTextBox.Name = "venueTextBox";
             this.venueTextBox.ReadOnly = true;
@@ -772,7 +876,7 @@
             // 
             this.timeTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.tblUserScheduleBindingSource, "Time", true));
             this.timeTextBox.Enabled = false;
-            this.timeTextBox.Location = new System.Drawing.Point(167, 36);
+            this.timeTextBox.Location = new System.Drawing.Point(171, 72);
             this.timeTextBox.Margin = new System.Windows.Forms.Padding(4);
             this.timeTextBox.Name = "timeTextBox";
             this.timeTextBox.ReadOnly = true;
@@ -926,7 +1030,7 @@
             this.label3.BackColor = System.Drawing.Color.Transparent;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.Color.White;
-            this.label3.Location = new System.Drawing.Point(510, 15);
+            this.label3.Location = new System.Drawing.Point(639, 25);
             this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(319, 36);
@@ -1458,10 +1562,10 @@
             // 
             // button5
             // 
-            this.button5.Location = new System.Drawing.Point(1058, 25);
+            this.button5.Location = new System.Drawing.Point(1172, 21);
             this.button5.Margin = new System.Windows.Forms.Padding(4);
             this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(180, 50);
+            this.button5.Size = new System.Drawing.Size(123, 49);
             this.button5.TabIndex = 16;
             this.button5.Text = "Reset";
             this.button5.UseVisualStyleBackColor = true;
@@ -1492,7 +1596,7 @@
             // appDateTimePicker1
             // 
             this.appDateTimePicker1.DataBindings.Add(new System.Windows.Forms.Binding("Value", this.appointmentBindingSource, "AppDate", true));
-            this.appDateTimePicker1.Location = new System.Drawing.Point(541, 59);
+            this.appDateTimePicker1.Location = new System.Drawing.Point(670, 69);
             this.appDateTimePicker1.Margin = new System.Windows.Forms.Padding(4);
             this.appDateTimePicker1.Name = "appDateTimePicker1";
             this.appDateTimePicker1.Size = new System.Drawing.Size(265, 22);
@@ -1501,116 +1605,23 @@
             // 
             // btnHelp
             // 
-            this.btnHelp.Location = new System.Drawing.Point(1245, 24);
+            this.btnHelp.Location = new System.Drawing.Point(1302, 21);
             this.btnHelp.Name = "btnHelp";
-            this.btnHelp.Size = new System.Drawing.Size(180, 50);
+            this.btnHelp.Size = new System.Drawing.Size(123, 49);
             this.btnHelp.TabIndex = 18;
             this.btnHelp.Text = "Help";
             this.btnHelp.UseVisualStyleBackColor = true;
             this.btnHelp.Click += new System.EventHandler(this.btnHelp_Click);
             // 
-            // dataGridViewTextBoxColumn1
+            // btnClose
             // 
-            this.dataGridViewTextBoxColumn1.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.ColumnHeader;
-            this.dataGridViewTextBoxColumn1.DataPropertyName = "AppID";
-            this.dataGridViewTextBoxColumn1.HeaderText = "Appointment ID";
-            this.dataGridViewTextBoxColumn1.MinimumWidth = 6;
-            this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
-            this.dataGridViewTextBoxColumn1.ReadOnly = true;
-            this.dataGridViewTextBoxColumn1.Visible = false;
-            this.dataGridViewTextBoxColumn1.Width = 127;
-            // 
-            // dataGridViewTextBoxColumn2
-            // 
-            this.dataGridViewTextBoxColumn2.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.dataGridViewTextBoxColumn2.DataPropertyName = "AppDate";
-            this.dataGridViewTextBoxColumn2.HeaderText = "Appointment Date";
-            this.dataGridViewTextBoxColumn2.MinimumWidth = 6;
-            this.dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
-            this.dataGridViewTextBoxColumn2.ReadOnly = true;
-            // 
-            // dataGridViewTextBoxColumn3
-            // 
-            this.dataGridViewTextBoxColumn3.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.dataGridViewTextBoxColumn3.DataPropertyName = "Time";
-            this.dataGridViewTextBoxColumn3.HeaderText = "Time";
-            this.dataGridViewTextBoxColumn3.MinimumWidth = 6;
-            this.dataGridViewTextBoxColumn3.Name = "dataGridViewTextBoxColumn3";
-            this.dataGridViewTextBoxColumn3.ReadOnly = true;
-            // 
-            // dataGridViewTextBoxColumn4
-            // 
-            this.dataGridViewTextBoxColumn4.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.dataGridViewTextBoxColumn4.DataPropertyName = "Capacity";
-            this.dataGridViewTextBoxColumn4.HeaderText = "Capacity";
-            this.dataGridViewTextBoxColumn4.MinimumWidth = 6;
-            this.dataGridViewTextBoxColumn4.Name = "dataGridViewTextBoxColumn4";
-            this.dataGridViewTextBoxColumn4.ReadOnly = true;
-            // 
-            // dataGridViewTextBoxColumn5
-            // 
-            this.dataGridViewTextBoxColumn5.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.dataGridViewTextBoxColumn5.DataPropertyName = "Venue";
-            this.dataGridViewTextBoxColumn5.HeaderText = "Venue";
-            this.dataGridViewTextBoxColumn5.MinimumWidth = 6;
-            this.dataGridViewTextBoxColumn5.Name = "dataGridViewTextBoxColumn5";
-            this.dataGridViewTextBoxColumn5.ReadOnly = true;
-            // 
-            // dataGridViewTextBoxColumn6
-            // 
-            this.dataGridViewTextBoxColumn6.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.dataGridViewTextBoxColumn6.DataPropertyName = "ScheduleID";
-            this.dataGridViewTextBoxColumn6.HeaderText = "ScheduleID";
-            this.dataGridViewTextBoxColumn6.MinimumWidth = 6;
-            this.dataGridViewTextBoxColumn6.Name = "dataGridViewTextBoxColumn6";
-            this.dataGridViewTextBoxColumn6.ReadOnly = true;
-            this.dataGridViewTextBoxColumn6.Visible = false;
-            // 
-            // dataGridViewTextBoxColumn7
-            // 
-            this.dataGridViewTextBoxColumn7.DataPropertyName = "AppID";
-            this.dataGridViewTextBoxColumn7.HeaderText = "Appointment ID";
-            this.dataGridViewTextBoxColumn7.MinimumWidth = 6;
-            this.dataGridViewTextBoxColumn7.Name = "dataGridViewTextBoxColumn7";
-            this.dataGridViewTextBoxColumn7.ReadOnly = true;
-            this.dataGridViewTextBoxColumn7.Visible = false;
-            this.dataGridViewTextBoxColumn7.Width = 125;
-            // 
-            // dataGridViewTextBoxColumn8
-            // 
-            this.dataGridViewTextBoxColumn8.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.dataGridViewTextBoxColumn8.DataPropertyName = "AppDate";
-            this.dataGridViewTextBoxColumn8.HeaderText = "Appointment Date";
-            this.dataGridViewTextBoxColumn8.MinimumWidth = 6;
-            this.dataGridViewTextBoxColumn8.Name = "dataGridViewTextBoxColumn8";
-            this.dataGridViewTextBoxColumn8.ReadOnly = true;
-            // 
-            // dataGridViewTextBoxColumn9
-            // 
-            this.dataGridViewTextBoxColumn9.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.dataGridViewTextBoxColumn9.DataPropertyName = "Time";
-            this.dataGridViewTextBoxColumn9.HeaderText = "Time";
-            this.dataGridViewTextBoxColumn9.MinimumWidth = 6;
-            this.dataGridViewTextBoxColumn9.Name = "dataGridViewTextBoxColumn9";
-            this.dataGridViewTextBoxColumn9.ReadOnly = true;
-            // 
-            // dataGridViewTextBoxColumn10
-            // 
-            this.dataGridViewTextBoxColumn10.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.dataGridViewTextBoxColumn10.DataPropertyName = "Venue";
-            this.dataGridViewTextBoxColumn10.HeaderText = "Venue";
-            this.dataGridViewTextBoxColumn10.MinimumWidth = 6;
-            this.dataGridViewTextBoxColumn10.Name = "dataGridViewTextBoxColumn10";
-            this.dataGridViewTextBoxColumn10.ReadOnly = true;
-            // 
-            // dataGridViewCheckBoxColumn1
-            // 
-            this.dataGridViewCheckBoxColumn1.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.dataGridViewCheckBoxColumn1.DataPropertyName = "Attended";
-            this.dataGridViewCheckBoxColumn1.HeaderText = "Attended";
-            this.dataGridViewCheckBoxColumn1.MinimumWidth = 6;
-            this.dataGridViewCheckBoxColumn1.Name = "dataGridViewCheckBoxColumn1";
-            this.dataGridViewCheckBoxColumn1.ReadOnly = true;
+            this.btnClose.Location = new System.Drawing.Point(166, 21);
+            this.btnClose.Name = "btnClose";
+            this.btnClose.Size = new System.Drawing.Size(123, 49);
+            this.btnClose.TabIndex = 19;
+            this.btnClose.Text = "Exit";
+            this.btnClose.UseVisualStyleBackColor = true;
+            this.btnClose.Click += new System.EventHandler(this.btnClose_Click);
             // 
             // AppointmentForm
             // 
@@ -1619,6 +1630,7 @@
             this.BackColor = System.Drawing.Color.Black;
             this.BackgroundImage = global::BloodBankSystem.Properties.Resources.MainBackground;
             this.ClientSize = new System.Drawing.Size(1438, 730);
+            this.Controls.Add(this.btnClose);
             this.Controls.Add(this.btnHelp);
             this.Controls.Add(appDateLabel);
             this.Controls.Add(this.appDateTimePicker1);
@@ -1626,6 +1638,8 @@
             this.Controls.Add(this.label3);
             this.Controls.Add(this.tabControl1);
             this.Controls.Add(this.btnHome);
+            this.Cursor = System.Windows.Forms.Cursors.Default;
+            this.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "AppointmentForm";
@@ -1777,5 +1791,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn10;
         private System.Windows.Forms.DataGridViewCheckBoxColumn dataGridViewCheckBoxColumn1;
         private System.Windows.Forms.ToolTip toolTip1;
+        private System.Windows.Forms.Button btnClose;
     }
 }
