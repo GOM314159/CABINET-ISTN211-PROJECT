@@ -48,7 +48,7 @@ namespace BloodBankSystem
             bool isValid = false;
             bool hasAttended = false;
 
-            //if capacity == 1 then date is  available 
+            //if capacity < 10 then date is available 
             if (capacity < 10)
             {
                 isAvailable = true;
@@ -674,6 +674,11 @@ namespace BloodBankSystem
         private void btnClose_Click(object sender, EventArgs e)
         {
             Environment.Exit(0);
+        }
+
+        private void btnSearchAvailable_Click(object sender, EventArgs e)
+        {
+            appointmentBindingSource.Filter = "Capacity < 10";  
         }
     }
 }

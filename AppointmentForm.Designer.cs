@@ -149,6 +149,7 @@
             this.btnHelp = new System.Windows.Forms.Button();
             this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
             this.btnClose = new System.Windows.Forms.Button();
+            this.btnSearchAvailable = new System.Windows.Forms.Button();
             timeLabel1 = new System.Windows.Forms.Label();
             scheduleIDLabel1 = new System.Windows.Forms.Label();
             userIDLabel = new System.Windows.Forms.Label();
@@ -193,7 +194,7 @@
             // timeLabel1
             // 
             timeLabel1.AutoSize = true;
-            timeLabel1.Location = new System.Drawing.Point(132, 46);
+            timeLabel1.Location = new System.Drawing.Point(132, 31);
             timeLabel1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             timeLabel1.Name = "timeLabel1";
             timeLabel1.Size = new System.Drawing.Size(41, 16);
@@ -282,7 +283,7 @@
             // capacityLabel
             // 
             capacityLabel.AutoSize = true;
-            capacityLabel.Location = new System.Drawing.Point(104, 90);
+            capacityLabel.Location = new System.Drawing.Point(104, 69);
             capacityLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             capacityLabel.Name = "capacityLabel";
             capacityLabel.Size = new System.Drawing.Size(63, 16);
@@ -292,7 +293,7 @@
             // venueLabel1
             // 
             venueLabel1.AutoSize = true;
-            venueLabel1.Location = new System.Drawing.Point(121, 133);
+            venueLabel1.Location = new System.Drawing.Point(121, 102);
             venueLabel1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             venueLabel1.Name = "venueLabel1";
             venueLabel1.Size = new System.Drawing.Size(49, 16);
@@ -391,6 +392,7 @@
             // groupBox4
             // 
             this.groupBox4.BackColor = System.Drawing.Color.Transparent;
+            this.groupBox4.Controls.Add(this.btnSearchAvailable);
             this.groupBox4.Controls.Add(this.searchDateTime);
             this.groupBox4.Controls.Add(this.label4);
             this.groupBox4.Controls.Add(this.button6);
@@ -399,7 +401,7 @@
             this.groupBox4.Margin = new System.Windows.Forms.Padding(4);
             this.groupBox4.Name = "groupBox4";
             this.groupBox4.Padding = new System.Windows.Forms.Padding(4);
-            this.groupBox4.Size = new System.Drawing.Size(480, 62);
+            this.groupBox4.Size = new System.Drawing.Size(480, 109);
             this.groupBox4.TabIndex = 27;
             this.groupBox4.TabStop = false;
             this.groupBox4.Text = "Search";
@@ -449,11 +451,11 @@
             this.groupBox3.Controls.Add(this.timeTextBox1);
             this.groupBox3.Controls.Add(timeLabel1);
             this.groupBox3.ForeColor = System.Drawing.Color.White;
-            this.groupBox3.Location = new System.Drawing.Point(532, 74);
+            this.groupBox3.Location = new System.Drawing.Point(532, 122);
             this.groupBox3.Margin = new System.Windows.Forms.Padding(4);
             this.groupBox3.Name = "groupBox3";
             this.groupBox3.Padding = new System.Windows.Forms.Padding(4);
-            this.groupBox3.Size = new System.Drawing.Size(480, 473);
+            this.groupBox3.Size = new System.Drawing.Size(480, 425);
             this.groupBox3.TabIndex = 26;
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "Appointment Details";
@@ -462,7 +464,7 @@
             // 
             this.monthCalendar2.DataBindings.Add(new System.Windows.Forms.Binding("SelectionRange", this.appointmentBindingSource, "AppDate", true));
             this.monthCalendar2.Enabled = false;
-            this.monthCalendar2.Location = new System.Drawing.Point(119, 181);
+            this.monthCalendar2.Location = new System.Drawing.Point(119, 150);
             this.monthCalendar2.Margin = new System.Windows.Forms.Padding(12, 11, 12, 11);
             this.monthCalendar2.Name = "monthCalendar2";
             this.monthCalendar2.TabIndex = 28;
@@ -481,7 +483,7 @@
             // 
             this.btnBookAppointment.BackColor = System.Drawing.Color.White;
             this.btnBookAppointment.ForeColor = System.Drawing.Color.Black;
-            this.btnBookAppointment.Location = new System.Drawing.Point(119, 401);
+            this.btnBookAppointment.Location = new System.Drawing.Point(119, 367);
             this.btnBookAppointment.Margin = new System.Windows.Forms.Padding(4);
             this.btnBookAppointment.Name = "btnBookAppointment";
             this.btnBookAppointment.Size = new System.Drawing.Size(262, 48);
@@ -494,7 +496,7 @@
             // capacityTextBox
             // 
             this.capacityTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.appointmentBindingSource, "Capacity", true));
-            this.capacityTextBox.Location = new System.Drawing.Point(205, 86);
+            this.capacityTextBox.Location = new System.Drawing.Point(205, 65);
             this.capacityTextBox.Margin = new System.Windows.Forms.Padding(4);
             this.capacityTextBox.Name = "capacityTextBox";
             this.capacityTextBox.ReadOnly = true;
@@ -505,7 +507,7 @@
             // venueTextBox1
             // 
             this.venueTextBox1.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.appointmentBindingSource, "Venue", true));
-            this.venueTextBox1.Location = new System.Drawing.Point(205, 129);
+            this.venueTextBox1.Location = new System.Drawing.Point(205, 98);
             this.venueTextBox1.Margin = new System.Windows.Forms.Padding(4);
             this.venueTextBox1.Name = "venueTextBox1";
             this.venueTextBox1.ReadOnly = true;
@@ -516,7 +518,7 @@
             // timeTextBox1
             // 
             this.timeTextBox1.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.appointmentBindingSource, "Time", true));
-            this.timeTextBox1.Location = new System.Drawing.Point(205, 42);
+            this.timeTextBox1.Location = new System.Drawing.Point(205, 27);
             this.timeTextBox1.Margin = new System.Windows.Forms.Padding(4);
             this.timeTextBox1.Name = "timeTextBox1";
             this.timeTextBox1.ReadOnly = true;
@@ -1220,7 +1222,6 @@
             // 
             this.tabPage1.AutoScroll = true;
             this.tabPage1.BackColor = System.Drawing.Color.Black;
-            this.tabPage1.BackgroundImage = global::BloodBankSystem.Properties.Resources.MainBackground;
             this.tabPage1.Controls.Add(this.panel1);
             this.tabPage1.Controls.Add(this.panel7);
             this.tabPage1.Controls.Add(scheduleIDLabel1);
@@ -1447,7 +1448,15 @@
             this.filterAppCapacityCmbx.FormattingEnabled = true;
             this.filterAppCapacityCmbx.Items.AddRange(new object[] {
             "1",
-            "2"});
+            "2",
+            "3",
+            "4",
+            "5",
+            "6",
+            "7",
+            "8",
+            "9",
+            "10"});
             this.filterAppCapacityCmbx.Location = new System.Drawing.Point(117, 181);
             this.filterAppCapacityCmbx.Margin = new System.Windows.Forms.Padding(4);
             this.filterAppCapacityCmbx.Name = "filterAppCapacityCmbx";
@@ -1547,7 +1556,6 @@
             // 
             this.tabPage2.AutoScroll = true;
             this.tabPage2.BackColor = System.Drawing.Color.Black;
-            this.tabPage2.BackgroundImage = global::BloodBankSystem.Properties.Resources.MainBackground;
             this.tabPage2.Controls.Add(this.panel4);
             this.tabPage2.Controls.Add(this.panel3);
             this.tabPage2.Controls.Add(this.panel2);
@@ -1623,12 +1631,22 @@
             this.btnClose.UseVisualStyleBackColor = true;
             this.btnClose.Click += new System.EventHandler(this.btnClose_Click);
             // 
+            // btnSearchAvailable
+            // 
+            this.btnSearchAvailable.ForeColor = System.Drawing.Color.Black;
+            this.btnSearchAvailable.Location = new System.Drawing.Point(103, 56);
+            this.btnSearchAvailable.Name = "btnSearchAvailable";
+            this.btnSearchAvailable.Size = new System.Drawing.Size(241, 41);
+            this.btnSearchAvailable.TabIndex = 3;
+            this.btnSearchAvailable.Text = "Available Appointments";
+            this.btnSearchAvailable.UseVisualStyleBackColor = true;
+            this.btnSearchAvailable.Click += new System.EventHandler(this.btnSearchAvailable_Click);
+            // 
             // AppointmentForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Black;
-            this.BackgroundImage = global::BloodBankSystem.Properties.Resources.MainBackground;
             this.ClientSize = new System.Drawing.Size(1438, 730);
             this.Controls.Add(this.btnClose);
             this.Controls.Add(this.btnHelp);
@@ -1792,5 +1810,6 @@
         private System.Windows.Forms.DataGridViewCheckBoxColumn dataGridViewCheckBoxColumn1;
         private System.Windows.Forms.ToolTip toolTip1;
         private System.Windows.Forms.Button btnClose;
+        private System.Windows.Forms.Button btnSearchAvailable;
     }
 }
