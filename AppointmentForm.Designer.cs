@@ -1222,6 +1222,7 @@
             // 
             this.tabPage1.AutoScroll = true;
             this.tabPage1.BackColor = System.Drawing.Color.Black;
+            this.tabPage1.BackgroundImage = global::BloodBankSystem.Properties.Resources.MainBackground;
             this.tabPage1.Controls.Add(this.panel1);
             this.tabPage1.Controls.Add(this.panel7);
             this.tabPage1.Controls.Add(scheduleIDLabel1);
@@ -1556,6 +1557,7 @@
             // 
             this.tabPage2.AutoScroll = true;
             this.tabPage2.BackColor = System.Drawing.Color.Black;
+            this.tabPage2.BackgroundImage = global::BloodBankSystem.Properties.Resources.MainBackground;
             this.tabPage2.Controls.Add(this.panel4);
             this.tabPage2.Controls.Add(this.panel3);
             this.tabPage2.Controls.Add(this.panel2);
@@ -1647,6 +1649,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Black;
+            this.BackgroundImage = global::BloodBankSystem.Properties.Resources.MainBackground;
             this.ClientSize = new System.Drawing.Size(1438, 730);
             this.Controls.Add(this.btnClose);
             this.Controls.Add(this.btnHelp);
@@ -1657,7 +1660,7 @@
             this.Controls.Add(this.tabControl1);
             this.Controls.Add(this.btnHome);
             this.Cursor = System.Windows.Forms.Cursors.Default;
-            this.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.ForeColor = System.Drawing.SystemColors.WindowText;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "AppointmentForm";
