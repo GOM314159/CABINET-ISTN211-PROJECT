@@ -49,7 +49,7 @@
             // 
             // IDLabel
             // 
-            this.IDLabel.BackColor = System.Drawing.Color.Transparent;
+            this.IDLabel.BackColor = System.Drawing.Color.White;
             this.IDLabel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.IDLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 18.25F);
             this.IDLabel.ForeColor = System.Drawing.Color.RoyalBlue;
@@ -75,7 +75,7 @@
             // 
             // PasswordLbl
             // 
-            this.PasswordLbl.BackColor = System.Drawing.Color.Transparent;
+            this.PasswordLbl.BackColor = System.Drawing.Color.White;
             this.PasswordLbl.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.PasswordLbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 18.25F);
             this.PasswordLbl.ForeColor = System.Drawing.Color.RoyalBlue;
