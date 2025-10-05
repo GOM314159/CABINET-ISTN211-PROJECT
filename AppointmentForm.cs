@@ -7,6 +7,7 @@ namespace BloodBankSystem
 {
     public partial class AppointmentForm : Form
     {
+        public bool userChoseSameDate = false;
         public AppointmentForm()
         {
             InitializeComponent();
@@ -77,7 +78,13 @@ namespace BloodBankSystem
                         // if the last attended appointment is 2 months ago , then isValid = true
                         int monthDifference = (date.Year - lastDate.Year) * 12 + (date.Month - lastDate.Month);
 
-                        if (monthDifference == 2)
+                        if (monthDifference == 0)
+                        {
+                            userChoseSameDate = true;
+                            isValid = false;
+                        }
+
+                        if (monthDifference >= 2)
                         {
                             isValid = true;
                         }
@@ -136,6 +143,11 @@ namespace BloodBankSystem
             }
             else
             {
+                if (userChoseSameDate)
+                {
+                    MessageBox.Show("You have accidently chosen a date that you have already booked. Please try again." , "Appointment Booking.");
+                    return;
+                }
                 MessageBox.Show("Please choose another appointment to book. This date is full");
             }
         }
