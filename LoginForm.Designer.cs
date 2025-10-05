@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(LoginForm));
             this.IDLabel = new System.Windows.Forms.Label();
             this.PasswordTextBox = new System.Windows.Forms.TextBox();
             this.PasswordLbl = new System.Windows.Forms.Label();
@@ -67,7 +68,7 @@
             this.PasswordTextBox.Location = new System.Drawing.Point(103, 320);
             this.PasswordTextBox.Name = "PasswordTextBox";
             this.PasswordTextBox.PasswordChar = '*';
-            this.PasswordTextBox.Size = new System.Drawing.Size(339, 38);
+            this.PasswordTextBox.Size = new System.Drawing.Size(339, 46);
             this.PasswordTextBox.TabIndex = 13;
             this.PasswordTextBox.Tag = "";
             this.PasswordTextBox.Text = "Gom314";
@@ -134,7 +135,7 @@
             this.mIDTextBox.Location = new System.Drawing.Point(103, 193);
             this.mIDTextBox.Mask = "0000000000000";
             this.mIDTextBox.Name = "mIDTextBox";
-            this.mIDTextBox.Size = new System.Drawing.Size(339, 39);
+            this.mIDTextBox.Size = new System.Drawing.Size(339, 46);
             this.mIDTextBox.TabIndex = 19;
             this.mIDTextBox.Text = "0507136031089";
             this.mIDTextBox.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
@@ -190,7 +191,7 @@
             // 
             // LoginForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 14F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.BackgroundImage = global::BloodBankSystem.Properties.Resources.Logbackground;
@@ -206,6 +207,7 @@
             this.Controls.Add(this.pictureBox1);
             this.DoubleBuffered = true;
             this.Font = new System.Drawing.Font("Arial", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "LoginForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Login Form";
