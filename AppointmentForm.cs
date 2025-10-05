@@ -8,6 +8,8 @@ namespace BloodBankSystem
     public partial class AppointmentForm : Form
     {
         public bool userBookedSameDate = false;
+
+
         public AppointmentForm()
         {
             InitializeComponent();
@@ -78,13 +80,13 @@ namespace BloodBankSystem
                         // if the last attended appointment is 2 months ago , then isValid = true
                         int monthDifference = (date.Year - lastDate.Year) * 12 + (date.Month - lastDate.Month);
 
-                        if(monthDifference == 0)
+                        if (monthDifference == 0)
                         {
                             isValid = false;
                             userBookedSameDate = true;
 
                         }
-                        if (monthDifference == 2)
+                        if (monthDifference >= 2)
                         {
                             isValid = true;
                         }
@@ -107,14 +109,7 @@ namespace BloodBankSystem
 
         private void btnBookAppointment_Click(object sender, EventArgs e)
         {
-            Random rnd = new Random();
-            string newSchID = "S" + rnd.Next(0, 1000000).ToString();
-            Boolean schIDCheck = false;
-            if (ValidSchID(newSchID))
-            {
-                schIDCheck = true;
-            }
-
+            string newSchID = GenerateUniqueScheduleID();
             string appID = appIDTextBox1.Text;
             DateTime date = appDateTimePicker1.Value;
             int capacity = int.Parse(capacityTextBox.Text);
@@ -122,7 +117,7 @@ namespace BloodBankSystem
 
             if ((date < DateTime.Now))
             {
-                MessageBox.Show("The date you're trying to book is before the present date. Please try again","Appointment booking");
+                MessageBox.Show("The date you're trying to book is before the present date. Please try again", "Appointment booking");
                 return;
             }
 
@@ -131,8 +126,7 @@ namespace BloodBankSystem
                 try
                 {
                     // insert new appointment into schedule table
-                    scheduleBindingSource.MoveLast();
-                    scheduleTableAdapter.InsertSchedule(newSchID.ToString(), currentUserID, appID, true);
+                    scheduleTableAdapter.InsertSchedule(newSchID, currentUserID, appID, true);
 
                     // update appointment table capacity
                     appointmentTableAdapter.UpdateCapacity(capacity + 1, appID);
@@ -154,7 +148,7 @@ namespace BloodBankSystem
             {
                 if (userBookedSameDate)
                 {
-                    MessageBox.Show("Please choose another appointment to book.You chose the same date" , "Appointment booking" );
+                    MessageBox.Show("Please choose another appointment to book.You chose the same date", "Appointment booking");
                     return;
                 }
 
@@ -162,26 +156,37 @@ namespace BloodBankSystem
             }
         }
 
-        private bool ValidSchID(string schID)
+        public string GenerateUniqueScheduleID()
         {
-            Boolean schIDCheck = false;
+            Random rand = new Random();
+            string newId;
+            bool isUnique = false;
 
-            var adapter1 = new ist2jwDataSetTableAdapters.ScheduleTableAdapter();
-            var dataTable1 = adapter1.FindScheduleID(schID);
+            // Get all existing Schedule records
+            var allSchedules = scheduleTableAdapter.GetData();
 
-            if (dataTable1.Rows.Count == 0)
+            while (!isUnique)
             {
-                schIDCheck = true;
-            }
-            else
-            {
-                Random rnd = new Random();
-                schID = rnd.Next(0, 1000000).ToString();
-                ValidSchID(schID);
+                newId =   "S"+ rand.Next(0, 1000000).ToString(); // Generate a 6-digit random number
+                isUnique = true; // assume it's unique unless found otherwise
+
+                // Check if this ID already exists
+                foreach (var row in allSchedules)
+                {
+                    if (row.ScheduleID == newId)
+                    {
+                        isUnique = false; // found a duplicate
+                        break;
+                    }
+                }
+
+                if (isUnique)
+                    return newId; // we found a unique ID, return it
             }
 
-            return schIDCheck;
+            throw new Exception("Unable to generate a unique Schedule ID.");
         }
+
         private void panel1_Paint(object sender, PaintEventArgs e)
         {
 
@@ -462,13 +467,13 @@ namespace BloodBankSystem
 
         private void button8_Click_1(object sender, EventArgs e)
         {
-            appointmentBindingSource.Sort = "Venue DESC";
+            appointmentBindingSource.Sort = "Venue ASC";
             appointmentDataGridView.Refresh();
         }
 
         private void sortAppointmentsVenueBtn_Click_1(object sender, EventArgs e)
         {
-            appointmentBindingSource.Sort = "Venue ASC";
+            appointmentBindingSource.Sort = "Venue DESC";
             appointmentDataGridView.Refresh();
         }
 
@@ -690,7 +695,7 @@ namespace BloodBankSystem
 
         private void btnSearchAvailable_Click(object sender, EventArgs e)
         {
-            appointmentBindingSource.Filter = "Capacity < 10";  
+            appointmentBindingSource.Filter = "Capacity < 10";
         }
 
         private void btnClose_Click_1(object sender, EventArgs e)
