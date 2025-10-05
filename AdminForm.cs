@@ -316,7 +316,11 @@ namespace BloodBankSystem
             Confirmation = MessageBox.Show("Are you sure you want to delete this record?", "Confirm", MessageBoxButtons.YesNo);
             if (Confirmation == DialogResult.Yes)
             {
-                tblBloodInventoryBindingSource.RemoveCurrent();
+                String UnitID = txtUnitID.Text;
+                tblBloodInventoryTableAdapter.DeleteBloodUnit(UnitID);
+                tblBloodInventoryBindingSource.EndEdit();
+                tblBloodInventoryTableAdapter.Update(ist2jwDataSet);
+                dgvBlood.Refresh();
 
             }
             else
@@ -525,7 +529,7 @@ namespace BloodBankSystem
 
                 }
 
-                if (bFound = false)
+                if (bFound == false)
                 {
 
                     MessageBox.Show("UserID is invalid or has not been found");
@@ -1097,12 +1101,8 @@ namespace BloodBankSystem
 
         private void btnCountSchedules_Click(object sender, EventArgs e)
         {
-
-
-            scheduleBindingSource.DataSource = this.scheduleTableAdapter.getTotalUserSchedules();
             
-
-
+            
 
         }
 
@@ -1170,8 +1170,10 @@ namespace BloodBankSystem
 
         private void btnAverage_Click(object sender, EventArgs e)
         {
-            scheduleTableAdapter.AverageSchedules();
+            this.scheduleTableAdapter.AverageSchedules();
             
+            this.scheduleTableAdapter.Fill(this.ist2jwDataSet.Schedule);
+
         }
 
         private void btnAppChanges_Click(object sender, EventArgs e)
@@ -1179,6 +1181,7 @@ namespace BloodBankSystem
             DataRowView currentRow = (DataRowView)scheduleBindingSource.Current;
             scheduleBindingSource.EndEdit();
             scheduleTableAdapter.Update(ist2jwDataSet);
+            statsFill();
         }
 
         private void btnStartAppInsert_Click(object sender, EventArgs e)
@@ -1254,6 +1257,7 @@ namespace BloodBankSystem
             if (Confirmation == DialogResult.Yes)
             {
                 scheduleBindingSource.RemoveCurrent();
+                statsFill();
 
             }
             else
@@ -1270,6 +1274,14 @@ namespace BloodBankSystem
             HomePage home = new HomePage(AdminID,AdminName);
             home.Show();
             this.Hide();
+
+        }
+
+        private void btnRemoveBloodFilters_Click(object sender, EventArgs e)
+        {
+
+            tblUsersBindingSource.RemoveFilter();
+            tblUsersBindingSource.RemoveSort();
 
         }
     }
