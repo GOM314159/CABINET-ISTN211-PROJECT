@@ -30,23 +30,16 @@
         {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(AdminForm));
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea1 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend1 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea2 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend2 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea3 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend3 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea4 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend4 = new System.Windows.Forms.DataVisualization.Charting.Legend();
             this.pnlTopBar = new System.Windows.Forms.Panel();
             this.btnHomepage = new System.Windows.Forms.Button();
             this.btnLogout = new System.Windows.Forms.Button();
             this.lblAdminDash = new System.Windows.Forms.Label();
             this.tpgAppointments = new System.Windows.Forms.TabPage();
             this.appointmentDataGridView = new System.Windows.Forms.DataGridView();
-            this.dataGridViewTextBoxColumn4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn7 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn8 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.appointmentBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.ist2jwDataSet = new BloodBankSystem.ist2jwDataSet();
             this.pnlAppFilters = new System.Windows.Forms.Panel();
             this.btnFilterPassed = new System.Windows.Forms.Button();
             this.btnFilterUpcoming = new System.Windows.Forms.Button();
@@ -98,17 +91,11 @@
             this.btnBloodDelete = new System.Windows.Forms.Button();
             this.btnBloodApply = new System.Windows.Forms.Button();
             this.dtpExpiry = new System.Windows.Forms.DateTimePicker();
-            this.tblBloodInventoryBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.cmbBloodInvType = new System.Windows.Forms.ComboBox();
             this.txtBloodAppID = new System.Windows.Forms.TextBox();
             this.txtBloodUserID = new System.Windows.Forms.TextBox();
             this.txtUnitID = new System.Windows.Forms.TextBox();
             this.dgvBlood = new System.Windows.Forms.DataGridView();
-            this.unitIDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.userIDDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.appIDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.bloodTypeDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.expiryDateDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tpgUsers = new System.Windows.Forms.TabPage();
             this.pnlRemoveUserFilters = new System.Windows.Forms.Panel();
             this.btnRemoveFilter = new System.Windows.Forms.Button();
@@ -128,16 +115,6 @@
             this.btnFilterActive = new System.Windows.Forms.Button();
             this.label19 = new System.Windows.Forms.Label();
             this.dgvUsers = new System.Windows.Forms.DataGridView();
-            this.userIDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.passwordDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.nameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.surnameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.iDNumberDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.phoneNumberDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.userTypeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.bloodTypeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.isActiveAccountDataGridViewCheckBoxColumn = new System.Windows.Forms.DataGridViewCheckBoxColumn();
-            this.tblUsersBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.pnlUserEdit = new System.Windows.Forms.Panel();
             this.btnStartInsert = new System.Windows.Forms.Button();
             this.btnInsertUser = new System.Windows.Forms.Button();
@@ -164,14 +141,7 @@
             this.tcAdmin = new System.Windows.Forms.TabControl();
             this.tpgSchedule = new System.Windows.Forms.TabPage();
             this.dgvTotalSchedule = new System.Windows.Forms.DataGridView();
-            this.userIDDataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.schedulesDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.tblTotalScheduleBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.dgvAverage = new System.Windows.Forms.DataGridView();
-            this.dataGridViewTextBoxColumn9 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn10 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn11 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.tblAverageScheduleBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.pnlScheduleNav = new System.Windows.Forms.Panel();
             this.btnScheduleFirst = new System.Windows.Forms.Button();
             this.btnSchedulePrev = new System.Windows.Forms.Button();
@@ -186,7 +156,6 @@
             this.btnDeleteSchedule = new System.Windows.Forms.Button();
             this.btnAppChanges = new System.Windows.Forms.Button();
             this.chkAttended = new System.Windows.Forms.CheckBox();
-            this.scheduleBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.txtSearchByUser = new System.Windows.Forms.TextBox();
             this.pnlShortStats = new System.Windows.Forms.Panel();
             this.lblUnattended = new System.Windows.Forms.Label();
@@ -196,13 +165,46 @@
             this.btnScheduleUserSearch = new System.Windows.Forms.Button();
             this.redDisplay = new System.Windows.Forms.RichTextBox();
             this.dgvSchedule = new System.Windows.Forms.DataGridView();
+            this.tpgStats = new System.Windows.Forms.TabPage();
+            this.chtUserSchedule = new System.Windows.Forms.DataVisualization.Charting.Chart();
+            this.chtBloodType = new System.Windows.Forms.DataVisualization.Charting.Chart();
+            this.donorRankingFilterBtn = new System.Windows.Forms.Button();
+            this.no1DonorFilterBtn = new System.Windows.Forms.Button();
+            this.userIDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.passwordDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.nameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.surnameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.iDNumberDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.phoneNumberDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.userTypeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.bloodTypeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.isActiveAccountDataGridViewCheckBoxColumn = new System.Windows.Forms.DataGridViewCheckBoxColumn();
+            this.tblUsersBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.ist2jwDataSet = new BloodBankSystem.ist2jwDataSet();
+            this.tblBloodInventoryBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.unitIDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.userIDDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.appIDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.bloodTypeDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.expiryDateDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn7 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn8 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.appointmentBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.userIDDataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.schedulesDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.tblTotalScheduleBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.dataGridViewTextBoxColumn9 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn10 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn11 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.tblAverageScheduleBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.scheduleBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewCheckBoxColumn1 = new System.Windows.Forms.DataGridViewCheckBoxColumn();
-            this.tpgStats = new System.Windows.Forms.TabPage();
-            this.chtUserSchedule = new System.Windows.Forms.DataVisualization.Charting.Chart();
-            this.chtBloodType = new System.Windows.Forms.DataVisualization.Charting.Chart();
             this.tblUsersTableAdapter = new BloodBankSystem.ist2jwDataSetTableAdapters.tblUsersTableAdapter();
             this.tblBloodInventoryTableAdapter = new BloodBankSystem.ist2jwDataSetTableAdapters.TblBloodInventoryTableAdapter();
             this.appointmentTableAdapter = new BloodBankSystem.ist2jwDataSetTableAdapters.AppointmentTableAdapter();
@@ -213,8 +215,6 @@
             this.pnlTopBar.SuspendLayout();
             this.tpgAppointments.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.appointmentDataGridView)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.appointmentBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.ist2jwDataSet)).BeginInit();
             this.pnlAppFilters.SuspendLayout();
             this.pnlRemoveAppFilters.SuspendLayout();
             this.pnlAppNav.SuspendLayout();
@@ -225,30 +225,32 @@
             this.panel6.SuspendLayout();
             this.pnlBloodNav.SuspendLayout();
             this.panel3.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.tblBloodInventoryBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvBlood)).BeginInit();
             this.tpgUsers.SuspendLayout();
             this.pnlRemoveUserFilters.SuspendLayout();
             this.pnlUserNav.SuspendLayout();
             this.panel5.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvUsers)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.tblUsersBindingSource)).BeginInit();
             this.pnlUserEdit.SuspendLayout();
             this.tcAdmin.SuspendLayout();
             this.tpgSchedule.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvTotalSchedule)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.tblTotalScheduleBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvAverage)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.tblAverageScheduleBindingSource)).BeginInit();
             this.pnlScheduleNav.SuspendLayout();
             this.panel1.SuspendLayout();
             this.pnlSchedule.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.scheduleBindingSource)).BeginInit();
             this.pnlShortStats.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvSchedule)).BeginInit();
             this.tpgStats.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.chtUserSchedule)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.chtBloodType)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.tblUsersBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ist2jwDataSet)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.tblBloodInventoryBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.appointmentBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.tblTotalScheduleBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.tblAverageScheduleBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.scheduleBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // pnlTopBar
@@ -341,56 +343,6 @@
             this.appointmentDataGridView.RowHeadersWidth = 51;
             this.appointmentDataGridView.Size = new System.Drawing.Size(745, 272);
             this.appointmentDataGridView.TabIndex = 9;
-            // 
-            // dataGridViewTextBoxColumn4
-            // 
-            this.dataGridViewTextBoxColumn4.DataPropertyName = "AppID";
-            this.dataGridViewTextBoxColumn4.HeaderText = "AppID";
-            this.dataGridViewTextBoxColumn4.MinimumWidth = 6;
-            this.dataGridViewTextBoxColumn4.Name = "dataGridViewTextBoxColumn4";
-            this.dataGridViewTextBoxColumn4.Width = 125;
-            // 
-            // dataGridViewTextBoxColumn5
-            // 
-            this.dataGridViewTextBoxColumn5.DataPropertyName = "AppDate";
-            this.dataGridViewTextBoxColumn5.HeaderText = "AppDate";
-            this.dataGridViewTextBoxColumn5.MinimumWidth = 6;
-            this.dataGridViewTextBoxColumn5.Name = "dataGridViewTextBoxColumn5";
-            this.dataGridViewTextBoxColumn5.Width = 125;
-            // 
-            // dataGridViewTextBoxColumn6
-            // 
-            this.dataGridViewTextBoxColumn6.DataPropertyName = "Time";
-            this.dataGridViewTextBoxColumn6.HeaderText = "Time";
-            this.dataGridViewTextBoxColumn6.MinimumWidth = 6;
-            this.dataGridViewTextBoxColumn6.Name = "dataGridViewTextBoxColumn6";
-            this.dataGridViewTextBoxColumn6.Width = 125;
-            // 
-            // dataGridViewTextBoxColumn7
-            // 
-            this.dataGridViewTextBoxColumn7.DataPropertyName = "Capacity";
-            this.dataGridViewTextBoxColumn7.HeaderText = "Capacity";
-            this.dataGridViewTextBoxColumn7.MinimumWidth = 6;
-            this.dataGridViewTextBoxColumn7.Name = "dataGridViewTextBoxColumn7";
-            this.dataGridViewTextBoxColumn7.Width = 125;
-            // 
-            // dataGridViewTextBoxColumn8
-            // 
-            this.dataGridViewTextBoxColumn8.DataPropertyName = "Venue";
-            this.dataGridViewTextBoxColumn8.HeaderText = "Venue";
-            this.dataGridViewTextBoxColumn8.MinimumWidth = 6;
-            this.dataGridViewTextBoxColumn8.Name = "dataGridViewTextBoxColumn8";
-            this.dataGridViewTextBoxColumn8.Width = 125;
-            // 
-            // appointmentBindingSource
-            // 
-            this.appointmentBindingSource.DataMember = "Appointment";
-            this.appointmentBindingSource.DataSource = this.ist2jwDataSet;
-            // 
-            // ist2jwDataSet
-            // 
-            this.ist2jwDataSet.DataSetName = "ist2jwDataSet";
-            this.ist2jwDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // pnlAppFilters
             // 
@@ -1080,11 +1032,6 @@
             this.dtpExpiry.Size = new System.Drawing.Size(121, 20);
             this.dtpExpiry.TabIndex = 5;
             // 
-            // tblBloodInventoryBindingSource
-            // 
-            this.tblBloodInventoryBindingSource.DataMember = "TblBloodInventory";
-            this.tblBloodInventoryBindingSource.DataSource = this.ist2jwDataSet;
-            // 
             // cmbBloodInvType
             // 
             this.cmbBloodInvType.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.tblBloodInventoryBindingSource, "BloodType", true));
@@ -1143,46 +1090,6 @@
             this.dgvBlood.Size = new System.Drawing.Size(746, 272);
             this.dgvBlood.TabIndex = 0;
             this.dgvBlood.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvBlood_CellContentClick);
-            // 
-            // unitIDDataGridViewTextBoxColumn
-            // 
-            this.unitIDDataGridViewTextBoxColumn.DataPropertyName = "UnitID";
-            this.unitIDDataGridViewTextBoxColumn.HeaderText = "UnitID";
-            this.unitIDDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.unitIDDataGridViewTextBoxColumn.Name = "unitIDDataGridViewTextBoxColumn";
-            this.unitIDDataGridViewTextBoxColumn.Width = 125;
-            // 
-            // userIDDataGridViewTextBoxColumn1
-            // 
-            this.userIDDataGridViewTextBoxColumn1.DataPropertyName = "UserID";
-            this.userIDDataGridViewTextBoxColumn1.HeaderText = "UserID";
-            this.userIDDataGridViewTextBoxColumn1.MinimumWidth = 6;
-            this.userIDDataGridViewTextBoxColumn1.Name = "userIDDataGridViewTextBoxColumn1";
-            this.userIDDataGridViewTextBoxColumn1.Width = 125;
-            // 
-            // appIDDataGridViewTextBoxColumn
-            // 
-            this.appIDDataGridViewTextBoxColumn.DataPropertyName = "AppID";
-            this.appIDDataGridViewTextBoxColumn.HeaderText = "AppID";
-            this.appIDDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.appIDDataGridViewTextBoxColumn.Name = "appIDDataGridViewTextBoxColumn";
-            this.appIDDataGridViewTextBoxColumn.Width = 125;
-            // 
-            // bloodTypeDataGridViewTextBoxColumn1
-            // 
-            this.bloodTypeDataGridViewTextBoxColumn1.DataPropertyName = "BloodType";
-            this.bloodTypeDataGridViewTextBoxColumn1.HeaderText = "BloodType";
-            this.bloodTypeDataGridViewTextBoxColumn1.MinimumWidth = 6;
-            this.bloodTypeDataGridViewTextBoxColumn1.Name = "bloodTypeDataGridViewTextBoxColumn1";
-            this.bloodTypeDataGridViewTextBoxColumn1.Width = 125;
-            // 
-            // expiryDateDataGridViewTextBoxColumn
-            // 
-            this.expiryDateDataGridViewTextBoxColumn.DataPropertyName = "ExpiryDate";
-            this.expiryDateDataGridViewTextBoxColumn.HeaderText = "ExpiryDate";
-            this.expiryDateDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.expiryDateDataGridViewTextBoxColumn.Name = "expiryDateDataGridViewTextBoxColumn";
-            this.expiryDateDataGridViewTextBoxColumn.Width = 125;
             // 
             // tpgUsers
             // 
@@ -1307,6 +1214,8 @@
             // 
             this.panel5.AutoScroll = true;
             this.panel5.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.panel5.Controls.Add(this.no1DonorFilterBtn);
+            this.panel5.Controls.Add(this.donorRankingFilterBtn);
             this.panel5.Controls.Add(this.cmbUserFilter);
             this.panel5.Controls.Add(this.btnUserFilter);
             this.panel5.Controls.Add(this.cmbBloodFilter);
@@ -1471,84 +1380,6 @@
             this.dgvUsers.RowHeadersWidth = 51;
             this.dgvUsers.Size = new System.Drawing.Size(737, 287);
             this.dgvUsers.TabIndex = 3;
-            // 
-            // userIDDataGridViewTextBoxColumn
-            // 
-            this.userIDDataGridViewTextBoxColumn.DataPropertyName = "UserID";
-            this.userIDDataGridViewTextBoxColumn.HeaderText = "User ID";
-            this.userIDDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.userIDDataGridViewTextBoxColumn.Name = "userIDDataGridViewTextBoxColumn";
-            this.userIDDataGridViewTextBoxColumn.Width = 125;
-            // 
-            // passwordDataGridViewTextBoxColumn
-            // 
-            this.passwordDataGridViewTextBoxColumn.DataPropertyName = "Password";
-            this.passwordDataGridViewTextBoxColumn.HeaderText = "Password";
-            this.passwordDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.passwordDataGridViewTextBoxColumn.Name = "passwordDataGridViewTextBoxColumn";
-            this.passwordDataGridViewTextBoxColumn.Visible = false;
-            this.passwordDataGridViewTextBoxColumn.Width = 125;
-            // 
-            // nameDataGridViewTextBoxColumn
-            // 
-            this.nameDataGridViewTextBoxColumn.DataPropertyName = "Name";
-            this.nameDataGridViewTextBoxColumn.HeaderText = "Name";
-            this.nameDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.nameDataGridViewTextBoxColumn.Name = "nameDataGridViewTextBoxColumn";
-            this.nameDataGridViewTextBoxColumn.Width = 125;
-            // 
-            // surnameDataGridViewTextBoxColumn
-            // 
-            this.surnameDataGridViewTextBoxColumn.DataPropertyName = "Surname";
-            this.surnameDataGridViewTextBoxColumn.HeaderText = "Surname";
-            this.surnameDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.surnameDataGridViewTextBoxColumn.Name = "surnameDataGridViewTextBoxColumn";
-            this.surnameDataGridViewTextBoxColumn.Width = 125;
-            // 
-            // iDNumberDataGridViewTextBoxColumn
-            // 
-            this.iDNumberDataGridViewTextBoxColumn.DataPropertyName = "IDNumber";
-            this.iDNumberDataGridViewTextBoxColumn.HeaderText = "ID Number";
-            this.iDNumberDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.iDNumberDataGridViewTextBoxColumn.Name = "iDNumberDataGridViewTextBoxColumn";
-            this.iDNumberDataGridViewTextBoxColumn.Width = 125;
-            // 
-            // phoneNumberDataGridViewTextBoxColumn
-            // 
-            this.phoneNumberDataGridViewTextBoxColumn.DataPropertyName = "PhoneNumber";
-            this.phoneNumberDataGridViewTextBoxColumn.HeaderText = "Phone Number";
-            this.phoneNumberDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.phoneNumberDataGridViewTextBoxColumn.Name = "phoneNumberDataGridViewTextBoxColumn";
-            this.phoneNumberDataGridViewTextBoxColumn.Width = 125;
-            // 
-            // userTypeDataGridViewTextBoxColumn
-            // 
-            this.userTypeDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.userTypeDataGridViewTextBoxColumn.DataPropertyName = "UserType";
-            this.userTypeDataGridViewTextBoxColumn.HeaderText = "User Type";
-            this.userTypeDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.userTypeDataGridViewTextBoxColumn.Name = "userTypeDataGridViewTextBoxColumn";
-            // 
-            // bloodTypeDataGridViewTextBoxColumn
-            // 
-            this.bloodTypeDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.bloodTypeDataGridViewTextBoxColumn.DataPropertyName = "BloodType";
-            this.bloodTypeDataGridViewTextBoxColumn.HeaderText = "Blood Type";
-            this.bloodTypeDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.bloodTypeDataGridViewTextBoxColumn.Name = "bloodTypeDataGridViewTextBoxColumn";
-            // 
-            // isActiveAccountDataGridViewCheckBoxColumn
-            // 
-            this.isActiveAccountDataGridViewCheckBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.isActiveAccountDataGridViewCheckBoxColumn.DataPropertyName = "isActiveAccount";
-            this.isActiveAccountDataGridViewCheckBoxColumn.HeaderText = "Active";
-            this.isActiveAccountDataGridViewCheckBoxColumn.MinimumWidth = 6;
-            this.isActiveAccountDataGridViewCheckBoxColumn.Name = "isActiveAccountDataGridViewCheckBoxColumn";
-            // 
-            // tblUsersBindingSource
-            // 
-            this.tblUsersBindingSource.DataMember = "tblUsers";
-            this.tblUsersBindingSource.DataSource = this.ist2jwDataSet;
             // 
             // pnlUserEdit
             // 
@@ -1880,28 +1711,6 @@
             this.dgvTotalSchedule.TabIndex = 3;
             this.dgvTotalSchedule.Visible = false;
             // 
-            // userIDDataGridViewTextBoxColumn2
-            // 
-            this.userIDDataGridViewTextBoxColumn2.DataPropertyName = "UserID";
-            this.userIDDataGridViewTextBoxColumn2.HeaderText = "UserID";
-            this.userIDDataGridViewTextBoxColumn2.MinimumWidth = 6;
-            this.userIDDataGridViewTextBoxColumn2.Name = "userIDDataGridViewTextBoxColumn2";
-            this.userIDDataGridViewTextBoxColumn2.Width = 125;
-            // 
-            // schedulesDataGridViewTextBoxColumn
-            // 
-            this.schedulesDataGridViewTextBoxColumn.DataPropertyName = "Schedules";
-            this.schedulesDataGridViewTextBoxColumn.HeaderText = "Schedules";
-            this.schedulesDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.schedulesDataGridViewTextBoxColumn.Name = "schedulesDataGridViewTextBoxColumn";
-            this.schedulesDataGridViewTextBoxColumn.ReadOnly = true;
-            this.schedulesDataGridViewTextBoxColumn.Width = 125;
-            // 
-            // tblTotalScheduleBindingSource
-            // 
-            this.tblTotalScheduleBindingSource.DataMember = "tblTotalSchedule";
-            this.tblTotalScheduleBindingSource.DataSource = this.ist2jwDataSet;
-            // 
             // dgvAverage
             // 
             this.dgvAverage.AutoGenerateColumns = false;
@@ -1919,38 +1728,6 @@
             this.dgvAverage.Size = new System.Drawing.Size(763, 259);
             this.dgvAverage.TabIndex = 4;
             this.dgvAverage.Visible = false;
-            // 
-            // dataGridViewTextBoxColumn9
-            // 
-            this.dataGridViewTextBoxColumn9.DataPropertyName = "TotalSchedules";
-            this.dataGridViewTextBoxColumn9.HeaderText = "TotalSchedules";
-            this.dataGridViewTextBoxColumn9.MinimumWidth = 6;
-            this.dataGridViewTextBoxColumn9.Name = "dataGridViewTextBoxColumn9";
-            this.dataGridViewTextBoxColumn9.ReadOnly = true;
-            this.dataGridViewTextBoxColumn9.Width = 125;
-            // 
-            // dataGridViewTextBoxColumn10
-            // 
-            this.dataGridViewTextBoxColumn10.DataPropertyName = "UsersWithSchedules";
-            this.dataGridViewTextBoxColumn10.HeaderText = "UsersWithSchedules";
-            this.dataGridViewTextBoxColumn10.MinimumWidth = 6;
-            this.dataGridViewTextBoxColumn10.Name = "dataGridViewTextBoxColumn10";
-            this.dataGridViewTextBoxColumn10.ReadOnly = true;
-            this.dataGridViewTextBoxColumn10.Width = 125;
-            // 
-            // dataGridViewTextBoxColumn11
-            // 
-            this.dataGridViewTextBoxColumn11.DataPropertyName = "AverageSchedulesPerUser";
-            this.dataGridViewTextBoxColumn11.HeaderText = "AverageSchedulesPerUser";
-            this.dataGridViewTextBoxColumn11.MinimumWidth = 6;
-            this.dataGridViewTextBoxColumn11.Name = "dataGridViewTextBoxColumn11";
-            this.dataGridViewTextBoxColumn11.ReadOnly = true;
-            this.dataGridViewTextBoxColumn11.Width = 125;
-            // 
-            // tblAverageScheduleBindingSource
-            // 
-            this.tblAverageScheduleBindingSource.DataMember = "tblAverageSchedule";
-            this.tblAverageScheduleBindingSource.DataSource = this.ist2jwDataSet;
             // 
             // pnlScheduleNav
             // 
@@ -2159,11 +1936,6 @@
             this.chkAttended.Text = "Attended";
             this.chkAttended.UseVisualStyleBackColor = true;
             // 
-            // scheduleBindingSource
-            // 
-            this.scheduleBindingSource.DataMember = "Schedule";
-            this.scheduleBindingSource.DataSource = this.ist2jwDataSet;
-            // 
             // txtSearchByUser
             // 
             this.txtSearchByUser.Location = new System.Drawing.Point(640, 14);
@@ -2271,6 +2043,307 @@
             this.dgvSchedule.Size = new System.Drawing.Size(764, 261);
             this.dgvSchedule.TabIndex = 0;
             // 
+            // tpgStats
+            // 
+            this.tpgStats.Controls.Add(this.chtUserSchedule);
+            this.tpgStats.Controls.Add(this.chtBloodType);
+            this.tpgStats.Location = new System.Drawing.Point(4, 22);
+            this.tpgStats.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tpgStats.Name = "tpgStats";
+            this.tpgStats.Padding = new System.Windows.Forms.Padding(3, 3, 3, 3);
+            this.tpgStats.Size = new System.Drawing.Size(1034, 526);
+            this.tpgStats.TabIndex = 4;
+            this.tpgStats.Text = "     Statistics     ";
+            this.tpgStats.UseVisualStyleBackColor = true;
+            // 
+            // chtUserSchedule
+            // 
+            chartArea3.Name = "ChartArea1";
+            this.chtUserSchedule.ChartAreas.Add(chartArea3);
+            legend3.Name = "No. of schedules";
+            this.chtUserSchedule.Legends.Add(legend3);
+            this.chtUserSchedule.Location = new System.Drawing.Point(536, 5);
+            this.chtUserSchedule.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.chtUserSchedule.Name = "chtUserSchedule";
+            this.chtUserSchedule.Size = new System.Drawing.Size(495, 519);
+            this.chtUserSchedule.TabIndex = 1;
+            // 
+            // chtBloodType
+            // 
+            chartArea4.Name = "ChartArea1";
+            this.chtBloodType.ChartAreas.Add(chartArea4);
+            legend4.Name = "Legend1";
+            this.chtBloodType.Legends.Add(legend4);
+            this.chtBloodType.Location = new System.Drawing.Point(6, 5);
+            this.chtBloodType.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.chtBloodType.Name = "chtBloodType";
+            this.chtBloodType.Size = new System.Drawing.Size(516, 524);
+            this.chtBloodType.TabIndex = 0;
+            // 
+            // donorRankingFilterBtn
+            // 
+            this.donorRankingFilterBtn.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("donorRankingFilterBtn.BackgroundImage")));
+            this.donorRankingFilterBtn.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.donorRankingFilterBtn.FlatAppearance.BorderSize = 0;
+            this.donorRankingFilterBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.donorRankingFilterBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.25F);
+            this.donorRankingFilterBtn.Location = new System.Drawing.Point(39, 231);
+            this.donorRankingFilterBtn.Margin = new System.Windows.Forms.Padding(4);
+            this.donorRankingFilterBtn.Name = "donorRankingFilterBtn";
+            this.donorRankingFilterBtn.Size = new System.Drawing.Size(194, 36);
+            this.donorRankingFilterBtn.TabIndex = 9;
+            this.donorRankingFilterBtn.Text = "Donor Ranking";
+            this.donorRankingFilterBtn.UseVisualStyleBackColor = true;
+            this.donorRankingFilterBtn.Click += new System.EventHandler(this.donorRankingFilterBtn_Click);
+            // 
+            // no1DonorFilterBtn
+            // 
+            this.no1DonorFilterBtn.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("no1DonorFilterBtn.BackgroundImage")));
+            this.no1DonorFilterBtn.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.no1DonorFilterBtn.FlatAppearance.BorderSize = 0;
+            this.no1DonorFilterBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.no1DonorFilterBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.25F);
+            this.no1DonorFilterBtn.Location = new System.Drawing.Point(39, 288);
+            this.no1DonorFilterBtn.Margin = new System.Windows.Forms.Padding(4);
+            this.no1DonorFilterBtn.Name = "no1DonorFilterBtn";
+            this.no1DonorFilterBtn.Size = new System.Drawing.Size(194, 36);
+            this.no1DonorFilterBtn.TabIndex = 10;
+            this.no1DonorFilterBtn.Text = "No.1 Donor";
+            this.no1DonorFilterBtn.UseVisualStyleBackColor = true;
+            this.no1DonorFilterBtn.Click += new System.EventHandler(this.no1DonorFilterBtn_Click);
+            // 
+            // userIDDataGridViewTextBoxColumn
+            // 
+            this.userIDDataGridViewTextBoxColumn.DataPropertyName = "UserID";
+            this.userIDDataGridViewTextBoxColumn.HeaderText = "User ID";
+            this.userIDDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.userIDDataGridViewTextBoxColumn.Name = "userIDDataGridViewTextBoxColumn";
+            this.userIDDataGridViewTextBoxColumn.Width = 125;
+            // 
+            // passwordDataGridViewTextBoxColumn
+            // 
+            this.passwordDataGridViewTextBoxColumn.DataPropertyName = "Password";
+            this.passwordDataGridViewTextBoxColumn.HeaderText = "Password";
+            this.passwordDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.passwordDataGridViewTextBoxColumn.Name = "passwordDataGridViewTextBoxColumn";
+            this.passwordDataGridViewTextBoxColumn.Visible = false;
+            this.passwordDataGridViewTextBoxColumn.Width = 125;
+            // 
+            // nameDataGridViewTextBoxColumn
+            // 
+            this.nameDataGridViewTextBoxColumn.DataPropertyName = "Name";
+            this.nameDataGridViewTextBoxColumn.HeaderText = "Name";
+            this.nameDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.nameDataGridViewTextBoxColumn.Name = "nameDataGridViewTextBoxColumn";
+            this.nameDataGridViewTextBoxColumn.Width = 125;
+            // 
+            // surnameDataGridViewTextBoxColumn
+            // 
+            this.surnameDataGridViewTextBoxColumn.DataPropertyName = "Surname";
+            this.surnameDataGridViewTextBoxColumn.HeaderText = "Surname";
+            this.surnameDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.surnameDataGridViewTextBoxColumn.Name = "surnameDataGridViewTextBoxColumn";
+            this.surnameDataGridViewTextBoxColumn.Width = 125;
+            // 
+            // iDNumberDataGridViewTextBoxColumn
+            // 
+            this.iDNumberDataGridViewTextBoxColumn.DataPropertyName = "IDNumber";
+            this.iDNumberDataGridViewTextBoxColumn.HeaderText = "ID Number";
+            this.iDNumberDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.iDNumberDataGridViewTextBoxColumn.Name = "iDNumberDataGridViewTextBoxColumn";
+            this.iDNumberDataGridViewTextBoxColumn.Width = 125;
+            // 
+            // phoneNumberDataGridViewTextBoxColumn
+            // 
+            this.phoneNumberDataGridViewTextBoxColumn.DataPropertyName = "PhoneNumber";
+            this.phoneNumberDataGridViewTextBoxColumn.HeaderText = "Phone Number";
+            this.phoneNumberDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.phoneNumberDataGridViewTextBoxColumn.Name = "phoneNumberDataGridViewTextBoxColumn";
+            this.phoneNumberDataGridViewTextBoxColumn.Width = 125;
+            // 
+            // userTypeDataGridViewTextBoxColumn
+            // 
+            this.userTypeDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.userTypeDataGridViewTextBoxColumn.DataPropertyName = "UserType";
+            this.userTypeDataGridViewTextBoxColumn.HeaderText = "User Type";
+            this.userTypeDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.userTypeDataGridViewTextBoxColumn.Name = "userTypeDataGridViewTextBoxColumn";
+            // 
+            // bloodTypeDataGridViewTextBoxColumn
+            // 
+            this.bloodTypeDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.bloodTypeDataGridViewTextBoxColumn.DataPropertyName = "BloodType";
+            this.bloodTypeDataGridViewTextBoxColumn.HeaderText = "Blood Type";
+            this.bloodTypeDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.bloodTypeDataGridViewTextBoxColumn.Name = "bloodTypeDataGridViewTextBoxColumn";
+            // 
+            // isActiveAccountDataGridViewCheckBoxColumn
+            // 
+            this.isActiveAccountDataGridViewCheckBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.isActiveAccountDataGridViewCheckBoxColumn.DataPropertyName = "isActiveAccount";
+            this.isActiveAccountDataGridViewCheckBoxColumn.HeaderText = "Active";
+            this.isActiveAccountDataGridViewCheckBoxColumn.MinimumWidth = 6;
+            this.isActiveAccountDataGridViewCheckBoxColumn.Name = "isActiveAccountDataGridViewCheckBoxColumn";
+            // 
+            // tblUsersBindingSource
+            // 
+            this.tblUsersBindingSource.DataMember = "tblUsers";
+            this.tblUsersBindingSource.DataSource = this.ist2jwDataSet;
+            // 
+            // ist2jwDataSet
+            // 
+            this.ist2jwDataSet.DataSetName = "ist2jwDataSet";
+            this.ist2jwDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // tblBloodInventoryBindingSource
+            // 
+            this.tblBloodInventoryBindingSource.DataMember = "TblBloodInventory";
+            this.tblBloodInventoryBindingSource.DataSource = this.ist2jwDataSet;
+            // 
+            // unitIDDataGridViewTextBoxColumn
+            // 
+            this.unitIDDataGridViewTextBoxColumn.DataPropertyName = "UnitID";
+            this.unitIDDataGridViewTextBoxColumn.HeaderText = "UnitID";
+            this.unitIDDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.unitIDDataGridViewTextBoxColumn.Name = "unitIDDataGridViewTextBoxColumn";
+            this.unitIDDataGridViewTextBoxColumn.Width = 125;
+            // 
+            // userIDDataGridViewTextBoxColumn1
+            // 
+            this.userIDDataGridViewTextBoxColumn1.DataPropertyName = "UserID";
+            this.userIDDataGridViewTextBoxColumn1.HeaderText = "UserID";
+            this.userIDDataGridViewTextBoxColumn1.MinimumWidth = 6;
+            this.userIDDataGridViewTextBoxColumn1.Name = "userIDDataGridViewTextBoxColumn1";
+            this.userIDDataGridViewTextBoxColumn1.Width = 125;
+            // 
+            // appIDDataGridViewTextBoxColumn
+            // 
+            this.appIDDataGridViewTextBoxColumn.DataPropertyName = "AppID";
+            this.appIDDataGridViewTextBoxColumn.HeaderText = "AppID";
+            this.appIDDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.appIDDataGridViewTextBoxColumn.Name = "appIDDataGridViewTextBoxColumn";
+            this.appIDDataGridViewTextBoxColumn.Width = 125;
+            // 
+            // bloodTypeDataGridViewTextBoxColumn1
+            // 
+            this.bloodTypeDataGridViewTextBoxColumn1.DataPropertyName = "BloodType";
+            this.bloodTypeDataGridViewTextBoxColumn1.HeaderText = "BloodType";
+            this.bloodTypeDataGridViewTextBoxColumn1.MinimumWidth = 6;
+            this.bloodTypeDataGridViewTextBoxColumn1.Name = "bloodTypeDataGridViewTextBoxColumn1";
+            this.bloodTypeDataGridViewTextBoxColumn1.Width = 125;
+            // 
+            // expiryDateDataGridViewTextBoxColumn
+            // 
+            this.expiryDateDataGridViewTextBoxColumn.DataPropertyName = "ExpiryDate";
+            this.expiryDateDataGridViewTextBoxColumn.HeaderText = "ExpiryDate";
+            this.expiryDateDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.expiryDateDataGridViewTextBoxColumn.Name = "expiryDateDataGridViewTextBoxColumn";
+            this.expiryDateDataGridViewTextBoxColumn.Width = 125;
+            // 
+            // dataGridViewTextBoxColumn4
+            // 
+            this.dataGridViewTextBoxColumn4.DataPropertyName = "AppID";
+            this.dataGridViewTextBoxColumn4.HeaderText = "AppID";
+            this.dataGridViewTextBoxColumn4.MinimumWidth = 6;
+            this.dataGridViewTextBoxColumn4.Name = "dataGridViewTextBoxColumn4";
+            this.dataGridViewTextBoxColumn4.Width = 125;
+            // 
+            // dataGridViewTextBoxColumn5
+            // 
+            this.dataGridViewTextBoxColumn5.DataPropertyName = "AppDate";
+            this.dataGridViewTextBoxColumn5.HeaderText = "AppDate";
+            this.dataGridViewTextBoxColumn5.MinimumWidth = 6;
+            this.dataGridViewTextBoxColumn5.Name = "dataGridViewTextBoxColumn5";
+            this.dataGridViewTextBoxColumn5.Width = 125;
+            // 
+            // dataGridViewTextBoxColumn6
+            // 
+            this.dataGridViewTextBoxColumn6.DataPropertyName = "Time";
+            this.dataGridViewTextBoxColumn6.HeaderText = "Time";
+            this.dataGridViewTextBoxColumn6.MinimumWidth = 6;
+            this.dataGridViewTextBoxColumn6.Name = "dataGridViewTextBoxColumn6";
+            this.dataGridViewTextBoxColumn6.Width = 125;
+            // 
+            // dataGridViewTextBoxColumn7
+            // 
+            this.dataGridViewTextBoxColumn7.DataPropertyName = "Capacity";
+            this.dataGridViewTextBoxColumn7.HeaderText = "Capacity";
+            this.dataGridViewTextBoxColumn7.MinimumWidth = 6;
+            this.dataGridViewTextBoxColumn7.Name = "dataGridViewTextBoxColumn7";
+            this.dataGridViewTextBoxColumn7.Width = 125;
+            // 
+            // dataGridViewTextBoxColumn8
+            // 
+            this.dataGridViewTextBoxColumn8.DataPropertyName = "Venue";
+            this.dataGridViewTextBoxColumn8.HeaderText = "Venue";
+            this.dataGridViewTextBoxColumn8.MinimumWidth = 6;
+            this.dataGridViewTextBoxColumn8.Name = "dataGridViewTextBoxColumn8";
+            this.dataGridViewTextBoxColumn8.Width = 125;
+            // 
+            // appointmentBindingSource
+            // 
+            this.appointmentBindingSource.DataMember = "Appointment";
+            this.appointmentBindingSource.DataSource = this.ist2jwDataSet;
+            // 
+            // userIDDataGridViewTextBoxColumn2
+            // 
+            this.userIDDataGridViewTextBoxColumn2.DataPropertyName = "UserID";
+            this.userIDDataGridViewTextBoxColumn2.HeaderText = "UserID";
+            this.userIDDataGridViewTextBoxColumn2.MinimumWidth = 6;
+            this.userIDDataGridViewTextBoxColumn2.Name = "userIDDataGridViewTextBoxColumn2";
+            this.userIDDataGridViewTextBoxColumn2.Width = 125;
+            // 
+            // schedulesDataGridViewTextBoxColumn
+            // 
+            this.schedulesDataGridViewTextBoxColumn.DataPropertyName = "Schedules";
+            this.schedulesDataGridViewTextBoxColumn.HeaderText = "Schedules";
+            this.schedulesDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.schedulesDataGridViewTextBoxColumn.Name = "schedulesDataGridViewTextBoxColumn";
+            this.schedulesDataGridViewTextBoxColumn.ReadOnly = true;
+            this.schedulesDataGridViewTextBoxColumn.Width = 125;
+            // 
+            // tblTotalScheduleBindingSource
+            // 
+            this.tblTotalScheduleBindingSource.DataMember = "tblTotalSchedule";
+            this.tblTotalScheduleBindingSource.DataSource = this.ist2jwDataSet;
+            // 
+            // dataGridViewTextBoxColumn9
+            // 
+            this.dataGridViewTextBoxColumn9.DataPropertyName = "TotalSchedules";
+            this.dataGridViewTextBoxColumn9.HeaderText = "TotalSchedules";
+            this.dataGridViewTextBoxColumn9.MinimumWidth = 6;
+            this.dataGridViewTextBoxColumn9.Name = "dataGridViewTextBoxColumn9";
+            this.dataGridViewTextBoxColumn9.ReadOnly = true;
+            this.dataGridViewTextBoxColumn9.Width = 125;
+            // 
+            // dataGridViewTextBoxColumn10
+            // 
+            this.dataGridViewTextBoxColumn10.DataPropertyName = "UsersWithSchedules";
+            this.dataGridViewTextBoxColumn10.HeaderText = "UsersWithSchedules";
+            this.dataGridViewTextBoxColumn10.MinimumWidth = 6;
+            this.dataGridViewTextBoxColumn10.Name = "dataGridViewTextBoxColumn10";
+            this.dataGridViewTextBoxColumn10.ReadOnly = true;
+            this.dataGridViewTextBoxColumn10.Width = 125;
+            // 
+            // dataGridViewTextBoxColumn11
+            // 
+            this.dataGridViewTextBoxColumn11.DataPropertyName = "AverageSchedulesPerUser";
+            this.dataGridViewTextBoxColumn11.HeaderText = "AverageSchedulesPerUser";
+            this.dataGridViewTextBoxColumn11.MinimumWidth = 6;
+            this.dataGridViewTextBoxColumn11.Name = "dataGridViewTextBoxColumn11";
+            this.dataGridViewTextBoxColumn11.ReadOnly = true;
+            this.dataGridViewTextBoxColumn11.Width = 125;
+            // 
+            // tblAverageScheduleBindingSource
+            // 
+            this.tblAverageScheduleBindingSource.DataMember = "tblAverageSchedule";
+            this.tblAverageScheduleBindingSource.DataSource = this.ist2jwDataSet;
+            // 
+            // scheduleBindingSource
+            // 
+            this.scheduleBindingSource.DataMember = "Schedule";
+            this.scheduleBindingSource.DataSource = this.ist2jwDataSet;
+            // 
             // dataGridViewTextBoxColumn1
             // 
             this.dataGridViewTextBoxColumn1.DataPropertyName = "ScheduleID";
@@ -2302,43 +2375,6 @@
             this.dataGridViewCheckBoxColumn1.MinimumWidth = 6;
             this.dataGridViewCheckBoxColumn1.Name = "dataGridViewCheckBoxColumn1";
             this.dataGridViewCheckBoxColumn1.Width = 125;
-            // 
-            // tpgStats
-            // 
-            this.tpgStats.Controls.Add(this.chtUserSchedule);
-            this.tpgStats.Controls.Add(this.chtBloodType);
-            this.tpgStats.Location = new System.Drawing.Point(4, 22);
-            this.tpgStats.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.tpgStats.Name = "tpgStats";
-            this.tpgStats.Padding = new System.Windows.Forms.Padding(3, 3, 3, 3);
-            this.tpgStats.Size = new System.Drawing.Size(1034, 526);
-            this.tpgStats.TabIndex = 4;
-            this.tpgStats.Text = "     Statistics     ";
-            this.tpgStats.UseVisualStyleBackColor = true;
-            // 
-            // chtUserSchedule
-            // 
-            chartArea1.Name = "ChartArea1";
-            this.chtUserSchedule.ChartAreas.Add(chartArea1);
-            legend1.Name = "No. of schedules";
-            this.chtUserSchedule.Legends.Add(legend1);
-            this.chtUserSchedule.Location = new System.Drawing.Point(536, 5);
-            this.chtUserSchedule.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.chtUserSchedule.Name = "chtUserSchedule";
-            this.chtUserSchedule.Size = new System.Drawing.Size(495, 519);
-            this.chtUserSchedule.TabIndex = 1;
-            // 
-            // chtBloodType
-            // 
-            chartArea2.Name = "ChartArea1";
-            this.chtBloodType.ChartAreas.Add(chartArea2);
-            legend2.Name = "Legend1";
-            this.chtBloodType.Legends.Add(legend2);
-            this.chtBloodType.Location = new System.Drawing.Point(6, 5);
-            this.chtBloodType.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.chtBloodType.Name = "chtBloodType";
-            this.chtBloodType.Size = new System.Drawing.Size(516, 524);
-            this.chtBloodType.TabIndex = 0;
             // 
             // tblUsersTableAdapter
             // 
@@ -2389,8 +2425,6 @@
             this.pnlTopBar.PerformLayout();
             this.tpgAppointments.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.appointmentDataGridView)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.appointmentBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.ist2jwDataSet)).EndInit();
             this.pnlAppFilters.ResumeLayout(false);
             this.pnlAppFilters.PerformLayout();
             this.pnlRemoveAppFilters.ResumeLayout(false);
@@ -2405,7 +2439,6 @@
             this.pnlBloodNav.ResumeLayout(false);
             this.panel3.ResumeLayout(false);
             this.panel3.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.tblBloodInventoryBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvBlood)).EndInit();
             this.tpgUsers.ResumeLayout(false);
             this.pnlRemoveUserFilters.ResumeLayout(false);
@@ -2413,27 +2446,30 @@
             this.panel5.ResumeLayout(false);
             this.panel5.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvUsers)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.tblUsersBindingSource)).EndInit();
             this.pnlUserEdit.ResumeLayout(false);
             this.pnlUserEdit.PerformLayout();
             this.tcAdmin.ResumeLayout(false);
             this.tpgSchedule.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dgvTotalSchedule)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.tblTotalScheduleBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvAverage)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.tblAverageScheduleBindingSource)).EndInit();
             this.pnlScheduleNav.ResumeLayout(false);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.pnlSchedule.ResumeLayout(false);
             this.pnlSchedule.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.scheduleBindingSource)).EndInit();
             this.pnlShortStats.ResumeLayout(false);
             this.pnlShortStats.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvSchedule)).EndInit();
             this.tpgStats.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.chtUserSchedule)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.chtBloodType)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.tblUsersBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ist2jwDataSet)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.tblBloodInventoryBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.appointmentBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.tblTotalScheduleBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.tblAverageScheduleBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.scheduleBindingSource)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -2616,5 +2652,7 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn userTypeDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn bloodTypeDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewCheckBoxColumn isActiveAccountDataGridViewCheckBoxColumn;
+        private System.Windows.Forms.Button donorRankingFilterBtn;
+        private System.Windows.Forms.Button no1DonorFilterBtn;
     }
 }

@@ -1312,5 +1312,16 @@ namespace BloodBankSystem
         {
 
         }
+
+        private void no1DonorFilterBtn_Click(object sender, EventArgs e)
+        {
+            tblUsersTableAdapter.GetNo1Donor();
+        }
+
+        private void donorRankingFilterBtn_Click(object sender, EventArgs e)
+        {
+            tblUsersTableAdapter.UserDonationRankings();
+            
+        }
     }
 }
