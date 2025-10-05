@@ -7,6 +7,7 @@ namespace BloodBankSystem
 {
     public partial class AppointmentForm : Form
     {
+        public bool userBookedSameDate = false;
         public AppointmentForm()
         {
             InitializeComponent();
@@ -77,6 +78,12 @@ namespace BloodBankSystem
                         // if the last attended appointment is 2 months ago , then isValid = true
                         int monthDifference = (date.Year - lastDate.Year) * 12 + (date.Month - lastDate.Month);
 
+                        if(monthDifference == 0)
+                        {
+                            isValid = false;
+                            userBookedSameDate = true;
+
+                        }
                         if (monthDifference == 2)
                         {
                             isValid = true;
@@ -115,7 +122,7 @@ namespace BloodBankSystem
 
             if ((date < DateTime.Now))
             {
-                MessageBox.Show("The date you're trying to book is before the present date. Please try again");
+                MessageBox.Show("The date you're trying to book is before the present date. Please try again","Appointment booking");
                 return;
             }
 
@@ -125,13 +132,12 @@ namespace BloodBankSystem
                 {
                     // insert new appointment into schedule table
                     scheduleBindingSource.MoveLast();
-
                     scheduleTableAdapter.InsertSchedule(newSchID.ToString(), currentUserID, appID, true);
 
                     // update appointment table capacity
                     appointmentTableAdapter.UpdateCapacity(capacity + 1, appID);
 
-                    MessageBox.Show("Congrats. Your new appointment has been scheduled ");
+                    MessageBox.Show("Congrats. Your new appointment has been scheduled ", "Appointment booking");
                     // refresh tables 
                     this.appointmentTableAdapter.Fill(this.ist2jwDataSet.Appointment);
                     this.tblUserScheduleTableAdapter.FillUserSchedule(this.ist2jwDataSet.tblUserSchedule, HomePage.userID);
@@ -146,7 +152,13 @@ namespace BloodBankSystem
             }
             else
             {
-                MessageBox.Show("Please choose another appointment to book. This date is full");
+                if (userBookedSameDate)
+                {
+                    MessageBox.Show("Please choose another appointment to book.You chose the same date" , "Appointment booking" );
+                    return;
+                }
+
+                MessageBox.Show("Please choose another appointment to book. This date is full", "Appointment booking");
             }
         }
 
@@ -272,7 +284,7 @@ namespace BloodBankSystem
             if (filterSelect.Text.Equals("Year") && filterAppYearCmbx.Text.Equals(""))
             {
                 filterAppYearCmbx.BackColor = Color.LightCoral;
-                MessageBox.Show("Please select a year to filter");
+                MessageBox.Show("Please select a year to filter", "Appointment Filter", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return;
             }
             else if (filterSelect.Text.Equals("Year"))
@@ -285,7 +297,7 @@ namespace BloodBankSystem
             if (filterSelect.Text.Equals("Month") && filterAppMonthCmbx.Text.Equals(""))
             {
                 filterAppMonthCmbx.BackColor = Color.LightCoral;
-                MessageBox.Show("Please select a month to filter ");
+                MessageBox.Show("Please select a month to filter ", "Appointment Filter", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return;
             }
             else if (filterSelect.Text.Equals("Month"))
@@ -298,7 +310,7 @@ namespace BloodBankSystem
             if (filterSelect.Text.Equals("Venue") && filterAppVenueCmbx.Text.Equals(""))
             {
                 filterAppVenueCmbx.BackColor = Color.LightCoral;
-                MessageBox.Show("Please select a venue to filter ");
+                MessageBox.Show("Please select a venue to filter ", "Appointment Filter", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return;
             }
             else if ((filterSelect.Text.Equals("Venue")))
@@ -310,7 +322,7 @@ namespace BloodBankSystem
             if (filterSelect.Text.Equals("Capacity") && filterAppCapacityCmbx.Text.Equals(""))
             {
                 filterAppCapacityCmbx.BackColor = Color.LightCoral;
-                MessageBox.Show("Please select a capacity to filter ");
+                MessageBox.Show("Please select a capacity to filter ", "Appointment Filter", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return;
             }
             else if (filterSelect.Text.Equals("Capacity"))
@@ -544,7 +556,7 @@ namespace BloodBankSystem
             if (scheduleFilterCmbx.Text.Equals("Year") && filterScheduleYearCmbx.Text.Equals(""))
             {
                 filterScheduleYearCmbx.BackColor = Color.LightCoral;
-                MessageBox.Show("Please select a year to filter");
+                MessageBox.Show("Please select a year to filter", "Appointment Filter", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return;
             }
             else if (scheduleFilterCmbx.Text.Equals("Year"))
@@ -555,7 +567,7 @@ namespace BloodBankSystem
             if (scheduleFilterCmbx.Text.Equals("Month") && filterScheduleMonthCmbx.Text.Equals(""))
             {
                 filterScheduleMonthCmbx.BackColor = Color.LightCoral;
-                MessageBox.Show("Please select a month to filter");
+                MessageBox.Show("Please select a month to filter", "Appointment Filter", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return;
             }
             else if (scheduleFilterCmbx.Text.Equals("Month"))
@@ -567,7 +579,7 @@ namespace BloodBankSystem
             if (scheduleFilterCmbx.Text.Equals("Venue") && filterScheduleVenueCmbx.Text.Equals(""))
             {
                 filterScheduleVenueCmbx.BackColor = Color.LightCoral;
-                MessageBox.Show("Please select a venue to filter");
+                MessageBox.Show("Please select a venue to filter", "Appointment Filter", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return;
             }
             else if (scheduleFilterCmbx.Text.Equals("Venue"))

@@ -107,7 +107,7 @@
             this.ProfileImg.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.ProfileImg.Image = global::BloodBankSystem.Properties.Resources.ProfileImage;
             this.ProfileImg.Location = new System.Drawing.Point(1329, 0);
-            this.ProfileImg.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.ProfileImg.Margin = new System.Windows.Forms.Padding(5);
             this.ProfileImg.Name = "ProfileImg";
             this.ProfileImg.Size = new System.Drawing.Size(134, 121);
             this.ProfileImg.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -127,7 +127,7 @@
             this.prfPnl.Controls.Add(this.prfDonLbl);
             this.prfPnl.Controls.Add(this.prfNameLbl);
             this.prfPnl.Location = new System.Drawing.Point(1116, 116);
-            this.prfPnl.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.prfPnl.Margin = new System.Windows.Forms.Padding(4);
             this.prfPnl.Name = "prfPnl";
             this.prfPnl.Size = new System.Drawing.Size(347, 535);
             this.prfPnl.TabIndex = 5;
@@ -168,7 +168,7 @@
             this.logOutBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.logOutBtn.Font = new System.Drawing.Font("Arial", 18.25F);
             this.logOutBtn.Location = new System.Drawing.Point(80, 455);
-            this.logOutBtn.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.logOutBtn.Margin = new System.Windows.Forms.Padding(4);
             this.logOutBtn.Name = "logOutBtn";
             this.logOutBtn.Size = new System.Drawing.Size(183, 48);
             this.logOutBtn.TabIndex = 19;
@@ -228,7 +228,7 @@
             // 
             this.badge4Img.Image = global::BloodBankSystem.Properties.Resources.LegendaryDonorBadge;
             this.badge4Img.Location = new System.Drawing.Point(184, 175);
-            this.badge4Img.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.badge4Img.Margin = new System.Windows.Forms.Padding(4);
             this.badge4Img.Name = "badge4Img";
             this.badge4Img.Size = new System.Drawing.Size(189, 155);
             this.badge4Img.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -240,7 +240,7 @@
             // 
             this.badge3Img.Image = global::BloodBankSystem.Properties.Resources.LifeSaverBadge;
             this.badge3Img.Location = new System.Drawing.Point(0, 175);
-            this.badge3Img.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.badge3Img.Margin = new System.Windows.Forms.Padding(4);
             this.badge3Img.Name = "badge3Img";
             this.badge3Img.Size = new System.Drawing.Size(189, 155);
             this.badge3Img.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -252,7 +252,7 @@
             // 
             this.badge2Img.Image = global::BloodBankSystem.Properties.Resources.RegularDonorBadge;
             this.badge2Img.Location = new System.Drawing.Point(184, 23);
-            this.badge2Img.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.badge2Img.Margin = new System.Windows.Forms.Padding(4);
             this.badge2Img.Name = "badge2Img";
             this.badge2Img.Size = new System.Drawing.Size(189, 155);
             this.badge2Img.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -264,7 +264,7 @@
             // 
             this.badge1Img.Image = global::BloodBankSystem.Properties.Resources.FirstTimeDonorBadge;
             this.badge1Img.Location = new System.Drawing.Point(1, 23);
-            this.badge1Img.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.badge1Img.Margin = new System.Windows.Forms.Padding(4);
             this.badge1Img.Name = "badge1Img";
             this.badge1Img.Size = new System.Drawing.Size(188, 155);
             this.badge1Img.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -284,7 +284,7 @@
             this.donateBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 28.25F);
             this.donateBtn.ForeColor = System.Drawing.Color.White;
             this.donateBtn.Location = new System.Drawing.Point(535, 300);
-            this.donateBtn.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.donateBtn.Margin = new System.Windows.Forms.Padding(4);
             this.donateBtn.Name = "donateBtn";
             this.donateBtn.Size = new System.Drawing.Size(369, 214);
             this.donateBtn.TabIndex = 6;
@@ -301,7 +301,7 @@
             this.urgentNeedsPnl.Controls.Add(this.BloodtypeLbl);
             this.urgentNeedsPnl.Controls.Add(this.UrgentNeedsLbl);
             this.urgentNeedsPnl.Location = new System.Drawing.Point(0, 532);
-            this.urgentNeedsPnl.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.urgentNeedsPnl.Margin = new System.Windows.Forms.Padding(4);
             this.urgentNeedsPnl.Name = "urgentNeedsPnl";
             this.urgentNeedsPnl.Size = new System.Drawing.Size(343, 180);
             this.urgentNeedsPnl.TabIndex = 7;
@@ -387,9 +387,9 @@
             this.badgeGroup.Controls.Add(this.badge1Img);
             this.badgeGroup.Controls.Add(this.badge2Img);
             this.badgeGroup.Location = new System.Drawing.Point(0, 0);
-            this.badgeGroup.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.badgeGroup.Margin = new System.Windows.Forms.Padding(4);
             this.badgeGroup.Name = "badgeGroup";
-            this.badgeGroup.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.badgeGroup.Padding = new System.Windows.Forms.Padding(4);
             this.badgeGroup.Size = new System.Drawing.Size(375, 330);
             this.badgeGroup.TabIndex = 26;
             this.badgeGroup.TabStop = false;
@@ -413,7 +413,7 @@
             this.Controls.Add(this.welcomelbl);
             this.DoubleBuffered = true;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.Margin = new System.Windows.Forms.Padding(5);
             this.Name = "HomePage";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Home Page";
