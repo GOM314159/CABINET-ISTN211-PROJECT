@@ -361,5 +361,10 @@ namespace BloodBankSystem
         {
             helpBtn.FlatStyle = FlatStyle.Flat;
         }
+
+        private void RegForm_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            Environment.Exit(0);
+        }
     }
 }

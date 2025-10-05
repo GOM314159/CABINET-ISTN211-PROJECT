@@ -356,6 +356,7 @@
             this.Name = "RegForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Registration Form";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.RegForm_FormClosing);
             this.Load += new System.EventHandler(this.RegForm_Load);
             ((System.ComponentModel.ISupportInitialize)(this.passShowImg)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.ist2jwDataSet)).EndInit();

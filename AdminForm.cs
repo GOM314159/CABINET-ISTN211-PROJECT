@@ -34,5 +34,10 @@ namespace BloodBankSystem
         {
 
         }
+
+        private void AdminForm_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            Environment.Exit(0);
+        }
     }
 }
