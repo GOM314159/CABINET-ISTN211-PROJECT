@@ -37,8 +37,10 @@ namespace BloodBankSystem
 
         private void AdminForm_Load(object sender, EventArgs e)
         {
-            // TODO: This line of code loads data into the 'ist2jwDataSet1.DataTable1' table. You can move, or remove it, as needed.
-            this.dataTable1TableAdapter.FillAverage(this.ist2jwDataSet1.DataTable1);
+            // TODO: This line of code loads data into the 'ist2jwDataSet.tblAverageSchedule' table. You can move, or remove it, as needed.
+            this.tblAverageScheduleTableAdapter.FillAverage(this.ist2jwDataSet.tblAverageSchedule);
+            // TODO: This line of code loads data into the 'ist2jwDataSet1.tblAverageSchedule' table. You can move, or remove it, as needed.
+            this.tblAverageScheduleTableAdapter.FillAverage(this.ist2jwDataSet.tblAverageSchedule);
             // TODO: This line of code loads data into the 'ist2jwDataSet.tblTotalSchedule' table. You can move, or remove it, as needed.
             this.tblTotalScheduleTableAdapter.FillSchedulePerUser(this.ist2jwDataSet.tblTotalSchedule);
             // TODO: This line of code loads data into the 'ist2jwDataSet.tblTotalSchedule' table. You can move, or remove it, as needed.
@@ -1172,7 +1174,7 @@ namespace BloodBankSystem
 
         private void btnAverage_Click(object sender, EventArgs e)
         {
-            this.dataTable1TableAdapter.FillAverage(this.ist2jwDataSet1.DataTable1);
+            this.tblAverageScheduleTableAdapter.FillAverage(this.ist2jwDataSet.tblAverageSchedule);
 
             dgvAverage.Refresh();
             dgvAverage.Visible = true;
@@ -1299,6 +1301,16 @@ namespace BloodBankSystem
         private void AdminForm_FormClosing(object sender, FormClosingEventArgs e)
         {
             Environment.Exit(0);
+        }
+
+        private void pnlTopBar_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void dgvBlood_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
         }
     }
 }
