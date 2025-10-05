@@ -1,4 +1,5 @@
-﻿using Microsoft.VisualBasic;
+﻿using BloodBankSystem.ist2jwDataSetTableAdapters;
+using Microsoft.VisualBasic;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -36,6 +37,8 @@ namespace BloodBankSystem
 
         private void AdminForm_Load(object sender, EventArgs e)
         {
+            // TODO: This line of code loads data into the 'ist2jwDataSet1.DataTable1' table. You can move, or remove it, as needed.
+            this.dataTable1TableAdapter.FillAverage(this.ist2jwDataSet1.DataTable1);
             // TODO: This line of code loads data into the 'ist2jwDataSet.tblTotalSchedule' table. You can move, or remove it, as needed.
             this.tblTotalScheduleTableAdapter.FillSchedulePerUser(this.ist2jwDataSet.tblTotalSchedule);
             // TODO: This line of code loads data into the 'ist2jwDataSet.tblTotalSchedule' table. You can move, or remove it, as needed.
@@ -516,12 +519,12 @@ namespace BloodBankSystem
             Boolean bFound = false;
             int iCount = 0;
             String name = "";
-            String UserID = "" ;
+            String UserID = "";
             tblUsersBindingSource.MoveFirst();
 
             foreach (DataRowView rowView in tblUsersBindingSource)
             {
-                UserID = rowView["UserID"].ToString();
+                UserID = rowView["UserID"].ToString().Trim();
                 if (UserID == txtSearchByUser.Text)
                 {
 
@@ -549,35 +552,17 @@ namespace BloodBankSystem
                         iCount++;
 
                         redDisplay.AppendText("User schedule details:\n");
+                        redDisplay.AppendText("Schedule ID: " + rowView["ScheduleID"].ToString() + "\n");
                         redDisplay.AppendText("Name: " + name);
+                        redDisplay.AppendText("\nAppointment ID: " + rowView["AppID"].ToString() + "\n");
+                        redDisplay.AppendText("Attended: " + rowView["Attended"].ToString() + "\n");
+                        redDisplay.AppendText("--------------------------------------------\n");
+
                     }
                 }
 
-
-                if (bFound == false)
-                {
-
-                MessageBox.Show("UserID is invalid or has not been found");
-
-            }
-            else
-            {
-                foreach (DataRowView rowView in scheduleBindingSource)
-                {
-                    UserID = rowView["UserID"].ToString().Trim();
-                    if (UserID == txtSearchByUser.Text.Trim())
-                    {
-
-                        iCount++;
-
-                        redDisplay.AppendText("User schedule details:\n");
-                        redDisplay.AppendText("Name: " + name);
-                    }
-                }
-            }
-
-
-
+                redDisplay.AppendText("=====================\n");
+                redDisplay.AppendText("Total number of schedules for " + name + ": " + iCount.ToString() + "\n\n");
 
             }
 
@@ -1187,11 +1172,10 @@ namespace BloodBankSystem
 
         private void btnAverage_Click(object sender, EventArgs e)
         {
-            this.scheduleTableAdapter.AverageSchedules();
-            
-            this.scheduleTableAdapter.Fill(this.ist2jwDataSet.Schedule);
+            this.dataTable1TableAdapter.FillAverage(this.ist2jwDataSet1.DataTable1);
 
-            scheduleTableAdapter.AverageSchedules();
+            dgvAverage.Refresh();
+            dgvAverage.Visible = true;
 
 
         }
@@ -1309,6 +1293,7 @@ namespace BloodBankSystem
         {
            
             dgvTotalSchedule.Visible = false;
+            dgvAverage.Visible = false;
         }
 
         private void AdminForm_FormClosing(object sender, FormClosingEventArgs e)

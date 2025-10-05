@@ -2,7 +2,7 @@
 <xs:schema id="ist2jwDataSet" targetNamespace="http://tempuri.org/ist2jwDataSet.xsd" xmlns:mstns="http://tempuri.org/ist2jwDataSet.xsd" xmlns="http://tempuri.org/ist2jwDataSet.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
   <xs:annotation>
     <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
-      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" GeneratorFunctionsComponentClassName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" UserFunctionsComponentName="QueriesTableAdapter" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
         <Connections>
           <Connection AppSettingsObjectName="Settings" AppSettingsPropertyName="ist2jwConnectionString" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="ist2jwConnectionString (Settings)" ParameterPrefix="@" PropertyReference="ApplicationSettings.BloodBankSystem.Properties.Settings.GlobalReference.Default.ist2jwConnectionString" Provider="System.Data.SqlClient" />
         </Connections>
@@ -374,21 +374,6 @@ SELECT ScheduleID, UserID, AppID, Attended FROM Schedule WHERE (ScheduleID = @Sc
               <Mapping SourceColumn="Attended" DataSetColumn="Attended" />
             </Mappings>
             <Sources>
-              <DbSource ConnectionRef="ist2jwConnectionString (Settings)" DbObjectName="ist2jw.dbo.tblUsers" DbObjectType="Table" GenerateShortCommands="true" GeneratorSourceName="AverageSchedules" Modifier="Public" Name="AverageSchedules" QueryType="Scalar" ScalarCallRetval="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy" UserSourceName="AverageSchedules">
-                <SelectCommand>
-                  <DbCommand CommandType="Text" ModifiedByUser="true">
-                    <CommandText>SELECT        tblUsers.UserID, tblUsers.Name, tblUsers.Surname,
-                             (SELECT        AVG(UserCount) AS Expr1
-                               FROM            (SELECT        COUNT(*) AS UserCount
-                                                         FROM            Schedule
-                                                         GROUP BY UserID) AS Counts) AS OverallAverageSchedules
-FROM            tblUsers INNER JOIN
-                         Schedule AS Schedule_1 ON tblUsers.UserID = Schedule_1.UserID
-GROUP BY tblUsers.UserID, tblUsers.Name, tblUsers.Surname</CommandText>
-                    <Parameters />
-                  </DbCommand>
-                </SelectCommand>
-              </DbSource>
               <DbSource ConnectionRef="ist2jwConnectionString (Settings)" DbObjectName="ist2jw.dbo.Schedule" DbObjectType="Table" GenerateMethods="Get" GenerateShortCommands="true" GeneratorGetMethodName="FindScheduleID" GetMethodModifier="Public" GetMethodName="FindScheduleID" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="FindScheduleID" UserSourceName="FindScheduleID">
                 <SelectCommand>
                   <DbCommand CommandType="Text" ModifiedByUser="true">
@@ -513,6 +498,37 @@ WHERE  (Schedule.UserID = @CurrentUserId) AND ( YEAR(Appointment.AppDate) = @Yea
             <Mappings>
               <Mapping SourceColumn="UserID" DataSetColumn="UserID" />
               <Mapping SourceColumn="Schedules" DataSetColumn="Schedules" />
+            </Mappings>
+            <Sources>
+              <DbSource ConnectionRef="ist2jwConnectionString (Settings)" DbObjectType="Unknown" FillMethodModifier="Public" FillMethodName="FillAverage" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetAverage" GeneratorSourceName="FillAverage" GetMethodModifier="Public" GetMethodName="GetAverage" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetAverage" UserSourceName="FillAverage">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>Select Avg(Schedule) as [Average Schedules] from dbo.Schedule </CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </Sources>
+          </TableAdapter>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="DataTable1TableAdapter" GeneratorDataComponentClassName="DataTable1TableAdapter" Name="DataTable1" UserDataComponentName="DataTable1TableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="ist2jwConnectionString (Settings)" DbObjectType="Unknown" FillMethodModifier="Public" FillMethodName="FillAverage" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetAverage" GeneratorSourceName="FillAverage" GetMethodModifier="Public" GetMethodName="GetAverage" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetAverage" UserSourceName="FillAverage">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>SELECT 
+    COUNT(Schedule.ScheduleID) AS TotalSchedules,
+    COUNT(DISTINCT Schedule.UserID) AS UsersWithSchedules,
+    COUNT(Schedule.ScheduleID) * 1.0 / COUNT(DISTINCT Schedule.UserID) AS AverageSchedulesPerUser
+FROM Schedule Schedule;</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="TotalSchedules" DataSetColumn="TotalSchedules" />
+              <Mapping SourceColumn="UsersWithSchedules" DataSetColumn="UsersWithSchedules" />
+              <Mapping SourceColumn="AverageSchedulesPerUser" DataSetColumn="AverageSchedulesPerUser" />
             </Mappings>
             <Sources />
           </TableAdapter>
@@ -723,6 +739,15 @@ WHERE  (Schedule.UserID = @CurrentUserId) AND ( YEAR(Appointment.AppDate) = @Yea
             </xs:sequence>
           </xs:complexType>
         </xs:element>
+        <xs:element name="DataTable1" msprop:Generator_RowEvHandlerName="DataTable1RowChangeEventHandler" msprop:Generator_RowDeletedName="DataTable1RowDeleted" msprop:Generator_RowDeletingName="DataTable1RowDeleting" msprop:Generator_RowEvArgName="DataTable1RowChangeEvent" msprop:Generator_TablePropName="DataTable1" msprop:Generator_RowChangedName="DataTable1RowChanged" msprop:Generator_RowChangingName="DataTable1RowChanging" msprop:Generator_TableClassName="DataTable1DataTable" msprop:Generator_RowClassName="DataTable1Row" msprop:Generator_TableVarName="tableDataTable1" msprop:Generator_UserTableName="DataTable1">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="TotalSchedules" msdata:ReadOnly="true" msprop:Generator_ColumnPropNameInRow="TotalSchedules" msprop:Generator_ColumnPropNameInTable="TotalSchedulesColumn" msprop:Generator_ColumnVarNameInTable="columnTotalSchedules" msprop:Generator_UserColumnName="TotalSchedules" type="xs:int" minOccurs="0" />
+              <xs:element name="UsersWithSchedules" msdata:ReadOnly="true" msprop:Generator_ColumnPropNameInRow="UsersWithSchedules" msprop:Generator_ColumnPropNameInTable="UsersWithSchedulesColumn" msprop:Generator_ColumnVarNameInTable="columnUsersWithSchedules" msprop:Generator_UserColumnName="UsersWithSchedules" type="xs:int" minOccurs="0" />
+              <xs:element name="AverageSchedulesPerUser" msdata:ReadOnly="true" msprop:Generator_ColumnPropNameInRow="AverageSchedulesPerUser" msprop:Generator_ColumnPropNameInTable="AverageSchedulesPerUserColumn" msprop:Generator_ColumnVarNameInTable="columnAverageSchedulesPerUser" msprop:Generator_UserColumnName="AverageSchedulesPerUser" type="xs:decimal" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
       </xs:choice>
     </xs:complexType>
     <xs:unique name="Constraint1" msdata:PrimaryKey="true">
@@ -753,14 +778,14 @@ WHERE  (Schedule.UserID = @CurrentUserId) AND ( YEAR(Appointment.AppDate) = @Yea
   </xs:element>
   <xs:annotation>
     <xs:appinfo>
-      <msdata:Relationship name="FK_Schedule_Appointment" msdata:parent="Appointment" msdata:child="Schedule" msdata:parentkey="AppID" msdata:childkey="AppID" msprop:Generator_UserParentTable="Appointment" msprop:Generator_UserChildTable="Schedule" msprop:Generator_RelationVarName="relationFK_Schedule_Appointment" msprop:Generator_ChildPropName="GetScheduleRows" msprop:Generator_ParentPropName="AppointmentRow" msprop:Generator_UserRelationName="FK_Schedule_Appointment" />
-      <msdata:Relationship name="FK_Schedule_tblUsers" msdata:parent="tblUsers" msdata:child="Schedule" msdata:parentkey="UserID" msdata:childkey="UserID" msprop:Generator_UserParentTable="tblUsers" msprop:Generator_UserChildTable="Schedule" msprop:Generator_RelationVarName="relationFK_Schedule_tblUsers" msprop:Generator_ChildPropName="GetScheduleRows" msprop:Generator_UserRelationName="FK_Schedule_tblUsers" msprop:Generator_ParentPropName="tblUsersRow" />
-      <msdata:Relationship name="FK_TblBloodInventory_Appointment" msdata:parent="Appointment" msdata:child="TblBloodInventory" msdata:parentkey="AppID" msdata:childkey="AppID" msprop:Generator_UserParentTable="Appointment" msprop:Generator_UserChildTable="TblBloodInventory" msprop:Generator_RelationVarName="relationFK_TblBloodInventory_Appointment" msprop:Generator_ChildPropName="GetTblBloodInventoryRows" msprop:Generator_ParentPropName="AppointmentRow" msprop:Generator_UserRelationName="FK_TblBloodInventory_Appointment" />
-      <msdata:Relationship name="FK_TblBloodInventory_tblUsers" msdata:parent="tblUsers" msdata:child="TblBloodInventory" msdata:parentkey="UserID" msdata:childkey="UserID" msprop:Generator_UserParentTable="tblUsers" msprop:Generator_UserChildTable="TblBloodInventory" msprop:Generator_RelationVarName="relationFK_TblBloodInventory_tblUsers" msprop:Generator_ChildPropName="GetTblBloodInventoryRows" msprop:Generator_UserRelationName="FK_TblBloodInventory_tblUsers" msprop:Generator_ParentPropName="tblUsersRow" />
-      <msdata:Relationship name="FK_TblBloodInventory_Appointment1" msdata:parent="tblUserSchedule" msdata:child="TblBloodInventory" msdata:parentkey="AppID" msdata:childkey="AppID" msprop:Generator_UserParentTable="tblUserSchedule" msprop:Generator_UserChildTable="TblBloodInventory" msprop:Generator_RelationVarName="relationFK_TblBloodInventory_Appointment1" msprop:Generator_ChildPropName="GetTblBloodInventoryRows" msprop:Generator_UserRelationName="FK_TblBloodInventory_Appointment1" msprop:Generator_ParentPropName="tblUserScheduleRow" />
-      <msdata:Relationship name="FK_Schedule_Appointment1" msdata:parent="tblUserSchedule" msdata:child="Schedule" msdata:parentkey="AppID" msdata:childkey="AppID" msprop:Generator_UserParentTable="tblUserSchedule" msprop:Generator_UserChildTable="Schedule" msprop:Generator_RelationVarName="relationFK_Schedule_Appointment1" msprop:Generator_ChildPropName="GetScheduleRows" msprop:Generator_UserRelationName="FK_Schedule_Appointment1" msprop:Generator_ParentPropName="tblUserScheduleRow" />
-      <msdata:Relationship name="FK_TblBloodInventory_tblUsers1" msdata:parent="tblTotalSchedule" msdata:child="TblBloodInventory" msdata:parentkey="UserID" msdata:childkey="UserID" msprop:Generator_UserParentTable="tblTotalSchedule" msprop:Generator_UserChildTable="TblBloodInventory" msprop:Generator_RelationVarName="relationFK_TblBloodInventory_tblUsers1" msprop:Generator_ChildPropName="GetTblBloodInventoryRows" msprop:Generator_UserRelationName="FK_TblBloodInventory_tblUsers1" msprop:Generator_ParentPropName="tblTotalScheduleRow" />
-      <msdata:Relationship name="FK_Schedule_tblUsers1" msdata:parent="tblTotalSchedule" msdata:child="Schedule" msdata:parentkey="UserID" msdata:childkey="UserID" msprop:Generator_UserParentTable="tblTotalSchedule" msprop:Generator_UserChildTable="Schedule" msprop:Generator_RelationVarName="relationFK_Schedule_tblUsers1" msprop:Generator_ChildPropName="GetScheduleRows" msprop:Generator_UserRelationName="FK_Schedule_tblUsers1" msprop:Generator_ParentPropName="tblTotalScheduleRow" />
+      <msdata:Relationship name="FK_Schedule_Appointment" msdata:parent="Appointment" msdata:child="Schedule" msdata:parentkey="AppID" msdata:childkey="AppID" msprop:Generator_UserParentTable="Appointment" msprop:Generator_UserChildTable="Schedule" msprop:Generator_RelationVarName="relationFK_Schedule_Appointment" msprop:Generator_ChildPropName="GetScheduleRows" msprop:Generator_UserRelationName="FK_Schedule_Appointment" msprop:Generator_ParentPropName="AppointmentRow" />
+      <msdata:Relationship name="FK_Schedule_tblUsers" msdata:parent="tblUsers" msdata:child="Schedule" msdata:parentkey="UserID" msdata:childkey="UserID" msprop:Generator_UserParentTable="tblUsers" msprop:Generator_UserChildTable="Schedule" msprop:Generator_RelationVarName="relationFK_Schedule_tblUsers" msprop:Generator_ChildPropName="GetScheduleRows" msprop:Generator_ParentPropName="tblUsersRow" msprop:Generator_UserRelationName="FK_Schedule_tblUsers" />
+      <msdata:Relationship name="FK_TblBloodInventory_Appointment" msdata:parent="Appointment" msdata:child="TblBloodInventory" msdata:parentkey="AppID" msdata:childkey="AppID" msprop:Generator_UserParentTable="Appointment" msprop:Generator_UserChildTable="TblBloodInventory" msprop:Generator_RelationVarName="relationFK_TblBloodInventory_Appointment" msprop:Generator_ChildPropName="GetTblBloodInventoryRows" msprop:Generator_UserRelationName="FK_TblBloodInventory_Appointment" msprop:Generator_ParentPropName="AppointmentRow" />
+      <msdata:Relationship name="FK_TblBloodInventory_tblUsers" msdata:parent="tblUsers" msdata:child="TblBloodInventory" msdata:parentkey="UserID" msdata:childkey="UserID" msprop:Generator_UserParentTable="tblUsers" msprop:Generator_UserChildTable="TblBloodInventory" msprop:Generator_RelationVarName="relationFK_TblBloodInventory_tblUsers" msprop:Generator_ChildPropName="GetTblBloodInventoryRows" msprop:Generator_ParentPropName="tblUsersRow" msprop:Generator_UserRelationName="FK_TblBloodInventory_tblUsers" />
+      <msdata:Relationship name="FK_TblBloodInventory_Appointment1" msdata:parent="tblUserSchedule" msdata:child="TblBloodInventory" msdata:parentkey="AppID" msdata:childkey="AppID" msprop:Generator_UserParentTable="tblUserSchedule" msprop:Generator_UserChildTable="TblBloodInventory" msprop:Generator_RelationVarName="relationFK_TblBloodInventory_Appointment1" msprop:Generator_ChildPropName="GetTblBloodInventoryRows" msprop:Generator_ParentPropName="tblUserScheduleRow" msprop:Generator_UserRelationName="FK_TblBloodInventory_Appointment1" />
+      <msdata:Relationship name="FK_Schedule_Appointment1" msdata:parent="tblUserSchedule" msdata:child="Schedule" msdata:parentkey="AppID" msdata:childkey="AppID" msprop:Generator_UserParentTable="tblUserSchedule" msprop:Generator_UserChildTable="Schedule" msprop:Generator_RelationVarName="relationFK_Schedule_Appointment1" msprop:Generator_ChildPropName="GetScheduleRows" msprop:Generator_ParentPropName="tblUserScheduleRow" msprop:Generator_UserRelationName="FK_Schedule_Appointment1" />
+      <msdata:Relationship name="FK_TblBloodInventory_tblUsers1" msdata:parent="tblTotalSchedule" msdata:child="TblBloodInventory" msdata:parentkey="UserID" msdata:childkey="UserID" msprop:Generator_UserParentTable="tblTotalSchedule" msprop:Generator_UserChildTable="TblBloodInventory" msprop:Generator_RelationVarName="relationFK_TblBloodInventory_tblUsers1" msprop:Generator_ChildPropName="GetTblBloodInventoryRows" msprop:Generator_ParentPropName="tblTotalScheduleRow" msprop:Generator_UserRelationName="FK_TblBloodInventory_tblUsers1" />
+      <msdata:Relationship name="FK_Schedule_tblUsers1" msdata:parent="tblTotalSchedule" msdata:child="Schedule" msdata:parentkey="UserID" msdata:childkey="UserID" msprop:Generator_UserParentTable="tblTotalSchedule" msprop:Generator_UserChildTable="Schedule" msprop:Generator_RelationVarName="relationFK_Schedule_tblUsers1" msprop:Generator_ChildPropName="GetScheduleRows" msprop:Generator_ParentPropName="tblTotalScheduleRow" msprop:Generator_UserRelationName="FK_Schedule_tblUsers1" />
     </xs:appinfo>
   </xs:annotation>
 </xs:schema>
