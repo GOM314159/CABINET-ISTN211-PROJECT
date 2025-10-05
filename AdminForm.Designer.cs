@@ -29,10 +29,10 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea1 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend1 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea2 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend2 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea3 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend3 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea4 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend4 = new System.Windows.Forms.DataVisualization.Charting.Legend();
             this.pnlTopBar = new System.Windows.Forms.Panel();
             this.btnHomepage = new System.Windows.Forms.Button();
             this.btnLogout = new System.Windows.Forms.Button();
@@ -1839,7 +1839,7 @@
             // 
             // btnAverage
             // 
-            this.btnAverage.Location = new System.Drawing.Point(6, 74);
+            this.btnAverage.Location = new System.Drawing.Point(4, 95);
             this.btnAverage.Margin = new System.Windows.Forms.Padding(4);
             this.btnAverage.Name = "btnAverage";
             this.btnAverage.Size = new System.Drawing.Size(184, 52);
@@ -1851,7 +1851,7 @@
             // btnCountSchedules
             // 
             this.btnCountSchedules.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.25F);
-            this.btnCountSchedules.Location = new System.Drawing.Point(4, 26);
+            this.btnCountSchedules.Location = new System.Drawing.Point(4, 47);
             this.btnCountSchedules.Margin = new System.Windows.Forms.Padding(4);
             this.btnCountSchedules.Name = "btnCountSchedules";
             this.btnCountSchedules.Size = new System.Drawing.Size(186, 40);
@@ -1863,9 +1863,10 @@
             // label1
             // 
             this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.25F);
             this.label1.Location = new System.Drawing.Point(3, 9);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(73, 13);
+            this.label1.Size = new System.Drawing.Size(90, 16);
             this.label1.TabIndex = 0;
             this.label1.Text = "Filters/sorting:";
             // 
@@ -2077,10 +2078,10 @@
             // 
             // chtUserSchedule
             // 
-            chartArea1.Name = "ChartArea1";
-            this.chtUserSchedule.ChartAreas.Add(chartArea1);
-            legend1.Name = "No. of schedules";
-            this.chtUserSchedule.Legends.Add(legend1);
+            chartArea3.Name = "ChartArea1";
+            this.chtUserSchedule.ChartAreas.Add(chartArea3);
+            legend3.Name = "No. of schedules";
+            this.chtUserSchedule.Legends.Add(legend3);
             this.chtUserSchedule.Location = new System.Drawing.Point(328, 5);
             this.chtUserSchedule.Margin = new System.Windows.Forms.Padding(2);
             this.chtUserSchedule.Name = "chtUserSchedule";
@@ -2089,10 +2090,10 @@
             // 
             // chtBloodType
             // 
-            chartArea2.Name = "ChartArea1";
-            this.chtBloodType.ChartAreas.Add(chartArea2);
-            legend2.Name = "Legend1";
-            this.chtBloodType.Legends.Add(legend2);
+            chartArea4.Name = "ChartArea1";
+            this.chtBloodType.ChartAreas.Add(chartArea4);
+            legend4.Name = "Legend1";
+            this.chtBloodType.Legends.Add(legend4);
             this.chtBloodType.Location = new System.Drawing.Point(0, 5);
             this.chtBloodType.Margin = new System.Windows.Forms.Padding(2);
             this.chtBloodType.Name = "chtBloodType";
