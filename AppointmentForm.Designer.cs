@@ -150,6 +150,7 @@
             this.btnHelp = new System.Windows.Forms.Button();
             this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
             this.btnClose = new System.Windows.Forms.Button();
+            this.panel5 = new System.Windows.Forms.Panel();
             timeLabel1 = new System.Windows.Forms.Label();
             scheduleIDLabel1 = new System.Windows.Forms.Label();
             userIDLabel = new System.Windows.Forms.Label();
@@ -189,14 +190,16 @@
             this.panel8.SuspendLayout();
             this.groupBox5.SuspendLayout();
             this.tabPage2.SuspendLayout();
+            this.panel5.SuspendLayout();
             this.SuspendLayout();
             // 
             // timeLabel1
             // 
             timeLabel1.AutoSize = true;
-            timeLabel1.Location = new System.Drawing.Point(99, 25);
+            timeLabel1.Location = new System.Drawing.Point(132, 31);
+            timeLabel1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             timeLabel1.Name = "timeLabel1";
-            timeLabel1.Size = new System.Drawing.Size(33, 13);
+            timeLabel1.Size = new System.Drawing.Size(41, 16);
             timeLabel1.TabIndex = 18;
             timeLabel1.Text = "Time:";
             // 
@@ -204,9 +207,10 @@
             // 
             scheduleIDLabel1.AutoSize = true;
             scheduleIDLabel1.Enabled = false;
-            scheduleIDLabel1.Location = new System.Drawing.Point(57, 417);
+            scheduleIDLabel1.Location = new System.Drawing.Point(76, 513);
+            scheduleIDLabel1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             scheduleIDLabel1.Name = "scheduleIDLabel1";
-            scheduleIDLabel1.Size = new System.Drawing.Size(69, 13);
+            scheduleIDLabel1.Size = new System.Drawing.Size(83, 16);
             scheduleIDLabel1.TabIndex = 32;
             scheduleIDLabel1.Text = "Schedule ID:";
             scheduleIDLabel1.Visible = false;
@@ -215,9 +219,10 @@
             // 
             userIDLabel.AutoSize = true;
             userIDLabel.Enabled = false;
-            userIDLabel.Location = new System.Drawing.Point(57, 300);
+            userIDLabel.Location = new System.Drawing.Point(76, 369);
+            userIDLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             userIDLabel.Name = "userIDLabel";
-            userIDLabel.Size = new System.Drawing.Size(46, 13);
+            userIDLabel.Size = new System.Drawing.Size(55, 16);
             userIDLabel.TabIndex = 34;
             userIDLabel.Text = "User ID:";
             userIDLabel.Visible = false;
@@ -226,9 +231,10 @@
             // 
             appIDLabel2.AutoSize = true;
             appIDLabel2.Enabled = false;
-            appIDLabel2.Location = new System.Drawing.Point(57, 401);
+            appIDLabel2.Location = new System.Drawing.Point(76, 494);
+            appIDLabel2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             appIDLabel2.Name = "appIDLabel2";
-            appIDLabel2.Size = new System.Drawing.Size(68, 13);
+            appIDLabel2.Size = new System.Drawing.Size(81, 16);
             appIDLabel2.TabIndex = 36;
             appIDLabel2.Text = "App_Sch ID:";
             appIDLabel2.Visible = false;
@@ -237,9 +243,10 @@
             // 
             attendedLabel1.AutoSize = true;
             attendedLabel1.Enabled = false;
-            attendedLabel1.Location = new System.Drawing.Point(57, 431);
+            attendedLabel1.Location = new System.Drawing.Point(76, 530);
+            attendedLabel1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             attendedLabel1.Name = "attendedLabel1";
-            attendedLabel1.Size = new System.Drawing.Size(53, 13);
+            attendedLabel1.Size = new System.Drawing.Size(64, 16);
             attendedLabel1.TabIndex = 38;
             attendedLabel1.Text = "Attended:";
             attendedLabel1.Visible = false;
@@ -247,27 +254,30 @@
             // scheduleIDLabel
             // 
             scheduleIDLabel.AutoSize = true;
-            scheduleIDLabel.Location = new System.Drawing.Point(516, 33);
+            scheduleIDLabel.Location = new System.Drawing.Point(688, 41);
+            scheduleIDLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             scheduleIDLabel.Name = "scheduleIDLabel";
-            scheduleIDLabel.Size = new System.Drawing.Size(69, 13);
+            scheduleIDLabel.Size = new System.Drawing.Size(83, 16);
             scheduleIDLabel.TabIndex = 22;
             scheduleIDLabel.Text = "Schedule ID:";
             // 
             // timeLabel
             // 
             timeLabel.AutoSize = true;
-            timeLabel.Location = new System.Drawing.Point(70, 64);
+            timeLabel.Location = new System.Drawing.Point(93, 79);
+            timeLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             timeLabel.Name = "timeLabel";
-            timeLabel.Size = new System.Drawing.Size(33, 13);
+            timeLabel.Size = new System.Drawing.Size(41, 16);
             timeLabel.TabIndex = 28;
             timeLabel.Text = "Time:";
             // 
             // appIDLabel1
             // 
             appIDLabel1.AutoSize = true;
-            appIDLabel1.Location = new System.Drawing.Point(61, 334);
+            appIDLabel1.Location = new System.Drawing.Point(81, 411);
+            appIDLabel1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             appIDLabel1.Name = "appIDLabel1";
-            appIDLabel1.Size = new System.Drawing.Size(43, 13);
+            appIDLabel1.Size = new System.Drawing.Size(51, 16);
             appIDLabel1.TabIndex = 14;
             appIDLabel1.Text = "App ID:";
             appIDLabel1.Visible = false;
@@ -275,45 +285,50 @@
             // capacityLabel
             // 
             capacityLabel.AutoSize = true;
-            capacityLabel.Location = new System.Drawing.Point(78, 56);
+            capacityLabel.Location = new System.Drawing.Point(104, 69);
+            capacityLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             capacityLabel.Name = "capacityLabel";
-            capacityLabel.Size = new System.Drawing.Size(51, 13);
+            capacityLabel.Size = new System.Drawing.Size(63, 16);
             capacityLabel.TabIndex = 24;
             capacityLabel.Text = "Capacity:";
             // 
             // venueLabel1
             // 
             venueLabel1.AutoSize = true;
-            venueLabel1.Location = new System.Drawing.Point(91, 83);
+            venueLabel1.Location = new System.Drawing.Point(121, 102);
+            venueLabel1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             venueLabel1.Name = "venueLabel1";
-            venueLabel1.Size = new System.Drawing.Size(41, 13);
+            venueLabel1.Size = new System.Drawing.Size(49, 16);
             venueLabel1.TabIndex = 26;
             venueLabel1.Text = "Venue:";
             // 
             // venueLabel
             // 
             venueLabel.AutoSize = true;
-            venueLabel.Location = new System.Drawing.Point(63, 93);
+            venueLabel.Location = new System.Drawing.Point(84, 114);
+            venueLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             venueLabel.Name = "venueLabel";
-            venueLabel.Size = new System.Drawing.Size(41, 13);
+            venueLabel.Size = new System.Drawing.Size(49, 16);
             venueLabel.TabIndex = 34;
             venueLabel.Text = "Venue:";
             // 
             // attendedLabel
             // 
             attendedLabel.AutoSize = true;
-            attendedLabel.Location = new System.Drawing.Point(52, 36);
+            attendedLabel.Location = new System.Drawing.Point(69, 44);
+            attendedLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             attendedLabel.Name = "attendedLabel";
-            attendedLabel.Size = new System.Drawing.Size(53, 13);
+            attendedLabel.Size = new System.Drawing.Size(64, 16);
             attendedLabel.TabIndex = 36;
             attendedLabel.Text = "Attended:";
             // 
             // appDateLabel
             // 
             appDateLabel.AutoSize = true;
-            appDateLabel.Location = new System.Drawing.Point(446, 61);
+            appDateLabel.Location = new System.Drawing.Point(595, 75);
+            appDateLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             appDateLabel.Name = "appDateLabel";
-            appDateLabel.Size = new System.Drawing.Size(55, 13);
+            appDateLabel.Size = new System.Drawing.Size(67, 16);
             appDateLabel.TabIndex = 16;
             appDateLabel.Text = "App Date:";
             appDateLabel.Visible = false;
@@ -325,10 +340,10 @@
             this.btnHome.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btnHome.FlatAppearance.BorderSize = 0;
             this.btnHome.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnHome.Location = new System.Drawing.Point(21, 17);
-            this.btnHome.Margin = new System.Windows.Forms.Padding(2);
+            this.btnHome.Location = new System.Drawing.Point(28, 21);
+            this.btnHome.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnHome.Name = "btnHome";
-            this.btnHome.Size = new System.Drawing.Size(92, 40);
+            this.btnHome.Size = new System.Drawing.Size(123, 49);
             this.btnHome.TabIndex = 6;
             this.btnHome.Text = "Home";
             this.btnHome.UseVisualStyleBackColor = false;
@@ -341,9 +356,10 @@
             this.btnFirst2.FlatAppearance.BorderSize = 0;
             this.btnFirst2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnFirst2.ForeColor = System.Drawing.Color.Black;
-            this.btnFirst2.Location = new System.Drawing.Point(61, 24);
+            this.btnFirst2.Location = new System.Drawing.Point(81, 30);
+            this.btnFirst2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnFirst2.Name = "btnFirst2";
-            this.btnFirst2.Size = new System.Drawing.Size(53, 24);
+            this.btnFirst2.Size = new System.Drawing.Size(71, 30);
             this.btnFirst2.TabIndex = 7;
             this.btnFirst2.Text = "First";
             this.btnFirst2.UseVisualStyleBackColor = true;
@@ -357,9 +373,10 @@
             this.panel1.Controls.Add(this.groupBox3);
             this.panel1.Controls.Add(this.groupBox2);
             this.panel1.Controls.Add(this.appointmentDataGridView);
-            this.panel1.Location = new System.Drawing.Point(9, 6);
+            this.panel1.Location = new System.Drawing.Point(12, 7);
+            this.panel1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(764, 465);
+            this.panel1.Size = new System.Drawing.Size(1019, 572);
             this.panel1.TabIndex = 8;
             this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
             // 
@@ -367,10 +384,10 @@
             // 
             this.panelNoApp.BackColor = System.Drawing.Color.White;
             this.panelNoApp.Controls.Add(this.label13);
-            this.panelNoApp.Location = new System.Drawing.Point(3, 9);
-            this.panelNoApp.Margin = new System.Windows.Forms.Padding(2);
+            this.panelNoApp.Location = new System.Drawing.Point(4, 11);
+            this.panelNoApp.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.panelNoApp.Name = "panelNoApp";
-            this.panelNoApp.Size = new System.Drawing.Size(391, 382);
+            this.panelNoApp.Size = new System.Drawing.Size(521, 470);
             this.panelNoApp.TabIndex = 28;
             this.panelNoApp.Visible = false;
             // 
@@ -378,10 +395,9 @@
             // 
             this.label13.AutoSize = true;
             this.label13.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label13.Location = new System.Drawing.Point(2, 5);
-            this.label13.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label13.Location = new System.Drawing.Point(3, 6);
             this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(194, 17);
+            this.label13.Size = new System.Drawing.Size(230, 20);
             this.label13.TabIndex = 0;
             this.label13.Text = "No Available Appointments  :(";
             // 
@@ -393,9 +409,11 @@
             this.groupBox4.Controls.Add(this.label4);
             this.groupBox4.Controls.Add(this.button6);
             this.groupBox4.ForeColor = System.Drawing.Color.White;
-            this.groupBox4.Location = new System.Drawing.Point(399, 4);
+            this.groupBox4.Location = new System.Drawing.Point(532, 5);
+            this.groupBox4.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.groupBox4.Name = "groupBox4";
-            this.groupBox4.Size = new System.Drawing.Size(360, 89);
+            this.groupBox4.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox4.Size = new System.Drawing.Size(480, 110);
             this.groupBox4.TabIndex = 27;
             this.groupBox4.TabStop = false;
             this.groupBox4.Text = "Search";
@@ -409,10 +427,10 @@
             this.btnSearchAvailable.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnSearchAvailable.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.25F);
             this.btnSearchAvailable.ForeColor = System.Drawing.Color.Black;
-            this.btnSearchAvailable.Location = new System.Drawing.Point(77, 46);
-            this.btnSearchAvailable.Margin = new System.Windows.Forms.Padding(2);
+            this.btnSearchAvailable.Location = new System.Drawing.Point(103, 57);
+            this.btnSearchAvailable.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnSearchAvailable.Name = "btnSearchAvailable";
-            this.btnSearchAvailable.Size = new System.Drawing.Size(181, 33);
+            this.btnSearchAvailable.Size = new System.Drawing.Size(241, 41);
             this.btnSearchAvailable.TabIndex = 3;
             this.btnSearchAvailable.Text = "Available Appointments";
             this.btnSearchAvailable.UseVisualStyleBackColor = true;
@@ -420,17 +438,19 @@
             // 
             // searchDateTime
             // 
-            this.searchDateTime.Location = new System.Drawing.Point(77, 17);
+            this.searchDateTime.Location = new System.Drawing.Point(103, 21);
+            this.searchDateTime.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.searchDateTime.Name = "searchDateTime";
-            this.searchDateTime.Size = new System.Drawing.Size(182, 20);
+            this.searchDateTime.Size = new System.Drawing.Size(241, 22);
             this.searchDateTime.TabIndex = 2;
             // 
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(23, 21);
+            this.label4.Location = new System.Drawing.Point(31, 26);
+            this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(30, 13);
+            this.label4.Size = new System.Drawing.Size(36, 16);
             this.label4.TabIndex = 1;
             this.label4.Text = "Date";
             // 
@@ -441,9 +461,10 @@
             this.button6.FlatAppearance.BorderSize = 0;
             this.button6.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button6.ForeColor = System.Drawing.Color.Black;
-            this.button6.Location = new System.Drawing.Point(264, 15);
+            this.button6.Location = new System.Drawing.Point(352, 18);
+            this.button6.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.button6.Name = "button6";
-            this.button6.Size = new System.Drawing.Size(75, 23);
+            this.button6.Size = new System.Drawing.Size(100, 28);
             this.button6.TabIndex = 0;
             this.button6.Text = "Search";
             this.toolTip1.SetToolTip(this.button6, "Search for appointments on the selected date.");
@@ -463,9 +484,11 @@
             this.groupBox3.Controls.Add(this.timeTextBox1);
             this.groupBox3.Controls.Add(timeLabel1);
             this.groupBox3.ForeColor = System.Drawing.Color.White;
-            this.groupBox3.Location = new System.Drawing.Point(399, 99);
+            this.groupBox3.Location = new System.Drawing.Point(532, 122);
+            this.groupBox3.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.groupBox3.Name = "groupBox3";
-            this.groupBox3.Size = new System.Drawing.Size(360, 345);
+            this.groupBox3.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox3.Size = new System.Drawing.Size(480, 425);
             this.groupBox3.TabIndex = 26;
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "Appointment Details";
@@ -474,7 +497,8 @@
             // 
             this.monthCalendar2.DataBindings.Add(new System.Windows.Forms.Binding("SelectionRange", this.appointmentBindingSource, "AppDate", true));
             this.monthCalendar2.Enabled = false;
-            this.monthCalendar2.Location = new System.Drawing.Point(89, 122);
+            this.monthCalendar2.Location = new System.Drawing.Point(119, 150);
+            this.monthCalendar2.Margin = new System.Windows.Forms.Padding(12, 11, 12, 11);
             this.monthCalendar2.Name = "monthCalendar2";
             this.monthCalendar2.TabIndex = 28;
             // 
@@ -496,9 +520,10 @@
             this.btnBookAppointment.FlatAppearance.BorderSize = 0;
             this.btnBookAppointment.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnBookAppointment.ForeColor = System.Drawing.Color.Black;
-            this.btnBookAppointment.Location = new System.Drawing.Point(102, 299);
+            this.btnBookAppointment.Location = new System.Drawing.Point(136, 368);
+            this.btnBookAppointment.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnBookAppointment.Name = "btnBookAppointment";
-            this.btnBookAppointment.Size = new System.Drawing.Size(196, 39);
+            this.btnBookAppointment.Size = new System.Drawing.Size(261, 48);
             this.btnBookAppointment.TabIndex = 3;
             this.btnBookAppointment.Text = "Book My Appointment";
             this.toolTip1.SetToolTip(this.btnBookAppointment, "Book an appointment from the table.\r\n");
@@ -508,30 +533,33 @@
             // capacityTextBox
             // 
             this.capacityTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.appointmentBindingSource, "Capacity", true));
-            this.capacityTextBox.Location = new System.Drawing.Point(154, 53);
+            this.capacityTextBox.Location = new System.Drawing.Point(205, 65);
+            this.capacityTextBox.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.capacityTextBox.Name = "capacityTextBox";
             this.capacityTextBox.ReadOnly = true;
-            this.capacityTextBox.Size = new System.Drawing.Size(133, 20);
+            this.capacityTextBox.Size = new System.Drawing.Size(176, 22);
             this.capacityTextBox.TabIndex = 25;
             this.capacityTextBox.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
             // venueTextBox1
             // 
             this.venueTextBox1.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.appointmentBindingSource, "Venue", true));
-            this.venueTextBox1.Location = new System.Drawing.Point(154, 80);
+            this.venueTextBox1.Location = new System.Drawing.Point(205, 98);
+            this.venueTextBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.venueTextBox1.Name = "venueTextBox1";
             this.venueTextBox1.ReadOnly = true;
-            this.venueTextBox1.Size = new System.Drawing.Size(133, 20);
+            this.venueTextBox1.Size = new System.Drawing.Size(176, 22);
             this.venueTextBox1.TabIndex = 27;
             this.venueTextBox1.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
             // timeTextBox1
             // 
             this.timeTextBox1.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.appointmentBindingSource, "Time", true));
-            this.timeTextBox1.Location = new System.Drawing.Point(154, 22);
+            this.timeTextBox1.Location = new System.Drawing.Point(205, 27);
+            this.timeTextBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.timeTextBox1.Name = "timeTextBox1";
             this.timeTextBox1.ReadOnly = true;
-            this.timeTextBox1.Size = new System.Drawing.Size(133, 20);
+            this.timeTextBox1.Size = new System.Drawing.Size(176, 22);
             this.timeTextBox1.TabIndex = 19;
             this.timeTextBox1.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
@@ -543,9 +571,11 @@
             this.groupBox2.Controls.Add(this.btnPrev1);
             this.groupBox2.Controls.Add(this.btnFirst1);
             this.groupBox2.ForeColor = System.Drawing.Color.White;
-            this.groupBox2.Location = new System.Drawing.Point(3, 392);
+            this.groupBox2.Location = new System.Drawing.Point(4, 482);
+            this.groupBox2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(390, 52);
+            this.groupBox2.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox2.Size = new System.Drawing.Size(520, 64);
             this.groupBox2.TabIndex = 25;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Navigation";
@@ -557,10 +587,10 @@
             this.btnNext1.FlatAppearance.BorderSize = 0;
             this.btnNext1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnNext1.ForeColor = System.Drawing.Color.Black;
-            this.btnNext1.Location = new System.Drawing.Point(199, 16);
-            this.btnNext1.Margin = new System.Windows.Forms.Padding(2);
+            this.btnNext1.Location = new System.Drawing.Point(265, 20);
+            this.btnNext1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnNext1.Name = "btnNext1";
-            this.btnNext1.Size = new System.Drawing.Size(58, 26);
+            this.btnNext1.Size = new System.Drawing.Size(77, 32);
             this.btnNext1.TabIndex = 28;
             this.btnNext1.Text = "Next";
             this.btnNext1.UseVisualStyleBackColor = true;
@@ -573,9 +603,10 @@
             this.btnLast1.FlatAppearance.BorderSize = 0;
             this.btnLast1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnLast1.ForeColor = System.Drawing.Color.Black;
-            this.btnLast1.Location = new System.Drawing.Point(262, 16);
+            this.btnLast1.Location = new System.Drawing.Point(349, 20);
+            this.btnLast1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnLast1.Name = "btnLast1";
-            this.btnLast1.Size = new System.Drawing.Size(58, 26);
+            this.btnLast1.Size = new System.Drawing.Size(77, 32);
             this.btnLast1.TabIndex = 27;
             this.btnLast1.Text = "Last";
             this.btnLast1.UseVisualStyleBackColor = true;
@@ -588,9 +619,10 @@
             this.btnPrev1.FlatAppearance.BorderSize = 0;
             this.btnPrev1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnPrev1.ForeColor = System.Drawing.Color.Black;
-            this.btnPrev1.Location = new System.Drawing.Point(130, 16);
+            this.btnPrev1.Location = new System.Drawing.Point(173, 20);
+            this.btnPrev1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnPrev1.Name = "btnPrev1";
-            this.btnPrev1.Size = new System.Drawing.Size(61, 26);
+            this.btnPrev1.Size = new System.Drawing.Size(81, 32);
             this.btnPrev1.TabIndex = 26;
             this.btnPrev1.Text = "Prev";
             this.btnPrev1.UseVisualStyleBackColor = true;
@@ -603,9 +635,10 @@
             this.btnFirst1.FlatAppearance.BorderSize = 0;
             this.btnFirst1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnFirst1.ForeColor = System.Drawing.Color.Black;
-            this.btnFirst1.Location = new System.Drawing.Point(64, 16);
+            this.btnFirst1.Location = new System.Drawing.Point(85, 20);
+            this.btnFirst1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnFirst1.Name = "btnFirst1";
-            this.btnFirst1.Size = new System.Drawing.Size(60, 26);
+            this.btnFirst1.Size = new System.Drawing.Size(80, 32);
             this.btnFirst1.TabIndex = 25;
             this.btnFirst1.Text = "First";
             this.btnFirst1.UseVisualStyleBackColor = true;
@@ -625,12 +658,13 @@
             this.dataGridViewTextBoxColumn4,
             this.dataGridViewTextBoxColumn5});
             this.appointmentDataGridView.DataSource = this.appointmentBindingSource;
-            this.appointmentDataGridView.Location = new System.Drawing.Point(3, 9);
+            this.appointmentDataGridView.Location = new System.Drawing.Point(4, 11);
+            this.appointmentDataGridView.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.appointmentDataGridView.Name = "appointmentDataGridView";
             this.appointmentDataGridView.ReadOnly = true;
             this.appointmentDataGridView.RowHeadersWidth = 51;
             this.appointmentDataGridView.RowTemplate.Height = 24;
-            this.appointmentDataGridView.Size = new System.Drawing.Size(390, 382);
+            this.appointmentDataGridView.Size = new System.Drawing.Size(520, 470);
             this.appointmentDataGridView.TabIndex = 14;
             // 
             // dataGridViewTextBoxColumn1
@@ -642,6 +676,7 @@
             this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
             this.dataGridViewTextBoxColumn1.ReadOnly = true;
             this.dataGridViewTextBoxColumn1.Visible = false;
+            this.dataGridViewTextBoxColumn1.Width = 125;
             // 
             // dataGridViewTextBoxColumn2
             // 
@@ -682,12 +717,12 @@
             // appIDTextBox1
             // 
             this.appIDTextBox1.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.appointmentBindingSource, "AppID", true));
-            this.appIDTextBox1.Location = new System.Drawing.Point(132, 328);
+            this.appIDTextBox1.Location = new System.Drawing.Point(385, 34);
+            this.appIDTextBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.appIDTextBox1.Name = "appIDTextBox1";
             this.appIDTextBox1.ReadOnly = true;
-            this.appIDTextBox1.Size = new System.Drawing.Size(104, 20);
+            this.appIDTextBox1.Size = new System.Drawing.Size(277, 22);
             this.appIDTextBox1.TabIndex = 15;
-            this.appIDTextBox1.Visible = false;
             this.appIDTextBox1.TextChanged += new System.EventHandler(this.appIDTextBox1_TextChanged);
             // 
             // panel2
@@ -699,9 +734,10 @@
             this.panel2.Controls.Add(scheduleIDLabel);
             this.panel2.Controls.Add(this.scheduleIDTextBox1);
             this.panel2.Controls.Add(this.groupBox1);
-            this.panel2.Location = new System.Drawing.Point(6, 10);
+            this.panel2.Location = new System.Drawing.Point(8, 12);
+            this.panel2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(741, 450);
+            this.panel2.Size = new System.Drawing.Size(988, 554);
             this.panel2.TabIndex = 9;
             this.panel2.Paint += new System.Windows.Forms.PaintEventHandler(this.panel2_Paint);
             // 
@@ -711,9 +747,11 @@
             this.groupBox10.Controls.Add(this.searchScheduleDate);
             this.groupBox10.Controls.Add(this.label7);
             this.groupBox10.ForeColor = System.Drawing.Color.White;
-            this.groupBox10.Location = new System.Drawing.Point(393, 0);
+            this.groupBox10.Location = new System.Drawing.Point(524, 0);
+            this.groupBox10.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.groupBox10.Name = "groupBox10";
-            this.groupBox10.Size = new System.Drawing.Size(340, 60);
+            this.groupBox10.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox10.Size = new System.Drawing.Size(453, 74);
             this.groupBox10.TabIndex = 35;
             this.groupBox10.TabStop = false;
             this.groupBox10.Text = "Search";
@@ -725,9 +763,10 @@
             this.button10.FlatAppearance.BorderSize = 0;
             this.button10.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button10.ForeColor = System.Drawing.Color.Black;
-            this.button10.Location = new System.Drawing.Point(252, 20);
+            this.button10.Location = new System.Drawing.Point(336, 25);
+            this.button10.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.button10.Name = "button10";
-            this.button10.Size = new System.Drawing.Size(75, 23);
+            this.button10.Size = new System.Drawing.Size(100, 28);
             this.button10.TabIndex = 2;
             this.button10.Text = "Search";
             this.toolTip1.SetToolTip(this.button10, "Search for yout appointments on the selected date.");
@@ -736,17 +775,19 @@
             // 
             // searchScheduleDate
             // 
-            this.searchScheduleDate.Location = new System.Drawing.Point(62, 21);
+            this.searchScheduleDate.Location = new System.Drawing.Point(83, 26);
+            this.searchScheduleDate.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.searchScheduleDate.Name = "searchScheduleDate";
-            this.searchScheduleDate.Size = new System.Drawing.Size(185, 20);
+            this.searchScheduleDate.Size = new System.Drawing.Size(245, 22);
             this.searchScheduleDate.TabIndex = 1;
             // 
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(17, 24);
+            this.label7.Location = new System.Drawing.Point(23, 30);
+            this.label7.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(30, 13);
+            this.label7.Size = new System.Drawing.Size(36, 16);
             this.label7.TabIndex = 0;
             this.label7.Text = "Date";
             // 
@@ -765,12 +806,13 @@
             this.dataGridViewTextBoxColumn10,
             this.dataGridViewCheckBoxColumn1});
             this.tblUserScheduleDataGridView.DataSource = this.tblUserScheduleBindingSource;
-            this.tblUserScheduleDataGridView.Location = new System.Drawing.Point(3, 3);
+            this.tblUserScheduleDataGridView.Location = new System.Drawing.Point(4, 4);
+            this.tblUserScheduleDataGridView.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.tblUserScheduleDataGridView.Name = "tblUserScheduleDataGridView";
             this.tblUserScheduleDataGridView.ReadOnly = true;
             this.tblUserScheduleDataGridView.RowHeadersWidth = 51;
             this.tblUserScheduleDataGridView.RowTemplate.Height = 24;
-            this.tblUserScheduleDataGridView.Size = new System.Drawing.Size(384, 363);
+            this.tblUserScheduleDataGridView.Size = new System.Drawing.Size(512, 447);
             this.tblUserScheduleDataGridView.TabIndex = 10;
             this.tblUserScheduleDataGridView.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.tblUserScheduleDataGridView_CellContentClick);
             // 
@@ -847,9 +889,11 @@
             this.groupBox7.Controls.Add(this.timeTextBox);
             this.groupBox7.Controls.Add(timeLabel);
             this.groupBox7.ForeColor = System.Drawing.Color.White;
-            this.groupBox7.Location = new System.Drawing.Point(393, 70);
+            this.groupBox7.Location = new System.Drawing.Point(524, 86);
+            this.groupBox7.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.groupBox7.Name = "groupBox7";
-            this.groupBox7.Size = new System.Drawing.Size(340, 360);
+            this.groupBox7.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox7.Size = new System.Drawing.Size(453, 443);
             this.groupBox7.TabIndex = 34;
             this.groupBox7.TabStop = false;
             this.groupBox7.Text = "Schedule Details";
@@ -859,7 +903,8 @@
             // 
             this.monthCalendar1.DataBindings.Add(new System.Windows.Forms.Binding("SelectionRange", this.tblUserScheduleBindingSource, "AppDate", true, System.Windows.Forms.DataSourceUpdateMode.OnValidation, null, "d"));
             this.monthCalendar1.Enabled = false;
-            this.monthCalendar1.Location = new System.Drawing.Point(83, 128);
+            this.monthCalendar1.Location = new System.Drawing.Point(111, 158);
+            this.monthCalendar1.Margin = new System.Windows.Forms.Padding(12, 11, 12, 11);
             this.monthCalendar1.Name = "monthCalendar1";
             this.monthCalendar1.TabIndex = 38;
             // 
@@ -867,9 +912,10 @@
             // 
             this.attendedCheckBox.DataBindings.Add(new System.Windows.Forms.Binding("CheckState", this.tblUserScheduleBindingSource, "Attended", true));
             this.attendedCheckBox.Enabled = false;
-            this.attendedCheckBox.Location = new System.Drawing.Point(128, 28);
+            this.attendedCheckBox.Location = new System.Drawing.Point(171, 34);
+            this.attendedCheckBox.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.attendedCheckBox.Name = "attendedCheckBox";
-            this.attendedCheckBox.Size = new System.Drawing.Size(26, 24);
+            this.attendedCheckBox.Size = new System.Drawing.Size(35, 30);
             this.attendedCheckBox.TabIndex = 37;
             this.attendedCheckBox.UseVisualStyleBackColor = true;
             // 
@@ -877,10 +923,11 @@
             // 
             this.venueTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.tblUserScheduleBindingSource, "Venue", true));
             this.venueTextBox.Enabled = false;
-            this.venueTextBox.Location = new System.Drawing.Point(128, 91);
+            this.venueTextBox.Location = new System.Drawing.Point(171, 112);
+            this.venueTextBox.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.venueTextBox.Name = "venueTextBox";
             this.venueTextBox.ReadOnly = true;
-            this.venueTextBox.Size = new System.Drawing.Size(155, 20);
+            this.venueTextBox.Size = new System.Drawing.Size(205, 22);
             this.venueTextBox.TabIndex = 35;
             this.venueTextBox.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
@@ -888,10 +935,11 @@
             // 
             this.timeTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.tblUserScheduleBindingSource, "Time", true));
             this.timeTextBox.Enabled = false;
-            this.timeTextBox.Location = new System.Drawing.Point(128, 58);
+            this.timeTextBox.Location = new System.Drawing.Point(171, 71);
+            this.timeTextBox.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.timeTextBox.Name = "timeTextBox";
             this.timeTextBox.ReadOnly = true;
-            this.timeTextBox.Size = new System.Drawing.Size(155, 20);
+            this.timeTextBox.Size = new System.Drawing.Size(205, 22);
             this.timeTextBox.TabIndex = 29;
             this.timeTextBox.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
@@ -899,9 +947,10 @@
             // 
             this.scheduleIDTextBox1.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.tblUserScheduleBindingSource, "ScheduleID", true));
             this.scheduleIDTextBox1.Enabled = false;
-            this.scheduleIDTextBox1.Location = new System.Drawing.Point(535, 30);
+            this.scheduleIDTextBox1.Location = new System.Drawing.Point(713, 37);
+            this.scheduleIDTextBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.scheduleIDTextBox1.Name = "scheduleIDTextBox1";
-            this.scheduleIDTextBox1.Size = new System.Drawing.Size(200, 20);
+            this.scheduleIDTextBox1.Size = new System.Drawing.Size(265, 22);
             this.scheduleIDTextBox1.TabIndex = 23;
             this.scheduleIDTextBox1.Visible = false;
             // 
@@ -913,9 +962,11 @@
             this.groupBox1.Controls.Add(this.btnNext2);
             this.groupBox1.Controls.Add(this.btnLast2);
             this.groupBox1.ForeColor = System.Drawing.Color.White;
-            this.groupBox1.Location = new System.Drawing.Point(3, 370);
+            this.groupBox1.Location = new System.Drawing.Point(4, 455);
+            this.groupBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(384, 60);
+            this.groupBox1.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox1.Size = new System.Drawing.Size(512, 74);
             this.groupBox1.TabIndex = 22;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Navigation";
@@ -927,9 +978,10 @@
             this.btnPrev2.FlatAppearance.BorderSize = 0;
             this.btnPrev2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnPrev2.ForeColor = System.Drawing.Color.Black;
-            this.btnPrev2.Location = new System.Drawing.Point(121, 24);
+            this.btnPrev2.Location = new System.Drawing.Point(161, 30);
+            this.btnPrev2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnPrev2.Name = "btnPrev2";
-            this.btnPrev2.Size = new System.Drawing.Size(53, 24);
+            this.btnPrev2.Size = new System.Drawing.Size(71, 30);
             this.btnPrev2.TabIndex = 8;
             this.btnPrev2.Text = "Prev";
             this.btnPrev2.UseVisualStyleBackColor = true;
@@ -942,9 +994,10 @@
             this.btnNext2.FlatAppearance.BorderSize = 0;
             this.btnNext2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnNext2.ForeColor = System.Drawing.Color.Black;
-            this.btnNext2.Location = new System.Drawing.Point(183, 24);
+            this.btnNext2.Location = new System.Drawing.Point(244, 30);
+            this.btnNext2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnNext2.Name = "btnNext2";
-            this.btnNext2.Size = new System.Drawing.Size(53, 24);
+            this.btnNext2.Size = new System.Drawing.Size(71, 30);
             this.btnNext2.TabIndex = 9;
             this.btnNext2.Text = "Next";
             this.btnNext2.UseVisualStyleBackColor = true;
@@ -957,9 +1010,10 @@
             this.btnLast2.FlatAppearance.BorderSize = 0;
             this.btnLast2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnLast2.ForeColor = System.Drawing.Color.Black;
-            this.btnLast2.Location = new System.Drawing.Point(248, 24);
+            this.btnLast2.Location = new System.Drawing.Point(331, 30);
+            this.btnLast2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnLast2.Name = "btnLast2";
-            this.btnLast2.Size = new System.Drawing.Size(53, 24);
+            this.btnLast2.Size = new System.Drawing.Size(71, 30);
             this.btnLast2.TabIndex = 10;
             this.btnLast2.Text = "Last";
             this.btnLast2.UseVisualStyleBackColor = true;
@@ -969,9 +1023,10 @@
             // 
             this.panel3.BackColor = System.Drawing.Color.Transparent;
             this.panel3.Controls.Add(this.groupBox8);
-            this.panel3.Location = new System.Drawing.Point(764, 299);
+            this.panel3.Location = new System.Drawing.Point(1019, 368);
+            this.panel3.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(276, 161);
+            this.panel3.Size = new System.Drawing.Size(368, 198);
             this.panel3.TabIndex = 10;
             this.panel3.Tag = "";
             this.panel3.Paint += new System.Windows.Forms.PaintEventHandler(this.panel3_Paint);
@@ -983,9 +1038,11 @@
             this.groupBox8.Controls.Add(this.sortVenueBtn);
             this.groupBox8.Controls.Add(this.sortDateBtn);
             this.groupBox8.ForeColor = System.Drawing.Color.White;
-            this.groupBox8.Location = new System.Drawing.Point(18, 7);
+            this.groupBox8.Location = new System.Drawing.Point(24, 9);
+            this.groupBox8.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.groupBox8.Name = "groupBox8";
-            this.groupBox8.Size = new System.Drawing.Size(236, 133);
+            this.groupBox8.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox8.Size = new System.Drawing.Size(315, 164);
             this.groupBox8.TabIndex = 4;
             this.groupBox8.TabStop = false;
             this.groupBox8.Text = "Sort";
@@ -997,9 +1054,10 @@
             this.button7.FlatAppearance.BorderSize = 0;
             this.button7.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button7.ForeColor = System.Drawing.Color.Black;
-            this.button7.Location = new System.Drawing.Point(124, 73);
+            this.button7.Location = new System.Drawing.Point(165, 90);
+            this.button7.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.button7.Name = "button7";
-            this.button7.Size = new System.Drawing.Size(96, 45);
+            this.button7.Size = new System.Drawing.Size(128, 55);
             this.button7.TabIndex = 4;
             this.button7.Text = "Venue (Z-A)";
             this.button7.UseVisualStyleBackColor = true;
@@ -1012,9 +1070,10 @@
             this.sortAttendedBtn.FlatAppearance.BorderSize = 0;
             this.sortAttendedBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.sortAttendedBtn.ForeColor = System.Drawing.Color.Black;
-            this.sortAttendedBtn.Location = new System.Drawing.Point(18, 19);
+            this.sortAttendedBtn.Location = new System.Drawing.Point(24, 23);
+            this.sortAttendedBtn.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.sortAttendedBtn.Name = "sortAttendedBtn";
-            this.sortAttendedBtn.Size = new System.Drawing.Size(98, 48);
+            this.sortAttendedBtn.Size = new System.Drawing.Size(131, 59);
             this.sortAttendedBtn.TabIndex = 2;
             this.sortAttendedBtn.Text = "Last Attended";
             this.sortAttendedBtn.UseVisualStyleBackColor = true;
@@ -1027,9 +1086,10 @@
             this.sortVenueBtn.FlatAppearance.BorderSize = 0;
             this.sortVenueBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.sortVenueBtn.ForeColor = System.Drawing.Color.Black;
-            this.sortVenueBtn.Location = new System.Drawing.Point(18, 73);
+            this.sortVenueBtn.Location = new System.Drawing.Point(24, 90);
+            this.sortVenueBtn.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.sortVenueBtn.Name = "sortVenueBtn";
-            this.sortVenueBtn.Size = new System.Drawing.Size(98, 43);
+            this.sortVenueBtn.Size = new System.Drawing.Size(131, 53);
             this.sortVenueBtn.TabIndex = 3;
             this.sortVenueBtn.Text = "Venue (A-Z)";
             this.sortVenueBtn.UseVisualStyleBackColor = true;
@@ -1042,9 +1102,10 @@
             this.sortDateBtn.FlatAppearance.BorderSize = 0;
             this.sortDateBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.sortDateBtn.ForeColor = System.Drawing.Color.Black;
-            this.sortDateBtn.Location = new System.Drawing.Point(124, 19);
+            this.sortDateBtn.Location = new System.Drawing.Point(165, 23);
+            this.sortDateBtn.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.sortDateBtn.Name = "sortDateBtn";
-            this.sortDateBtn.Size = new System.Drawing.Size(96, 48);
+            this.sortDateBtn.Size = new System.Drawing.Size(128, 59);
             this.sortDateBtn.TabIndex = 0;
             this.sortDateBtn.Text = "Latest Date";
             this.sortDateBtn.UseVisualStyleBackColor = true;
@@ -1056,9 +1117,10 @@
             this.label3.BackColor = System.Drawing.Color.Transparent;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.Color.White;
-            this.label3.Location = new System.Drawing.Point(479, 20);
+            this.label3.Location = new System.Drawing.Point(145, 27);
+            this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(262, 29);
+            this.label3.Size = new System.Drawing.Size(319, 36);
             this.label3.TabIndex = 11;
             this.label3.Text = "MY APPOINTMENTS";
             this.label3.Click += new System.EventHandler(this.label3_Click);
@@ -1067,9 +1129,10 @@
             // 
             this.panel4.BackColor = System.Drawing.Color.Transparent;
             this.panel4.Controls.Add(this.groupBox9);
-            this.panel4.Location = new System.Drawing.Point(764, 10);
+            this.panel4.Location = new System.Drawing.Point(1019, 12);
+            this.panel4.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(276, 283);
+            this.panel4.Size = new System.Drawing.Size(368, 348);
             this.panel4.TabIndex = 13;
             this.panel4.Paint += new System.Windows.Forms.PaintEventHandler(this.panel4_Paint);
             // 
@@ -1086,9 +1149,11 @@
             this.groupBox9.Controls.Add(this.filterScheduleMonthCmbx);
             this.groupBox9.Controls.Add(this.filterScheduleYearCmbx);
             this.groupBox9.ForeColor = System.Drawing.Color.White;
-            this.groupBox9.Location = new System.Drawing.Point(18, 3);
+            this.groupBox9.Location = new System.Drawing.Point(24, 4);
+            this.groupBox9.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.groupBox9.Name = "groupBox9";
-            this.groupBox9.Size = new System.Drawing.Size(233, 257);
+            this.groupBox9.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox9.Size = new System.Drawing.Size(311, 316);
             this.groupBox9.TabIndex = 0;
             this.groupBox9.TabStop = false;
             this.groupBox9.Text = "Filter";
@@ -1100,9 +1165,10 @@
             this.button9.FlatAppearance.BorderSize = 0;
             this.button9.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button9.ForeColor = System.Drawing.Color.Black;
-            this.button9.Location = new System.Drawing.Point(82, 204);
+            this.button9.Location = new System.Drawing.Point(109, 251);
+            this.button9.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.button9.Name = "button9";
-            this.button9.Size = new System.Drawing.Size(120, 37);
+            this.button9.Size = new System.Drawing.Size(160, 46);
             this.button9.TabIndex = 27;
             this.button9.Text = "Apply Filter";
             this.toolTip1.SetToolTip(this.button9, "Select a filter option before applying.");
@@ -1112,9 +1178,10 @@
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(20, 27);
+            this.label6.Location = new System.Drawing.Point(27, 33);
+            this.label6.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(44, 13);
+            this.label6.Size = new System.Drawing.Size(55, 16);
             this.label6.TabIndex = 26;
             this.label6.Text = "Filter By";
             // 
@@ -1126,18 +1193,20 @@
             "Month",
             "Venue",
             "Attended"});
-            this.scheduleFilterCmbx.Location = new System.Drawing.Point(82, 27);
+            this.scheduleFilterCmbx.Location = new System.Drawing.Point(109, 33);
+            this.scheduleFilterCmbx.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.scheduleFilterCmbx.Name = "scheduleFilterCmbx";
-            this.scheduleFilterCmbx.Size = new System.Drawing.Size(121, 21);
+            this.scheduleFilterCmbx.Size = new System.Drawing.Size(160, 24);
             this.scheduleFilterCmbx.TabIndex = 25;
             // 
             // label5
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(22, 135);
+            this.label5.Location = new System.Drawing.Point(29, 166);
+            this.label5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(38, 13);
+            this.label5.Size = new System.Drawing.Size(46, 16);
             this.label5.TabIndex = 24;
             this.label5.Text = "Venue";
             // 
@@ -1145,9 +1214,10 @@
             // 
             this.label9.AutoSize = true;
             this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.Location = new System.Drawing.Point(22, 100);
+            this.label9.Location = new System.Drawing.Point(29, 123);
+            this.label9.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(37, 13);
+            this.label9.Size = new System.Drawing.Size(43, 16);
             this.label9.TabIndex = 23;
             this.label9.Text = "Month";
             this.label9.Click += new System.EventHandler(this.label9_Click);
@@ -1157,18 +1227,20 @@
             this.filterScheduleVenueCmbx.DataSource = this.ist2jwDataSet;
             this.filterScheduleVenueCmbx.DisplayMember = "Appointment.Venue";
             this.filterScheduleVenueCmbx.FormattingEnabled = true;
-            this.filterScheduleVenueCmbx.Location = new System.Drawing.Point(82, 132);
+            this.filterScheduleVenueCmbx.Location = new System.Drawing.Point(109, 162);
+            this.filterScheduleVenueCmbx.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.filterScheduleVenueCmbx.Name = "filterScheduleVenueCmbx";
-            this.filterScheduleVenueCmbx.Size = new System.Drawing.Size(121, 21);
+            this.filterScheduleVenueCmbx.Size = new System.Drawing.Size(160, 24);
             this.filterScheduleVenueCmbx.TabIndex = 22;
             this.filterScheduleVenueCmbx.ValueMember = "Appointment.Venue";
             // 
             // filterScheduleAttendedCheckBox
             // 
             this.filterScheduleAttendedCheckBox.AutoSize = true;
-            this.filterScheduleAttendedCheckBox.Location = new System.Drawing.Point(82, 172);
+            this.filterScheduleAttendedCheckBox.Location = new System.Drawing.Point(109, 212);
+            this.filterScheduleAttendedCheckBox.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.filterScheduleAttendedCheckBox.Name = "filterScheduleAttendedCheckBox";
-            this.filterScheduleAttendedCheckBox.Size = new System.Drawing.Size(68, 17);
+            this.filterScheduleAttendedCheckBox.Size = new System.Drawing.Size(82, 20);
             this.filterScheduleAttendedCheckBox.TabIndex = 21;
             this.filterScheduleAttendedCheckBox.TabStop = true;
             this.filterScheduleAttendedCheckBox.Text = "Attended";
@@ -1178,9 +1250,10 @@
             // 
             this.label8.AutoSize = true;
             this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.Location = new System.Drawing.Point(22, 62);
+            this.label8.Location = new System.Drawing.Point(29, 76);
+            this.label8.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(29, 13);
+            this.label8.Size = new System.Drawing.Size(36, 16);
             this.label8.TabIndex = 20;
             this.label8.Text = "Year";
             this.label8.Click += new System.EventHandler(this.label8_Click);
@@ -1201,9 +1274,10 @@
             "10 October ",
             "11 November",
             "12 December"});
-            this.filterScheduleMonthCmbx.Location = new System.Drawing.Point(82, 97);
+            this.filterScheduleMonthCmbx.Location = new System.Drawing.Point(109, 119);
+            this.filterScheduleMonthCmbx.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.filterScheduleMonthCmbx.Name = "filterScheduleMonthCmbx";
-            this.filterScheduleMonthCmbx.Size = new System.Drawing.Size(121, 21);
+            this.filterScheduleMonthCmbx.Size = new System.Drawing.Size(160, 24);
             this.filterScheduleMonthCmbx.TabIndex = 19;
             this.filterScheduleMonthCmbx.SelectedIndexChanged += new System.EventHandler(this.monthFilterCmbx_SelectedIndexChanged);
             // 
@@ -1214,9 +1288,10 @@
             "2025",
             "2026",
             "2027"});
-            this.filterScheduleYearCmbx.Location = new System.Drawing.Point(82, 62);
+            this.filterScheduleYearCmbx.Location = new System.Drawing.Point(109, 76);
+            this.filterScheduleYearCmbx.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.filterScheduleYearCmbx.Name = "filterScheduleYearCmbx";
-            this.filterScheduleYearCmbx.Size = new System.Drawing.Size(121, 21);
+            this.filterScheduleYearCmbx.Size = new System.Drawing.Size(160, 24);
             this.filterScheduleYearCmbx.TabIndex = 18;
             this.filterScheduleYearCmbx.SelectedIndexChanged += new System.EventHandler(this.yearFilterCmbx_SelectedIndexChanged);
             // 
@@ -1224,10 +1299,11 @@
             // 
             this.tabControl1.Controls.Add(this.tabPage1);
             this.tabControl1.Controls.Add(this.tabPage2);
-            this.tabControl1.Location = new System.Drawing.Point(12, 81);
+            this.tabControl1.Location = new System.Drawing.Point(16, 100);
+            this.tabControl1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
-            this.tabControl1.Size = new System.Drawing.Size(1057, 500);
+            this.tabControl1.Size = new System.Drawing.Size(1409, 615);
             this.tabControl1.TabIndex = 15;
             this.tabControl1.Tag = "";
             // 
@@ -1239,7 +1315,6 @@
             this.tabPage1.Controls.Add(this.panel1);
             this.tabPage1.Controls.Add(this.panel7);
             this.tabPage1.Controls.Add(scheduleIDLabel1);
-            this.tabPage1.Controls.Add(this.appIDTextBox1);
             this.tabPage1.Controls.Add(this.scheduleIDTextBox);
             this.tabPage1.Controls.Add(appIDLabel1);
             this.tabPage1.Controls.Add(userIDLabel);
@@ -1249,10 +1324,11 @@
             this.tabPage1.Controls.Add(attendedLabel1);
             this.tabPage1.Controls.Add(this.attendedScheduleCheckBox);
             this.tabPage1.Controls.Add(this.panel8);
-            this.tabPage1.Location = new System.Drawing.Point(4, 22);
+            this.tabPage1.Location = new System.Drawing.Point(4, 25);
+            this.tabPage1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.tabPage1.Name = "tabPage1";
-            this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage1.Size = new System.Drawing.Size(1049, 474);
+            this.tabPage1.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tabPage1.Size = new System.Drawing.Size(1401, 586);
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "Book Appointment";
             this.tabPage1.Click += new System.EventHandler(this.tabPage1_Click);
@@ -1261,9 +1337,10 @@
             // 
             this.panel7.BackColor = System.Drawing.Color.Transparent;
             this.panel7.Controls.Add(this.groupBox6);
-            this.panel7.Location = new System.Drawing.Point(779, 281);
+            this.panel7.Location = new System.Drawing.Point(1039, 346);
+            this.panel7.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.panel7.Name = "panel7";
-            this.panel7.Size = new System.Drawing.Size(262, 190);
+            this.panel7.Size = new System.Drawing.Size(349, 234);
             this.panel7.TabIndex = 10;
             this.panel7.Paint += new System.Windows.Forms.PaintEventHandler(this.panel7_Paint);
             // 
@@ -1274,9 +1351,11 @@
             this.groupBox6.Controls.Add(this.sortAppointmentDateBtn);
             this.groupBox6.Controls.Add(this.sortAppointmentsVenueBtn);
             this.groupBox6.ForeColor = System.Drawing.Color.White;
-            this.groupBox6.Location = new System.Drawing.Point(10, 9);
+            this.groupBox6.Location = new System.Drawing.Point(13, 11);
+            this.groupBox6.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.groupBox6.Name = "groupBox6";
-            this.groupBox6.Size = new System.Drawing.Size(236, 160);
+            this.groupBox6.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox6.Size = new System.Drawing.Size(315, 197);
             this.groupBox6.TabIndex = 5;
             this.groupBox6.TabStop = false;
             this.groupBox6.Text = "Sort";
@@ -1288,9 +1367,10 @@
             this.button8.FlatAppearance.BorderSize = 0;
             this.button8.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button8.ForeColor = System.Drawing.Color.Black;
-            this.button8.Location = new System.Drawing.Point(48, 67);
+            this.button8.Location = new System.Drawing.Point(64, 82);
+            this.button8.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.button8.Name = "button8";
-            this.button8.Size = new System.Drawing.Size(160, 34);
+            this.button8.Size = new System.Drawing.Size(213, 42);
             this.button8.TabIndex = 7;
             this.button8.Text = "Venue (A - Z)";
             this.button8.UseVisualStyleBackColor = true;
@@ -1303,9 +1383,10 @@
             this.sortAppointmentDateBtn.FlatAppearance.BorderSize = 0;
             this.sortAppointmentDateBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.sortAppointmentDateBtn.ForeColor = System.Drawing.Color.Black;
-            this.sortAppointmentDateBtn.Location = new System.Drawing.Point(48, 23);
+            this.sortAppointmentDateBtn.Location = new System.Drawing.Point(64, 28);
+            this.sortAppointmentDateBtn.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.sortAppointmentDateBtn.Name = "sortAppointmentDateBtn";
-            this.sortAppointmentDateBtn.Size = new System.Drawing.Size(160, 34);
+            this.sortAppointmentDateBtn.Size = new System.Drawing.Size(213, 42);
             this.sortAppointmentDateBtn.TabIndex = 5;
             this.sortAppointmentDateBtn.Text = "Date (Descending)";
             this.sortAppointmentDateBtn.UseVisualStyleBackColor = true;
@@ -1318,9 +1399,10 @@
             this.sortAppointmentsVenueBtn.FlatAppearance.BorderSize = 0;
             this.sortAppointmentsVenueBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.sortAppointmentsVenueBtn.ForeColor = System.Drawing.Color.Black;
-            this.sortAppointmentsVenueBtn.Location = new System.Drawing.Point(48, 107);
+            this.sortAppointmentsVenueBtn.Location = new System.Drawing.Point(64, 132);
+            this.sortAppointmentsVenueBtn.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.sortAppointmentsVenueBtn.Name = "sortAppointmentsVenueBtn";
-            this.sortAppointmentsVenueBtn.Size = new System.Drawing.Size(160, 34);
+            this.sortAppointmentsVenueBtn.Size = new System.Drawing.Size(213, 42);
             this.sortAppointmentsVenueBtn.TabIndex = 6;
             this.sortAppointmentsVenueBtn.Text = "Venue (Z - A)";
             this.sortAppointmentsVenueBtn.UseVisualStyleBackColor = true;
@@ -1330,9 +1412,10 @@
             // 
             this.scheduleIDTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.scheduleBindingSource, "ScheduleID", true));
             this.scheduleIDTextBox.Enabled = false;
-            this.scheduleIDTextBox.Location = new System.Drawing.Point(146, 414);
+            this.scheduleIDTextBox.Location = new System.Drawing.Point(195, 510);
+            this.scheduleIDTextBox.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.scheduleIDTextBox.Name = "scheduleIDTextBox";
-            this.scheduleIDTextBox.Size = new System.Drawing.Size(104, 20);
+            this.scheduleIDTextBox.Size = new System.Drawing.Size(137, 22);
             this.scheduleIDTextBox.TabIndex = 33;
             this.scheduleIDTextBox.Visible = false;
             // 
@@ -1345,9 +1428,10 @@
             // 
             this.userIDScheduleTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.scheduleBindingSource, "UserID", true));
             this.userIDScheduleTextBox.Enabled = false;
-            this.userIDScheduleTextBox.Location = new System.Drawing.Point(146, 297);
+            this.userIDScheduleTextBox.Location = new System.Drawing.Point(195, 366);
+            this.userIDScheduleTextBox.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.userIDScheduleTextBox.Name = "userIDScheduleTextBox";
-            this.userIDScheduleTextBox.Size = new System.Drawing.Size(104, 20);
+            this.userIDScheduleTextBox.Size = new System.Drawing.Size(137, 22);
             this.userIDScheduleTextBox.TabIndex = 35;
             this.userIDScheduleTextBox.Visible = false;
             // 
@@ -1355,9 +1439,10 @@
             // 
             this.appIDScheduleTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.scheduleBindingSource, "AppID", true));
             this.appIDScheduleTextBox.Enabled = false;
-            this.appIDScheduleTextBox.Location = new System.Drawing.Point(146, 398);
+            this.appIDScheduleTextBox.Location = new System.Drawing.Point(195, 490);
+            this.appIDScheduleTextBox.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.appIDScheduleTextBox.Name = "appIDScheduleTextBox";
-            this.appIDScheduleTextBox.Size = new System.Drawing.Size(104, 20);
+            this.appIDScheduleTextBox.Size = new System.Drawing.Size(137, 22);
             this.appIDScheduleTextBox.TabIndex = 37;
             this.appIDScheduleTextBox.Visible = false;
             // 
@@ -1365,9 +1450,10 @@
             // 
             this.attendedScheduleCheckBox.DataBindings.Add(new System.Windows.Forms.Binding("CheckState", this.scheduleBindingSource, "Attended", true));
             this.attendedScheduleCheckBox.Enabled = false;
-            this.attendedScheduleCheckBox.Location = new System.Drawing.Point(146, 426);
+            this.attendedScheduleCheckBox.Location = new System.Drawing.Point(195, 524);
+            this.attendedScheduleCheckBox.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.attendedScheduleCheckBox.Name = "attendedScheduleCheckBox";
-            this.attendedScheduleCheckBox.Size = new System.Drawing.Size(104, 24);
+            this.attendedScheduleCheckBox.Size = new System.Drawing.Size(139, 30);
             this.attendedScheduleCheckBox.TabIndex = 39;
             this.attendedScheduleCheckBox.Text = "checkBox1";
             this.attendedScheduleCheckBox.UseVisualStyleBackColor = true;
@@ -1377,9 +1463,10 @@
             // 
             this.panel8.BackColor = System.Drawing.Color.Transparent;
             this.panel8.Controls.Add(this.groupBox5);
-            this.panel8.Location = new System.Drawing.Point(779, 6);
+            this.panel8.Location = new System.Drawing.Point(1039, 7);
+            this.panel8.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.panel8.Name = "panel8";
-            this.panel8.Size = new System.Drawing.Size(262, 269);
+            this.panel8.Size = new System.Drawing.Size(349, 331);
             this.panel8.TabIndex = 11;
             // 
             // groupBox5
@@ -1397,9 +1484,11 @@
             this.groupBox5.Controls.Add(this.label10);
             this.groupBox5.Controls.Add(this.filterAppointmentsBtn);
             this.groupBox5.ForeColor = System.Drawing.Color.White;
-            this.groupBox5.Location = new System.Drawing.Point(10, 4);
+            this.groupBox5.Location = new System.Drawing.Point(13, 5);
+            this.groupBox5.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.groupBox5.Name = "groupBox5";
-            this.groupBox5.Size = new System.Drawing.Size(236, 236);
+            this.groupBox5.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox5.Size = new System.Drawing.Size(315, 290);
             this.groupBox5.TabIndex = 11;
             this.groupBox5.TabStop = false;
             this.groupBox5.Text = "Filter";
@@ -1412,18 +1501,20 @@
             "Month",
             "Venue",
             "Capacity"});
-            this.filterSelect.Location = new System.Drawing.Point(88, 19);
+            this.filterSelect.Location = new System.Drawing.Point(117, 23);
+            this.filterSelect.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.filterSelect.Name = "filterSelect";
-            this.filterSelect.Size = new System.Drawing.Size(121, 21);
+            this.filterSelect.Size = new System.Drawing.Size(160, 24);
             this.filterSelect.TabIndex = 20;
             // 
             // label2
             // 
             this.label2.AutoSize = true;
             this.label2.ForeColor = System.Drawing.Color.White;
-            this.label2.Location = new System.Drawing.Point(22, 24);
+            this.label2.Location = new System.Drawing.Point(29, 30);
+            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(50, 13);
+            this.label2.Size = new System.Drawing.Size(61, 16);
             this.label2.TabIndex = 19;
             this.label2.Text = "Filter By: ";
             // 
@@ -1434,9 +1525,10 @@
             "2025",
             "2026",
             "2027"});
-            this.filterAppYearCmbx.Location = new System.Drawing.Point(88, 51);
+            this.filterAppYearCmbx.Location = new System.Drawing.Point(117, 63);
+            this.filterAppYearCmbx.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.filterAppYearCmbx.Name = "filterAppYearCmbx";
-            this.filterAppYearCmbx.Size = new System.Drawing.Size(121, 21);
+            this.filterAppYearCmbx.Size = new System.Drawing.Size(160, 24);
             this.filterAppYearCmbx.TabIndex = 18;
             this.filterAppYearCmbx.SelectedIndexChanged += new System.EventHandler(this.filterAppYearCmbx_SelectedIndexChanged);
             // 
@@ -1444,9 +1536,10 @@
             // 
             this.label1.AutoSize = true;
             this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(21, 55);
+            this.label1.Location = new System.Drawing.Point(28, 68);
+            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(29, 13);
+            this.label1.Size = new System.Drawing.Size(36, 16);
             this.label1.TabIndex = 17;
             this.label1.Text = "Year";
             this.label1.Click += new System.EventHandler(this.label1_Click_1);
@@ -1465,9 +1558,10 @@
             "8",
             "9",
             "10"});
-            this.filterAppCapacityCmbx.Location = new System.Drawing.Point(88, 147);
+            this.filterAppCapacityCmbx.Location = new System.Drawing.Point(117, 181);
+            this.filterAppCapacityCmbx.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.filterAppCapacityCmbx.Name = "filterAppCapacityCmbx";
-            this.filterAppCapacityCmbx.Size = new System.Drawing.Size(121, 21);
+            this.filterAppCapacityCmbx.Size = new System.Drawing.Size(160, 24);
             this.filterAppCapacityCmbx.TabIndex = 16;
             this.filterAppCapacityCmbx.SelectedIndexChanged += new System.EventHandler(this.filterAppCapacityCmbx_SelectedIndexChanged);
             // 
@@ -1476,9 +1570,10 @@
             this.filterAppVenueCmbx.DataSource = this.ist2jwDataSet;
             this.filterAppVenueCmbx.DisplayMember = "Appointment.Venue";
             this.filterAppVenueCmbx.FormattingEnabled = true;
-            this.filterAppVenueCmbx.Location = new System.Drawing.Point(88, 116);
+            this.filterAppVenueCmbx.Location = new System.Drawing.Point(117, 143);
+            this.filterAppVenueCmbx.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.filterAppVenueCmbx.Name = "filterAppVenueCmbx";
-            this.filterAppVenueCmbx.Size = new System.Drawing.Size(121, 21);
+            this.filterAppVenueCmbx.Size = new System.Drawing.Size(160, 24);
             this.filterAppVenueCmbx.TabIndex = 15;
             this.filterAppVenueCmbx.ValueMember = "Appointment.Venue";
             this.filterAppVenueCmbx.SelectedIndexChanged += new System.EventHandler(this.filterAppVenueCmbx_SelectedIndexChanged);
@@ -1499,9 +1594,10 @@
             "10 October ",
             "11 November",
             "12 December"});
-            this.filterAppMonthCmbx.Location = new System.Drawing.Point(88, 84);
+            this.filterAppMonthCmbx.Location = new System.Drawing.Point(117, 103);
+            this.filterAppMonthCmbx.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.filterAppMonthCmbx.Name = "filterAppMonthCmbx";
-            this.filterAppMonthCmbx.Size = new System.Drawing.Size(121, 21);
+            this.filterAppMonthCmbx.Size = new System.Drawing.Size(160, 24);
             this.filterAppMonthCmbx.TabIndex = 14;
             this.filterAppMonthCmbx.SelectedIndexChanged += new System.EventHandler(this.filterAppMonthCmbx_SelectedIndexChanged);
             // 
@@ -1510,9 +1606,10 @@
             this.label12.AutoSize = true;
             this.label12.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label12.ForeColor = System.Drawing.Color.White;
-            this.label12.Location = new System.Drawing.Point(21, 151);
+            this.label12.Location = new System.Drawing.Point(28, 186);
+            this.label12.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(48, 13);
+            this.label12.Size = new System.Drawing.Size(60, 16);
             this.label12.TabIndex = 13;
             this.label12.Text = "Capacity";
             this.label12.Click += new System.EventHandler(this.label12_Click);
@@ -1522,9 +1619,10 @@
             this.label11.AutoSize = true;
             this.label11.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label11.ForeColor = System.Drawing.Color.White;
-            this.label11.Location = new System.Drawing.Point(21, 119);
+            this.label11.Location = new System.Drawing.Point(28, 146);
+            this.label11.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(38, 13);
+            this.label11.Size = new System.Drawing.Size(46, 16);
             this.label11.TabIndex = 12;
             this.label11.Text = "Venue";
             this.label11.Click += new System.EventHandler(this.label11_Click);
@@ -1534,9 +1632,10 @@
             this.label10.AutoSize = true;
             this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label10.ForeColor = System.Drawing.Color.White;
-            this.label10.Location = new System.Drawing.Point(21, 86);
+            this.label10.Location = new System.Drawing.Point(28, 106);
+            this.label10.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(37, 13);
+            this.label10.Size = new System.Drawing.Size(43, 16);
             this.label10.TabIndex = 11;
             this.label10.Text = "Month";
             this.label10.Click += new System.EventHandler(this.label10_Click);
@@ -1548,9 +1647,10 @@
             this.filterAppointmentsBtn.FlatAppearance.BorderSize = 0;
             this.filterAppointmentsBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.filterAppointmentsBtn.ForeColor = System.Drawing.Color.Black;
-            this.filterAppointmentsBtn.Location = new System.Drawing.Point(88, 185);
+            this.filterAppointmentsBtn.Location = new System.Drawing.Point(117, 228);
+            this.filterAppointmentsBtn.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.filterAppointmentsBtn.Name = "filterAppointmentsBtn";
-            this.filterAppointmentsBtn.Size = new System.Drawing.Size(120, 33);
+            this.filterAppointmentsBtn.Size = new System.Drawing.Size(160, 41);
             this.filterAppointmentsBtn.TabIndex = 1;
             this.filterAppointmentsBtn.Text = "Apply Filter";
             this.toolTip1.SetToolTip(this.filterAppointmentsBtn, "Select a filter option before applying.");
@@ -1565,10 +1665,11 @@
             this.tabPage2.Controls.Add(this.panel4);
             this.tabPage2.Controls.Add(this.panel3);
             this.tabPage2.Controls.Add(this.panel2);
-            this.tabPage2.Location = new System.Drawing.Point(4, 22);
+            this.tabPage2.Location = new System.Drawing.Point(4, 25);
+            this.tabPage2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.tabPage2.Name = "tabPage2";
-            this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage2.Size = new System.Drawing.Size(1049, 474);
+            this.tabPage2.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tabPage2.Size = new System.Drawing.Size(1401, 586);
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "Appointment History";
             this.tabPage2.Click += new System.EventHandler(this.tabPage2_Click);
@@ -1580,9 +1681,10 @@
             this.button5.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.button5.FlatAppearance.BorderSize = 0;
             this.button5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button5.Location = new System.Drawing.Point(879, 17);
+            this.button5.Location = new System.Drawing.Point(1172, 21);
+            this.button5.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(92, 40);
+            this.button5.Size = new System.Drawing.Size(123, 49);
             this.button5.TabIndex = 16;
             this.button5.Text = "Reset";
             this.button5.UseVisualStyleBackColor = false;
@@ -1613,11 +1715,11 @@
             // appDateTimePicker1
             // 
             this.appDateTimePicker1.DataBindings.Add(new System.Windows.Forms.Binding("Value", this.appointmentBindingSource, "AppDate", true));
-            this.appDateTimePicker1.Location = new System.Drawing.Point(502, 56);
+            this.appDateTimePicker1.Location = new System.Drawing.Point(669, 69);
+            this.appDateTimePicker1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.appDateTimePicker1.Name = "appDateTimePicker1";
-            this.appDateTimePicker1.Size = new System.Drawing.Size(200, 20);
+            this.appDateTimePicker1.Size = new System.Drawing.Size(265, 22);
             this.appDateTimePicker1.TabIndex = 17;
-            this.appDateTimePicker1.Visible = false;
             // 
             // btnHelp
             // 
@@ -1626,10 +1728,10 @@
             this.btnHelp.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btnHelp.FlatAppearance.BorderSize = 0;
             this.btnHelp.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnHelp.Location = new System.Drawing.Point(976, 17);
-            this.btnHelp.Margin = new System.Windows.Forms.Padding(2);
+            this.btnHelp.Location = new System.Drawing.Point(1301, 21);
+            this.btnHelp.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnHelp.Name = "btnHelp";
-            this.btnHelp.Size = new System.Drawing.Size(92, 40);
+            this.btnHelp.Size = new System.Drawing.Size(123, 49);
             this.btnHelp.TabIndex = 18;
             this.btnHelp.Text = "Help";
             this.btnHelp.UseVisualStyleBackColor = false;
@@ -1642,35 +1744,45 @@
             this.btnClose.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btnClose.FlatAppearance.BorderSize = 0;
             this.btnClose.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnClose.Location = new System.Drawing.Point(124, 17);
-            this.btnClose.Margin = new System.Windows.Forms.Padding(2);
+            this.btnClose.Location = new System.Drawing.Point(165, 21);
+            this.btnClose.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnClose.Name = "btnClose";
-            this.btnClose.Size = new System.Drawing.Size(92, 40);
+            this.btnClose.Size = new System.Drawing.Size(123, 49);
             this.btnClose.TabIndex = 19;
             this.btnClose.Text = "Exit";
             this.btnClose.UseVisualStyleBackColor = false;
             this.btnClose.Click += new System.EventHandler(this.btnClose_Click_1);
             // 
+            // panel5
+            // 
+            this.panel5.BackColor = System.Drawing.Color.Transparent;
+            this.panel5.Controls.Add(this.label3);
+            this.panel5.Location = new System.Drawing.Point(366, 12);
+            this.panel5.Name = "panel5";
+            this.panel5.Size = new System.Drawing.Size(595, 100);
+            this.panel5.TabIndex = 20;
+            // 
             // AppointmentForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Black;
             this.BackgroundImage = global::BloodBankSystem.Properties.Resources.MainBackground;
-            this.ClientSize = new System.Drawing.Size(1078, 593);
+            this.ClientSize = new System.Drawing.Size(1437, 730);
+            this.Controls.Add(this.panel5);
             this.Controls.Add(this.btnClose);
             this.Controls.Add(this.btnHelp);
             this.Controls.Add(appDateLabel);
+            this.Controls.Add(this.appIDTextBox1);
             this.Controls.Add(this.appDateTimePicker1);
             this.Controls.Add(this.button5);
-            this.Controls.Add(this.label3);
             this.Controls.Add(this.tabControl1);
             this.Controls.Add(this.btnHome);
             this.Cursor = System.Windows.Forms.Cursors.Default;
             this.DoubleBuffered = true;
             this.ForeColor = System.Drawing.SystemColors.WindowText;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Margin = new System.Windows.Forms.Padding(2);
+            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "AppointmentForm";
             this.Text = "My Appointments";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.AppointmentForm_FormClosing);
@@ -1710,6 +1822,8 @@
             this.groupBox5.ResumeLayout(false);
             this.groupBox5.PerformLayout();
             this.tabPage2.ResumeLayout(false);
+            this.panel5.ResumeLayout(false);
+            this.panel5.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -1823,5 +1937,6 @@
         private System.Windows.Forms.ToolTip toolTip1;
         private System.Windows.Forms.Button btnClose;
         private System.Windows.Forms.Button btnSearchAvailable;
+        private System.Windows.Forms.Panel panel5;
     }
 }
