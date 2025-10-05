@@ -30,10 +30,10 @@
         {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(AdminForm));
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea3 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend3 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea4 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend4 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea1 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend1 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea2 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend2 = new System.Windows.Forms.DataVisualization.Charting.Legend();
             this.pnlTopBar = new System.Windows.Forms.Panel();
             this.btnHomepage = new System.Windows.Forms.Button();
             this.btnLogout = new System.Windows.Forms.Button();
@@ -409,6 +409,10 @@
             // 
             // btnFilterPassed
             // 
+            this.btnFilterPassed.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnFilterPassed.BackgroundImage")));
+            this.btnFilterPassed.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnFilterPassed.FlatAppearance.BorderSize = 0;
+            this.btnFilterPassed.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnFilterPassed.Location = new System.Drawing.Point(8, 166);
             this.btnFilterPassed.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnFilterPassed.Name = "btnFilterPassed";
@@ -420,6 +424,10 @@
             // 
             // btnFilterUpcoming
             // 
+            this.btnFilterUpcoming.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnFilterUpcoming.BackgroundImage")));
+            this.btnFilterUpcoming.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnFilterUpcoming.FlatAppearance.BorderSize = 0;
+            this.btnFilterUpcoming.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnFilterUpcoming.Location = new System.Drawing.Point(8, 124);
             this.btnFilterUpcoming.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnFilterUpcoming.Name = "btnFilterUpcoming";
@@ -431,6 +439,10 @@
             // 
             // btnCapSortDesc
             // 
+            this.btnCapSortDesc.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnCapSortDesc.BackgroundImage")));
+            this.btnCapSortDesc.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnCapSortDesc.FlatAppearance.BorderSize = 0;
+            this.btnCapSortDesc.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnCapSortDesc.Location = new System.Drawing.Point(8, 82);
             this.btnCapSortDesc.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnCapSortDesc.Name = "btnCapSortDesc";
@@ -442,6 +454,10 @@
             // 
             // btnCapSortAsc
             // 
+            this.btnCapSortAsc.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnCapSortAsc.BackgroundImage")));
+            this.btnCapSortAsc.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnCapSortAsc.FlatAppearance.BorderSize = 0;
+            this.btnCapSortAsc.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnCapSortAsc.Location = new System.Drawing.Point(8, 42);
             this.btnCapSortAsc.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnCapSortAsc.Name = "btnCapSortAsc";
@@ -472,6 +488,10 @@
             // 
             // button16
             // 
+            this.button16.BackgroundImage = global::BloodBankSystem.Properties.Resources.buttonbackRed;
+            this.button16.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.button16.FlatAppearance.BorderSize = 0;
+            this.button16.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button16.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button16.Location = new System.Drawing.Point(68, 4);
             this.button16.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
@@ -496,6 +516,10 @@
             // 
             // btnAppLast
             // 
+            this.btnAppLast.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnAppLast.BackgroundImage")));
+            this.btnAppLast.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnAppLast.FlatAppearance.BorderSize = 0;
+            this.btnAppLast.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnAppLast.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnAppLast.Location = new System.Drawing.Point(581, 2);
             this.btnAppLast.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
@@ -508,6 +532,10 @@
             // 
             // btnAppFirst
             // 
+            this.btnAppFirst.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnAppFirst.BackgroundImage")));
+            this.btnAppFirst.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnAppFirst.FlatAppearance.BorderSize = 0;
+            this.btnAppFirst.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnAppFirst.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnAppFirst.Location = new System.Drawing.Point(4, 2);
             this.btnAppFirst.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
@@ -520,6 +548,10 @@
             // 
             // btnAppPrev
             // 
+            this.btnAppPrev.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnAppPrev.BackgroundImage")));
+            this.btnAppPrev.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnAppPrev.FlatAppearance.BorderSize = 0;
+            this.btnAppPrev.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnAppPrev.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnAppPrev.Location = new System.Drawing.Point(186, 2);
             this.btnAppPrev.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
@@ -532,6 +564,10 @@
             // 
             // btnAppNext
             // 
+            this.btnAppNext.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnAppNext.BackgroundImage")));
+            this.btnAppNext.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnAppNext.FlatAppearance.BorderSize = 0;
+            this.btnAppNext.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnAppNext.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnAppNext.Location = new System.Drawing.Point(452, 2);
             this.btnAppNext.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
@@ -568,6 +604,10 @@
             // 
             // btnStartAppInsert
             // 
+            this.btnStartAppInsert.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnStartAppInsert.BackgroundImage")));
+            this.btnStartAppInsert.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnStartAppInsert.FlatAppearance.BorderSize = 0;
+            this.btnStartAppInsert.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnStartAppInsert.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.25F);
             this.btnStartAppInsert.Location = new System.Drawing.Point(411, 25);
             this.btnStartAppInsert.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
@@ -664,6 +704,10 @@
             // 
             // btnAppDelete
             // 
+            this.btnAppDelete.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnAppDelete.BackgroundImage")));
+            this.btnAppDelete.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnAppDelete.FlatAppearance.BorderSize = 0;
+            this.btnAppDelete.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnAppDelete.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnAppDelete.Location = new System.Drawing.Point(411, 88);
             this.btnAppDelete.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
@@ -676,6 +720,10 @@
             // 
             // btnUpdateApp
             // 
+            this.btnUpdateApp.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnUpdateApp.BackgroundImage")));
+            this.btnUpdateApp.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnUpdateApp.FlatAppearance.BorderSize = 0;
+            this.btnUpdateApp.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnUpdateApp.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnUpdateApp.Location = new System.Drawing.Point(411, 141);
             this.btnUpdateApp.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
@@ -755,6 +803,10 @@
             // 
             // btnRemoveBloodFilters
             // 
+            this.btnRemoveBloodFilters.BackgroundImage = global::BloodBankSystem.Properties.Resources.buttonbackRed;
+            this.btnRemoveBloodFilters.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnRemoveBloodFilters.FlatAppearance.BorderSize = 0;
+            this.btnRemoveBloodFilters.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnRemoveBloodFilters.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnRemoveBloodFilters.Location = new System.Drawing.Point(68, 6);
             this.btnRemoveBloodFilters.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
@@ -781,6 +833,10 @@
             // 
             // btnEarlyExpiry
             // 
+            this.btnEarlyExpiry.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnEarlyExpiry.BackgroundImage")));
+            this.btnEarlyExpiry.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnEarlyExpiry.FlatAppearance.BorderSize = 0;
+            this.btnEarlyExpiry.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnEarlyExpiry.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnEarlyExpiry.Location = new System.Drawing.Point(19, 104);
             this.btnEarlyExpiry.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
@@ -793,6 +849,10 @@
             // 
             // btnLaterExpiry
             // 
+            this.btnLaterExpiry.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnLaterExpiry.BackgroundImage")));
+            this.btnLaterExpiry.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnLaterExpiry.FlatAppearance.BorderSize = 0;
+            this.btnLaterExpiry.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnLaterExpiry.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnLaterExpiry.Location = new System.Drawing.Point(19, 67);
             this.btnLaterExpiry.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
@@ -837,6 +897,10 @@
             // 
             // btnBloodLast
             // 
+            this.btnBloodLast.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnBloodLast.BackgroundImage")));
+            this.btnBloodLast.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnBloodLast.FlatAppearance.BorderSize = 0;
+            this.btnBloodLast.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnBloodLast.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnBloodLast.Location = new System.Drawing.Point(596, 3);
             this.btnBloodLast.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
@@ -849,6 +913,10 @@
             // 
             // btnBloodFirst
             // 
+            this.btnBloodFirst.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnBloodFirst.BackgroundImage")));
+            this.btnBloodFirst.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnBloodFirst.FlatAppearance.BorderSize = 0;
+            this.btnBloodFirst.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnBloodFirst.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnBloodFirst.Location = new System.Drawing.Point(12, 4);
             this.btnBloodFirst.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
@@ -861,6 +929,10 @@
             // 
             // btnBloodPrev
             // 
+            this.btnBloodPrev.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnBloodPrev.BackgroundImage")));
+            this.btnBloodPrev.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnBloodPrev.FlatAppearance.BorderSize = 0;
+            this.btnBloodPrev.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnBloodPrev.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnBloodPrev.Location = new System.Drawing.Point(241, 3);
             this.btnBloodPrev.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
@@ -873,6 +945,10 @@
             // 
             // btnBllodNext
             // 
+            this.btnBllodNext.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnBllodNext.BackgroundImage")));
+            this.btnBllodNext.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnBllodNext.FlatAppearance.BorderSize = 0;
+            this.btnBllodNext.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnBllodNext.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnBllodNext.Location = new System.Drawing.Point(480, 4);
             this.btnBllodNext.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
@@ -962,6 +1038,10 @@
             // 
             // btnBloodDelete
             // 
+            this.btnBloodDelete.BackgroundImage = global::BloodBankSystem.Properties.Resources.buttonbackRed;
+            this.btnBloodDelete.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnBloodDelete.FlatAppearance.BorderSize = 0;
+            this.btnBloodDelete.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnBloodDelete.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnBloodDelete.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.btnBloodDelete.Location = new System.Drawing.Point(272, 96);
@@ -975,6 +1055,10 @@
             // 
             // btnBloodApply
             // 
+            this.btnBloodApply.BackgroundImage = global::BloodBankSystem.Properties.Resources.buttonbackBlue;
+            this.btnBloodApply.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnBloodApply.FlatAppearance.BorderSize = 0;
+            this.btnBloodApply.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnBloodApply.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnBloodApply.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.btnBloodApply.Location = new System.Drawing.Point(272, 143);
@@ -1883,6 +1967,10 @@
             // 
             // btnScheduleFirst
             // 
+            this.btnScheduleFirst.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnScheduleFirst.BackgroundImage")));
+            this.btnScheduleFirst.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnScheduleFirst.FlatAppearance.BorderSize = 0;
+            this.btnScheduleFirst.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnScheduleFirst.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnScheduleFirst.Location = new System.Drawing.Point(5, 4);
             this.btnScheduleFirst.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
@@ -1895,6 +1983,10 @@
             // 
             // btnSchedulePrev
             // 
+            this.btnSchedulePrev.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnSchedulePrev.BackgroundImage")));
+            this.btnSchedulePrev.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnSchedulePrev.FlatAppearance.BorderSize = 0;
+            this.btnSchedulePrev.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnSchedulePrev.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSchedulePrev.Location = new System.Drawing.Point(143, 4);
             this.btnSchedulePrev.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
@@ -1907,6 +1999,10 @@
             // 
             // btnScheduleNext
             // 
+            this.btnScheduleNext.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnScheduleNext.BackgroundImage")));
+            this.btnScheduleNext.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnScheduleNext.FlatAppearance.BorderSize = 0;
+            this.btnScheduleNext.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnScheduleNext.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnScheduleNext.Location = new System.Drawing.Point(290, 4);
             this.btnScheduleNext.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
@@ -1919,6 +2015,10 @@
             // 
             // btnScheduleLast
             // 
+            this.btnScheduleLast.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnScheduleLast.BackgroundImage")));
+            this.btnScheduleLast.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnScheduleLast.FlatAppearance.BorderSize = 0;
+            this.btnScheduleLast.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnScheduleLast.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnScheduleLast.Location = new System.Drawing.Point(407, 4);
             this.btnScheduleLast.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
@@ -1945,6 +2045,10 @@
             // 
             // button1
             // 
+            this.button1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button1.BackgroundImage")));
+            this.button1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.button1.FlatAppearance.BorderSize = 0;
+            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button1.Location = new System.Drawing.Point(62, 267);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(112, 34);
@@ -1955,6 +2059,10 @@
             // 
             // btnAverage
             // 
+            this.btnAverage.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnAverage.BackgroundImage")));
+            this.btnAverage.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnAverage.FlatAppearance.BorderSize = 0;
+            this.btnAverage.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnAverage.Location = new System.Drawing.Point(4, 95);
             this.btnAverage.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnAverage.Name = "btnAverage";
@@ -1966,6 +2074,10 @@
             // 
             // btnCountSchedules
             // 
+            this.btnCountSchedules.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnCountSchedules.BackgroundImage")));
+            this.btnCountSchedules.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnCountSchedules.FlatAppearance.BorderSize = 0;
+            this.btnCountSchedules.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnCountSchedules.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.25F);
             this.btnCountSchedules.Location = new System.Drawing.Point(4, 47);
             this.btnCountSchedules.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
@@ -2004,6 +2116,10 @@
             // 
             // btnDeleteSchedule
             // 
+            this.btnDeleteSchedule.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnDeleteSchedule.BackgroundImage")));
+            this.btnDeleteSchedule.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnDeleteSchedule.FlatAppearance.BorderSize = 0;
+            this.btnDeleteSchedule.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnDeleteSchedule.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.25F);
             this.btnDeleteSchedule.Location = new System.Drawing.Point(350, 7);
             this.btnDeleteSchedule.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
@@ -2016,6 +2132,10 @@
             // 
             // btnAppChanges
             // 
+            this.btnAppChanges.BackgroundImage = global::BloodBankSystem.Properties.Resources.buttonbackBlue;
+            this.btnAppChanges.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnAppChanges.FlatAppearance.BorderSize = 0;
+            this.btnAppChanges.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnAppChanges.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.25F);
             this.btnAppChanges.Location = new System.Drawing.Point(210, 6);
             this.btnAppChanges.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
@@ -2112,6 +2232,10 @@
             // 
             // btnScheduleUserSearch
             // 
+            this.btnScheduleUserSearch.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnScheduleUserSearch.BackgroundImage")));
+            this.btnScheduleUserSearch.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnScheduleUserSearch.FlatAppearance.BorderSize = 0;
+            this.btnScheduleUserSearch.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnScheduleUserSearch.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.25F);
             this.btnScheduleUserSearch.Location = new System.Drawing.Point(500, 7);
             this.btnScheduleUserSearch.Name = "btnScheduleUserSearch";
@@ -2194,10 +2318,10 @@
             // 
             // chtUserSchedule
             // 
-            chartArea3.Name = "ChartArea1";
-            this.chtUserSchedule.ChartAreas.Add(chartArea3);
-            legend3.Name = "No. of schedules";
-            this.chtUserSchedule.Legends.Add(legend3);
+            chartArea1.Name = "ChartArea1";
+            this.chtUserSchedule.ChartAreas.Add(chartArea1);
+            legend1.Name = "No. of schedules";
+            this.chtUserSchedule.Legends.Add(legend1);
             this.chtUserSchedule.Location = new System.Drawing.Point(536, 5);
             this.chtUserSchedule.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.chtUserSchedule.Name = "chtUserSchedule";
@@ -2206,10 +2330,10 @@
             // 
             // chtBloodType
             // 
-            chartArea4.Name = "ChartArea1";
-            this.chtBloodType.ChartAreas.Add(chartArea4);
-            legend4.Name = "Legend1";
-            this.chtBloodType.Legends.Add(legend4);
+            chartArea2.Name = "ChartArea1";
+            this.chtBloodType.ChartAreas.Add(chartArea2);
+            legend2.Name = "Legend1";
+            this.chtBloodType.Legends.Add(legend2);
             this.chtBloodType.Location = new System.Drawing.Point(6, 5);
             this.chtBloodType.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.chtBloodType.Name = "chtBloodType";
