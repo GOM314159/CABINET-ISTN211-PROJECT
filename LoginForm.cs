@@ -14,6 +14,8 @@ namespace BloodBankSystem
 {
     public partial class LoginForm : Form
     {
+        public static String currentUserID;
+        public static String currentUserName;
         public LoginForm()
         {
             InitializeComponent();
@@ -56,7 +58,9 @@ namespace BloodBankSystem
                         if (isAdmin.Equals("A"))
                         {
                             MessageBox.Show("Admin Login Successful! \nWelcome " + dataTable.Rows[0]["Name"]); 
-                            Form adminForm = new AdminForm();
+                            currentUserID = dataTable.Rows[0]["UserID"].ToString();
+                            currentUserName = dataTable.Rows[0]["Name"].ToString();
+                            Form adminForm = new AdminForm(currentUserID,currentUserName);
                             adminForm.Show();
                         }
                         else
@@ -101,6 +105,7 @@ namespace BloodBankSystem
         {
             // TODO: This line of code loads data into the 'ist2jwDataSet.tblUsers' table. You can move, or remove it, as needed.
             this.tblUsersTableAdapter.Fill(this.ist2jwDataSet.tblUsers);
+
 
         }
 
