@@ -89,8 +89,17 @@ namespace BloodBankSystem
             // Phone Number check
             if (!string.IsNullOrWhiteSpace(mCellphoneTextBox.Text) && phoneNumber.Length == 10)
             {
-                phoneNumberCheck = true;
-                mCellphoneTextBox.BackColor = Color.LightGreen;
+                if (phoneNumber[0].Equals('0'))
+                {
+                    phoneNumberCheck = true;
+                    mCellphoneTextBox.BackColor = Color.LightGreen;
+                }
+                else
+                {
+                    mCellphoneTextBox.BackColor = Color.IndianRed;
+                    MessageBox.Show("Phone number should start with a '0'", "Registration Helper", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    phoneNumberCheck = false;
+                }
             }
             else
             {
