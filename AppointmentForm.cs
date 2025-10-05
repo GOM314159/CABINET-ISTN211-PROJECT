@@ -101,12 +101,13 @@ namespace BloodBankSystem
         private void btnBookAppointment_Click(object sender, EventArgs e)
         {
             Random rnd = new Random();
-            string newSchID = "S" + rnd.Next(0, 99999).ToString();
+            string newSchID = "S" + rnd.Next(0, 1000000).ToString();
             Boolean schIDCheck = false;
             if (ValidSchID(newSchID))
             {
                 schIDCheck = true;
             }
+
             string appID = appIDTextBox1.Text;
             DateTime date = appDateTimePicker1.Value;
             int capacity = int.Parse(capacityTextBox.Text);
@@ -166,7 +167,6 @@ namespace BloodBankSystem
                 schID = rnd.Next(0, 1000000).ToString();
                 ValidSchID(schID);
             }
-
 
             return schIDCheck;
         }

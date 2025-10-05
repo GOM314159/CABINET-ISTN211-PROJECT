@@ -649,7 +649,7 @@ namespace BloodBankSystem
             String phoneNumber = txtPhone.Text;
             String password = txtPassword.Text;
             String bloodType = cmbBlood.Text;
-            Boolean isActiveAcc = true;
+         
 
             Boolean userIDCheck = false;
             Boolean firstNameCheck = false;
