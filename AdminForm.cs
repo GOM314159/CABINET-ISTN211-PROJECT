@@ -11,17 +11,27 @@ using System.Net.NetworkInformation;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Windows.Forms.DataVisualization.Charting;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 
 namespace BloodBankSystem
 {
     public partial class AdminForm : Form
     {
-        
-        
+        public static string AdminID;
+        public static String AdminName;
+
         public AdminForm()
         {
             InitializeComponent();
+        }
+
+        public AdminForm(String ID, String name)
+        {
+
+            InitializeComponent();
+            AdminID = ID;
+            AdminName = name;
         }
 
         private void AdminForm_Load(object sender, EventArgs e)
@@ -39,6 +49,8 @@ namespace BloodBankSystem
 
             ComboboxRefresh();
             
+           
+
         }
 
         public void ComboboxRefresh()
@@ -177,7 +189,7 @@ namespace BloodBankSystem
             
             
 
-            
+            tblUsersBindingSource.Filter = "BloodType = "+ cmbBloodFilter.Text +"";
             
 
         }
@@ -320,7 +332,7 @@ namespace BloodBankSystem
         private void btnBloodApply_Click(object sender, EventArgs e)
         {
             tblBloodInventoryBindingSource.EndEdit();
-            //tblBloodInventoryTableAdapter.Update();
+            tblBloodInventoryTableAdapter.Update(ist2jwDataSet);
         }
 
         private void btnFilterInactive_Click(object sender, EventArgs e)
@@ -366,9 +378,105 @@ namespace BloodBankSystem
 
             scheduleBindingSource.RemoveFilter();
 
+            chartFill();
+            
 
         }
 
+        public void chartFill()
+        {
+
+            chtBloodType.Series.Clear();
+
+            Series series = new Series("BloodType");
+            series.ChartType = SeriesChartType.Pie;
+
+            int typeA = 0;
+            int typeB = 0;
+            int typeAB = 0;
+            int typeO = 0;
+
+            tblUsersBindingSource.MoveFirst();
+
+            foreach (DataRowView rowView in tblUsersBindingSource)
+            {
+                String BloodType = rowView["BloodType"].ToString().Trim();
+                if (BloodType.Equals("A"))
+                {
+                    typeA++;
+                }
+                else if (BloodType.Equals("B"))
+                {
+                    typeB++;
+                }
+                else if (BloodType.Equals("AB"))
+                {
+                    typeAB++;
+                }
+                else if (BloodType.Equals("O"))
+                {
+
+                    typeO++;
+
+                }
+   
+
+            }
+
+
+            
+
+
+
+
+
+            series.Points.AddXY("Type A("+ typeA.ToString() + ")", typeA);
+            series.Points.AddXY("Type B("+ typeB.ToString()+ ")", typeB);
+            series.Points.AddXY("Type AB(" + typeAB.ToString() + ")", typeAB);
+            series.Points.AddXY("Type O(" + typeO.ToString() + ")", typeO);
+
+
+            chtBloodType.Series.Add(series);
+            chtBloodType.Titles.Clear();
+            chtBloodType.Titles.Add("Blood Type Distribution");
+
+
+            chtUserSchedule.Series.Clear();
+
+            
+            Series barSeries = new Series("");
+            barSeries.ChartType = SeriesChartType.Column; 
+
+            foreach (DataRowView rowView in tblUsersBindingSource)
+            {
+                String UserID = rowView["UserID"].ToString().Trim();
+                String name = rowView["Name"].ToString().Trim();
+                name = name + " " + rowView["Surname"].ToString().Trim();
+
+                String add = name + "(" + UserID + ")";
+                int count = 0;
+                foreach (DataRowView ScheduleRowView in scheduleBindingSource)
+                {
+                    if (ScheduleRowView["UserID"].ToString().Trim().Equals(UserID))
+                    {
+                        count++;
+
+                    }
+
+                }
+                
+                barSeries.Points.AddXY(add,count);
+
+
+            }
+
+            chtUserSchedule.Series.Add(barSeries);
+            chtUserSchedule.Titles.Clear(); 
+            chtUserSchedule.Titles.Add("Number of Schedules per User");
+
+
+
+        }
         private void tcAdmin_TabIndexChanged(object sender, EventArgs e)
         {
 
@@ -400,6 +508,7 @@ namespace BloodBankSystem
 
                 int iCount = 0;
                 String name = "";
+                String surname = "";
                 String UserID;
                 tblUsersBindingSource.MoveFirst();
 
@@ -429,14 +538,15 @@ namespace BloodBankSystem
 
                     foreach (DataRowView rowView in scheduleBindingSource)
                     {
-                        UserID = rowView["UserID"].ToString();
-                        if (UserID == txtSearchByUser.Text)
+                        UserID = rowView["UserID"].ToString().Trim();
+                        if (UserID == txtSearchByUser.Text.Trim())
                         {
 
                             iCount++;
 
                             redDisplay.AppendText("User schedule details:");
                             redDisplay.AppendText("Name: " + name);
+                            
 
 
 
@@ -815,7 +925,7 @@ namespace BloodBankSystem
             cmbUser.BackColor = SystemColors.Control;
             
 
-            tblUsersTableAdapter.GetData();
+            tblBloodInventoryTableAdapter.GetData();
             dgvUsers.Refresh();
 
             MessageBox.Show("Insertion cancelled");
@@ -874,10 +984,29 @@ namespace BloodBankSystem
         private void btnUpdateApp_Click(object sender, EventArgs e)
         {
             Boolean bValid = true;
+            String sOut = "Errors: ";
+            if (dtpAppDate.Value < DateTime.Now)
+            {
+                sOut = sOut + "\n Date has already occured";
+                bValid = false;
+            }
+            if (mtxtTime.Text.Length < 8)
+            {
+
+                sOut = sOut + "\n Time is invalid";
+                bValid = false;
+            }
+
+            if (String.IsNullOrWhiteSpace(txtVenue.Text))
+            {
+
+                sOut = sOut + "\n Veue is required";
+                bValid = false;
+            }   
 
             if (bValid == false)
             {
-                MessageBox.Show("InValid");
+                MessageBox.Show(sOut);
             }
             else
             {
@@ -969,13 +1098,179 @@ namespace BloodBankSystem
         private void btnCountSchedules_Click(object sender, EventArgs e)
         {
 
-            scheduleTableAdapter.totalUserSchedules();
+
+            scheduleBindingSource.DataSource = this.scheduleTableAdapter.getTotalUserSchedules();
+            
+
+
 
         }
 
         private void btnAppInsert_Click(object sender, EventArgs e)
         {
-           
+            
+
+            
+            Boolean bValid = true;
+            String sOut = "Errors:";
+
+            if (dtpAppDate.Value < DateTime.Now)
+            {
+                sOut = sOut + "\n Date has already occured";
+                bValid = false;
+            }
+            if (mtxtTime.Text.Length < 8)
+            {
+
+                sOut = sOut + "\n Time is invalid";
+                bValid = false;
+            }
+
+            if (String.IsNullOrWhiteSpace(txtVenue.Text))
+            {
+
+                sOut = sOut + "\n Venue is required";
+                bValid = false;
+            }
+
+            if (spnCapacity.Value <= 0)
+            {
+
+                sOut = sOut + "\n Capacity must be greater than 0";
+                bValid = false;
+            }
+
+            if (bValid == false)
+            {
+                MessageBox.Show(sOut);
+
+
+            }
+            else
+            {
+                DataRowView currentRow = (DataRowView)appointmentBindingSource.Current;
+                appointmentBindingSource.EndEdit();
+                appointmentTableAdapter.Update(ist2jwDataSet);
+                MessageBox.Show("Appointment succesfully added!");
+
+                pnlAppEdit.BackColor = SystemColors.ActiveCaption;
+                btnAppInsert.Visible = false;
+                btnStartAppInsert.Visible = true;
+                btnAppChanges.Visible = true;
+                btnAppDelete.Visible = true;
+                btnCancelAppInsert.Visible = false;
+                btnUpdateApp.Visible = true;
+
+            }
+
+
+
+
+        }
+
+        private void btnAverage_Click(object sender, EventArgs e)
+        {
+            scheduleTableAdapter.AverageSchedules();
+            
+        }
+
+        private void btnAppChanges_Click(object sender, EventArgs e)
+        {
+            DataRowView currentRow = (DataRowView)scheduleBindingSource.Current;
+            scheduleBindingSource.EndEdit();
+            scheduleTableAdapter.Update(ist2jwDataSet);
+        }
+
+        private void btnStartAppInsert_Click(object sender, EventArgs e)
+        {
+
+            pnlAppEdit.BackColor = Color.SkyBlue;
+            btnAppInsert.Visible = true;
+            btnStartAppInsert.Visible = false;
+            btnAppChanges.Visible = false;
+            btnAppDelete.Visible = false;
+            btnCancelAppInsert.Visible = true;
+            btnUpdateApp.Visible = false;
+
+            appointmentBindingSource.MoveLast();
+            String AppID = txtAppID.Text.Substring(1);
+            int aID = int.Parse(AppID) + 1;
+
+            AppID = "A" + aID.ToString();
+
+            appointmentBindingSource.AddNew();
+            txtAppID.Text = AppID;  
+            MessageBox.Show("Please enter all information");
+
+
+        }
+
+        private void btnScheduleLast_Click(object sender, EventArgs e)
+        {
+            scheduleBindingSource.MoveLast();
+        }
+
+        private void btnScheduleNext_Click(object sender, EventArgs e)
+        {
+            scheduleBindingSource.MoveNext();
+        }
+
+        private void btnSchedulePrev_Click(object sender, EventArgs e)
+        {
+            scheduleBindingSource.MovePrevious();
+        }
+
+        private void btnScheduleFirst_Click(object sender, EventArgs e)
+        {
+            scheduleBindingSource.MoveFirst();
+        }
+
+        private void btnCancelAppInsert_Click(object sender, EventArgs e)
+        {
+            pnlAppEdit.BackColor = SystemColors.ActiveCaption;
+            btnAppInsert.Visible = false;
+            btnStartAppInsert.Visible = true;
+            btnAppChanges.Visible = true;
+            btnAppDelete.Visible = true;
+            btnCancelAppInsert.Visible = false;
+            btnUpdateApp.Visible = true;
+
+            appointmentTableAdapter.GetData();
+            appointmentDataGridView.Refresh();
+
+            MessageBox.Show("Insertion cancelled");
+
+            appointmentBindingSource.RemoveCurrent();
+            appointmentTableAdapter.Update(ist2jwDataSet);
+
+
+
+        }
+
+        private void btnDeleteSchedule_Click(object sender, EventArgs e)
+        {
+            DialogResult Confirmation;
+            Confirmation = MessageBox.Show("Are you sure you want to delete this record?", "Confirm", MessageBoxButtons.YesNo);
+            if (Confirmation == DialogResult.Yes)
+            {
+                scheduleBindingSource.RemoveCurrent();
+
+            }
+            else
+            {
+                MessageBox.Show("Deletion cancelled");
+            }
+
+
+        }
+
+        private void btnHomepage_Click(object sender, EventArgs e)
+        {
+
+            HomePage home = new HomePage(AdminID,AdminName);
+            home.Show();
+            this.Hide();
+
         }
     }
 }
