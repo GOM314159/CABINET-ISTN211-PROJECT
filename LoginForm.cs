@@ -43,7 +43,7 @@ namespace BloodBankSystem
               try
               {
                 var adapter = new ist2jwDataSetTableAdapters.tblUsersTableAdapter();
-                var dataTable = adapter.GetUserInfo(IDnumber); //error here
+                var dataTable = adapter.GetUserInfo(IDnumber); 
 
                 if (dataTable.Rows.Count > 0)
                 {

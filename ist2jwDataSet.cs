@@ -9,6 +9,10 @@
 
 namespace BloodBankSystem.ist2jwDataSetTableAdapters
 {
+    partial class tblTotalScheduleTableAdapter
+    {
+    }
+
     partial class AppointmentTableAdapter
     {
     }

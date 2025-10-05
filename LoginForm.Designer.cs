@@ -29,27 +29,28 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(LoginForm));
             this.IDLabel = new System.Windows.Forms.Label();
             this.PasswordTextBox = new System.Windows.Forms.TextBox();
             this.PasswordLbl = new System.Windows.Forms.Label();
             this.loginBtn = new System.Windows.Forms.Button();
             this.BackBtn = new System.Windows.Forms.Button();
             this.mIDTextBox = new System.Windows.Forms.MaskedTextBox();
+            this.passShowImg = new System.Windows.Forms.PictureBox();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.ist2jwDataSet = new BloodBankSystem.ist2jwDataSet();
             this.tblUsersBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.tblUsersTableAdapter = new BloodBankSystem.ist2jwDataSetTableAdapters.tblUsersTableAdapter();
             this.tableAdapterManager = new BloodBankSystem.ist2jwDataSetTableAdapters.TableAdapterManager();
-            this.passShowImg = new System.Windows.Forms.PictureBox();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            ((System.ComponentModel.ISupportInitialize)(this.ist2jwDataSet)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.tblUsersBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.passShowImg)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ist2jwDataSet)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.tblUsersBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // IDLabel
             // 
-            this.IDLabel.BackColor = System.Drawing.Color.Transparent;
+            this.IDLabel.BackColor = System.Drawing.Color.White;
             this.IDLabel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.IDLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 18.25F);
             this.IDLabel.ForeColor = System.Drawing.Color.RoyalBlue;
@@ -67,7 +68,7 @@
             this.PasswordTextBox.Location = new System.Drawing.Point(103, 320);
             this.PasswordTextBox.Name = "PasswordTextBox";
             this.PasswordTextBox.PasswordChar = '*';
-            this.PasswordTextBox.Size = new System.Drawing.Size(339, 38);
+            this.PasswordTextBox.Size = new System.Drawing.Size(339, 46);
             this.PasswordTextBox.TabIndex = 13;
             this.PasswordTextBox.Tag = "";
             this.PasswordTextBox.Text = "Gom314";
@@ -75,7 +76,7 @@
             // 
             // PasswordLbl
             // 
-            this.PasswordLbl.BackColor = System.Drawing.Color.Transparent;
+            this.PasswordLbl.BackColor = System.Drawing.Color.White;
             this.PasswordLbl.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.PasswordLbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 18.25F);
             this.PasswordLbl.ForeColor = System.Drawing.Color.RoyalBlue;
@@ -134,34 +135,11 @@
             this.mIDTextBox.Location = new System.Drawing.Point(103, 193);
             this.mIDTextBox.Mask = "0000000000000";
             this.mIDTextBox.Name = "mIDTextBox";
-            this.mIDTextBox.Size = new System.Drawing.Size(339, 39);
+            this.mIDTextBox.Size = new System.Drawing.Size(339, 46);
             this.mIDTextBox.TabIndex = 19;
             this.mIDTextBox.Text = "0507136031089";
             this.mIDTextBox.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.mIDTextBox.ValidatingType = typeof(int);
-            // 
-            // ist2jwDataSet
-            // 
-            this.ist2jwDataSet.DataSetName = "ist2jwDataSet";
-            this.ist2jwDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // tblUsersBindingSource
-            // 
-            this.tblUsersBindingSource.DataMember = "tblUsers";
-            this.tblUsersBindingSource.DataSource = this.ist2jwDataSet;
-            // 
-            // tblUsersTableAdapter
-            // 
-            this.tblUsersTableAdapter.ClearBeforeFill = true;
-            // 
-            // tableAdapterManager
-            // 
-            this.tableAdapterManager.AppointmentTableAdapter = null;
-            this.tableAdapterManager.BackupDataSetBeforeUpdate = false;
-            this.tableAdapterManager.ScheduleTableAdapter = null;
-            this.tableAdapterManager.TblBloodInventoryTableAdapter = null;
-            this.tableAdapterManager.tblUsersTableAdapter = this.tblUsersTableAdapter;
-            this.tableAdapterManager.UpdateOrder = BloodBankSystem.ist2jwDataSetTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete;
             // 
             // passShowImg
             // 
@@ -188,9 +166,32 @@
             this.pictureBox1.TabIndex = 26;
             this.pictureBox1.TabStop = false;
             // 
+            // ist2jwDataSet
+            // 
+            this.ist2jwDataSet.DataSetName = "ist2jwDataSet";
+            this.ist2jwDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // tblUsersBindingSource
+            // 
+            this.tblUsersBindingSource.DataMember = "tblUsers";
+            this.tblUsersBindingSource.DataSource = this.ist2jwDataSet;
+            // 
+            // tblUsersTableAdapter
+            // 
+            this.tblUsersTableAdapter.ClearBeforeFill = true;
+            // 
+            // tableAdapterManager
+            // 
+            this.tableAdapterManager.AppointmentTableAdapter = null;
+            this.tableAdapterManager.BackupDataSetBeforeUpdate = false;
+            this.tableAdapterManager.ScheduleTableAdapter = null;
+            this.tableAdapterManager.TblBloodInventoryTableAdapter = null;
+            this.tableAdapterManager.tblUsersTableAdapter = this.tblUsersTableAdapter;
+            this.tableAdapterManager.UpdateOrder = BloodBankSystem.ist2jwDataSetTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete;
+            // 
             // LoginForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 14F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.BackgroundImage = global::BloodBankSystem.Properties.Resources.Logbackground;
@@ -206,15 +207,16 @@
             this.Controls.Add(this.pictureBox1);
             this.DoubleBuffered = true;
             this.Font = new System.Drawing.Font("Arial", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "LoginForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Login Form";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.LoginForm_FormClosing);
             this.Load += new System.EventHandler(this.LoginForm_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.ist2jwDataSet)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.tblUsersBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.passShowImg)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ist2jwDataSet)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.tblUsersBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
