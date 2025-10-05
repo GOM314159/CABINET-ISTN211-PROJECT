@@ -357,7 +357,7 @@
             this.btnFirst2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnFirst2.ForeColor = System.Drawing.Color.Black;
             this.btnFirst2.Location = new System.Drawing.Point(81, 30);
-            this.btnFirst2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnFirst2.Margin = new System.Windows.Forms.Padding(4);
             this.btnFirst2.Name = "btnFirst2";
             this.btnFirst2.Size = new System.Drawing.Size(71, 30);
             this.btnFirst2.TabIndex = 7;
@@ -374,7 +374,7 @@
             this.panel1.Controls.Add(this.groupBox2);
             this.panel1.Controls.Add(this.appointmentDataGridView);
             this.panel1.Location = new System.Drawing.Point(12, 7);
-            this.panel1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panel1.Margin = new System.Windows.Forms.Padding(4);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(1019, 572);
             this.panel1.TabIndex = 8;
@@ -410,9 +410,9 @@
             this.groupBox4.Controls.Add(this.button6);
             this.groupBox4.ForeColor = System.Drawing.Color.White;
             this.groupBox4.Location = new System.Drawing.Point(532, 5);
-            this.groupBox4.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox4.Margin = new System.Windows.Forms.Padding(4);
             this.groupBox4.Name = "groupBox4";
-            this.groupBox4.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox4.Padding = new System.Windows.Forms.Padding(4);
             this.groupBox4.Size = new System.Drawing.Size(480, 110);
             this.groupBox4.TabIndex = 27;
             this.groupBox4.TabStop = false;
@@ -439,7 +439,7 @@
             // searchDateTime
             // 
             this.searchDateTime.Location = new System.Drawing.Point(103, 21);
-            this.searchDateTime.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.searchDateTime.Margin = new System.Windows.Forms.Padding(4);
             this.searchDateTime.Name = "searchDateTime";
             this.searchDateTime.Size = new System.Drawing.Size(241, 22);
             this.searchDateTime.TabIndex = 2;
@@ -462,7 +462,7 @@
             this.button6.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button6.ForeColor = System.Drawing.Color.Black;
             this.button6.Location = new System.Drawing.Point(352, 18);
-            this.button6.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.button6.Margin = new System.Windows.Forms.Padding(4);
             this.button6.Name = "button6";
             this.button6.Size = new System.Drawing.Size(100, 28);
             this.button6.TabIndex = 0;
@@ -485,9 +485,9 @@
             this.groupBox3.Controls.Add(timeLabel1);
             this.groupBox3.ForeColor = System.Drawing.Color.White;
             this.groupBox3.Location = new System.Drawing.Point(532, 122);
-            this.groupBox3.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox3.Margin = new System.Windows.Forms.Padding(4);
             this.groupBox3.Name = "groupBox3";
-            this.groupBox3.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox3.Padding = new System.Windows.Forms.Padding(4);
             this.groupBox3.Size = new System.Drawing.Size(480, 425);
             this.groupBox3.TabIndex = 26;
             this.groupBox3.TabStop = false;
@@ -521,7 +521,7 @@
             this.btnBookAppointment.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnBookAppointment.ForeColor = System.Drawing.Color.Black;
             this.btnBookAppointment.Location = new System.Drawing.Point(136, 368);
-            this.btnBookAppointment.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnBookAppointment.Margin = new System.Windows.Forms.Padding(4);
             this.btnBookAppointment.Name = "btnBookAppointment";
             this.btnBookAppointment.Size = new System.Drawing.Size(261, 48);
             this.btnBookAppointment.TabIndex = 3;
@@ -534,7 +534,7 @@
             // 
             this.capacityTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.appointmentBindingSource, "Capacity", true));
             this.capacityTextBox.Location = new System.Drawing.Point(205, 65);
-            this.capacityTextBox.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.capacityTextBox.Margin = new System.Windows.Forms.Padding(4);
             this.capacityTextBox.Name = "capacityTextBox";
             this.capacityTextBox.ReadOnly = true;
             this.capacityTextBox.Size = new System.Drawing.Size(176, 22);
@@ -545,7 +545,7 @@
             // 
             this.venueTextBox1.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.appointmentBindingSource, "Venue", true));
             this.venueTextBox1.Location = new System.Drawing.Point(205, 98);
-            this.venueTextBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.venueTextBox1.Margin = new System.Windows.Forms.Padding(4);
             this.venueTextBox1.Name = "venueTextBox1";
             this.venueTextBox1.ReadOnly = true;
             this.venueTextBox1.Size = new System.Drawing.Size(176, 22);
@@ -556,7 +556,7 @@
             // 
             this.timeTextBox1.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.appointmentBindingSource, "Time", true));
             this.timeTextBox1.Location = new System.Drawing.Point(205, 27);
-            this.timeTextBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.timeTextBox1.Margin = new System.Windows.Forms.Padding(4);
             this.timeTextBox1.Name = "timeTextBox1";
             this.timeTextBox1.ReadOnly = true;
             this.timeTextBox1.Size = new System.Drawing.Size(176, 22);
@@ -572,9 +572,9 @@
             this.groupBox2.Controls.Add(this.btnFirst1);
             this.groupBox2.ForeColor = System.Drawing.Color.White;
             this.groupBox2.Location = new System.Drawing.Point(4, 482);
-            this.groupBox2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox2.Margin = new System.Windows.Forms.Padding(4);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox2.Padding = new System.Windows.Forms.Padding(4);
             this.groupBox2.Size = new System.Drawing.Size(520, 64);
             this.groupBox2.TabIndex = 25;
             this.groupBox2.TabStop = false;
@@ -604,7 +604,7 @@
             this.btnLast1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnLast1.ForeColor = System.Drawing.Color.Black;
             this.btnLast1.Location = new System.Drawing.Point(349, 20);
-            this.btnLast1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnLast1.Margin = new System.Windows.Forms.Padding(4);
             this.btnLast1.Name = "btnLast1";
             this.btnLast1.Size = new System.Drawing.Size(77, 32);
             this.btnLast1.TabIndex = 27;
@@ -620,7 +620,7 @@
             this.btnPrev1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnPrev1.ForeColor = System.Drawing.Color.Black;
             this.btnPrev1.Location = new System.Drawing.Point(173, 20);
-            this.btnPrev1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnPrev1.Margin = new System.Windows.Forms.Padding(4);
             this.btnPrev1.Name = "btnPrev1";
             this.btnPrev1.Size = new System.Drawing.Size(81, 32);
             this.btnPrev1.TabIndex = 26;
@@ -636,7 +636,7 @@
             this.btnFirst1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnFirst1.ForeColor = System.Drawing.Color.Black;
             this.btnFirst1.Location = new System.Drawing.Point(85, 20);
-            this.btnFirst1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnFirst1.Margin = new System.Windows.Forms.Padding(4);
             this.btnFirst1.Name = "btnFirst1";
             this.btnFirst1.Size = new System.Drawing.Size(80, 32);
             this.btnFirst1.TabIndex = 25;
@@ -659,7 +659,7 @@
             this.dataGridViewTextBoxColumn5});
             this.appointmentDataGridView.DataSource = this.appointmentBindingSource;
             this.appointmentDataGridView.Location = new System.Drawing.Point(4, 11);
-            this.appointmentDataGridView.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.appointmentDataGridView.Margin = new System.Windows.Forms.Padding(4);
             this.appointmentDataGridView.Name = "appointmentDataGridView";
             this.appointmentDataGridView.ReadOnly = true;
             this.appointmentDataGridView.RowHeadersWidth = 51;
@@ -718,7 +718,7 @@
             // 
             this.appIDTextBox1.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.appointmentBindingSource, "AppID", true));
             this.appIDTextBox1.Location = new System.Drawing.Point(385, 34);
-            this.appIDTextBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.appIDTextBox1.Margin = new System.Windows.Forms.Padding(4);
             this.appIDTextBox1.Name = "appIDTextBox1";
             this.appIDTextBox1.ReadOnly = true;
             this.appIDTextBox1.Size = new System.Drawing.Size(277, 22);
@@ -735,7 +735,7 @@
             this.panel2.Controls.Add(this.scheduleIDTextBox1);
             this.panel2.Controls.Add(this.groupBox1);
             this.panel2.Location = new System.Drawing.Point(8, 12);
-            this.panel2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panel2.Margin = new System.Windows.Forms.Padding(4);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(988, 554);
             this.panel2.TabIndex = 9;
@@ -748,9 +748,9 @@
             this.groupBox10.Controls.Add(this.label7);
             this.groupBox10.ForeColor = System.Drawing.Color.White;
             this.groupBox10.Location = new System.Drawing.Point(524, 0);
-            this.groupBox10.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox10.Margin = new System.Windows.Forms.Padding(4);
             this.groupBox10.Name = "groupBox10";
-            this.groupBox10.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox10.Padding = new System.Windows.Forms.Padding(4);
             this.groupBox10.Size = new System.Drawing.Size(453, 74);
             this.groupBox10.TabIndex = 35;
             this.groupBox10.TabStop = false;
@@ -764,7 +764,7 @@
             this.button10.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button10.ForeColor = System.Drawing.Color.Black;
             this.button10.Location = new System.Drawing.Point(336, 25);
-            this.button10.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.button10.Margin = new System.Windows.Forms.Padding(4);
             this.button10.Name = "button10";
             this.button10.Size = new System.Drawing.Size(100, 28);
             this.button10.TabIndex = 2;
@@ -776,7 +776,7 @@
             // searchScheduleDate
             // 
             this.searchScheduleDate.Location = new System.Drawing.Point(83, 26);
-            this.searchScheduleDate.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.searchScheduleDate.Margin = new System.Windows.Forms.Padding(4);
             this.searchScheduleDate.Name = "searchScheduleDate";
             this.searchScheduleDate.Size = new System.Drawing.Size(245, 22);
             this.searchScheduleDate.TabIndex = 1;
@@ -807,7 +807,7 @@
             this.dataGridViewCheckBoxColumn1});
             this.tblUserScheduleDataGridView.DataSource = this.tblUserScheduleBindingSource;
             this.tblUserScheduleDataGridView.Location = new System.Drawing.Point(4, 4);
-            this.tblUserScheduleDataGridView.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tblUserScheduleDataGridView.Margin = new System.Windows.Forms.Padding(4);
             this.tblUserScheduleDataGridView.Name = "tblUserScheduleDataGridView";
             this.tblUserScheduleDataGridView.ReadOnly = true;
             this.tblUserScheduleDataGridView.RowHeadersWidth = 51;
@@ -890,9 +890,9 @@
             this.groupBox7.Controls.Add(timeLabel);
             this.groupBox7.ForeColor = System.Drawing.Color.White;
             this.groupBox7.Location = new System.Drawing.Point(524, 86);
-            this.groupBox7.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox7.Margin = new System.Windows.Forms.Padding(4);
             this.groupBox7.Name = "groupBox7";
-            this.groupBox7.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox7.Padding = new System.Windows.Forms.Padding(4);
             this.groupBox7.Size = new System.Drawing.Size(453, 443);
             this.groupBox7.TabIndex = 34;
             this.groupBox7.TabStop = false;
@@ -913,7 +913,7 @@
             this.attendedCheckBox.DataBindings.Add(new System.Windows.Forms.Binding("CheckState", this.tblUserScheduleBindingSource, "Attended", true));
             this.attendedCheckBox.Enabled = false;
             this.attendedCheckBox.Location = new System.Drawing.Point(171, 34);
-            this.attendedCheckBox.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.attendedCheckBox.Margin = new System.Windows.Forms.Padding(4);
             this.attendedCheckBox.Name = "attendedCheckBox";
             this.attendedCheckBox.Size = new System.Drawing.Size(35, 30);
             this.attendedCheckBox.TabIndex = 37;
@@ -924,7 +924,7 @@
             this.venueTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.tblUserScheduleBindingSource, "Venue", true));
             this.venueTextBox.Enabled = false;
             this.venueTextBox.Location = new System.Drawing.Point(171, 112);
-            this.venueTextBox.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.venueTextBox.Margin = new System.Windows.Forms.Padding(4);
             this.venueTextBox.Name = "venueTextBox";
             this.venueTextBox.ReadOnly = true;
             this.venueTextBox.Size = new System.Drawing.Size(205, 22);
@@ -936,7 +936,7 @@
             this.timeTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.tblUserScheduleBindingSource, "Time", true));
             this.timeTextBox.Enabled = false;
             this.timeTextBox.Location = new System.Drawing.Point(171, 71);
-            this.timeTextBox.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.timeTextBox.Margin = new System.Windows.Forms.Padding(4);
             this.timeTextBox.Name = "timeTextBox";
             this.timeTextBox.ReadOnly = true;
             this.timeTextBox.Size = new System.Drawing.Size(205, 22);
@@ -948,7 +948,7 @@
             this.scheduleIDTextBox1.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.tblUserScheduleBindingSource, "ScheduleID", true));
             this.scheduleIDTextBox1.Enabled = false;
             this.scheduleIDTextBox1.Location = new System.Drawing.Point(713, 37);
-            this.scheduleIDTextBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.scheduleIDTextBox1.Margin = new System.Windows.Forms.Padding(4);
             this.scheduleIDTextBox1.Name = "scheduleIDTextBox1";
             this.scheduleIDTextBox1.Size = new System.Drawing.Size(265, 22);
             this.scheduleIDTextBox1.TabIndex = 23;
@@ -963,9 +963,9 @@
             this.groupBox1.Controls.Add(this.btnLast2);
             this.groupBox1.ForeColor = System.Drawing.Color.White;
             this.groupBox1.Location = new System.Drawing.Point(4, 455);
-            this.groupBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox1.Margin = new System.Windows.Forms.Padding(4);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox1.Padding = new System.Windows.Forms.Padding(4);
             this.groupBox1.Size = new System.Drawing.Size(512, 74);
             this.groupBox1.TabIndex = 22;
             this.groupBox1.TabStop = false;
@@ -979,7 +979,7 @@
             this.btnPrev2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnPrev2.ForeColor = System.Drawing.Color.Black;
             this.btnPrev2.Location = new System.Drawing.Point(161, 30);
-            this.btnPrev2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnPrev2.Margin = new System.Windows.Forms.Padding(4);
             this.btnPrev2.Name = "btnPrev2";
             this.btnPrev2.Size = new System.Drawing.Size(71, 30);
             this.btnPrev2.TabIndex = 8;
@@ -995,7 +995,7 @@
             this.btnNext2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnNext2.ForeColor = System.Drawing.Color.Black;
             this.btnNext2.Location = new System.Drawing.Point(244, 30);
-            this.btnNext2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnNext2.Margin = new System.Windows.Forms.Padding(4);
             this.btnNext2.Name = "btnNext2";
             this.btnNext2.Size = new System.Drawing.Size(71, 30);
             this.btnNext2.TabIndex = 9;
@@ -1011,7 +1011,7 @@
             this.btnLast2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnLast2.ForeColor = System.Drawing.Color.Black;
             this.btnLast2.Location = new System.Drawing.Point(331, 30);
-            this.btnLast2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnLast2.Margin = new System.Windows.Forms.Padding(4);
             this.btnLast2.Name = "btnLast2";
             this.btnLast2.Size = new System.Drawing.Size(71, 30);
             this.btnLast2.TabIndex = 10;
@@ -1024,7 +1024,7 @@
             this.panel3.BackColor = System.Drawing.Color.Transparent;
             this.panel3.Controls.Add(this.groupBox8);
             this.panel3.Location = new System.Drawing.Point(1019, 368);
-            this.panel3.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panel3.Margin = new System.Windows.Forms.Padding(4);
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(368, 198);
             this.panel3.TabIndex = 10;
@@ -1039,9 +1039,9 @@
             this.groupBox8.Controls.Add(this.sortDateBtn);
             this.groupBox8.ForeColor = System.Drawing.Color.White;
             this.groupBox8.Location = new System.Drawing.Point(24, 9);
-            this.groupBox8.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox8.Margin = new System.Windows.Forms.Padding(4);
             this.groupBox8.Name = "groupBox8";
-            this.groupBox8.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox8.Padding = new System.Windows.Forms.Padding(4);
             this.groupBox8.Size = new System.Drawing.Size(315, 164);
             this.groupBox8.TabIndex = 4;
             this.groupBox8.TabStop = false;
@@ -1055,7 +1055,7 @@
             this.button7.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button7.ForeColor = System.Drawing.Color.Black;
             this.button7.Location = new System.Drawing.Point(165, 90);
-            this.button7.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.button7.Margin = new System.Windows.Forms.Padding(4);
             this.button7.Name = "button7";
             this.button7.Size = new System.Drawing.Size(128, 55);
             this.button7.TabIndex = 4;
@@ -1071,7 +1071,7 @@
             this.sortAttendedBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.sortAttendedBtn.ForeColor = System.Drawing.Color.Black;
             this.sortAttendedBtn.Location = new System.Drawing.Point(24, 23);
-            this.sortAttendedBtn.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.sortAttendedBtn.Margin = new System.Windows.Forms.Padding(4);
             this.sortAttendedBtn.Name = "sortAttendedBtn";
             this.sortAttendedBtn.Size = new System.Drawing.Size(131, 59);
             this.sortAttendedBtn.TabIndex = 2;
@@ -1087,7 +1087,7 @@
             this.sortVenueBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.sortVenueBtn.ForeColor = System.Drawing.Color.Black;
             this.sortVenueBtn.Location = new System.Drawing.Point(24, 90);
-            this.sortVenueBtn.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.sortVenueBtn.Margin = new System.Windows.Forms.Padding(4);
             this.sortVenueBtn.Name = "sortVenueBtn";
             this.sortVenueBtn.Size = new System.Drawing.Size(131, 53);
             this.sortVenueBtn.TabIndex = 3;
@@ -1103,7 +1103,7 @@
             this.sortDateBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.sortDateBtn.ForeColor = System.Drawing.Color.Black;
             this.sortDateBtn.Location = new System.Drawing.Point(165, 23);
-            this.sortDateBtn.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.sortDateBtn.Margin = new System.Windows.Forms.Padding(4);
             this.sortDateBtn.Name = "sortDateBtn";
             this.sortDateBtn.Size = new System.Drawing.Size(128, 59);
             this.sortDateBtn.TabIndex = 0;
@@ -1130,7 +1130,7 @@
             this.panel4.BackColor = System.Drawing.Color.Transparent;
             this.panel4.Controls.Add(this.groupBox9);
             this.panel4.Location = new System.Drawing.Point(1019, 12);
-            this.panel4.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panel4.Margin = new System.Windows.Forms.Padding(4);
             this.panel4.Name = "panel4";
             this.panel4.Size = new System.Drawing.Size(368, 348);
             this.panel4.TabIndex = 13;
@@ -1150,9 +1150,9 @@
             this.groupBox9.Controls.Add(this.filterScheduleYearCmbx);
             this.groupBox9.ForeColor = System.Drawing.Color.White;
             this.groupBox9.Location = new System.Drawing.Point(24, 4);
-            this.groupBox9.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox9.Margin = new System.Windows.Forms.Padding(4);
             this.groupBox9.Name = "groupBox9";
-            this.groupBox9.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox9.Padding = new System.Windows.Forms.Padding(4);
             this.groupBox9.Size = new System.Drawing.Size(311, 316);
             this.groupBox9.TabIndex = 0;
             this.groupBox9.TabStop = false;
@@ -1166,7 +1166,7 @@
             this.button9.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button9.ForeColor = System.Drawing.Color.Black;
             this.button9.Location = new System.Drawing.Point(109, 251);
-            this.button9.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.button9.Margin = new System.Windows.Forms.Padding(4);
             this.button9.Name = "button9";
             this.button9.Size = new System.Drawing.Size(160, 46);
             this.button9.TabIndex = 27;
@@ -1194,7 +1194,7 @@
             "Venue",
             "Attended"});
             this.scheduleFilterCmbx.Location = new System.Drawing.Point(109, 33);
-            this.scheduleFilterCmbx.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.scheduleFilterCmbx.Margin = new System.Windows.Forms.Padding(4);
             this.scheduleFilterCmbx.Name = "scheduleFilterCmbx";
             this.scheduleFilterCmbx.Size = new System.Drawing.Size(160, 24);
             this.scheduleFilterCmbx.TabIndex = 25;
@@ -1228,7 +1228,7 @@
             this.filterScheduleVenueCmbx.DisplayMember = "Appointment.Venue";
             this.filterScheduleVenueCmbx.FormattingEnabled = true;
             this.filterScheduleVenueCmbx.Location = new System.Drawing.Point(109, 162);
-            this.filterScheduleVenueCmbx.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.filterScheduleVenueCmbx.Margin = new System.Windows.Forms.Padding(4);
             this.filterScheduleVenueCmbx.Name = "filterScheduleVenueCmbx";
             this.filterScheduleVenueCmbx.Size = new System.Drawing.Size(160, 24);
             this.filterScheduleVenueCmbx.TabIndex = 22;
@@ -1238,7 +1238,7 @@
             // 
             this.filterScheduleAttendedCheckBox.AutoSize = true;
             this.filterScheduleAttendedCheckBox.Location = new System.Drawing.Point(109, 212);
-            this.filterScheduleAttendedCheckBox.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.filterScheduleAttendedCheckBox.Margin = new System.Windows.Forms.Padding(4);
             this.filterScheduleAttendedCheckBox.Name = "filterScheduleAttendedCheckBox";
             this.filterScheduleAttendedCheckBox.Size = new System.Drawing.Size(82, 20);
             this.filterScheduleAttendedCheckBox.TabIndex = 21;
@@ -1275,7 +1275,7 @@
             "11 November",
             "12 December"});
             this.filterScheduleMonthCmbx.Location = new System.Drawing.Point(109, 119);
-            this.filterScheduleMonthCmbx.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.filterScheduleMonthCmbx.Margin = new System.Windows.Forms.Padding(4);
             this.filterScheduleMonthCmbx.Name = "filterScheduleMonthCmbx";
             this.filterScheduleMonthCmbx.Size = new System.Drawing.Size(160, 24);
             this.filterScheduleMonthCmbx.TabIndex = 19;
@@ -1289,7 +1289,7 @@
             "2026",
             "2027"});
             this.filterScheduleYearCmbx.Location = new System.Drawing.Point(109, 76);
-            this.filterScheduleYearCmbx.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.filterScheduleYearCmbx.Margin = new System.Windows.Forms.Padding(4);
             this.filterScheduleYearCmbx.Name = "filterScheduleYearCmbx";
             this.filterScheduleYearCmbx.Size = new System.Drawing.Size(160, 24);
             this.filterScheduleYearCmbx.TabIndex = 18;
@@ -1300,7 +1300,7 @@
             this.tabControl1.Controls.Add(this.tabPage1);
             this.tabControl1.Controls.Add(this.tabPage2);
             this.tabControl1.Location = new System.Drawing.Point(16, 100);
-            this.tabControl1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tabControl1.Margin = new System.Windows.Forms.Padding(4);
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
             this.tabControl1.Size = new System.Drawing.Size(1409, 615);
@@ -1311,6 +1311,7 @@
             // 
             this.tabPage1.AutoScroll = true;
             this.tabPage1.BackColor = System.Drawing.Color.Black;
+            this.tabPage1.BackgroundImage = global::BloodBankSystem.Properties.Resources.MainBackground;
             this.tabPage1.Controls.Add(this.panel1);
             this.tabPage1.Controls.Add(this.panel7);
             this.tabPage1.Controls.Add(scheduleIDLabel1);
@@ -1324,9 +1325,9 @@
             this.tabPage1.Controls.Add(this.attendedScheduleCheckBox);
             this.tabPage1.Controls.Add(this.panel8);
             this.tabPage1.Location = new System.Drawing.Point(4, 25);
-            this.tabPage1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tabPage1.Margin = new System.Windows.Forms.Padding(4);
             this.tabPage1.Name = "tabPage1";
-            this.tabPage1.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tabPage1.Padding = new System.Windows.Forms.Padding(4);
             this.tabPage1.Size = new System.Drawing.Size(1401, 586);
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "Book Appointment";
@@ -1337,7 +1338,7 @@
             this.panel7.BackColor = System.Drawing.Color.Transparent;
             this.panel7.Controls.Add(this.groupBox6);
             this.panel7.Location = new System.Drawing.Point(1039, 346);
-            this.panel7.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panel7.Margin = new System.Windows.Forms.Padding(4);
             this.panel7.Name = "panel7";
             this.panel7.Size = new System.Drawing.Size(349, 234);
             this.panel7.TabIndex = 10;
@@ -1351,9 +1352,9 @@
             this.groupBox6.Controls.Add(this.sortAppointmentsVenueBtn);
             this.groupBox6.ForeColor = System.Drawing.Color.White;
             this.groupBox6.Location = new System.Drawing.Point(13, 11);
-            this.groupBox6.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox6.Margin = new System.Windows.Forms.Padding(4);
             this.groupBox6.Name = "groupBox6";
-            this.groupBox6.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox6.Padding = new System.Windows.Forms.Padding(4);
             this.groupBox6.Size = new System.Drawing.Size(315, 197);
             this.groupBox6.TabIndex = 5;
             this.groupBox6.TabStop = false;
@@ -1367,7 +1368,7 @@
             this.button8.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button8.ForeColor = System.Drawing.Color.Black;
             this.button8.Location = new System.Drawing.Point(64, 82);
-            this.button8.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.button8.Margin = new System.Windows.Forms.Padding(4);
             this.button8.Name = "button8";
             this.button8.Size = new System.Drawing.Size(213, 42);
             this.button8.TabIndex = 7;
@@ -1383,7 +1384,7 @@
             this.sortAppointmentDateBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.sortAppointmentDateBtn.ForeColor = System.Drawing.Color.Black;
             this.sortAppointmentDateBtn.Location = new System.Drawing.Point(64, 28);
-            this.sortAppointmentDateBtn.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.sortAppointmentDateBtn.Margin = new System.Windows.Forms.Padding(4);
             this.sortAppointmentDateBtn.Name = "sortAppointmentDateBtn";
             this.sortAppointmentDateBtn.Size = new System.Drawing.Size(213, 42);
             this.sortAppointmentDateBtn.TabIndex = 5;
@@ -1399,7 +1400,7 @@
             this.sortAppointmentsVenueBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.sortAppointmentsVenueBtn.ForeColor = System.Drawing.Color.Black;
             this.sortAppointmentsVenueBtn.Location = new System.Drawing.Point(64, 132);
-            this.sortAppointmentsVenueBtn.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.sortAppointmentsVenueBtn.Margin = new System.Windows.Forms.Padding(4);
             this.sortAppointmentsVenueBtn.Name = "sortAppointmentsVenueBtn";
             this.sortAppointmentsVenueBtn.Size = new System.Drawing.Size(213, 42);
             this.sortAppointmentsVenueBtn.TabIndex = 6;
@@ -1412,7 +1413,7 @@
             this.scheduleIDTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.scheduleBindingSource, "ScheduleID", true));
             this.scheduleIDTextBox.Enabled = false;
             this.scheduleIDTextBox.Location = new System.Drawing.Point(195, 510);
-            this.scheduleIDTextBox.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.scheduleIDTextBox.Margin = new System.Windows.Forms.Padding(4);
             this.scheduleIDTextBox.Name = "scheduleIDTextBox";
             this.scheduleIDTextBox.Size = new System.Drawing.Size(137, 22);
             this.scheduleIDTextBox.TabIndex = 33;
@@ -1428,7 +1429,7 @@
             this.userIDScheduleTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.scheduleBindingSource, "UserID", true));
             this.userIDScheduleTextBox.Enabled = false;
             this.userIDScheduleTextBox.Location = new System.Drawing.Point(195, 366);
-            this.userIDScheduleTextBox.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.userIDScheduleTextBox.Margin = new System.Windows.Forms.Padding(4);
             this.userIDScheduleTextBox.Name = "userIDScheduleTextBox";
             this.userIDScheduleTextBox.Size = new System.Drawing.Size(137, 22);
             this.userIDScheduleTextBox.TabIndex = 35;
@@ -1439,7 +1440,7 @@
             this.appIDScheduleTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.scheduleBindingSource, "AppID", true));
             this.appIDScheduleTextBox.Enabled = false;
             this.appIDScheduleTextBox.Location = new System.Drawing.Point(195, 490);
-            this.appIDScheduleTextBox.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.appIDScheduleTextBox.Margin = new System.Windows.Forms.Padding(4);
             this.appIDScheduleTextBox.Name = "appIDScheduleTextBox";
             this.appIDScheduleTextBox.Size = new System.Drawing.Size(137, 22);
             this.appIDScheduleTextBox.TabIndex = 37;
@@ -1450,7 +1451,7 @@
             this.attendedScheduleCheckBox.DataBindings.Add(new System.Windows.Forms.Binding("CheckState", this.scheduleBindingSource, "Attended", true));
             this.attendedScheduleCheckBox.Enabled = false;
             this.attendedScheduleCheckBox.Location = new System.Drawing.Point(195, 524);
-            this.attendedScheduleCheckBox.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.attendedScheduleCheckBox.Margin = new System.Windows.Forms.Padding(4);
             this.attendedScheduleCheckBox.Name = "attendedScheduleCheckBox";
             this.attendedScheduleCheckBox.Size = new System.Drawing.Size(139, 30);
             this.attendedScheduleCheckBox.TabIndex = 39;
@@ -1463,7 +1464,7 @@
             this.panel8.BackColor = System.Drawing.Color.Transparent;
             this.panel8.Controls.Add(this.groupBox5);
             this.panel8.Location = new System.Drawing.Point(1039, 7);
-            this.panel8.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panel8.Margin = new System.Windows.Forms.Padding(4);
             this.panel8.Name = "panel8";
             this.panel8.Size = new System.Drawing.Size(349, 331);
             this.panel8.TabIndex = 11;
@@ -1484,9 +1485,9 @@
             this.groupBox5.Controls.Add(this.filterAppointmentsBtn);
             this.groupBox5.ForeColor = System.Drawing.Color.White;
             this.groupBox5.Location = new System.Drawing.Point(13, 5);
-            this.groupBox5.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox5.Margin = new System.Windows.Forms.Padding(4);
             this.groupBox5.Name = "groupBox5";
-            this.groupBox5.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox5.Padding = new System.Windows.Forms.Padding(4);
             this.groupBox5.Size = new System.Drawing.Size(315, 290);
             this.groupBox5.TabIndex = 11;
             this.groupBox5.TabStop = false;
@@ -1501,7 +1502,7 @@
             "Venue",
             "Capacity"});
             this.filterSelect.Location = new System.Drawing.Point(117, 23);
-            this.filterSelect.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.filterSelect.Margin = new System.Windows.Forms.Padding(4);
             this.filterSelect.Name = "filterSelect";
             this.filterSelect.Size = new System.Drawing.Size(160, 24);
             this.filterSelect.TabIndex = 20;
@@ -1525,7 +1526,7 @@
             "2026",
             "2027"});
             this.filterAppYearCmbx.Location = new System.Drawing.Point(117, 63);
-            this.filterAppYearCmbx.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.filterAppYearCmbx.Margin = new System.Windows.Forms.Padding(4);
             this.filterAppYearCmbx.Name = "filterAppYearCmbx";
             this.filterAppYearCmbx.Size = new System.Drawing.Size(160, 24);
             this.filterAppYearCmbx.TabIndex = 18;
@@ -1558,7 +1559,7 @@
             "9",
             "10"});
             this.filterAppCapacityCmbx.Location = new System.Drawing.Point(117, 181);
-            this.filterAppCapacityCmbx.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.filterAppCapacityCmbx.Margin = new System.Windows.Forms.Padding(4);
             this.filterAppCapacityCmbx.Name = "filterAppCapacityCmbx";
             this.filterAppCapacityCmbx.Size = new System.Drawing.Size(160, 24);
             this.filterAppCapacityCmbx.TabIndex = 16;
@@ -1570,7 +1571,7 @@
             this.filterAppVenueCmbx.DisplayMember = "Appointment.Venue";
             this.filterAppVenueCmbx.FormattingEnabled = true;
             this.filterAppVenueCmbx.Location = new System.Drawing.Point(117, 143);
-            this.filterAppVenueCmbx.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.filterAppVenueCmbx.Margin = new System.Windows.Forms.Padding(4);
             this.filterAppVenueCmbx.Name = "filterAppVenueCmbx";
             this.filterAppVenueCmbx.Size = new System.Drawing.Size(160, 24);
             this.filterAppVenueCmbx.TabIndex = 15;
@@ -1594,7 +1595,7 @@
             "11 November",
             "12 December"});
             this.filterAppMonthCmbx.Location = new System.Drawing.Point(117, 103);
-            this.filterAppMonthCmbx.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.filterAppMonthCmbx.Margin = new System.Windows.Forms.Padding(4);
             this.filterAppMonthCmbx.Name = "filterAppMonthCmbx";
             this.filterAppMonthCmbx.Size = new System.Drawing.Size(160, 24);
             this.filterAppMonthCmbx.TabIndex = 14;
@@ -1647,7 +1648,7 @@
             this.filterAppointmentsBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.filterAppointmentsBtn.ForeColor = System.Drawing.Color.Black;
             this.filterAppointmentsBtn.Location = new System.Drawing.Point(117, 228);
-            this.filterAppointmentsBtn.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.filterAppointmentsBtn.Margin = new System.Windows.Forms.Padding(4);
             this.filterAppointmentsBtn.Name = "filterAppointmentsBtn";
             this.filterAppointmentsBtn.Size = new System.Drawing.Size(160, 41);
             this.filterAppointmentsBtn.TabIndex = 1;
@@ -1660,13 +1661,14 @@
             // 
             this.tabPage2.AutoScroll = true;
             this.tabPage2.BackColor = System.Drawing.Color.Black;
+            this.tabPage2.BackgroundImage = global::BloodBankSystem.Properties.Resources.MainBackground;
             this.tabPage2.Controls.Add(this.panel4);
             this.tabPage2.Controls.Add(this.panel3);
             this.tabPage2.Controls.Add(this.panel2);
             this.tabPage2.Location = new System.Drawing.Point(4, 25);
-            this.tabPage2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tabPage2.Margin = new System.Windows.Forms.Padding(4);
             this.tabPage2.Name = "tabPage2";
-            this.tabPage2.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tabPage2.Padding = new System.Windows.Forms.Padding(4);
             this.tabPage2.Size = new System.Drawing.Size(1401, 586);
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "Appointment History";
@@ -1680,7 +1682,7 @@
             this.button5.FlatAppearance.BorderSize = 0;
             this.button5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button5.Location = new System.Drawing.Point(1172, 21);
-            this.button5.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.button5.Margin = new System.Windows.Forms.Padding(4);
             this.button5.Name = "button5";
             this.button5.Size = new System.Drawing.Size(123, 49);
             this.button5.TabIndex = 16;
@@ -1714,7 +1716,7 @@
             // 
             this.appDateTimePicker1.DataBindings.Add(new System.Windows.Forms.Binding("Value", this.appointmentBindingSource, "AppDate", true));
             this.appDateTimePicker1.Location = new System.Drawing.Point(669, 69);
-            this.appDateTimePicker1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.appDateTimePicker1.Margin = new System.Windows.Forms.Padding(4);
             this.appDateTimePicker1.Name = "appDateTimePicker1";
             this.appDateTimePicker1.Size = new System.Drawing.Size(265, 22);
             this.appDateTimePicker1.TabIndex = 17;
