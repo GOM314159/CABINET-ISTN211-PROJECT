@@ -34,7 +34,7 @@ namespace BloodBankSystem {
         
         private tblUserScheduleDataTable tabletblUserSchedule;
         
-        private tblUsers1DataTable tabletblUsers1;
+        private tblTotalScheduleDataTable tabletblTotalSchedule;
         
         private global::System.Data.DataRelation relationFK_Schedule_Appointment;
         
@@ -95,8 +95,8 @@ namespace BloodBankSystem {
                 if ((ds.Tables["tblUserSchedule"] != null)) {
                     base.Tables.Add(new tblUserScheduleDataTable(ds.Tables["tblUserSchedule"]));
                 }
-                if ((ds.Tables["tblUsers1"] != null)) {
-                    base.Tables.Add(new tblUsers1DataTable(ds.Tables["tblUsers1"]));
+                if ((ds.Tables["tblTotalSchedule"] != null)) {
+                    base.Tables.Add(new tblTotalScheduleDataTable(ds.Tables["tblTotalSchedule"]));
                 }
                 this.DataSetName = ds.DataSetName;
                 this.Prefix = ds.Prefix;
@@ -170,9 +170,9 @@ namespace BloodBankSystem {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Browsable(false)]
         [global::System.ComponentModel.DesignerSerializationVisibility(global::System.ComponentModel.DesignerSerializationVisibility.Content)]
-        public tblUsers1DataTable tblUsers1 {
+        public tblTotalScheduleDataTable tblTotalSchedule {
             get {
-                return this.tabletblUsers1;
+                return this.tabletblTotalSchedule;
             }
         }
         
@@ -258,8 +258,8 @@ namespace BloodBankSystem {
                 if ((ds.Tables["tblUserSchedule"] != null)) {
                     base.Tables.Add(new tblUserScheduleDataTable(ds.Tables["tblUserSchedule"]));
                 }
-                if ((ds.Tables["tblUsers1"] != null)) {
-                    base.Tables.Add(new tblUsers1DataTable(ds.Tables["tblUsers1"]));
+                if ((ds.Tables["tblTotalSchedule"] != null)) {
+                    base.Tables.Add(new tblTotalScheduleDataTable(ds.Tables["tblTotalSchedule"]));
                 }
                 this.DataSetName = ds.DataSetName;
                 this.Prefix = ds.Prefix;
@@ -324,10 +324,10 @@ namespace BloodBankSystem {
                     this.tabletblUserSchedule.InitVars();
                 }
             }
-            this.tabletblUsers1 = ((tblUsers1DataTable)(base.Tables["tblUsers1"]));
+            this.tabletblTotalSchedule = ((tblTotalScheduleDataTable)(base.Tables["tblTotalSchedule"]));
             if ((initTable == true)) {
-                if ((this.tabletblUsers1 != null)) {
-                    this.tabletblUsers1.InitVars();
+                if ((this.tabletblTotalSchedule != null)) {
+                    this.tabletblTotalSchedule.InitVars();
                 }
             }
             this.relationFK_Schedule_Appointment = this.Relations["FK_Schedule_Appointment"];
@@ -358,8 +358,8 @@ namespace BloodBankSystem {
             base.Tables.Add(this.tableSchedule);
             this.tabletblUserSchedule = new tblUserScheduleDataTable();
             base.Tables.Add(this.tabletblUserSchedule);
-            this.tabletblUsers1 = new tblUsers1DataTable();
-            base.Tables.Add(this.tabletblUsers1);
+            this.tabletblTotalSchedule = new tblTotalScheduleDataTable();
+            base.Tables.Add(this.tabletblTotalSchedule);
             this.relationFK_Schedule_Appointment = new global::System.Data.DataRelation("FK_Schedule_Appointment", new global::System.Data.DataColumn[] {
                         this.tableAppointment.AppIDColumn}, new global::System.Data.DataColumn[] {
                         this.tableSchedule.AppIDColumn}, false);
@@ -385,11 +385,11 @@ namespace BloodBankSystem {
                         this.tableSchedule.AppIDColumn}, false);
             this.Relations.Add(this.relationFK_Schedule_Appointment1);
             this.relationFK_TblBloodInventory_tblUsers1 = new global::System.Data.DataRelation("FK_TblBloodInventory_tblUsers1", new global::System.Data.DataColumn[] {
-                        this.tabletblUsers1.UserIDColumn}, new global::System.Data.DataColumn[] {
+                        this.tabletblTotalSchedule.UserIDColumn}, new global::System.Data.DataColumn[] {
                         this.tableTblBloodInventory.UserIDColumn}, false);
             this.Relations.Add(this.relationFK_TblBloodInventory_tblUsers1);
             this.relationFK_Schedule_tblUsers1 = new global::System.Data.DataRelation("FK_Schedule_tblUsers1", new global::System.Data.DataColumn[] {
-                        this.tabletblUsers1.UserIDColumn}, new global::System.Data.DataColumn[] {
+                        this.tabletblTotalSchedule.UserIDColumn}, new global::System.Data.DataColumn[] {
                         this.tableSchedule.UserIDColumn}, false);
             this.Relations.Add(this.relationFK_Schedule_tblUsers1);
         }
@@ -426,7 +426,7 @@ namespace BloodBankSystem {
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-        private bool ShouldSerializetblUsers1() {
+        private bool ShouldSerializetblTotalSchedule() {
             return false;
         }
         
@@ -501,7 +501,7 @@ namespace BloodBankSystem {
         public delegate void tblUserScheduleRowChangeEventHandler(object sender, tblUserScheduleRowChangeEvent e);
         
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-        public delegate void tblUsers1RowChangeEventHandler(object sender, tblUsers1RowChangeEvent e);
+        public delegate void tblTotalScheduleRowChangeEventHandler(object sender, tblTotalScheduleRowChangeEvent e);
         
         /// <summary>
         ///Represents the strongly named DataTable class.
@@ -2191,7 +2191,7 @@ namespace BloodBankSystem {
         ///</summary>
         [global::System.Serializable()]
         [global::System.Xml.Serialization.XmlSchemaProviderAttribute("GetTypedTableSchema")]
-        public partial class tblUsers1DataTable : global::System.Data.TypedTableBase<tblUsers1Row> {
+        public partial class tblTotalScheduleDataTable : global::System.Data.TypedTableBase<tblTotalScheduleRow> {
             
             private global::System.Data.DataColumn columnUserID;
             
@@ -2199,8 +2199,8 @@ namespace BloodBankSystem {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public tblUsers1DataTable() {
-                this.TableName = "tblUsers1";
+            public tblTotalScheduleDataTable() {
+                this.TableName = "tblTotalSchedule";
                 this.BeginInit();
                 this.InitClass();
                 this.EndInit();
@@ -2208,7 +2208,7 @@ namespace BloodBankSystem {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            internal tblUsers1DataTable(global::System.Data.DataTable table) {
+            internal tblTotalScheduleDataTable(global::System.Data.DataTable table) {
                 this.TableName = table.TableName;
                 if ((table.CaseSensitive != table.DataSet.CaseSensitive)) {
                     this.CaseSensitive = table.CaseSensitive;
@@ -2225,7 +2225,7 @@ namespace BloodBankSystem {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            protected tblUsers1DataTable(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
+            protected tblTotalScheduleDataTable(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
                     base(info, context) {
                 this.InitVars();
             }
@@ -2257,53 +2257,53 @@ namespace BloodBankSystem {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public tblUsers1Row this[int index] {
+            public tblTotalScheduleRow this[int index] {
                 get {
-                    return ((tblUsers1Row)(this.Rows[index]));
+                    return ((tblTotalScheduleRow)(this.Rows[index]));
                 }
             }
             
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public event tblUsers1RowChangeEventHandler tblUsers1RowChanging;
+            public event tblTotalScheduleRowChangeEventHandler tblTotalScheduleRowChanging;
             
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public event tblUsers1RowChangeEventHandler tblUsers1RowChanged;
+            public event tblTotalScheduleRowChangeEventHandler tblTotalScheduleRowChanged;
             
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public event tblUsers1RowChangeEventHandler tblUsers1RowDeleting;
+            public event tblTotalScheduleRowChangeEventHandler tblTotalScheduleRowDeleting;
             
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public event tblUsers1RowChangeEventHandler tblUsers1RowDeleted;
+            public event tblTotalScheduleRowChangeEventHandler tblTotalScheduleRowDeleted;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public void AddtblUsers1Row(tblUsers1Row row) {
+            public void AddtblTotalScheduleRow(tblTotalScheduleRow row) {
                 this.Rows.Add(row);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public tblUsers1Row AddtblUsers1Row(string UserID, int Schedules) {
-                tblUsers1Row rowtblUsers1Row = ((tblUsers1Row)(this.NewRow()));
+            public tblTotalScheduleRow AddtblTotalScheduleRow(string UserID, int Schedules) {
+                tblTotalScheduleRow rowtblTotalScheduleRow = ((tblTotalScheduleRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
                         UserID,
                         Schedules};
-                rowtblUsers1Row.ItemArray = columnValuesArray;
-                this.Rows.Add(rowtblUsers1Row);
-                return rowtblUsers1Row;
+                rowtblTotalScheduleRow.ItemArray = columnValuesArray;
+                this.Rows.Add(rowtblTotalScheduleRow);
+                return rowtblTotalScheduleRow;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public tblUsers1Row FindByUserID(string UserID) {
-                return ((tblUsers1Row)(this.Rows.Find(new object[] {
+            public tblTotalScheduleRow FindByUserID(string UserID) {
+                return ((tblTotalScheduleRow)(this.Rows.Find(new object[] {
                             UserID})));
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             public override global::System.Data.DataTable Clone() {
-                tblUsers1DataTable cln = ((tblUsers1DataTable)(base.Clone()));
+                tblTotalScheduleDataTable cln = ((tblTotalScheduleDataTable)(base.Clone()));
                 cln.InitVars();
                 return cln;
             }
@@ -2311,7 +2311,7 @@ namespace BloodBankSystem {
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             protected override global::System.Data.DataTable CreateInstance() {
-                return new tblUsers1DataTable();
+                return new tblTotalScheduleDataTable();
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -2338,28 +2338,28 @@ namespace BloodBankSystem {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public tblUsers1Row NewtblUsers1Row() {
-                return ((tblUsers1Row)(this.NewRow()));
+            public tblTotalScheduleRow NewtblTotalScheduleRow() {
+                return ((tblTotalScheduleRow)(this.NewRow()));
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             protected override global::System.Data.DataRow NewRowFromBuilder(global::System.Data.DataRowBuilder builder) {
-                return new tblUsers1Row(builder);
+                return new tblTotalScheduleRow(builder);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             protected override global::System.Type GetRowType() {
-                return typeof(tblUsers1Row);
+                return typeof(tblTotalScheduleRow);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             protected override void OnRowChanged(global::System.Data.DataRowChangeEventArgs e) {
                 base.OnRowChanged(e);
-                if ((this.tblUsers1RowChanged != null)) {
-                    this.tblUsers1RowChanged(this, new tblUsers1RowChangeEvent(((tblUsers1Row)(e.Row)), e.Action));
+                if ((this.tblTotalScheduleRowChanged != null)) {
+                    this.tblTotalScheduleRowChanged(this, new tblTotalScheduleRowChangeEvent(((tblTotalScheduleRow)(e.Row)), e.Action));
                 }
             }
             
@@ -2367,8 +2367,8 @@ namespace BloodBankSystem {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             protected override void OnRowChanging(global::System.Data.DataRowChangeEventArgs e) {
                 base.OnRowChanging(e);
-                if ((this.tblUsers1RowChanging != null)) {
-                    this.tblUsers1RowChanging(this, new tblUsers1RowChangeEvent(((tblUsers1Row)(e.Row)), e.Action));
+                if ((this.tblTotalScheduleRowChanging != null)) {
+                    this.tblTotalScheduleRowChanging(this, new tblTotalScheduleRowChangeEvent(((tblTotalScheduleRow)(e.Row)), e.Action));
                 }
             }
             
@@ -2376,8 +2376,8 @@ namespace BloodBankSystem {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             protected override void OnRowDeleted(global::System.Data.DataRowChangeEventArgs e) {
                 base.OnRowDeleted(e);
-                if ((this.tblUsers1RowDeleted != null)) {
-                    this.tblUsers1RowDeleted(this, new tblUsers1RowChangeEvent(((tblUsers1Row)(e.Row)), e.Action));
+                if ((this.tblTotalScheduleRowDeleted != null)) {
+                    this.tblTotalScheduleRowDeleted(this, new tblTotalScheduleRowChangeEvent(((tblTotalScheduleRow)(e.Row)), e.Action));
                 }
             }
             
@@ -2385,14 +2385,14 @@ namespace BloodBankSystem {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             protected override void OnRowDeleting(global::System.Data.DataRowChangeEventArgs e) {
                 base.OnRowDeleting(e);
-                if ((this.tblUsers1RowDeleting != null)) {
-                    this.tblUsers1RowDeleting(this, new tblUsers1RowChangeEvent(((tblUsers1Row)(e.Row)), e.Action));
+                if ((this.tblTotalScheduleRowDeleting != null)) {
+                    this.tblTotalScheduleRowDeleting(this, new tblTotalScheduleRowChangeEvent(((tblTotalScheduleRow)(e.Row)), e.Action));
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public void RemovetblUsers1Row(tblUsers1Row row) {
+            public void RemovetblTotalScheduleRow(tblTotalScheduleRow row) {
                 this.Rows.Remove(row);
             }
             
@@ -2419,7 +2419,7 @@ namespace BloodBankSystem {
                 type.Attributes.Add(attribute1);
                 global::System.Xml.Schema.XmlSchemaAttribute attribute2 = new global::System.Xml.Schema.XmlSchemaAttribute();
                 attribute2.Name = "tableTypeName";
-                attribute2.FixedValue = "tblUsers1DataTable";
+                attribute2.FixedValue = "tblTotalScheduleDataTable";
                 type.Attributes.Add(attribute2);
                 type.Particle = sequence;
                 global::System.Xml.Schema.XmlSchema dsSchema = ds.GetSchemaSerializable();
@@ -2564,9 +2564,9 @@ namespace BloodBankSystem {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public tblUsers1Row tblUsers1Row {
+            public tblTotalScheduleRow tblTotalScheduleRow {
                 get {
-                    return ((tblUsers1Row)(this.GetParentRow(this.Table.ParentRelations["FK_TblBloodInventory_tblUsers1"])));
+                    return ((tblTotalScheduleRow)(this.GetParentRow(this.Table.ParentRelations["FK_TblBloodInventory_tblUsers1"])));
                 }
                 set {
                     this.SetParentRow(value, this.Table.ParentRelations["FK_TblBloodInventory_tblUsers1"]);
@@ -2912,9 +2912,9 @@ namespace BloodBankSystem {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public tblUsers1Row tblUsers1Row {
+            public tblTotalScheduleRow tblTotalScheduleRow {
                 get {
-                    return ((tblUsers1Row)(this.GetParentRow(this.Table.ParentRelations["FK_Schedule_tblUsers1"])));
+                    return ((tblTotalScheduleRow)(this.GetParentRow(this.Table.ParentRelations["FK_Schedule_tblUsers1"])));
                 }
                 set {
                     this.SetParentRow(value, this.Table.ParentRelations["FK_Schedule_tblUsers1"]);
@@ -3028,25 +3028,25 @@ namespace BloodBankSystem {
         /// <summary>
         ///Represents strongly named DataRow class.
         ///</summary>
-        public partial class tblUsers1Row : global::System.Data.DataRow {
+        public partial class tblTotalScheduleRow : global::System.Data.DataRow {
             
-            private tblUsers1DataTable tabletblUsers1;
+            private tblTotalScheduleDataTable tabletblTotalSchedule;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            internal tblUsers1Row(global::System.Data.DataRowBuilder rb) : 
+            internal tblTotalScheduleRow(global::System.Data.DataRowBuilder rb) : 
                     base(rb) {
-                this.tabletblUsers1 = ((tblUsers1DataTable)(this.Table));
+                this.tabletblTotalSchedule = ((tblTotalScheduleDataTable)(this.Table));
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             public string UserID {
                 get {
-                    return ((string)(this[this.tabletblUsers1.UserIDColumn]));
+                    return ((string)(this[this.tabletblTotalSchedule.UserIDColumn]));
                 }
                 set {
-                    this[this.tabletblUsers1.UserIDColumn] = value;
+                    this[this.tabletblTotalSchedule.UserIDColumn] = value;
                 }
             }
             
@@ -3055,27 +3055,27 @@ namespace BloodBankSystem {
             public int Schedules {
                 get {
                     try {
-                        return ((int)(this[this.tabletblUsers1.SchedulesColumn]));
+                        return ((int)(this[this.tabletblTotalSchedule.SchedulesColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'Schedules\' in table \'tblUsers1\' is DBNull.", e);
+                        throw new global::System.Data.StrongTypingException("The value for column \'Schedules\' in table \'tblTotalSchedule\' is DBNull.", e);
                     }
                 }
                 set {
-                    this[this.tabletblUsers1.SchedulesColumn] = value;
+                    this[this.tabletblTotalSchedule.SchedulesColumn] = value;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             public bool IsSchedulesNull() {
-                return this.IsNull(this.tabletblUsers1.SchedulesColumn);
+                return this.IsNull(this.tabletblTotalSchedule.SchedulesColumn);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             public void SetSchedulesNull() {
-                this[this.tabletblUsers1.SchedulesColumn] = global::System.Convert.DBNull;
+                this[this.tabletblTotalSchedule.SchedulesColumn] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -3275,22 +3275,22 @@ namespace BloodBankSystem {
         ///Row event argument class
         ///</summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-        public class tblUsers1RowChangeEvent : global::System.EventArgs {
+        public class tblTotalScheduleRowChangeEvent : global::System.EventArgs {
             
-            private tblUsers1Row eventRow;
+            private tblTotalScheduleRow eventRow;
             
             private global::System.Data.DataRowAction eventAction;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public tblUsers1RowChangeEvent(tblUsers1Row row, global::System.Data.DataRowAction action) {
+            public tblTotalScheduleRowChangeEvent(tblTotalScheduleRow row, global::System.Data.DataRowAction action) {
                 this.eventRow = row;
                 this.eventAction = action;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public tblUsers1Row Row {
+            public tblTotalScheduleRow Row {
                 get {
                     return this.eventRow;
                 }
@@ -5862,7 +5862,7 @@ WHERE  (Schedule.UserID = @CurrentUserId) AND ( YEAR(Appointment.AppDate) = @Yea
     [global::System.ComponentModel.DesignerAttribute("Microsoft.VSDesigner.DataSource.Design.TableAdapterDesigner, Microsoft.VSDesigner" +
         ", Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a")]
     [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-    public partial class tblUsers1TableAdapter : global::System.ComponentModel.Component {
+    public partial class tblTotalScheduleTableAdapter : global::System.ComponentModel.Component {
         
         private global::System.Data.SqlClient.SqlDataAdapter _adapter;
         
@@ -5876,7 +5876,7 @@ WHERE  (Schedule.UserID = @CurrentUserId) AND ( YEAR(Appointment.AppDate) = @Yea
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-        public tblUsers1TableAdapter() {
+        public tblTotalScheduleTableAdapter() {
             this.ClearBeforeFill = true;
         }
         
@@ -5973,7 +5973,7 @@ WHERE  (Schedule.UserID = @CurrentUserId) AND ( YEAR(Appointment.AppDate) = @Yea
             this._adapter = new global::System.Data.SqlClient.SqlDataAdapter();
             global::System.Data.Common.DataTableMapping tableMapping = new global::System.Data.Common.DataTableMapping();
             tableMapping.SourceTable = "Table";
-            tableMapping.DataSetTable = "tblUsers1";
+            tableMapping.DataSetTable = "tblTotalSchedule";
             tableMapping.ColumnMappings.Add("UserID", "UserID");
             tableMapping.ColumnMappings.Add("Schedules", "Schedules");
             this._adapter.TableMappings.Add(tableMapping);
@@ -6001,7 +6001,7 @@ WHERE  (Schedule.UserID = @CurrentUserId) AND ( YEAR(Appointment.AppDate) = @Yea
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, true)]
-        public virtual int FillSchedulePerUser(ist2jwDataSet.tblUsers1DataTable dataTable) {
+        public virtual int FillSchedulePerUser(ist2jwDataSet.tblTotalScheduleDataTable dataTable) {
             this.Adapter.SelectCommand = this.CommandCollection[0];
             if ((this.ClearBeforeFill == true)) {
                 dataTable.Clear();
@@ -6014,9 +6014,9 @@ WHERE  (Schedule.UserID = @CurrentUserId) AND ( YEAR(Appointment.AppDate) = @Yea
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, true)]
-        public virtual ist2jwDataSet.tblUsers1DataTable GetSchedulePerUser() {
+        public virtual ist2jwDataSet.tblTotalScheduleDataTable GetSchedulePerUser() {
             this.Adapter.SelectCommand = this.CommandCollection[0];
-            ist2jwDataSet.tblUsers1DataTable dataTable = new ist2jwDataSet.tblUsers1DataTable();
+            ist2jwDataSet.tblTotalScheduleDataTable dataTable = new ist2jwDataSet.tblTotalScheduleDataTable();
             this.Adapter.Fill(dataTable);
             return dataTable;
         }

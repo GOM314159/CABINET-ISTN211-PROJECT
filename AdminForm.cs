@@ -36,6 +36,12 @@ namespace BloodBankSystem
 
         private void AdminForm_Load(object sender, EventArgs e)
         {
+            // TODO: This line of code loads data into the 'ist2jwDataSet.tblTotalSchedule' table. You can move, or remove it, as needed.
+            this.tblTotalScheduleTableAdapter.FillSchedulePerUser(this.ist2jwDataSet.tblTotalSchedule);
+            // TODO: This line of code loads data into the 'ist2jwDataSet.tblTotalSchedule' table. You can move, or remove it, as needed.
+            this.tblTotalScheduleTableAdapter.FillSchedulePerUser(this.ist2jwDataSet.tblTotalSchedule);
+            // TODO: This line of code loads data into the 'ist2jwDataSet.tblTotalSchedule' table. You can move, or remove it, as needed.
+            this.tblTotalScheduleTableAdapter.FillSchedulePerUser(this.ist2jwDataSet.tblTotalSchedule);
             // TODO: This line of code loads data into the 'ist2jwDataSet.Schedule' table. You can move, or remove it, as needed.
             this.scheduleTableAdapter.Fill(this.ist2jwDataSet.Schedule);
             // TODO: This line of code loads data into the 'ist2jwDataSet.Schedule' table. You can move, or remove it, as needed.
@@ -546,7 +552,7 @@ namespace BloodBankSystem
                         redDisplay.AppendText("Name: " + name);
                     }
                 }
-<<<<<<< HEAD
+
 
                 if (bFound == false)
                 {
@@ -572,8 +578,7 @@ namespace BloodBankSystem
 
 
 
-=======
->>>>>>> bc11ec84f46a530af883998f9a77b277b0f3ba9f
+
             }
 
         }
@@ -1112,18 +1117,10 @@ namespace BloodBankSystem
 
         private void btnCountSchedules_Click(object sender, EventArgs e)
         {
-<<<<<<< HEAD
-            
-            
-=======
+            tblTotalScheduleTableAdapter.FillSchedulePerUser(ist2jwDataSet.tblTotalSchedule);
 
-
-            scheduleBindingSource.DataSource = this.scheduleTableAdapter.getTotalUserSchedules();
-
-
-
->>>>>>> bc11ec84f46a530af883998f9a77b277b0f3ba9f
-
+            dgvTotalSchedule.Refresh();
+            dgvTotalSchedule.Visible = true;
         }
 
         private void btnAppInsert_Click(object sender, EventArgs e)
@@ -1190,13 +1187,12 @@ namespace BloodBankSystem
 
         private void btnAverage_Click(object sender, EventArgs e)
         {
-<<<<<<< HEAD
             this.scheduleTableAdapter.AverageSchedules();
             
             this.scheduleTableAdapter.Fill(this.ist2jwDataSet.Schedule);
-=======
+
             scheduleTableAdapter.AverageSchedules();
->>>>>>> bc11ec84f46a530af883998f9a77b277b0f3ba9f
+
 
         }
 
@@ -1307,6 +1303,12 @@ namespace BloodBankSystem
             tblUsersBindingSource.RemoveFilter();
             tblUsersBindingSource.RemoveSort();
 
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+           
+            dgvTotalSchedule.Visible = false;
         }
     }
 }
