@@ -35,6 +35,7 @@
             this.bbNameLbl = new System.Windows.Forms.Label();
             this.ProfileImg = new System.Windows.Forms.PictureBox();
             this.prfPnl = new System.Windows.Forms.Panel();
+            this.updPhoneNumBtn = new System.Windows.Forms.Button();
             this.numLiveSavedLbl = new System.Windows.Forms.Label();
             this.pLivesSavedLbl = new System.Windows.Forms.Label();
             this.logOutBtn = new System.Windows.Forms.Button();
@@ -59,7 +60,6 @@
             this.bloodSymbolTimer = new System.Windows.Forms.Timer(this.components);
             this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
             this.badgeGroup = new System.Windows.Forms.GroupBox();
-            this.updPhoneNumBtn = new System.Windows.Forms.Button();
             this.tblUsersBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.tblUsersTableAdapter = new BloodBankSystem.ist2jwDataSetTableAdapters.tblUsersTableAdapter();
             this.phoneNumTextBox = new System.Windows.Forms.TextBox();
@@ -79,6 +79,16 @@
             this.PhoneNumGrp.SuspendLayout();
             this.SuspendLayout();
             // 
+            // phoneNumberLabel
+            // 
+            phoneNumberLabel.AutoSize = true;
+            phoneNumberLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 18.25F);
+            phoneNumberLabel.Location = new System.Drawing.Point(50, 29);
+            phoneNumberLabel.Name = "phoneNumberLabel";
+            phoneNumberLabel.Size = new System.Drawing.Size(190, 29);
+            phoneNumberLabel.TabIndex = 36;
+            phoneNumberLabel.Text = "Phone Number:";
+            // 
             // welcomelbl
             // 
             this.welcomelbl.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
@@ -89,7 +99,7 @@
             this.welcomelbl.Location = new System.Drawing.Point(126, 0);
             this.welcomelbl.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.welcomelbl.Name = "welcomelbl";
-            this.welcomelbl.Size = new System.Drawing.Size(863, 58);
+            this.welcomelbl.Size = new System.Drawing.Size(549, 58);
             this.welcomelbl.TabIndex = 2;
             this.welcomelbl.Text = "Welcome ";
             this.welcomelbl.TextAlign = System.Drawing.ContentAlignment.TopCenter;
@@ -103,7 +113,7 @@
             this.bbNameLbl.ForeColor = System.Drawing.Color.White;
             this.bbNameLbl.Location = new System.Drawing.Point(82, 62);
             this.bbNameLbl.Name = "bbNameLbl";
-            this.bbNameLbl.Size = new System.Drawing.Size(915, 63);
+            this.bbNameLbl.Size = new System.Drawing.Size(601, 63);
             this.bbNameLbl.TabIndex = 3;
             this.bbNameLbl.Text = "To Pulse Point";
             this.bbNameLbl.TextAlign = System.Drawing.ContentAlignment.TopCenter;
@@ -114,8 +124,8 @@
             this.ProfileImg.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ProfileImg.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.ProfileImg.Image = global::BloodBankSystem.Properties.Resources.ProfileImage;
-            this.ProfileImg.Location = new System.Drawing.Point(997, 0);
-            this.ProfileImg.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.ProfileImg.Location = new System.Drawing.Point(683, 0);
+            this.ProfileImg.Margin = new System.Windows.Forms.Padding(4);
             this.ProfileImg.Name = "ProfileImg";
             this.ProfileImg.Size = new System.Drawing.Size(101, 99);
             this.ProfileImg.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -140,6 +150,25 @@
             this.prfPnl.Size = new System.Drawing.Size(261, 485);
             this.prfPnl.TabIndex = 5;
             this.prfPnl.Visible = false;
+            // 
+            // updPhoneNumBtn
+            // 
+            this.updPhoneNumBtn.BackColor = System.Drawing.Color.Transparent;
+            this.updPhoneNumBtn.BackgroundImage = global::BloodBankSystem.Properties.Resources.buttonbackGreen;
+            this.updPhoneNumBtn.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.updPhoneNumBtn.FlatAppearance.BorderSize = 0;
+            this.updPhoneNumBtn.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.updPhoneNumBtn.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+            this.updPhoneNumBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.updPhoneNumBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.25F);
+            this.updPhoneNumBtn.ForeColor = System.Drawing.Color.Black;
+            this.updPhoneNumBtn.Location = new System.Drawing.Point(27, 358);
+            this.updPhoneNumBtn.Name = "updPhoneNumBtn";
+            this.updPhoneNumBtn.Size = new System.Drawing.Size(203, 51);
+            this.updPhoneNumBtn.TabIndex = 27;
+            this.updPhoneNumBtn.Text = "Update Phone \r\nNumber";
+            this.updPhoneNumBtn.UseVisualStyleBackColor = false;
+            this.updPhoneNumBtn.Click += new System.EventHandler(this.updPhoneNumBtn_Click);
             // 
             // numLiveSavedLbl
             // 
@@ -292,7 +321,7 @@
             this.donateBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.donateBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 28.25F);
             this.donateBtn.ForeColor = System.Drawing.Color.White;
-            this.donateBtn.Location = new System.Drawing.Point(401, 244);
+            this.donateBtn.Location = new System.Drawing.Point(254, 250);
             this.donateBtn.Name = "donateBtn";
             this.donateBtn.Size = new System.Drawing.Size(277, 174);
             this.donateBtn.TabIndex = 6;
@@ -405,25 +434,6 @@
             this.badgeGroup.Text = "Badges Obtained";
             this.badgeGroup.Visible = false;
             // 
-            // updPhoneNumBtn
-            // 
-            this.updPhoneNumBtn.BackColor = System.Drawing.Color.Transparent;
-            this.updPhoneNumBtn.BackgroundImage = global::BloodBankSystem.Properties.Resources.buttonbackGreen;
-            this.updPhoneNumBtn.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.updPhoneNumBtn.FlatAppearance.BorderSize = 0;
-            this.updPhoneNumBtn.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
-            this.updPhoneNumBtn.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
-            this.updPhoneNumBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.updPhoneNumBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.25F);
-            this.updPhoneNumBtn.ForeColor = System.Drawing.Color.Black;
-            this.updPhoneNumBtn.Location = new System.Drawing.Point(27, 358);
-            this.updPhoneNumBtn.Name = "updPhoneNumBtn";
-            this.updPhoneNumBtn.Size = new System.Drawing.Size(203, 51);
-            this.updPhoneNumBtn.TabIndex = 27;
-            this.updPhoneNumBtn.Text = "Update Phone \r\nNumber";
-            this.updPhoneNumBtn.UseVisualStyleBackColor = false;
-            this.updPhoneNumBtn.Click += new System.EventHandler(this.updPhoneNumBtn_Click);
-            // 
             // tblUsersBindingSource
             // 
             this.tblUsersBindingSource.DataMember = "tblUsers";
@@ -432,16 +442,6 @@
             // tblUsersTableAdapter
             // 
             this.tblUsersTableAdapter.ClearBeforeFill = true;
-            // 
-            // phoneNumberLabel
-            // 
-            phoneNumberLabel.AutoSize = true;
-            phoneNumberLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 18.25F);
-            phoneNumberLabel.Location = new System.Drawing.Point(50, 29);
-            phoneNumberLabel.Name = "phoneNumberLabel";
-            phoneNumberLabel.Size = new System.Drawing.Size(190, 29);
-            phoneNumberLabel.TabIndex = 36;
-            phoneNumberLabel.Text = "Phone Number:";
             // 
             // phoneNumTextBox
             // 
@@ -473,7 +473,7 @@
             this.BackColor = System.Drawing.Color.White;
             this.BackgroundImage = global::BloodBankSystem.Properties.Resources.MainBackground;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.ClientSize = new System.Drawing.Size(1098, 580);
+            this.ClientSize = new System.Drawing.Size(784, 580);
             this.Controls.Add(this.PhoneNumGrp);
             this.Controls.Add(this.badgeGroup);
             this.Controls.Add(this.urgentNeedsPnl);
@@ -484,7 +484,7 @@
             this.Controls.Add(this.welcomelbl);
             this.DoubleBuffered = true;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "HomePage";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Home Page";

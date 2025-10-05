@@ -50,9 +50,9 @@ namespace BloodBankSystem
             {
                 prfPnl.Visible = false;
                 badgeGroup.Visible = false;
-                ProfileImg.Location = new Point(714, 0);
+                ProfileImg.Location = new Point(683, 0);
                 this.Size = new Size(800, 619);
-                donateBtn.Location = new Point(254, 257);
+                donateBtn.Location = new Point(254, 250);
                 PhoneNumGrp.Visible = false;
                 LoadUserPhoneNumber();
             }
@@ -60,7 +60,7 @@ namespace BloodBankSystem
             {
                 prfPnl.Visible = true;
                 badgeGroup.Visible = true;
-                ProfileImg.Location = new Point(1028, 0);
+                ProfileImg.Location = new Point(997, 0);
                 this.Size = new Size(1114, 619);
                 donateBtn.Location = new Point(407, 257);
             }
