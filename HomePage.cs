@@ -37,9 +37,12 @@ namespace BloodBankSystem
 
         private void Form1_Load(object sender, EventArgs e)
         {
+            // TODO: This line of code loads data into the 'ist2jwDataSet.tblUsers' table. You can move, or remove it, as needed.
+            this.tblUsersTableAdapter.Fill(this.ist2jwDataSet.tblUsers);
             // TODO: This line of code loads data into the 'ist2jwDataSet.TblBloodInventory' table. You can move, or remove it, as needed.
             this.tblBloodInventoryTableAdapter.Fill(this.ist2jwDataSet.TblBloodInventory);
 
+            LoadUserPhoneNumber();          
         }
 
         private void ProfileImg_Click(object sender, EventArgs e)
@@ -275,6 +278,86 @@ namespace BloodBankSystem
         {
             Environment.Exit(0);
         }
+
+        private void updPhoneNumBtn_Click(object sender, EventArgs e)
+        {
+            
+           if (!PhoneNumGrp.Visible)
+            {
+                PhoneNumGrp.Visible = true;
+                updPhoneNumBtn.Text = "Save";
+
+            }
+            else
+            {
+                // Validate phone number format (basic validation)
+                string newPhoneNumber = phoneNumTextBox.Text.Trim();
+                if (IsValidPhoneNumber(newPhoneNumber))
+                {
+                    // Update the phone number in the dataset
+                    var userRow = ist2jwDataSet.tblUsers
+                        .AsEnumerable()
+                        .FirstOrDefault(row => row.Field<string>("UserID") == userID);
+
+                    if (userRow != null)
+                    {
+                        userRow.SetField("PhoneNumber", newPhoneNumber);
+                        // Save changes to the database
+                        tblUsersTableAdapter.Update(ist2jwDataSet.tblUsers);
+                        MessageBox.Show("Phone number updated successfully.");
+
+                        PhoneNumGrp.Visible = false;
+                        updPhoneNumBtn.Text = "Update Phone Number";
+                        LoadUserPhoneNumber();
+                    }
+
+                }
+                else
+                {
+                    MessageBox.Show("Please enter a valid phone number.");
+                }
+
+            }
+
+        }
+
+        private bool IsValidPhoneNumber(string newPhoneNumber)
+        {
+            Boolean phoneNumberCheck = false;
+
+            if (!string.IsNullOrWhiteSpace(newPhoneNumber) && newPhoneNumber.Length == 10)
+            {
+                if (newPhoneNumber[0].Equals('0'))
+                {
+                    phoneNumberCheck = true;
+                }
+                else
+                {
+                    MessageBox.Show("Phone number should start with a '0'", "Registration Helper", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    phoneNumberCheck = false;
+                }
+            }
+            else
+            {
+                phoneNumberCheck = false;
+            }
+            return phoneNumberCheck;
+        }
+
+        private void LoadUserPhoneNumber()
+        {
+            // Find the user row by userID
+            var userRow = ist2jwDataSet.tblUsers
+                .AsEnumerable()
+                .FirstOrDefault(row => row.Field<string>("UserID") == userID);
+
+            if (userRow != null)
+            {
+                phoneNumTextBox.Text = userRow.Field<string>("PhoneNumber");
+            }
+        }
+
+      
     }
 
 }
