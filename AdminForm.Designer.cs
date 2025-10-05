@@ -254,7 +254,7 @@
             this.pnlTopBar.Location = new System.Drawing.Point(0, 0);
             this.pnlTopBar.Margin = new System.Windows.Forms.Padding(4);
             this.pnlTopBar.Name = "pnlTopBar";
-            this.pnlTopBar.Size = new System.Drawing.Size(1067, 48);
+            this.pnlTopBar.Size = new System.Drawing.Size(801, 40);
             this.pnlTopBar.TabIndex = 0;
             // 
             // btnHomepage
@@ -275,7 +275,7 @@
             this.btnLogout.Location = new System.Drawing.Point(3, 4);
             this.btnLogout.Margin = new System.Windows.Forms.Padding(4);
             this.btnLogout.Name = "btnLogout";
-            this.btnLogout.Size = new System.Drawing.Size(135, 38);
+            this.btnLogout.Size = new System.Drawing.Size(101, 31);
             this.btnLogout.TabIndex = 1;
             this.btnLogout.Text = "Logout";
             this.btnLogout.UseVisualStyleBackColor = true;
@@ -285,10 +285,9 @@
             // 
             this.lblAdminDash.AutoSize = true;
             this.lblAdminDash.Font = new System.Drawing.Font("Modern No. 20", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblAdminDash.Location = new System.Drawing.Point(400, 9);
-            this.lblAdminDash.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblAdminDash.Location = new System.Drawing.Point(300, 7);
             this.lblAdminDash.Name = "lblAdminDash";
-            this.lblAdminDash.Size = new System.Drawing.Size(321, 29);
+            this.lblAdminDash.Size = new System.Drawing.Size(249, 24);
             this.lblAdminDash.TabIndex = 0;
             this.lblAdminDash.Text = "Administrator Dashboard";
             // 
@@ -324,7 +323,7 @@
             this.appointmentDataGridView.Margin = new System.Windows.Forms.Padding(4);
             this.appointmentDataGridView.Name = "appointmentDataGridView";
             this.appointmentDataGridView.RowHeadersWidth = 51;
-            this.appointmentDataGridView.Size = new System.Drawing.Size(705, 185);
+            this.appointmentDataGridView.Size = new System.Drawing.Size(529, 150);
             this.appointmentDataGridView.TabIndex = 9;
             // 
             // pnlAppFilters
@@ -339,7 +338,7 @@
             this.pnlAppFilters.Location = new System.Drawing.Point(723, 11);
             this.pnlAppFilters.Margin = new System.Windows.Forms.Padding(4);
             this.pnlAppFilters.Name = "pnlAppFilters";
-            this.pnlAppFilters.Size = new System.Drawing.Size(323, 183);
+            this.pnlAppFilters.Size = new System.Drawing.Size(242, 149);
             this.pnlAppFilters.TabIndex = 9;
             // 
             // btnFilterPassed
@@ -347,7 +346,7 @@
             this.btnFilterPassed.Location = new System.Drawing.Point(8, 166);
             this.btnFilterPassed.Margin = new System.Windows.Forms.Padding(4);
             this.btnFilterPassed.Name = "btnFilterPassed";
-            this.btnFilterPassed.Size = new System.Drawing.Size(228, 31);
+            this.btnFilterPassed.Size = new System.Drawing.Size(171, 25);
             this.btnFilterPassed.TabIndex = 7;
             this.btnFilterPassed.Text = "Filter by passed";
             this.btnFilterPassed.UseVisualStyleBackColor = true;
@@ -358,7 +357,7 @@
             this.btnFilterUpcoming.Location = new System.Drawing.Point(8, 124);
             this.btnFilterUpcoming.Margin = new System.Windows.Forms.Padding(4);
             this.btnFilterUpcoming.Name = "btnFilterUpcoming";
-            this.btnFilterUpcoming.Size = new System.Drawing.Size(228, 34);
+            this.btnFilterUpcoming.Size = new System.Drawing.Size(171, 28);
             this.btnFilterUpcoming.TabIndex = 6;
             this.btnFilterUpcoming.Text = "Filter by upcoming";
             this.btnFilterUpcoming.UseVisualStyleBackColor = true;
@@ -369,7 +368,7 @@
             this.btnCapSortDesc.Location = new System.Drawing.Point(8, 82);
             this.btnCapSortDesc.Margin = new System.Windows.Forms.Padding(4);
             this.btnCapSortDesc.Name = "btnCapSortDesc";
-            this.btnCapSortDesc.Size = new System.Drawing.Size(228, 33);
+            this.btnCapSortDesc.Size = new System.Drawing.Size(171, 27);
             this.btnCapSortDesc.TabIndex = 5;
             this.btnCapSortDesc.Text = "Sort by capacity(desc)";
             this.btnCapSortDesc.UseVisualStyleBackColor = true;
@@ -380,7 +379,7 @@
             this.btnCapSortAsc.Location = new System.Drawing.Point(8, 42);
             this.btnCapSortAsc.Margin = new System.Windows.Forms.Padding(4);
             this.btnCapSortAsc.Name = "btnCapSortAsc";
-            this.btnCapSortAsc.Size = new System.Drawing.Size(228, 33);
+            this.btnCapSortAsc.Size = new System.Drawing.Size(171, 27);
             this.btnCapSortAsc.TabIndex = 4;
             this.btnCapSortAsc.Text = "Sort by capacity(asc)";
             this.btnCapSortAsc.UseVisualStyleBackColor = true;
@@ -389,10 +388,9 @@
             // label21
             // 
             this.label21.AutoSize = true;
-            this.label21.Location = new System.Drawing.Point(4, 11);
-            this.label21.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label21.Location = new System.Drawing.Point(3, 9);
             this.label21.Name = "label21";
-            this.label21.Size = new System.Drawing.Size(90, 16);
+            this.label21.Size = new System.Drawing.Size(73, 13);
             this.label21.TabIndex = 0;
             this.label21.Text = "Filters/sorting:";
             // 
@@ -403,7 +401,7 @@
             this.pnlRemoveAppFilters.Location = new System.Drawing.Point(723, 193);
             this.pnlRemoveAppFilters.Margin = new System.Windows.Forms.Padding(4);
             this.pnlRemoveAppFilters.Name = "pnlRemoveAppFilters";
-            this.pnlRemoveAppFilters.Size = new System.Drawing.Size(323, 41);
+            this.pnlRemoveAppFilters.Size = new System.Drawing.Size(242, 33);
             this.pnlRemoveAppFilters.TabIndex = 8;
             // 
             // button16
@@ -412,7 +410,7 @@
             this.button16.Location = new System.Drawing.Point(8, 9);
             this.button16.Margin = new System.Windows.Forms.Padding(4);
             this.button16.Name = "button16";
-            this.button16.Size = new System.Drawing.Size(149, 28);
+            this.button16.Size = new System.Drawing.Size(112, 23);
             this.button16.TabIndex = 1;
             this.button16.Text = "Remove";
             this.button16.UseVisualStyleBackColor = true;
@@ -427,7 +425,7 @@
             this.pnlAppNav.Location = new System.Drawing.Point(20, 193);
             this.pnlAppNav.Margin = new System.Windows.Forms.Padding(4);
             this.pnlAppNav.Name = "pnlAppNav";
-            this.pnlAppNav.Size = new System.Drawing.Size(665, 44);
+            this.pnlAppNav.Size = new System.Drawing.Size(499, 36);
             this.pnlAppNav.TabIndex = 7;
             // 
             // btnAppLast
@@ -436,7 +434,7 @@
             this.btnAppLast.Location = new System.Drawing.Point(500, 4);
             this.btnAppLast.Margin = new System.Windows.Forms.Padding(4);
             this.btnAppLast.Name = "btnAppLast";
-            this.btnAppLast.Size = new System.Drawing.Size(140, 37);
+            this.btnAppLast.Size = new System.Drawing.Size(105, 30);
             this.btnAppLast.TabIndex = 3;
             this.btnAppLast.Text = ">>|";
             this.btnAppLast.UseVisualStyleBackColor = true;
@@ -448,7 +446,7 @@
             this.btnAppFirst.Location = new System.Drawing.Point(12, 4);
             this.btnAppFirst.Margin = new System.Windows.Forms.Padding(4);
             this.btnAppFirst.Name = "btnAppFirst";
-            this.btnAppFirst.Size = new System.Drawing.Size(145, 37);
+            this.btnAppFirst.Size = new System.Drawing.Size(109, 30);
             this.btnAppFirst.TabIndex = 2;
             this.btnAppFirst.Text = "|<<";
             this.btnAppFirst.UseVisualStyleBackColor = true;
@@ -460,7 +458,7 @@
             this.btnAppPrev.Location = new System.Drawing.Point(165, 4);
             this.btnAppPrev.Margin = new System.Windows.Forms.Padding(4);
             this.btnAppPrev.Name = "btnAppPrev";
-            this.btnAppPrev.Size = new System.Drawing.Size(135, 37);
+            this.btnAppPrev.Size = new System.Drawing.Size(101, 30);
             this.btnAppPrev.TabIndex = 1;
             this.btnAppPrev.Text = "<";
             this.btnAppPrev.UseVisualStyleBackColor = true;
@@ -472,7 +470,7 @@
             this.btnAppNext.Location = new System.Drawing.Point(357, 4);
             this.btnAppNext.Margin = new System.Windows.Forms.Padding(4);
             this.btnAppNext.Name = "btnAppNext";
-            this.btnAppNext.Size = new System.Drawing.Size(135, 37);
+            this.btnAppNext.Size = new System.Drawing.Size(101, 30);
             this.btnAppNext.TabIndex = 0;
             this.btnAppNext.Text = ">";
             this.btnAppNext.UseVisualStyleBackColor = true;
@@ -499,7 +497,7 @@
             this.pnlAppEdit.Location = new System.Drawing.Point(185, 245);
             this.pnlAppEdit.Margin = new System.Windows.Forms.Padding(4);
             this.pnlAppEdit.Name = "pnlAppEdit";
-            this.pnlAppEdit.Size = new System.Drawing.Size(725, 228);
+            this.pnlAppEdit.Size = new System.Drawing.Size(544, 185);
             this.pnlAppEdit.TabIndex = 1;
             // 
             // btnStartAppInsert
@@ -522,7 +520,7 @@
             this.mtxtTime.Margin = new System.Windows.Forms.Padding(4);
             this.mtxtTime.Mask = "00:00:00";
             this.mtxtTime.Name = "mtxtTime";
-            this.mtxtTime.Size = new System.Drawing.Size(265, 25);
+            this.mtxtTime.Size = new System.Drawing.Size(200, 21);
             this.mtxtTime.TabIndex = 13;
             this.mtxtTime.ValidatingType = typeof(System.DateTime);
             // 
@@ -532,17 +530,16 @@
             this.txtVenue.Location = new System.Drawing.Point(171, 192);
             this.txtVenue.Margin = new System.Windows.Forms.Padding(4);
             this.txtVenue.Name = "txtVenue";
-            this.txtVenue.Size = new System.Drawing.Size(271, 22);
+            this.txtVenue.Size = new System.Drawing.Size(204, 20);
             this.txtVenue.TabIndex = 12;
             // 
             // lblVenue
             // 
             this.lblVenue.AutoSize = true;
             this.lblVenue.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblVenue.Location = new System.Drawing.Point(97, 192);
-            this.lblVenue.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblVenue.Location = new System.Drawing.Point(73, 156);
             this.lblVenue.Name = "lblVenue";
-            this.lblVenue.Size = new System.Drawing.Size(61, 20);
+            this.lblVenue.Size = new System.Drawing.Size(49, 16);
             this.lblVenue.TabIndex = 11;
             this.lblVenue.Text = "Venue:";
             // 
@@ -552,7 +549,7 @@
             this.btnAppInsert.Location = new System.Drawing.Point(477, 36);
             this.btnAppInsert.Margin = new System.Windows.Forms.Padding(4);
             this.btnAppInsert.Name = "btnAppInsert";
-            this.btnAppInsert.Size = new System.Drawing.Size(179, 47);
+            this.btnAppInsert.Size = new System.Drawing.Size(134, 38);
             this.btnAppInsert.TabIndex = 10;
             this.btnAppInsert.Text = "Insert appointment";
             this.btnAppInsert.UseVisualStyleBackColor = true;
@@ -563,10 +560,9 @@
             // 
             this.lblCapacity.AutoSize = true;
             this.lblCapacity.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblCapacity.Location = new System.Drawing.Point(79, 153);
-            this.lblCapacity.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblCapacity.Location = new System.Drawing.Point(59, 124);
             this.lblCapacity.Name = "lblCapacity";
-            this.lblCapacity.Size = new System.Drawing.Size(79, 20);
+            this.lblCapacity.Size = new System.Drawing.Size(63, 16);
             this.lblCapacity.TabIndex = 9;
             this.lblCapacity.Text = "Capacity:";
             // 
@@ -574,10 +570,9 @@
             // 
             this.lblAppointmentTime.AutoSize = true;
             this.lblAppointmentTime.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblAppointmentTime.Location = new System.Drawing.Point(12, 106);
-            this.lblAppointmentTime.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblAppointmentTime.Location = new System.Drawing.Point(9, 86);
             this.lblAppointmentTime.Name = "lblAppointmentTime";
-            this.lblAppointmentTime.Size = new System.Drawing.Size(144, 20);
+            this.lblAppointmentTime.Size = new System.Drawing.Size(113, 16);
             this.lblAppointmentTime.TabIndex = 8;
             this.lblAppointmentTime.Text = "Appointment time:";
             // 
@@ -585,10 +580,9 @@
             // 
             this.lblAppointmentDate.AutoSize = true;
             this.lblAppointmentDate.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblAppointmentDate.Location = new System.Drawing.Point(7, 63);
-            this.lblAppointmentDate.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblAppointmentDate.Location = new System.Drawing.Point(5, 51);
             this.lblAppointmentDate.Name = "lblAppointmentDate";
-            this.lblAppointmentDate.Size = new System.Drawing.Size(148, 20);
+            this.lblAppointmentDate.Size = new System.Drawing.Size(117, 16);
             this.lblAppointmentDate.TabIndex = 7;
             this.lblAppointmentDate.Text = "Appointment Date:";
             // 
@@ -596,10 +590,9 @@
             // 
             this.lblAppointmentID.AutoSize = true;
             this.lblAppointmentID.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblAppointmentID.Location = new System.Drawing.Point(28, 18);
-            this.lblAppointmentID.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblAppointmentID.Location = new System.Drawing.Point(21, 15);
             this.lblAppointmentID.Name = "lblAppointmentID";
-            this.lblAppointmentID.Size = new System.Drawing.Size(129, 20);
+            this.lblAppointmentID.Size = new System.Drawing.Size(101, 16);
             this.lblAppointmentID.TabIndex = 6;
             this.lblAppointmentID.Text = "Appointment ID:";
             // 
@@ -609,7 +602,7 @@
             this.btnAppDelete.Location = new System.Drawing.Point(477, 106);
             this.btnAppDelete.Margin = new System.Windows.Forms.Padding(4);
             this.btnAppDelete.Name = "btnAppDelete";
-            this.btnAppDelete.Size = new System.Drawing.Size(179, 44);
+            this.btnAppDelete.Size = new System.Drawing.Size(134, 36);
             this.btnAppDelete.TabIndex = 5;
             this.btnAppDelete.Text = "Delete record";
             this.btnAppDelete.UseVisualStyleBackColor = true;
@@ -621,7 +614,7 @@
             this.btnUpdateApp.Location = new System.Drawing.Point(477, 172);
             this.btnUpdateApp.Margin = new System.Windows.Forms.Padding(4);
             this.btnUpdateApp.Name = "btnUpdateApp";
-            this.btnUpdateApp.Size = new System.Drawing.Size(179, 39);
+            this.btnUpdateApp.Size = new System.Drawing.Size(134, 32);
             this.btnUpdateApp.TabIndex = 4;
             this.btnUpdateApp.Text = "Apply changes";
             this.btnUpdateApp.UseVisualStyleBackColor = true;
@@ -633,7 +626,7 @@
             this.spnCapacity.Location = new System.Drawing.Point(171, 153);
             this.spnCapacity.Margin = new System.Windows.Forms.Padding(4);
             this.spnCapacity.Name = "spnCapacity";
-            this.spnCapacity.Size = new System.Drawing.Size(160, 22);
+            this.spnCapacity.Size = new System.Drawing.Size(120, 20);
             this.spnCapacity.TabIndex = 3;
             // 
             // dtpAppDate
@@ -642,7 +635,7 @@
             this.dtpAppDate.Location = new System.Drawing.Point(176, 63);
             this.dtpAppDate.Margin = new System.Windows.Forms.Padding(4);
             this.dtpAppDate.Name = "dtpAppDate";
-            this.dtpAppDate.Size = new System.Drawing.Size(265, 22);
+            this.dtpAppDate.Size = new System.Drawing.Size(200, 20);
             this.dtpAppDate.TabIndex = 1;
             // 
             // txtAppID
@@ -652,7 +645,7 @@
             this.txtAppID.Margin = new System.Windows.Forms.Padding(4);
             this.txtAppID.Name = "txtAppID";
             this.txtAppID.ReadOnly = true;
-            this.txtAppID.Size = new System.Drawing.Size(132, 22);
+            this.txtAppID.Size = new System.Drawing.Size(100, 20);
             this.txtAppID.TabIndex = 0;
             // 
             // btnCancelAppInsert
@@ -691,7 +684,7 @@
             this.pnlRemoveBloodFilters.Location = new System.Drawing.Point(684, 191);
             this.pnlRemoveBloodFilters.Margin = new System.Windows.Forms.Padding(4);
             this.pnlRemoveBloodFilters.Name = "pnlRemoveBloodFilters";
-            this.pnlRemoveBloodFilters.Size = new System.Drawing.Size(357, 41);
+            this.pnlRemoveBloodFilters.Size = new System.Drawing.Size(268, 33);
             this.pnlRemoveBloodFilters.TabIndex = 8;
             // 
             // btnRemoveBloodFilters
@@ -700,7 +693,7 @@
             this.btnRemoveBloodFilters.Location = new System.Drawing.Point(8, 7);
             this.btnRemoveBloodFilters.Margin = new System.Windows.Forms.Padding(4);
             this.btnRemoveBloodFilters.Name = "btnRemoveBloodFilters";
-            this.btnRemoveBloodFilters.Size = new System.Drawing.Size(163, 28);
+            this.btnRemoveBloodFilters.Size = new System.Drawing.Size(122, 23);
             this.btnRemoveBloodFilters.TabIndex = 1;
             this.btnRemoveBloodFilters.Text = "Remove";
             this.btnRemoveBloodFilters.UseVisualStyleBackColor = true;
@@ -717,7 +710,7 @@
             this.panel6.Location = new System.Drawing.Point(684, 7);
             this.panel6.Margin = new System.Windows.Forms.Padding(4);
             this.panel6.Name = "panel6";
-            this.panel6.Size = new System.Drawing.Size(357, 183);
+            this.panel6.Size = new System.Drawing.Size(268, 149);
             this.panel6.TabIndex = 7;
             // 
             // btnEarlyExpiry
@@ -726,7 +719,7 @@
             this.btnEarlyExpiry.Location = new System.Drawing.Point(8, 102);
             this.btnEarlyExpiry.Margin = new System.Windows.Forms.Padding(4);
             this.btnEarlyExpiry.Name = "btnEarlyExpiry";
-            this.btnEarlyExpiry.Size = new System.Drawing.Size(228, 39);
+            this.btnEarlyExpiry.Size = new System.Drawing.Size(171, 32);
             this.btnEarlyExpiry.TabIndex = 3;
             this.btnEarlyExpiry.Text = "Filter by expiry date(Earlier than)";
             this.btnEarlyExpiry.UseVisualStyleBackColor = true;
@@ -738,7 +731,7 @@
             this.btnLaterExpiry.Location = new System.Drawing.Point(8, 66);
             this.btnLaterExpiry.Margin = new System.Windows.Forms.Padding(4);
             this.btnLaterExpiry.Name = "btnLaterExpiry";
-            this.btnLaterExpiry.Size = new System.Drawing.Size(228, 39);
+            this.btnLaterExpiry.Size = new System.Drawing.Size(171, 32);
             this.btnLaterExpiry.TabIndex = 2;
             this.btnLaterExpiry.Text = "Filter by expiry date(Later than)";
             this.btnLaterExpiry.UseVisualStyleBackColor = true;
@@ -751,16 +744,15 @@
             this.dtpExpiryFilter.Location = new System.Drawing.Point(8, 43);
             this.dtpExpiryFilter.Margin = new System.Windows.Forms.Padding(4);
             this.dtpExpiryFilter.Name = "dtpExpiryFilter";
-            this.dtpExpiryFilter.Size = new System.Drawing.Size(131, 27);
+            this.dtpExpiryFilter.Size = new System.Drawing.Size(99, 23);
             this.dtpExpiryFilter.TabIndex = 1;
             // 
             // label20
             // 
             this.label20.AutoSize = true;
-            this.label20.Location = new System.Drawing.Point(4, 11);
-            this.label20.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label20.Location = new System.Drawing.Point(3, 9);
             this.label20.Name = "label20";
-            this.label20.Size = new System.Drawing.Size(90, 16);
+            this.label20.Size = new System.Drawing.Size(73, 13);
             this.label20.TabIndex = 0;
             this.label20.Text = "Filters/sorting:";
             // 
@@ -774,7 +766,7 @@
             this.pnlBloodNav.Location = new System.Drawing.Point(11, 187);
             this.pnlBloodNav.Margin = new System.Windows.Forms.Padding(4);
             this.pnlBloodNav.Name = "pnlBloodNav";
-            this.pnlBloodNav.Size = new System.Drawing.Size(665, 44);
+            this.pnlBloodNav.Size = new System.Drawing.Size(499, 36);
             this.pnlBloodNav.TabIndex = 6;
             // 
             // btnBloodLast
@@ -783,7 +775,7 @@
             this.btnBloodLast.Location = new System.Drawing.Point(500, 4);
             this.btnBloodLast.Margin = new System.Windows.Forms.Padding(4);
             this.btnBloodLast.Name = "btnBloodLast";
-            this.btnBloodLast.Size = new System.Drawing.Size(140, 37);
+            this.btnBloodLast.Size = new System.Drawing.Size(105, 30);
             this.btnBloodLast.TabIndex = 3;
             this.btnBloodLast.Text = ">>|";
             this.btnBloodLast.UseVisualStyleBackColor = true;
@@ -795,7 +787,7 @@
             this.btnBloodFirst.Location = new System.Drawing.Point(12, 4);
             this.btnBloodFirst.Margin = new System.Windows.Forms.Padding(4);
             this.btnBloodFirst.Name = "btnBloodFirst";
-            this.btnBloodFirst.Size = new System.Drawing.Size(145, 37);
+            this.btnBloodFirst.Size = new System.Drawing.Size(109, 30);
             this.btnBloodFirst.TabIndex = 2;
             this.btnBloodFirst.Text = "|<<";
             this.btnBloodFirst.UseVisualStyleBackColor = true;
@@ -807,7 +799,7 @@
             this.btnBloodPrev.Location = new System.Drawing.Point(165, 4);
             this.btnBloodPrev.Margin = new System.Windows.Forms.Padding(4);
             this.btnBloodPrev.Name = "btnBloodPrev";
-            this.btnBloodPrev.Size = new System.Drawing.Size(135, 37);
+            this.btnBloodPrev.Size = new System.Drawing.Size(101, 30);
             this.btnBloodPrev.TabIndex = 1;
             this.btnBloodPrev.Text = "<";
             this.btnBloodPrev.UseVisualStyleBackColor = true;
@@ -819,7 +811,7 @@
             this.btnBllodNext.Location = new System.Drawing.Point(357, 4);
             this.btnBllodNext.Margin = new System.Windows.Forms.Padding(4);
             this.btnBllodNext.Name = "btnBllodNext";
-            this.btnBllodNext.Size = new System.Drawing.Size(135, 37);
+            this.btnBllodNext.Size = new System.Drawing.Size(101, 30);
             this.btnBllodNext.TabIndex = 0;
             this.btnBllodNext.Text = ">";
             this.btnBllodNext.UseVisualStyleBackColor = true;
@@ -844,7 +836,7 @@
             this.panel3.Location = new System.Drawing.Point(189, 234);
             this.panel3.Margin = new System.Windows.Forms.Padding(4);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(665, 239);
+            this.panel3.Size = new System.Drawing.Size(499, 194);
             this.panel3.TabIndex = 1;
             // 
             // lblBloodExpiryDate
@@ -852,10 +844,9 @@
             this.lblBloodExpiryDate.AutoSize = true;
             this.lblBloodExpiryDate.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblBloodExpiryDate.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.lblBloodExpiryDate.Location = new System.Drawing.Point(28, 213);
-            this.lblBloodExpiryDate.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblBloodExpiryDate.Location = new System.Drawing.Point(21, 173);
             this.lblBloodExpiryDate.Name = "lblBloodExpiryDate";
-            this.lblBloodExpiryDate.Size = new System.Drawing.Size(97, 20);
+            this.lblBloodExpiryDate.Size = new System.Drawing.Size(77, 16);
             this.lblBloodExpiryDate.TabIndex = 12;
             this.lblBloodExpiryDate.Text = "Expiry date:";
             // 
@@ -864,10 +855,9 @@
             this.lblBloodUserID.AutoSize = true;
             this.lblBloodUserID.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblBloodUserID.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.lblBloodUserID.Location = new System.Drawing.Point(61, 81);
-            this.lblBloodUserID.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblBloodUserID.Location = new System.Drawing.Point(46, 66);
             this.lblBloodUserID.Name = "lblBloodUserID";
-            this.lblBloodUserID.Size = new System.Drawing.Size(67, 20);
+            this.lblBloodUserID.Size = new System.Drawing.Size(52, 16);
             this.lblBloodUserID.TabIndex = 11;
             this.lblBloodUserID.Text = "UserID:";
             // 
@@ -876,10 +866,9 @@
             this.lblBloodAppID.AutoSize = true;
             this.lblBloodAppID.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblBloodAppID.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.lblBloodAppID.Location = new System.Drawing.Point(4, 124);
-            this.lblBloodAppID.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblBloodAppID.Location = new System.Drawing.Point(3, 101);
             this.lblBloodAppID.Name = "lblBloodAppID";
-            this.lblBloodAppID.Size = new System.Drawing.Size(124, 20);
+            this.lblBloodAppID.Size = new System.Drawing.Size(98, 16);
             this.lblBloodAppID.TabIndex = 10;
             this.lblBloodAppID.Text = "AppointmentID:";
             // 
@@ -888,10 +877,9 @@
             this.lblTypeBlood.AutoSize = true;
             this.lblTypeBlood.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblTypeBlood.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.lblTypeBlood.Location = new System.Drawing.Point(35, 165);
-            this.lblTypeBlood.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblTypeBlood.Location = new System.Drawing.Point(26, 134);
             this.lblTypeBlood.Name = "lblTypeBlood";
-            this.lblTypeBlood.Size = new System.Drawing.Size(93, 20);
+            this.lblTypeBlood.Size = new System.Drawing.Size(75, 16);
             this.lblTypeBlood.TabIndex = 9;
             this.lblTypeBlood.Text = "Blood type:";
             // 
@@ -900,10 +888,9 @@
             this.lblUnitID.AutoSize = true;
             this.lblUnitID.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblUnitID.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.lblUnitID.Location = new System.Drawing.Point(69, 38);
-            this.lblUnitID.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblUnitID.Location = new System.Drawing.Point(52, 31);
             this.lblUnitID.Name = "lblUnitID";
-            this.lblUnitID.Size = new System.Drawing.Size(61, 20);
+            this.lblUnitID.Size = new System.Drawing.Size(46, 16);
             this.lblUnitID.TabIndex = 8;
             this.lblUnitID.Text = "UnitID:";
             // 
@@ -914,7 +901,7 @@
             this.btnBloodDelete.Location = new System.Drawing.Point(351, 112);
             this.btnBloodDelete.Margin = new System.Windows.Forms.Padding(4);
             this.btnBloodDelete.Name = "btnBloodDelete";
-            this.btnBloodDelete.Size = new System.Drawing.Size(167, 48);
+            this.btnBloodDelete.Size = new System.Drawing.Size(125, 39);
             this.btnBloodDelete.TabIndex = 7;
             this.btnBloodDelete.Text = "Delete record";
             this.btnBloodDelete.UseVisualStyleBackColor = true;
@@ -927,7 +914,7 @@
             this.btnBloodApply.Location = new System.Drawing.Point(351, 180);
             this.btnBloodApply.Margin = new System.Windows.Forms.Padding(4);
             this.btnBloodApply.Name = "btnBloodApply";
-            this.btnBloodApply.Size = new System.Drawing.Size(167, 42);
+            this.btnBloodApply.Size = new System.Drawing.Size(125, 34);
             this.btnBloodApply.TabIndex = 6;
             this.btnBloodApply.Text = "Apply changes";
             this.btnBloodApply.UseVisualStyleBackColor = true;
@@ -940,7 +927,7 @@
             this.dtpExpiry.Location = new System.Drawing.Point(139, 212);
             this.dtpExpiry.Margin = new System.Windows.Forms.Padding(4);
             this.dtpExpiry.Name = "dtpExpiry";
-            this.dtpExpiry.Size = new System.Drawing.Size(160, 22);
+            this.dtpExpiry.Size = new System.Drawing.Size(121, 20);
             this.dtpExpiry.TabIndex = 5;
             // 
             // cmbBloodInvType
@@ -950,7 +937,7 @@
             this.cmbBloodInvType.Location = new System.Drawing.Point(139, 165);
             this.cmbBloodInvType.Margin = new System.Windows.Forms.Padding(4);
             this.cmbBloodInvType.Name = "cmbBloodInvType";
-            this.cmbBloodInvType.Size = new System.Drawing.Size(160, 24);
+            this.cmbBloodInvType.Size = new System.Drawing.Size(121, 21);
             this.cmbBloodInvType.TabIndex = 3;
             // 
             // txtBloodAppID
@@ -960,7 +947,7 @@
             this.txtBloodAppID.Margin = new System.Windows.Forms.Padding(4);
             this.txtBloodAppID.Name = "txtBloodAppID";
             this.txtBloodAppID.ReadOnly = true;
-            this.txtBloodAppID.Size = new System.Drawing.Size(160, 22);
+            this.txtBloodAppID.Size = new System.Drawing.Size(121, 20);
             this.txtBloodAppID.TabIndex = 2;
             // 
             // txtBloodUserID
@@ -970,7 +957,7 @@
             this.txtBloodUserID.Margin = new System.Windows.Forms.Padding(4);
             this.txtBloodUserID.Name = "txtBloodUserID";
             this.txtBloodUserID.ReadOnly = true;
-            this.txtBloodUserID.Size = new System.Drawing.Size(160, 22);
+            this.txtBloodUserID.Size = new System.Drawing.Size(121, 20);
             this.txtBloodUserID.TabIndex = 1;
             // 
             // txtUnitID
@@ -980,7 +967,7 @@
             this.txtUnitID.Margin = new System.Windows.Forms.Padding(4);
             this.txtUnitID.Name = "txtUnitID";
             this.txtUnitID.ReadOnly = true;
-            this.txtUnitID.Size = new System.Drawing.Size(160, 22);
+            this.txtUnitID.Size = new System.Drawing.Size(121, 20);
             this.txtUnitID.TabIndex = 0;
             // 
             // dgvBlood
@@ -998,7 +985,7 @@
             this.dgvBlood.Margin = new System.Windows.Forms.Padding(4);
             this.dgvBlood.Name = "dgvBlood";
             this.dgvBlood.RowHeadersWidth = 51;
-            this.dgvBlood.Size = new System.Drawing.Size(676, 191);
+            this.dgvBlood.Size = new System.Drawing.Size(507, 155);
             this.dgvBlood.TabIndex = 0;
             // 
             // tpgUsers
@@ -1024,7 +1011,7 @@
             this.pnlRemoveUserFilters.Location = new System.Drawing.Point(715, 220);
             this.pnlRemoveUserFilters.Margin = new System.Windows.Forms.Padding(4);
             this.pnlRemoveUserFilters.Name = "pnlRemoveUserFilters";
-            this.pnlRemoveUserFilters.Size = new System.Drawing.Size(335, 41);
+            this.pnlRemoveUserFilters.Size = new System.Drawing.Size(251, 33);
             this.pnlRemoveUserFilters.TabIndex = 6;
             // 
             // btnRemoveFilter
@@ -1033,7 +1020,7 @@
             this.btnRemoveFilter.Location = new System.Drawing.Point(8, 9);
             this.btnRemoveFilter.Margin = new System.Windows.Forms.Padding(4);
             this.btnRemoveFilter.Name = "btnRemoveFilter";
-            this.btnRemoveFilter.Size = new System.Drawing.Size(163, 28);
+            this.btnRemoveFilter.Size = new System.Drawing.Size(122, 23);
             this.btnRemoveFilter.TabIndex = 1;
             this.btnRemoveFilter.Text = "Remove";
             this.btnRemoveFilter.UseVisualStyleBackColor = true;
@@ -1049,7 +1036,7 @@
             this.pnlUserNav.Location = new System.Drawing.Point(11, 217);
             this.pnlUserNav.Margin = new System.Windows.Forms.Padding(4);
             this.pnlUserNav.Name = "pnlUserNav";
-            this.pnlUserNav.Size = new System.Drawing.Size(696, 44);
+            this.pnlUserNav.Size = new System.Drawing.Size(522, 36);
             this.pnlUserNav.TabIndex = 5;
             // 
             // btnUserLast
@@ -1058,7 +1045,7 @@
             this.btnUserLast.Location = new System.Drawing.Point(520, 4);
             this.btnUserLast.Margin = new System.Windows.Forms.Padding(4);
             this.btnUserLast.Name = "btnUserLast";
-            this.btnUserLast.Size = new System.Drawing.Size(161, 37);
+            this.btnUserLast.Size = new System.Drawing.Size(121, 30);
             this.btnUserLast.TabIndex = 3;
             this.btnUserLast.Text = ">>|";
             this.btnUserLast.UseVisualStyleBackColor = true;
@@ -1070,7 +1057,7 @@
             this.btnUserFirst.Location = new System.Drawing.Point(12, 4);
             this.btnUserFirst.Margin = new System.Windows.Forms.Padding(4);
             this.btnUserFirst.Name = "btnUserFirst";
-            this.btnUserFirst.Size = new System.Drawing.Size(161, 37);
+            this.btnUserFirst.Size = new System.Drawing.Size(121, 30);
             this.btnUserFirst.TabIndex = 2;
             this.btnUserFirst.Text = "|<<";
             this.btnUserFirst.UseVisualStyleBackColor = true;
@@ -1082,7 +1069,7 @@
             this.btnUserPrev.Location = new System.Drawing.Point(181, 4);
             this.btnUserPrev.Margin = new System.Windows.Forms.Padding(4);
             this.btnUserPrev.Name = "btnUserPrev";
-            this.btnUserPrev.Size = new System.Drawing.Size(161, 37);
+            this.btnUserPrev.Size = new System.Drawing.Size(121, 30);
             this.btnUserPrev.TabIndex = 1;
             this.btnUserPrev.Text = "<";
             this.btnUserPrev.UseVisualStyleBackColor = true;
@@ -1094,7 +1081,7 @@
             this.btnUserNext.Location = new System.Drawing.Point(351, 4);
             this.btnUserNext.Margin = new System.Windows.Forms.Padding(4);
             this.btnUserNext.Name = "btnUserNext";
-            this.btnUserNext.Size = new System.Drawing.Size(161, 37);
+            this.btnUserNext.Size = new System.Drawing.Size(121, 30);
             this.btnUserNext.TabIndex = 0;
             this.btnUserNext.Text = ">";
             this.btnUserNext.UseVisualStyleBackColor = true;
@@ -1116,7 +1103,7 @@
             this.panel5.Location = new System.Drawing.Point(715, 7);
             this.panel5.Margin = new System.Windows.Forms.Padding(4);
             this.panel5.Name = "panel5";
-            this.panel5.Size = new System.Drawing.Size(335, 220);
+            this.panel5.Size = new System.Drawing.Size(251, 179);
             this.panel5.TabIndex = 4;
             this.panel5.Paint += new System.Windows.Forms.PaintEventHandler(this.panel5_Paint);
             // 
@@ -1129,7 +1116,7 @@
             this.cmbUserFilter.Location = new System.Drawing.Point(168, 210);
             this.cmbUserFilter.Margin = new System.Windows.Forms.Padding(4);
             this.cmbUserFilter.Name = "cmbUserFilter";
-            this.cmbUserFilter.Size = new System.Drawing.Size(96, 24);
+            this.cmbUserFilter.Size = new System.Drawing.Size(73, 21);
             this.cmbUserFilter.TabIndex = 8;
             this.cmbUserFilter.Text = "Admin";
             // 
@@ -1138,7 +1125,7 @@
             this.btnUserFilter.Location = new System.Drawing.Point(8, 207);
             this.btnUserFilter.Margin = new System.Windows.Forms.Padding(4);
             this.btnUserFilter.Name = "btnUserFilter";
-            this.btnUserFilter.Size = new System.Drawing.Size(184, 31);
+            this.btnUserFilter.Size = new System.Drawing.Size(138, 25);
             this.btnUserFilter.TabIndex = 7;
             this.btnUserFilter.Text = "Fliter by user type";
             this.btnUserFilter.UseVisualStyleBackColor = true;
@@ -1155,7 +1142,7 @@
             this.cmbBloodFilter.Location = new System.Drawing.Point(168, 172);
             this.cmbBloodFilter.Margin = new System.Windows.Forms.Padding(4);
             this.cmbBloodFilter.Name = "cmbBloodFilter";
-            this.cmbBloodFilter.Size = new System.Drawing.Size(96, 24);
+            this.cmbBloodFilter.Size = new System.Drawing.Size(73, 21);
             this.cmbBloodFilter.TabIndex = 6;
             this.cmbBloodFilter.Text = "O";
             // 
@@ -1164,7 +1151,7 @@
             this.btnBloodFilter.Location = new System.Drawing.Point(8, 167);
             this.btnBloodFilter.Margin = new System.Windows.Forms.Padding(4);
             this.btnBloodFilter.Name = "btnBloodFilter";
-            this.btnBloodFilter.Size = new System.Drawing.Size(184, 32);
+            this.btnBloodFilter.Size = new System.Drawing.Size(138, 26);
             this.btnBloodFilter.TabIndex = 5;
             this.btnBloodFilter.Text = "Filter by blood type";
             this.btnBloodFilter.UseVisualStyleBackColor = true;
@@ -1175,7 +1162,7 @@
             this.btnSurnameAlphabetical.Location = new System.Drawing.Point(8, 128);
             this.btnSurnameAlphabetical.Margin = new System.Windows.Forms.Padding(4);
             this.btnSurnameAlphabetical.Name = "btnSurnameAlphabetical";
-            this.btnSurnameAlphabetical.Size = new System.Drawing.Size(257, 32);
+            this.btnSurnameAlphabetical.Size = new System.Drawing.Size(193, 26);
             this.btnSurnameAlphabetical.TabIndex = 4;
             this.btnSurnameAlphabetical.Text = "Sort alphabetically(Surname)";
             this.btnSurnameAlphabetical.UseVisualStyleBackColor = true;
@@ -1186,7 +1173,7 @@
             this.btnNameAlphabetical.Location = new System.Drawing.Point(8, 89);
             this.btnNameAlphabetical.Margin = new System.Windows.Forms.Padding(4);
             this.btnNameAlphabetical.Name = "btnNameAlphabetical";
-            this.btnNameAlphabetical.Size = new System.Drawing.Size(257, 32);
+            this.btnNameAlphabetical.Size = new System.Drawing.Size(193, 26);
             this.btnNameAlphabetical.TabIndex = 3;
             this.btnNameAlphabetical.Text = "Sort alphabetically(Name)";
             this.btnNameAlphabetical.UseVisualStyleBackColor = true;
@@ -1197,7 +1184,7 @@
             this.btnFilterInactive.Location = new System.Drawing.Point(140, 47);
             this.btnFilterInactive.Margin = new System.Windows.Forms.Padding(4);
             this.btnFilterInactive.Name = "btnFilterInactive";
-            this.btnFilterInactive.Size = new System.Drawing.Size(125, 34);
+            this.btnFilterInactive.Size = new System.Drawing.Size(94, 28);
             this.btnFilterInactive.TabIndex = 2;
             this.btnFilterInactive.Text = "Filter by inactive";
             this.btnFilterInactive.UseVisualStyleBackColor = true;
@@ -1208,7 +1195,7 @@
             this.btnFilterActive.Location = new System.Drawing.Point(8, 47);
             this.btnFilterActive.Margin = new System.Windows.Forms.Padding(4);
             this.btnFilterActive.Name = "btnFilterActive";
-            this.btnFilterActive.Size = new System.Drawing.Size(124, 34);
+            this.btnFilterActive.Size = new System.Drawing.Size(93, 28);
             this.btnFilterActive.TabIndex = 1;
             this.btnFilterActive.Text = "Filter by active";
             this.btnFilterActive.UseVisualStyleBackColor = true;
@@ -1217,10 +1204,9 @@
             // label19
             // 
             this.label19.AutoSize = true;
-            this.label19.Location = new System.Drawing.Point(4, 12);
-            this.label19.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label19.Location = new System.Drawing.Point(3, 10);
             this.label19.Name = "label19";
-            this.label19.Size = new System.Drawing.Size(90, 16);
+            this.label19.Size = new System.Drawing.Size(73, 13);
             this.label19.TabIndex = 0;
             this.label19.Text = "Filters/sorting:";
             // 
@@ -1243,7 +1229,7 @@
             this.dgvUsers.Margin = new System.Windows.Forms.Padding(4);
             this.dgvUsers.Name = "dgvUsers";
             this.dgvUsers.RowHeadersWidth = 51;
-            this.dgvUsers.Size = new System.Drawing.Size(699, 209);
+            this.dgvUsers.Size = new System.Drawing.Size(524, 170);
             this.dgvUsers.TabIndex = 3;
             // 
             // pnlUserEdit
@@ -1283,7 +1269,7 @@
             this.btnStartInsert.Location = new System.Drawing.Point(625, 34);
             this.btnStartInsert.Margin = new System.Windows.Forms.Padding(4);
             this.btnStartInsert.Name = "btnStartInsert";
-            this.btnStartInsert.Size = new System.Drawing.Size(161, 43);
+            this.btnStartInsert.Size = new System.Drawing.Size(121, 35);
             this.btnStartInsert.TabIndex = 21;
             this.btnStartInsert.Text = "Insert a User";
             this.btnStartInsert.UseVisualStyleBackColor = true;
@@ -1294,7 +1280,7 @@
             this.btnInsertUser.Location = new System.Drawing.Point(625, 25);
             this.btnInsertUser.Margin = new System.Windows.Forms.Padding(4);
             this.btnInsertUser.Name = "btnInsertUser";
-            this.btnInsertUser.Size = new System.Drawing.Size(161, 38);
+            this.btnInsertUser.Size = new System.Drawing.Size(121, 31);
             this.btnInsertUser.TabIndex = 20;
             this.btnInsertUser.Text = "Insert record";
             this.btnInsertUser.UseVisualStyleBackColor = true;
@@ -1305,10 +1291,9 @@
             // 
             this.lblUserType.AutoSize = true;
             this.lblUserType.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblUserType.Location = new System.Drawing.Point(320, 78);
-            this.lblUserType.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblUserType.Location = new System.Drawing.Point(240, 63);
             this.lblUserType.Name = "lblUserType";
-            this.lblUserType.Size = new System.Drawing.Size(91, 20);
+            this.lblUserType.Size = new System.Drawing.Size(74, 16);
             this.lblUserType.TabIndex = 19;
             this.lblUserType.Text = "User Type:";
             // 
@@ -1316,10 +1301,9 @@
             // 
             this.lblBloodType.AutoSize = true;
             this.lblBloodType.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblBloodType.Location = new System.Drawing.Point(311, 110);
-            this.lblBloodType.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblBloodType.Location = new System.Drawing.Point(233, 89);
             this.lblBloodType.Name = "lblBloodType";
-            this.lblBloodType.Size = new System.Drawing.Size(98, 20);
+            this.lblBloodType.Size = new System.Drawing.Size(81, 16);
             this.lblBloodType.TabIndex = 18;
             this.lblBloodType.Text = "Blood Type:";
             // 
@@ -1327,10 +1311,9 @@
             // 
             this.lblName.AutoSize = true;
             this.lblName.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblName.Location = new System.Drawing.Point(48, 106);
-            this.lblName.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblName.Location = new System.Drawing.Point(36, 86);
             this.lblName.Name = "lblName";
-            this.lblName.Size = new System.Drawing.Size(58, 20);
+            this.lblName.Size = new System.Drawing.Size(47, 16);
             this.lblName.TabIndex = 17;
             this.lblName.Text = "Name:";
             // 
@@ -1338,10 +1321,9 @@
             // 
             this.lblSurname.AutoSize = true;
             this.lblSurname.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblSurname.Location = new System.Drawing.Point(25, 138);
-            this.lblSurname.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblSurname.Location = new System.Drawing.Point(19, 112);
             this.lblSurname.Name = "lblSurname";
-            this.lblSurname.Size = new System.Drawing.Size(81, 20);
+            this.lblSurname.Size = new System.Drawing.Size(64, 16);
             this.lblSurname.TabIndex = 16;
             this.lblSurname.Text = "Surname:";
             // 
@@ -1349,10 +1331,9 @@
             // 
             this.lblIDNum.AutoSize = true;
             this.lblIDNum.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblIDNum.Location = new System.Drawing.Point(17, 170);
-            this.lblIDNum.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblIDNum.Location = new System.Drawing.Point(13, 138);
             this.lblIDNum.Name = "lblIDNum";
-            this.lblIDNum.Size = new System.Drawing.Size(95, 20);
+            this.lblIDNum.Size = new System.Drawing.Size(74, 16);
             this.lblIDNum.TabIndex = 15;
             this.lblIDNum.Text = "ID Number:";
             // 
@@ -1360,10 +1341,9 @@
             // 
             this.lblPhoneNum.AutoSize = true;
             this.lblPhoneNum.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblPhoneNum.Location = new System.Drawing.Point(289, 42);
-            this.lblPhoneNum.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblPhoneNum.Location = new System.Drawing.Point(217, 34);
             this.lblPhoneNum.Name = "lblPhoneNum";
-            this.lblPhoneNum.Size = new System.Drawing.Size(122, 20);
+            this.lblPhoneNum.Size = new System.Drawing.Size(97, 16);
             this.lblPhoneNum.TabIndex = 14;
             this.lblPhoneNum.Text = "Phone number:";
             // 
@@ -1371,10 +1351,9 @@
             // 
             this.lblPassword.AutoSize = true;
             this.lblPassword.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblPassword.Location = new System.Drawing.Point(17, 73);
-            this.lblPassword.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblPassword.Location = new System.Drawing.Point(13, 59);
             this.lblPassword.Name = "lblPassword";
-            this.lblPassword.Size = new System.Drawing.Size(88, 20);
+            this.lblPassword.Size = new System.Drawing.Size(70, 16);
             this.lblPassword.TabIndex = 13;
             this.lblPassword.Text = "Password:";
             // 
@@ -1382,10 +1361,9 @@
             // 
             this.lblUserID.AutoSize = true;
             this.lblUserID.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblUserID.Location = new System.Drawing.Point(41, 43);
-            this.lblUserID.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblUserID.Location = new System.Drawing.Point(31, 35);
             this.lblUserID.Name = "lblUserID";
-            this.lblUserID.Size = new System.Drawing.Size(67, 20);
+            this.lblUserID.Size = new System.Drawing.Size(52, 16);
             this.lblUserID.TabIndex = 12;
             this.lblUserID.Text = "UserID:";
             // 
@@ -1394,7 +1372,7 @@
             this.btnDeleteUser.Location = new System.Drawing.Point(625, 97);
             this.btnDeleteUser.Margin = new System.Windows.Forms.Padding(4);
             this.btnDeleteUser.Name = "btnDeleteUser";
-            this.btnDeleteUser.Size = new System.Drawing.Size(161, 38);
+            this.btnDeleteUser.Size = new System.Drawing.Size(121, 31);
             this.btnDeleteUser.TabIndex = 11;
             this.btnDeleteUser.Text = "Delete record";
             this.btnDeleteUser.UseVisualStyleBackColor = true;
@@ -1405,7 +1383,7 @@
             this.btnUpdateUser.Location = new System.Drawing.Point(625, 151);
             this.btnUpdateUser.Margin = new System.Windows.Forms.Padding(4);
             this.btnUpdateUser.Name = "btnUpdateUser";
-            this.btnUpdateUser.Size = new System.Drawing.Size(161, 38);
+            this.btnUpdateUser.Size = new System.Drawing.Size(121, 31);
             this.btnUpdateUser.TabIndex = 10;
             this.btnUpdateUser.Text = "Apply changes";
             this.btnUpdateUser.UseVisualStyleBackColor = true;
@@ -1418,7 +1396,7 @@
             this.chkActive.Location = new System.Drawing.Point(427, 140);
             this.chkActive.Margin = new System.Windows.Forms.Padding(4);
             this.chkActive.Name = "chkActive";
-            this.chkActive.Size = new System.Drawing.Size(157, 24);
+            this.chkActive.Size = new System.Drawing.Size(125, 20);
             this.chkActive.TabIndex = 9;
             this.chkActive.Text = "Is active account";
             this.chkActive.UseVisualStyleBackColor = true;
@@ -1433,7 +1411,7 @@
             this.cmbUser.Location = new System.Drawing.Point(427, 75);
             this.cmbUser.Margin = new System.Windows.Forms.Padding(4);
             this.cmbUser.Name = "cmbUser";
-            this.cmbUser.Size = new System.Drawing.Size(160, 28);
+            this.cmbUser.Size = new System.Drawing.Size(121, 24);
             this.cmbUser.TabIndex = 8;
             this.cmbUser.SelectionChangeCommitted += new System.EventHandler(this.cmbUser_SelectionChangeCommitted);
             // 
@@ -1450,7 +1428,7 @@
             this.cmbBlood.Location = new System.Drawing.Point(427, 106);
             this.cmbBlood.Margin = new System.Windows.Forms.Padding(4);
             this.cmbBlood.Name = "cmbBlood";
-            this.cmbBlood.Size = new System.Drawing.Size(160, 28);
+            this.cmbBlood.Size = new System.Drawing.Size(121, 24);
             this.cmbBlood.TabIndex = 7;
             this.cmbBlood.SelectionChangeCommitted += new System.EventHandler(this.cmbBlood_SelectionChangeCommitted);
             // 
@@ -1460,7 +1438,7 @@
             this.txtPhone.Location = new System.Drawing.Point(427, 42);
             this.txtPhone.Margin = new System.Windows.Forms.Padding(4);
             this.txtPhone.Name = "txtPhone";
-            this.txtPhone.Size = new System.Drawing.Size(132, 26);
+            this.txtPhone.Size = new System.Drawing.Size(100, 22);
             this.txtPhone.TabIndex = 5;
             // 
             // txtID
@@ -1469,7 +1447,7 @@
             this.txtID.Location = new System.Drawing.Point(119, 170);
             this.txtID.Margin = new System.Windows.Forms.Padding(4);
             this.txtID.Name = "txtID";
-            this.txtID.Size = new System.Drawing.Size(132, 26);
+            this.txtID.Size = new System.Drawing.Size(100, 22);
             this.txtID.TabIndex = 4;
             // 
             // txtSurname
@@ -1478,7 +1456,7 @@
             this.txtSurname.Location = new System.Drawing.Point(119, 138);
             this.txtSurname.Margin = new System.Windows.Forms.Padding(4);
             this.txtSurname.Name = "txtSurname";
-            this.txtSurname.Size = new System.Drawing.Size(132, 26);
+            this.txtSurname.Size = new System.Drawing.Size(100, 22);
             this.txtSurname.TabIndex = 3;
             // 
             // txtName
@@ -1487,7 +1465,7 @@
             this.txtName.Location = new System.Drawing.Point(119, 106);
             this.txtName.Margin = new System.Windows.Forms.Padding(4);
             this.txtName.Name = "txtName";
-            this.txtName.Size = new System.Drawing.Size(132, 26);
+            this.txtName.Size = new System.Drawing.Size(100, 22);
             this.txtName.TabIndex = 2;
             // 
             // txtPassword
@@ -1498,7 +1476,7 @@
             this.txtPassword.Name = "txtPassword";
             this.txtPassword.PasswordChar = '*';
             this.txtPassword.ReadOnly = true;
-            this.txtPassword.Size = new System.Drawing.Size(132, 26);
+            this.txtPassword.Size = new System.Drawing.Size(100, 22);
             this.txtPassword.TabIndex = 1;
             // 
             // txtUserID
@@ -1508,7 +1486,7 @@
             this.txtUserID.Margin = new System.Windows.Forms.Padding(4);
             this.txtUserID.Name = "txtUserID";
             this.txtUserID.ReadOnly = true;
-            this.txtUserID.Size = new System.Drawing.Size(132, 26);
+            this.txtUserID.Size = new System.Drawing.Size(100, 22);
             this.txtUserID.TabIndex = 0;
             // 
             // btnCancelInsert
@@ -1516,7 +1494,7 @@
             this.btnCancelInsert.Location = new System.Drawing.Point(625, 91);
             this.btnCancelInsert.Margin = new System.Windows.Forms.Padding(4);
             this.btnCancelInsert.Name = "btnCancelInsert";
-            this.btnCancelInsert.Size = new System.Drawing.Size(161, 34);
+            this.btnCancelInsert.Size = new System.Drawing.Size(121, 28);
             this.btnCancelInsert.TabIndex = 22;
             this.btnCancelInsert.Text = "Cancel Insert";
             this.btnCancelInsert.UseVisualStyleBackColor = true;
@@ -1534,7 +1512,7 @@
             this.tcAdmin.Margin = new System.Windows.Forms.Padding(4);
             this.tcAdmin.Name = "tcAdmin";
             this.tcAdmin.SelectedIndex = 0;
-            this.tcAdmin.Size = new System.Drawing.Size(1068, 508);
+            this.tcAdmin.Size = new System.Drawing.Size(801, 413);
             this.tcAdmin.TabIndex = 2;
             this.tcAdmin.SelectedIndexChanged += new System.EventHandler(this.tcAdmin_SelectedIndexChanged);
             // 
@@ -1647,7 +1625,7 @@
             this.btnCountSchedules.Location = new System.Drawing.Point(21, 44);
             this.btnCountSchedules.Margin = new System.Windows.Forms.Padding(4);
             this.btnCountSchedules.Name = "btnCountSchedules";
-            this.btnCountSchedules.Size = new System.Drawing.Size(248, 49);
+            this.btnCountSchedules.Size = new System.Drawing.Size(186, 40);
             this.btnCountSchedules.TabIndex = 1;
             this.btnCountSchedules.Text = "Count Schedules per Donor";
             this.btnCountSchedules.UseVisualStyleBackColor = true;
@@ -1656,10 +1634,9 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(4, 11);
-            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label1.Location = new System.Drawing.Point(3, 9);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(90, 16);
+            this.label1.Size = new System.Drawing.Size(73, 13);
             this.label1.TabIndex = 0;
             this.label1.Text = "Filters/sorting:";
             // 
@@ -1678,7 +1655,7 @@
             this.pnlSchedule.Location = new System.Drawing.Point(11, 236);
             this.pnlSchedule.Margin = new System.Windows.Forms.Padding(4);
             this.pnlSchedule.Name = "pnlSchedule";
-            this.pnlSchedule.Size = new System.Drawing.Size(1036, 230);
+            this.pnlSchedule.Size = new System.Drawing.Size(777, 187);
             this.pnlSchedule.TabIndex = 1;
             // 
             // btnDeleteSchedule
@@ -1723,14 +1700,14 @@
             this.txtSearchByApp.Location = new System.Drawing.Point(575, 197);
             this.txtSearchByApp.Margin = new System.Windows.Forms.Padding(4);
             this.txtSearchByApp.Name = "txtSearchByApp";
-            this.txtSearchByApp.Size = new System.Drawing.Size(159, 22);
+            this.txtSearchByApp.Size = new System.Drawing.Size(120, 20);
             this.txtSearchByApp.TabIndex = 6;
             // 
             // txtSearchByUser
             // 
             this.txtSearchByUser.Location = new System.Drawing.Point(577, 83);
             this.txtSearchByUser.Name = "txtSearchByUser";
-            this.txtSearchByUser.Size = new System.Drawing.Size(159, 22);
+            this.txtSearchByUser.Size = new System.Drawing.Size(120, 20);
             this.txtSearchByUser.TabIndex = 5;
             this.txtSearchByUser.Enter += new System.EventHandler(this.txtSearchByUser_Enter);
             this.txtSearchByUser.Leave += new System.EventHandler(this.txtSearchByUser_Leave);
@@ -1756,7 +1733,7 @@
             this.lblUnattended.Location = new System.Drawing.Point(16, 121);
             this.lblUnattended.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblUnattended.Name = "lblUnattended";
-            this.lblUnattended.Size = new System.Drawing.Size(253, 20);
+            this.lblUnattended.Size = new System.Drawing.Size(210, 16);
             this.lblUnattended.TabIndex = 3;
             this.lblUnattended.Text = "Number of schedules unattended: ";
             // 
@@ -1767,7 +1744,7 @@
             this.lblAttended.Location = new System.Drawing.Point(16, 81);
             this.lblAttended.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblAttended.Name = "lblAttended";
-            this.lblAttended.Size = new System.Drawing.Size(231, 20);
+            this.lblAttended.Size = new System.Drawing.Size(193, 16);
             this.lblAttended.TabIndex = 2;
             this.lblAttended.Text = "Number of schedules attended:";
             // 
@@ -1778,7 +1755,7 @@
             this.lblSchedules.Location = new System.Drawing.Point(16, 46);
             this.lblSchedules.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblSchedules.Name = "lblSchedules";
-            this.lblSchedules.Size = new System.Drawing.Size(302, 20);
+            this.lblSchedules.Size = new System.Drawing.Size(253, 16);
             this.lblSchedules.TabIndex = 1;
             this.lblSchedules.Text = "Total number of scheduled appointments:";
             // 
@@ -1786,10 +1763,9 @@
             // 
             this.lblShortStats.AutoSize = true;
             this.lblShortStats.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblShortStats.Location = new System.Drawing.Point(16, 15);
-            this.lblShortStats.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblShortStats.Location = new System.Drawing.Point(12, 12);
             this.lblShortStats.Name = "lblShortStats";
-            this.lblShortStats.Size = new System.Drawing.Size(146, 20);
+            this.lblShortStats.Size = new System.Drawing.Size(114, 16);
             this.lblShortStats.TabIndex = 0;
             this.lblShortStats.Text = "Short Statistics:";
             // 
@@ -2167,14 +2143,15 @@
             // 
             // AdminForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1095, 583);
+            this.ClientSize = new System.Drawing.Size(821, 474);
             this.Controls.Add(this.tcAdmin);
             this.Controls.Add(this.pnlTopBar);
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "AdminForm";
             this.Text = "AdminForm";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.AdminForm_FormClosing);
             this.Load += new System.EventHandler(this.AdminForm_Load);
             this.pnlTopBar.ResumeLayout(false);
             this.pnlTopBar.PerformLayout();

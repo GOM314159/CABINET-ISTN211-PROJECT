@@ -680,5 +680,15 @@ namespace BloodBankSystem
         {
             appointmentBindingSource.Filter = "Capacity < 10";  
         }
+
+        private void btnClose_Click_1(object sender, EventArgs e)
+        {
+            Environment.Exit(0);
+        }
+
+        private void AppointmentForm_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            Environment.Exit(0);
+        }
     }
 }

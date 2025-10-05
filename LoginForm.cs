@@ -150,5 +150,10 @@ namespace BloodBankSystem
         {
             BackBtn.FlatStyle = FlatStyle.Flat; 
         }
+
+        private void LoginForm_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            Environment.Exit(0);
+        }
     }
 }

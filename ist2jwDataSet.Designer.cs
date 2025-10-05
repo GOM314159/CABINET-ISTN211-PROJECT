@@ -5121,8 +5121,8 @@ GROUP BY tblUsers.UserID, tblUsers.Name, tblUsers.Surname";
             this._commandCollection[1].CommandType = global::System.Data.CommandType.Text;
             this._commandCollection[2] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[2].Connection = this.Connection;
-            this._commandCollection[2].CommandText = "SELECT ScheduleID, UserID, AppID, Attended FROM dbo.Schedule\r\nWHERE ScheduleID = " +
-                "@ScheduleID\r\n";
+            this._commandCollection[2].CommandText = "SELECT ScheduleID, UserID, AppID, Attended\r\n    FROM     Schedule\r\n    WHERE  (Sc" +
+                "heduleID = @ScheduleID) ";
             this._commandCollection[2].CommandType = global::System.Data.CommandType.Text;
             this._commandCollection[2].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@ScheduleID", global::System.Data.SqlDbType.NChar, 10, global::System.Data.ParameterDirection.Input, 0, 0, "ScheduleID", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._commandCollection[3] = new global::System.Data.SqlClient.SqlCommand();

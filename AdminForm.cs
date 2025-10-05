@@ -1310,5 +1310,10 @@ namespace BloodBankSystem
            
             dgvTotalSchedule.Visible = false;
         }
+
+        private void AdminForm_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            Environment.Exit(0);
+        }
     }
 }

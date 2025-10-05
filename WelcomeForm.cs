@@ -42,21 +42,6 @@ namespace BloodBankSystem
             this.Hide();
         }
 
-        private void WelcomeForm_Load(object sender, EventArgs e)
-        {
-
-        }
-
-        private void tblUsersBindingNavigatorSaveItem_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void titleLbl_Click(object sender, EventArgs e)
-        {
-
-        }
-
         private void ExitBtn_Click(object sender, EventArgs e)
         {
             Environment.Exit(0);
@@ -90,6 +75,11 @@ namespace BloodBankSystem
         private void ExitBtn_MouseUp(object sender, MouseEventArgs e)
         {
             ExitBtn.FlatStyle = FlatStyle.Flat; 
+        }
+
+        private void WelcomeForm_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            Environment.Exit(0);
         }
     }
 }

@@ -270,6 +270,11 @@ namespace BloodBankSystem
         {
 
         }
+
+        private void HomePage_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            Environment.Exit(0);
+        }
     }
 
 }
