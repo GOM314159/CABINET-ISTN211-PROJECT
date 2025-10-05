@@ -483,6 +483,7 @@ namespace BloodBankSystem
                 barSeries.Points.AddXY(add, count);
 
 
+
             }
 
             chtUserSchedule.Series.Add(barSeries);
@@ -949,14 +950,15 @@ namespace BloodBankSystem
             Confirmation = MessageBox.Show("Are you sure you want to delete this record and associated schedules?", "Confirm", MessageBoxButtons.YesNo);
             if (Confirmation == DialogResult.Yes)
             {
-                DataRowView currentRow = (DataRowView)tblUsersBindingSource.Current;
-                String UserID = currentRow["UserID"].ToString();
+                DataRowView currentRow = (DataRowView)appointmentBindingSource.Current;
+                String appID = currentRow["AppID"].ToString().Trim();
+                scheduleBindingSource.MoveFirst();
 
                 foreach (DataRowView rowView in scheduleBindingSource)
                 {
-                    string ID = rowView["UserID"].ToString();
+                    String ID = rowView["AppID"].ToString().Trim();
 
-                    if (UserID == ID)
+                    if (rowView["AppID"].ToString().Trim().Equals(appID))
                     {
                         scheduleBindingSource.RemoveCurrent();
 
@@ -964,19 +966,14 @@ namespace BloodBankSystem
 
                 }
 
-                foreach (DataRowView rowView in tblBloodInventoryBindingSource)
-                {
-                    string ID = rowView["UserID"].ToString();
-
-                    if (UserID == ID)
-                    {
-                        tblBloodInventoryBindingSource.RemoveCurrent();
-                    }
-
-                }
-                tblUsersBindingSource.RemoveCurrent();
+                scheduleBindingSource.EndEdit();
+                scheduleTableAdapter.Update(ist2jwDataSet);
+                
+                appointmentBindingSource.RemoveCurrent();
                 appointmentTableAdapter.Update(ist2jwDataSet);
-                tblUsersTableAdapter.Update(ist2jwDataSet);
+
+                statsFill();
+
             }
             else
             {
