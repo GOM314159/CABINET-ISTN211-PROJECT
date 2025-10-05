@@ -77,10 +77,10 @@
             this.welcomelbl.BackColor = System.Drawing.Color.Transparent;
             this.welcomelbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 36.25F, System.Drawing.FontStyle.Bold);
             this.welcomelbl.ForeColor = System.Drawing.Color.SteelBlue;
-            this.welcomelbl.Location = new System.Drawing.Point(126, 0);
-            this.welcomelbl.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.welcomelbl.Location = new System.Drawing.Point(168, 0);
+            this.welcomelbl.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.welcomelbl.Name = "welcomelbl";
-            this.welcomelbl.Size = new System.Drawing.Size(863, 58);
+            this.welcomelbl.Size = new System.Drawing.Size(1151, 71);
             this.welcomelbl.TabIndex = 2;
             this.welcomelbl.Text = "Welcome ";
             this.welcomelbl.TextAlign = System.Drawing.ContentAlignment.TopCenter;
@@ -92,11 +92,12 @@
             this.bbNameLbl.BackColor = System.Drawing.Color.Transparent;
             this.bbNameLbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 38.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.bbNameLbl.ForeColor = System.Drawing.Color.White;
-            this.bbNameLbl.Location = new System.Drawing.Point(82, 62);
+            this.bbNameLbl.Location = new System.Drawing.Point(109, 76);
+            this.bbNameLbl.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.bbNameLbl.Name = "bbNameLbl";
-            this.bbNameLbl.Size = new System.Drawing.Size(933, 63);
+            this.bbNameLbl.Size = new System.Drawing.Size(1244, 78);
             this.bbNameLbl.TabIndex = 3;
-            this.bbNameLbl.Text = "To Blood    Bankers";
+            this.bbNameLbl.Text = "To Pulse Point";
             this.bbNameLbl.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             // 
             // ProfileImg
@@ -105,10 +106,10 @@
             this.ProfileImg.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ProfileImg.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.ProfileImg.Image = global::BloodBankSystem.Properties.Resources.ProfileImage;
-            this.ProfileImg.Location = new System.Drawing.Point(997, 0);
-            this.ProfileImg.Margin = new System.Windows.Forms.Padding(4);
+            this.ProfileImg.Location = new System.Drawing.Point(1329, 0);
+            this.ProfileImg.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
             this.ProfileImg.Name = "ProfileImg";
-            this.ProfileImg.Size = new System.Drawing.Size(101, 99);
+            this.ProfileImg.Size = new System.Drawing.Size(134, 121);
             this.ProfileImg.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.ProfileImg.TabIndex = 4;
             this.ProfileImg.TabStop = false;
@@ -125,9 +126,10 @@
             this.prfPnl.Controls.Add(this.donorStatusLbl);
             this.prfPnl.Controls.Add(this.prfDonLbl);
             this.prfPnl.Controls.Add(this.prfNameLbl);
-            this.prfPnl.Location = new System.Drawing.Point(837, 94);
+            this.prfPnl.Location = new System.Drawing.Point(1116, 116);
+            this.prfPnl.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.prfPnl.Name = "prfPnl";
-            this.prfPnl.Size = new System.Drawing.Size(261, 435);
+            this.prfPnl.Size = new System.Drawing.Size(347, 535);
             this.prfPnl.TabIndex = 5;
             this.prfPnl.Visible = false;
             // 
@@ -135,10 +137,9 @@
             // 
             this.numLiveSavedLbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 18.25F);
             this.numLiveSavedLbl.ForeColor = System.Drawing.Color.Maroon;
-            this.numLiveSavedLbl.Location = new System.Drawing.Point(1, 297);
-            this.numLiveSavedLbl.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.numLiveSavedLbl.Location = new System.Drawing.Point(1, 366);
             this.numLiveSavedLbl.Name = "numLiveSavedLbl";
-            this.numLiveSavedLbl.Size = new System.Drawing.Size(258, 26);
+            this.numLiveSavedLbl.Size = new System.Drawing.Size(344, 32);
             this.numLiveSavedLbl.TabIndex = 22;
             this.numLiveSavedLbl.Text = "0";
             this.numLiveSavedLbl.TextAlign = System.Drawing.ContentAlignment.TopCenter;
@@ -148,10 +149,9 @@
             this.pLivesSavedLbl.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.pLivesSavedLbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 18.25F);
             this.pLivesSavedLbl.ForeColor = System.Drawing.Color.Maroon;
-            this.pLivesSavedLbl.Location = new System.Drawing.Point(0, 248);
-            this.pLivesSavedLbl.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.pLivesSavedLbl.Location = new System.Drawing.Point(0, 305);
             this.pLivesSavedLbl.Name = "pLivesSavedLbl";
-            this.pLivesSavedLbl.Size = new System.Drawing.Size(261, 32);
+            this.pLivesSavedLbl.Size = new System.Drawing.Size(347, 39);
             this.pLivesSavedLbl.TabIndex = 21;
             this.pLivesSavedLbl.Text = "Potential lives saved";
             this.pLivesSavedLbl.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -167,9 +167,10 @@
             this.logOutBtn.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
             this.logOutBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.logOutBtn.Font = new System.Drawing.Font("Arial", 18.25F);
-            this.logOutBtn.Location = new System.Drawing.Point(60, 370);
+            this.logOutBtn.Location = new System.Drawing.Point(80, 455);
+            this.logOutBtn.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.logOutBtn.Name = "logOutBtn";
-            this.logOutBtn.Size = new System.Drawing.Size(137, 39);
+            this.logOutBtn.Size = new System.Drawing.Size(183, 48);
             this.logOutBtn.TabIndex = 19;
             this.logOutBtn.Text = "Log Out";
             this.logOutBtn.UseVisualStyleBackColor = false;
@@ -179,10 +180,9 @@
             // 
             this.ttlDonLbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 18.25F);
             this.ttlDonLbl.ForeColor = System.Drawing.Color.Maroon;
-            this.ttlDonLbl.Location = new System.Drawing.Point(-1, 180);
-            this.ttlDonLbl.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.ttlDonLbl.Location = new System.Drawing.Point(-1, 222);
             this.ttlDonLbl.Name = "ttlDonLbl";
-            this.ttlDonLbl.Size = new System.Drawing.Size(260, 26);
+            this.ttlDonLbl.Size = new System.Drawing.Size(347, 32);
             this.ttlDonLbl.TabIndex = 4;
             this.ttlDonLbl.Text = "0";
             this.ttlDonLbl.TextAlign = System.Drawing.ContentAlignment.TopCenter;
@@ -192,10 +192,9 @@
             this.donorStatusLbl.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.donorStatusLbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 18.25F);
             this.donorStatusLbl.ForeColor = System.Drawing.Color.Green;
-            this.donorStatusLbl.Location = new System.Drawing.Point(-1, 81);
-            this.donorStatusLbl.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.donorStatusLbl.Location = new System.Drawing.Point(-1, 100);
             this.donorStatusLbl.Name = "donorStatusLbl";
-            this.donorStatusLbl.Size = new System.Drawing.Size(261, 32);
+            this.donorStatusLbl.Size = new System.Drawing.Size(347, 39);
             this.donorStatusLbl.TabIndex = 20;
             this.donorStatusLbl.Text = "Donor Level";
             this.donorStatusLbl.TextAlign = System.Drawing.ContentAlignment.TopCenter;
@@ -205,10 +204,9 @@
             this.prfDonLbl.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.prfDonLbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 18.25F);
             this.prfDonLbl.ForeColor = System.Drawing.Color.Maroon;
-            this.prfDonLbl.Location = new System.Drawing.Point(-1, 136);
-            this.prfDonLbl.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.prfDonLbl.Location = new System.Drawing.Point(-1, 167);
             this.prfDonLbl.Name = "prfDonLbl";
-            this.prfDonLbl.Size = new System.Drawing.Size(261, 32);
+            this.prfDonLbl.Size = new System.Drawing.Size(347, 39);
             this.prfDonLbl.TabIndex = 1;
             this.prfDonLbl.Text = "Total Donations";
             this.prfDonLbl.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -220,9 +218,8 @@
             this.prfNameLbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.prfNameLbl.ForeColor = System.Drawing.Color.SteelBlue;
             this.prfNameLbl.Location = new System.Drawing.Point(0, 0);
-            this.prfNameLbl.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.prfNameLbl.Name = "prfNameLbl";
-            this.prfNameLbl.Size = new System.Drawing.Size(259, 72);
+            this.prfNameLbl.Size = new System.Drawing.Size(345, 89);
             this.prfNameLbl.TabIndex = 0;
             this.prfNameLbl.Text = "Name";
             this.prfNameLbl.TextAlign = System.Drawing.ContentAlignment.TopCenter;
@@ -230,9 +227,10 @@
             // badge4Img
             // 
             this.badge4Img.Image = global::BloodBankSystem.Properties.Resources.LegendaryDonorBadge;
-            this.badge4Img.Location = new System.Drawing.Point(138, 142);
+            this.badge4Img.Location = new System.Drawing.Point(184, 175);
+            this.badge4Img.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.badge4Img.Name = "badge4Img";
-            this.badge4Img.Size = new System.Drawing.Size(142, 126);
+            this.badge4Img.Size = new System.Drawing.Size(189, 155);
             this.badge4Img.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.badge4Img.TabIndex = 25;
             this.badge4Img.TabStop = false;
@@ -241,9 +239,10 @@
             // badge3Img
             // 
             this.badge3Img.Image = global::BloodBankSystem.Properties.Resources.LifeSaverBadge;
-            this.badge3Img.Location = new System.Drawing.Point(0, 142);
+            this.badge3Img.Location = new System.Drawing.Point(0, 175);
+            this.badge3Img.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.badge3Img.Name = "badge3Img";
-            this.badge3Img.Size = new System.Drawing.Size(142, 126);
+            this.badge3Img.Size = new System.Drawing.Size(189, 155);
             this.badge3Img.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.badge3Img.TabIndex = 24;
             this.badge3Img.TabStop = false;
@@ -252,9 +251,10 @@
             // badge2Img
             // 
             this.badge2Img.Image = global::BloodBankSystem.Properties.Resources.RegularDonorBadge;
-            this.badge2Img.Location = new System.Drawing.Point(138, 19);
+            this.badge2Img.Location = new System.Drawing.Point(184, 23);
+            this.badge2Img.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.badge2Img.Name = "badge2Img";
-            this.badge2Img.Size = new System.Drawing.Size(142, 126);
+            this.badge2Img.Size = new System.Drawing.Size(189, 155);
             this.badge2Img.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.badge2Img.TabIndex = 23;
             this.badge2Img.TabStop = false;
@@ -263,9 +263,10 @@
             // badge1Img
             // 
             this.badge1Img.Image = global::BloodBankSystem.Properties.Resources.FirstTimeDonorBadge;
-            this.badge1Img.Location = new System.Drawing.Point(1, 19);
+            this.badge1Img.Location = new System.Drawing.Point(1, 23);
+            this.badge1Img.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.badge1Img.Name = "badge1Img";
-            this.badge1Img.Size = new System.Drawing.Size(141, 126);
+            this.badge1Img.Size = new System.Drawing.Size(188, 155);
             this.badge1Img.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.badge1Img.TabIndex = 8;
             this.badge1Img.TabStop = false;
@@ -282,9 +283,10 @@
             this.donateBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.donateBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 28.25F);
             this.donateBtn.ForeColor = System.Drawing.Color.White;
-            this.donateBtn.Location = new System.Drawing.Point(401, 244);
+            this.donateBtn.Location = new System.Drawing.Point(535, 300);
+            this.donateBtn.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.donateBtn.Name = "donateBtn";
-            this.donateBtn.Size = new System.Drawing.Size(277, 174);
+            this.donateBtn.Size = new System.Drawing.Size(369, 214);
             this.donateBtn.TabIndex = 6;
             this.donateBtn.Text = "DONATE";
             this.donateBtn.UseVisualStyleBackColor = false;
@@ -298,19 +300,19 @@
             this.urgentNeedsPnl.Controls.Add(this.bloodSymbolLbl);
             this.urgentNeedsPnl.Controls.Add(this.BloodtypeLbl);
             this.urgentNeedsPnl.Controls.Add(this.UrgentNeedsLbl);
-            this.urgentNeedsPnl.Location = new System.Drawing.Point(0, 432);
+            this.urgentNeedsPnl.Location = new System.Drawing.Point(0, 532);
+            this.urgentNeedsPnl.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.urgentNeedsPnl.Name = "urgentNeedsPnl";
-            this.urgentNeedsPnl.Size = new System.Drawing.Size(258, 147);
+            this.urgentNeedsPnl.Size = new System.Drawing.Size(343, 180);
             this.urgentNeedsPnl.TabIndex = 7;
             // 
             // BloodLvlLbl
             // 
             this.BloodLvlLbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F);
             this.BloodLvlLbl.ForeColor = System.Drawing.Color.DarkOrange;
-            this.BloodLvlLbl.Location = new System.Drawing.Point(0, 96);
-            this.BloodLvlLbl.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.BloodLvlLbl.Location = new System.Drawing.Point(0, 118);
             this.BloodLvlLbl.Name = "BloodLvlLbl";
-            this.BloodLvlLbl.Size = new System.Drawing.Size(255, 43);
+            this.BloodLvlLbl.Size = new System.Drawing.Size(340, 53);
             this.BloodLvlLbl.TabIndex = 6;
             this.BloodLvlLbl.Text = "Level";
             this.BloodLvlLbl.TextAlign = System.Drawing.ContentAlignment.TopCenter;
@@ -319,20 +321,18 @@
             // 
             this.bloodSymbolLbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F);
             this.bloodSymbolLbl.ForeColor = System.Drawing.Color.DodgerBlue;
-            this.bloodSymbolLbl.Location = new System.Drawing.Point(170, 56);
-            this.bloodSymbolLbl.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.bloodSymbolLbl.Location = new System.Drawing.Point(227, 69);
             this.bloodSymbolLbl.Name = "bloodSymbolLbl";
-            this.bloodSymbolLbl.Size = new System.Drawing.Size(60, 40);
+            this.bloodSymbolLbl.Size = new System.Drawing.Size(80, 49);
             this.bloodSymbolLbl.TabIndex = 5;
             // 
             // BloodtypeLbl
             // 
             this.BloodtypeLbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F);
             this.BloodtypeLbl.ForeColor = System.Drawing.Color.DarkRed;
-            this.BloodtypeLbl.Location = new System.Drawing.Point(0, 56);
-            this.BloodtypeLbl.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.BloodtypeLbl.Location = new System.Drawing.Point(0, 69);
             this.BloodtypeLbl.Name = "BloodtypeLbl";
-            this.BloodtypeLbl.Size = new System.Drawing.Size(194, 40);
+            this.BloodtypeLbl.Size = new System.Drawing.Size(259, 49);
             this.BloodtypeLbl.TabIndex = 2;
             this.BloodtypeLbl.Text = "Blood Type : ";
             this.BloodtypeLbl.TextAlign = System.Drawing.ContentAlignment.TopCenter;
@@ -344,9 +344,8 @@
             this.UrgentNeedsLbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.UrgentNeedsLbl.ForeColor = System.Drawing.Color.Red;
             this.UrgentNeedsLbl.Location = new System.Drawing.Point(0, 0);
-            this.UrgentNeedsLbl.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.UrgentNeedsLbl.Name = "UrgentNeedsLbl";
-            this.UrgentNeedsLbl.Size = new System.Drawing.Size(255, 40);
+            this.UrgentNeedsLbl.Size = new System.Drawing.Size(339, 49);
             this.UrgentNeedsLbl.TabIndex = 1;
             this.UrgentNeedsLbl.Text = "URGENT NEED!!!";
             this.UrgentNeedsLbl.TextAlign = System.Drawing.ContentAlignment.TopCenter;
@@ -388,8 +387,10 @@
             this.badgeGroup.Controls.Add(this.badge1Img);
             this.badgeGroup.Controls.Add(this.badge2Img);
             this.badgeGroup.Location = new System.Drawing.Point(0, 0);
+            this.badgeGroup.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.badgeGroup.Name = "badgeGroup";
-            this.badgeGroup.Size = new System.Drawing.Size(281, 268);
+            this.badgeGroup.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.badgeGroup.Size = new System.Drawing.Size(375, 330);
             this.badgeGroup.TabIndex = 26;
             this.badgeGroup.TabStop = false;
             this.badgeGroup.Text = "Badges Obtained";
@@ -397,12 +398,12 @@
             // 
             // HomePage
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.BackgroundImage = global::BloodBankSystem.Properties.Resources.MainBackground;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.ClientSize = new System.Drawing.Size(1098, 580);
+            this.ClientSize = new System.Drawing.Size(1464, 714);
             this.Controls.Add(this.badgeGroup);
             this.Controls.Add(this.urgentNeedsPnl);
             this.Controls.Add(this.donateBtn);
@@ -412,7 +413,7 @@
             this.Controls.Add(this.welcomelbl);
             this.DoubleBuffered = true;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Margin = new System.Windows.Forms.Padding(4);
+            this.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
             this.Name = "HomePage";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Home Page";

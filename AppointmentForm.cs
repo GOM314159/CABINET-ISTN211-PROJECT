@@ -1,17 +1,7 @@
-﻿using BloodBankSystem.ist2jwDataSetTableAdapters;
-using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
+﻿using System;
 using System.Data.SqlClient;
 using System.Drawing;
-using System.IO;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
-using static BloodBankSystem.ist2jwDataSet;
-using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 
 namespace BloodBankSystem
 {
@@ -58,14 +48,10 @@ namespace BloodBankSystem
             bool isValid = false;
             bool hasAttended = false;
 
-            //if capacity == 1 then date is  available 
-            if (capacity == 1)
+            //if capacity < 10 then date is available 
+            if (capacity < 10)
             {
                 isAvailable = true;
-            }
-            else if (capacity == 2)
-            {
-                isAvailable = false;
             }
 
             if (isAvailable)
@@ -114,8 +100,13 @@ namespace BloodBankSystem
 
         private void btnBookAppointment_Click(object sender, EventArgs e)
         {
-
-
+            Random rnd = new Random();
+            string newSchID = "S" + rnd.Next(0, 99999).ToString();
+            Boolean schIDCheck = false;
+            if (ValidSchID(newSchID))
+            {
+                schIDCheck = true;
+            }
             string appID = appIDTextBox1.Text;
             DateTime date = appDateTimePicker1.Value;
             int capacity = int.Parse(capacityTextBox.Text);
@@ -133,17 +124,11 @@ namespace BloodBankSystem
                 {
                     // insert new appointment into schedule table
                     scheduleBindingSource.MoveLast();
-                    Random rnd = new Random();
-                    string newSchID = "S" +rnd.Next(0, 99999).ToString();
-                    
-                    scheduleTableAdapter.InsertSchedule(newSchID.ToString() , currentUserID , appID ,true);
+
+                    scheduleTableAdapter.InsertSchedule(newSchID.ToString(), currentUserID, appID, true);
 
                     // update appointment table capacity
                     appointmentTableAdapter.UpdateCapacity(capacity + 1, appID);
-
-                    //  capacityTextBox.Text = (capacity + 1).ToString();
-                    //  appointmentBindingSource.EndEdit();
-                    //  appointmentTableAdapter.Update(ist2jwDataSet);
 
                     MessageBox.Show("Congrats. Your new appointment has been scheduled ");
                     // refresh tables 
@@ -162,32 +147,30 @@ namespace BloodBankSystem
             {
                 MessageBox.Show("Please choose another appointment to book. This date is full");
             }
-
-
-
         }
 
+        private bool ValidSchID(string schID)
+        {
+            Boolean schIDCheck = false;
+
+            var adapter1 = new ist2jwDataSetTableAdapters.ScheduleTableAdapter();
+            var dataTable1 = adapter1.FindScheduleID(schID);
+
+            if (dataTable1.Rows.Count == 0)
+            {
+                schIDCheck = true;
+            }
+            else
+            {
+                Random rnd = new Random();
+                schID = rnd.Next(0, 1000000).ToString();
+                ValidSchID(schID);
+            }
+
+
+            return schIDCheck;
+        }
         private void panel1_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
-        private void button2_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void button4_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void button3_Click(object sender, EventArgs e)
-        {
-            // next
-        }
-
-        private void button1_Click(object sender, EventArgs e)
         {
 
         }
@@ -273,13 +256,22 @@ namespace BloodBankSystem
 
         private void filterAppointmentsBtn_Click(object sender, EventArgs e)
         {
-            if (filterSelect.Text.Equals(""))
+
+            if (filterSelect.SelectedIndex == -1)
             {
-                MessageBox.Show("Please select a filter option");
-                return;
+                // Change background color to red
+                filterSelect.BackColor = Color.LightCoral;
+
+                // Optionally, show a message
+                MessageBox.Show("Please select a filter option before applying.", "Filter Required", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+
+                return; // Stop the filtering process
             }
+
+
             if (filterSelect.Text.Equals("Year") && filterAppYearCmbx.Text.Equals(""))
             {
+                filterAppYearCmbx.BackColor = Color.LightCoral;
                 MessageBox.Show("Please select a year to filter");
                 return;
             }
@@ -290,19 +282,22 @@ namespace BloodBankSystem
 
             }
 
-            if (filterSelect.Text.Equals("Month") && filterAppYearCmbx.Text.Equals(""))
+            if (filterSelect.Text.Equals("Month") && filterAppMonthCmbx.Text.Equals(""))
             {
+                filterAppMonthCmbx.BackColor = Color.LightCoral;
                 MessageBox.Show("Please select a month to filter ");
                 return;
             }
             else if (filterSelect.Text.Equals("Month"))
             {
                 int month = int.Parse(filterAppMonthCmbx.Text.Substring(0, 2));
-                this.appointmentTableAdapter.FillDataByMonth(ist2jwDataSet.Appointment, month);
+
+                appointmentTableAdapter.FillDataByMonth(ist2jwDataSet.Appointment, month);
 
             }
             if (filterSelect.Text.Equals("Venue") && filterAppVenueCmbx.Text.Equals(""))
             {
+                filterAppVenueCmbx.BackColor = Color.LightCoral;
                 MessageBox.Show("Please select a venue to filter ");
                 return;
             }
@@ -314,6 +309,7 @@ namespace BloodBankSystem
             }
             if (filterSelect.Text.Equals("Capacity") && filterAppCapacityCmbx.Text.Equals(""))
             {
+                filterAppCapacityCmbx.BackColor = Color.LightCoral;
                 MessageBox.Show("Please select a capacity to filter ");
                 return;
             }
@@ -324,6 +320,12 @@ namespace BloodBankSystem
             }
             // Refresh the DataGridView
             appointmentDataGridView.Refresh();
+            // If valid, reset color and continue
+            filterSelect.BackColor = Color.White;
+            filterAppCapacityCmbx.BackColor = Color.White;
+            filterAppMonthCmbx.BackColor = Color.White;
+            filterAppYearCmbx.BackColor = Color.White;
+            filterAppVenueCmbx.BackColor = Color.White;
 
         }
 
@@ -373,9 +375,7 @@ namespace BloodBankSystem
 
         private void appointmentBindingNavigatorSaveItem_Click(object sender, EventArgs e)
         {
-            this.Validate();
-            this.appointmentBindingSource.EndEdit();
-            this.tableAdapterManager.UpdateAll(this.ist2jwDataSet);
+
 
         }
 
@@ -384,10 +384,6 @@ namespace BloodBankSystem
 
 
         }
-
-
-
-
 
         private void button1_Click_1(object sender, EventArgs e)
         {
@@ -411,15 +407,13 @@ namespace BloodBankSystem
 
         private void button5_Click_1(object sender, EventArgs e)
         {
-
-  
             appointmentBindingSource.Filter = string.Empty;
             appointmentBindingSource.Sort = string.Empty;
-           
-        
 
             tblUserScheduleBindingSource.Sort = string.Empty;
             tblUserScheduleBindingSource.Filter = string.Empty;
+            panelNoApp.Visible = false;
+            searchDateTime.Value = DateTime.Now;
 
             this.appointmentTableAdapter.Fill(this.ist2jwDataSet.Appointment);
             this.tblUserScheduleTableAdapter.FillUserSchedule(this.ist2jwDataSet.tblUserSchedule, HomePage.userID);
@@ -434,6 +428,18 @@ namespace BloodBankSystem
         {
             DateTime searchDate = searchDateTime.Value;
             appointmentBindingSource.Filter = "AppDate = '" + searchDate.ToString("yyyy-MM-dd") + "'";
+
+            if (appointmentDataGridView.Rows.Count == 0)
+            {
+                panelNoApp.Visible = true;
+                label13.Text = "No appointments have been scheduled for: " + searchDate.ToString("yyyy-MM-dd");
+
+            }
+            else
+            {
+                panelNoApp.Visible = false;
+            }
+
         }
 
         private void sortAppointmentDateBtn_Click_1(object sender, EventArgs e)
@@ -521,13 +527,23 @@ namespace BloodBankSystem
 
         private void button9_Click(object sender, EventArgs e)
         {
-            if (scheduleFilterCmbx.Text.Equals(""))
+            if (scheduleFilterCmbx.SelectedIndex == -1)
             {
-                MessageBox.Show("Please select a filter option");
-                return;
+                // Change background color to red
+                scheduleFilterCmbx.BackColor = Color.LightCoral;
+
+                // Optionally, show a message
+                MessageBox.Show("Please select a filter option before applying.", "Filter Required", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+
+                return; // Stop the filtering process
             }
+
+            // If valid, reset color and continue
+            scheduleFilterCmbx.BackColor = Color.White;
+
             if (scheduleFilterCmbx.Text.Equals("Year") && filterScheduleYearCmbx.Text.Equals(""))
             {
+                filterScheduleYearCmbx.BackColor = Color.LightCoral;
                 MessageBox.Show("Please select a year to filter");
                 return;
             }
@@ -538,6 +554,7 @@ namespace BloodBankSystem
             }
             if (scheduleFilterCmbx.Text.Equals("Month") && filterScheduleMonthCmbx.Text.Equals(""))
             {
+                filterScheduleMonthCmbx.BackColor = Color.LightCoral;
                 MessageBox.Show("Please select a month to filter");
                 return;
             }
@@ -549,6 +566,7 @@ namespace BloodBankSystem
             }
             if (scheduleFilterCmbx.Text.Equals("Venue") && filterScheduleVenueCmbx.Text.Equals(""))
             {
+                filterScheduleVenueCmbx.BackColor = Color.LightCoral;
                 MessageBox.Show("Please select a venue to filter");
                 return;
             }
@@ -564,6 +582,10 @@ namespace BloodBankSystem
             }
             // Refresh the DataGridView
             appointmentDataGridView.Refresh();
+            filterScheduleMonthCmbx.BackColor = Color.White;
+            filterScheduleYearCmbx.BackColor = Color.White;
+            filterScheduleVenueCmbx.BackColor = Color.White;
+
         }
 
         private void button10_Click(object sender, EventArgs e)
@@ -578,26 +600,6 @@ namespace BloodBankSystem
             tblUserScheduleDataGridView.Refresh();
         }
 
-        private void button2_Click_3(object sender, EventArgs e)
-        {
-            appointmentBindingSource.MoveNext();
-        }
-
-        private void button4_Click_2(object sender, EventArgs e)
-        {
-            appointmentBindingSource.MoveFirst();
-        }
-
-        private void button1_Click_2(object sender, EventArgs e)
-        {
-            appointmentBindingSource.MoveLast();
-        }
-
-        private void button3_Click_2(object sender, EventArgs e)
-        {
-            appointmentBindingSource.MovePrevious();
-        }
-
         private void tabPage1_Click(object sender, EventArgs e)
         {
 
@@ -606,6 +608,77 @@ namespace BloodBankSystem
         private void appIDTextBox1_TextChanged(object sender, EventArgs e)
         {
 
+        }
+
+        private void fillUserScheduleToolStripButton_Click_1(object sender, EventArgs e)
+        {
+
+
+        }
+
+        private void tabPage2_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnNext2_Click(object sender, EventArgs e)
+        {
+            appointmentBindingSource.MoveNext();
+        }
+
+        private void btnLast2_Click(object sender, EventArgs e)
+        {
+            appointmentBindingSource.MoveLast();
+        }
+
+        private void btnPrev2_Click(object sender, EventArgs e)
+        {
+            appointmentBindingSource.MovePrevious();
+        }
+
+        private void btnFirst2_Click(object sender, EventArgs e)
+        {
+            appointmentBindingSource.MoveFirst();
+        }
+
+        private void btnNext1_Click(object sender, EventArgs e)
+        {
+            appointmentBindingSource.MoveNext();
+        }
+
+        private void btnLast1_Click(object sender, EventArgs e)
+        {
+            appointmentBindingSource.MoveLast();
+        }
+
+        private void btnPrev1_Click(object sender, EventArgs e)
+        {
+            appointmentBindingSource.MovePrevious();
+        }
+
+        private void btnFirst1_Click(object sender, EventArgs e)
+        {
+            appointmentBindingSource.MoveFirst();
+        }
+
+        private void btnHelp_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("Appointment schedules are displayed in the table provided by Pulse Point.\r\nPlease select an appointment from the table to continue.\r\n\r\nNote: Your next booking must be at least 2 months after your most recent attended appointment.", "Appointment Help", MessageBoxButtons.OK, MessageBoxIcon.Information);
+        }
+
+        private void button6_MouseHover(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnClose_Click(object sender, EventArgs e)
+        {
+            Environment.Exit(0);
+        }
+
+        private void btnSearchAvailable_Click(object sender, EventArgs e)
+        {
+            appointmentBindingSource.Filter = "Capacity < 10";
         }
 
         private void AppointmentForm_FormClosing(object sender, FormClosingEventArgs e)

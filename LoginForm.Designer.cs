@@ -49,7 +49,7 @@
             // 
             // IDLabel
             // 
-            this.IDLabel.BackColor = System.Drawing.Color.White;
+            this.IDLabel.BackColor = System.Drawing.Color.Transparent;
             this.IDLabel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.IDLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 18.25F);
             this.IDLabel.ForeColor = System.Drawing.Color.RoyalBlue;
@@ -67,14 +67,14 @@
             this.PasswordTextBox.Location = new System.Drawing.Point(103, 320);
             this.PasswordTextBox.Name = "PasswordTextBox";
             this.PasswordTextBox.PasswordChar = '*';
-            this.PasswordTextBox.Size = new System.Drawing.Size(339, 38);
+            this.PasswordTextBox.Size = new System.Drawing.Size(339, 46);
             this.PasswordTextBox.TabIndex = 13;
             this.PasswordTextBox.Tag = "";
             this.PasswordTextBox.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // PasswordLbl
             // 
-            this.PasswordLbl.BackColor = System.Drawing.Color.White;
+            this.PasswordLbl.BackColor = System.Drawing.Color.Transparent;
             this.PasswordLbl.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.PasswordLbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 18.25F);
             this.PasswordLbl.ForeColor = System.Drawing.Color.RoyalBlue;
@@ -95,7 +95,7 @@
             this.loginBtn.Font = new System.Drawing.Font("Arial", 29.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.loginBtn.ForeColor = System.Drawing.Color.Red;
             this.loginBtn.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.loginBtn.Location = new System.Drawing.Point(171, 377);
+            this.loginBtn.Location = new System.Drawing.Point(174, 385);
             this.loginBtn.Name = "loginBtn";
             this.loginBtn.Size = new System.Drawing.Size(219, 72);
             this.loginBtn.TabIndex = 17;
@@ -133,7 +133,7 @@
             this.mIDTextBox.Location = new System.Drawing.Point(103, 193);
             this.mIDTextBox.Mask = "0000000000000";
             this.mIDTextBox.Name = "mIDTextBox";
-            this.mIDTextBox.Size = new System.Drawing.Size(339, 39);
+            this.mIDTextBox.Size = new System.Drawing.Size(339, 46);
             this.mIDTextBox.TabIndex = 19;
             this.mIDTextBox.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.mIDTextBox.ValidatingType = typeof(int);
@@ -179,16 +179,16 @@
             // 
             this.pictureBox1.BackgroundImage = global::BloodBankSystem.Properties.Resources.Logbackground;
             this.pictureBox1.Image = global::BloodBankSystem.Properties.Resources.Logbackground;
-            this.pictureBox1.Location = new System.Drawing.Point(-1, -1);
+            this.pictureBox1.Location = new System.Drawing.Point(-2, 0);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(555, 511);
+            this.pictureBox1.Size = new System.Drawing.Size(560, 508);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 26;
             this.pictureBox1.TabStop = false;
             // 
             // LoginForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 14F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.BackgroundImage = global::BloodBankSystem.Properties.Resources.Logbackground;

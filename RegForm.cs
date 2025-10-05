@@ -131,7 +131,7 @@ namespace BloodBankSystem
             {
                 try {  var adapter = new ist2jwDataSetTableAdapters.tblUsersTableAdapter();
                 var dataTable = adapter.UserRegistration(userID, password, firstName, lastName, iDNumber, phoneNumber, userType, bloodType, isActiveAcc);
-                MessageBox.Show("Registration Successful Welcome to 'Blood Bank System' "+firstName+"\nPlease Log in to access the system");
+                MessageBox.Show("Registration Successful Welcome to 'Pulse Point Blood Bank System' "+firstName+"\nPlease Log in to access the system");
 
                    Form LoginForm = new LoginForm();
                    LoginForm.Show();
