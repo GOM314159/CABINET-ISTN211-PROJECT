@@ -336,6 +336,10 @@
             // 
             // btnFirst2
             // 
+            this.btnFirst2.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnFirst2.BackgroundImage")));
+            this.btnFirst2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnFirst2.FlatAppearance.BorderSize = 0;
+            this.btnFirst2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnFirst2.ForeColor = System.Drawing.Color.Black;
             this.btnFirst2.Location = new System.Drawing.Point(61, 24);
             this.btnFirst2.Name = "btnFirst2";
@@ -399,6 +403,11 @@
             // 
             // btnSearchAvailable
             // 
+            this.btnSearchAvailable.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnSearchAvailable.BackgroundImage")));
+            this.btnSearchAvailable.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnSearchAvailable.FlatAppearance.BorderSize = 0;
+            this.btnSearchAvailable.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnSearchAvailable.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.25F);
             this.btnSearchAvailable.ForeColor = System.Drawing.Color.Black;
             this.btnSearchAvailable.Location = new System.Drawing.Point(77, 46);
             this.btnSearchAvailable.Margin = new System.Windows.Forms.Padding(2);
@@ -427,6 +436,10 @@
             // 
             // button6
             // 
+            this.button6.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button6.BackgroundImage")));
+            this.button6.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.button6.FlatAppearance.BorderSize = 0;
+            this.button6.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button6.ForeColor = System.Drawing.Color.Black;
             this.button6.Location = new System.Drawing.Point(264, 15);
             this.button6.Name = "button6";
@@ -477,9 +490,13 @@
             // 
             // btnBookAppointment
             // 
-            this.btnBookAppointment.BackColor = System.Drawing.Color.White;
+            this.btnBookAppointment.BackColor = System.Drawing.Color.Transparent;
+            this.btnBookAppointment.BackgroundImage = global::BloodBankSystem.Properties.Resources.buttonbackGreen;
+            this.btnBookAppointment.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnBookAppointment.FlatAppearance.BorderSize = 0;
+            this.btnBookAppointment.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnBookAppointment.ForeColor = System.Drawing.Color.Black;
-            this.btnBookAppointment.Location = new System.Drawing.Point(89, 298);
+            this.btnBookAppointment.Location = new System.Drawing.Point(102, 299);
             this.btnBookAppointment.Name = "btnBookAppointment";
             this.btnBookAppointment.Size = new System.Drawing.Size(196, 39);
             this.btnBookAppointment.TabIndex = 3;
@@ -535,6 +552,10 @@
             // 
             // btnNext1
             // 
+            this.btnNext1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnNext1.BackgroundImage")));
+            this.btnNext1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnNext1.FlatAppearance.BorderSize = 0;
+            this.btnNext1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnNext1.ForeColor = System.Drawing.Color.Black;
             this.btnNext1.Location = new System.Drawing.Point(199, 16);
             this.btnNext1.Margin = new System.Windows.Forms.Padding(2);
@@ -547,6 +568,10 @@
             // 
             // btnLast1
             // 
+            this.btnLast1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnLast1.BackgroundImage")));
+            this.btnLast1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnLast1.FlatAppearance.BorderSize = 0;
+            this.btnLast1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnLast1.ForeColor = System.Drawing.Color.Black;
             this.btnLast1.Location = new System.Drawing.Point(262, 16);
             this.btnLast1.Name = "btnLast1";
@@ -558,6 +583,10 @@
             // 
             // btnPrev1
             // 
+            this.btnPrev1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnPrev1.BackgroundImage")));
+            this.btnPrev1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnPrev1.FlatAppearance.BorderSize = 0;
+            this.btnPrev1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnPrev1.ForeColor = System.Drawing.Color.Black;
             this.btnPrev1.Location = new System.Drawing.Point(130, 16);
             this.btnPrev1.Name = "btnPrev1";
@@ -569,6 +598,10 @@
             // 
             // btnFirst1
             // 
+            this.btnFirst1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnFirst1.BackgroundImage")));
+            this.btnFirst1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnFirst1.FlatAppearance.BorderSize = 0;
+            this.btnFirst1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnFirst1.ForeColor = System.Drawing.Color.Black;
             this.btnFirst1.Location = new System.Drawing.Point(64, 16);
             this.btnFirst1.Name = "btnFirst1";
@@ -687,6 +720,10 @@
             // 
             // button10
             // 
+            this.button10.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button10.BackgroundImage")));
+            this.button10.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.button10.FlatAppearance.BorderSize = 0;
+            this.button10.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button10.ForeColor = System.Drawing.Color.Black;
             this.button10.Location = new System.Drawing.Point(252, 20);
             this.button10.Name = "button10";
@@ -885,6 +922,10 @@
             // 
             // btnPrev2
             // 
+            this.btnPrev2.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnPrev2.BackgroundImage")));
+            this.btnPrev2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnPrev2.FlatAppearance.BorderSize = 0;
+            this.btnPrev2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnPrev2.ForeColor = System.Drawing.Color.Black;
             this.btnPrev2.Location = new System.Drawing.Point(121, 24);
             this.btnPrev2.Name = "btnPrev2";
@@ -896,6 +937,10 @@
             // 
             // btnNext2
             // 
+            this.btnNext2.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnNext2.BackgroundImage")));
+            this.btnNext2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnNext2.FlatAppearance.BorderSize = 0;
+            this.btnNext2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnNext2.ForeColor = System.Drawing.Color.Black;
             this.btnNext2.Location = new System.Drawing.Point(183, 24);
             this.btnNext2.Name = "btnNext2";
@@ -907,6 +952,10 @@
             // 
             // btnLast2
             // 
+            this.btnLast2.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnLast2.BackgroundImage")));
+            this.btnLast2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnLast2.FlatAppearance.BorderSize = 0;
+            this.btnLast2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnLast2.ForeColor = System.Drawing.Color.Black;
             this.btnLast2.Location = new System.Drawing.Point(248, 24);
             this.btnLast2.Name = "btnLast2";
@@ -943,6 +992,10 @@
             // 
             // button7
             // 
+            this.button7.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button7.BackgroundImage")));
+            this.button7.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.button7.FlatAppearance.BorderSize = 0;
+            this.button7.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button7.ForeColor = System.Drawing.Color.Black;
             this.button7.Location = new System.Drawing.Point(124, 73);
             this.button7.Name = "button7";
@@ -954,6 +1007,10 @@
             // 
             // sortAttendedBtn
             // 
+            this.sortAttendedBtn.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("sortAttendedBtn.BackgroundImage")));
+            this.sortAttendedBtn.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.sortAttendedBtn.FlatAppearance.BorderSize = 0;
+            this.sortAttendedBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.sortAttendedBtn.ForeColor = System.Drawing.Color.Black;
             this.sortAttendedBtn.Location = new System.Drawing.Point(18, 19);
             this.sortAttendedBtn.Name = "sortAttendedBtn";
@@ -965,6 +1022,10 @@
             // 
             // sortVenueBtn
             // 
+            this.sortVenueBtn.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("sortVenueBtn.BackgroundImage")));
+            this.sortVenueBtn.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.sortVenueBtn.FlatAppearance.BorderSize = 0;
+            this.sortVenueBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.sortVenueBtn.ForeColor = System.Drawing.Color.Black;
             this.sortVenueBtn.Location = new System.Drawing.Point(18, 73);
             this.sortVenueBtn.Name = "sortVenueBtn";
@@ -976,6 +1037,10 @@
             // 
             // sortDateBtn
             // 
+            this.sortDateBtn.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("sortDateBtn.BackgroundImage")));
+            this.sortDateBtn.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.sortDateBtn.FlatAppearance.BorderSize = 0;
+            this.sortDateBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.sortDateBtn.ForeColor = System.Drawing.Color.Black;
             this.sortDateBtn.Location = new System.Drawing.Point(124, 19);
             this.sortDateBtn.Name = "sortDateBtn";
@@ -1030,6 +1095,10 @@
             // 
             // button9
             // 
+            this.button9.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button9.BackgroundImage")));
+            this.button9.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.button9.FlatAppearance.BorderSize = 0;
+            this.button9.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button9.ForeColor = System.Drawing.Color.Black;
             this.button9.Location = new System.Drawing.Point(82, 204);
             this.button9.Name = "button9";
@@ -1214,6 +1283,10 @@
             // 
             // button8
             // 
+            this.button8.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button8.BackgroundImage")));
+            this.button8.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.button8.FlatAppearance.BorderSize = 0;
+            this.button8.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button8.ForeColor = System.Drawing.Color.Black;
             this.button8.Location = new System.Drawing.Point(48, 67);
             this.button8.Name = "button8";
@@ -1225,6 +1298,10 @@
             // 
             // sortAppointmentDateBtn
             // 
+            this.sortAppointmentDateBtn.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("sortAppointmentDateBtn.BackgroundImage")));
+            this.sortAppointmentDateBtn.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.sortAppointmentDateBtn.FlatAppearance.BorderSize = 0;
+            this.sortAppointmentDateBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.sortAppointmentDateBtn.ForeColor = System.Drawing.Color.Black;
             this.sortAppointmentDateBtn.Location = new System.Drawing.Point(48, 23);
             this.sortAppointmentDateBtn.Name = "sortAppointmentDateBtn";
@@ -1236,6 +1313,10 @@
             // 
             // sortAppointmentsVenueBtn
             // 
+            this.sortAppointmentsVenueBtn.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("sortAppointmentsVenueBtn.BackgroundImage")));
+            this.sortAppointmentsVenueBtn.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.sortAppointmentsVenueBtn.FlatAppearance.BorderSize = 0;
+            this.sortAppointmentsVenueBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.sortAppointmentsVenueBtn.ForeColor = System.Drawing.Color.Black;
             this.sortAppointmentsVenueBtn.Location = new System.Drawing.Point(48, 107);
             this.sortAppointmentsVenueBtn.Name = "sortAppointmentsVenueBtn";
@@ -1462,6 +1543,10 @@
             // 
             // filterAppointmentsBtn
             // 
+            this.filterAppointmentsBtn.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("filterAppointmentsBtn.BackgroundImage")));
+            this.filterAppointmentsBtn.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.filterAppointmentsBtn.FlatAppearance.BorderSize = 0;
+            this.filterAppointmentsBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.filterAppointmentsBtn.ForeColor = System.Drawing.Color.Black;
             this.filterAppointmentsBtn.Location = new System.Drawing.Point(88, 185);
             this.filterAppointmentsBtn.Name = "filterAppointmentsBtn";
