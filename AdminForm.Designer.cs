@@ -30,10 +30,10 @@
         {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(AdminForm));
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea3 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend3 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea4 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend4 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea5 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend5 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea6 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend6 = new System.Windows.Forms.DataVisualization.Charting.Legend();
             this.pnlTopBar = new System.Windows.Forms.Panel();
             this.btnHomepage = new System.Windows.Forms.Button();
             this.btnLogout = new System.Windows.Forms.Button();
@@ -1279,7 +1279,7 @@
             // 
             // pnlUserNav
             // 
-            this.pnlUserNav.BackColor = System.Drawing.Color.SteelBlue;
+            this.pnlUserNav.BackColor = System.Drawing.Color.Transparent;
             this.pnlUserNav.Controls.Add(this.btnUserLast);
             this.pnlUserNav.Controls.Add(this.btnUserFirst);
             this.pnlUserNav.Controls.Add(this.btnUserPrev);
@@ -2364,10 +2364,10 @@
             // 
             // chtUserSchedule
             // 
-            chartArea3.Name = "ChartArea1";
-            this.chtUserSchedule.ChartAreas.Add(chartArea3);
-            legend3.Name = "No. of schedules";
-            this.chtUserSchedule.Legends.Add(legend3);
+            chartArea5.Name = "ChartArea1";
+            this.chtUserSchedule.ChartAreas.Add(chartArea5);
+            legend5.Name = "No. of schedules";
+            this.chtUserSchedule.Legends.Add(legend5);
             this.chtUserSchedule.Location = new System.Drawing.Point(536, 5);
             this.chtUserSchedule.Margin = new System.Windows.Forms.Padding(2);
             this.chtUserSchedule.Name = "chtUserSchedule";
@@ -2376,10 +2376,10 @@
             // 
             // chtBloodType
             // 
-            chartArea4.Name = "ChartArea1";
-            this.chtBloodType.ChartAreas.Add(chartArea4);
-            legend4.Name = "Legend1";
-            this.chtBloodType.Legends.Add(legend4);
+            chartArea6.Name = "ChartArea1";
+            this.chtBloodType.ChartAreas.Add(chartArea6);
+            legend6.Name = "Legend1";
+            this.chtBloodType.Legends.Add(legend6);
             this.chtBloodType.Location = new System.Drawing.Point(6, 5);
             this.chtBloodType.Margin = new System.Windows.Forms.Padding(2);
             this.chtBloodType.Name = "chtBloodType";
