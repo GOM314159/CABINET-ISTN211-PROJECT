@@ -9,7 +9,7 @@
     <Shape ID="DesignTable:TblBloodInventory" ZOrder="5" X="838" Y="425" Height="191" Width="253" AdapterExpanded="true" DataTableExpanded="true" OldAdapterHeight="0" OldDataTableHeight="0" SplitterPosition="121" />
     <Shape ID="DesignTable:tblUsers" ZOrder="12" X="878" Y="-13" Height="351" Width="253" AdapterExpanded="true" DataTableExpanded="true" OldAdapterHeight="0" OldDataTableHeight="0" SplitterPosition="224" />
     <Shape ID="DesignTable:Appointment" ZOrder="7" X="4" Y="37" Height="365" Width="322" AdapterExpanded="true" DataTableExpanded="true" OldAdapterHeight="0" OldDataTableHeight="0" SplitterPosition="191" />
-    <Shape ID="DesignTable:Schedule" ZOrder="4" X="415" Y="8" Height="296" Width="300" AdapterExpanded="true" DataTableExpanded="true" OldAdapterHeight="0" OldDataTableHeight="0" SplitterPosition="145" />
+    <Shape ID="DesignTable:Schedule" ZOrder="4" X="415" Y="8" Height="229" Width="300" AdapterExpanded="true" DataTableExpanded="true" OldAdapterHeight="0" OldDataTableHeight="0" SplitterPosition="102" />
     <Shape ID="DesignTable:tblUserSchedule" ZOrder="6" X="48" Y="438" Height="319" Width="381" AdapterExpanded="true" DataTableExpanded="true" OldAdapterHeight="0" OldDataTableHeight="0" SplitterPosition="168" />
     <Shape ID="DesignTable:tblTotalSchedule" ZOrder="1" X="491" Y="328" Height="296" Width="291" AdapterExpanded="true" DataTableExpanded="true" OldAdapterHeight="0" OldDataTableHeight="0" SplitterPosition="168" />
   </Shapes>
@@ -106,11 +106,11 @@
         </Point>
         <Point>
           <X>279</X>
-          <Y>243</Y>
+          <Y>237</Y>
         </Point>
         <Point>
           <X>591</X>
-          <Y>243</Y>
+          <Y>237</Y>
         </Point>
       </RoutePoints>
     </Connector>
@@ -134,7 +134,7 @@
         </Point>
         <Point>
           <X>555</X>
-          <Y>304</Y>
+          <Y>237</Y>
         </Point>
       </RoutePoints>
     </Connector>
