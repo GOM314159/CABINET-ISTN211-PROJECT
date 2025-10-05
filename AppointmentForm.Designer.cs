@@ -321,7 +321,7 @@
             // btnHome
             // 
             this.btnHome.Location = new System.Drawing.Point(21, 17);
-            this.btnHome.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnHome.Margin = new System.Windows.Forms.Padding(2);
             this.btnHome.Name = "btnHome";
             this.btnHome.Size = new System.Drawing.Size(92, 40);
             this.btnHome.TabIndex = 6;
@@ -359,7 +359,7 @@
             this.panelNoApp.BackColor = System.Drawing.Color.White;
             this.panelNoApp.Controls.Add(this.label13);
             this.panelNoApp.Location = new System.Drawing.Point(3, 9);
-            this.panelNoApp.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panelNoApp.Margin = new System.Windows.Forms.Padding(2);
             this.panelNoApp.Name = "panelNoApp";
             this.panelNoApp.Size = new System.Drawing.Size(391, 382);
             this.panelNoApp.TabIndex = 28;
@@ -396,7 +396,7 @@
             // 
             this.btnSearchAvailable.ForeColor = System.Drawing.Color.Black;
             this.btnSearchAvailable.Location = new System.Drawing.Point(77, 46);
-            this.btnSearchAvailable.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnSearchAvailable.Margin = new System.Windows.Forms.Padding(2);
             this.btnSearchAvailable.Name = "btnSearchAvailable";
             this.btnSearchAvailable.Size = new System.Drawing.Size(181, 33);
             this.btnSearchAvailable.TabIndex = 3;
@@ -532,7 +532,7 @@
             // 
             this.btnNext1.ForeColor = System.Drawing.Color.Black;
             this.btnNext1.Location = new System.Drawing.Point(199, 16);
-            this.btnNext1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnNext1.Margin = new System.Windows.Forms.Padding(2);
             this.btnNext1.Name = "btnNext1";
             this.btnNext1.Size = new System.Drawing.Size(58, 26);
             this.btnNext1.TabIndex = 28;
@@ -1177,7 +1177,7 @@
             this.tabPage1.Controls.Add(this.panel8);
             this.tabPage1.Location = new System.Drawing.Point(4, 22);
             this.tabPage1.Name = "tabPage1";
-            this.tabPage1.Padding = new System.Windows.Forms.Padding(3, 3, 3, 3);
+            this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
             this.tabPage1.Size = new System.Drawing.Size(1049, 474);
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "Book Appointment";
@@ -1477,7 +1477,7 @@
             this.tabPage2.Controls.Add(this.panel2);
             this.tabPage2.Location = new System.Drawing.Point(4, 22);
             this.tabPage2.Name = "tabPage2";
-            this.tabPage2.Padding = new System.Windows.Forms.Padding(3, 3, 3, 3);
+            this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
             this.tabPage2.Size = new System.Drawing.Size(1049, 474);
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "Appointment History";
@@ -1527,7 +1527,7 @@
             // btnHelp
             // 
             this.btnHelp.Location = new System.Drawing.Point(976, 17);
-            this.btnHelp.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnHelp.Margin = new System.Windows.Forms.Padding(2);
             this.btnHelp.Name = "btnHelp";
             this.btnHelp.Size = new System.Drawing.Size(92, 40);
             this.btnHelp.TabIndex = 18;
@@ -1538,7 +1538,7 @@
             // btnClose
             // 
             this.btnClose.Location = new System.Drawing.Point(124, 17);
-            this.btnClose.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnClose.Margin = new System.Windows.Forms.Padding(2);
             this.btnClose.Name = "btnClose";
             this.btnClose.Size = new System.Drawing.Size(92, 40);
             this.btnClose.TabIndex = 19;
@@ -1562,9 +1562,10 @@
             this.Controls.Add(this.tabControl1);
             this.Controls.Add(this.btnHome);
             this.Cursor = System.Windows.Forms.Cursors.Default;
+            this.DoubleBuffered = true;
             this.ForeColor = System.Drawing.SystemColors.WindowText;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "AppointmentForm";
             this.Text = "My Appointments";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.AppointmentForm_FormClosing);
