@@ -72,13 +72,22 @@ namespace BloodBankSystem
             }
 
             // ID Number check
-            if (!string.IsNullOrWhiteSpace(iDNumber) && iDNumber.Length == 13)
+            if (!string.IsNullOrWhiteSpace(iDNumber) && iDNumber.Length == 13 )
             {
-                if (validIDCheck(iDNumber))
+                if (IDexists(iDNumber))
                 {
+                MessageBox.Show("ID Number already exists. Please check your ID Number or log in if you already have an account.", "Registration Helper", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
+                else
+                {
+                    if (validIDCheck(iDNumber))
+                    {
                     IDNumberCheck = true;
                     mIDTextBox.BackColor = Color.LightGreen;
+                    }
                 }
+
+                
             }
             else
             {
@@ -375,5 +384,20 @@ namespace BloodBankSystem
         {
             Environment.Exit(0);
         }
+
+        private Boolean IDexists(String idNumber)
+        {
+            Boolean idExists = false;
+
+            var adapter = new ist2jwDataSetTableAdapters.tblUsersTableAdapter();
+            var dataTable = adapter.GetUserInfo(idNumber);
+            if (dataTable.Rows.Count > 0)
+            {
+                idExists = true;
+            }
+            return idExists;
+        }
+
+
     }
 }
