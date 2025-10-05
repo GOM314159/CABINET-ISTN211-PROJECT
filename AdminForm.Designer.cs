@@ -130,15 +130,6 @@
             this.btnFilterActive = new System.Windows.Forms.Button();
             this.label19 = new System.Windows.Forms.Label();
             this.dgvUsers = new System.Windows.Forms.DataGridView();
-            this.userIDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.passwordDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.nameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.surnameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.iDNumberDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.phoneNumberDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.userTypeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.bloodTypeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.isActiveAccountDataGridViewCheckBoxColumn = new System.Windows.Forms.DataGridViewCheckBoxColumn();
             this.tblUsersBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.pnlUserEdit = new System.Windows.Forms.Panel();
             this.btnStartInsert = new System.Windows.Forms.Button();
@@ -212,6 +203,15 @@
             this.tableAdapterManager = new BloodBankSystem.ist2jwDataSetTableAdapters.TableAdapterManager();
             this.tblTotalScheduleTableAdapter = new BloodBankSystem.ist2jwDataSetTableAdapters.tblTotalScheduleTableAdapter();
             this.tblAverageScheduleTableAdapter = new BloodBankSystem.ist2jwDataSetTableAdapters.tblAverageScheduleTableAdapter();
+            this.userIDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.passwordDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.nameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.surnameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.iDNumberDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.phoneNumberDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.userTypeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.bloodTypeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.isActiveAccountDataGridViewCheckBoxColumn = new System.Windows.Forms.DataGridViewCheckBoxColumn();
             this.pnlTopBar.SuspendLayout();
             this.tpgAppointments.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.appointmentDataGridView)).BeginInit();
@@ -255,12 +255,13 @@
             // 
             // pnlTopBar
             // 
-            this.pnlTopBar.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.pnlTopBar.BackColor = System.Drawing.Color.Transparent;
             this.pnlTopBar.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.pnlTopBar.Controls.Add(this.btnHomepage);
             this.pnlTopBar.Controls.Add(this.btnLogout);
             this.pnlTopBar.Controls.Add(this.lblAdminDash);
-            this.pnlTopBar.Location = new System.Drawing.Point(0, 0);
+            this.pnlTopBar.ForeColor = System.Drawing.Color.White;
+            this.pnlTopBar.Location = new System.Drawing.Point(0, 4);
             this.pnlTopBar.Margin = new System.Windows.Forms.Padding(4);
             this.pnlTopBar.Name = "pnlTopBar";
             this.pnlTopBar.Size = new System.Drawing.Size(1052, 40);
@@ -274,6 +275,7 @@
             this.btnHomepage.FlatAppearance.BorderSize = 0;
             this.btnHomepage.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnHomepage.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.25F);
+            this.btnHomepage.ForeColor = System.Drawing.Color.Black;
             this.btnHomepage.Location = new System.Drawing.Point(889, 2);
             this.btnHomepage.Margin = new System.Windows.Forms.Padding(2);
             this.btnHomepage.Name = "btnHomepage";
@@ -290,6 +292,7 @@
             this.btnLogout.FlatAppearance.BorderSize = 0;
             this.btnLogout.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnLogout.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.25F);
+            this.btnLogout.ForeColor = System.Drawing.Color.Black;
             this.btnLogout.Location = new System.Drawing.Point(3, 4);
             this.btnLogout.Margin = new System.Windows.Forms.Padding(4);
             this.btnLogout.Name = "btnLogout";
@@ -312,6 +315,7 @@
             // tpgAppointments
             // 
             this.tpgAppointments.AutoScroll = true;
+            this.tpgAppointments.BackgroundImage = global::BloodBankSystem.Properties.Resources.MainBackground;
             this.tpgAppointments.Controls.Add(this.appointmentDataGridView);
             this.tpgAppointments.Controls.Add(this.pnlAppFilters);
             this.tpgAppointments.Controls.Add(this.pnlRemoveAppFilters);
@@ -397,16 +401,18 @@
             // pnlAppFilters
             // 
             this.pnlAppFilters.AutoScroll = true;
-            this.pnlAppFilters.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.pnlAppFilters.BackColor = System.Drawing.Color.Transparent;
             this.pnlAppFilters.Controls.Add(this.btnFilterPassed);
             this.pnlAppFilters.Controls.Add(this.btnFilterUpcoming);
             this.pnlAppFilters.Controls.Add(this.btnCapSortDesc);
             this.pnlAppFilters.Controls.Add(this.btnCapSortAsc);
             this.pnlAppFilters.Controls.Add(this.label21);
+            this.pnlAppFilters.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.25F);
+            this.pnlAppFilters.ForeColor = System.Drawing.Color.White;
             this.pnlAppFilters.Location = new System.Drawing.Point(776, 7);
             this.pnlAppFilters.Margin = new System.Windows.Forms.Padding(4);
             this.pnlAppFilters.Name = "pnlAppFilters";
-            this.pnlAppFilters.Size = new System.Drawing.Size(244, 467);
+            this.pnlAppFilters.Size = new System.Drawing.Size(244, 421);
             this.pnlAppFilters.TabIndex = 9;
             // 
             // btnFilterPassed
@@ -415,10 +421,12 @@
             this.btnFilterPassed.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btnFilterPassed.FlatAppearance.BorderSize = 0;
             this.btnFilterPassed.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnFilterPassed.Location = new System.Drawing.Point(8, 166);
+            this.btnFilterPassed.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F);
+            this.btnFilterPassed.ForeColor = System.Drawing.Color.Black;
+            this.btnFilterPassed.Location = new System.Drawing.Point(36, 329);
             this.btnFilterPassed.Margin = new System.Windows.Forms.Padding(4);
             this.btnFilterPassed.Name = "btnFilterPassed";
-            this.btnFilterPassed.Size = new System.Drawing.Size(171, 25);
+            this.btnFilterPassed.Size = new System.Drawing.Size(171, 61);
             this.btnFilterPassed.TabIndex = 7;
             this.btnFilterPassed.Text = "Filter by passed";
             this.btnFilterPassed.UseVisualStyleBackColor = true;
@@ -430,10 +438,12 @@
             this.btnFilterUpcoming.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btnFilterUpcoming.FlatAppearance.BorderSize = 0;
             this.btnFilterUpcoming.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnFilterUpcoming.Location = new System.Drawing.Point(8, 124);
+            this.btnFilterUpcoming.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F);
+            this.btnFilterUpcoming.ForeColor = System.Drawing.Color.Black;
+            this.btnFilterUpcoming.Location = new System.Drawing.Point(36, 234);
             this.btnFilterUpcoming.Margin = new System.Windows.Forms.Padding(4);
             this.btnFilterUpcoming.Name = "btnFilterUpcoming";
-            this.btnFilterUpcoming.Size = new System.Drawing.Size(171, 28);
+            this.btnFilterUpcoming.Size = new System.Drawing.Size(171, 64);
             this.btnFilterUpcoming.TabIndex = 6;
             this.btnFilterUpcoming.Text = "Filter by upcoming";
             this.btnFilterUpcoming.UseVisualStyleBackColor = true;
@@ -445,10 +455,12 @@
             this.btnCapSortDesc.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btnCapSortDesc.FlatAppearance.BorderSize = 0;
             this.btnCapSortDesc.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnCapSortDesc.Location = new System.Drawing.Point(8, 82);
+            this.btnCapSortDesc.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F);
+            this.btnCapSortDesc.ForeColor = System.Drawing.Color.Black;
+            this.btnCapSortDesc.Location = new System.Drawing.Point(36, 135);
             this.btnCapSortDesc.Margin = new System.Windows.Forms.Padding(4);
             this.btnCapSortDesc.Name = "btnCapSortDesc";
-            this.btnCapSortDesc.Size = new System.Drawing.Size(171, 27);
+            this.btnCapSortDesc.Size = new System.Drawing.Size(171, 63);
             this.btnCapSortDesc.TabIndex = 5;
             this.btnCapSortDesc.Text = "Sort by capacity(desc)";
             this.btnCapSortDesc.UseVisualStyleBackColor = true;
@@ -460,10 +472,12 @@
             this.btnCapSortAsc.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btnCapSortAsc.FlatAppearance.BorderSize = 0;
             this.btnCapSortAsc.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnCapSortAsc.Location = new System.Drawing.Point(8, 42);
+            this.btnCapSortAsc.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F);
+            this.btnCapSortAsc.ForeColor = System.Drawing.Color.Black;
+            this.btnCapSortAsc.Location = new System.Drawing.Point(36, 42);
             this.btnCapSortAsc.Margin = new System.Windows.Forms.Padding(4);
             this.btnCapSortAsc.Name = "btnCapSortAsc";
-            this.btnCapSortAsc.Size = new System.Drawing.Size(171, 27);
+            this.btnCapSortAsc.Size = new System.Drawing.Size(171, 63);
             this.btnCapSortAsc.TabIndex = 4;
             this.btnCapSortAsc.Text = "Sort by capacity(asc)";
             this.btnCapSortAsc.UseVisualStyleBackColor = true;
@@ -474,18 +488,18 @@
             this.label21.AutoSize = true;
             this.label21.Location = new System.Drawing.Point(3, 9);
             this.label21.Name = "label21";
-            this.label21.Size = new System.Drawing.Size(73, 13);
+            this.label21.Size = new System.Drawing.Size(117, 20);
             this.label21.TabIndex = 0;
             this.label21.Text = "Filters/sorting:";
             // 
             // pnlRemoveAppFilters
             // 
-            this.pnlRemoveAppFilters.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.pnlRemoveAppFilters.BackColor = System.Drawing.Color.Transparent;
             this.pnlRemoveAppFilters.Controls.Add(this.button16);
-            this.pnlRemoveAppFilters.Location = new System.Drawing.Point(776, 484);
+            this.pnlRemoveAppFilters.Location = new System.Drawing.Point(776, 464);
             this.pnlRemoveAppFilters.Margin = new System.Windows.Forms.Padding(4);
             this.pnlRemoveAppFilters.Name = "pnlRemoveAppFilters";
-            this.pnlRemoveAppFilters.Size = new System.Drawing.Size(250, 33);
+            this.pnlRemoveAppFilters.Size = new System.Drawing.Size(244, 58);
             this.pnlRemoveAppFilters.TabIndex = 8;
             // 
             // button16
@@ -495,17 +509,17 @@
             this.button16.FlatAppearance.BorderSize = 0;
             this.button16.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button16.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button16.Location = new System.Drawing.Point(68, 4);
+            this.button16.Location = new System.Drawing.Point(45, 4);
             this.button16.Margin = new System.Windows.Forms.Padding(4);
             this.button16.Name = "button16";
-            this.button16.Size = new System.Drawing.Size(112, 23);
+            this.button16.Size = new System.Drawing.Size(162, 44);
             this.button16.TabIndex = 1;
-            this.button16.Text = "Remove";
+            this.button16.Text = "Remove Filters";
             this.button16.UseVisualStyleBackColor = true;
             // 
             // pnlAppNav
             // 
-            this.pnlAppNav.BackColor = System.Drawing.Color.SteelBlue;
+            this.pnlAppNav.BackColor = System.Drawing.Color.Transparent;
             this.pnlAppNav.Controls.Add(this.btnAppLast);
             this.pnlAppNav.Controls.Add(this.btnAppFirst);
             this.pnlAppNav.Controls.Add(this.btnAppPrev);
@@ -523,7 +537,7 @@
             this.btnAppLast.FlatAppearance.BorderSize = 0;
             this.btnAppLast.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnAppLast.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnAppLast.Location = new System.Drawing.Point(581, 2);
+            this.btnAppLast.Location = new System.Drawing.Point(534, 2);
             this.btnAppLast.Margin = new System.Windows.Forms.Padding(4);
             this.btnAppLast.Name = "btnAppLast";
             this.btnAppLast.Size = new System.Drawing.Size(123, 30);
@@ -539,7 +553,7 @@
             this.btnAppFirst.FlatAppearance.BorderSize = 0;
             this.btnAppFirst.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnAppFirst.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnAppFirst.Location = new System.Drawing.Point(4, 2);
+            this.btnAppFirst.Location = new System.Drawing.Point(92, 2);
             this.btnAppFirst.Margin = new System.Windows.Forms.Padding(4);
             this.btnAppFirst.Name = "btnAppFirst";
             this.btnAppFirst.Size = new System.Drawing.Size(120, 30);
@@ -555,7 +569,7 @@
             this.btnAppPrev.FlatAppearance.BorderSize = 0;
             this.btnAppPrev.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnAppPrev.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnAppPrev.Location = new System.Drawing.Point(186, 2);
+            this.btnAppPrev.Location = new System.Drawing.Point(241, 2);
             this.btnAppPrev.Margin = new System.Windows.Forms.Padding(4);
             this.btnAppPrev.Name = "btnAppPrev";
             this.btnAppPrev.Size = new System.Drawing.Size(122, 30);
@@ -571,7 +585,7 @@
             this.btnAppNext.FlatAppearance.BorderSize = 0;
             this.btnAppNext.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnAppNext.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnAppNext.Location = new System.Drawing.Point(452, 2);
+            this.btnAppNext.Location = new System.Drawing.Point(394, 2);
             this.btnAppNext.Margin = new System.Windows.Forms.Padding(4);
             this.btnAppNext.Name = "btnAppNext";
             this.btnAppNext.Size = new System.Drawing.Size(117, 30);
@@ -582,7 +596,7 @@
             // 
             // pnlAppEdit
             // 
-            this.pnlAppEdit.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.pnlAppEdit.BackColor = System.Drawing.Color.Transparent;
             this.pnlAppEdit.Controls.Add(this.btnStartAppInsert);
             this.pnlAppEdit.Controls.Add(this.mtxtTime);
             this.pnlAppEdit.Controls.Add(this.txtVenue);
@@ -611,7 +625,7 @@
             this.btnStartAppInsert.FlatAppearance.BorderSize = 0;
             this.btnStartAppInsert.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnStartAppInsert.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.25F);
-            this.btnStartAppInsert.Location = new System.Drawing.Point(411, 25);
+            this.btnStartAppInsert.Location = new System.Drawing.Point(411, 16);
             this.btnStartAppInsert.Margin = new System.Windows.Forms.Padding(4);
             this.btnStartAppInsert.Name = "btnStartAppInsert";
             this.btnStartAppInsert.Size = new System.Drawing.Size(134, 44);
@@ -645,6 +659,7 @@
             // 
             this.lblVenue.AutoSize = true;
             this.lblVenue.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblVenue.ForeColor = System.Drawing.Color.White;
             this.lblVenue.Location = new System.Drawing.Point(73, 148);
             this.lblVenue.Name = "lblVenue";
             this.lblVenue.Size = new System.Drawing.Size(49, 16);
@@ -653,6 +668,10 @@
             // 
             // btnAppInsert
             // 
+            this.btnAppInsert.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnAppInsert.BackgroundImage")));
+            this.btnAppInsert.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnAppInsert.FlatAppearance.BorderSize = 0;
+            this.btnAppInsert.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnAppInsert.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.25F);
             this.btnAppInsert.Location = new System.Drawing.Point(411, 18);
             this.btnAppInsert.Margin = new System.Windows.Forms.Padding(4);
@@ -668,6 +687,7 @@
             // 
             this.lblCapacity.AutoSize = true;
             this.lblCapacity.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblCapacity.ForeColor = System.Drawing.Color.White;
             this.lblCapacity.Location = new System.Drawing.Point(59, 116);
             this.lblCapacity.Name = "lblCapacity";
             this.lblCapacity.Size = new System.Drawing.Size(63, 16);
@@ -678,6 +698,7 @@
             // 
             this.lblAppointmentTime.AutoSize = true;
             this.lblAppointmentTime.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblAppointmentTime.ForeColor = System.Drawing.Color.White;
             this.lblAppointmentTime.Location = new System.Drawing.Point(9, 88);
             this.lblAppointmentTime.Name = "lblAppointmentTime";
             this.lblAppointmentTime.Size = new System.Drawing.Size(113, 16);
@@ -688,6 +709,7 @@
             // 
             this.lblAppointmentDate.AutoSize = true;
             this.lblAppointmentDate.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblAppointmentDate.ForeColor = System.Drawing.Color.White;
             this.lblAppointmentDate.Location = new System.Drawing.Point(5, 53);
             this.lblAppointmentDate.Name = "lblAppointmentDate";
             this.lblAppointmentDate.Size = new System.Drawing.Size(117, 16);
@@ -698,6 +720,7 @@
             // 
             this.lblAppointmentID.AutoSize = true;
             this.lblAppointmentID.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblAppointmentID.ForeColor = System.Drawing.Color.White;
             this.lblAppointmentID.Location = new System.Drawing.Point(21, 17);
             this.lblAppointmentID.Name = "lblAppointmentID";
             this.lblAppointmentID.Size = new System.Drawing.Size(101, 16);
@@ -766,6 +789,10 @@
             // 
             // btnCancelAppInsert
             // 
+            this.btnCancelAppInsert.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnCancelAppInsert.BackgroundImage")));
+            this.btnCancelAppInsert.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnCancelAppInsert.FlatAppearance.BorderSize = 0;
+            this.btnCancelAppInsert.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnCancelAppInsert.Location = new System.Drawing.Point(411, 84);
             this.btnCancelAppInsert.Margin = new System.Windows.Forms.Padding(4);
             this.btnCancelAppInsert.Name = "btnCancelAppInsert";
@@ -778,6 +805,7 @@
             // 
             // tpgBlood
             // 
+            this.tpgBlood.BackgroundImage = global::BloodBankSystem.Properties.Resources.MainBackground;
             this.tpgBlood.Controls.Add(this.pnlRemoveBloodFilters);
             this.tpgBlood.Controls.Add(this.panel6);
             this.tpgBlood.Controls.Add(this.pnlBloodNav);
@@ -795,74 +823,82 @@
             // 
             // pnlRemoveBloodFilters
             // 
-            this.pnlRemoveBloodFilters.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.pnlRemoveBloodFilters.BackColor = System.Drawing.Color.Transparent;
             this.pnlRemoveBloodFilters.Controls.Add(this.btnRemoveBloodFilters);
-            this.pnlRemoveBloodFilters.Location = new System.Drawing.Point(760, 280);
+            this.pnlRemoveBloodFilters.ForeColor = System.Drawing.Color.White;
+            this.pnlRemoveBloodFilters.Location = new System.Drawing.Point(760, 252);
             this.pnlRemoveBloodFilters.Margin = new System.Windows.Forms.Padding(4);
             this.pnlRemoveBloodFilters.Name = "pnlRemoveBloodFilters";
-            this.pnlRemoveBloodFilters.Size = new System.Drawing.Size(261, 33);
+            this.pnlRemoveBloodFilters.Size = new System.Drawing.Size(261, 61);
             this.pnlRemoveBloodFilters.TabIndex = 8;
             // 
             // btnRemoveBloodFilters
             // 
+            this.btnRemoveBloodFilters.BackColor = System.Drawing.Color.Transparent;
             this.btnRemoveBloodFilters.BackgroundImage = global::BloodBankSystem.Properties.Resources.buttonbackRed;
             this.btnRemoveBloodFilters.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btnRemoveBloodFilters.FlatAppearance.BorderSize = 0;
             this.btnRemoveBloodFilters.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnRemoveBloodFilters.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnRemoveBloodFilters.Location = new System.Drawing.Point(68, 6);
+            this.btnRemoveBloodFilters.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.btnRemoveBloodFilters.ForeColor = System.Drawing.Color.Black;
+            this.btnRemoveBloodFilters.Location = new System.Drawing.Point(49, 10);
             this.btnRemoveBloodFilters.Margin = new System.Windows.Forms.Padding(4);
             this.btnRemoveBloodFilters.Name = "btnRemoveBloodFilters";
-            this.btnRemoveBloodFilters.Size = new System.Drawing.Size(122, 23);
+            this.btnRemoveBloodFilters.Size = new System.Drawing.Size(171, 41);
             this.btnRemoveBloodFilters.TabIndex = 1;
-            this.btnRemoveBloodFilters.Text = "Remove";
-            this.btnRemoveBloodFilters.UseVisualStyleBackColor = true;
+            this.btnRemoveBloodFilters.Text = "Remove Filter";
+            this.btnRemoveBloodFilters.UseVisualStyleBackColor = false;
             this.btnRemoveBloodFilters.Click += new System.EventHandler(this.btnRemoveBloodFilters_Click);
             // 
             // panel6
             // 
             this.panel6.AutoScroll = true;
-            this.panel6.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.panel6.BackColor = System.Drawing.Color.Transparent;
             this.panel6.Controls.Add(this.btnEarlyExpiry);
             this.panel6.Controls.Add(this.btnLaterExpiry);
             this.panel6.Controls.Add(this.dtpExpiryFilter);
             this.panel6.Controls.Add(this.label20);
+            this.panel6.ForeColor = System.Drawing.Color.White;
             this.panel6.Location = new System.Drawing.Point(760, 7);
             this.panel6.Margin = new System.Windows.Forms.Padding(4);
             this.panel6.Name = "panel6";
-            this.panel6.Size = new System.Drawing.Size(261, 265);
+            this.panel6.Size = new System.Drawing.Size(261, 223);
             this.panel6.TabIndex = 7;
             // 
             // btnEarlyExpiry
             // 
+            this.btnEarlyExpiry.BackColor = System.Drawing.Color.Transparent;
             this.btnEarlyExpiry.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnEarlyExpiry.BackgroundImage")));
             this.btnEarlyExpiry.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btnEarlyExpiry.FlatAppearance.BorderSize = 0;
             this.btnEarlyExpiry.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnEarlyExpiry.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnEarlyExpiry.Location = new System.Drawing.Point(19, 104);
+            this.btnEarlyExpiry.ForeColor = System.Drawing.Color.Black;
+            this.btnEarlyExpiry.Location = new System.Drawing.Point(49, 156);
             this.btnEarlyExpiry.Margin = new System.Windows.Forms.Padding(4);
             this.btnEarlyExpiry.Name = "btnEarlyExpiry";
             this.btnEarlyExpiry.Size = new System.Drawing.Size(171, 32);
             this.btnEarlyExpiry.TabIndex = 3;
             this.btnEarlyExpiry.Text = "Filter by expiry date(Earlier than)";
-            this.btnEarlyExpiry.UseVisualStyleBackColor = true;
+            this.btnEarlyExpiry.UseVisualStyleBackColor = false;
             this.btnEarlyExpiry.Click += new System.EventHandler(this.btnEarlyExpiry_Click);
             // 
             // btnLaterExpiry
             // 
+            this.btnLaterExpiry.BackColor = System.Drawing.Color.Transparent;
             this.btnLaterExpiry.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnLaterExpiry.BackgroundImage")));
             this.btnLaterExpiry.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btnLaterExpiry.FlatAppearance.BorderSize = 0;
             this.btnLaterExpiry.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnLaterExpiry.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnLaterExpiry.Location = new System.Drawing.Point(19, 67);
+            this.btnLaterExpiry.ForeColor = System.Drawing.Color.Black;
+            this.btnLaterExpiry.Location = new System.Drawing.Point(49, 96);
             this.btnLaterExpiry.Margin = new System.Windows.Forms.Padding(4);
             this.btnLaterExpiry.Name = "btnLaterExpiry";
             this.btnLaterExpiry.Size = new System.Drawing.Size(171, 32);
             this.btnLaterExpiry.TabIndex = 2;
             this.btnLaterExpiry.Text = "Filter by expiry date(Later than)";
-            this.btnLaterExpiry.UseVisualStyleBackColor = true;
+            this.btnLaterExpiry.UseVisualStyleBackColor = false;
             this.btnLaterExpiry.Click += new System.EventHandler(this.btnLaterExpiry_Click);
             // 
             // dtpExpiryFilter
@@ -878,6 +914,7 @@
             // label20
             // 
             this.label20.AutoSize = true;
+            this.label20.BackColor = System.Drawing.Color.Transparent;
             this.label20.Location = new System.Drawing.Point(16, 10);
             this.label20.Name = "label20";
             this.label20.Size = new System.Drawing.Size(73, 13);
@@ -886,7 +923,7 @@
             // 
             // pnlBloodNav
             // 
-            this.pnlBloodNav.BackColor = System.Drawing.Color.SteelBlue;
+            this.pnlBloodNav.BackColor = System.Drawing.Color.Transparent;
             this.pnlBloodNav.Controls.Add(this.btnBloodLast);
             this.pnlBloodNav.Controls.Add(this.btnBloodFirst);
             this.pnlBloodNav.Controls.Add(this.btnBloodPrev);
@@ -899,38 +936,41 @@
             // 
             // btnBloodLast
             // 
+            this.btnBloodLast.BackColor = System.Drawing.Color.Transparent;
             this.btnBloodLast.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnBloodLast.BackgroundImage")));
             this.btnBloodLast.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btnBloodLast.FlatAppearance.BorderSize = 0;
             this.btnBloodLast.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnBloodLast.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnBloodLast.Location = new System.Drawing.Point(596, 3);
+            this.btnBloodLast.Location = new System.Drawing.Point(505, 2);
             this.btnBloodLast.Margin = new System.Windows.Forms.Padding(4);
             this.btnBloodLast.Name = "btnBloodLast";
             this.btnBloodLast.Size = new System.Drawing.Size(105, 30);
             this.btnBloodLast.TabIndex = 3;
             this.btnBloodLast.Text = ">>|";
-            this.btnBloodLast.UseVisualStyleBackColor = true;
+            this.btnBloodLast.UseVisualStyleBackColor = false;
             this.btnBloodLast.Click += new System.EventHandler(this.btnBloodLast_Click);
             // 
             // btnBloodFirst
             // 
+            this.btnBloodFirst.BackColor = System.Drawing.Color.Transparent;
             this.btnBloodFirst.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnBloodFirst.BackgroundImage")));
             this.btnBloodFirst.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btnBloodFirst.FlatAppearance.BorderSize = 0;
             this.btnBloodFirst.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnBloodFirst.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnBloodFirst.Location = new System.Drawing.Point(12, 4);
+            this.btnBloodFirst.Location = new System.Drawing.Point(103, 2);
             this.btnBloodFirst.Margin = new System.Windows.Forms.Padding(4);
             this.btnBloodFirst.Name = "btnBloodFirst";
             this.btnBloodFirst.Size = new System.Drawing.Size(109, 30);
             this.btnBloodFirst.TabIndex = 2;
             this.btnBloodFirst.Text = "|<<";
-            this.btnBloodFirst.UseVisualStyleBackColor = true;
+            this.btnBloodFirst.UseVisualStyleBackColor = false;
             this.btnBloodFirst.Click += new System.EventHandler(this.btnBloodFirst_Click);
             // 
             // btnBloodPrev
             // 
+            this.btnBloodPrev.BackColor = System.Drawing.Color.Transparent;
             this.btnBloodPrev.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnBloodPrev.BackgroundImage")));
             this.btnBloodPrev.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btnBloodPrev.FlatAppearance.BorderSize = 0;
@@ -942,28 +982,29 @@
             this.btnBloodPrev.Size = new System.Drawing.Size(101, 30);
             this.btnBloodPrev.TabIndex = 1;
             this.btnBloodPrev.Text = "<";
-            this.btnBloodPrev.UseVisualStyleBackColor = true;
+            this.btnBloodPrev.UseVisualStyleBackColor = false;
             this.btnBloodPrev.Click += new System.EventHandler(this.btnBloodPrev_Click);
             // 
             // btnBllodNext
             // 
+            this.btnBllodNext.BackColor = System.Drawing.Color.Transparent;
             this.btnBllodNext.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnBllodNext.BackgroundImage")));
             this.btnBllodNext.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btnBllodNext.FlatAppearance.BorderSize = 0;
             this.btnBllodNext.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnBllodNext.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnBllodNext.Location = new System.Drawing.Point(480, 4);
+            this.btnBllodNext.Location = new System.Drawing.Point(383, 3);
             this.btnBllodNext.Margin = new System.Windows.Forms.Padding(4);
             this.btnBllodNext.Name = "btnBllodNext";
             this.btnBllodNext.Size = new System.Drawing.Size(101, 29);
             this.btnBllodNext.TabIndex = 0;
             this.btnBllodNext.Text = ">";
-            this.btnBllodNext.UseVisualStyleBackColor = true;
+            this.btnBllodNext.UseVisualStyleBackColor = false;
             this.btnBllodNext.Click += new System.EventHandler(this.btnBllodNext_Click);
             // 
             // panel3
             // 
-            this.panel3.BackColor = System.Drawing.Color.LightSteelBlue;
+            this.panel3.BackColor = System.Drawing.Color.Transparent;
             this.panel3.Controls.Add(this.lblBloodExpiryDate);
             this.panel3.Controls.Add(this.lblBloodUserID);
             this.panel3.Controls.Add(this.lblBloodAppID);
@@ -976,7 +1017,7 @@
             this.panel3.Controls.Add(this.txtBloodAppID);
             this.panel3.Controls.Add(this.txtBloodUserID);
             this.panel3.Controls.Add(this.txtUnitID);
-            this.panel3.ForeColor = System.Drawing.SystemColors.ActiveCaption;
+            this.panel3.ForeColor = System.Drawing.Color.White;
             this.panel3.Location = new System.Drawing.Point(7, 324);
             this.panel3.Margin = new System.Windows.Forms.Padding(4);
             this.panel3.Name = "panel3";
@@ -986,9 +1027,10 @@
             // lblBloodExpiryDate
             // 
             this.lblBloodExpiryDate.AutoSize = true;
+            this.lblBloodExpiryDate.BackColor = System.Drawing.Color.Transparent;
             this.lblBloodExpiryDate.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblBloodExpiryDate.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.lblBloodExpiryDate.Location = new System.Drawing.Point(20, 158);
+            this.lblBloodExpiryDate.ForeColor = System.Drawing.Color.White;
+            this.lblBloodExpiryDate.Location = new System.Drawing.Point(72, 158);
             this.lblBloodExpiryDate.Name = "lblBloodExpiryDate";
             this.lblBloodExpiryDate.Size = new System.Drawing.Size(77, 16);
             this.lblBloodExpiryDate.TabIndex = 12;
@@ -997,9 +1039,10 @@
             // lblBloodUserID
             // 
             this.lblBloodUserID.AutoSize = true;
+            this.lblBloodUserID.BackColor = System.Drawing.Color.Transparent;
             this.lblBloodUserID.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblBloodUserID.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.lblBloodUserID.Location = new System.Drawing.Point(45, 51);
+            this.lblBloodUserID.ForeColor = System.Drawing.Color.White;
+            this.lblBloodUserID.Location = new System.Drawing.Point(95, 51);
             this.lblBloodUserID.Name = "lblBloodUserID";
             this.lblBloodUserID.Size = new System.Drawing.Size(52, 16);
             this.lblBloodUserID.TabIndex = 11;
@@ -1008,9 +1051,10 @@
             // lblBloodAppID
             // 
             this.lblBloodAppID.AutoSize = true;
+            this.lblBloodAppID.BackColor = System.Drawing.Color.Transparent;
             this.lblBloodAppID.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblBloodAppID.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.lblBloodAppID.Location = new System.Drawing.Point(2, 86);
+            this.lblBloodAppID.ForeColor = System.Drawing.Color.White;
+            this.lblBloodAppID.Location = new System.Drawing.Point(49, 89);
             this.lblBloodAppID.Name = "lblBloodAppID";
             this.lblBloodAppID.Size = new System.Drawing.Size(98, 16);
             this.lblBloodAppID.TabIndex = 10;
@@ -1019,9 +1063,10 @@
             // lblTypeBlood
             // 
             this.lblTypeBlood.AutoSize = true;
+            this.lblTypeBlood.BackColor = System.Drawing.Color.Transparent;
             this.lblTypeBlood.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblTypeBlood.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.lblTypeBlood.Location = new System.Drawing.Point(25, 119);
+            this.lblTypeBlood.ForeColor = System.Drawing.Color.White;
+            this.lblTypeBlood.Location = new System.Drawing.Point(72, 120);
             this.lblTypeBlood.Name = "lblTypeBlood";
             this.lblTypeBlood.Size = new System.Drawing.Size(75, 16);
             this.lblTypeBlood.TabIndex = 9;
@@ -1030,9 +1075,10 @@
             // lblUnitID
             // 
             this.lblUnitID.AutoSize = true;
+            this.lblUnitID.BackColor = System.Drawing.Color.Transparent;
             this.lblUnitID.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblUnitID.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.lblUnitID.Location = new System.Drawing.Point(51, 16);
+            this.lblUnitID.ForeColor = System.Drawing.Color.White;
+            this.lblUnitID.Location = new System.Drawing.Point(101, 17);
             this.lblUnitID.Name = "lblUnitID";
             this.lblUnitID.Size = new System.Drawing.Size(46, 16);
             this.lblUnitID.TabIndex = 8;
@@ -1040,43 +1086,45 @@
             // 
             // btnBloodDelete
             // 
+            this.btnBloodDelete.BackColor = System.Drawing.Color.Transparent;
             this.btnBloodDelete.BackgroundImage = global::BloodBankSystem.Properties.Resources.buttonbackRed;
             this.btnBloodDelete.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btnBloodDelete.FlatAppearance.BorderSize = 0;
             this.btnBloodDelete.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnBloodDelete.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnBloodDelete.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.btnBloodDelete.Location = new System.Drawing.Point(272, 96);
+            this.btnBloodDelete.Location = new System.Drawing.Point(342, 139);
             this.btnBloodDelete.Margin = new System.Windows.Forms.Padding(4);
             this.btnBloodDelete.Name = "btnBloodDelete";
             this.btnBloodDelete.Size = new System.Drawing.Size(125, 39);
             this.btnBloodDelete.TabIndex = 7;
             this.btnBloodDelete.Text = "Delete record";
-            this.btnBloodDelete.UseVisualStyleBackColor = true;
+            this.btnBloodDelete.UseVisualStyleBackColor = false;
             this.btnBloodDelete.Click += new System.EventHandler(this.button2_Click);
             // 
             // btnBloodApply
             // 
+            this.btnBloodApply.BackColor = System.Drawing.Color.Transparent;
             this.btnBloodApply.BackgroundImage = global::BloodBankSystem.Properties.Resources.buttonbackBlue;
             this.btnBloodApply.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btnBloodApply.FlatAppearance.BorderSize = 0;
             this.btnBloodApply.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnBloodApply.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnBloodApply.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.btnBloodApply.Location = new System.Drawing.Point(272, 143);
+            this.btnBloodApply.Location = new System.Drawing.Point(342, 80);
             this.btnBloodApply.Margin = new System.Windows.Forms.Padding(4);
             this.btnBloodApply.Name = "btnBloodApply";
             this.btnBloodApply.Size = new System.Drawing.Size(125, 34);
             this.btnBloodApply.TabIndex = 6;
             this.btnBloodApply.Text = "Apply changes";
-            this.btnBloodApply.UseVisualStyleBackColor = true;
+            this.btnBloodApply.UseVisualStyleBackColor = false;
             this.btnBloodApply.Click += new System.EventHandler(this.btnBloodApply_Click);
             // 
             // dtpExpiry
             // 
             this.dtpExpiry.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.tblBloodInventoryBindingSource, "ExpiryDate", true));
             this.dtpExpiry.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dtpExpiry.Location = new System.Drawing.Point(104, 158);
+            this.dtpExpiry.Location = new System.Drawing.Point(175, 158);
             this.dtpExpiry.Margin = new System.Windows.Forms.Padding(4);
             this.dtpExpiry.Name = "dtpExpiry";
             this.dtpExpiry.Size = new System.Drawing.Size(121, 20);
@@ -1091,7 +1139,7 @@
             // 
             this.cmbBloodInvType.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.tblBloodInventoryBindingSource, "BloodType", true));
             this.cmbBloodInvType.FormattingEnabled = true;
-            this.cmbBloodInvType.Location = new System.Drawing.Point(104, 119);
+            this.cmbBloodInvType.Location = new System.Drawing.Point(175, 119);
             this.cmbBloodInvType.Margin = new System.Windows.Forms.Padding(4);
             this.cmbBloodInvType.Name = "cmbBloodInvType";
             this.cmbBloodInvType.Size = new System.Drawing.Size(121, 21);
@@ -1100,7 +1148,7 @@
             // txtBloodAppID
             // 
             this.txtBloodAppID.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.tblBloodInventoryBindingSource, "AppID", true));
-            this.txtBloodAppID.Location = new System.Drawing.Point(104, 85);
+            this.txtBloodAppID.Location = new System.Drawing.Point(175, 85);
             this.txtBloodAppID.Margin = new System.Windows.Forms.Padding(4);
             this.txtBloodAppID.Name = "txtBloodAppID";
             this.txtBloodAppID.ReadOnly = true;
@@ -1110,7 +1158,7 @@
             // txtBloodUserID
             // 
             this.txtBloodUserID.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.tblBloodInventoryBindingSource, "UserID", true));
-            this.txtBloodUserID.Location = new System.Drawing.Point(104, 58);
+            this.txtBloodUserID.Location = new System.Drawing.Point(175, 50);
             this.txtBloodUserID.Margin = new System.Windows.Forms.Padding(4);
             this.txtBloodUserID.Name = "txtBloodUserID";
             this.txtBloodUserID.ReadOnly = true;
@@ -1120,7 +1168,7 @@
             // txtUnitID
             // 
             this.txtUnitID.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.tblBloodInventoryBindingSource, "UnitID", true));
-            this.txtUnitID.Location = new System.Drawing.Point(104, 16);
+            this.txtUnitID.Location = new System.Drawing.Point(175, 16);
             this.txtUnitID.Margin = new System.Windows.Forms.Padding(4);
             this.txtUnitID.Name = "txtUnitID";
             this.txtUnitID.ReadOnly = true;
@@ -1188,6 +1236,7 @@
             // 
             // tpgUsers
             // 
+            this.tpgUsers.BackgroundImage = global::BloodBankSystem.Properties.Resources.MainBackground;
             this.tpgUsers.Controls.Add(this.pnlRemoveUserFilters);
             this.tpgUsers.Controls.Add(this.pnlUserNav);
             this.tpgUsers.Controls.Add(this.panel5);
@@ -1204,12 +1253,12 @@
             // 
             // pnlRemoveUserFilters
             // 
-            this.pnlRemoveUserFilters.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.pnlRemoveUserFilters.BackColor = System.Drawing.Color.Transparent;
             this.pnlRemoveUserFilters.Controls.Add(this.btnRemoveFilter);
-            this.pnlRemoveUserFilters.Location = new System.Drawing.Point(756, 488);
+            this.pnlRemoveUserFilters.Location = new System.Drawing.Point(756, 453);
             this.pnlRemoveUserFilters.Margin = new System.Windows.Forms.Padding(4);
             this.pnlRemoveUserFilters.Name = "pnlRemoveUserFilters";
-            this.pnlRemoveUserFilters.Size = new System.Drawing.Size(276, 33);
+            this.pnlRemoveUserFilters.Size = new System.Drawing.Size(276, 68);
             this.pnlRemoveUserFilters.TabIndex = 6;
             // 
             // btnRemoveFilter
@@ -1218,13 +1267,13 @@
             this.btnRemoveFilter.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btnRemoveFilter.FlatAppearance.BorderSize = 0;
             this.btnRemoveFilter.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnRemoveFilter.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnRemoveFilter.Location = new System.Drawing.Point(87, 6);
+            this.btnRemoveFilter.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F);
+            this.btnRemoveFilter.Location = new System.Drawing.Point(37, 13);
             this.btnRemoveFilter.Margin = new System.Windows.Forms.Padding(4);
             this.btnRemoveFilter.Name = "btnRemoveFilter";
-            this.btnRemoveFilter.Size = new System.Drawing.Size(122, 23);
+            this.btnRemoveFilter.Size = new System.Drawing.Size(194, 37);
             this.btnRemoveFilter.TabIndex = 1;
-            this.btnRemoveFilter.Text = "Remove";
+            this.btnRemoveFilter.Text = "Remove Filters";
             this.btnRemoveFilter.UseVisualStyleBackColor = true;
             this.btnRemoveFilter.Click += new System.EventHandler(this.btnRemoveFilter_Click);
             // 
@@ -1248,7 +1297,7 @@
             this.btnUserLast.FlatAppearance.BorderSize = 0;
             this.btnUserLast.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnUserLast.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnUserLast.Location = new System.Drawing.Point(530, 3);
+            this.btnUserLast.Location = new System.Drawing.Point(512, 3);
             this.btnUserLast.Margin = new System.Windows.Forms.Padding(4);
             this.btnUserLast.Name = "btnUserLast";
             this.btnUserLast.Size = new System.Drawing.Size(121, 30);
@@ -1264,7 +1313,7 @@
             this.btnUserFirst.FlatAppearance.BorderSize = 0;
             this.btnUserFirst.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnUserFirst.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnUserFirst.Location = new System.Drawing.Point(128, 4);
+            this.btnUserFirst.Location = new System.Drawing.Point(99, 3);
             this.btnUserFirst.Margin = new System.Windows.Forms.Padding(4);
             this.btnUserFirst.Name = "btnUserFirst";
             this.btnUserFirst.Size = new System.Drawing.Size(121, 30);
@@ -1280,7 +1329,7 @@
             this.btnUserPrev.FlatAppearance.BorderSize = 0;
             this.btnUserPrev.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnUserPrev.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnUserPrev.Location = new System.Drawing.Point(257, 4);
+            this.btnUserPrev.Location = new System.Drawing.Point(237, 3);
             this.btnUserPrev.Margin = new System.Windows.Forms.Padding(4);
             this.btnUserPrev.Name = "btnUserPrev";
             this.btnUserPrev.Size = new System.Drawing.Size(121, 30);
@@ -1296,7 +1345,7 @@
             this.btnUserNext.FlatAppearance.BorderSize = 0;
             this.btnUserNext.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnUserNext.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnUserNext.Location = new System.Drawing.Point(402, 3);
+            this.btnUserNext.Location = new System.Drawing.Point(383, 3);
             this.btnUserNext.Margin = new System.Windows.Forms.Padding(4);
             this.btnUserNext.Name = "btnUserNext";
             this.btnUserNext.Size = new System.Drawing.Size(121, 30);
@@ -1308,7 +1357,7 @@
             // panel5
             // 
             this.panel5.AutoScroll = true;
-            this.panel5.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.panel5.BackColor = System.Drawing.Color.Transparent;
             this.panel5.Controls.Add(this.no1DonorFilterBtn);
             this.panel5.Controls.Add(this.donorRankingFilterBtn);
             this.panel5.Controls.Add(this.cmbUserFilter);
@@ -1323,7 +1372,7 @@
             this.panel5.Location = new System.Drawing.Point(754, 4);
             this.panel5.Margin = new System.Windows.Forms.Padding(4);
             this.panel5.Name = "panel5";
-            this.panel5.Size = new System.Drawing.Size(276, 474);
+            this.panel5.Size = new System.Drawing.Size(276, 436);
             this.panel5.TabIndex = 4;
             this.panel5.Paint += new System.Windows.Forms.PaintEventHandler(this.panel5_Paint);
             // 
@@ -1334,10 +1383,10 @@
             this.no1DonorFilterBtn.FlatAppearance.BorderSize = 0;
             this.no1DonorFilterBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.no1DonorFilterBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.25F);
-            this.no1DonorFilterBtn.Location = new System.Drawing.Point(39, 288);
+            this.no1DonorFilterBtn.Location = new System.Drawing.Point(39, 377);
             this.no1DonorFilterBtn.Margin = new System.Windows.Forms.Padding(4);
             this.no1DonorFilterBtn.Name = "no1DonorFilterBtn";
-            this.no1DonorFilterBtn.Size = new System.Drawing.Size(194, 36);
+            this.no1DonorFilterBtn.Size = new System.Drawing.Size(205, 37);
             this.no1DonorFilterBtn.TabIndex = 10;
             this.no1DonorFilterBtn.Text = "No.1 Donor";
             this.no1DonorFilterBtn.UseVisualStyleBackColor = true;
@@ -1350,10 +1399,10 @@
             this.donorRankingFilterBtn.FlatAppearance.BorderSize = 0;
             this.donorRankingFilterBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.donorRankingFilterBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.25F);
-            this.donorRankingFilterBtn.Location = new System.Drawing.Point(39, 231);
+            this.donorRankingFilterBtn.Location = new System.Drawing.Point(39, 306);
             this.donorRankingFilterBtn.Margin = new System.Windows.Forms.Padding(4);
             this.donorRankingFilterBtn.Name = "donorRankingFilterBtn";
-            this.donorRankingFilterBtn.Size = new System.Drawing.Size(194, 36);
+            this.donorRankingFilterBtn.Size = new System.Drawing.Size(205, 41);
             this.donorRankingFilterBtn.TabIndex = 9;
             this.donorRankingFilterBtn.Text = "Donor Ranking";
             this.donorRankingFilterBtn.UseVisualStyleBackColor = true;
@@ -1365,7 +1414,7 @@
             this.cmbUserFilter.Items.AddRange(new object[] {
             "Admin",
             "Donor"});
-            this.cmbUserFilter.Location = new System.Drawing.Point(137, 167);
+            this.cmbUserFilter.Location = new System.Drawing.Point(171, 246);
             this.cmbUserFilter.Margin = new System.Windows.Forms.Padding(4);
             this.cmbUserFilter.Name = "cmbUserFilter";
             this.cmbUserFilter.Size = new System.Drawing.Size(73, 21);
@@ -1378,10 +1427,10 @@
             this.btnUserFilter.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btnUserFilter.FlatAppearance.BorderSize = 0;
             this.btnUserFilter.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnUserFilter.Location = new System.Drawing.Point(15, 161);
+            this.btnUserFilter.Location = new System.Drawing.Point(39, 240);
             this.btnUserFilter.Margin = new System.Windows.Forms.Padding(4);
             this.btnUserFilter.Name = "btnUserFilter";
-            this.btnUserFilter.Size = new System.Drawing.Size(104, 25);
+            this.btnUserFilter.Size = new System.Drawing.Size(104, 30);
             this.btnUserFilter.TabIndex = 7;
             this.btnUserFilter.Text = "Fliter by user type";
             this.btnUserFilter.UseVisualStyleBackColor = true;
@@ -1395,7 +1444,7 @@
             "B",
             "AB",
             "O"});
-            this.cmbBloodFilter.Location = new System.Drawing.Point(137, 131);
+            this.cmbBloodFilter.Location = new System.Drawing.Point(171, 190);
             this.cmbBloodFilter.Margin = new System.Windows.Forms.Padding(4);
             this.cmbBloodFilter.Name = "cmbBloodFilter";
             this.cmbBloodFilter.Size = new System.Drawing.Size(73, 21);
@@ -1408,10 +1457,10 @@
             this.btnBloodFilter.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btnBloodFilter.FlatAppearance.BorderSize = 0;
             this.btnBloodFilter.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnBloodFilter.Location = new System.Drawing.Point(15, 127);
+            this.btnBloodFilter.Location = new System.Drawing.Point(39, 184);
             this.btnBloodFilter.Margin = new System.Windows.Forms.Padding(4);
             this.btnBloodFilter.Name = "btnBloodFilter";
-            this.btnBloodFilter.Size = new System.Drawing.Size(104, 26);
+            this.btnBloodFilter.Size = new System.Drawing.Size(104, 31);
             this.btnBloodFilter.TabIndex = 5;
             this.btnBloodFilter.Text = "Filter by blood type";
             this.btnBloodFilter.UseVisualStyleBackColor = true;
@@ -1423,10 +1472,11 @@
             this.btnSurnameAlphabetical.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btnSurnameAlphabetical.FlatAppearance.BorderSize = 0;
             this.btnSurnameAlphabetical.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnSurnameAlphabetical.Location = new System.Drawing.Point(15, 97);
+            this.btnSurnameAlphabetical.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.25F);
+            this.btnSurnameAlphabetical.Location = new System.Drawing.Point(39, 135);
             this.btnSurnameAlphabetical.Margin = new System.Windows.Forms.Padding(4);
             this.btnSurnameAlphabetical.Name = "btnSurnameAlphabetical";
-            this.btnSurnameAlphabetical.Size = new System.Drawing.Size(194, 26);
+            this.btnSurnameAlphabetical.Size = new System.Drawing.Size(205, 31);
             this.btnSurnameAlphabetical.TabIndex = 4;
             this.btnSurnameAlphabetical.Text = "Sort alphabetically(Surname)";
             this.btnSurnameAlphabetical.UseVisualStyleBackColor = true;
@@ -1438,10 +1488,11 @@
             this.btnNameAlphabetical.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btnNameAlphabetical.FlatAppearance.BorderSize = 0;
             this.btnNameAlphabetical.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnNameAlphabetical.Location = new System.Drawing.Point(15, 63);
+            this.btnNameAlphabetical.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.25F);
+            this.btnNameAlphabetical.Location = new System.Drawing.Point(39, 91);
             this.btnNameAlphabetical.Margin = new System.Windows.Forms.Padding(4);
             this.btnNameAlphabetical.Name = "btnNameAlphabetical";
-            this.btnNameAlphabetical.Size = new System.Drawing.Size(194, 26);
+            this.btnNameAlphabetical.Size = new System.Drawing.Size(205, 31);
             this.btnNameAlphabetical.TabIndex = 3;
             this.btnNameAlphabetical.Text = "Sort alphabetically(Name)";
             this.btnNameAlphabetical.UseVisualStyleBackColor = true;
@@ -1453,10 +1504,11 @@
             this.btnFilterInactive.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btnFilterInactive.FlatAppearance.BorderSize = 0;
             this.btnFilterInactive.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnFilterInactive.Location = new System.Drawing.Point(116, 27);
+            this.btnFilterInactive.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
+            this.btnFilterInactive.Location = new System.Drawing.Point(150, 37);
             this.btnFilterInactive.Margin = new System.Windows.Forms.Padding(4);
             this.btnFilterInactive.Name = "btnFilterInactive";
-            this.btnFilterInactive.Size = new System.Drawing.Size(94, 28);
+            this.btnFilterInactive.Size = new System.Drawing.Size(94, 33);
             this.btnFilterInactive.TabIndex = 2;
             this.btnFilterInactive.Text = "Filter by inactive";
             this.btnFilterInactive.UseVisualStyleBackColor = true;
@@ -1468,10 +1520,11 @@
             this.btnFilterActive.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btnFilterActive.FlatAppearance.BorderSize = 0;
             this.btnFilterActive.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnFilterActive.Location = new System.Drawing.Point(15, 27);
+            this.btnFilterActive.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
+            this.btnFilterActive.Location = new System.Drawing.Point(39, 37);
             this.btnFilterActive.Margin = new System.Windows.Forms.Padding(4);
             this.btnFilterActive.Name = "btnFilterActive";
-            this.btnFilterActive.Size = new System.Drawing.Size(93, 28);
+            this.btnFilterActive.Size = new System.Drawing.Size(93, 33);
             this.btnFilterActive.TabIndex = 1;
             this.btnFilterActive.Text = "Filter by active";
             this.btnFilterActive.UseVisualStyleBackColor = true;
@@ -1480,6 +1533,7 @@
             // label19
             // 
             this.label19.AutoSize = true;
+            this.label19.ForeColor = System.Drawing.Color.White;
             this.label19.Location = new System.Drawing.Point(20, 10);
             this.label19.Name = "label19";
             this.label19.Size = new System.Drawing.Size(73, 13);
@@ -1508,79 +1562,6 @@
             this.dgvUsers.Size = new System.Drawing.Size(737, 287);
             this.dgvUsers.TabIndex = 3;
             // 
-            // userIDDataGridViewTextBoxColumn
-            // 
-            this.userIDDataGridViewTextBoxColumn.DataPropertyName = "UserID";
-            this.userIDDataGridViewTextBoxColumn.HeaderText = "User ID";
-            this.userIDDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.userIDDataGridViewTextBoxColumn.Name = "userIDDataGridViewTextBoxColumn";
-            this.userIDDataGridViewTextBoxColumn.Width = 125;
-            // 
-            // passwordDataGridViewTextBoxColumn
-            // 
-            this.passwordDataGridViewTextBoxColumn.DataPropertyName = "Password";
-            this.passwordDataGridViewTextBoxColumn.HeaderText = "Password";
-            this.passwordDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.passwordDataGridViewTextBoxColumn.Name = "passwordDataGridViewTextBoxColumn";
-            this.passwordDataGridViewTextBoxColumn.Visible = false;
-            this.passwordDataGridViewTextBoxColumn.Width = 125;
-            // 
-            // nameDataGridViewTextBoxColumn
-            // 
-            this.nameDataGridViewTextBoxColumn.DataPropertyName = "Name";
-            this.nameDataGridViewTextBoxColumn.HeaderText = "Name";
-            this.nameDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.nameDataGridViewTextBoxColumn.Name = "nameDataGridViewTextBoxColumn";
-            this.nameDataGridViewTextBoxColumn.Width = 125;
-            // 
-            // surnameDataGridViewTextBoxColumn
-            // 
-            this.surnameDataGridViewTextBoxColumn.DataPropertyName = "Surname";
-            this.surnameDataGridViewTextBoxColumn.HeaderText = "Surname";
-            this.surnameDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.surnameDataGridViewTextBoxColumn.Name = "surnameDataGridViewTextBoxColumn";
-            this.surnameDataGridViewTextBoxColumn.Width = 125;
-            // 
-            // iDNumberDataGridViewTextBoxColumn
-            // 
-            this.iDNumberDataGridViewTextBoxColumn.DataPropertyName = "IDNumber";
-            this.iDNumberDataGridViewTextBoxColumn.HeaderText = "ID Number";
-            this.iDNumberDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.iDNumberDataGridViewTextBoxColumn.Name = "iDNumberDataGridViewTextBoxColumn";
-            this.iDNumberDataGridViewTextBoxColumn.Width = 125;
-            // 
-            // phoneNumberDataGridViewTextBoxColumn
-            // 
-            this.phoneNumberDataGridViewTextBoxColumn.DataPropertyName = "PhoneNumber";
-            this.phoneNumberDataGridViewTextBoxColumn.HeaderText = "Phone Number";
-            this.phoneNumberDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.phoneNumberDataGridViewTextBoxColumn.Name = "phoneNumberDataGridViewTextBoxColumn";
-            this.phoneNumberDataGridViewTextBoxColumn.Width = 125;
-            // 
-            // userTypeDataGridViewTextBoxColumn
-            // 
-            this.userTypeDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.userTypeDataGridViewTextBoxColumn.DataPropertyName = "UserType";
-            this.userTypeDataGridViewTextBoxColumn.HeaderText = "User Type";
-            this.userTypeDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.userTypeDataGridViewTextBoxColumn.Name = "userTypeDataGridViewTextBoxColumn";
-            // 
-            // bloodTypeDataGridViewTextBoxColumn
-            // 
-            this.bloodTypeDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.bloodTypeDataGridViewTextBoxColumn.DataPropertyName = "BloodType";
-            this.bloodTypeDataGridViewTextBoxColumn.HeaderText = "Blood Type";
-            this.bloodTypeDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.bloodTypeDataGridViewTextBoxColumn.Name = "bloodTypeDataGridViewTextBoxColumn";
-            // 
-            // isActiveAccountDataGridViewCheckBoxColumn
-            // 
-            this.isActiveAccountDataGridViewCheckBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.isActiveAccountDataGridViewCheckBoxColumn.DataPropertyName = "isActiveAccount";
-            this.isActiveAccountDataGridViewCheckBoxColumn.HeaderText = "Active";
-            this.isActiveAccountDataGridViewCheckBoxColumn.MinimumWidth = 6;
-            this.isActiveAccountDataGridViewCheckBoxColumn.Name = "isActiveAccountDataGridViewCheckBoxColumn";
-            // 
             // tblUsersBindingSource
             // 
             this.tblUsersBindingSource.DataMember = "tblUsers";
@@ -1588,7 +1569,7 @@
             // 
             // pnlUserEdit
             // 
-            this.pnlUserEdit.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.pnlUserEdit.BackColor = System.Drawing.Color.Transparent;
             this.pnlUserEdit.Controls.Add(this.btnStartInsert);
             this.pnlUserEdit.Controls.Add(this.btnInsertUser);
             this.pnlUserEdit.Controls.Add(this.lblUserType);
@@ -1612,6 +1593,7 @@
             this.pnlUserEdit.Controls.Add(this.txtUserID);
             this.pnlUserEdit.Controls.Add(this.btnCancelInsert);
             this.pnlUserEdit.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.pnlUserEdit.ForeColor = System.Drawing.Color.White;
             this.pnlUserEdit.Location = new System.Drawing.Point(8, 336);
             this.pnlUserEdit.Margin = new System.Windows.Forms.Padding(2);
             this.pnlUserEdit.Name = "pnlUserEdit";
@@ -1624,7 +1606,8 @@
             this.btnStartInsert.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btnStartInsert.FlatAppearance.BorderSize = 0;
             this.btnStartInsert.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnStartInsert.Location = new System.Drawing.Point(530, 12);
+            this.btnStartInsert.ForeColor = System.Drawing.Color.Black;
+            this.btnStartInsert.Location = new System.Drawing.Point(530, 21);
             this.btnStartInsert.Margin = new System.Windows.Forms.Padding(4);
             this.btnStartInsert.Name = "btnStartInsert";
             this.btnStartInsert.Size = new System.Drawing.Size(121, 35);
@@ -1635,7 +1618,12 @@
             // 
             // btnInsertUser
             // 
-            this.btnInsertUser.Location = new System.Drawing.Point(530, 4);
+            this.btnInsertUser.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnInsertUser.BackgroundImage")));
+            this.btnInsertUser.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnInsertUser.FlatAppearance.BorderSize = 0;
+            this.btnInsertUser.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnInsertUser.ForeColor = System.Drawing.Color.Black;
+            this.btnInsertUser.Location = new System.Drawing.Point(530, 23);
             this.btnInsertUser.Margin = new System.Windows.Forms.Padding(4);
             this.btnInsertUser.Name = "btnInsertUser";
             this.btnInsertUser.Size = new System.Drawing.Size(121, 31);
@@ -1649,6 +1637,7 @@
             // 
             this.lblUserType.AutoSize = true;
             this.lblUserType.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblUserType.ForeColor = System.Drawing.Color.White;
             this.lblUserType.Location = new System.Drawing.Point(267, 61);
             this.lblUserType.Name = "lblUserType";
             this.lblUserType.Size = new System.Drawing.Size(74, 16);
@@ -1659,6 +1648,7 @@
             // 
             this.lblBloodType.AutoSize = true;
             this.lblBloodType.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblBloodType.ForeColor = System.Drawing.Color.White;
             this.lblBloodType.Location = new System.Drawing.Point(260, 87);
             this.lblBloodType.Name = "lblBloodType";
             this.lblBloodType.Size = new System.Drawing.Size(81, 16);
@@ -1669,7 +1659,8 @@
             // 
             this.lblName.AutoSize = true;
             this.lblName.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblName.Location = new System.Drawing.Point(31, 84);
+            this.lblName.ForeColor = System.Drawing.Color.White;
+            this.lblName.Location = new System.Drawing.Point(42, 85);
             this.lblName.Name = "lblName";
             this.lblName.Size = new System.Drawing.Size(47, 16);
             this.lblName.TabIndex = 17;
@@ -1679,6 +1670,7 @@
             // 
             this.lblSurname.AutoSize = true;
             this.lblSurname.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblSurname.ForeColor = System.Drawing.Color.White;
             this.lblSurname.Location = new System.Drawing.Point(25, 117);
             this.lblSurname.Name = "lblSurname";
             this.lblSurname.Size = new System.Drawing.Size(64, 16);
@@ -1689,7 +1681,8 @@
             // 
             this.lblIDNum.AutoSize = true;
             this.lblIDNum.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblIDNum.Location = new System.Drawing.Point(14, 144);
+            this.lblIDNum.ForeColor = System.Drawing.Color.White;
+            this.lblIDNum.Location = new System.Drawing.Point(15, 148);
             this.lblIDNum.Name = "lblIDNum";
             this.lblIDNum.Size = new System.Drawing.Size(74, 16);
             this.lblIDNum.TabIndex = 15;
@@ -1699,6 +1692,7 @@
             // 
             this.lblPhoneNum.AutoSize = true;
             this.lblPhoneNum.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblPhoneNum.ForeColor = System.Drawing.Color.White;
             this.lblPhoneNum.Location = new System.Drawing.Point(244, 29);
             this.lblPhoneNum.Name = "lblPhoneNum";
             this.lblPhoneNum.Size = new System.Drawing.Size(97, 16);
@@ -1709,7 +1703,8 @@
             // 
             this.lblPassword.AutoSize = true;
             this.lblPassword.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblPassword.Location = new System.Drawing.Point(14, 49);
+            this.lblPassword.ForeColor = System.Drawing.Color.White;
+            this.lblPassword.Location = new System.Drawing.Point(19, 53);
             this.lblPassword.Name = "lblPassword";
             this.lblPassword.Size = new System.Drawing.Size(70, 16);
             this.lblPassword.TabIndex = 13;
@@ -1719,7 +1714,8 @@
             // 
             this.lblUserID.AutoSize = true;
             this.lblUserID.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblUserID.Location = new System.Drawing.Point(31, 18);
+            this.lblUserID.ForeColor = System.Drawing.Color.White;
+            this.lblUserID.Location = new System.Drawing.Point(37, 23);
             this.lblUserID.Name = "lblUserID";
             this.lblUserID.Size = new System.Drawing.Size(52, 16);
             this.lblUserID.TabIndex = 12;
@@ -1731,7 +1727,8 @@
             this.btnDeleteUser.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btnDeleteUser.FlatAppearance.BorderSize = 0;
             this.btnDeleteUser.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnDeleteUser.Location = new System.Drawing.Point(530, 77);
+            this.btnDeleteUser.ForeColor = System.Drawing.Color.Black;
+            this.btnDeleteUser.Location = new System.Drawing.Point(530, 81);
             this.btnDeleteUser.Margin = new System.Windows.Forms.Padding(4);
             this.btnDeleteUser.Name = "btnDeleteUser";
             this.btnDeleteUser.Size = new System.Drawing.Size(121, 31);
@@ -1746,6 +1743,7 @@
             this.btnUpdateUser.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btnUpdateUser.FlatAppearance.BorderSize = 0;
             this.btnUpdateUser.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnUpdateUser.ForeColor = System.Drawing.Color.Black;
             this.btnUpdateUser.Location = new System.Drawing.Point(530, 130);
             this.btnUpdateUser.Margin = new System.Windows.Forms.Padding(4);
             this.btnUpdateUser.Name = "btnUpdateUser";
@@ -1804,13 +1802,13 @@
             this.txtPhone.Location = new System.Drawing.Point(348, 27);
             this.txtPhone.Margin = new System.Windows.Forms.Padding(4);
             this.txtPhone.Name = "txtPhone";
-            this.txtPhone.Size = new System.Drawing.Size(100, 22);
+            this.txtPhone.Size = new System.Drawing.Size(121, 22);
             this.txtPhone.TabIndex = 5;
             // 
             // txtID
             // 
             this.txtID.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.tblUsersBindingSource, "IDNumber", true));
-            this.txtID.Location = new System.Drawing.Point(120, 144);
+            this.txtID.Location = new System.Drawing.Point(120, 145);
             this.txtID.Margin = new System.Windows.Forms.Padding(4);
             this.txtID.Name = "txtID";
             this.txtID.Size = new System.Drawing.Size(100, 22);
@@ -1857,7 +1855,12 @@
             // 
             // btnCancelInsert
             // 
-            this.btnCancelInsert.Location = new System.Drawing.Point(530, 70);
+            this.btnCancelInsert.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnCancelInsert.BackgroundImage")));
+            this.btnCancelInsert.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnCancelInsert.FlatAppearance.BorderSize = 0;
+            this.btnCancelInsert.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnCancelInsert.ForeColor = System.Drawing.Color.Black;
+            this.btnCancelInsert.Location = new System.Drawing.Point(530, 82);
             this.btnCancelInsert.Margin = new System.Windows.Forms.Padding(4);
             this.btnCancelInsert.Name = "btnCancelInsert";
             this.btnCancelInsert.Size = new System.Drawing.Size(121, 28);
@@ -1885,6 +1888,7 @@
             // tpgSchedule
             // 
             this.tpgSchedule.AutoScroll = true;
+            this.tpgSchedule.BackgroundImage = global::BloodBankSystem.Properties.Resources.MainBackground;
             this.tpgSchedule.Controls.Add(this.dgvTotalSchedule);
             this.tpgSchedule.Controls.Add(this.dgvAverage);
             this.tpgSchedule.Controls.Add(this.pnlScheduleNav);
@@ -1990,7 +1994,7 @@
             // 
             // pnlScheduleNav
             // 
-            this.pnlScheduleNav.BackColor = System.Drawing.Color.SteelBlue;
+            this.pnlScheduleNav.BackColor = System.Drawing.Color.Transparent;
             this.pnlScheduleNav.Controls.Add(this.btnScheduleFirst);
             this.pnlScheduleNav.Controls.Add(this.btnSchedulePrev);
             this.pnlScheduleNav.Controls.Add(this.btnScheduleNext);
@@ -2008,7 +2012,7 @@
             this.btnScheduleFirst.FlatAppearance.BorderSize = 0;
             this.btnScheduleFirst.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnScheduleFirst.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnScheduleFirst.Location = new System.Drawing.Point(5, 4);
+            this.btnScheduleFirst.Location = new System.Drawing.Point(84, 0);
             this.btnScheduleFirst.Margin = new System.Windows.Forms.Padding(4);
             this.btnScheduleFirst.Name = "btnScheduleFirst";
             this.btnScheduleFirst.Size = new System.Drawing.Size(129, 36);
@@ -2024,7 +2028,7 @@
             this.btnSchedulePrev.FlatAppearance.BorderSize = 0;
             this.btnSchedulePrev.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnSchedulePrev.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnSchedulePrev.Location = new System.Drawing.Point(143, 4);
+            this.btnSchedulePrev.Location = new System.Drawing.Point(225, 2);
             this.btnSchedulePrev.Margin = new System.Windows.Forms.Padding(4);
             this.btnSchedulePrev.Name = "btnSchedulePrev";
             this.btnSchedulePrev.Size = new System.Drawing.Size(109, 36);
@@ -2040,7 +2044,7 @@
             this.btnScheduleNext.FlatAppearance.BorderSize = 0;
             this.btnScheduleNext.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnScheduleNext.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnScheduleNext.Location = new System.Drawing.Point(290, 4);
+            this.btnScheduleNext.Location = new System.Drawing.Point(379, 2);
             this.btnScheduleNext.Margin = new System.Windows.Forms.Padding(4);
             this.btnScheduleNext.Name = "btnScheduleNext";
             this.btnScheduleNext.Size = new System.Drawing.Size(109, 36);
@@ -2056,7 +2060,7 @@
             this.btnScheduleLast.FlatAppearance.BorderSize = 0;
             this.btnScheduleLast.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnScheduleLast.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnScheduleLast.Location = new System.Drawing.Point(407, 4);
+            this.btnScheduleLast.Location = new System.Drawing.Point(515, 2);
             this.btnScheduleLast.Margin = new System.Windows.Forms.Padding(4);
             this.btnScheduleLast.Name = "btnScheduleLast";
             this.btnScheduleLast.Size = new System.Drawing.Size(128, 36);
@@ -2068,7 +2072,7 @@
             // panel1
             // 
             this.panel1.AutoScroll = true;
-            this.panel1.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.panel1.BackColor = System.Drawing.Color.Transparent;
             this.panel1.Controls.Add(this.button1);
             this.panel1.Controls.Add(this.btnAverage);
             this.panel1.Controls.Add(this.btnCountSchedules);
@@ -2099,7 +2103,7 @@
             this.btnAverage.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btnAverage.FlatAppearance.BorderSize = 0;
             this.btnAverage.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnAverage.Location = new System.Drawing.Point(4, 95);
+            this.btnAverage.Location = new System.Drawing.Point(24, 159);
             this.btnAverage.Margin = new System.Windows.Forms.Padding(4);
             this.btnAverage.Name = "btnAverage";
             this.btnAverage.Size = new System.Drawing.Size(184, 52);
@@ -2115,10 +2119,10 @@
             this.btnCountSchedules.FlatAppearance.BorderSize = 0;
             this.btnCountSchedules.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnCountSchedules.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.25F);
-            this.btnCountSchedules.Location = new System.Drawing.Point(4, 47);
+            this.btnCountSchedules.Location = new System.Drawing.Point(22, 91);
             this.btnCountSchedules.Margin = new System.Windows.Forms.Padding(4);
             this.btnCountSchedules.Name = "btnCountSchedules";
-            this.btnCountSchedules.Size = new System.Drawing.Size(186, 40);
+            this.btnCountSchedules.Size = new System.Drawing.Size(186, 51);
             this.btnCountSchedules.TabIndex = 1;
             this.btnCountSchedules.Text = "Count Schedules per Donor";
             this.btnCountSchedules.UseVisualStyleBackColor = true;
@@ -2128,6 +2132,7 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.25F);
+            this.label1.ForeColor = System.Drawing.Color.White;
             this.label1.Location = new System.Drawing.Point(3, 9);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(90, 16);
@@ -2136,7 +2141,7 @@
             // 
             // pnlSchedule
             // 
-            this.pnlSchedule.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.pnlSchedule.BackColor = System.Drawing.Color.Transparent;
             this.pnlSchedule.Controls.Add(this.btnDeleteSchedule);
             this.pnlSchedule.Controls.Add(this.btnAppChanges);
             this.pnlSchedule.Controls.Add(this.chkAttended);
@@ -2157,7 +2162,7 @@
             this.btnDeleteSchedule.FlatAppearance.BorderSize = 0;
             this.btnDeleteSchedule.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnDeleteSchedule.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.25F);
-            this.btnDeleteSchedule.Location = new System.Drawing.Point(350, 7);
+            this.btnDeleteSchedule.Location = new System.Drawing.Point(323, 8);
             this.btnDeleteSchedule.Margin = new System.Windows.Forms.Padding(4);
             this.btnDeleteSchedule.Name = "btnDeleteSchedule";
             this.btnDeleteSchedule.Size = new System.Drawing.Size(124, 32);
@@ -2173,7 +2178,7 @@
             this.btnAppChanges.FlatAppearance.BorderSize = 0;
             this.btnAppChanges.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnAppChanges.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.25F);
-            this.btnAppChanges.Location = new System.Drawing.Point(210, 6);
+            this.btnAppChanges.Location = new System.Drawing.Point(170, 8);
             this.btnAppChanges.Margin = new System.Windows.Forms.Padding(4);
             this.btnAppChanges.Name = "btnAppChanges";
             this.btnAppChanges.Size = new System.Drawing.Size(124, 31);
@@ -2187,6 +2192,7 @@
             this.chkAttended.AutoSize = true;
             this.chkAttended.DataBindings.Add(new System.Windows.Forms.Binding("Checked", this.scheduleBindingSource, "Attended", true));
             this.chkAttended.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.25F);
+            this.chkAttended.ForeColor = System.Drawing.Color.White;
             this.chkAttended.Location = new System.Drawing.Point(62, 14);
             this.chkAttended.Margin = new System.Windows.Forms.Padding(4);
             this.chkAttended.Name = "chkAttended";
@@ -2202,7 +2208,7 @@
             // 
             // txtSearchByUser
             // 
-            this.txtSearchByUser.Location = new System.Drawing.Point(640, 14);
+            this.txtSearchByUser.Location = new System.Drawing.Point(616, 16);
             this.txtSearchByUser.Name = "txtSearchByUser";
             this.txtSearchByUser.Size = new System.Drawing.Size(125, 20);
             this.txtSearchByUser.TabIndex = 5;
@@ -2211,7 +2217,7 @@
             // 
             // pnlShortStats
             // 
-            this.pnlShortStats.BackColor = System.Drawing.SystemColors.MenuHighlight;
+            this.pnlShortStats.BackColor = System.Drawing.Color.Transparent;
             this.pnlShortStats.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.pnlShortStats.Controls.Add(this.lblUnattended);
             this.pnlShortStats.Controls.Add(this.lblAttended);
@@ -2227,6 +2233,7 @@
             // 
             this.lblUnattended.AutoSize = true;
             this.lblUnattended.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.25F);
+            this.lblUnattended.ForeColor = System.Drawing.Color.White;
             this.lblUnattended.Location = new System.Drawing.Point(12, 94);
             this.lblUnattended.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblUnattended.Name = "lblUnattended";
@@ -2238,6 +2245,7 @@
             // 
             this.lblAttended.AutoSize = true;
             this.lblAttended.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.25F);
+            this.lblAttended.ForeColor = System.Drawing.Color.White;
             this.lblAttended.Location = new System.Drawing.Point(12, 66);
             this.lblAttended.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblAttended.Name = "lblAttended";
@@ -2249,7 +2257,8 @@
             // 
             this.lblSchedules.AutoSize = true;
             this.lblSchedules.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.25F);
-            this.lblSchedules.Location = new System.Drawing.Point(12, 40);
+            this.lblSchedules.ForeColor = System.Drawing.Color.White;
+            this.lblSchedules.Location = new System.Drawing.Point(12, 39);
             this.lblSchedules.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblSchedules.Name = "lblSchedules";
             this.lblSchedules.Size = new System.Drawing.Size(253, 16);
@@ -2260,6 +2269,7 @@
             // 
             this.lblShortStats.AutoSize = true;
             this.lblShortStats.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblShortStats.ForeColor = System.Drawing.Color.White;
             this.lblShortStats.Location = new System.Drawing.Point(12, 12);
             this.lblShortStats.Name = "lblShortStats";
             this.lblShortStats.Size = new System.Drawing.Size(114, 16);
@@ -2273,7 +2283,7 @@
             this.btnScheduleUserSearch.FlatAppearance.BorderSize = 0;
             this.btnScheduleUserSearch.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnScheduleUserSearch.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.25F);
-            this.btnScheduleUserSearch.Location = new System.Drawing.Point(500, 7);
+            this.btnScheduleUserSearch.Location = new System.Drawing.Point(475, 8);
             this.btnScheduleUserSearch.Name = "btnScheduleUserSearch";
             this.btnScheduleUserSearch.Size = new System.Drawing.Size(124, 32);
             this.btnScheduleUserSearch.TabIndex = 3;
@@ -2283,7 +2293,7 @@
             // 
             // redDisplay
             // 
-            this.redDisplay.Location = new System.Drawing.Point(771, 4);
+            this.redDisplay.Location = new System.Drawing.Point(770, 4);
             this.redDisplay.Margin = new System.Windows.Forms.Padding(4);
             this.redDisplay.Name = "redDisplay";
             this.redDisplay.Size = new System.Drawing.Size(232, 183);
@@ -2409,13 +2419,92 @@
             // 
             this.tblAverageScheduleTableAdapter.ClearBeforeFill = true;
             // 
+            // userIDDataGridViewTextBoxColumn
+            // 
+            this.userIDDataGridViewTextBoxColumn.DataPropertyName = "UserID";
+            this.userIDDataGridViewTextBoxColumn.HeaderText = "User ID";
+            this.userIDDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.userIDDataGridViewTextBoxColumn.Name = "userIDDataGridViewTextBoxColumn";
+            this.userIDDataGridViewTextBoxColumn.Width = 125;
+            // 
+            // passwordDataGridViewTextBoxColumn
+            // 
+            this.passwordDataGridViewTextBoxColumn.DataPropertyName = "Password";
+            this.passwordDataGridViewTextBoxColumn.HeaderText = "Password";
+            this.passwordDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.passwordDataGridViewTextBoxColumn.Name = "passwordDataGridViewTextBoxColumn";
+            this.passwordDataGridViewTextBoxColumn.Visible = false;
+            this.passwordDataGridViewTextBoxColumn.Width = 125;
+            // 
+            // nameDataGridViewTextBoxColumn
+            // 
+            this.nameDataGridViewTextBoxColumn.DataPropertyName = "Name";
+            this.nameDataGridViewTextBoxColumn.HeaderText = "Name";
+            this.nameDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.nameDataGridViewTextBoxColumn.Name = "nameDataGridViewTextBoxColumn";
+            this.nameDataGridViewTextBoxColumn.Width = 125;
+            // 
+            // surnameDataGridViewTextBoxColumn
+            // 
+            this.surnameDataGridViewTextBoxColumn.DataPropertyName = "Surname";
+            this.surnameDataGridViewTextBoxColumn.HeaderText = "Surname";
+            this.surnameDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.surnameDataGridViewTextBoxColumn.Name = "surnameDataGridViewTextBoxColumn";
+            this.surnameDataGridViewTextBoxColumn.Width = 125;
+            // 
+            // iDNumberDataGridViewTextBoxColumn
+            // 
+            this.iDNumberDataGridViewTextBoxColumn.DataPropertyName = "IDNumber";
+            this.iDNumberDataGridViewTextBoxColumn.HeaderText = "ID Number";
+            this.iDNumberDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.iDNumberDataGridViewTextBoxColumn.Name = "iDNumberDataGridViewTextBoxColumn";
+            this.iDNumberDataGridViewTextBoxColumn.Width = 125;
+            // 
+            // phoneNumberDataGridViewTextBoxColumn
+            // 
+            this.phoneNumberDataGridViewTextBoxColumn.DataPropertyName = "PhoneNumber";
+            this.phoneNumberDataGridViewTextBoxColumn.HeaderText = "Phone Number";
+            this.phoneNumberDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.phoneNumberDataGridViewTextBoxColumn.Name = "phoneNumberDataGridViewTextBoxColumn";
+            this.phoneNumberDataGridViewTextBoxColumn.Width = 125;
+            // 
+            // userTypeDataGridViewTextBoxColumn
+            // 
+            this.userTypeDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.ColumnHeader;
+            this.userTypeDataGridViewTextBoxColumn.DataPropertyName = "UserType";
+            this.userTypeDataGridViewTextBoxColumn.HeaderText = "User Type";
+            this.userTypeDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.userTypeDataGridViewTextBoxColumn.Name = "userTypeDataGridViewTextBoxColumn";
+            this.userTypeDataGridViewTextBoxColumn.Width = 81;
+            // 
+            // bloodTypeDataGridViewTextBoxColumn
+            // 
+            this.bloodTypeDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.ColumnHeader;
+            this.bloodTypeDataGridViewTextBoxColumn.DataPropertyName = "BloodType";
+            this.bloodTypeDataGridViewTextBoxColumn.HeaderText = "Blood Type";
+            this.bloodTypeDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.bloodTypeDataGridViewTextBoxColumn.Name = "bloodTypeDataGridViewTextBoxColumn";
+            this.bloodTypeDataGridViewTextBoxColumn.Width = 86;
+            // 
+            // isActiveAccountDataGridViewCheckBoxColumn
+            // 
+            this.isActiveAccountDataGridViewCheckBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.isActiveAccountDataGridViewCheckBoxColumn.DataPropertyName = "isActiveAccount";
+            this.isActiveAccountDataGridViewCheckBoxColumn.HeaderText = "Active";
+            this.isActiveAccountDataGridViewCheckBoxColumn.MinimumWidth = 6;
+            this.isActiveAccountDataGridViewCheckBoxColumn.Name = "isActiveAccountDataGridViewCheckBoxColumn";
+            // 
             // AdminForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackgroundImage = global::BloodBankSystem.Properties.Resources.MainBackground;
+            this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.ClientSize = new System.Drawing.Size(1052, 607);
             this.Controls.Add(this.tcAdmin);
             this.Controls.Add(this.pnlTopBar);
+            this.DoubleBuffered = true;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "AdminForm";
             this.Text = "AdminForm";
@@ -2643,6 +2732,8 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn9;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn10;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn11;
+        private System.Windows.Forms.Button donorRankingFilterBtn;
+        private System.Windows.Forms.Button no1DonorFilterBtn;
         private System.Windows.Forms.DataGridViewTextBoxColumn userIDDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn passwordDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn nameDataGridViewTextBoxColumn;
@@ -2652,7 +2743,5 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn userTypeDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn bloodTypeDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewCheckBoxColumn isActiveAccountDataGridViewCheckBoxColumn;
-        private System.Windows.Forms.Button donorRankingFilterBtn;
-        private System.Windows.Forms.Button no1DonorFilterBtn;
     }
 }
