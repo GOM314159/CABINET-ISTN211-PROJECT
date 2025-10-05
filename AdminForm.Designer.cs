@@ -251,9 +251,10 @@
             // btnHomepage
             // 
             this.btnHomepage.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.25F);
-            this.btnHomepage.Location = new System.Drawing.Point(664, 3);
+            this.btnHomepage.Location = new System.Drawing.Point(639, 2);
+            this.btnHomepage.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnHomepage.Name = "btnHomepage";
-            this.btnHomepage.Size = new System.Drawing.Size(130, 31);
+            this.btnHomepage.Size = new System.Drawing.Size(156, 29);
             this.btnHomepage.TabIndex = 2;
             this.btnHomepage.Text = "My Homepage";
             this.btnHomepage.UseVisualStyleBackColor = true;
@@ -290,7 +291,7 @@
             this.tpgAppointments.Controls.Add(this.pnlAppEdit);
             this.tpgAppointments.Location = new System.Drawing.Point(4, 22);
             this.tpgAppointments.Name = "tpgAppointments";
-            this.tpgAppointments.Padding = new System.Windows.Forms.Padding(3);
+            this.tpgAppointments.Padding = new System.Windows.Forms.Padding(3, 3, 3, 3);
             this.tpgAppointments.Size = new System.Drawing.Size(793, 387);
             this.tpgAppointments.TabIndex = 2;
             this.tpgAppointments.Text = "Appointments";
@@ -683,7 +684,7 @@
             this.tpgBlood.Controls.Add(this.dgvBlood);
             this.tpgBlood.Location = new System.Drawing.Point(4, 22);
             this.tpgBlood.Name = "tpgBlood";
-            this.tpgBlood.Padding = new System.Windows.Forms.Padding(3);
+            this.tpgBlood.Padding = new System.Windows.Forms.Padding(3, 3, 3, 3);
             this.tpgBlood.Size = new System.Drawing.Size(793, 387);
             this.tpgBlood.TabIndex = 1;
             this.tpgBlood.Text = "Blood Inventory";
@@ -1035,7 +1036,7 @@
             this.tpgUsers.Controls.Add(this.pnlUserEdit);
             this.tpgUsers.Location = new System.Drawing.Point(4, 22);
             this.tpgUsers.Name = "tpgUsers";
-            this.tpgUsers.Padding = new System.Windows.Forms.Padding(3);
+            this.tpgUsers.Padding = new System.Windows.Forms.Padding(3, 3, 3, 3);
             this.tpgUsers.Size = new System.Drawing.Size(793, 387);
             this.tpgUsers.TabIndex = 0;
             this.tpgUsers.Text = "    Users    ";
@@ -1355,9 +1356,10 @@
             this.pnlUserEdit.Controls.Add(this.txtUserID);
             this.pnlUserEdit.Controls.Add(this.btnCancelInsert);
             this.pnlUserEdit.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.pnlUserEdit.Location = new System.Drawing.Point(108, 218);
+            this.pnlUserEdit.Location = new System.Drawing.Point(81, 177);
+            this.pnlUserEdit.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.pnlUserEdit.Name = "pnlUserEdit";
-            this.pnlUserEdit.Size = new System.Drawing.Size(604, 163);
+            this.pnlUserEdit.Size = new System.Drawing.Size(453, 132);
             this.pnlUserEdit.TabIndex = 2;
             // 
             // btnStartInsert
@@ -1605,7 +1607,7 @@
             this.tpgSchedule.Controls.Add(this.dgvSchedule);
             this.tpgSchedule.Location = new System.Drawing.Point(4, 22);
             this.tpgSchedule.Name = "tpgSchedule";
-            this.tpgSchedule.Padding = new System.Windows.Forms.Padding(3);
+            this.tpgSchedule.Padding = new System.Windows.Forms.Padding(3, 3, 3, 3);
             this.tpgSchedule.Size = new System.Drawing.Size(793, 387);
             this.tpgSchedule.TabIndex = 3;
             this.tpgSchedule.Text = "   Schedule   ";
@@ -1774,7 +1776,7 @@
             // 
             // txtSearchByUser
             // 
-            this.txtSearchByUser.Location = new System.Drawing.Point(431, 103);
+            this.txtSearchByUser.Location = new System.Drawing.Point(432, 84);
             this.txtSearchByUser.Name = "txtSearchByUser";
             this.txtSearchByUser.Size = new System.Drawing.Size(120, 20);
             this.txtSearchByUser.TabIndex = 5;
@@ -1848,7 +1850,7 @@
             // btnScheduleUserSearch
             // 
             this.btnScheduleUserSearch.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.25F);
-            this.btnScheduleUserSearch.Location = new System.Drawing.Point(431, 71);
+            this.btnScheduleUserSearch.Location = new System.Drawing.Point(431, 42);
             this.btnScheduleUserSearch.Name = "btnScheduleUserSearch";
             this.btnScheduleUserSearch.Size = new System.Drawing.Size(120, 36);
             this.btnScheduleUserSearch.TabIndex = 3;
@@ -1918,7 +1920,7 @@
             this.tpgStats.Controls.Add(this.chtBloodType);
             this.tpgStats.Location = new System.Drawing.Point(4, 22);
             this.tpgStats.Name = "tpgStats";
-            this.tpgStats.Padding = new System.Windows.Forms.Padding(3);
+            this.tpgStats.Padding = new System.Windows.Forms.Padding(3, 3, 3, 3);
             this.tpgStats.Size = new System.Drawing.Size(793, 387);
             this.tpgStats.TabIndex = 4;
             this.tpgStats.Text = "     Statistics     ";
@@ -1930,7 +1932,8 @@
             this.chtUserSchedule.ChartAreas.Add(chartArea1);
             legend1.Name = "Legend1";
             this.chtUserSchedule.Legends.Add(legend1);
-            this.chtUserSchedule.Location = new System.Drawing.Point(357, 6);
+            this.chtUserSchedule.Location = new System.Drawing.Point(268, 5);
+            this.chtUserSchedule.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.chtUserSchedule.Name = "chtUserSchedule";
             this.chtUserSchedule.Size = new System.Drawing.Size(430, 362);
             this.chtUserSchedule.TabIndex = 1;
@@ -1941,7 +1944,8 @@
             this.chtBloodType.ChartAreas.Add(chartArea2);
             legend2.Name = "Legend1";
             this.chtBloodType.Legends.Add(legend2);
-            this.chtBloodType.Location = new System.Drawing.Point(8, 6);
+            this.chtBloodType.Location = new System.Drawing.Point(6, 5);
+            this.chtBloodType.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.chtBloodType.Name = "chtBloodType";
             this.chtBloodType.Size = new System.Drawing.Size(343, 375);
             this.chtBloodType.TabIndex = 0;
