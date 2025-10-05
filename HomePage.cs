@@ -41,8 +41,7 @@ namespace BloodBankSystem
             this.tblUsersTableAdapter.Fill(this.ist2jwDataSet.tblUsers);
             // TODO: This line of code loads data into the 'ist2jwDataSet.TblBloodInventory' table. You can move, or remove it, as needed.
             this.tblBloodInventoryTableAdapter.Fill(this.ist2jwDataSet.TblBloodInventory);
-
-            LoadUserPhoneNumber();          
+      
         }
 
         private void ProfileImg_Click(object sender, EventArgs e)
@@ -54,6 +53,8 @@ namespace BloodBankSystem
                 ProfileImg.Location = new Point(714, 0);
                 this.Size = new Size(800, 619);
                 donateBtn.Location = new Point(254, 257);
+                PhoneNumGrp.Visible = false;
+                LoadUserPhoneNumber();
             }
             else
             {
