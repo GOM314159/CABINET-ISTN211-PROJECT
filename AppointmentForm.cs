@@ -114,7 +114,7 @@ namespace BloodBankSystem
 
             if ((date < DateTime.Now))
             {
-                MessageBox.Show("The date you're trying to book is before the present date. Please try again");
+                MessageBox.Show("The date you're trying to book is before the present date. Please try again","Appointment booking");
                 return;
             }
 
@@ -128,7 +128,7 @@ namespace BloodBankSystem
                     // update appointment table capacity
                     appointmentTableAdapter.UpdateCapacity(capacity + 1, appID);
 
-                    MessageBox.Show("Congrats. Your new appointment has been scheduled ");
+                    MessageBox.Show("Congrats. Your new appointment has been scheduled ", "Appointment booking");
                     // refresh tables 
                     this.appointmentTableAdapter.Fill(this.ist2jwDataSet.Appointment);
                     this.tblUserScheduleTableAdapter.FillUserSchedule(this.ist2jwDataSet.tblUserSchedule, HomePage.userID);

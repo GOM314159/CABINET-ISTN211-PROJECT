@@ -18,8 +18,8 @@
     <Connector ID="DesignRelation:FK_Schedule_Appointment" ZOrder="13" LineWidth="11">
       <RoutePoints>
         <Point>
-          <X>194</X>
-          <Y>37</Y>
+          <X>326</X>
+          <Y>115</Y>
         </Point>
         <Point>
           <X>194</X>
