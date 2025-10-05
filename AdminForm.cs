@@ -551,35 +551,24 @@ namespace BloodBankSystem
                 if (bFound == false)
                 {
 
-                    MessageBox.Show("UserID is invalid or has not been found");
+                MessageBox.Show("UserID is invalid or has not been found");
 
-                }
-                else
+            }
+            else
+            {
+                foreach (DataRowView rowView in scheduleBindingSource)
                 {
-
-
-
-                    foreach (DataRowView rowView in scheduleBindingSource)
+                    UserID = rowView["UserID"].ToString().Trim();
+                    if (UserID == txtSearchByUser.Text.Trim())
                     {
-                        UserID = rowView["UserID"].ToString().Trim();
-                        if (UserID == txtSearchByUser.Text.Trim())
-                        {
 
-                            iCount++;
+                        iCount++;
 
-                            redDisplay.AppendText("User schedule details:");
-                            redDisplay.AppendText("Name: " + name);
-                            
-
-
-
-                        }
-
-
+                        redDisplay.AppendText("User schedule details:\n");
+                        redDisplay.AppendText("Name: " + name);
                     }
-
-
                 }
+            }
 
 
 
