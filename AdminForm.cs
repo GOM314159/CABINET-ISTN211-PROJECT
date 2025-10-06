@@ -1137,7 +1137,7 @@ namespace BloodBankSystem
                 bValid = false;
             }
 
-            if (spnCapacity.Value <= 0)
+            if (spnCapacity.Value <= 0 || spnCapacity == null)
             {
 
                 sOut = sOut + "\n Capacity must be greater than 0";
@@ -1205,9 +1205,26 @@ namespace BloodBankSystem
             String AppID = txtAppID.Text.Substring(1);
             int aID = int.Parse(AppID) + 1;
 
-            AppID = "A" + aID.ToString();
+            if (aID < 10)
+            {
 
-            appointmentBindingSource.AddNew();
+                AppID = "A000" + aID.ToString();
+            }else if ((aID >= 10) && (aID < 100)){
+
+                AppID = "A00" + aID.ToString();
+            }else if ((aID >= 100) && (aID < 1000)){
+                AppID = "A0" + aID.ToString();
+            }else if ((aID >= 1000 ) && (aID < 10000))
+            {
+
+                AppID = "A" + aID.ToString();
+            }
+            else
+            {
+                AppID = "A" + aID.ToString();
+            }
+
+                appointmentBindingSource.AddNew();
             txtAppID.Text = AppID;
             MessageBox.Show("Please enter all information");
 

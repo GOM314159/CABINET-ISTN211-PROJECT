@@ -30,10 +30,10 @@
         {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(AdminForm));
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea3 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend3 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea4 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend4 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea5 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend5 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea6 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend6 = new System.Windows.Forms.DataVisualization.Charting.Legend();
             this.pnlTopBar = new System.Windows.Forms.Panel();
             this.btnHomepage = new System.Windows.Forms.Button();
             this.btnLogout = new System.Windows.Forms.Button();
@@ -753,7 +753,6 @@
             this.txtAppID.Location = new System.Drawing.Point(196, 20);
             this.txtAppID.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
             this.txtAppID.Name = "txtAppID";
-            this.txtAppID.ReadOnly = true;
             this.txtAppID.Size = new System.Drawing.Size(132, 22);
             this.txtAppID.TabIndex = 0;
             // 
@@ -2214,10 +2213,10 @@
             // 
             // chtUserSchedule
             // 
-            chartArea3.Name = "ChartArea1";
-            this.chtUserSchedule.ChartAreas.Add(chartArea3);
-            legend3.Name = "No. of schedules";
-            this.chtUserSchedule.Legends.Add(legend3);
+            chartArea5.Name = "ChartArea1";
+            this.chtUserSchedule.ChartAreas.Add(chartArea5);
+            legend5.Name = "No. of schedules";
+            this.chtUserSchedule.Legends.Add(legend5);
             this.chtUserSchedule.Location = new System.Drawing.Point(715, 6);
             this.chtUserSchedule.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.chtUserSchedule.Name = "chtUserSchedule";
@@ -2226,10 +2225,10 @@
             // 
             // chtBloodType
             // 
-            chartArea4.Name = "ChartArea1";
-            this.chtBloodType.ChartAreas.Add(chartArea4);
-            legend4.Name = "Legend1";
-            this.chtBloodType.Legends.Add(legend4);
+            chartArea6.Name = "ChartArea1";
+            this.chtBloodType.ChartAreas.Add(chartArea6);
+            legend6.Name = "Legend1";
+            this.chtBloodType.Legends.Add(legend6);
             this.chtBloodType.Location = new System.Drawing.Point(8, 6);
             this.chtBloodType.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.chtBloodType.Name = "chtBloodType";
