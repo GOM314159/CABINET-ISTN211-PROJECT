@@ -48,28 +48,28 @@ namespace BloodBankSystem
                 if (dataTable.Rows.Count > 0)
                 {
                     string dbPassword = dataTable.Rows[0]["Password"].ToString();
-                  
+
 
                     if (password.Equals(dbPassword))
-                    {  
+                    {
                         String isAdmin = dataTable.Rows[0]["UserType"].ToString();
                         this.Hide();
 
                         if (isAdmin.Equals("A"))
                         {
-                            MessageBox.Show("Admin Login Successful! \nWelcome " + dataTable.Rows[0]["Name"]); 
+
                             currentUserID = dataTable.Rows[0]["UserID"].ToString();
                             currentUserName = dataTable.Rows[0]["Name"].ToString();
-                            Form adminForm = new AdminForm(currentUserID,currentUserName);
+                            Form adminForm = new AdminForm(currentUserID, currentUserName);
                             adminForm.Show();
+                            MessageBox.Show("Admin Login Successful! \nWelcome " + dataTable.Rows[0]["Name"]);
                         }
                         else
                         {   // regular user login
-                            MessageBox.Show("Login Successful! \nWelcome " + dataTable.Rows[0]["Name"], "Successful Login", MessageBoxButtons.OK);
-                            Form homeForm = new HomePage(dataTable.Rows[0]["UserID"].ToString(),dataTable.Rows[0]["Name"].ToString());
+                            Form homeForm = new HomePage(dataTable.Rows[0]["UserID"].ToString(), dataTable.Rows[0]["Name"].ToString());
                             homeForm.Show();
-                        }
-
+                            MessageBox.Show("Login Successful! \nWelcome " + dataTable.Rows[0]["Name"], "Successful Login", MessageBoxButtons.OK);
+                        }                            
                     }
                     else
                     {   //password field is empty

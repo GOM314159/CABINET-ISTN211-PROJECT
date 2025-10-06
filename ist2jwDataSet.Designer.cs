@@ -555,6 +555,8 @@ namespace BloodBankSystem {
             
             private global::System.Data.DataColumn columnExpiryDate;
             
+            private global::System.Data.DataColumn columnUsage;
+            
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             public TblBloodInventoryDataTable() {
@@ -630,6 +632,14 @@ namespace BloodBankSystem {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public global::System.Data.DataColumn UsageColumn {
+                get {
+                    return this.columnUsage;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             [global::System.ComponentModel.Browsable(false)]
             public int Count {
                 get {
@@ -665,14 +675,15 @@ namespace BloodBankSystem {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public TblBloodInventoryRow AddTblBloodInventoryRow(string UnitID, tblUsersRow parenttblUsersRowByFK_TblBloodInventory_tblUsers, AppointmentRow parentAppointmentRowByFK_TblBloodInventory_Appointment, string BloodType, System.DateTime ExpiryDate) {
+            public TblBloodInventoryRow AddTblBloodInventoryRow(string UnitID, tblUsersRow parenttblUsersRowByFK_TblBloodInventory_tblUsers, AppointmentRow parentAppointmentRowByFK_TblBloodInventory_Appointment, string BloodType, System.DateTime ExpiryDate, bool Usage) {
                 TblBloodInventoryRow rowTblBloodInventoryRow = ((TblBloodInventoryRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
                         UnitID,
                         null,
                         null,
                         BloodType,
-                        ExpiryDate};
+                        ExpiryDate,
+                        Usage};
                 if ((parenttblUsersRowByFK_TblBloodInventory_tblUsers != null)) {
                     columnValuesArray[1] = parenttblUsersRowByFK_TblBloodInventory_tblUsers[0];
                 }
@@ -713,6 +724,7 @@ namespace BloodBankSystem {
                 this.columnAppID = base.Columns["AppID"];
                 this.columnBloodType = base.Columns["BloodType"];
                 this.columnExpiryDate = base.Columns["ExpiryDate"];
+                this.columnUsage = base.Columns["Usage"];
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -728,6 +740,8 @@ namespace BloodBankSystem {
                 base.Columns.Add(this.columnBloodType);
                 this.columnExpiryDate = new global::System.Data.DataColumn("ExpiryDate", typeof(global::System.DateTime), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnExpiryDate);
+                this.columnUsage = new global::System.Data.DataColumn("Usage", typeof(bool), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnUsage);
                 this.Constraints.Add(new global::System.Data.UniqueConstraint("Constraint1", new global::System.Data.DataColumn[] {
                                 this.columnUnitID}, true));
                 this.columnUnitID.AllowDBNull = false;
@@ -740,6 +754,7 @@ namespace BloodBankSystem {
                 this.columnBloodType.AllowDBNull = false;
                 this.columnBloodType.MaxLength = 3;
                 this.columnExpiryDate.AllowDBNull = false;
+                this.columnUsage.AllowDBNull = false;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -2844,6 +2859,17 @@ namespace BloodBankSystem {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public bool Usage {
+                get {
+                    return ((bool)(this[this.tableTblBloodInventory.UsageColumn]));
+                }
+                set {
+                    this[this.tableTblBloodInventory.UsageColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             public AppointmentRow AppointmentRow {
                 get {
                     return ((AppointmentRow)(this.GetParentRow(this.Table.ParentRelations["FK_TblBloodInventory_Appointment"])));
@@ -3883,33 +3909,49 @@ namespace BloodBankSystem.ist2jwDataSetTableAdapters {
             tableMapping.ColumnMappings.Add("AppID", "AppID");
             tableMapping.ColumnMappings.Add("BloodType", "BloodType");
             tableMapping.ColumnMappings.Add("ExpiryDate", "ExpiryDate");
+            tableMapping.ColumnMappings.Add("Usage", "Usage");
             this._adapter.TableMappings.Add(tableMapping);
             this._adapter.DeleteCommand = new global::System.Data.SqlClient.SqlCommand();
             this._adapter.DeleteCommand.Connection = this.Connection;
-            this._adapter.DeleteCommand.CommandText = "DELETE FROM [dbo].[TblBloodInventory] WHERE (([UnitID] = @Original_UnitID) AND ([" +
-                "UserID] = @Original_UserID) AND ([AppID] = @Original_AppID) AND ([BloodType] = @" +
-                "Original_BloodType) AND ([ExpiryDate] = @Original_ExpiryDate))";
+            this._adapter.DeleteCommand.CommandText = "DELETE FROM [TblBloodInventory] WHERE (([UnitID] = @Original_UnitID) AND ([UserID" +
+                "] = @Original_UserID) AND ([AppID] = @Original_AppID) AND ([BloodType] = @Origin" +
+                "al_BloodType) AND ([ExpiryDate] = @Original_ExpiryDate) AND ([Usage] = @Original" +
+                "_Usage))";
             this._adapter.DeleteCommand.CommandType = global::System.Data.CommandType.Text;
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_UnitID", global::System.Data.SqlDbType.NChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "UnitID", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_UserID", global::System.Data.SqlDbType.NChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "UserID", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_AppID", global::System.Data.SqlDbType.NChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "AppID", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_BloodType", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "BloodType", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_ExpiryDate", global::System.Data.SqlDbType.Date, 0, global::System.Data.ParameterDirection.Input, 0, 0, "ExpiryDate", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Usage", global::System.Data.SqlDbType.Bit, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Usage", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.InsertCommand = new global::System.Data.SqlClient.SqlCommand();
+            this._adapter.InsertCommand.Connection = this.Connection;
+            this._adapter.InsertCommand.CommandText = @"INSERT INTO [TblBloodInventory] ([UnitID], [UserID], [AppID], [BloodType], [ExpiryDate], [Usage]) VALUES (@UnitID, @UserID, @AppID, @BloodType, @ExpiryDate, @Usage);
+SELECT UnitID, UserID, AppID, BloodType, ExpiryDate, Usage FROM TblBloodInventory WHERE (UnitID = @UnitID)";
+            this._adapter.InsertCommand.CommandType = global::System.Data.CommandType.Text;
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@UnitID", global::System.Data.SqlDbType.NChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "UnitID", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@UserID", global::System.Data.SqlDbType.NChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "UserID", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@AppID", global::System.Data.SqlDbType.NChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "AppID", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@BloodType", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "BloodType", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@ExpiryDate", global::System.Data.SqlDbType.Date, 0, global::System.Data.ParameterDirection.Input, 0, 0, "ExpiryDate", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Usage", global::System.Data.SqlDbType.Bit, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Usage", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand = new global::System.Data.SqlClient.SqlCommand();
             this._adapter.UpdateCommand.Connection = this.Connection;
-            this._adapter.UpdateCommand.CommandText = @"UPDATE [dbo].[TblBloodInventory] SET [UnitID] = @UnitID, [UserID] = @UserID, [AppID] = @AppID, [BloodType] = @BloodType, [ExpiryDate] = @ExpiryDate WHERE (([UnitID] = @Original_UnitID) AND ([UserID] = @Original_UserID) AND ([AppID] = @Original_AppID) AND ([BloodType] = @Original_BloodType) AND ([ExpiryDate] = @Original_ExpiryDate));
-SELECT UnitID, UserID, AppID, BloodType, ExpiryDate FROM TblBloodInventory WHERE (UnitID = @UnitID)";
+            this._adapter.UpdateCommand.CommandText = @"UPDATE [TblBloodInventory] SET [UnitID] = @UnitID, [UserID] = @UserID, [AppID] = @AppID, [BloodType] = @BloodType, [ExpiryDate] = @ExpiryDate, [Usage] = @Usage WHERE (([UnitID] = @Original_UnitID) AND ([UserID] = @Original_UserID) AND ([AppID] = @Original_AppID) AND ([BloodType] = @Original_BloodType) AND ([ExpiryDate] = @Original_ExpiryDate) AND ([Usage] = @Original_Usage));
+SELECT UnitID, UserID, AppID, BloodType, ExpiryDate, Usage FROM TblBloodInventory WHERE (UnitID = @UnitID)";
             this._adapter.UpdateCommand.CommandType = global::System.Data.CommandType.Text;
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@UnitID", global::System.Data.SqlDbType.NChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "UnitID", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@UserID", global::System.Data.SqlDbType.NChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "UserID", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@AppID", global::System.Data.SqlDbType.NChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "AppID", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@BloodType", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "BloodType", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@ExpiryDate", global::System.Data.SqlDbType.Date, 0, global::System.Data.ParameterDirection.Input, 0, 0, "ExpiryDate", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Usage", global::System.Data.SqlDbType.Bit, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Usage", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_UnitID", global::System.Data.SqlDbType.NChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "UnitID", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_UserID", global::System.Data.SqlDbType.NChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "UserID", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_AppID", global::System.Data.SqlDbType.NChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "AppID", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_BloodType", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "BloodType", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_ExpiryDate", global::System.Data.SqlDbType.Date, 0, global::System.Data.ParameterDirection.Input, 0, 0, "ExpiryDate", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Usage", global::System.Data.SqlDbType.Bit, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Usage", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -3922,16 +3964,27 @@ SELECT UnitID, UserID, AppID, BloodType, ExpiryDate FROM TblBloodInventory WHERE
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         private void InitCommandCollection() {
-            this._commandCollection = new global::System.Data.SqlClient.SqlCommand[2];
+            this._commandCollection = new global::System.Data.SqlClient.SqlCommand[3];
             this._commandCollection[0] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[0].Connection = this.Connection;
-            this._commandCollection[0].CommandText = "SELECT UnitID, UserID, AppID, BloodType, ExpiryDate FROM dbo.TblBloodInventory";
+            this._commandCollection[0].CommandText = "SELECT TblBloodInventory.*\r\nFROM     TblBloodInventory";
             this._commandCollection[0].CommandType = global::System.Data.CommandType.Text;
             this._commandCollection[1] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[1].Connection = this.Connection;
             this._commandCollection[1].CommandText = "DELETE FROM [dbo].[TblBloodInventory] WHERE (UnitID = @UnitID);";
             this._commandCollection[1].CommandType = global::System.Data.CommandType.Text;
             this._commandCollection[1].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@UnitID", global::System.Data.SqlDbType.NChar, 10, global::System.Data.ParameterDirection.Input, 0, 0, "UnitID", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._commandCollection[2] = new global::System.Data.SqlClient.SqlCommand();
+            this._commandCollection[2].Connection = this.Connection;
+            this._commandCollection[2].CommandText = "INSERT INTO TblBloodInventory (UnitID, UserID, AppID,BloodType,ExpiryDate,usage) " +
+                "VALUES (\r\n @UnitID, @UserID, @AppID, @BloodType, @ExpiryDate,@usage );";
+            this._commandCollection[2].CommandType = global::System.Data.CommandType.Text;
+            this._commandCollection[2].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@UnitID", global::System.Data.SqlDbType.NChar, 10, global::System.Data.ParameterDirection.Input, 0, 0, "UnitID", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._commandCollection[2].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@UserID", global::System.Data.SqlDbType.NChar, 10, global::System.Data.ParameterDirection.Input, 0, 0, "UserID", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._commandCollection[2].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@AppID", global::System.Data.SqlDbType.NChar, 10, global::System.Data.ParameterDirection.Input, 0, 0, "AppID", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._commandCollection[2].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@BloodType", global::System.Data.SqlDbType.VarChar, 3, global::System.Data.ParameterDirection.Input, 0, 0, "BloodType", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._commandCollection[2].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@ExpiryDate", global::System.Data.SqlDbType.Date, 3, global::System.Data.ParameterDirection.Input, 0, 0, "ExpiryDate", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._commandCollection[2].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@usage", global::System.Data.SqlDbType.Bit, 1, global::System.Data.ParameterDirection.Input, 0, 0, "Usage", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -3991,7 +4044,7 @@ SELECT UnitID, UserID, AppID, BloodType, ExpiryDate FROM TblBloodInventory WHERE
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Delete, true)]
-        public virtual int Delete(string Original_UnitID, string Original_UserID, string Original_AppID, string Original_BloodType, System.DateTime Original_ExpiryDate) {
+        public virtual int Delete(string Original_UnitID, string Original_UserID, string Original_AppID, string Original_BloodType, System.DateTime Original_ExpiryDate, bool Original_Usage) {
             if ((Original_UnitID == null)) {
                 throw new global::System.ArgumentNullException("Original_UnitID");
             }
@@ -4017,6 +4070,7 @@ SELECT UnitID, UserID, AppID, BloodType, ExpiryDate FROM TblBloodInventory WHERE
                 this.Adapter.DeleteCommand.Parameters[3].Value = ((string)(Original_BloodType));
             }
             this.Adapter.DeleteCommand.Parameters[4].Value = ((System.DateTime)(Original_ExpiryDate));
+            this.Adapter.DeleteCommand.Parameters[5].Value = ((bool)(Original_Usage));
             global::System.Data.ConnectionState previousConnectionState = this.Adapter.DeleteCommand.Connection.State;
             if (((this.Adapter.DeleteCommand.Connection.State & global::System.Data.ConnectionState.Open) 
                         != global::System.Data.ConnectionState.Open)) {
@@ -4036,8 +4090,55 @@ SELECT UnitID, UserID, AppID, BloodType, ExpiryDate FROM TblBloodInventory WHERE
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Insert, true)]
+        public virtual int Insert(string UnitID, string UserID, string AppID, string BloodType, System.DateTime ExpiryDate, bool Usage) {
+            if ((UnitID == null)) {
+                throw new global::System.ArgumentNullException("UnitID");
+            }
+            else {
+                this.Adapter.InsertCommand.Parameters[0].Value = ((string)(UnitID));
+            }
+            if ((UserID == null)) {
+                throw new global::System.ArgumentNullException("UserID");
+            }
+            else {
+                this.Adapter.InsertCommand.Parameters[1].Value = ((string)(UserID));
+            }
+            if ((AppID == null)) {
+                throw new global::System.ArgumentNullException("AppID");
+            }
+            else {
+                this.Adapter.InsertCommand.Parameters[2].Value = ((string)(AppID));
+            }
+            if ((BloodType == null)) {
+                throw new global::System.ArgumentNullException("BloodType");
+            }
+            else {
+                this.Adapter.InsertCommand.Parameters[3].Value = ((string)(BloodType));
+            }
+            this.Adapter.InsertCommand.Parameters[4].Value = ((System.DateTime)(ExpiryDate));
+            this.Adapter.InsertCommand.Parameters[5].Value = ((bool)(Usage));
+            global::System.Data.ConnectionState previousConnectionState = this.Adapter.InsertCommand.Connection.State;
+            if (((this.Adapter.InsertCommand.Connection.State & global::System.Data.ConnectionState.Open) 
+                        != global::System.Data.ConnectionState.Open)) {
+                this.Adapter.InsertCommand.Connection.Open();
+            }
+            try {
+                int returnValue = this.Adapter.InsertCommand.ExecuteNonQuery();
+                return returnValue;
+            }
+            finally {
+                if ((previousConnectionState == global::System.Data.ConnectionState.Closed)) {
+                    this.Adapter.InsertCommand.Connection.Close();
+                }
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Update, true)]
-        public virtual int Update(string UnitID, string UserID, string AppID, string BloodType, System.DateTime ExpiryDate, string Original_UnitID, string Original_UserID, string Original_AppID, string Original_BloodType, System.DateTime Original_ExpiryDate) {
+        public virtual int Update(string UnitID, string UserID, string AppID, string BloodType, System.DateTime ExpiryDate, bool Usage, string Original_UnitID, string Original_UserID, string Original_AppID, string Original_BloodType, System.DateTime Original_ExpiryDate, bool Original_Usage) {
             if ((UnitID == null)) {
                 throw new global::System.ArgumentNullException("UnitID");
             }
@@ -4063,31 +4164,33 @@ SELECT UnitID, UserID, AppID, BloodType, ExpiryDate FROM TblBloodInventory WHERE
                 this.Adapter.UpdateCommand.Parameters[3].Value = ((string)(BloodType));
             }
             this.Adapter.UpdateCommand.Parameters[4].Value = ((System.DateTime)(ExpiryDate));
+            this.Adapter.UpdateCommand.Parameters[5].Value = ((bool)(Usage));
             if ((Original_UnitID == null)) {
                 throw new global::System.ArgumentNullException("Original_UnitID");
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[5].Value = ((string)(Original_UnitID));
+                this.Adapter.UpdateCommand.Parameters[6].Value = ((string)(Original_UnitID));
             }
             if ((Original_UserID == null)) {
                 throw new global::System.ArgumentNullException("Original_UserID");
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[6].Value = ((string)(Original_UserID));
+                this.Adapter.UpdateCommand.Parameters[7].Value = ((string)(Original_UserID));
             }
             if ((Original_AppID == null)) {
                 throw new global::System.ArgumentNullException("Original_AppID");
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[7].Value = ((string)(Original_AppID));
+                this.Adapter.UpdateCommand.Parameters[8].Value = ((string)(Original_AppID));
             }
             if ((Original_BloodType == null)) {
                 throw new global::System.ArgumentNullException("Original_BloodType");
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[8].Value = ((string)(Original_BloodType));
+                this.Adapter.UpdateCommand.Parameters[9].Value = ((string)(Original_BloodType));
             }
-            this.Adapter.UpdateCommand.Parameters[9].Value = ((System.DateTime)(Original_ExpiryDate));
+            this.Adapter.UpdateCommand.Parameters[10].Value = ((System.DateTime)(Original_ExpiryDate));
+            this.Adapter.UpdateCommand.Parameters[11].Value = ((bool)(Original_Usage));
             global::System.Data.ConnectionState previousConnectionState = this.Adapter.UpdateCommand.Connection.State;
             if (((this.Adapter.UpdateCommand.Connection.State & global::System.Data.ConnectionState.Open) 
                         != global::System.Data.ConnectionState.Open)) {
@@ -4108,8 +4211,8 @@ SELECT UnitID, UserID, AppID, BloodType, ExpiryDate FROM TblBloodInventory WHERE
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Update, true)]
-        public virtual int Update(string UserID, string AppID, string BloodType, System.DateTime ExpiryDate, string Original_UnitID, string Original_UserID, string Original_AppID, string Original_BloodType, System.DateTime Original_ExpiryDate) {
-            return this.Update(Original_UnitID, UserID, AppID, BloodType, ExpiryDate, Original_UnitID, Original_UserID, Original_AppID, Original_BloodType, Original_ExpiryDate);
+        public virtual int Update(string UserID, string AppID, string BloodType, System.DateTime ExpiryDate, bool Usage, string Original_UnitID, string Original_UserID, string Original_AppID, string Original_BloodType, System.DateTime Original_ExpiryDate, bool Original_Usage) {
+            return this.Update(Original_UnitID, UserID, AppID, BloodType, ExpiryDate, Usage, Original_UnitID, Original_UserID, Original_AppID, Original_BloodType, Original_ExpiryDate, Original_Usage);
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -4124,6 +4227,60 @@ SELECT UnitID, UserID, AppID, BloodType, ExpiryDate FROM TblBloodInventory WHERE
             else {
                 command.Parameters[0].Value = ((string)(UnitID));
             }
+            global::System.Data.ConnectionState previousConnectionState = command.Connection.State;
+            if (((command.Connection.State & global::System.Data.ConnectionState.Open) 
+                        != global::System.Data.ConnectionState.Open)) {
+                command.Connection.Open();
+            }
+            int returnValue;
+            try {
+                returnValue = command.ExecuteNonQuery();
+            }
+            finally {
+                if ((previousConnectionState == global::System.Data.ConnectionState.Closed)) {
+                    command.Connection.Close();
+                }
+            }
+            return returnValue;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Insert, false)]
+        public virtual int InsertQuery(string UnitID, string UserID, string AppID, string BloodType, string ExpiryDate, bool usage) {
+            global::System.Data.SqlClient.SqlCommand command = this.CommandCollection[2];
+            if ((UnitID == null)) {
+                throw new global::System.ArgumentNullException("UnitID");
+            }
+            else {
+                command.Parameters[0].Value = ((string)(UnitID));
+            }
+            if ((UserID == null)) {
+                throw new global::System.ArgumentNullException("UserID");
+            }
+            else {
+                command.Parameters[1].Value = ((string)(UserID));
+            }
+            if ((AppID == null)) {
+                throw new global::System.ArgumentNullException("AppID");
+            }
+            else {
+                command.Parameters[2].Value = ((string)(AppID));
+            }
+            if ((BloodType == null)) {
+                throw new global::System.ArgumentNullException("BloodType");
+            }
+            else {
+                command.Parameters[3].Value = ((string)(BloodType));
+            }
+            if ((ExpiryDate == null)) {
+                throw new global::System.ArgumentNullException("ExpiryDate");
+            }
+            else {
+                command.Parameters[4].Value = ((string)(ExpiryDate));
+            }
+            command.Parameters[5].Value = ((bool)(usage));
             global::System.Data.ConnectionState previousConnectionState = command.Connection.State;
             if (((command.Connection.State & global::System.Data.ConnectionState.Open) 
                         != global::System.Data.ConnectionState.Open)) {
@@ -4343,7 +4500,7 @@ SELECT UserID, Password, Name, Surname, IDNumber, PhoneNumber, UserType, BloodTy
             this._commandCollection[0].CommandType = global::System.Data.CommandType.Text;
             this._commandCollection[1] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[1].Connection = this.Connection;
-            this._commandCollection[1].CommandText = "SELECT UserID FROM dbo.tblUsers WHERE UserID = @UserID";
+            this._commandCollection[1].CommandText = "SELECT * FROM dbo.tblUsers WHERE UserID = @UserID";
             this._commandCollection[1].CommandType = global::System.Data.CommandType.Text;
             this._commandCollection[1].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@UserID", global::System.Data.SqlDbType.NChar, 10, global::System.Data.ParameterDirection.Input, 0, 0, "UserID", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._commandCollection[2] = new global::System.Data.SqlClient.SqlCommand();

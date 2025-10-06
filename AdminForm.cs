@@ -1323,5 +1323,34 @@ namespace BloodBankSystem
             tblUsersTableAdapter.UserDonationRankings();
             
         }
+
+        private void insertBloodBtn_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show(insDTPicker.Value.ToString());
+            if (String.IsNullOrEmpty(insUnitIDTBox.Text) || String.IsNullOrEmpty(insUserIDTBox.Text)|| String.IsNullOrEmpty(insertBloodTypeTBox.Text))
+            {
+                MessageBox.Show("Please ensure all fields are filled in correctly");
+            }
+            else
+            {
+
+             tblBloodInventoryTableAdapter.InsertQuery(insUnitIDTBox.Text, insUserIDTBox.Text, insAppIDTBox.Text, insertBloodTypeTBox.Text, insDTPicker.Value.ToString("yyyy-MM-dd"), false);
+             MessageBox.Show("New blood unit successfully added!");
+
+            }
+
+        }
+
+        private void insUserIDTBox_Leave(object sender, EventArgs e)
+        {
+            DataRow dataRow = ist2jwDataSet.tblUsers.FindByUserID(txtUserID.Text);
+            insertBloodTypeTBox.Text = dataRow["BloodType"].ToString();
+
+        }
+
+        private void insAppIDTBox_TextChanged(object sender, EventArgs e)
+        {
+       
+        }
     }
 }
