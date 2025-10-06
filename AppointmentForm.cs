@@ -1,4 +1,6 @@
 ﻿using System;
+using System.Collections.Generic;
+using System.Data;
 using System.Data.SqlClient;
 using System.Drawing;
 using System.Windows.Forms;
@@ -11,6 +13,7 @@ namespace BloodBankSystem
         public AppointmentForm()
         {
             InitializeComponent();
+
         }
 
         private void AppointmentForm_Load(object sender, EventArgs e)
@@ -19,7 +22,7 @@ namespace BloodBankSystem
             this.appointmentTableAdapter.Fill(this.ist2jwDataSet.Appointment);
             // TODO: This line of code loads data into the 'ist2jwDataSet.tblUserSchedule' table. You can move, or remove it, as needed.
             this.tblUserScheduleTableAdapter.FillUserSchedule(this.ist2jwDataSet.tblUserSchedule, HomePage.userID);
-
+            GetVenue();
         }
 
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
@@ -48,6 +51,7 @@ namespace BloodBankSystem
             bool isAvailable = false;
             bool isValid = false;
             bool hasAttended = false;
+            DateTime lastDate = DateTime.Now;
 
             //if capacity < 10 then date is available 
             if (capacity < 10)
@@ -57,7 +61,7 @@ namespace BloodBankSystem
 
             if (isAvailable)
             {
-                DateTime lastDate = DateTime.Now;
+
                 if (ist2jwDataSet.tblUserSchedule.Rows.Count > 0)
                 {
                     tblUserScheduleBindingSource.Sort = "AppDate DESC";
@@ -72,37 +76,57 @@ namespace BloodBankSystem
                             break;
                         }
                     }
-
-                    if (hasAttended)
-                    {
-                        // if the last attended appointment is 2 months ago , then isValid = true
-                        int monthDifference = (date.Year - lastDate.Year) * 12 + (date.Month - lastDate.Month);
-
-                        if (monthDifference == 0)
-                        {
-                            userChoseSameDate = true;
-                            isValid = false;
-                        }
-
-                        if (monthDifference >= 2)
-                        {
-                            isValid = true;
-                        }
-                        else
-                        {
-                            isValid = false;
-                        }
-                    }
-
                 }
                 else
                 {
                     isValid = true;
+                    return isValid;
                 }
+
+                if (hasAttended)
+                {
+                    // if the last attended appointment is >= 2 months ago , then isValid = true
+                    int monthDifference = (date.Year - lastDate.Year) * 12 + (date.Month - lastDate.Month);
+
+                    if (monthDifference == 0)
+                    {
+                        userChoseSameDate = true;
+                        isValid = false;
+                    }
+
+                    if (monthDifference >= 2)
+                    {
+                        isValid = true;
+                    }
+                    else
+                    {
+                        isValid = false;
+                    }
+                }
+
             }
             return isValid;
         }
+        public void GetVenue()
+        {
+            // Dictionary to hold counts for each blood type
+            Dictionary<string, int> venueTypeCounts = new Dictionary<string, int>();
 
+            foreach (DataRow row in ist2jwDataSet.Appointment.Rows)
+            {
+                string venueType = row["Venue"].ToString();
+                if (venueTypeCounts.ContainsKey(venueType))
+                {
+                    venueTypeCounts[venueType]++;
+                }
+                else
+                {
+                    venueTypeCounts.Add(venueType, 1);
+                    filterAppVenueCmbx.Items.Add(venueType);
+                    filterScheduleVenueCmbx.Items.Add(venueType);
+                }
+            }
+        }
         private void btnBookAppointment_Click(object sender, EventArgs e)
         {
             Random rnd = new Random();
@@ -114,7 +138,7 @@ namespace BloodBankSystem
 
             if ((date < DateTime.Now))
             {
-                MessageBox.Show("The date you're trying to book is before the present date. Please try again","Appointment booking");
+                MessageBox.Show("The date you're trying to book is before the present date. \n Please try again", "Appointment booking");
                 return;
             }
 
@@ -123,7 +147,7 @@ namespace BloodBankSystem
                 try
                 {
                     // insert new appointment into schedule table
-                    scheduleTableAdapter.InsertSchedule(newSchID.ToString(), currentUserID, appID, true);
+                    scheduleTableAdapter.InsertSchedule(newSchID.ToString(), currentUserID, appID, false);
 
                     // update appointment table capacity
                     appointmentTableAdapter.UpdateCapacity(capacity + 1, appID);
@@ -145,7 +169,7 @@ namespace BloodBankSystem
             {
                 if (userChoseSameDate)
                 {
-                    MessageBox.Show("You have accidently chosen a date that you have already booked. Please try again." , "Appointment Booking.");
+                    MessageBox.Show("You have accidently chosen a date that you have already booked. Please try again.", "Appointment Booking.");
                     return;
                 }
                 MessageBox.Show("Please choose another appointment to book. This date is full");
@@ -163,7 +187,7 @@ namespace BloodBankSystem
 
             while (!isUnique)
             {
-                newId =  "S"+ rand.Next(100000, 1000000).ToString(); // Generate a 6-digit random number
+                newId = "S" + rand.Next(100000, 1000000).ToString(); // Generate a 6-digit random number
                 isUnique = true; // assume it's unique unless found otherwise
 
                 // Check if this ID already exists
@@ -297,7 +321,7 @@ namespace BloodBankSystem
             if (filterSelect.Text.Equals("Month") && filterAppMonthCmbx.Text.Equals(""))
             {
                 filterAppMonthCmbx.BackColor = Color.LightCoral;
-                MessageBox.Show("Please select a month to filter " ,"Appointment Filter", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                MessageBox.Show("Please select a month to filter ", "Appointment Filter", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return;
             }
             else if (filterSelect.Text.Equals("Month"))
@@ -675,7 +699,11 @@ namespace BloodBankSystem
 
         private void btnHelp_Click(object sender, EventArgs e)
         {
-            MessageBox.Show("Appointment schedules are displayed in the table provided by Pulse Point.\r\nPlease select an appointment from the table to continue.\r\n\r\nNote: Your next booking must be at least 2 months after your most recent attended appointment.", "Appointment Help", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            MessageBox.Show("Appointment schedules are displayed in the table provided by Pulse Point." +
+                "\r\nPlease select an appointment from the table to continue.\r\n\r\n" +
+                "Note: Your next booking must be at least 2 months after your most recent attended appointment and " +
+                "you can only try to book another appointment after you attended the appointment you currently booked."
+                , "Appointment Help", MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
 
         private void button6_MouseHover(object sender, EventArgs e)
@@ -690,7 +718,7 @@ namespace BloodBankSystem
 
         private void btnSearchAvailable_Click(object sender, EventArgs e)
         {
-            appointmentBindingSource.Filter = "Capacity < 10";  
+            appointmentBindingSource.Filter = "Capacity < 10";
         }
 
         private void btnClose_Click_1(object sender, EventArgs e)
