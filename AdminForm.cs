@@ -1151,11 +1151,19 @@ namespace BloodBankSystem
 
             }
             else
-            {
-                DataRowView currentRow = (DataRowView)appointmentBindingSource.Current;
+            { try
+                { DataRowView currentRow = (DataRowView)appointmentBindingSource.Current;
                 appointmentBindingSource.EndEdit();
                 appointmentTableAdapter.Update(ist2jwDataSet);
                 MessageBox.Show("Appointment succesfully added!");
+
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("Error inserting appointment. Please ensure all fields are filled in correctly");
+                    return;
+                }
+
 
                 pnlAppEdit.BackColor = SystemColors.ActiveCaption;
                 btnAppInsert.Visible = false;
