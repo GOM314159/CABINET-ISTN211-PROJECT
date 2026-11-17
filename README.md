@@ -4,7 +4,7 @@ A C# and SQL application that allows blood donors to book, view and manage their
 
 Built to replace manual paper-based booking with a structured, reliable system that keeps donor information and appointment data consistent.
 
-**Duration:** Jun 2025 — Oct 2025  
+**Duration:** Jun 2025 - Oct 2025  
 **Tech Stack:** C# | SQL | Windows Forms / WPF | Visual Studio
 
 ---
